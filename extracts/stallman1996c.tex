@@ -1,0 +1,174 @@
+% Telekom osCompendium extract template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
+%
+% select the document class
+% S.26: [ 10pt|11pt|12pt onecolumn|twocolumn oneside|twoside notitlepage|titlepage final|draft
+%         leqno fleqn openbib a4paper|a5paper|b5paper|letterpaper|legalpaper|executivepaper openrigth ]
+% S.25: { article|report|book|letter ... }
+%
+% oder koma-skript S.10 + 16
+\documentclass[DIV=calc,BCOR=5mm,11pt,headings=small,oneside,abstract=true, toc=bib]{scrartcl}
+
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4,ngerman}
+\usepackage[ngerman, english]{babel}
+\selectlanguage{english}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+\input{../btexmat/oscJbibCfgEnInc}
+
+% language specific hyphenation
+\input{../btexmat/oscHyphenationEnInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{headings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+\usepackage[dvips]{epsfig}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+\usepackage[marginal]{footmisc}
+%- end(footnote-configuration)
+
+\begin{document}
+
+%% use all entries of the bliography
+
+%%-- start(titlepage)
+\titlehead{Literaturexzerpt}
+\subject{Autor(en): Stallman / Stallman1996c }
+\title{Titel: What is Copyleft?}
+\subtitle{Jahr: 1996 / 2002 }
+\author{K. Reincke\input{../btexmat/oscLicenseFootnoteInc}}
+
+%\thanks{den Autoren von KOMA-Script und denen von Jurabib}
+\maketitle
+%%-- end(titlepage)
+%\nocite{*}
+
+\begin{abstract}
+\noindent
+\cite[(in:)][]{StaGay2002a} \\
+\noindent
+\cite[(ist:)][]{Stallman1996c} \\
+Das Werk / The work\footcite[][]{Stallman1996c} \\
+\noindent \itshape
+\ldots  Beschreibt 'Copyleft' als Methode, mit der Programme und all deren
+Modifikationen und Ableitungen zu freier Software gemacht werden: Zunächst
+unterstelle man es dem normalen Copyright. Dann erlaube man als
+Copyright-Inhaber die freie Nutzung, Veränderung und Weitergabe, sofern diese
+Erlaubnis nicht entfernt worden werde. [In Deutschland braucht der Urheber die
+Urheberschaft nicht über eine Copyright-Notiz zu beanspruchen und also das
+Gemeinfrei-Werden nicht extra zu verhindern. Als Urheber er ist immer schon der
+Inhaber der Urheberrechte.]
+\\
+\noindent
+\ldots This article describes Copyleft as a method for making a programm free
+software and requiring all modified and extended versions of the program to be
+free software as well: firstly one states that the code is copyrighted, than -
+as copyright holder - one allows to use, modify, and redistribute the sourcecode
+under the condition, that this permission is not deleted.
+\end{abstract}
+\footnotesize
+%\tableofcontents
+\normalsize
+
+\section{Line of Thought}
+
+\subsection{Purpose}
+RMS declares that \glqq{}Copyleft is a [\ldots] method for making a programm
+free software and requiring all modified and extended versions of the program to
+be free software as well\grqq{}\footcite[cf][89]{Stallman1996c}.
+
+\subsection{Meaning}
+
+Following RMS summary \glqq{}Copyleft says that anyone who redistribute the
+software, with or without changes, must pass along the freedom to further copy
+and change it\grqq{}: \glqq{}Copyleft garantuees that every user has
+freedom\grqq{}\footcite[cf][89]{Stallman1996c}
+
+\subsection{Method}
+
+The American way to \glqq{}copyleft\grqq{} eg.: to establish a copyleft for a
+work requires two steps: firstly one states, \glqq{}[\ldots] that it is
+copyrighted\grqq{} and secondly one adds \glqq{}[\ldots] distribution
+terms, which are a legal instrument that gives everyone the rights to use,
+modify, and redistribute the program's code or any program derived from it
+but only if the distribution terms are unchanged\grqq{}. This is method by which 
+\glqq{}the code and the freedoms become legally
+inseparable\grqq{}\footcite[cf][89]{Stallman1996c}.
+
+\subsection{Context}
+Stallman also mentions that \glqq{}the simplest way to make a program
+free is to put it in the public domain, uncopyrigthed\grqq{}. But - and that's
+the disadvantage Stallman fights against - this \glqq{}[\ldots] allows
+uncooperative people to convert the program into proprietary software\grqq{}:
+\glqq{}They can make changes, many or few, and distribute the result as a
+proprietary product\grqq{}\footcite[cf][89]{Stallman1996c}..
+
+
+\subsection{Wording}
+
+The word 'copyleft' was selected with respect to the assumed meaning of
+the normal word 'copyright' \glqq{}Proprietary software developers use
+copyright to take away the users' freedom; we use copyright to guarantee
+their freedom\grqq{}. And because of this changing of the meaning Stallman says:
+\glqq{}That's why we reverse the name changing 'copyright' into
+'copyleft'\grqq{}\footcite[cf][89]{Stallman1996c}.
+
+[for the meaning see also extract of The GNU Project : Don Hopkins]
+
+\small
+\bibliography{../bibfiles/oscResourcesEn}
+
+\end{document}

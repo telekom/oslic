@@ -1,0 +1,182 @@
+% Telekom osCompendium extract template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
+%
+% select the document class
+% S.26: [ 10pt|11pt|12pt onecolumn|twocolumn oneside|twoside notitlepage|titlepage final|draft
+%         leqno fleqn openbib a4paper|a5paper|b5paper|letterpaper|legalpaper|executivepaper openrigth ]
+% S.25: { article|report|book|letter ... }
+%
+% oder koma-skript S.10 + 16
+\documentclass[DIV=calc,BCOR=5mm,11pt,headings=small,oneside,abstract=true, toc=bib]{scrartcl}
+
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4,ngerman}
+\usepackage[english, ngerman]{babel}
+\selectlanguage{ngerman}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+\input{../btexmat/oscJbibCfgDeInc}
+
+% language specific hyphenation
+\input{../btexmat/oscHyphenationDeInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{headings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+\usepackage[dvips]{epsfig}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+\usepackage[marginal]{footmisc}
+%- end(footnote-configuration)
+
+\begin{document}
+
+%% use all entries of the bliography
+
+%%-- start(titlepage)
+\titlehead{Literaturexzerpt}
+\subject{Autor(en): \ldots}
+\title{Titel: \ldots}
+\subtitle{Jahr: \ldots }
+\author{K. Reincke\input{../btexmat/oscLicenseFootnoteInc}}
+
+%\thanks{den Autoren von KOMA-Script und denen von Jurabib}
+\maketitle
+%%-- end(titlepage)
+%\nocite{*}
+
+\section{abstracts}
+\subsection{1. Aufl. 2002}
+Das Werk / The work\footcite[][]{JaeMet2002a}:
+
+\textbf{DE:} Die 1. Ausgabe des wichtigsten deutschsprachigen Standardwerks zum Thema
+'Open Source Lizenzen'; es behandelt wichtige Aspekte wie Haftung, Patente oder
+Marken. Und bzgl. jeder aufgelisteten Lizenz oder jedes erwähnten Lizenzclusters
+beschreibt es Rechte und Pflichten der Softwarenutzer - nur leider eben nicht in
+Form abarbeitbarer Listen und auch nicht unter Berücksichtigung der
+verschiedenen Usecases, wie sie die Softwareentwicklung kennzeichnen. Und
+trotzdem: es ist ein unumgehbares Standardwerk, zumindest in seiner letzten
+Ausgabe von 2011.
+
+\textbf{EN:} This is the first edition of the most important German standard work
+concerning Open Source Software Licenses. It deals with many important topics
+like liability, patents, or branding, And with respect to each of the mentioned
+licenses (or license clusters) it discusses already the rights and the duties of
+the software user - but regrettably not in form of a processable todo-list and
+not with distinguishing the different use cases of the software development
+process. But nevertheless: it's a very important groundwork!
+
+\subsection{2. Aufl. 2006}
+Das Werk / The work\footcite[][]{JaeMet2006a} \\
+
+\textbf{DE:}  Die 2. Ausgabe des wichtigsten deutschsprachigen Standardwerks zum
+Thema 'Open Source Lizenzen': Wie ifross unterteilt es Lizenzen jetzt als solche
+mit 'strenger Copyleft Klausel', solche mit 'beschränkter Copyleft-Klausel' und
+solche ohne 'Copyleft-Klausel'. Neben anderen Aspekten diskutiert das Buch nun
+die Durchsetzung von Open Source Lizenzen und die Wechselwirkungen zum AGB
+Recht. Und erneut beschreibt es bzgl. der wichtigsten Open Source Lizenzen
+Rechte und Pflichten der Softwarenutzer - wiederum nur leider eben nicht in Form
+abarbeitbarer Listen und auch nicht unter Berücksichtigung der verschiedenen
+Usecases, wie sie die Softwareentwicklung kennzeichnen. Allerdings bleibt es
+natürlich ein unumgehbares Standardwerk!
+
+\textbf{EN:} This is the second strongly expanded edition of the most important
+German standard work concerning Open Source Software Licenses. Like ifross it
+classifies licenses as those with 'strict copyleft clauses', those with
+'restricted copyleft-clauses' and those without any 'copyleft-clauses'. Beside
+other aspects it now discusses how to achieve acceptance of an Open Source
+licensing and analyzes the AGB side effects. And again it discusses the rights
+and the duties of the software user, at least with respect to the most import
+Open Source Licenses - but again regrettably not in form of a processable
+todo-list and not with distinguishing the different use cases of the software
+development process. But naturally: it remains a very important groundwork!
+
+\subsection{3. Aufl. 2011}
+Das Werk / The work\footcite[][]{JaeMet2011a} \\
+
+\textbf{DE:} Die 3. aktuelle Ausgabe des wichtigsten deutschsprachigen
+Standardwerks zum Thema 'Open Source Lizenzen': Behält die 'bewährte
+Kapitelstruktur' bei, listet aber neue Lizenzenh auf und nebst vielem anderem
+auvh auf die Lizenzkombination ein. Ergo findet man erneut zu Open Source
+Lizenzen die Rechte und Pflichten der Softwarenutzer - wiederum nur leider eben
+nicht in Form abarbeitbarer Listen und auch nicht unter Berücksichtigung der
+verschiedenen Usecases, wie sie die Softwareentwicklung kennzeichnen. Das
+scheidet der Qualität dieses unumgehbaren Standardwerks nicht!
+
+\textbf{EN:} This is the third current edition of the most important German
+standard work concerning Open Source Software Licenses. It retains the
+'established structure of the chapters', adds new licenses and discusses -
+beside many other aspects - the compatibility respectively combinability of
+different licenses. Hence this work again specifies the rights and the duties of
+the software user, at least with respect to the most important licenses - but
+again regrettably not in form of a processable todo-list and not with
+distinguishing the different use cases of the software development process. But
+it retains the most important groundwork!
+
+\subsection{Unterschied in der Klassifikation}
+
+Während die erste Auflage noch bipolar die Rechte und Pflichten
+der Nutzer von \glqq{}'Copyleft'-Lizenzen\grqq{} denen der Nutzer von
+\glqq{}'BSD'-artigen Lizenzen gegenüberstellt\grqq{} wobei LGPL und GPL unter
+den Copyleft-Lizenzehn subsumiert werden, wechsel die zweite Auflage zur
+Klassifikation von ifross: Hier ist die Rede von 
+
+\section{Line of Thought}
+
+\section{Specific Aspects}
+
+\small
+\bibliography{../bibfiles/oscResourcesDe}
+
+\end{document}

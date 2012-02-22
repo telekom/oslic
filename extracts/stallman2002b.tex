@@ -1,0 +1,140 @@
+% Telekom osCompendium extract template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
+%
+% select the document class
+% S.26: [ 10pt|11pt|12pt onecolumn|twocolumn oneside|twoside notitlepage|titlepage final|draft
+%         leqno fleqn openbib a4paper|a5paper|b5paper|letterpaper|legalpaper|executivepaper openrigth ]
+% S.25: { article|report|book|letter ... }
+%
+% oder koma-skript S.10 + 16
+\documentclass[DIV=calc,BCOR=5mm,11pt,headings=small,oneside,abstract=true, toc=bib]{scrartcl}
+
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4,ngerman}
+\usepackage[ngerman, english]{babel}
+\selectlanguage{english}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+\input{../btexmat/oscJbibCfgEnInc}
+
+% language specific hyphenation
+\input{../btexmat/oscHyphenationEnInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{headings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+\usepackage[dvips]{epsfig}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+\usepackage[marginal]{footmisc}
+%- end(footnote-configuration)
+
+\begin{document}
+
+%% use all entries of the bliography
+
+%%-- start(titlepage)
+\titlehead{Literaturexzerpt}
+\subject{Autor(en): Stallman / Stallman2002b}
+\title{Titel: Can You Trust Your Computer}
+\subtitle{Jahr: 2002 / 2002 }
+\author{K. Reincke\input{../btexmat/oscLicenseFootnoteInc}}
+
+%\thanks{den Autoren von KOMA-Script und denen von Jurabib}
+\maketitle
+%%-- end(titlepage)
+%\nocite{*}
+
+\begin{abstract}
+\noindent
+\cite[(in:)][]{StaGay2002a} \\
+\noindent
+\cite[(ist:)][]{Stallman2002b} \\
+Das Werk / The work\footcite[][]{Stallman2002b} \\
+\noindent \itshape
+\ldots Erläutert die Umsetzung von 'DRM' und 'trusted computing' als eine
+Verschlüsselung von Daten, die werksseitig immer schon in Software und Computer
+eingebaut sei. Da aber in diesem Fall der Schlüssel dem Besitzer vorenthalten
+werde, kontrolliere letztlich das Programm respektive die Maschine den Besitzer,
+nicht der Besitzer seine Maschine. Und eben deshalb spricht RMS vom 'Digitial
+Restriction Management' und vom 'Treacherous Computing'.
+\\
+\noindent
+\ldots The article argues that 'DRM' - realized by a 'trusted computing'
+campaign - is technically established by a key based digital encryption of your
+data. This encryption is automatically incorporated into your computer
+(software). But because the keys are kept secret from the owner of the machine
+one can say that the programs using the hidden keys are controlling the owner,
+not the owner the computer. Therefore RMS uses the terms 'Digitial Restriction
+Management' and 'Treacherous Computing'.
+\end{abstract}
+\footnotesize
+%\tableofcontents
+\normalsize
+
+\section{Line of Thought}
+
+The article argues that 'DRM' - realized by a 'trusted computing' campaign - is
+technically established by a key based digital encryption of your data. This
+encryption is automatically incorporated into your computer (software). But
+because the keys are kept secret from the owner of the machine one can say that
+the programs using the hidden keys are controlling the owner, not the owner the
+computer. Therefore RMS uses the terms ``Digitial Restriction Management'' and
+``Treacherous Computing''.\footcite[cf][115]{Stallman2002b}
+\section{Specific Aspects}
+
+\small
+\bibliography{../bibfiles/oscResourcesEn}
+
+\end{document}

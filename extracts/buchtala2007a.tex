@@ -1,0 +1,313 @@
+% Telekom osCompendium extract file
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
+%
+% select the document class
+% S.26: [ 10pt|11pt|12pt onecolumn|twocolumn oneside|twoside notitlepage|titlepage final|draft
+%         leqno fleqn openbib a4paper|a5paper|b5paper|letterpaper|legalpaper|executivepaper openrigth ]
+% S.25: { article|report|book|letter ... }
+%
+% oder koma-skript S.10 + 16
+\documentclass[DIV=calc,BCOR=5mm,11pt,headings=small,oneside,abstract=true, toc=bib]{scrartcl}
+
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4,ngerman}
+\usepackage[ngerman, english]{babel}
+\selectlanguage{english}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+\input{../btexmat/oscJbibCfgDeInc}
+
+% language specific hyphenation
+\input{../btexmat/oscHyphenationDeInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{headings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+\usepackage[dvips]{epsfig}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+\usepackage[marginal]{footmisc}
+%- end(footnote-configuration)
+
+\begin{document}
+
+%% use all entries of the bliography
+
+%%-- start(titlepage)
+\titlehead{Literaturexzerpt}
+\subject{Autor: Rouven Buchtala}
+\title{Titel: Determinatente der Open Source Software}
+\subtitle{Jahr: 2006 }
+\author{K. Reincke\input{../btexmat/oscLicenseFootnoteInc}}
+%\thanks{den Autoren von KOMA-Script und denen von Jurabib}
+\maketitle
+%%-- end(titlepage)
+%\nocite{*}
+
+\begin{abstract}
+\noindent
+Die Arbeit/The work\footcite[][]{Buchtala2007a} \\
+\noindent \itshape
+\ldots will auf Basis spieltheoretischer Aspekte ermitteln, was die
+Auswahl von OS-Lizenzen beeinflusst. Dazu werden diese als 'permissiv',
+'restriktiv' und 'hochrestriktiv' klassifiziert. Das erhellt inhaltliche
+Bedingungen der Lizenzerfüllung. Die Namen der Kategorien sind jedoch aus Sicht
+einer Firma gewählt, die sich möglichst uneingeschränkt an freiem Code bedienen
+will. Die Intention der OS-Lizenzgeber, gewährte Freiheiten gegen ihre
+'Rücknahme' abzusichern, entfällt dabei. \\
+\noindent
+\ldots tries to detect why specific OS-licenses are chosen. Game
+theoretic aspects shall help to answer the question. Thereto OS-licenses are
+classified as 'permissive', 'restrictive' and 'highly restrictive' licenses.
+This differentiation highlights some necessary constraints for respecting a
+license. But the names of these categories are generated with respect to a
+company which wants to be able to (re)use and (re)sell OS code with minimal
+restrictions. The intention of the OS licensors to defend the licensed freedom
+for revocations is not covered by these names.
+\end{abstract}
+\footnotesize
+%\tableofcontents
+\normalsize
+
+\section{Ausrichtung und Hauptargumentationen}
+
+\subsection{Summary}
+Die Arbeit möchte die Frage beantworten, "`[\ldots] welche Faktoren [\ldots] die
+Wahl zwischen den unterschiedlichen OSS-Lizenzen (beeinflussen)
+"\footcite[cf.][25]{Buchtala2007a}:
+
+\begin{quotation}\noindent\glqq{}Mit Hilfe eines spieltheoretischen Modells lassen
+sich die Bedingungen charakterisieren, unter denen ein privater oder ein kommerzieller
+Entwickler sich für eine permissive, restriktive oder hoch restriktive Lizenz
+entschieden wird.\grqq{}\footcite[][26]{Buchtala2007a}
+\end{quotation}
+
+Mit der Arbeit geht so der Anspruch einer
+'Erklärungsadäquatheit'\footnote{Begriff von mir, KR} einher: Am Anfang eines
+jeden spieltheoretischen Zugriffs steht eine Modellierung der Wirklichkeit als Set von 'Annahmen'. Da, so der Gedankengang im Groben,
+\glqq{}die Vorhersagen des Modells [\ldots] dabei im Einklang mit bisher
+erbrachten empirischen Ergebnissen (stehen) [\ldots]\grqq{}, dürfen die
+modellierten Annahmen \glqq{}[\ldots] als eine mögliche Erklärungen von diesen
+[den Ergebnissen, KR] angesehen werden\grqq{}\footcite[][26]{Buchtala2007a}.
+
+\subsection{Details}
+
+Ein Kernpunkt der Gesamtargumentation ist die Klassifikation resp. Gruppierung
+bestehender Open Source Lizenzen in \glqq{}permissive, restriktive und
+hochrestriktive Lizenzen\grqq{}\footcite[cf.][55]{Buchtala2007a}: Als Open
+Source Lizenzen seien sie durch die 10 Kriterien der Open Source Initiative zu
+einer Gruppe zusammengefasst\footcite[cf.][53ff]{Buchtala2007a}. In sich
+ließe sich diese Gruppe allerdings weiter clustern. So stünde der Gruppe von
+Lizenzen, die \glqq{}\ldots es dem Nutzer explizit (erlauben), dass abgeleitete
+Werke proprietarisiert werden können\grqq{}, diejenigen gegenüber, die dieses
+verbieten\footcite[cf.][55]{Buchtala2007a}. Und diese Gruppe der die
+'Proprietarisierung' verbietenden Lizenzen könne, so Buchtala, in Anlehnung an
+\glqq{}Lerner und Tirole (2005)\grqq{} weiter in zwei Subgruppen unterteilt
+werden, in die Gruppe, bei der \glqq{}Modifikationen \ldots im Distributionsfall
+offengelegt werden (müssen)\grqq{}, und in die andere Gruppe, die für
+abgeleitete Werke eine Publikation \glqq{}unter derselben Lizenz\grqq{}
+erfordere\footcite[cf.][56]{Buchtala2007a}.
+
+So kommt Buchtala für die per definitionem quelloffenen Open Source Lizenzen zu
+den Subtypen \glqq{}Permissiv\grqq{} (\glqq{}Quellcode ist einsehbar, frei
+verteilbar und modifiziertbar\grqq{}), \glqq{}Restriktiv\grqq{}
+(\glqq{}Quellcode von Modifikationen muss im Distributionsfall offen gelegt
+werden (Copyleft)\grqq{}) und \glqq{}Hochrestriktiv\grqq{} (\glqq{}Abgeleitete
+Werke dürfen nur mit Software verbunden werden, die unter derselben Lizenz
+veröffentlicht ist (Reziprozität)\grqq{})\footcite[cf.][57 (Typo im
+Original)]{Buchtala2007a}. Die dazu gehörende Grafik signalisiert, dass alle
+restriktiven Lizenzen auch permissiv sind, aber nicht umgekehrt, und dass alle
+restriktiven Lizenzen hoch hochrestriktiv sind, aber nicht
+umgekehrt\footcite[cf.][57]{Buchtala2007a}. Explizit bestätigt wird diese
+Teilmengen basierte Clusterung durch Buchtalas Merkmalsmatrix: Alle behandelten
+Lizenzen (GPL, LGPL, BSD, Artistic License, Apache License (APL), MIT, Mozilla
+Publuc License (MPL)) seien im \glqq{}Quellcode [\ldots] einsehbar, frei
+verteilbar und modifizierbar\grqq{}, bei GPL, LGPL und MPL müssten
+\glqq{}Modifikationen [\ldots] im Distributionsfall offengelegt werden\grqq{}
+und nur bei der GPL dürften \glqq{}abgleitete Werke [\ldots] nur mit Software
+verbunden werden, die unter derselben Lizenz veröffentlicht
+ist\grqq{}\footcite[cf.][62]{Buchtala2007a}
+
+In seiner Sichtung der Forschungsliteratur kommt Buchtala sodann zu dem Schluss,
+dass zwar wegen des 'statistischen Primats' der hochrestriktiven Lizenzen - also
+der GPL - die \glqq{}[\ldots] Akteure bei der Auswahl der von ihnen verwendeten
+Lizenzen umso stärker auf (hoch)restriktive Lizenzen zurück greifen würden, je
+wichtiger die Zusammenarbeit mit anderen (hoch)restriktiven Lizenzen bzw. mit
+der OSS-Community ist[\ldots]\grqq{}, dass mit diesem Faktum aber noch nicht die
+Frage beantwortet sei, \glqq{}[\ldots] wovon die ursprüngliche
+Lizenzentscheidung determiniert
+wird\grqq{}\footcite[cf.][156]{Buchtala2007a}. Einen solchen Grund für die
+ursprünglichen Wahl 'nachzureichen', ist dann, wie angekündigt, Hauptziel des
+Buches.
+
+So konstatiert Buchtala, dass \glqq{}[\ldots] die oftmals wahrgenommene
+Verbundenheit zwischen dem OSS-Gedanken und der GPL keineswegs unbegründet oder
+zufällig entstanden (sei)\grqq{}\footcite[cf.][168]{Buchtala2007a}. Dazu
+argumentiert er so: Zum einen könne \glqq{}Code\grqq{}, der \glqq{}[\ldots]
+unter einer hochrestriktiven Lizenz veröffentlicht wurde, [\ldots] nur dann in
+einem anderen Projekt legal weiterverwendet werden, falls dieses ebenfalls eine
+hochrestriktive Lizenz (verwende)\grqq{}. Andererseits dürfe
+\glqq{}permissiv\grqq{} lizenzierter Code \glqq{}[\ldots] unter praktisch jeder
+anderen Lizenz, sowohl einer hochrestriktiven als auch einer proprietären,
+veröffentlicht werden\grqq{}. Daraus ergäbe sich dann \glqq{}ein inhärenter
+Vorteil für hochrestriktive Lizenzen und im speziellen für die GPL\grqq{}: Da
+'hochrestriktiv lizenzierter Code' auf das Ergebnis einer größeren Anzahl von
+zuarbeitenden OS-Projekten zugreifen könn, nämlich auf die mit permissiven
+Lizenzen UND auf die mit (hoch)restriktiven Lizenzen, während 'permissiv
+lizenzierter Code' eben nur auf das Ergebnis solcher Projekte, die
+selbst permissiv orientiert seien\footcite[cf.][165]{Buchtala2007a}. Buchtala
+fixiert das in folgendem Befund:
+\begin{quotation}\noindent
+\glqq{}Ein Projekt, dass unter einer hochrestriktiven Lizenz veröffentlicht
+wird, kann Code von sämtlichen OSS Projekten verwenden, unabhängig von deren Lizenz. Ein
+Projekt, das unter einer permissiven Lizenz veröffentlicht wird, kann nur den
+Code von Projekten verwenden, die ebenfalls unter einer permissiven Lizenz
+veröffentlicht wurden.\grqq{}\footcite[][165]{Buchtala2007a}.
+\end{quotation}
+
+Anm.: Die Fakten widersprechehn der Deduktion. Buchtala kennt nur eine
+hochrestriktive Lizenz, nämlich die
+GPL\grqq{}\footcite[cf.][62]{Buchtala2007a}. Gerade das GNU Projekt resp. die
+FSF listet explizit auf, dass und mit welchen anderen Lizenzen die GPL gerade
+nicht kompatibel ist. Und darunter befinden sich durchaus auch - um mit Buchtala
+zu sprechen - restriktive oder permissive. Insofern wird dieser irrtümlich
+angesetzte und doch in die spieltheoretische Modellierung eingegangene
+\glqq{}inhärente Vorteil für hochrestriktive
+Lizenzen\grqq{}\grqq{}\footcite[cf.][168]{Buchtala2007a} das Ergebnis
+verfälschen.
+
+\section{Spezifische Diskussionen}
+
+\subsection{Veröffentlichungspflicht}
+Buchtala unterstreicht, dass bei OS-Lizenzen die Veröffentlichungspflicht von
+Modifikationen nur dann greife, \glqq{}[\ldots] wenn die modifizierte Software
+auch weiter vertrieben wird\grqq{}. Sofern Software nur \glqq{}[\ldots] für den
+internen Gebrauch weiterentwickelt (werde)\grqq{}, sei die Publikation der
+Modifikationen nicht geboten. Außerdem - betont Buchtala weiter - impliziere das
+Veröffentlichungsgebot eben nicht, dass die Modifikationen \glqq{}[\ldots] für
+alle einsichtig zu machen (seien)[\ldots]\grqq{}. Vielmehr müsse der revidierte
+Code nur konkret denjenigen gegenüber offengelegt werden, an die \glqq{}[\ldots]
+das Produkt distribuiert (werde)\grqq{}\footcite[cf.][168 - B. beruft sich
+selbst auf Henkel 2003 u. 2004b]{Buchtala2007a}.
+
+\subsection{(rein) permissive Lizenzen}
+Als (rein) permissive Lizenzen gelten Buchtala die BSD-License, die Artistic
+License, die Apache License (APL) und die
+MIT-License\footcite[cf.][62]{Buchtala2007a}.
+
+Anm-1: Für die Apache Lizenz scheint das auf den ersten Blick zu stimmen, der
+zweite Blick in den Lizenztext sollte stutzig machen. Dort steht, dass man das
+Recht hat, Modifikationen und Derivationen als Sourcecode oder Binärcode frei zu
+vertreiben. Mann kann den modifizierten Code also weitergeben, muss es aber
+nicht. In jedem Fall aber, also auch wenn man seine eigene Weiterentwicklung -
+proprietär - nur als Binärcode weitergibt, muss man die Apache-Lizenz dazu legen
+und mit weitergeben. Damit unterläge also auch der distribuierte Binärcode der
+Apache-Lizenz, die ihrerseits Modifikationen frei erlaubt, also auch das
+Reengineering des Codes. Ein vollständige Proprietärisierung ist demanch mit der
+APL gar nicht möglich.
+
+Anm-2: Für die Artistic License skizziert Buchtala ein Argument gegen die
+Deutung als permissive Lizenz: Diese fordere im Normalfall zwar, dass
+Modifikation im Distributionsfall offengelegt werden müssen, allerdings erlaube
+sie Ausnahmen. Deshalb werde die Artistic License \glqq{}[\ldots]
+überlicherweise als permissiv angesehen\grqq{}\footcite[cf.][61 B. beruft
+sich auf Perens, 1999 und Lerner und Tirole 2005, jeweils ohne nähere
+Seitenangabe]{Buchtala2007a}
+
+\subsection{Klassifikation}
+
+Es gibt mindestens 2 Schwächen in der Art, wie B. die Lizenzen klassifiziert.
+Die eine betrifft die Teilmengenrelation der definierenden Features, die zweite
+den Namensgebeung der Kategorien:
+
+\subsubsection{Problem: Teilmengen begründete Klassendefinition}
+
+Wenn alle restriktiven Lizenzen auch permissiv
+sind, nicht aber umgekehrt, und wenn alle hochrestriktiven Lizenzenh auch
+restriktiv sind, nicht aber umgekehrt\footcite[cf.][62]{Buchtala2007a},
+dann macht es keinen Sinn mehr, von den 'permissiven Lizenzen' oder den
+'restriktiven Lizenzen' zu sprechen, wenn man die einen (BSD, Artistic, (APL)
+MIT) gegen die anderen (MPL, GPL, LGPL) abgrenzen will.
+
+\subsubsection{Problem: Klassenbennung}
+
+ANM-1: Wenn alle restriktiven Lizenzen auch permissiv sind, nicht aber
+umgekehrt, dann müsste man also zur Kennzeichnung der einen von den
+permissiv-restriktiven Lizenzen sprechen. Das führt zumindest zu sprachlichen
+Unschärfen.
+
+ANM-2: Die Namenswahl wird offensichtlich Firmen gerecht, die sich zu ihren
+eigenen Zwecken möglichst ohne Einschränkungen an Open Source Software bedienen
+wollen (permissiv) und die daran durch die Lizenzen gehindert (restriktiv) oder
+gar stark gehindert (hochrestiktiv) werden.  Die Intention der OS-Lizenzgeber -
+wie sie gerade in der GPL explizit als Grund für eine Einschränkung genannt wird
+- , gewährte Freiheiten gegen ihre 'Rücknahme' abzusichern, entfällt dabei.
+
+\subsection{Reziprozitäts-Missverständnis (?)}
+
+B. erklärt, dass bei \glqq{}hochrestiktive Lizenzen\grqq{} - und er kennt da nur
+eine, nämlich die GPL - von einem so lizenzierten Werk davon \glqq{}abgeleitete
+Werke [\ldots] nur mit Software verbunden werden (dürfen), die unter derselben
+Lizenz veröffentlicht ist
+(Reziprozität)\grqq{}\footcite[cf.][62]{Buchtala2007a}. Dies geht am Kern der
+GPL-Vorstellung vorbei. Das, was die GPL von dem abgeleiteten Werk fordert, ist,
+dass es selbst ebenfalls unter der GPL veröffentlicht wird. Mit welchen anderen
+Lizenzen das abgeleiete Werk dann verbunden werden darf, hängt von der GPL resp.
+von deren Interpretation ab und ist nur ein Randaspekt. Kern der GPL ist, dass
+die GPL-Rechte auch für das abgeleitete Werk geelten soll.
+
+\small
+\bibliography{../bibfiles/oscResourcesDe}
+
+\end{document}

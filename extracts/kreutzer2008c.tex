@@ -1,0 +1,141 @@
+% Telekom osCompendium extract file
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
+%
+% select the document class
+% S.26: [ 10pt|11pt|12pt onecolumn|twocolumn oneside|twoside notitlepage|titlepage final|draft
+%         leqno fleqn openbib a4paper|a5paper|b5paper|letterpaper|legalpaper|executivepaper openrigth ]
+% S.25: { article|report|book|letter ... }
+
+% oder koma-skript S.10 + 16
+\documentclass[DIV=calc,BCOR=5mm,11pt,headings=small,oneside,abstract=true, toc=bib]{scrartcl}
+
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4,ngerman}
+\usepackage[english, ngerman]{babel}
+\selectlanguage{ngerman}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+\input{../btexmat/oscJbibCfgDeInc}
+
+% language specific hyphenation
+\input{../btexmat/oscHyphenationDeInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{headings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+\usepackage[dvips]{epsfig}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+\usepackage[marginal]{footmisc}
+%- end(footnote-configuration)
+
+
+\begin{document}
+
+%% use all entries of the bliography
+
+%%-- start(titlepage)
+\titlehead{Literaturexzerpt}
+\subject{Autor(en): Kreutzer}
+\title{Titel: Softwarelizenzen - Beispiele}
+\subtitle{Jahr: 2008 }
+\author{K. Reincke\input{../btexmat/oscLicenseFootnoteInc}}
+%\thanks{den Autoren von KOMA-Script und denen von Jurabib}
+\maketitle
+%%-- end(titlepage)
+%\nocite{*}
+
+\begin{abstract}
+\noindent
+\cite[(in:)][]{DjoGehGraKreSpi2008a} \\
+\noindent
+\cite[(ist:)][176 - 179]{Kreutzer2008c} \\
+\noindent \itshape
+[DE]:  Analysiert am Entwicklerinteresse entlang dazu passende Lizenzformen:
+Open Source Lizenzen können demnach verwendet werden, wenn keine
+Kontrollinteressen vorliegen, wenn Interesse am Rücklauf von
+Weiterentwicklungen bestehen oder wenn Werbezwecke im Vordergrund stehen;
+ansonsten werden propritäre Lizenzen empfohlen. Eine feinere Unterteilung der
+Open Source Lizenzen wird nicht offeriert. \\
+\noindent
+[EN]: Offers a case based analysis concerning the interests of the developer:
+Open Source licences can be used if he hasn't any further interests or if he
+wants to get back improvements of other developer or if he wants to support his
+name; in other cases he should use a proprietary licence. The different Open
+Source licences are not analyzed in a deeper sense.
+\end{abstract}
+\footnotesize
+%\tableofcontents
+\normalsize
+
+\section{Gedankengang}
+
+Kreutzer unterstreicht zunächst, dass \glqq{} grundsätzliche Erläuterungen über
+die Besonderheiten einzelner Software-Lizenzmodelle [\ldots] oft zu abstrakt
+(seien) \grqq{} und bietet deshalb eine \glqq{}Sammlung von
+Fallbeispielen\grqq{} an\footcite[vgl.][176ff]{Kreutzer2008c}.
+
+Einstiegspunkt ist das Interesse des Entwicklers am Fortgang seiner Arbeit. Open
+Source Lizenzen können demnach verwendet werden, wenn \glqq{}[\ldots] keine
+finanziellen oder sonstigen Kontrollinteressen hinter der Programmverwertung
+(stehen) [\ldots]]\grqq{}\footcite[vgl.][176]{Kreutzer2008c}, wenn Interesse am
+Rücklauf von Weiterentwicklungen besteht\footcite[vgl.][177]{Kreutzer2008c} oder
+wenn Werbezwecke im Vordergrund stehen\footcite[vgl.][178]{Kreutzer2008c};
+ansonsten werden propritäre Lizenzen empfohlen. Eine feinere Unterteilung der
+Open Source Lizenzen wird nicht offeriert.
+
+\small
+\bibliography{../bibfiles/oscResourcesDe}
+
+\end{document}

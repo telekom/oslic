@@ -1,0 +1,12 @@
+*.dvi
+*.ps
+*.aux
+*.bbl
+*.blg
+*.log
+*.toc
+*.url
+*.bak
+.project
+.texlipse
+

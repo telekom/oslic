@@ -1,0 +1,140 @@
+% Telekom osCompendium bib data check file English
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+%
+% select the document class
+% S.26: [ 10pt|11pt|12pt onecolumn|twocolumn oneside|twoside notitlepage|titlepage final|draft
+%         leqno fleqn openbib a4paper|a5paper|b5paper|letterpaper|legalpaper|executivepaper openrigth ]
+% S.25: { article|report|book|letter ... }
+%
+% oder koma-skript S.10 + 16
+\documentclass[DIV=calc,BCOR=5mm,11pt,headings=small,oneside,abstract=true, toc=bib]{scrartcl}
+
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4,ngerman}
+\usepackage[ngerman, english]{babel}
+\selectlanguage{english}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+\input{../btexmat/oscJbibCfgEnInc}
+
+% language specific hyphenation
+\input{../btexmat/oscHyphenationEnInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{headings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+\usepackage[dvips]{epsfig}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+\usepackage[marginal]{footmisc}
+%- end(footnote-configuration)
+
+\begin{document}
+
+%% use all entries of the bliography
+\nocite{*}
+
+%%-- start(titlepage)
+\titlehead{bibliography test}
+\subject{For testing \itshape{new bibliographisc data}}
+\title{With Commented Bibliography}
+\subtitle{and text inside of the footnotes}
+\author{K. Reincke\input{../btexmat/oscLicenseFootnoteInc}}
+%\thanks{den Autoren von KOMA-Script und denen von Jurabib}
+\maketitle
+%%-- end(titlepage)
+
+\begin{abstract}
+\noindent \itshape
+Bibliographic references must be tested carefully before they are really used.
+That's the purpose of this testtext: A new bibliographic entry of the database
+is tested as part of the most important use cases: the initial use of the work,
+the directly following reuse - firstly as quote of the same page, then as quote
+of another page of the same work -, followed by another work of the same author
+and again the first quote which now show arise as abbreviated reference. If the
+quoted work is part of a collection then the collection should be tested in
+similar contexts. Finally the complete commented bibliography is printed.
+\end{abstract}
+
+\section{Initial quotation \& Repetition by $\backslash$footcite out of
+\emph{jurabib}}
+
+This line simulates the \glqq initial quotation which therefore should be
+referred by the complete set of all bibliographic data\grqq\footcite[cf.
+besides:][S.123ff]{Maass2008a}, followed by a \glqq quotation out of the same work
+and the same page\grqq\footcite[cf.][S.123ff]{Maass2008a}, which again is
+followed by a \glqq  quotation out of the same work but a different
+page.\grqq\footcite[cf.][S.125f]{Maass2008a}.
+
+If possible there should now be cited another work of the same
+author\footcite[cf.][S.321]{Maass2008a}.
+
+Now we cite a complete other work\footcite[cf.
+additionally][S.42]{Spielkamp2008a} for being able to test wether the \glqq
+short-title-abbreviated-quotation'\grqq\footcite[cf.
+furthermode][S.123]{Maass2008a} is correctly used.
+
+\section{Testzitat $\backslash$cite in $\backslash$footnote}
+
+Now we check wether we can correctly use our data also by the command
+$\backslash$cite as part of the command $\backslash$footnote - firstly the
+``page differing quotation''\footnote{\cite[cf.][S.125]{Maass2008a}}, followed by
+another work\footnote{\cite[cf.][S.42]{Spielkamp2008a}} for evoking the
+`short-title-abbreviated-quotation''\footnote{\cite[cf.][S.125]{Maass2008a}}
+again.
+
+
+\small
+\bibliography{../bibfiles/oscResourcesEn}
+
+\end{document}

@@ -1,0 +1,326 @@
+% Telekom osCompendium extract template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
+%
+% select the document class
+% S.26: [ 10pt|11pt|12pt onecolumn|twocolumn oneside|twoside notitlepage|titlepage final|draft
+%         leqno fleqn openbib a4paper|a5paper|b5paper|letterpaper|legalpaper|executivepaper openrigth ]
+% S.25: { article|report|book|letter ... }
+%
+% oder koma-skript S.10 + 16
+\documentclass[DIV=calc,BCOR=5mm,11pt,headings=small,oneside,abstract=true, toc=bib]{scrartcl}
+
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4,ngerman}
+\usepackage[english, ngerman]{babel}
+\selectlanguage{ngerman}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+\input{../btexmat/oscJbibCfgDeInc}
+
+% language specific hyphenation
+\input{../btexmat/oscHyphenationDeInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{headings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+\usepackage[dvips]{epsfig}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+\usepackage[marginal]{footmisc}
+%- end(footnote-configuration)
+
+\begin{document}
+
+%% use all entries of the bliography
+
+%%-- start(titlepage)
+\titlehead{Literaturexzerpt}
+\subject{Autor(en): Renner, Thomas \ldots}
+\title{Titel: Open Source Software. Einsatzpotentiale ..}
+\subtitle{Jahr: 2005 }
+\author{K. Reincke\input{../btexmat/oscLicenseFootnoteInc}}
+
+%\thanks{den Autoren von KOMA-Script und denen von Jurabib}
+\maketitle
+%%-- end(titlepage)
+%\nocite{*}
+
+\begin{abstract}
+\noindent
+Das Werk / The work\footcite[][]{RenVetRexKet2005a} \\
+\noindent \itshape
+\ldots Diskutiert Einsatzpotentiale von OSS und offeriert eine Methodik, die
+Wirtschaftlichkeit ihres Einsatzes zu berechnen. Liefert eine gute
+Begriffssystematik und einen Softwareüberblick. Die Berechnung der
+Wirtschaftlichkeit beschränkt sich für Client-Maschinen auf eine Migration von
+MS-Office nach Open-Office. Pikant sind zudem die auf Interviews beruhenden
+Einschätzungen zu Vor- und Nachteilen von OSS. Auffallend ist auch, dass die
+Lizenzerfüllung nicht thematisiert wird, obwohl hervorgehoben wird, dass OSS
+gerade nicht frei von Lizenzbedingungen sei. \\
+\noindent
+\ldots The study discusses potentials of OSS and offers a method to compute its'
+cost effectiveness. It presents a good survey of the underlying concepts and a
+list of OS applications. For client mashines the computation of the cost
+effectiveness refers only to the migration from MS-Office to Open-Office.
+Unfortunately the list of advantages and disadvantages based on interviews is a
+little inconsistent. Remarkably is also that the study doesn't focus on the act
+of fulfilling an OS license although it highlights, that OSS is not free of
+license conditions.
+
+\end{abstract}
+\footnotesize
+%\tableofcontents
+\normalsize
+
+\section{Line of Thought}
+
+Ziel der Studien ist eine Darstellung der \glqq{}Einsatzpotentiale von
+Open Source Software\grqq{} und einer \glqq{}[\ldots] Methodik, um die
+Wirtschaftlichkeit des Einsatzes zu
+berechnen\grqq{}\footcite[vgl.][10]{RenVetRexKet2005a}.
+
+Dazu werden zunächst - unter dem Stichwort \glqq{}Charakteristika von
+Open Source Software\grqq{}\footcite[vgl.][12]{RenVetRexKet2005a} - die gängigen
+Begriffe definiert\footcite[vgl.][12ff]{RenVetRexKet2005a}, Vor- und Nachteile
+der Open Source Software aufgelistet\footcite[vgl.][16ff]{RenVetRexKet2005a},
+gängigen Lizenzmodelle spezifziert\footcite[vgl.][19]{RenVetRexKet2005a},
+Rechtsfragen erläutert\footcite[vgl.][23]{RenVetRexKet2005a} und
+organisatorische Kontexte refiert\footcite[vgl.][29]{RenVetRexKet2005a}.
+
+Daran schließt sich eine
+\glqq{}Ist-Analyse\grqq{}\footcite[vgl.][31]{RenVetRexKet2005a} der Open Source
+Software an, die im Wesentlichen aus einer auf den Verwendungskontext bezogenen
+Gegenüberstellung von proprietärer und freier Software
+besteht\footcite[vgl.][36]{RenVetRexKet2005a}. Diese Ist-Analyse mündet in einer
+Ableitung der Vor- und Nachteile von Open Source Software aus Interviews, zum
+einen aus Fraunhofer internen Interviews\footcite[vgl.][56f]{RenVetRexKet2005a},
+zum anderen aus \glqq{}Befragung bei deutschen
+Unternehmen\grqq{}\footcite[vgl.][68f]{RenVetRexKet2005a}. Die
+Gegenüberstellung von \glqq{}Anwendungsfeldern\grqq{} und der darin relevanten
+Programme wird in dann vertieft, wobei die jeweiligen \glqq{}Bewertungen
+und Empfehlungen\grqq{} aus den \glqq{}Erhebungen\grqq{} abgeleitet
+werden\footcite[vgl. dazu][70ff insbesondere S.82ff]{RenVetRexKet2005a}
+
+Kern der Studie ist dann auch eine
+\glqq{}Wirtschaftlichkeitsbetrachtung\grqq{}\footcite[vgl.][154]{RenVetRexKet2005a},
+die sich - hinsichtlich der Nutzung von Clientrechner - auf eine Migration von
+Microsoft-Office nach Open-Office und und Open-Groupware
+'reduziert'\footcite[vgl.][156]{RenVetRexKet2005a}.
+
+\section{Specific Aspects}
+
+\subsection{Begriffsdefinition}
+
+Die Studie definiert Open Source Software in direkter Anlehnung an die Open
+Source Initiative\footcite[vgl.][12]{RenVetRexKet2005a}. 
+
+Dem gegenüber stellt zunächst sie die Public Domain Software und weist explizit
+daraufhin, dass dies ein für Deutschland nicht adäquates Konzept darstelle, weil
+hier \glqq{}[\ldots] der Abtritt aller Urheberrechte an die Allgemeinheit gar
+nicht möglich (sei)\grqq{}, weshalb Public Domain Software daher in Deutschland
+\glqq{}[\ldots] (rechtlich) wie Freeware behandelt
+(werde)\grqq{}\footcite[vgl.][14]{RenVetRexKet2005a}.
+
+Unter dem Terminus \glqq{}Freeware\grqq{} wird sodann die Software
+zusammengefasst, bei der Nutzungs und Verbreitungsrechte an Endnutzer abgetreten
+werden, gelegentlich allerdings unter zusätzlichen Einschränkungen oder
+Auflagen. Das Konzept der Offenlegung von Quellcode gehöre jedoch nicht zu den
+konstitutiven Merkmalen von
+\glqq{}Freeware\grqq{}\footcite[vgl.][14]{RenVetRexKet2005a}
+
+Neben Open Source Software und Freeware unterscheidet die Studie auch noch
+zwischen \glqq{}Shareware\grqq{} und \glqq{}kommerzieller Software\grqq{}, wobei
+sie unterstreicht, dass die Idee von Shareware letztlich nur \glqq{}[\ldots] ein
+besonderes Vermarktungsmodell für kommerzielle Software
+(sei)\grqq{}\footcite[vgl.][14f]{RenVetRexKet2005a}
+
+\subsection{Lizenzmodelle}
+
+Statistisch bezieht die Studie sich bzgl. der Lizenzverteilung auf Angaben von
+BerliOS\grqq{}\footcite[vgl.][22]{RenVetRexKet2005a}. Der angegebene Link 
+\texttt{http://openfacts.berlios.de/index.phtml?title=Open-Source-Lizenzen}
+läuft heute, 6 Jahre nach der Untersuchung, leider auf einen unerreichbaren
+Server 195.37.77.139. Es wäre interessant gewesen, die Veränderungen sehen zu
+können.
+
+Die Studie unterstreicht, dass \glqq{}Open Source Software\grqq{} gerade nicht
+\glqq{}[\ldots] frei von Lizenzbedingungen (sei)\grqq{}; sie bezeichnet die
+gegenteilige Annahme als \glqq{}ein besonders oft anzutreffendes
+Missverständnis\grqq{}\footcite[vgl.][19]{RenVetRexKet2005a}. Allerdings spricht
+sie sodann gerade nicht die Forderungen von OS Lizenzen an, die diese an ihre
+Lizenznehmer herantragen, sondern sie verweist auf das Urheberrecht, dass
+das Vervielfältigungs- und Verbreitungsrecht \glqq{}[\ldots]ausschließlich dem
+Urheber (gestatte)\grqq{}\footcite[vgl.][19]{RenVetRexKet2005a}:
+\glqq{}Im Falle von Open Source Software muss also auf dieses Recht
+explizit verzichtet werden, da jede Weitergabe der Software ansonsten
+illegal wäre\grqq{}\footcite[][19f]{RenVetRexKet2005a}.
+
+Dann listet sie detaillierter jedoch nur die
+GPL, die
+LGPL\footcite[vgl.][21]{RenVetRexKet2005a} und die
+BSD\footcite[vgl.][21]{RenVetRexKet2005a} Lizenz auf. Damit konstituiert sich
+mittlerbar ein dreistufiges Klassififikationsmodell, demzufolge 
+\begin{itemize}
+  \item (a) manche Lizenzen beim Einbau in ein größeres Konglomerat dessen
+  Lizenzierung unter derselben Lizenz erzwängen
+  (GPL)\footcite[vgl.][20]{RenVetRexKet2005a}
+  \item während (b) die nächst schwächere Kategorie zwar den lizenzmäßig
+  folgenlosen Einbau als Komponente erlaube, bei Änderungen an sich selbst aber
+  die Re-Veröffentlichung von sich selbst unter derselben Lizenz fordere
+  (LGPL)\footcite[vgl.][21]{RenVetRexKet2005a},
+  \item wovon sich (c) der Typus der nahezu ganz freien Lizenzen abgrenze
+  (BSD)\footcite[vgl.][21]{RenVetRexKet2005a}
+\end{itemize}
+
+Obwohl diese mittelbar herausgearbeitete Typologie der Sachlage am nächsten
+kommt, fällt es auch den Autoren dieser Studie schwer, der Wesen der GPL
+sprachlich zu erfassen. Sie schreiben:
+
+\begin{quote}\glqq{}Darüber hinaus ist die Kerneigenschaft der GPL, dass
+Modifikationen an einer der GPL unterliegenden Software im Falle einer
+Weiterverarbeitung wiederum der GPL unterliegen müssen. Es ist also nicht
+möglich, Teile von GPL Software in kommerziellen (Closed Source) Produkten zu
+verwenden.\grqq{}\footcite[][20]{RenVetRexKet2005a}
+\end{quote}
+
+Dies ist ungenau gesagt. Kerneigenschaft der GPL ist in Wirklichkeit, dass sie
+(a) bei Änderungen an einer ihr unterliegenden Software die Wiederöffentlichung
+der Software revidierten Software fordert und dass sie (b) bei Einbau einer ihr
+unterliegenden Software oder Teile davon in ein größeres Ganzes auch die
+Veröffentlichung des Ganzen unter der GPL erzwingt. Geschuldet ist das dem
+Begriff des 'abgeleiteten Werkes', wie er in der GPL vorkommt: er erfasst beide
+Dimensionen, den der Veränderung des Originals und den des unveränderten Einbaus
+in ein größeres Ganzes.
+
+\subsection{Inkonsistenz}
+
+Besagt Inkonsistenz bezieht sich darauf, dass unter dem Stichwort
+\glqq{}Charakteristika von Open Source Software\grqq{} und unter der Überschrift
+\glqq{}Nachteile von Open Source Software\grqq{} zunächst konstatiert wird, es
+gäbe \glqq{}(keinen) Support durch
+Entwickler\grqq{}\footcite[vgl.][17]{RenVetRexKet2005a}. Dieser 'Befund' wird am
+Ende der Studien unter dem Stichwort \glqq{}Strategische Analyse\grqq{} bruchlos
+als Faktum wiederholt\footcite[vgl.][172]{RenVetRexKet2005a}. In beiden
+Befragungen - bei der innerhalb der Fraunhofer Institute und bei der in
+deutschen Unternehmen - wird das Thema \glqq{}Support durch Entwickler\grqq{}
+jedoch unter dem Stichwort \glqq{}Vorteile von Open Source Software\grqq{} ab
+gehandelt: Von den Fraunhofer intern Befragten geben 76\% (54\% + 22\%) an, es
+träfe eher oder voll zu, dass der \glqq{}Support durch Entwickler\grqq{} ein
+\glqq{}Vorteil von Open Source Software\grqq{}
+sei\footcite[vgl.][56]{RenVetRexKet2005a}. Und von den extern Befragten geben
+immerhin 55\% (42\% + 13\%) an, es träfe eher oder voll zu, dass der
+\glqq{}Support durch Entwickler\grqq{} ein \glqq{}Vorteil von Open Source
+Software\grqq{} sei\footcite[vgl.][69]{RenVetRexKet2005a}. Das Beibehalten der
+Behauptung, es geben keinen Support von Seiten der Open Source Entwickler kann
+so nicht gerechtfertigt werden.
+
+\subsection{Rechtsbestimmung}
+
+Bei der rechtlichen Einschätzung konstatiert die Studie zunächst, dass
+\glqq{}das Urheberrecht [\ldots] dem Autor das ausschließliche Recht zur
+Weiterverbreitung, Veränderung und zur Anforderung von Kopien
+(zugestehe)\grqq{}, was dann bruchlos auch für Open Source Sofwtare
+gelte\footcite[vgl.][23]{RenVetRexKet2005a}.
+
+Sodann vermerkt sie in Anlehnung an Jaeger\&Metzeger, dass \glqq{}nach
+deutschem Recht [\ldots] Open Source Lizenzen als Allgemeine
+Geschäftsbedingungen aufzufassen (seien)\grqq{}. Der AGB Charakter
+unterbinde dann jenes Auschließen jeglicher Gewährungsleistung, wie es
+gemeinhein in OS Lizenzen formuliert werde. Dies Lösung dafür bestehe in der
+Anwendung des \glqq{}Schenkungsrechtes\grqq{}, denn immerhin werde dem Gegenüber
+die Software lizenztechnisch \glqq{}kostenfrei\grqq{} zur
+\glqq{}Nutzung\grqq{} übergeben. Insofern seien
+\glqq{}[\ldots] Gewährleistungsansprüche auf Arglist beschränkt\grqq{},
+\glqq{}[\ldots] Haftungsansprüche (hingegen) auf Vorsatz und grobe
+Fahrlässigkeit\grqq{}\footcite[vgl.][23]{RenVetRexKet2005a}.
+
+Eine weitere Komplikation - so die Studie - bestehe bei der Deutung der OS
+Lizenz als AGB darin, dass AGBs angemessen präsentiert werden müssen, bevor sie
+zu gelten beginnen können. Der Ausweg aus diesem Dilemma bestehe darin, dass man
+berichtigertweise \glqq{}unterstellen\grqq{} dürfe, der Nutzer habe die AGBs
+resp. die Liezenz zur Kenntnis genommen, wenn der die Software an dritte
+weiterreiche oder verändere\glqq{}\footcite[vgl.][23]{RenVetRexKet2005a}. Beides
+sind Aktionen, die eine Informationspflicht über die Rechtmäßigkeit beinhalten.
+
+\subsection{Vor- und Nachteile}
+Die Studie listet die \glqq{}Anpassbarkeit\grqq{} und die
+\glqq{}Wiederverwendbarkeit\grqq{} von Open Source Software Code ebenso als
+Vorteil auf, wie die \glqq{}höhere Produktqualität\grqq{}, die
+\glqq{}Anbieterunabhängigkeit\grqq{}, die \glqq{}höhere Sicherheit\grqq{}, die
+Nutzung \glqq{}offener Standards\grqq{} und der \glqq{}Wegfall von
+Lizenzkosten\grqq{}\footcite[vgl.][16f]{RenVetRexKet2005a}.
+
+Zumindest zwei der behaupteten Nachteile können unmittelbar entkräftet
+werden:
+
+\begin{itemize}
+  \item Dass \glqq{}keine
+  Gewährleistungsrechte\grqq{}\footcite[vgl.][17]{RenVetRexKet2005a} existieren,
+  wird mittlerweile durch Firmen abgefedert, die das Pendant als Service an
+  zubieten, als ihr Geschäftsmodell sehen.
+  \item Dass \glqq{}kein
+  Support durch Entwickler\grqq{}\footcite[vgl.][17]{RenVetRexKet2005a} existiere, kann
+  aus den eigenen Befragungen gerade nicht abgeleitet werden.
+  \item 
+\end{itemize}
+
+Die anderen Nachteile - der \glqq{}höhere Schulungsaufwand\grqq{},die 
+\glqq{}ungewisse Weiterentwicklung\grqq{}, das Fehlen von Appliaktionen und die
+\glqq{}magelhafte Interoperationalität mit kommerzieller
+Software\grqq{}\footcite[vgl.][18]{RenVetRexKet2005a} - müßten noch gesondert diskutiert
+werden.
+\small
+\bibliography{../bibfiles/oscResourcesDe}
+
+\end{document}

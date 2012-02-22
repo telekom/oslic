@@ -1,0 +1,143 @@
+% Telekom osCompendium extract template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
+%
+% select the document class
+% S.26: [ 10pt|11pt|12pt onecolumn|twocolumn oneside|twoside notitlepage|titlepage final|draft
+%         leqno fleqn openbib a4paper|a5paper|b5paper|letterpaper|legalpaper|executivepaper openrigth ]
+% S.25: { article|report|book|letter ... }
+%
+% oder koma-skript S.10 + 16
+\documentclass[DIV=calc,BCOR=5mm,11pt,headings=small,oneside,abstract=true, toc=bib]{scrartcl}
+
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4,ngerman}
+\usepackage[ngerman, english]{babel}
+\selectlanguage{english}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+\input{../btexmat/oscJbibCfgEnInc}
+
+% language specific hyphenation
+\input{../btexmat/oscHyphenationEnInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{headings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+\usepackage[dvips]{epsfig}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+\usepackage[marginal]{footmisc}
+%- end(footnote-configuration)
+
+\begin{document}
+
+%% use all entries of the bliography
+
+%%-- start(titlepage)
+\titlehead{Literaturexzerpt}
+\subject{Autor(en): Stallman / Stallman1994a}
+\title{Titel: Why Software Should Not Have Owners}
+\subtitle{Jahr: 1994 / 2002 }
+\author{K. Reincke\input{../btexmat/oscLicenseFootnoteInc}}
+
+%\thanks{den Autoren von KOMA-Script und denen von Jurabib}
+\maketitle
+%%-- end(titlepage)
+%\nocite{*}
+
+\begin{abstract}
+\noindent
+\cite[(in:)][]{StaGay2002a} \\
+\noindent
+\cite[(ist:)][]{Stallman1994a} \\
+Das Werk / The work\footcite[][]{Stallman1994a} \\
+\noindent \itshape
+\ldots  Wiederholt den Standpunkt, dass die Gesellschaft Software benötige, die
+sie lesen, berichtigen, anpassen und verbessern könne. Stattdessen würde Eigner
+von Software 'Black Boxes' liefern, die man nicht untersuchen könne. Ferner
+erwähnt der Artikel Möglichkeiten, wie man mit freier Software Geld verdienen
+könne, was zudem als eine wichtige Möglichkeit herausgestellt werde.
+\\
+\noindent
+\ldots This article repeats the statement that the society needs programs that
+people can read, fix, adapt, and improve. Instead of this software owners
+deliver black boxes that can't be studied. Additionally the article exemplifies
+some important methods to earn money with free software .
+\end{abstract}
+\footnotesize
+%\tableofcontents
+\normalsize
+
+\section{Line of Thought}
+
+This article repeats the statement that the \glqq{}society [\ldots] needs
+[\ldots] programs that people can read, fix, adapt, and improve, not [SW] just
+operate.\grqq{}. But instead of this software owners \glqq{}[\ldots]
+typically deliver black boxes [\ldots] that we can't study or
+change\grqq{}\footcite[cf.][47f]{Stallman1994a}
+
+ Additionally the article exemplifies some important methods to earn money with
+ free software. It mentions (a) the FSF itself which \glqq{}[\ldots] raises
+ funds by selling GNU CD-ROMs, T-shirts, manuals, and deluxe
+ distributions\grqq{}, the company 'Cygnus Support' and (c) even the Air force,
+ which powered the ADA compiler development\footcite[cf.][48]{Stallman1994a}
+ 
+ 
+
+\section{Specific Aspects}
+
+\small
+\bibliography{../bibfiles/oscResourcesEn}
+
+\end{document}

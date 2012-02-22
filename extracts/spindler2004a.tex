@@ -1,0 +1,403 @@
+% Telekom osCompendium extract template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
+%
+% select the document class
+% S.26: [ 10pt|11pt|12pt onecolumn|twocolumn oneside|twoside notitlepage|titlepage final|draft
+%         leqno fleqn openbib a4paper|a5paper|b5paper|letterpaper|legalpaper|executivepaper openrigth ]
+% S.25: { article|report|book|letter ... }
+%
+% oder koma-skript S.10 + 16
+\documentclass[DIV=calc,BCOR=5mm,11pt,headings=small,oneside,abstract=true, toc=bib]{scrartcl}
+
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4,ngerman}
+\usepackage[english, ngerman]{babel}
+\selectlanguage{ngerman}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+\input{../btexmat/oscJbibCfgDeInc}
+
+% language specific hyphenation
+\input{../btexmat/oscHyphenationDeInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{headings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+\usepackage[dvips]{epsfig}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+\usepackage[marginal]{footmisc}
+%- end(footnote-configuration)
+
+\begin{document}
+
+%% use all entries of the bliography
+
+%%-- start(titlepage)
+\titlehead{Literaturexzerpt}
+\subject{Autor(en): Spindler}
+\title{Titel: Rechtsfragen bei Open Source}
+\subtitle{Jahr: 2004 }
+\author{K. Reincke\input{../btexmat/oscLicenseFootnoteInc}}
+
+%\thanks{den Autoren von KOMA-Script und denen von Jurabib}
+\maketitle
+%%-- end(titlepage)
+%\nocite{*}
+
+\begin{abstract}
+\noindent
+Das Werk / The work\footcite[][]{Spindler2004a} \\
+\noindent \itshape
+\ldots Basiert auf einem Rechtsgutachten. Die meisten Kapitel stammen von
+Spindler selbst und behandeln die Typen von Open Source Lizenzen, das
+Urheberrecht, das Vertragsrecht und das Haftungsrecht. Am Ende wird zudem ein
+Exkurs zum Thema BSD- und Mozilla-Lizenzen angeboten. In allen Fällen wird
+juristisch detailliert analysiert und diskutiert. \\
+\noindent
+\ldots This book is based upon a legal opinion. Most of the chapters are written
+by Spindler himself and deal with the Open Source License types, the German
+Copyright ('Urheberrecht'), the German contract right ('Vertragsrecht') and the
+German liability law ('Haftungsrecht'). At the end it contains an excursus
+dealing with BSD and Mozilla licenses. In all cases the chapters deeply discuss
+different aspects of the topic.
+\end{abstract}
+\footnotesize
+%\tableofcontents
+\normalsize
+
+\section{Line of Thought}
+
+Spindler gibt in seinem Vorwort an, dass die ersten 5 Kapitel Basis eines
+\glqq{}[\ldots] umfangreichen Rechtsgutachtens) des Herausgebers für den Verband
+der Softwareindustire Deutschland (gewesen sei)\grqq{}. Entsprechend nimmt sich
+das Buch vor, die \glqq{}[\ldots] die juristische Diskussion in Deutschland über
+diese besondere Form der Liz7enzierung von Software
+voranzutreiben\grqq{}\footcite[vgl.][V]{Spindler2004a}.
+
+So ergibt sich für ihn folgender Gedankengang:
+
+\begin{itemize}
+  \item Zunächst stellt er sehr kurz die Idee von Open Source
+  dar\footcite[vgl.][1ff]{Spindler2004a} um dann die die \glqq{}Open Source
+  Software Lizenztypen\grqq{} gegeneinander
+  \glqq{}abzugrenzen\grqq{}\footcite[vgl.][9ff]{Spindler2004a}. Er selbst
+  konzentriert sich in den folgenden Kapiteln jedoch auf die
+  GPL\footcite[vgl.][21ff]{Spindler2004a} und überlässt es seinen Coautoren, die
+  BSD- und die Mozilla-Lizenzen zu
+  untersuchen\footcite[vgl.][317ff]{Spindler2004a}
+  \item Erster Untersuchungspunkt ist das Urheberrecht und die Wechselwirkungen
+  zur/für die GPL\footcite[vgl.][21ff]{Spindler2004a}.
+  \item Sodann geht es um das Vertragsrecht\footcite[vgl.][151ff]{Spindler2004a}
+  \ldots
+  \item \ldots und schließlich auch um das
+  Haftungsrecht\footcite[vgl.][151ff]{Spindler2004a}.
+  \item Anschließend erhält der Autor Wiebe die Möglichkeit, das Patentrecht zu
+  erläutern\footcite[vgl.][223ff]{Spindler2004a}, der Autor Heath das
+  Kartellrecht\footcite[vgl.][267]{Spindler2004a} und der Autor Heckmann das
+  Vergaberecht\footcite[vgl.][281ff]{Spindler2004a} [- alles Punkte, die ich
+  nicht ausgewertet habe.]
+  \item Von besonderem Interesse ist dann wieder die Darstellung von Arlt,
+  Brinkel und Volkmann bzgl. der \glqq{}'BSD'- und 'Mozilla'-artigen
+  Lizenzen\grqq{}\footcite[vgl.][317ff]{Spindler2004a} [die ich als eigenes
+  Extract erfasst habe]
+  \item 
+\end{itemize}
+
+
+\section{Spindler Thesen}
+
+\subsection{Opensource}
+
+\subsubsection{Grenzen der Freiheit: Rechtskonstruktion}
+
+Wesentlich hervorgehoben wird hier, dass Open Source eben nicht in dem Sinne
+frei sei, \glqq{}[\ldots] dass es an Open Source keinerlei Urheberrechte
+gäbe bzw. die Software und der Quellcode gemeinfrei
+wären\grqq{}\footcite[vgl.][2]{Spindler2004a}:
+\begin{quote}\glqq{}Charakteristisches Merkmal von Open Source Software
+ist vielmehr die Verwendung der urheberrechtlichen Verwertungsrechte, um
+den Nutzer [\ldots] gerade die Pflichten aufzuerlegen, die zur
+kostenfreien Weitergabe und Offenlegung des Quellcodes
+führen.\grqq{}\footcite[][2]{Spindler2004a}
+\end{quote}
+
+\subsubsection{Grenzen der Freiheit: Geld}
+
+Eingeschränkt wird das Geschäft mit Open Source nur in einer Hinsicht:
+\glqq{}allein Lizenzgebühren für die Spftware und den Quellcode dürfen
+nicht erhoben werden\grqq{}, der sonstige kommerzielle Vertrieb von Open Source
+Software, bei dem etwa \glqq{}[\ldots] Entgelte für Datenträger, Beratung,
+Garantien oder sonstige Serviceleistungen verlangt werden\grqq{} sei keineswegs
+ausgeschlossen.\footcite[vgl.][5]{Spindler2004a}
+
+Allerdings, so Spindler, dürfte der Versuch, den Gedanken der kostenlosen
+Lizenzierung über 'Fantasiepreise' für die \glqq{}physische Distribution\grqq{}
+sozusagen \glqq{}unterlaufen\grqq{} zu wollen, juristisch \glqq{}[\ldots]
+erheblichen Bedenken ausgsetzt (sein)\grqq{}\footcite[vgl.][6]{Spindler2004a}
+
+\subsubsection{Lizenzabgrenzung}
+
+\paragraph{GPL}
+
+Grundsätzlich könne die GPL so spezifiziert werden, dass sie dem Nutzer ein
+weitgehendes Verwertungsrecht einräume, bei dem ihm \glqq{}[\ldots] ihm
+die Anfertigung beliebiger (unveränderter) Kopien des Quellcodes und auch
+deren Veränderung gestattet wird\grqq{}. Die modifzierten Werke dürfe der
+\glqq{}[\ldots] NUtzer wiederum vervielfältigen und verbreiten [\ldots],
+sofern er sie wiederum der GPL (unterstelle) und für die Lizenzierung
+kein Entgelt (erhebe)\grqq{}\footcite[vgl.][9]{Spindler2004a}
+
+\paragraph{LGPL}
+
+Als Hauptzweck zur \glqq{}Schaffung der LGPL\grqq{}, der \glqq{}Lesser
+GPL\grqq{}\footcite[vgl.][10]{Spindler2004a} führt Spindler an, dass durch die
+\glqq{}Inkorporation\grqq{} von GPL lizenzierten \glqq{}[\ldots] (Modulen) in
+den Ablauf der [umfassenderen KR] Software diese ebenfalls unter die GPL
+gestellt werden müsste\grqq{}. Wären alle Teile eines Betriebssystems mithin
+rein GPL lizenziert, wäre eine andersartige Nutzung ausgeschlossen. Um den
+Nutzerkreis dennoch zu erweitern, seien eben zentrale Teile des GNU
+Betriebssystems LGPL lizenziert, die auf die Auswirkung auf die übergreifende
+Software unter gewissen Umständen verzichte\footcite[vgl.][11]{Spindler2004a}.
+
+Sodann kommt eine Darstellung der LGPL, die gefährlich FALSCH ist: Zunächst wird
+behauptet, dass \glqq{}Programme, die zwar auf eine LGPL-Bibliothek zugreifen,
+aber unabhängig hiervon und nicht zusammen mit der Bibliothek vertrieben werden
+('in isolation'), [\ldots] nach §5 I LGPL nicht unter diese
+Lizenz gestellt werden (müssten), sondern [\ldots] proprietär
+bleiben (könnten)\grqq{}\footcite[vgl.][12]{Spindler2004a} [KR: Wenn das in
+aller Strenge so gelte, wäre damit jedwede Distributionen, die die Linux LGPL
+Bibliotheken und püropriuetäre Linux-Programnme enthielten, schon mal
+untersagt. Das aber ist gerade nicht der Sinn der LGPL! KR]
+
+Sodann wird behauptet, dass diese Freiheit 'getrennt vertrieben, aber zusammen
+genutzt' sich gerade bei der \glqq{}dynamischen Verlinkung\grqq{} ändere: 
+\begin{quote}\glqq{}Dies ändert sich jedoch bei einer Verknüpfung des
+Programms mit der Bibliothek (dynamischer Verlinkung) und deren
+gemeinsamer Verbreitung, da §5 II, III, LGPL dann das Ergebnis der
+'Zusammenarbeit' zwischen Bibliothek und Programm als ein 'neues'
+Programm bzw. Werk ansieht.\grqq{}footcite[vgl.][12]{Spindler2004a}
+\end{quote}
+
+[KR: Dies kann aus technischer Sicht so niemals von der LGPL so gemeint gewesen
+sein: Beim Starten eines Programms werden die von dem Programm
+genutzten Bibliotheken immer dann zusammengefügt und als Einheit in den Speicher
+geladen, wenn sie auf der Platte noch als getrennte Dateien abgelegt sind. Dies
+ist das wesen des Dynamsichen Linkens. Zweck ist, dass intelligente Linker
+mehrfach genutzte Bibliotheken nicht mehrfach in den Arbeitsspeicher laden
+müssen, sondern die Einspruingsadressen mehrfach verwenden können. Und diese Art
+des Zusammenfügens von Objektcode (dynmaischens Linken) hat überhaupt nichts
+damit zu tun, ob Bibliothek und Programm zuvor getrennt oder zusammen auf einer
+DVD/Diskette vertrieben worden sind.
+
+Die Einschränkung der LGPL trifft aber genau dann zu, wenn Bibliothek und
+Programm bei der Erstellung statisch gelinkt worden sind. Dann bilden sie als
+Datei eine Einheit, die bei Ausführen auch nur als ganzes in den
+Arbeitsspreicher geladen werden kann. Und ebene hier ist klar, dass es sich als
+ganzes um ein abgeleitetes Werk handelt!
+ ]
+
+\paragraph{Mozilla Lizenzen}
+
+Die Mozilla-Lizenzen werden ähnlich wie die GPL gesehen, sollen sich aber
+dennoch unterscheiden: Die Rechte, die die Mozilla-Lizenzen einräumen,
+\glqq{}[\ldots] (seien) weitgehend der GPL vergleichbar [im Sinne von
+gleichwertig; KR] [\ldots]\grqq{} und betreffen die \glqq{}Nutzung\grqq{},
+die \glqq{}Vervielfältigung\grqq{}, die \glqq{}Veränderung\grqq{}, die
+\glqq{}Zugänglichmachung\grqq{} und die
+\glqq{}Verbreitung\grqq{}\footcite[vgl.][14]{Spindler2004a}
+
+Unterschiedlich seien in gewisser Hinsicht die Pflichten der Nutzer: Zunächst
+sei es \glqq{}im Ergebnis unzweifelhaft\grqq{}, dass der \glqq{}[\ldots]
+contributor die Pflicht (habe), seine veränderte Software der
+Mozilla-Lizenz ebenfalls zu
+unterstellen\grqq{}\footcite[vgl.][15]{Spindler2004a}:
+\begin{quote}\glqq{}Anders als bei der GPL wird jedoch nicht jede
+Veränderung erfasst, sondern nur diejenige, die entweder in dem selben
+Quellcode enthalten ist oder - bei mehreren Dateien - in denen Quellcode
+geschireben ist. Werden jedoch die Änderungen in einer eigenen Datei
+abgespeichert, müssen diese nicht der Mozilla-Lizenz unterstellt und
+damit auch nicht freigegeben werden\grqq{}\footcite[][15]{Spindler2004a}
+\end{quote}
+
+Anders gesagt:
+
+\begin{quote}\glqq{}Es muss daher nur ein selbständiger Code in einem
+eigenständigen File vorliegen, um von der Pflicht zur unentgeltlichen
+Freigabe entbunden werden.\grqq{}\footcite[][15]{Spindler2004a}
+
+[ KR: Damit ist eigentlich klar, wie das KOnstrukt funktioniert: Werden
+Änderungen am ursprünglichen Code im Sinne von Dateiänderungen vorgenommen,
+müssen diese mozilla-lizenizi
+ert werden, sofern sie distribuiert werden. Das ist
+wie bei der LGPL und der GPL auch. Werden hingegen Objektdateien dazu gestellt,
+die dnamisch gelinkt auf den Mozilla-Objekt-Code zugreifen, dann brauchen sie
+nicht veröffentlicht zu werden. Das entspricht der LPGL, aber nicht der GPL.
+Mozilla-Lizenzen entsprechen also der LGP, nicht der GPL. ]
+\end{quote}
+
+\paragraph{Dual Licensing}
+
+
+Spindler erwähnt das \glqq{}Dual Licensing\grqq{} als Methode des
+Urheberrechtsinhabers, sich verschiedene Wege
+offenzuhalten\footcite[vgl.][16]{Spindler2004a}, etwa, wenn man anderen Firmen
+eine proprietäre Weiterentwicklung des eigenen Codes gegen Entgeld ermöglichen
+will. Allerdings gilt: übernommener und bereits GPL lizenzierter Code kann nicht
+in der Zweit- oder DRittverwertung Dual-lizenziert
+werden\footcite[vgl.][17]{Spindler2004a}
+
+\paragraph{Andere Formen}
+
+\begin{itemize}
+  \item \glqq{} Für Public Domain Software (sei) der (versuchte) vollständige
+  Verzicht auf jegliche Urheberechte kennzeichnend, jedenfalls aber das
+  \emph{uneingeschränkte Recht der Verwertung} für den
+  Nutzer\grqq{}\footcite[][17]{Spindler2004a} - im Gegnesatz zur GPL dürfe der
+  Nutzer mit solch einer Software also im Prinzip verfahren, wie es ihm gefalle,
+  also minsbesondere auch proprietarisieren\footcite[][17]{Spindler2004a}.
+  Allerdings sei die aktive Freigabe von Public Domain Software in Deutschland
+  kaum möglich, eben weil in Deutschland nicht alle Rechte übertragen werden
+  können\footcite[][17]{Spindler2004a}. So bleibt etwa die Autorenschaft
+  unauflöslich erhalten.
+  \item Freeware zeichne sich dadurch aus, \glqq{}[\ldots] dass zwar die
+  Software selbst kostenlos zur Benutzung überlassen, [\ldots] \emph{der
+  Quellcode aber nicht offengelegt} (werde)\grqq{}
+  \item Shared Sourcfe rekuriert auf das MS Modell des Einblicks für ausgewählte
+  Kunden ohne das Recht der Änderung, Nutzung, oder
+  Weitergabe\footcite[][18]{Spindler2004a}
+\end{itemize}
+
+\paragraph{Klassifikation}
+Insgesamt ergibt sich für Spindler folgende Taxonomie:
+
+\begin{table}
+\footnotesize
+\caption{Freie Internetresourcen (ggfls. über UB-Portale DA oder FaM)}
+\begin{center}
+\begin{tabular}[h]{|p{4cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+\hline
+& kostenlose Nutzung
+& unbeschränkter Gebruach
+& Quellcode veränderbar
+& Direvate kostenlose abzugeben
+\\
+\hline \hline 
+\emph{Shareware} & X & - & - & -\\
+\hline
+\emph{Freeware / Public Domain Software} & X & X & - & -\\
+\hline
+\emph{BSD} & X & X & X & -\\
+\hline
+\emph{LGPL} & X & X & X & X\\
+\hline
+\emph{GPL} & X & X & X & X\\
+\hline
+
+Tabelle\footcite[vgl.][19]{Spindler2004a}
+[KR: Die Schwäche der Klassifikation zeuigt asich sofort qwieder daran, dass
+zwi9schen GPL und LGPL sdo nicht unterschieden werden kann]
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection{Urheberrecht}
+
+\begin{itemize}
+  \item Grundsätzlich gilt, dass \glqq{}nach §69c UrhG [\ldots] die
+  Verielfältigung, die Bearbeitung und die Verbreitung einer Software nur
+  mit Erlaubnis des Urhebers zulässig (ist)\grqq{}\footcite[][22]{Spindler2004a}
+  \item Mit der GPL geht gerade systematisch intendiert \glqq{}keine
+  Aufgabe des Urheberrechts\grqq{} einher\footcite[][22]{Spindler2004a},
+  vielmehr \glqq{}[\ldots] verwendet (die Open Source Bewegung) lediglich
+  die von Urheberrecht gebotenen Instrumente, um einen entsprechenden
+  Zweck zu erreichen\grqq{}\footcite[vgl.][26]{Spindler2004a} - daraus könne
+  \glqq{}[\ldots] kein allgemeiner Verstoß der GPL gegen ungeschriebene
+  Grundsätze des Urheberrechts abgeleitet werden
+  [\ldots]\grqq{}\footcite[vgl.][25]{Spindler2004a}
+  \item Wichtig ist bei der Veröffentlichung aber, dass einzelne Autoren, die
+  man einem Code mitarbeiten, als \glqq{}Miturheber\grqq{}
+  gelten\footcite[vgl.][27]{Spindler2004a}, und zwar selbst dann, wenn
+  eingereichte Beiträge nur per Commiteebeschluss in das Werk
+  eingehen\footcite[vgl.][28]{Spindler2004a} [worau8s zu folgern wäre, dass
+  sich Open Source Projekte die Freigabe des eingereichten Codes explizit
+  bestätigen lassen sollten]
+\end{itemize}
+
+\subsection{Haftungsrecht}
+
+Ausgehend von der Deutung des \glqq{}isolierten Erwerbs\grqq{} von Open Source
+Software als einer \glqq{}Schenkung\grqq{} ergibt sich für die Haftung gerade
+nicht die vollständige Freistellung, \glqq{}Vorsatz und grobe
+Fahrlässigkeit\grqq{} muss sich der Schenkende als Verursacher zurechnen lassen
+und für entsprechende Schäden haften\footcite[vgl.][169f]{Spindler2004a} - daran
+ändert auch nichts der §12, will sagen: die Haftungsausschlussklausel der GPL,
+mit der jegliche Haftung ausgeschlossen werden soll, was aber nach BGB
+grundsätzlich nicht zulässig sei\footcite[vgl.][170]{Spindler2004a}.
+Ähnlich\footcite[vgl.][205]{Spindler2004a}
+
+Interessant ist der Hinweis, dass der \glqq{}Nutzer\grqq{} von Open Source
+Software - eben weil nur rudimentäre Gewährleistungspflichten bestehen [und
+wie zu ergänzen wäre: weil er um diese Tatsache weiß] - \glqq{}[\ldots]
+je nach Gefahrenpotential, in dessen Zusammenhang Open Source eingesetzt
+wird, verpflichtet sein (kann), entsprechende externe Beratungsleistungen
+undService einzukaufen, wenn er sich nicht eines Organisationsmangels
+schuldig machen möchte\grqq{}\footcite[vgl.][221]{Spindler2004a}
+
+\small
+
+
+\bibliography{../bibfiles/oscResourcesDe}
+
+\end{document}

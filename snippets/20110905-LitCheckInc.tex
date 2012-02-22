@@ -1,0 +1,59 @@
+% Telekom osCompendium 'for beeing included' snippet template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
+%
+\newpage
+\section{Form [only to demo our lib style. will be replaced]}
+\begin{itemize}
+  \item first initially quoted book\footnote{\cite[cf.][123ff]{Grassmuck2002a}
+  (expected: complete bibl. data)} using LaTeX \texttt{$\backslash$footnote}
+  \item second initially quoted book\footcite[cf.][120 (expected: complete bibl.
+  data)]{Fogel2006a} using jurabib \texttt{$\backslash$footcite} (same
+  appereance)
+  \item initially mentioned collection /
+  proceedings\footnote{\cite[cf.][123ff]{DjoGehGraKreSpi2008a} (expected: complete
+  bibl. data)}
+  \item first initially mentioned article in an initially mentioned collection /
+  proceedings\footnote{\cite[cf.][123ff]{Spielkamp2008a} (expected: complete
+  bibl. data of article, short title data of collection)} using LaTeX
+  \texttt{$\backslash$footnote}
+  \item second initially mentioned article in an already mentioned collection
+  / proceedings\footcite[cf.][123ff (expected: complete
+  bibl. data of article, short title data of collection)]{Kreutzer2008a} using
+  jurabib \texttt{$\backslash$footcite} 
+  \item rementioned book\footnote{\cite[cf.][120]{Fogel2006a} (expected: short
+  title)}
+  \item directly rementioned same book same
+  page\footnote{\cite[cf.][120]{Fogel2006a} (expected: id., ibid, / ders.,
+  ebda.,)}
+  \item directly rementioned same book different
+  page\footnote{\cite[cf.][121]{Fogel2006a} (expected: id., lc., / ders.,
+  a.a.O. \& page)}
+  \item rementioned collection article\footnote{\cite[cf.][120 ]{Kreutzer2008a} (expected: short
+  title)}
+  \item directly rementioned collection article same
+  page\footnote{\cite[cf.][120]{Kreutzer2008a} (expected: id., ibid, / ders.,
+  ebda.,)}
+  \item directly rementioned collection article different
+  page\footnote{\cite[cf.][121]{Kreutzer2008a} (expected: id., lc., / ders.,
+  a.a.O. \& page)}
+\end{itemize}
+
+%\bibliography{../bibfiles/oscResourcesEn}

@@ -1,0 +1,281 @@
+% Telekom osCompendium cloak file German text
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mykeds Scholar Research Framework' 
+%   mykeds-CSR-framework (c) K. Reincke CC BY 3.0  http://www.mykeds.net/ ]
+%
+% select the document class
+% S.26: [ 10pt|11pt|12pt onecolumn|twocolumn oneside|twoside notitlepage|titlepage final|draft
+%         leqno fleqn openbib a4paper|a5paper|b5paper|letterpaper|legalpaper|executivepaper openrigth ]
+% S.25: { article|report|book|letter ... }
+%
+% oder koma-skript S.10 + 16
+\documentclass[DIV=calc,BCOR=5mm,11pt,headings=small,oneside,toc=bib]{scrbook}
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4,ngerman}
+\usepackage[english,ngerman]{babel}
+\selectlanguage{ngerman}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+\input{btexmat/oscJbibCfgDeInc}
+
+% language specific hyphenation
+\input{btexmat/oscHyphenationDeInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{headings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+\usepackage[dvips]{epsfig}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+\usepackage[marginal]{footmisc}
+%- end(footnote-configuration)
+
+\usepackage{amssymb}
+
+\usepackage[intoc]{nomencl}
+\let\abbr\nomenclature
+% Modify Section Title of nomenclature
+%\renewcommand{\nomname}{Periodicals, Shortcuts, and Overlapping Abbreviations}
+\renewcommand{\nomname}{Periodika, ihre Kurzformen und generelle Abkürzungen}
+% insert point between abbrewviation and explanation
+\setlength{\nomlabelwidth}{.20\hsize}
+\renewcommand{\nomlabel}[1]{#1 \dotfill}
+% reduce the line distance
+\setlength{\nomitemsep}{-\parsep}
+\makenomenclature
+
+\begin{document}
+
+%% use all entries of the bliography
+\nocite{*}
+
+%%-- start(titlepage)
+\titlehead{Open Source Software in großen Firmen wie die Deutschen Telekom AG}
+\subject{Lizenz- und Patentprobleme im \itshape{Aufriss}}
+\title{Telekom Open Source Compendium}
+\subtitle{Die reguläre Nutzung von Open Source Software}
+\author{
+  K. Reincke,
+  P. Schichl, 
+  G. Sharpe, 
+  J. Dobson\input{btexmat/oscLicenseFootnoteInc}
+}
+
+%\thanks{den Autoren von KOMA-Script und denen von Jurabib}
+\maketitle
+%%-- end(titlepage)
+
+\footnotesize
+\tableofcontents
+\newpage
+\input{snippets/20110928-Changes}
+\normalsize
+
+\chapter{Vorwort}
+Drei Fragen stellen sich vor der Lektüren eines jeden Buches: {\bfseries Wieso}
+dieses Buch? {\bfseries Weshalb} von diesen Autoren? Und {\bfseries warum} in
+dieser Form?\footnote{Und klar: mit diesen Fragen bekennen wir uns ausdrücklich als Sesam-Strassen-sozialisiert:
+'Der, die, das, wieso, weshalb, warum - wer nicht fragt bleibt dumm'. Es ist
+wirklich keine schlechte Sache, wenn uns - von den ersten Fernseherfahrungen an
+- der freie Wissensaustausch als Wert mit auf den Lebensweg mitgegeben wird.}
+ 
+Wir, die Initiatoren dieses schließlich und hoffentlich gemeinsam
+geschriebenen Buches, sind Mitarbeiter der Deutschen Telekom AG. Und wir sind - jeder für sich
+und jeder auf seine Weise - überzeugte Anhänger des Open Source Gedankens.
+\chapter{Einleitung}
+\section{Inhalt}
+Open Source Software\footnote{Es ist länglich diskutiert worden, was der bessere
+Begriff sei, {\itshape Open Source Software} oder {\itshape Free Software}.
+Obwohl beides letztlich auf dasselbe ziele, so sei - wie gesagt wird - der
+Begriff Opne Source Software eingeführt worden, um damit auf eine
+Entwicklungsmethode (``development methodology'') zu rekurieren und weniger auf
+eine politische Bewegung (``political movement'') \cite[vgl. dazu] [S.232]
+{Fogel2006a} } wird bereits vielfach verwendet. Durch die Nutzung der Open Source
+Software verpflichten sich die Firmen, die Open Source Lizenzen zu erfüllen. In
+den meisten Fällen wollen sie das auch, ohne Frage. Allerdings wird es ihnen
+nicht leicht gemacht: verschiedene Lizenzen und divergierende Randbedingungen
+müssen beachtet werden. 
+
+Unserer Meinung nach fehlt bisher jedoch eine Anleitung für Firmen, die
+Grundlagen ebenso verlässlich darstellt, wie sie Schritt für Schritt auflistet,
+was genau zu tun ist, um den Bedingungen einer Lizenz gerecht zu werden. Wir als
+überzeugte Mitarbeiter und leidenschaftliche Softwareentwickler lieben das
+Programmieren, das Lesen komplizierter theoretischer Anleitungen ist in unser
+alltäglichen Arbeit weniger gefragt. Also brauchen wir ein Kompendium, in dem
+wir nicht nur fallweise allgemeine Open Source Begriffe verlässlich nachlesen
+können, sondern in dem wir auch belastbar immer wieder einmal - sozusagen auf
+die Schnelle - nachschlagen können, was witr konkret tun müssen, um eine
+bestimmte Lizenz zu erfüllen.
+
+Einen solchen doppelten Service will \emph{diese Anleitung zur Open Source
+Verwendung} anbieten, und zwar Firmen, Projektleitern, Softwareentwicklern und
+allen generell Interessierten.
+
+\section{Form}
+\begin{itemize}
+  \item ``initially quoted book''\footnote{\cite[vgl.][123ff]{Grassmuck2002a}
+  (expected: complete bibl. data)}
+  \item initially mentioned collection /
+  proceedings\footnote{\cite[vgl.][123ff]{DjoGehGraKreSpi2008a} (expected: complete
+  bibl. data)}
+  \item initially mentioned article in an initially mentioned collection /
+  proceedings\footnote{\cite[vgl.][123ff]{Spielkamp2008a} (expected: complete
+  bibl. data of article, short title data of colelction)}
+  \item initially mentioned article in an already mentioned collection
+  / proceedings\footnote{\cite[vglveröffentlichen.][123ff]{Kreutzer2008a}
+  (expected: complete bibl. data of article, short title data of collection)}
+  \item rementioned book\footnote{\cite[vgl.][120]{Fogel2006a} (expected: short
+  title)}
+  \item directly rementioned same book same
+  page\footnote{\cite[vgl.][120]{Fogel2006a} (expected: a.a.O.)}
+  \item directly rementioned same book different
+  page\footnote{\cite[vgl.][121]{Fogel2006a} (expected: a.a.O \& page)}
+  \item rementioned collection article\footnote{\cite[vgl.][120 ]{Kreutzer2008a} (expected: short
+  title)}
+  \item directly rementioned collection article same
+  page\footnote{\cite[vgl.][120]{Kreutzer2008a}(expected: a.a.O.)}
+  \item directly rementioned collection article different
+  page\footnote{\cite[vgl.][121]{Kreutzer2008a}(expected: a.a.O. \& page)}
+\end{itemize}
+
+\chapter{Open Source: Der Grundgedanke}
+\begin{quote}\itshape
+In diesem Kapitel erläutern wir, was Open Source auszeichnet und was das
+gemeinsame an Open Source Software ist.
+\end{quote} 
+
+Am Ende soll klarwerden, dass Open Source dann vorliegt, wenn ihre Lizenz die
+freie Weitergabe des Quellcodes \ldots.
+
+\chapter{Ein Grundgedanke, verschiedene Lizenzmodelle}
+\begin{quote}\itshape
+In diesem Kapitel erläutern wir, dass es neben den gemeinsamen Merkmalen auch
+Unterschiede gibt. Es sollte eine aussagekräftige Klassifikation entstehen, auf
+die nachfolgende Kapitel zurückgreifen können.
+\end{quote}
+Das Linux Magazin Mai oder April 2011 enthält einen längereren Artikel [\ldots]
+
+\section{Minimal präskribierende Lizenzmodelle}
+Lizenzen: MIT, BSD
+
+\section{Rein reflexiv präskribierende Lizenzmodelle}
+Lizenzen: Apache, EPL, EUPL, LGPL
+
+\section{Ausgreifend präskribierende Lizenzmodelle}
+
+\subsection{GPL - Derivate}
+GPL-2, GPL-3, AGPL
+
+\subsection{Exkurs: GPL is not the Evil}
+
+\subsection{Exkurs: Was ist das besondere an GPL-3}
+
+\section{Sonstige}
+Gibt es die??
+
+\chapter{Open Source: Wichtige Nebnefragen}
+
+\section{Exkurs: Das Problem der Lizenzkombination}
+
+\section{Exkurs: Darf Open Source Software Geld kosten?}
+
+\section{Exkurs: Das Problem der (impliziten) Patentfreigabe}
+
+\chapter{Software konkret: Das Verwendungsszenrario entscheidet}
+\begin{quote}\itshape
+Hier sollte die Taxonomie der Verwendungsszenarien
+entstehen, die in jedem einzelnen Lizenz spezifischen Nachschklage Chapter als strukturgebende Referenz
+wiedererscheint.
+\end{quote}
+
+\chapter{Software konkret: Lizenzerfüllung durch Code-Behandlung}
+
+\section{Apache lizenzierte Software}
+
+\subsection{bei unveränderter Nutzung ohne Weitergabe}
+
+\subsection{bei unveränderter Nutzung mit Weitergabe}
+
+\subsection{bei veränderte Nutzung ohne Weitergabe}
+
+\subsection{bei veränderter Nutzung mit Weitergabe}
+
+\section{\ldots}
+
+\section{GPL lizenzierte Software}
+
+\subsection{bei unveränderter Nutzung ohne Weitergabe}
+
+\subsection{bei unveränderter Nutzung mit Weitergabe}
+
+\subsection{bei veränderte Nutzung ohne Weitergabe}
+
+\subsection{bei veränderter Nutzung mit Weitergabe}
+
+\section{\ldots}
+
+\section{MIT lizenzierte Software}
+
+\subsection{bei unveränderter Nutzung ohne Weitergabe}
+
+\subsection{bei unveränderter Nutzung mit Weitergabe}
+
+\subsection{bei veränderte Nutzung ohne Weitergabe}
+
+\subsection{bei veränderter Nutzung mit Weitergabe}
+
+\small
+\input{btexmat/oscNclAbbreviationsDeInc}
+\input{btexmat/oscNclJournalsInc}
+\printnomenclature
+\bibliography{bibfiles/oscResourcesDe}
+
+\end{document}

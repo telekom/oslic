@@ -1,0 +1,223 @@
+% Telekom osCompendium extract template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
+%
+% select the document class
+% S.26: [ 10pt|11pt|12pt onecolumn|twocolumn oneside|twoside notitlepage|titlepage final|draft
+%         leqno fleqn openbib a4paper|a5paper|b5paper|letterpaper|legalpaper|executivepaper openrigth ]
+% S.25: { article|report|book|letter ... }
+%
+% oder koma-skript S.10 + 16
+\documentclass[DIV=calc,BCOR=5mm,11pt,headings=small,oneside,abstract=true, toc=bib]{scrartcl}
+
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4,ngerman}
+\usepackage[english, ngerman]{babel}
+\selectlanguage{ngerman}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+\input{../btexmat/oscJbibCfgDeInc}
+
+% language specific hyphenation
+\input{../btexmat/oscHyphenationEnInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{headings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+\usepackage[dvips]{epsfig}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+\usepackage[marginal]{footmisc}
+%- end(footnote-configuration)
+
+\begin{document}
+
+%% use all entries of the bliography
+
+%%-- start(titlepage)
+\titlehead{Literaturexzerpt}
+\subject{Autor(en): Sebald}
+\title{Titel: Offene Wissensökonomie}
+\subtitle{Jahr: 2008 }
+\author{K. Reincke\input{../btexmat/oscLicenseFootnoteInc}}
+
+%\thanks{den Autoren von KOMA-Script und denen von Jurabib}
+\maketitle
+%%-- end(titlepage)
+%\nocite{*}
+
+\begin{abstract}
+\noindent
+Das Werk / The work\footcite[][]{Sebald2008a} \\
+\noindent \itshape
+\ldots Vom praktischen Standpunkt aus ein etwas abgehobenes soziologisches Buch:
+Es versucht die Bedingungen zur Möglichkeit zu ermitteln, dass sich eine offene
+Wissensökonomie in einer kapitalistischen Umgebung etablieren kann. OS scheint
+auf GPL reduziert zu sein. Lizenzfragen werden auf 3 Seiten verhandelt.
+Allerdings skizziert das Buch die Genese der Idee von 'Freier Software'
+erfolgreich. Und es unterstreicht, dass die Vorläuferform der GPL - die
+emacs-Lizenz - noch gefordert hatte, alle Veränderungen öffentlich zu machen,
+also auch die privatesten, wohingegen die GPL diesen Anspruch später aufgegeben
+hat.\\
+\noindent
+\ldots From the practical viewpoint a withdrawn socialogical book: tries to
+discuss the conditions for the possibility that an open knowledge economy
+establishes itself in a captalist environment. OS seems to be reduced to GPL.
+License questions are discussed on only 3 pages. But at least the book outlines
+the evolution of the idea 'Free Software'. And it highlights that the forerunner
+of the GPL - the emacs license - had still required to publish all changings -
+even the most private improvements - whereas later on the GPL gave up this
+condition. 
+\end{abstract}
+\footnotesize
+%\tableofcontents
+\normalsize
+
+\section{Summarynachweise}
+
+Vom praktischen Standpunkt aus ein etwas abgehobenes soziologisches Buch:
+Es versucht die Bedingungen zur Möglichkeit zu ermitteln, dass sich eine offene
+Wissensökonomie in einer kapitalistischen Umgebung etablieren
+kann\footcite[vgl.][17]{Sebald2008a}. OS scheint auf GPL reduziert zu
+sein\footcite[vgl.][63ff]{Sebald2008a}. Lizenzfragen werden auf 3 Seiten
+verhandelt und betreffen die GNU Lizenzen\footcite[vgl.][75ff]{Sebald2008a}.
+Allerdings skizziert das Buch dabei die Genese der Idee von 'Freier Software'
+erfolgreich\footcite[vgl.][83ff]{Sebald2008a}. Und es unterstreicht, dass die
+Vorläuferform der GPL - die emacs-Lizenz - noch gefordert hatte, alle
+Veränderungen öffentlich zu machen, also auch die privatesten, wohingegen die
+GPL diesen Anspruch später aufgegeben hat\footcite[vgl.][76]{Sebald2008a}.
+
+\section{Line of Thought}
+
+Ziel des Buch es ist es, \glqq{}[\ldots] nach den Bedingungen der Möglichkeit
+einer [\ldots] 'offenen Wissensökonomie' (zu fragen), die in einem
+kapitalistischen Umfeld entsteht und sich stabilisiert, das eigentlich eine
+bedingungslose Verwertung nahelegt\grqq{}\footcite[vgl.][17]{Sebald2008a}. Dabei
+bezieht sich der Begriff \glqq{}offene Wissensökonomie\grqq{} gerade auf das
+Phänomen 'offene Software', bei der das
+\glqq{}explizite Wissen\grqq{}, wie es in der \glqq{}Software\grqq{}
+respektive im \glqq{}Quellcode\grqq{} enthalten ist, \glqq{}[\ldots] offen und
+öffentlich potentiell für alle verfügbar
+(bleibt)\grqq{}\footcite[vgl.][17]{Sebald2008a}. Den die Frage nach den
+Bedingungen zur Mööglichkeit evozierenden Befund charakterisiert Sebald
+entwaffnend einfach:
+
+\begin{quotation}
+  \glqq{}Das Erstaunlichste an der F/OSS ist meines Erachtens nach wie
+  vor, daß diese offnene Wissensökonomie sich gesellschaftlich etabliert
+  hat, obwohl dieses Feld der Produktion von einer funktionierenden und
+  florierenden kapitalistisch organisierten Ökonomie beackert
+  wird.\grqq{}\footcite[vgl.][23]{Sebald2008a}
+\end{quotation} 
+
+Die Antwort auf diese Frage im Kapitel \glqq{}Finis opera\grqq{} fällt eher dünn
+aus: So sei es das Wesen der \glqq{}Software\grqq{} selbst, die \glqq{}[\ldots] in ihrer
+formalisierten, dekontextuierten Schriftlichkeit die entscheidenden
+Rahmenbedingungen setzt für die neue selbstorganisierte Wissensproduktion
+von selbstbestimmten Programmierern\grqq{}\footcite[vgl.][236]{Sebald2008a}.
+\section{Specific Aspects}. Allerdings fordere dies einen Preis, eine
+Eingangsvoraussetzung, sozusagen eine notwendige, aber nicht hinreichende
+Bedingung für die Möglichkeit überhaupt: Es wird eine
+\glqq{}Wissensschwelle\grqq{}, ohne deren Überwindung eine \glqq{}[\ldots]
+mögliche Beteiligun eingeschränkt (bliebe)\grqq{}, nämlich die
+\glqq{}Computeralphabetisierung\grqq{}\footcite[vgl.][236]{Sebald2008a}.
+Zudem habe \glqq{}in Bezug auf die zentrale
+Fragestellung nach der Möglichkeit einer nichtkapitalisitisch organisierten Produktionsweise,
+die parallel zu einer kapitalisitschen besteht, [\ldots] empirisch
+gezeigt, daß die Abgrenzung sich seitens der F/OSS nur auf den Bereich
+der selbstbestimmten, [!SW!] technischen Entscheidung und auf die
+Sicherung des gemeinsamen Wissenspools
+zielt\grqq{}\footcite[vgl.][237f]{Sebald2008a}
+
+\section{Special Aspects}
+
+\subsection{Begriffsdefinition F/OSS}
+
+Sebald bietet eine etwas merkwürdige Auflösung der Kürzel für Freien Software:
+So bezeichnet er \glqq{}Free/Open Source-Softwareentwicklung\grqq{} als
+\glqq{}F/OSS\grqq{} und grenzt dieses gegen das Kürzel \glqq{}F/OS\grqq{} ab,
+das für \glqq{}Free/Open Source\grqq{} stehen
+soll\footcite[vgl.][15]{Sebald2008a}. 
+
+Das ist merkwürdig insofern, als Open Source Software gern als OSS abgekürzt
+wird. Geschuldet ist das natürlich der nicht guten Verbindung von FSS, die es
+nicht gibt, sondern nur FS. So wäre F/OSS eigentlich ungefähr zu lesen als
+F/(OS)S.
+
+Immerhin betont Seblad richtig, dass \glqq{}der Begriff 'libre software'
+[\ldots]  für die Free/Open Source-Entwickler selbst kaum eine Rolle
+(spiele)\grqq{}, obwohl er \glqq{}[\ldots] für dieses Phänomen in Europa
+häufiger verwendet (werde)\grqq{}\footcite[vgl.][15, Anm.7]{Sebald2008a}
+
+\subsection{Zwangsweise Veröffentlichung von (privaten) Verbesserungen}
+
+Sebald erwähnt, dass Stallmann zunächst mit der \glqq{}GNU Emacs License
+von 1985\grqq{} operiert hat, bevor er die GPL entwicklet
+habe\footcite[vgl.][76]{Sebald2008a}. Dabei habe es zur 'Emacs-License' gehört,
+dass das \glqq{}[\ldots] Programm auch verändert werden durfte, solange
+die Änderungen veröffentlicht wurden\grqq{}\footcite[vgl.][76]{Sebald2008a}.
+Pikanterweise unterstreicht Selbald in einer Fußnote dazu, dass
+eine solche \glqq{}[\ldots] Veröffentlichung auch (dann) vorgeschrieben (war),
+wenn die Änderung nur für den privaten Gebrauch gemacht wurde\grqq{}. Und er
+betont ebenda unter Fückgriff auf Williams 2002, S. 127, dass
+\glqq{}dieser 'Big Brother aspect [\ldots] in den späteren Versionen
+fallen gelassen (wurde)\grqq{}\footcite[vgl.][76 Anm. 85]{Sebald2008a}
+
+Wenn das stimmt, wäre das ein wichtiger zusätzlicher Belege über den reinen
+Lizenztext hinaus, dass die Veröffentlichung eben nicht in allen Fällen
+erzwungen ist.
+
+\small
+\bibliography{../bibfiles/oscResourcesDe}
+
+\end{document}

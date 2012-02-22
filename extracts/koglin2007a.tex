@@ -1,0 +1,363 @@
+% Telekom osCompendium extract template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
+%
+% select the document class
+% S.26: [ 10pt|11pt|12pt onecolumn|twocolumn oneside|twoside notitlepage|titlepage final|draft
+%         leqno fleqn openbib a4paper|a5paper|b5paper|letterpaper|legalpaper|executivepaper openrigth ]
+% S.25: { article|report|book|letter ... }
+%
+% oder koma-skript S.10 + 16
+\documentclass[DIV=calc,BCOR=5mm,11pt,headings=small,oneside,abstract=true, toc=bib]{scrartcl}
+
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4,ngerman}
+\usepackage[english, ngerman]{babel}
+\selectlanguage{ngerman}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+\input{../btexmat/oscJbibCfgDeInc}
+
+% language specific hyphenation
+\input{../btexmat/oscHyphenationDeInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{headings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+\usepackage[dvips]{epsfig}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+\usepackage[marginal]{footmisc}
+%- end(footnote-configuration)
+
+\begin{document}
+
+%% use all entries of the bliography
+
+%%-- start(titlepage)
+\titlehead{Literaturexzerpt}
+\subject{Autor(en): Koglin}
+\title{Titel: Opensourcerecht}
+\subtitle{Jahr: 2007 }
+\author{K. Reincke\input{../btexmat/oscLicenseFootnoteInc}}
+
+%\thanks{den Autoren von KOMA-Script und denen von Jurabib}
+\maketitle
+%%-- end(titlepage)
+%\nocite{*}
+
+\begin{abstract}
+\noindent
+Das Werk / The work\footcite[][]{Koglin2007a} \\
+\noindent \itshape
+\ldots Sehr gründliche Analyse der Gültigkeit und des Umfangs der GPL bezogen
+auf das allgemeine deutsche Recht, das Urheberrecht und das Vertragsrecht.
+Behandelt zudem detailliert und facettenreich die einzelnen GPL Bestimmung.
+Andere Open Source Lizenzen werden jedoch nicht in derselben Art behandelt.\\
+\noindent
+\ldots Thoroughly this book analyzes the validity of GPL with respect to the
+general German right, the German copyright ('Urheberrecht') and the German law
+of contract. Additionally it discusses all paragraphs of the GPL and their
+concret meaning as part of the German right. Other Open Source licenses are not
+outlined in the same manner.
+\end{abstract}
+\footnotesize
+%\tableofcontents
+\normalsize
+
+\section{Line of Thought}
+
+Das Buch untersucht zunächst die \glqq{}Rechtsnatur der
+GPL\grqq{}\footcite[vgl.][21ff]{Koglin2007a}. Sodann diskutiert es die
+Gültigkeit der GPL im Rahmen des deutschen
+Urheberrechts\grqq{}\footcite[vgl.][65ff]{Koglin2007a} und des deutschen
+Vertragsrechts\grqq{}\footcite[vgl.][135ff]{Koglin2007a}. Und schließlich
+analysiert es die GPL und ihre Einzelanweisung Klausel für
+Klausel\grqq{}\footcite[vgl.][185ff]{Koglin2007a}.
+
+\subsection{Rechtsnatur der GPL}
+
+Grosso modi konstatiert Koglin, dass \glqq{}Open-Source-Lizenzen [\ldots] als
+Softwarelinzverträge einen eigenen Vertragstyp (darstellen)\grqq{}.
+Insbesondere sei \glqq{}das Schenkungsrecht [\ldots] auf Open-Source-Lizenzen nicht
+anwendbar, da die Nichtigkeit bei Missachtung der Formvorschrift zu
+unbilligen Ergebnissen (führe)\grqq{}. Umgekehrt aber dürfe der
+\glqq{}schenkungsrechtliche Haftungsmaßstab\grqq{} als \glqq{}nicht zwingend
+unbillig\grqq{} angesehen werden\footcite[vgl.][63]{Koglin2007a}:
+
+\begin{quote}\glqq{}Die Inkompabilität zwischen Schenkungsrecht und
+Open-Source-Lizenzierung betrifft jedoch nur das regide Formerfordernis.
+Die Anwendung des schenkungsrechtlichen Haftungsmaßstabs trifft hingegen
+auf keine Bedenken.\grqq{}\footcite[][62 - Typo(?) im Original, gemeint ist
+wahrscheinlich die Inkompatibilität]{Koglin2007a}
+\end{quote}
+
+Koglin respektiert, dass in der juristischen Forschungsliteratur andere
+Standpunkte existieren, etwa der von Metzger und Jager, denenzufolge - so Koglin
+- \glqq{}[\ldots] die GPL den Tatbestand des §516 Abs. 1 BGB (erfülle)
+und [\ldots] daher eine Schenkung
+(darstelle)\grqq{}\footcite[vgl.][38]{Koglin2007a}: Obwohl dieser Aufassung
+partiell gefolgt werde, könne die Interpretation als Schenkung kritisiert
+werden, weil es fraglich sei, \glqq{}[\ldots] ob die Zuwendung aus dem
+Vermögen des Schenkers stamme\grqq{} und weil eine (geforderte)
+\glqq{}Gegenleistung\grqq{} des 'Beschenkten' \glqq{}[\ldots] eine
+Schenkung ausschließe [\ldots]\grqq{}\footcite[vgl.][39]{Koglin2007a}. Das
+Problem mit der Deutung als Schenkung bestünde zudem darin, dass \glqq{}[\ldots]
+die Folge eine Qualifizierung der GPL als Schenkung [\ldots] die volle
+Anwendung des Schenkungsrechts (wäre)\grqq{}, was Rücktrittsrechte und
+\glqq{}Formbedürfnisse\grqq{} etc. beträfe und zu Verwerfungen
+führe\footcite[vgl.][52ff]{Koglin2007a}.
+
+Für diesen Punkt formuliert Koeglin das Fazit:
+
+\begin{quote}\glqq{}Die Regelungen sind vom Lizenzgeber gestellte Allgemeine
+Geschäftsbedingungen, die auch gegenüber Verbrauchern regelmäßig
+[//Seitenwechsel//] wirksam eingebunden werden. Dabei ist insbesondere von
+Bedeutung, dass Nutzer die GPL typischerweise nicht bereits beim Download oder
+dem ersten Ausführen des Programms annehmen, sondern erst zum Vervielfältigen,
+Verbreiten oder Bearbeiten des
+Programms.\grqq{}\footcite[vgl.][228]{Koglin2007a}
+\end{quote}
+
+\subsection{Urheberrechtliche Aspekte}
+
+Zentral ist hier die Einsicht, dass bei Open Source Software, \glqq{}[\ldots]
+die im Wege der Basar-Methode von einer Vielzahl voneinander unabhängigen
+Entwickler hergestellt wird, [\ldots] somit eine Vielzahl von
+Lizenzgebern und folglich ein Bündel von Lizenzverträgen
+(existiere)\grqq{}\footcite[vgl.][225]{Koglin2007a}. Allerdings würden das
+Nutzungs-, Verbreitungs- und Modifikationsrecht immer wechselseitig bei der
+GPLisierung übertragen, sodass sich explizite Lizenzierung aller Urheber bei der
+Weitergabe erübrige\footcite[vgl.][133]{Koglin2007a}
+
+
+\subsection{Vertragsrechtliche Aspekte}
+
+Als 'Vertrag' etabliere die GPL zunächst nur \glqq{}ein unbefristetes und
+unwiderrufliches Angebot\grqq{}, das auch von \glqq{}Dritten als Bote\grqq{}
+weitergeben werden dürfe. Zudem etabliere der erste faktisch
+\glqq{}abgeschlossene Softwarelizenzvertrag\grqq{} einen \glqq{}Vertrag
+zugunsten Dritter\grqq{}, will sagen: der Urheber unterwerfe sich damit der
+Pflicht, mit allen dritten, vierten usw., die das Angebot annehmen, einen
+ebensolchen Lizenzvertrag einzugehen\footcite[vgl.][182]{Koglin2007a}.
+
+Das Angebot selbst müsse sodann noch angenommen werden. Dieses geschehe
+\glqq{}[\ldots] typischerweise nicht bereits mit dem Erhalt oder dem
+Ausführen des Programms, sondern erst bei der Vervielfältigung oder bei
+einer anderen über die bloße Nutzung hinausgehenden
+Verwertungshandlung\grqq{}\footcite[vgl.][182]{Koglin2007a}.
+
+Diese 'nachgezogene Lizenzannahme' liefert sodann auch die Begründung dafür,
+dass eine englisch sprachige Lizenz in einem deutschen Vertrag dennoch gültig
+sein könne. Wer Software weitergebe oder gar modifiziere, sei \glqq{}[\ldots]
+in aller Regel im Softwarebereich versiert [\ldots]\grqq{}. Und da ihm
+außerdem im Moment der Annahme, also bei der Weitergabe oder der Modifikation
+die GPL vorliege, \glqq{}[\ldots] (werde) die GPL trotz der Abfassung in
+der englischen Sprache wirksam in den Softwarelöizenzvertrag
+eingebunden\grqq{}\footcite[vgl.][182f]{Koglin2007a}
+
+Für diesen Punkt formuliert Koeglin das Fazit:
+
+\begin{quote}\glqq{}Als zweiseitiger Softwarelizenzvertrag kommt die GPL
+durch Angebot und Annahme zustande, wobei der Lizenzgeber auf den Zugang
+der Annahmeerklärung verzichtet. [\ldots] Typische Nutzer nehmen das
+Angebot noch nicht beim Download oder Ausführen eines GPL-Programms,
+sondern erst bei [\ldots] einer Verbreitung oder der Bearbeitung des
+Programms an.\grqq{}\footcite[][227]{Koglin2007a}
+\end{quote}
+
+\subsection{GPL Klauseln}
+
+\subsubsection{C-Klauseln und Weitergabe Lizenztext}
+Koeglin betont, dass es bei der GPL - neben den bekannten Pflichten zur
+Weitergabe auch des (modifizierten) Codes - insbesondere auch die Pflicht gebe,
+die Copyright-Vermerke und Haftungshinweise bei Kopien anzubringen resp.
+bestehen zu lassen und \glqq{}[\ldots] im Moment der Übergabe des Programms
+den Text der GPL mitzugeben\grqq{}\footcite[vgl.][192]{Koglin2007a}
+
+\subsubsection{Honorarfrage}
+
+Koeglin erklärt, dass die Höhe des Entgelts von der GPL nicht beschränkt werde.
+Stattdessen werde nur festgelegt, das sich dieses Entgeld zar beispielsweise auf
+den Service der Distribution beziehen dürfe, \glqq{}[\ldots] nicht jedoch
+für den rechtlichen Vorgang des Einräumens von Nutzungsrechten verlangt
+werden (dürfe)\grqq{}\footcite[vgl.][198]{Koglin2007a}.
+
+\subsubsection{Programmcode- und Quellcodeweitergabe}
+
+Koeglin unterstreicht, dass nach GPL die getrennte Übergabe von Programm -
+beispielsweise auf DVD - und Quellcode - beispielsweise per Download - schlicht
+unzulässig sei: der \glqq{}[\ldots] Wortlaut der GPL (sei) hier
+eindeutig\grqq{}\footcite[vgl.][203]{Koglin2007a}. Und auch wenn das gängige
+Praxis sei, stelle es \glqq{}[\ldots] gleichwohl einen Verstoß gegen die GPL
+dar\grqq{}\footcite[vgl.][204]{Koglin2007a}
+
+Zudem gebe es insofern eine Lücke in der GPL, als ihre Methode, Quelltext und
+Programm für drei Jahre zum Download bereithalten zu können und die
+Distribution als Linkausübergabe organisieren zu drüfen, sich für die
+Bereitstellung jeweils nur auf die Übergabe von a nach b beziehe, für die
+Linkweitergabe aber auch auf b und c. Wenn b das Programm an c aber weitergäbe,
+beginne die 3 Jahresfrist trptzdem nicht von neuem anzulaufen. Damit sei eben
+\glqq{}[\ldots] durch die GPL nicht sichergestellt, dass der Lizenznehmer
+[c ; KR] den Quellcode [defacto] erhalten
+kann\grqq{}\footcite[vgl.][205]{Koglin2007a}
+
+\subsubsection{Beginn der Weitergabepflicht}
+
+Koeglin unterstreicht, dass die GPL eine \glqq{}spezielle Bestimmung\grqq{}
+enthalte, derzufolge \glqq{}[\ldots] die Pflicht zur Lizenzierung der
+eigenen Bearbeitung [\ldots] erst mit der Verbreitung oder
+Veröffentlichung [\ldots] eintreten solle\grqq{}. Gemeint sei der GPL-Text unter
+Sec. 2 Abs 1 lit. b\footcite[vgl.][208]{Koglin2007a}. Das Fazit dazu lautet:
+
+\begin{quote}\glqq{}So lange die Bearbeitung weder verbreitet noch
+veröffentlicht wird, besteht keine Verpflichtung, das Werk der GPL zu
+unterstellen. Eine solche Nutzungsrecht-Erteilung wäre ohnehin für Dritte
+nutzlos, da diese ohne Verbreitung oder Veröffentlichung das Programm nicht
+erhalten können[..]\grqq{}\footcite[][209]{Koglin2007a}
+\end{quote}
+
+Oder noch schärfer: \glqq{}Erst mit der Verbreitung oder Veröffentlichung
+ergeben sich Verpflichtungen aus dem
+Copyleft\grqq{}\footcite[][211]{Koglin2007a}
+
+So gesehen sei die Behauptungen, \glqq{}[\ldots] Bearbeitungen müssten
+zwangsläufig der GPL unterliegen\grqq{} oder müssten gar auch veröffentlicht
+werden, zumindest Missverständnisse\footcite[][209]{Koglin2007a}.
+
+Entscheidend ist dann aber, wann der Akt der Weitergabe rechtlich einsetzt.
+Hierzu gäbe es Gerichtsentscheidungen, denenzufolge dies innerhalb kleinerer,
+wohl abgegrenzter Kreise rechtlich noch nicht der Fall
+sei\footcite[vgl.][211]{Koglin2007a}. Allerdings sei es jedoch
+\glqq{}umstritten\grqq{} geblieben, \glqq{}[\ldots] ob die weite
+Verteilung an zahllose Empfänger innerhalb eines großen Unternehmens oder
+einer Behörde als Verbreitung zu bewerten
+ist\grqq{}\footcite[vgl.][211]{Koglin2007a}. Hier stellt sich Koeglin auf den
+Standpunkt, dass nach dem Günstigkeitsprinzip das \glqq{}unternehms- oder
+behördeninterne Weiterreichen einer Kopie der Bearbeitung\grqq{} keine
+Distribution sei. Mithin \glqq{}[\ldots] könne ein Unternehmen oder eine
+andere Organisation ein der GPL unterliegendes Programm intern bearbeiten
+und die neue Version an alle internen Stellen weitergeben und ausgiebig
+nutzen, ohne dass eine Pflicht zur Lizenzierung an jedermann
+bestehe\grqq{}\footcite[vgl.][212]{Koglin2007a}.
+
+[Hinweis; KR: Fraglich wird das aber wieder für Unternehmen, bei denen die
+Weitergabe über Legaleinheiten erfolgt.]
+
+Für diesen Punkt formuliert Koeglin das Fazit:
+
+\begin{quote}\glqq{}Die Verpflichtung aus dem Copyleft greift erst, wenn
+Bearbeitungen über den nicht-öffentlichen, insbesondere privaten oder
+unternehmesinternen Bereich hinaus verbreitet werden. Somit besteht aus dem
+Copyleft keine Verpflichtung, jeglich - insbesondere unveröffentlichte -
+Bearbeitungen an Dritte zu lizenzieren. Auich zwingt die GPL den Bearbeiter
+nicht, die Bearbeitung Dritten zur Verfügung zu
+stellen.\grqq{}\footcite[vgl.][2227]{Koglin2007a}
+\end{quote}
+
+\section{Specific Aspects}
+
+\subsection{Vertragsbeziehung}
+
+Koglin betont, dass bei der Weitergabe und der Lizenzierung des Weitergegeben
+ein \glqq{}Drei-Personen-Verhältnis\grqq{} entsteht: Einerseits räumt der
+\glqq{}Urheber\grqq{} dem \glqq{}Distributor\grqq{} das Recht der
+Vervielfältigung und der Weitergabe ein\footcite[vgl.][32]{Koglin2007a}.
+Andererseits räumt der \glqq{}Urheber\grqq{} - und nicht der Distributor -
+beiden, dem \glqq{}Empfänger\grqq{} und dem \glqq{}Distributor\grqq{} das Recht
+der Nutzung und der Modifikation ein\footcite[vgl.][33]{Koglin2007a}. Zwischen
+\glqq{}Distributor\grqq{} und \glqq{}Empfänger\grqq{} können zudem andere
+eigenständiug Verträge entstehen, etwa, wenn der Distributor zusätzlich
+\glqq{}[\ldots] Informationen über das Programm (gibt), es (empfiehlt) oder
+freiwillig eine Haftung (anbietet)\grqq{}\footcite[vgl.][32]{Koglin2007a}.
+
+\subsection{auch nachträgliche Dual-Lizenzierung / Geldverdienen}
+
+Koelgin unterstreicht, dass die GPL nur den Lizenznehmer zur
+Beachtung des Copylefts verpflichte, nicht aber den \glqq{}ursprünglichen
+Lizenzgeber\grqq{}: er sei \glqq{}[\ldots] - insbesondere bezüglich des
+Lizenzgebührenverbots und des Copylefts - nicht als Lizenznehmer aus der
+GPL verpflichtet\grqq{}\footcite[vgl.][185f]{Koglin2007a}. Daraus ist zu
+folgern, dass der ursprüngliche Lizenzgeber auch nachträglich eine Dual-Lizenzierung
+verfügen kann und dass er für die initiale Weitergabe als GPL Software sehr wohl
+Geld verlangen könnte (selbst wenn er damit kaum ein dauerhaftes
+Geschäftsmodell haben dürfte).
+
+Das Geldverdienen mit der GPL kann sogar noch schärfer gesehen werden: So
+\glqq{}[\ldots] entstehe mit der Veröffentlichung oder Verbreitung nur
+die Pflicht zur Verschaffung einer kostenlosen Lizenz des Programms,
+nicht aber des Programms selbst\grqq{}. Das bedeute umgekehrt, dass für die
+Weitergabe des Programms und des Codes sehr wohl \glqq{}hohe Entgelte\grqq{}
+verlangt werden dürfen\footcite[vgl.][213]{Koglin2007a}. [Allerdings nochmals
+meine Anmerldung: das Geschäftsmodell dürfte dauerhaft nicht tragen]
+
+Für diesen Punkt formuliert Koeglin das Fazit:
+\begin{quote}\glqq{}[\ldots] der Lizenznehmer (darf) für eine freiwillig
+von ihm gewährte Garantie oder für das Übertragen einer Kopie des
+Programms ein Entgeld in unbeschränkter Höhe verlangen. Es ist ihm
+lediglich verboten, für die Einräumung von Nutzungsrechten an dem
+Programm eine Gegenleistung zu
+verlangen.\grqq{}\footcite[vgl.][228]{Koglin2007a}
+\end{quote}
+ 
+\subsection{implizite Lizenzierung bei Weitergabe}
+Koeglin verweist darauf, dass nach Verständnis der GPL Dritte, an die eine Kopie
+des Programms weitergeben worden ist, die Lizenzierung automatisch erhalten.
+Dies führt er auf die GPL Sec 6 Satz 1 zurück, in der es heiße, dass bei einer
+Weitergabe diese die Rechte 'automatically'
+erhielten\footcite[vgl.][186]{Koglin2007a}.
+
+\small
+\bibliography{../bibfiles/oscResourcesEn}
+
+\end{document}

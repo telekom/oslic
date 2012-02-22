@@ -1,0 +1,244 @@
+% Telekom osCompendium extract template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
+%
+% select the document class
+% S.26: [ 10pt|11pt|12pt onecolumn|twocolumn oneside|twoside notitlepage|titlepage final|draft
+%         leqno fleqn openbib a4paper|a5paper|b5paper|letterpaper|legalpaper|executivepaper openrigth ]
+% S.25: { article|report|book|letter ... }
+%
+% oder koma-skript S.10 + 16
+\documentclass[DIV=calc,BCOR=5mm,11pt,headings=small,oneside,abstract=true, toc=bib]{scrartcl}
+
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4,ngerman}
+\usepackage[ngerman, english]{babel}
+\selectlanguage{english}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+\input{../btexmat/oscJbibCfgEnInc}
+
+% language specific hyphenation
+\input{../btexmat/oscHyphenationEnInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{headings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+\usepackage[dvips]{epsfig}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+\usepackage[marginal]{footmisc}
+%- end(footnote-configuration)
+
+\begin{document}
+
+%% use all entries of the bliography
+
+%%-- start(titlepage)
+\titlehead{Literaturexzerpt}
+\subject{Autor(en): Bretschneider Glaschick Gräfe}
+\title{Titel: Ratgeber für die Veröffentlichung von Open-Source-Software durch
+eine Hochschule}
+\subtitle{Jahr: 2008 }
+\author{K. Reincke\input{../btexmat/oscLicenseFootnoteInc}}
+
+%\thanks{den Autoren von KOMA-Script und denen von Jurabib}
+\maketitle
+%%-- end(titlepage)
+%\nocite{*}
+
+\begin{abstract}
+\noindent
+Das Werk / The work\footcite[][]{BreGlaGra2008a} \\
+\noindent \itshape
+\ldots Stellt wesentliche Aspekte einer Open Source Veröffentlichung gründlich,
+knapp und übersichtlich dar: das nicht übertragbare Urheberrecht wird gegen das
+transferierbare Verwertungs- und Nutzungsrecht ebenso abgegrenzt, wie
+Haftungsfragen diskutiert und die Wahl der Lizenz auf den intendierten Zweck hin
+beleuchtet werden. Trotzdem kann (und will) der Artikel kein allgemeines 'Open
+Source Compendium' sein: der Frage, ob und wann eine universitäre Entwicklung
+gezwungenermaßen veröffentlicht werden muss und was Universitäten ansonsten tun
+müssen, wenn sie OS Software intern nutzen und weitergeben, wird nicht
+beleuchtet.\\
+\noindent
+\ldots This article summarizes basic aspects of an Open Source publication
+succesfully. It addresses the (German) difference between copyright
+('Urheberecht') and transferring the right to use ('Nutzungsrecht'). It mentions
+the problem of liability. It discusses the choice of an Open Source License with
+respect to the indented purpose and many things more. Nevertheless the article
+can't be taken as the sought-after 'Open Source Compendium': it doesn't analyze
+in which cases a University perhaps must publish its' developments or what it must
+do for fulfilling the licenses of internally (re-)used and distributed Open
+Source Software.
+\end{abstract}
+\footnotesize
+%\tableofcontents
+\normalsize
+
+\section{Line of Thought}
+
+Der Artikel stellt sich eine hohe Aufgabe: er will \glqq{}[\ldots]
+Fragestellungen (adressieren), die im Zusammenhang mit einer
+Vörffentlichung einer Software unter den Rahmenbedingungen einer
+Open-Source-Lizenz ent[!SW!]stehen\grqq{}\footcite[vgl.][167]{BreGlaGra2008a}.
+Und mehrnoch, er bezeichnet \glqq{}die Bereitstellung eines pragmatischen
+Ratgebers\grqq{} als seine eigene \glqq{}Zielsetzung\grqq{}, ein
+\glqq{}[\ldots] Ratgeber, der den Verantwortlichen eine Hilfestellung für
+entsprechende Vorhaben bietet
+[\ldots]\grqq{}\footcite[vgl.][168]{BreGlaGra2008a}.
+
+In der Zusammenfassung wird der Anspruch sogar noch schärfer formuliert. Hier
+wird gesagt, dass \glqq{}der vorliegende Ratgeber [\ldots] bei der
+Veröffentlichung von Open-Source-Projekten dienen [\ldots]\grqq{} und dass die
+\glqq{}[\ldots] die zu berücksichtigende Aspekte (strukturiert)
+abgearbeitet werden (könnten) [\ldots]\grqq{}, sodass damit
+\glqq{}rechtlich nicht angreifbarer Veröffentlichungsprozess\grqq{} ermöglicht
+würde\footcite[vgl.][186]{BreGlaGra2008a}
+
+ [KR: Unterstellt, dass eine Universität auf die gleichen Interessen
+und Probleme stossen dürfte, wie eine (grosse) Firma, sollte dieser Artikel zur Erhellung
+unser Fragen beitragen.]
+
+\begin{itemize}
+  \item Zunächst unterstreicht der Artikel, dass sich \glqq{}aus den Lizenzen
+  selbst [\ldots] keine Verpflichtung zur öffentlichen Bereitstellung
+  (ergäbe)\grqq{}. Ja schärfer noch: Es gelte, dass Software \glqq{}[\ldots]
+  unter eine Open Source Lizenz gestellt und lediglich bilaterial verteilt
+  werden (könne) [\ldots]\grqq{}. Damit gelte allerdings auch, \glqq{}[\ldots]
+  dass jeder Empfänger sie dann veröffentlichen
+  (könne)\grqq{}\footcite[vgl.][170]{BreGlaGra2008a} - und zwar, wie von außen
+  zu ergänzen wäre, ohne Restriktionen und weltweit.
+  \item Sodann grenzt der Artikel - sprachlich fein - das (aus deutscher Sicht)
+  nicht übertragbare \glqq{}Urheberpersönlichkeitsrecht\grqq{} gegen das
+  \glqq{}in Form von Nutzungsrechten übertragbare Verwertungsrecht\grqq{}
+  ab\footcite[vgl.][173]{BreGlaGra2008a}. Und er erwähnt auch, dass die
+  \glqq{}[\ldots] (Verwertungsrechte) bei Softwareentwicklungen, die im Rahmen
+  eines Angestellten- oder Dienstverhältnisses entstanden (seien), [\ldots]
+  auto[!SW!]matisch auf den Arbeitgeber [\ldots] (übergehen
+  würden)\grqq{}\footcite[vgl.][173f]{BreGlaGra2008a}. Diese Verwertungsrechte
+  seien aber eben nur ein Teil. Nach Jaeger/Metzger, 2006 S.23 verbleibe das
+  'Veröffentlichungsrecht', das 'Recht auf Anerkennung der Urheberschaft' und
+  der 'Schutz gegen Entstellung der Software' gemäß UrhG eben beim
+  ursprünglichen Programmierer\footcite[vgl.][174]{BreGlaGra2008a}.
+  \item Schließlich erwähnt der Artikel auch, dass Open Source Veröffentlichung
+  nur und durch die Übertragung von Nutzungsrechten möglich
+  wird\footcite[vgl.][175]{BreGlaGra2008a}, was für Universitäten [und -
+  wie zu ergänzen wäre - andere Arbeitgeber] auch bedeutet, dass sie mit dem
+  Autor eine gesonderte umfassende Vereinbarung abschließen müssen, sofern sie
+  selbst diese Software als Open Source veröffentlichen
+  wollen\footcite[vgl.][175f]{BreGlaGra2008a}
+  \item Ferner referiert der Artikel den Gedankengang, demzufolge Open Source
+  Software als eine \glqq{}Schenkung\grqq{} im Sinne einer
+  \glqq{}unentgeldlichen Zuwendung\grqq{} zu werten sei, wobei die Übertragung
+  eines \glqq{}[\ldots] (Nutzungsrechtes) an einer Software [\ldots] eine
+  solche Zuwendung (sei)\grqq{}\footcite[vgl.][177]{BreGlaGra2008a}. Damit müsse
+  aber auch die Haftung entsprechend einer Schenkung eingegrenzt werden, und
+  zwar auf die \glqq{}Haftung für arglistig verschwiegene Mängel\grqq{}, denn
+  das Gesetzt lege fest, dass man denjenigen \glqq{}[\ldots] der
+  etwas verschenkt, nicht über Gebühr für das Verschenkte verantwortlich
+  (machen können) solle\grqq{}\footcite[vgl.][177]{BreGlaGra2008a}. Allerdings
+  gelte als untere Grenze eben auch, dass diese \glqq{}Haftung für
+  arglistige verschwiegene Mängel\grqq{} - worunter sicher auch der vorsätzlich
+  erzeugte zählen dürfte - eben auch \glqq{}[\ldots] nicht ausgeschlossen
+  werden (könne)\grqq{}, sodass
+  der übliche \glqq{}vollständige Gewährleistungsausschluss\grqq{} aus Open
+  Source Lizenzen - wenigstens in Deutschland - \glqq{}nichtig\grqq{}
+  sei\footcite[vgl.][177]{BreGlaGra2008a}.
+  \item Dann geht der Artikel auf die Lizenzwahl bei und für eine
+  Eigenveröffentlichung ein. Er verweist zunächst auf die OSI Standardlizenzen
+  oder die vom ifross aufgelisteten\footcite[vgl.][179]{BreGlaGra2008a}. Er
+  erläutert den \glqq{}Copyleft-Effekt\grqq{} der
+  GPL\footcite[vgl.][180]{BreGlaGra2008a} und verweist darauf, dass die LGPL für
+  \glqq{}Middleware\grqq{} besser geeignet sei, weil sie zwar Veränderungen an
+  sich selbst im Sinne des Copylefts prägt, aber \glqq{}[\ldots] eine
+  Integration mit kommerzieller Software erlaubt, ohne dass letztere
+  unter die GPL gestellt werden
+  (müsse)\grqq{}\footcite[vgl.][181]{BreGlaGra2008a}. 
+  \item Final verweist der Artikel darauf, dass \glqq{}[\ldots] (der Einfluss
+  auf das weitere Schicksal [der Software; KR]]) mit einer Veröffentlichung
+  unter einer Open-Source-Lizenz [\ldots] (rechtlich) weitestgehend
+  aufgegeben (werde)\grqq{}\grqq{}\footcite[vgl.][183]{BreGlaGra2008a} und dass
+  eine Veröffentlichung auch ein Umfeld für die Distribution und die
+  Kommunikation mit und in die Community
+  erfordere\footcite[vgl.][185f]{BreGlaGra2008a}
+
+\end{itemize}
+
+\section{Specific Aspects}
+
+Herausragend ist in diesem Artikel die Darstellung der Intention und des Umfangs
+der GPL. Hier wird mit Mythen aufgräumt:
+
+Dies betrifft den Mythos, dass \glqq{}[\ldots] der Rechteinhaber einer
+Software verpflichtet sei, die gesamte Software incl. Quellcode
+öffentlich[sic!] zum Download bereitzustellen, wenn in dieser Software
+Teile einer unter GPL stehenden Software enthalten sind\grqq{}.
+
+\begin{itemize}
+  \item Tatsächlich sei \glqq{}der Rechteinhaber [\ldots] lediglich
+  verpflichtet, im Falle einer Weitergabe von Binärcode, auch den
+  Quellcode für den Empfänger bereitzustellen\grqq{}.
+  \item Sodann müsse er den Quellcode auch nicht \glqq{}öffentlich\grqq{}
+  bereitstellen, sondern es \glqq{}[\ldots] muss der Quellcode nur denen
+  (zusätzlich) gegeben werden, die auch zuvor den Binärcode erhalten
+  haben\grqq{}, die dann allerdings ihrerseits frei seien, das Ganze öffentlich
+  weiterrzureichen
+\end{itemize}
+
+Alle Zitate hier\footcite[vgl.][181]{BreGlaGra2008a}
+
+
+\small
+\bibliography{../bibfiles/oscResourcesEn}
+
+\end{document}

@@ -1,0 +1,161 @@
+% Telekom osCompendium extract template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
+%
+% select the document class
+% S.26: [ 10pt|11pt|12pt onecolumn|twocolumn oneside|twoside notitlepage|titlepage final|draft
+%         leqno fleqn openbib a4paper|a5paper|b5paper|letterpaper|legalpaper|executivepaper openrigth ]
+% S.25: { article|report|book|letter ... }
+%
+% oder koma-skript S.10 + 16
+\documentclass[DIV=calc,BCOR=5mm,11pt,headings=small,oneside,abstract=true, toc=bib]{scrartcl}
+
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4,ngerman}
+\usepackage[ngerman, english]{babel}
+\selectlanguage{english}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+\input{../btexmat/oscJbibCfgEnInc}
+
+% language specific hyphenation
+\input{../btexmat/oscHyphenationEnInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{headings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+\usepackage[dvips]{epsfig}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+\usepackage[marginal]{footmisc}
+%- end(footnote-configuration)
+
+\begin{document}
+
+%% use all entries of the bliography
+
+%%-- start(titlepage)
+\titlehead{Literaturexzerpt}
+\subject{Autor(en): Stallman / Stallman1984a}
+\title{Titel: The GNU Manifesto}
+\subtitle{Jahr: 1984 / 2002 }
+\author{K. Reincke\input{../btexmat/oscLicenseFootnoteInc}}
+
+%\thanks{den Autoren von KOMA-Script und denen von Jurabib}
+\maketitle
+%%-- end(titlepage)
+%\nocite{*}
+
+\begin{abstract}
+\noindent
+\cite[(in:)][]{StaGay2002a} \\
+\noindent
+\cite[(ist:)][]{Stallman1984a} \\
+Das Werk / The work\footcite[][]{Stallman1984a} \\
+\noindent \itshape
+\ldots Eines der frühestes Dokumente, die die Idea des GNU Projektes und der GNU
+Software skizzieren. Der längste Teil des Artikels diskutiert die Vorteile der
+freien Software für alle Beteiligten, selbst im Hinblick auf eine kommerzielle
+Nutzung.
+\\
+\noindent
+\ldots One of the earliest documents delineating the idea of the GNU project and
+GNU software. The larger part of the article discusses the question that free
+software offers advantages for all users, even in the context of a commercial
+use.
+\end{abstract}
+\footnotesize
+%\tableofcontents
+\normalsize
+
+\section{Line of Thought}
+Following RMS the GNU Manifesto \glqq{}[\ldots] was written at the
+beginning of the GNU Project, to ask for participation and
+support\grqq{}\footcite[cf.][31]{Stallman1984a}. It contains
+
+\begin{itemize}
+  \item \ldots a short description of that software which already exists in
+  1984\footcite[cf.][31]{Stallman1984a}
+  \item \ldots the affirmation, that \glqq{}GNU will be able to run Unix
+  programs, but will not be identical to
+  Unix\grqq{}\footcite[cf.][31]{Stallman1984a}. RMS declares that Unix is
+  \glqq{}not (his) ideal system\grqq{} but good enough that he \glqq{}[\ldots]
+  can fill in what Unix lacks without spoiling
+  them\grqq{}\footcite[cf.][32]{Stallman1984a}. [This remark hints to the
+  modular structure of unix: many, but simple and small tools which just do what
+  they are designed to do]
+  \item \ldots the explanation, that \glqq{}GNU is not in the public
+  domain\grqq{} and that \glqq{}everyone will be permitted to modify and
+  redistribute GNU, but no distributor will be allowed to restrict its
+  further redistribution\grqq{}\footcite[cf.][32]{Stallman1984a}. At this time
+  there still doesn't exist any GPL and hence these sentences might be read as
+  first incarnation of the idea of free software.
+  \item \ldots a longer discussion of using / making free software in a
+  commercial environment\footcite[cf.][34ff]{Stallman1984a}
+\end{itemize}
+
+\section{Specific Aspects}
+
+In the beginning RMS uses a wording which he himself specifies as
+\glqq{}careless\grqq{}\footcite[cf.][31, FN 1]{Stallman1984a}. This carelessness
+concerns the meaning of 'free'. From the point of reviewing his older texts RMS
+adds very often the hint, that 'free' is used in the sense of 'freedom', not in
+the sense, \glqq{}[\ldots] that copies of GNU should always be
+distributed at little nor no charge\grqq{}\footcite[cf.][31, FN
+1]{Stallman1984a}. Therefore RMS also rejects his earlier statement, that
+\glqq{}once GNU is written, everyone will be able to obtain good system
+software free, just like air\grqq{}\footcite[cf.][34]{Stallman1984a}
+\small
+\bibliography{../bibfiles/oscResourcesEn}
+
+\end{document}

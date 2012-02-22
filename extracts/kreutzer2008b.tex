@@ -1,0 +1,174 @@
+% Telekom osCompendium extract file
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
+%
+% select the document class
+% S.26: [ 10pt|11pt|12pt onecolumn|twocolumn oneside|twoside notitlepage|titlepage final|draft
+%         leqno fleqn openbib a4paper|a5paper|b5paper|letterpaper|legalpaper|executivepaper openrigth ]
+% S.25: { article|report|book|letter ... }
+
+% oder koma-skript S.10 + 16
+\documentclass[DIV=calc,BCOR=5mm,11pt,headings=small,oneside,abstract=true, toc=bib]{scrartcl}
+
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4,ngerman}
+\usepackage[english, ngerman]{babel}
+\selectlanguage{ngerman}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+\input{../btexmat/oscJbibCfgDeInc}
+
+% language specific hyphenation
+\input{../btexmat/oscHyphenationDeInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{headings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+\usepackage[dvips]{epsfig}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+\usepackage[marginal]{footmisc}
+%- end(footnote-configuration)
+
+
+%- end(short-title-citation-configuration)
+
+
+\begin{document}
+
+%% use all entries of the bliography
+
+%%-- start(titlepage)
+\titlehead{Literaturexzerpt}
+\subject{Autor(en): Kreutzer}
+\title{Titel: Software veröffentlichen}
+\subtitle{Jahr: 2008 }
+\author{K. Reincke\input{../btexmat/oscLicenseFootnoteInc}}
+%\thanks{den Autoren von KOMA-Script und denen von Jurabib}
+\maketitle
+%%-- end(titlepage)
+%\nocite{*}
+
+\begin{abstract}
+\noindent
+\cite[(in:)][]{DjoGehGraKreSpi2008a} \\
+\noindent
+\cite[(ist:)][163 - 167]{Kreutzer2008b} \\
+\noindent \itshape
+[DE]: Erläutert das initiale Zusammenfallen von Urheberrecht und
+Verwertungsbefugnis. Letzteres kann übertragen werden, auch generell per
+Arbeitsrecht: angestellte Programmierer übergeben die Nutzungsrechte an ihren
+Werken mit dem Arbeitsvertrag an ihren Arbeitgeber. Wichtig aber auch:
+Urheberrecht impliziert keinen Ideenschutz. \\
+\noindent
+[EN]: Specifies that 'Urheberrecht' and 'Verwertungsbefugnis' are initially
+linked in Germany. The right to use ('Verwertungsbefugnis') can be assigned to
+other, even generally: In Germany employed developers assign their right to
+determine the software use to their employers by signing the contract. But: the
+German 'Urheberrecht' doesn't include a protection of the embedded ideas.
+\end{abstract}
+\footnotesize
+%\tableofcontents
+\normalsize
+
+\section{Gedankengang}
+
+Die Analyse geht davon aus, dass der Urheber als \glqq{}Schöpfer des
+Werkes\grqq{} - bei Software also der Programmierer - \glqq{}[\ldots] in der
+Regel auch die exklusive Verwertungsbefugnis
+(habe)\grqq{}\footcite[vgl.][163]{Kreutzer2008b}:
+
+\begin{quote}{\itshape \glqq{}Er [der Urheber resp. der Programmierer (K.R.)]
+kann darüber entscheiden, was er mit dem Programm macht, ob er es ausschließlich
+selbst nutzen oder anderen die Nutzung gestatten will - und zu welchen
+Bedingungen\grqq{}\footcite[][163]{Kreutzer2008b}}\end{quote}
+
+Bei echt kollaborierend erstellten Werken sei dies dann ein Recht, das
+konsequenterweise nur gemeinsam ausgeübt werden könne\footcite[vgl.][164]{Kreutzer2008b}. 
+
+Bei Programmierern im Angestelltenverhältnis werde das Nutzungs- resp.
+Verwertungsrecht an der erstellten Software hingegen \glqq{}schon nach dem
+Gesetz\grqq{} - also nicht nur durch den Arbeitsvertrag selbst - an den
+Arbeitgeber übertragen: \glqq{}Ein Lizenzvertrag [\ldots] (müsse) dafür nicht
+geschlossen werden\grqq{}, das Gehalt gelte bereits als Vergütung \glqq{}der
+Erwerb der Rechte\grqq{}\footcite[vgl.][164]{Kreutzer2008b}.
+
+Zu Markierung der Urheberrechte am Sourcecode - auch für den Fall, dass Rechte
+durchgesetzt werden müssen - böte sich zunächst einmal der Copyright-Vermerk an;
+allerdings sei dieser praktischen Grenzen unterworfen\grqq{}\footcite[vgl.][166f]{Kreutzer2008b}.
+
+Wichtig zu wissen, sei ferner, \glqq{}[\ldots] dass das Urheberrecht keinen
+Ideenschutz (gewähre)\grqq{}: Bestimmen resp.untersagen könne der Urheber
+\grqq{}nur die Verwendung eines konkret gestalteten Computerprogramms\grqq{},
+die Verwendung einer mit dem Programm konkretisierten Idee in einem anderen
+Konkretisierungsrahmen sei davon nicht betroffen\footcite[vgl.][167]{Kreutzer2008b}.
+
+\section{Allgemeine Anmerkungen}
+
+Eine interessante Frage bei dem Copyright-Vermerk betrifft die Unterscheidung
+zwischen Autor resp. Urheber und den Nutzungsrechten: 
+
+Wenn ich es richtig
+verstanden habe, bleibe ich der Autor eines Programmes selbst dann, wenn ich die
+Nutzungsrechte abgetreten habe: Niemand kann also auftreten und sagen, dies oder
+jenes stamme von ihm, wenn ich es geschaffen habe. Und das gilt selbst dann,
+wenn dieser andere von mir die Nutzungsrechte erworben hat.
+
+Im Falle einer Firma wäre also zu fragen, wer der Copyright-Inhaber ist: der
+Autor oder sie, die Firma. Wer also muss genannt werden, die Firma oder der
+Urheber?
+
+\small
+\bibliography{../bibfiles/oscResourcesDe}
+
+\end{document}

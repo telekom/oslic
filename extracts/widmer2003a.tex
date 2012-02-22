@@ -1,0 +1,633 @@
+% Telekom osCompendium extract template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
+%
+% select the document class
+% S.26: [ 10pt|11pt|12pt onecolumn|twocolumn oneside|twoside notitlepage|titlepage final|draft
+%         leqno fleqn openbib a4paper|a5paper|b5paper|letterpaper|legalpaper|executivepaper openrigth ]
+% S.25: { article|report|book|letter ... }
+%
+% oder koma-skript S.10 + 16
+\documentclass[DIV=calc,BCOR=5mm,11pt,headings=small,oneside,abstract=true, toc=bib]{scrartcl}
+
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4,ngerman}
+\usepackage[english, ngerman]{babel}
+\selectlanguage{ngerman}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+\input{../btexmat/oscJbibCfgDeInc}
+
+% language specific hyphenation
+\input{../btexmat/oscHyphenationEnInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{headings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+\usepackage[dvips]{epsfig}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+\usepackage[marginal]{footmisc}
+%- end(footnote-configuration)
+
+\begin{document}
+
+%% use all entries of the bliography
+
+%%-- start(titlepage)
+\titlehead{Literaturexzerpt}
+\subject{Autor(en): Mike J. Widmer}
+\title{Titel: Open Source Software - Urheberrechtliche Aspekte}
+\subtitle{Jahr: 2003 }
+\author{K. Reincke\input{../btexmat/oscLicenseFootnoteInc}}
+
+%\thanks{den Autoren von KOMA-Script und denen von Jurabib}
+\maketitle
+%%-- end(titlepage)
+%\nocite{*}
+
+\begin{abstract}
+\noindent
+Das Werk / The work\footcite[][]{Widmer2003a} \\
+\noindent \itshape
+\ldots Spezifiziert sehr kompetent nebst Open Source Begriffen auch die Open
+Source Geschichte. Grenzt kurz 'Non Copyleft Lizenzen' und 'Copyleft Lizenzen'
+gegen Formen der propritären resp. kommerziellen Software etc. ab. Analysiert
+sodann - von der Systematik her - die Beziehungen von Open Source Software und
+(schweizer) Urheberrecht und - von der Paragrafenabfolge her - die Beziehungen
+zwischen GPL und (schweizer) Urheberrecht.\\
+\noindent
+\ldots The book explains concepts of Open Source movement and its history
+competently. It also describes 'Non Copyleft Licenses', 'Copyleft Licenses' and
+other forms like proprietary or commercial licenses etc. Then it analyzes
+systematical connections between Open Source Software and the (Europaen/Swiss)
+'Urheberrecht' (Copyright). And finally it analyzes - clause by clause - the
+links from the GPL into the 'Urheberrecht' and vice versa.
+\end{abstract}
+
+\footnotesize
+\tableofcontents
+\normalsize
+
+\section{Line of Thought}
+
+Der grobe Gedankengang von Widmer ist folgender: (a) Es gibt \glqq{}Open
+Source Software\grqq{} im Sinne einer spezifischen
+Bedeutung\footcite[vgl.][21ff]{Widmer2003a} und einer längeren
+Geschichte\footcite[vgl.][8ff]{Widmer2003a}. Also wäre (b) zu fragen, wie das
+ebenfalls existierende Urheberrecht die Intentionen der Open Source Idee am
+besten unterstützt\footcite[vgl.][47ff]{Widmer2003a}. Und es wäre (c)
+schließlich zu beleuchten, ob und wie eine Open Source Lizenz, nämlich die GPL,
+das Unterstützungspotential des (schweizer) Urheberrechts zur Verwirklichung des
+Open Source Konzeptes abruft\footcite[vgl.][102ff]{Widmer2003a}.
+
+\subsection{Open Source: Definitionen und Geschichte}
+
+\subsubsection{History}
+
+Für Widmer beginnt die Geschichte des
+\glqq{}Open\grqq{}\footcite[vgl.][8]{Widmer2003a} aus dem Begriff 'Open Source'
+mit dem \glqq{}Unbundling\grqq{} von Hardware und Software, wie es ab 1969 von
+IBM eingeführt worden sei. Erst dies habe den Softwaremarkt entstehen
+lassen\footcite[vgl.][9]{Widmer2003a}. Dem zur Seite gestanden habe die
+Unix-Entwicklung ab 1969 durch AT\&T, die als Firma - ihrer markt-beherrschenden
+Stellung wegen - allerdings schon ab 1956 nur innerhalb des Telefonsektors tätig
+sein durfte. Nicht verboten gewesen sei ihr aber die Verteilung dieser Software
+in den Universitäten, und zwar als freie Software ohne Support. Mit dieser
+Konstellation sei dann die freie Selbsthilfe innerhalb der Universitäten
+entstanden\footcite[vgl.][10f jener Arbeitsstil, wie von außen zu ergänzen wäre
+- in den Stallmann hineingekommen und den er so konstitutiv zu schätzen gelernt
+hatte.]{Widmer2003a}
+
+Die nächste Stufe der Entwicklung war die Proprietarisierung von Unix, die
+dadurch entstanden sei, dass ab \glqq{} 1982 [\ldots] verschiedene
+Hersteller darunter IBM, HP und DEC für ihre eigenen Hardwareplattformen
+angepasste Varianten des Betriebssystems UNIX proprietär zu
+verbreiten\grqq{}\footcite[vgl.][12 original zitiert nach Müller:
+Die Wurzeln freier Software]{Widmer2003a}. Diese Bewegung sei durch die
+Aufhebung der kartellrechtlichen Einschränkung für AT\&T verschärft worden, die
+nun die nächste Version des Unix nicht mehr frei im Sourcecode vertreiben
+mussten\footcite[vgl.][12]{Widmer2003a}
+
+In diese Zeit der Code-Unerreichbarkeit falle dann Richard Stallmanns
+Gegenmaßnahme, das GNU-Projekt: Initial auf das Problem von  Programmen ohne
+Codezugriff über einen nicht funktionierenden Drucker
+aufmerksamgeworden\footcite[vgl.][13]{Widmer2003a}, habe er dann den Schritt in
+das proprietäre Unix derselben Nachteile wegen gerade nicht getan, sondern sich
+die Entwicklung eines 'eigenen' freien Unix zum Ziel
+gemacht\footcite[vgl.][13]{Widmer2003a} : \glqq{}Die Nähe zu Unix, aber auch die
+klare Trennung von der neuen propritären Art und Weise der Verbreitung von
+[Seitenwechsel] Unix wird im Namen des neuen Systems ersiichtlich: Das rekursive
+Akronym 'GNU' steht nälich für GNU's not
+UNIX\grqq{}\footcite[][13f]{Widmer2003a}
+
+Der nächste Schritt der Generalisierung ist die Definition der Free Software im
+Sinne von Stallmann, derzufolge Frei Software dann vorliege, wenn man die
+Freiheit habe, das Programm (a) \glqq{}[\ldots] für jeglichen Zweck zu
+benutzen\grqq{}, es (b) frei \glqq{}[\ldots] zu studieren und seine
+Bedürfnissen anzupassen\grqq{}, es (c) in Kopien uneingeschränkt
+\glqq{}weiterzuverteiben\grqq{} [Seitenwechsel] und es (d) \glqq{}[\ldots] zu
+bessern (modifizieren) und diese Verbesserungen (Modifikationen) zu
+veröffentlichen [\ldots]\grqq{}\footcite[vgl.][14f]{Widmer2003a}. Diese
+Freiheiten \glqq{}[\ldots] (setzen) die Verfügbarkeit des Quellcodes
+voraus\grqq{} und der Begriff 'freie Software' lasse sich \glqq{}[\ldots]
+als Summe einzelner Freiheiten verstehen, welche die an einem
+Computerprogramm bestehenden Nutzungsrechte
+charakterisieren\grqq{}\footcite[vgl.][15 Widmer selbst sagt, dass
+nur die ersten drei Freiheiten den Quellcode voraussetzen. Ich
+meine, dass das insbesondere auch für die Modifikation gilt: nur
+der Code macht praktisch die Verbesserung möglich]{Widmer2003a}
+
+Das Problem der \glqq{}Free Software Definition\grqq{} ist, dass sie selbst
+\glqq{}[\ldots] nicht darüber (aussagt), wie die von ihre erwähnten Freiheiten
+mit dem Computerprogramm verbunden sind bzw. ob diese auch Dritten gewährt
+werden [\ldots]\grqq{}\footcite[vgl.][15]{Widmer2003a}. Dieses Dilemma werde mit
+die Erfindung des \glqq{}Copylefts\grqq{} aufgelöst, bei dem mit den Mitteln des
+Urheberrechts Nutzungs-, Modifikations- und Vertriebsrechte an Dritte übertragen
+werden\footcite[vgl.][16 Referiert Stallmann, what is copyleft
+http://www.fsf.org/licenses/licenses.html\#WhatIsCopyleft]{Widmer2003a}
+
+Nach Erfindung des Coyplefts und der GPL stand mit zunehmender Verbreitung die
+Gründung der FSF auf dem Plan\footcite[vgl.][16f]{Widmer2003a}.
+
+Diese Phase der Geschichte 'gipfelt' dann in \glqq{}GNU/Linux\grqq{}, also mit
+der 'Inauguration' eines neuen Unix-Kernels von und durch Linus Thorvald am
+17.09.1991\footcite[vgl.][17]{Widmer2003a}, wobei \glqq{}die ransante
+Entwicklung von GNU/Linux\grqq{} eben nicht nur dem Arbeitseifer von Linus
+geschuldet sei, sondern insbesondere \glqq{}[\ldots] auch dem Umstand zu
+verdanken (sei), das Torvalds beinahe sämtliche für ein Betriebssystem
+benötigten Programme in freier Form zur Verfügung standen\grqq{}, sodass es
+durch aus gerechtfertigt sei, wenn \glqq{}[\ldots] Stallmann Wert darauf lege,
+dass das gesamte Betriebssystem als 'GNU/Linux' ud nicht bloss als 'Linux'
+bezeichnet wird\grqq{}\footcite[vgl.][18]{Widmer2003a}
+
+Der Schritt 'weg' vom Begriff 'Free Software' hin zum Begriff 'Open Source'
+beginnt dann 1997 mit dem Artikel 'The Cathedral and the Bazaar' von Eric S.
+Raymond, aufgrund dessen großer Beachtung in Wirtschaftskreisen es galt,
+\glqq{}[\ldots] einen weniger belasteten Begriff zu wählen\grqq{}, wenn das
+\glqq{}enorme Potential für die weitere Verbreitung des Grundgedankens freier
+Software\glqq{} erfolgreich gehoben werden
+sollte\footcite[vgl.][19]{Widmer2003a}.
+
+Ausgangspunkt für die Open Source Definition seien sodann die
+\glqq{}Debian Free Software Guidelines\grqq{} geworden, aus denen durch
+Generalisierung die OSD entstanden sei\footcite[vgl.][20]{Widmer2003a}
+
+Nun folgt ein kommentiertes Referat der 10 OSD Kriterien.
+
+Schließlich vergleicht Widmer die Bedeutung der Open Source Definition und der
+Free Software Definition\footcite[vgl.][28 - Zur Erinnerung: beiden gemeinsam
+ist, dass sie notwendige Kriterien von Lizenzmodellen spezifzieren, sie selbst
+geben keine Handlungsanleitungen zur Umsetzung. Das tun die Lizenzen. Deshalb
+können auch nur aus den Lizenzen selbst jeweils abgeleitet werden, was konkret
+zu deren Erfüllung zu tun ist.]{Widmer2003a}. Insgesamt sei - analog zur
+MITRE-Studie - festzustellen, \glqq{}[\ldots] dass die beiden Definitionen
+grundsätzlich identisch (seien)\grqq{}\footcite[vgl.][28]{Widmer2003a}: So werde
+beispielsweise von Perens die OSD als Ableitung der FSD gesehen und Raymond sehe
+den Unterschied in der Kommunikationsstrategie und dem Marketing. Nur Stallmann
+betone den 'fundamentalen' Unterschied\footcite[vgl.][29]{Widmer2003a}
+ 
+ Geschichtlich ging es dann 1998 mit der Gründung der Open Source Initiative
+ weiter\footcite[vgl.][29]{Widmer2003a}, gefolgt von einer Konferenzfestlegung,
+ derzufolge \glqq{} [\ldots] der Begriff 'Open Source' zukünftig auch in
+ Entwicklerkreisen verwendet werden solle\footcite[vgl.][30
+ originalquelle http://press.oreilly.com/pub/pr/796]{Widmer2003a} Einen
+ besonderen Schub erhielt die Bewegung dann noch durch die Halloween Dokumente
+ (http://www.opemsource.org/halloween/halloween1.php), in denen - gross Feind,
+ gross Ehr - MS die Gefahr von Open Source beschrieb und als Mittel zur
+ Bekämpfung die ms-isierung von eigentlich öffentlichen Schnittstellen empfohlen
+ worden sein\footcite[vgl.][30]{Widmer2003a}
+ 
+ \subsubsection{Open Source Lizenzen Typologie}
+ 
+ Widmer unterscheidet auf Open Source Seite nur zwischen Non Copyleft Lizenzen
+ und Copyleft Lizenzen: 
+ 
+ Erstere \glqq{}[\ldots] erlauben [\ldots] die Verwendung des Quellcodes auch in
+ proprietären Produkten\grqq{}\footcite[vgl.][37]{Widmer2003a} - wobei
+ vorausgreifend hinzuzufügen ist, dass Widmann 'proprietäre Lizenzen' resp.
+ Software ex negativo definiert: sie liegt dann vor, wenn die Nutzung von der
+ Lizenz her eingeschänkt oder der Quellcode nicht offengelegt
+ ist\footcite[vgl.][39]{Widmer2003a}. Als Prototyp gilt die
+ BSD-Lizenz\footnote{Widmer unterstreicht, dass die ältere Version der BSD
+ Lizenz eine Marketing Klausel enthielt, derzufolge in jeder Werbeaktion und
+ -form daraufhingewiesen werden musste, dass darin ein produkt der Universität
+ Berkeley verwendet worden ist\cite[vgl.][37]{Widmer2003a} Diese Klausel sei
+ nun nicht mehr enthalten. Und meines Wissens bezieht sich die Unvereinbarkeit
+ von GPL und BSD - frühform auf eben diese Klausel.}, weitere Lizenzen seien die
+ Artistic License 2.0, die MIT-License oder die Apache
+ License\footcite[vgl.][38]{Widmer2003a}
+ 
+ Letztere wollen die Reproprietarisierung über ein \glqq{}koordiniertes
+ Zusammenspiel des Urheberechts und spezieller Lizenzbestimmungen\grqq{}
+ verhindern. Beispiel dafür seien die GPL. die Open Software License und die
+ Affero General Public License\footcite[vgl.][38]{Widmer2003a}
+ 
+ [Kommentar: Interessanterweise wird nicht zwischen ausgreifenden Lizenezn
+ GPL/AGPL und nicht ausgreifenden Lizenezn LGPL unterschieden. Könnte es sein,
+ dass die European Public License ebefalls nicht ausgreifend, aber Copy Left
+ ist?]
+ 
+ Zuletzt bietet Widmer einige andere Begriffsdefinitionen an:
+ \begin{description}
+  \item[``Proprietäre Software''] seien solche \glqq{}Computerprogramme\grqq{},
+  die \glqq{}[\ldots] durch restriktive Lizenzbedingugen keine umfassende
+  Nutzung der Software erlauben und bei welchen der Quellcode nicht frei
+  verfügbar ist\grqq{}\footcite[vgl.][39]{Widmer2003a} - eine ex negativo
+  Definition, derzufolge man berechtigt dann auch von \glqq{}Closed
+  Source Software\grqq{} sprechen dürfe\footcite[vgl.][39]{Widmer2003a}
+  \item[``Kommerzielle Software'']  könne inhaltlich nicht recht abgegrenzt
+  werden, denn es könne aus diesem Begriff nicht abgeleitet werden,
+  \glqq{}[\ldots] welche Nutzungsrechte dem Anwender (zustünden) [\ldots]
+  und ob der Quellcode frei verfügbar
+  (sei)\grqq{}\footcite[vgl.][40]{Widmer2003a}
+  \item[``Freeware''] meine Programme, die man \glqq{}[\ldots]
+  kostenlose gebrauchen, vervielfältigen und verbreiten (dürfe)\grqq{}, die aber
+  keinen Zugriff auf den Quellcode erlauben
+  würden\footcite[vgl.][40]{Widmer2003a}. Diese Art der Software gäbe es zudem
+  in verschiedenen \glqq{}Untergruppen\grqq{}, wie etwa
+  \glqq{}Postcardware, Donationsware, Ideaware oder
+  Mailware\grqq{}\footcite[vgl.][41]{Widmer2003a}
+  \item[``Shareware''] \glqq{}[\ldots] unterscheide sich von anderer
+  [propritetärer; KR.] Software nur durch das Vertriebs- und
+  Marketingkonzept\grqq{}: das freie Ausprobieren soll Kunden anlocken, nach der
+  Entscheidung für die Software sind normalerweise Lizenzgebühren etc.
+  fällig\footcite[vgl.][42]{Widmer2003a}
+  \item[``Public Domain''] zeichne sich dadurch aus, dass \glqq{}[\ldots]
+  der Hersteller auf jegliche ihm zustehden Urheberrechte (verzichte) und
+  so die uneingeschränkte Nutzung (ermögliche)
+  [\ldots]\grqq{}\footcite[vgl.][44]{Widmer2003a}. Wenn zudem \glqq{}[\ldots]
+  (die Verfügbarkeit des Quellcodes) gegeben (sei), (handele) es sich um
+  Open Source Software\grqq{}\footcite[vgl.][44. Dies ist ein
+  gefährliches Fazit insofern, als Widmer selbst die Public Domain
+  Software soäter als unzureichend zur Erfüllung des Open Source
+  Gedankesn klassifizieren wird]{Widmer2003a}
+  \item[``Shared Source''] sei die Form (vom Microsoft), bei der der Quellcode
+  ohne Rechte offengelegt werde\footcite[vgl.][4ff]{Widmer2003a}
+\end{description}
+
+\subsection{Open Source Software und Urheberrecht}
+
+Bzgl. der Verbindung von Open Source Software und (schweizer) Urheberrecht
+konstatiert Widmer folgendes:
+\begin{itemize}
+  \item Ob ein Streitfall vor Schweizer Gerichten verhandelt werden müsse, könne
+  nur im Einzelfall entschiedenen werden, es gäbe zu viele einzelne
+  \glqq{}Konstellationen\grqq{}, die einer Generalisierung
+  entgegenstünden\footcite[vgl.][53]{Widmer2003a}
+  \item Insofern \glqq{}Open Source Software\grqq{} auch \glqq{}Open
+  Source Computerprogramme\grqq{} seien, handele es sich dabei auch um
+  \glqq{}Computerprogramme im urheberrechtlichen Sinne\grqq{}, sobald damit
+  \glqq{}eine geistige Schöpfung mit individuellem Charakter\grqq{}
+  einhergehe\footcite[vgl.][70]{Widmer2003a} - womit dann der Bogen zu der
+  Festlegung geschlagen wäre, derzufolge \glqq{}[\ldots]
+  Computerprogramme in der Schweiz (seit 1993) als Werke im Sinne des
+  Uurheberrechtsgesetzes gelten\grqq{}\footcite[vgl.][2]{Widmer2003a}.
+  \item Die Frage der Urheberschaft konkret zu beantworten, sei bei Open Source
+  Software \glqq{}[\ldots] meist äusserst schwierig\grqq{}: Grund dafür sei der
+  konstitutive Gedanke einer Kollaboration von \glqq{}sehr vielen
+  Personen\grqq{}, die da \glqq{}[\ldots] an der Entwicklung beteiligt
+  (seien)\grqq{}, was auch dazuführe, dass \glqq{}[\ldots] sich die
+  verschiedenen Formen kollektiven Werkschaffens regelmässig und in
+  beliebiger Reihenfolge durchmischen\grqq{}\footcite[vgl.][86]{Widmer2003a}
+  \item Der reine Akt der Veröffentlichung von Open Source Software reiche nicht
+  aus, die intendierten Ziele der Veröffentlichung zu gewährleisten. Die
+  \glqq{}kör\-per\-liche Verbreitung von Open Source Software\grqq{} dagegen,
+  erreicht schon mehr: insofern sie als \glqq{}Veräusserung\grqq{} gelte, dürfe
+  das veräußerte Gut auch \glqq{}[\ldots] gebraucht, weiterveräussert und
+  [\ldots] geändert werden\grqq{}. Was dabei jedoch noch fehle, sei die
+  \glqq{}umfassende Befugnis zur Vervielfältigung\grqq{}. Also müsse der
+  \glqq{}Rechteinhaber\grqq{} zur Erreichung der Open Source Ziele
+  \glqq{}[\ldots] neben der Verbreitung seiner Open Source Software auch
+  entsprechende Urheberrechte übertragen oder daran Nutzungsrechte
+  einräumen\grqq{}\footcite[vgl.][98]{Widmer2003a}.
+  \item Und zuletzt zeigt Widmer, dass nur die \glqq{}explizite
+  Einräumung von Nutzungsrechten\grqq{}\footcite[vgl.][100]{Widmer2003a} als
+  adäquates Mittel angesehen werden kann:
+  \begin{itemize}
+    \item So ermögliche der\glqq{}Verzicht von Urheberrechten\grqq{} zwar
+    \glqq{}die Entwicklung von Open Source Software\grqq{}, gleichwohl stelle
+    diese Methode der Veröffentlichung als \glqq{}gemeinfreie Software
+    \grqq{}eben nicht sicher, \glqq{}[\ldots] dass jedermann in der
+    Verbreitungskette die gleichen Freiheiten
+    hat\grqq{}\footcite[vgl.][98]{Widmer2003a}: 
+    \begin{quote} \glqq{}Der
+    Verzicht von Urheberrechten, wie immer dieser auch begründet werden man, ist
+    somit kein probates Mittel zur Entwicklung von Open Source
+    Software\grqq{}\footnote{\cite[][98f]{Widmer2003a} So sympathisch dieses
+    Fazit auch sein mag, so wenig genug differenziert es: die BSD/MIT Lizenzen
+    schließen es eben explizit nicht aus, dass die gewährten Freiheiten im
+    Rahmen einer proprietären Weiterverbreitung wieder entzogen werden.}
+    \end{quote}
+    \item Auch das \glqq{}Übertragen von Urheberrechten als Ganzes oder
+    Teilen\grqq{} führe nicht weiter: einerseits könne das in praxi dieselben
+    Konsequenzen haben, andererseits sei eine fortlaufende sukzessive Übetragung
+    an mehrere Personen eben des vorgehenden Übertrags gerade nicht mehr
+    möglich\footcite[vgl.][99]{Widmer2003a}
+    \item Erst die \glqq{}Einräumung von Nutzungsrechten\grqq{} bringt ein
+    Lösung: Hier \glqq{}(bleibt) der Lizenzgeber weiterhin Inhaber des
+    zur Nutzung eingeräumten Urheberteilrechts [\ldots]\grqq{} und kann folglich
+    \glqq{}[\ldots] weitere Lizenzen
+    vergeben\grqq{}\footcite[vgl.][99f]{Widmer2003a}. Wirklich sichergestellt
+    werde die Idee von Open Source Software allerdings nicht schon bei der
+    \glqq{}konkludenten Einräumung von Nutzungsrechten\grqq{}, sondern erst bei
+    der \glqq{}expliziten\grqq{}\footcite[vgl.][100]{Widmer2003a}
+\end{itemize}
+   
+Man darf grosso modi also konstatieren, dass Widmer die Notwendigkeit einer
+Urheberrechts basierten Liznezierung, wie sie mindestens der Schöpfer der GPL
+gesehen hat, nachträglich rechtfertig: Anders gesagt: Ohne  Lizenz geht es nicht.
+\end{itemize}
+
+\subsection{GPL und Urheberrecht}
+
+\subsubsection{Copyright Vermerk}
+Widmer unterstreicht, dass es - trotz Aufhebung ehemals geltender Bedingungen
+(in den USA) - immer noch sinnvoll ist, den Copyright-Vermerk in jeder Datei
+anzubringen, es erleichtert die Klärung von
+Streitigkeiten\footcite[vgl.][107]{Widmer2003a}
+
+\subsubsection{Derivative work}
+
+Widmer klärt sodann, dass sich die GPL auch auf andere Arten von Werken
+beziehen kann, also nicht nur auf \glqq{}Computerprogramme\grqq{}, sondern etwa
+auch auf \glqq{}Anwenderdokumentationen, XML oder
+HTML-Dateien\grqq{}\footcite[vgl.][114]{Widmer2003a}.  Dabei stelle sich dann
+neu und anders die Frage nach dem 'auf dem Programm basierenden Werke'. Und zu
+eben deren Klärung verweist Widmer auf §101 USC, demzufolge \glqq{}A
+'derivative work' is a work based upon one or more preexisting works,
+such as a translation, musical arrangement, dramatization [\ldots es
+folgen eine Menge an Beispielen] or any other form in which a work may be
+recast, transformed, or adapted\grqq{}\footcite[vgl.][114 Anm.
+540]{Widmer2003a}. Zugleich ergänzt er, dass solche abgeleiteten Werke damit
+unter den Begriff des \glqq{}Werkes zweiter Hand\grqq{} im Urheberrecht
+fielen\footcite[vgl.][114f]{Widmer2003a}
+
+Dazu gehört dann auch die Spezifikation, dass \glqq{}unter 'modification'
+[\ldots] alle Aktivitäten zu verstehen (seien), mit welchen (ein)
+Computerprogramm in irgendeiner Art und Weise verändert
+(werden)\grqq{}\footcite[vgl.][123]{Widmer2003a}. Dabei spiele der Umfang der
+Änderung gerade keine Rolle, sodass dieser Aspekt nicht nur unter das
+\glqq{}Bearbeitungsrecht\grqq{}, sondern auch das \glqq{}Änderungsrecht\grqq{}
+falle\footcite[vgl.][124]{Widmer2003a}
+
+Ein besonderes urheberrechtliches Problem bei der Modifikation sei zudem, dass
+der Urheber ein Anrecht habe, \glqq{}Entstellungen\grqq{} seines Werkes
+entgegentreten zu könnnen, \glqq{}[\ldots] welche die Ehre oder das
+berufliche Ansehen des Entwicklers zu beinträchtigen
+(vermöge)\grqq{}\footcite[vgl.][135]{Widmer2003a}. Die von der GPL gefordert
+\glqq{}datierten deutlichen Änderungsvermerke\grqq{} seien jedoch geeignet,
+solche Befürchtungen zu entkräften\footcite[vgl.][136]{Widmer2003a}
+
+Kern der Distribution modifizierten GPL-Codes ist sodann die Idee des Coyplefts:
+\glqq{}Der einmal freie Quellcode soll und wird durch diese Bestimmung,
+welche eine Art 'Weitervererbung' der Lizenz verschreibt, immer frei
+bleiben\grqq{}\footcite[][137f]{Widmer2003a}. Und was warum als Modifikation
+zu betrachten ist, wird sodann näher diskutiert:
+\begin{itemize}
+  \item Zum ersten gäbe es den Fall der modifizierten
+  \glqq{}GPL-Quellcodedatei\grqq{}. Das Ergebnis - das neue \glqq{}Werk\grqq{} -
+  \glqq{}[\ldots] (enthalte dann) klarerweise Codebestandteile eines
+  vorbestehenden GPL-Programs und (falle) somit unter diese Bestimmung\grqq{}
+  der Redistribution unter GPL\footcite[][138]{Widmer2003a}
+  \item Der zweit Fall betrifft die \glqq{}Übernahme von Codefragmenten
+  in den eigenen Quellcode\grqq{}: auch dieser Fall werden eindeutig von der
+  Redistributionsregel subsumiert\footcite[][138]{Widmer2003a}.
+  \item Der dritte Fall betrifft den Geltungsbereich für Module. In Anlehnung an
+  die FSF (http://www.fsf.org/licenses/gpl-faq.html\#MereAggregation)
+  konstatiert Widmer die technischen Kriterien der Kommuniationsart und der Informationsart.
+  Danach gilt das Linken von Modulen und das \glqq{}Ablaufen im gleichen
+  Adressraum\grqq{} [richtiger: im selben; KR.] als Kriterien, die das
+  Abgeleitetsein bekräftigen, die Kommunikation über Pipes, Sockets oder
+  Kommandozeilenarguemten verwiesen dagegen auf autonome
+  Programme\footcite[][139f]{Widmer2003a}
+  \item Der vierte Fall betrifft die \glqq{}Softwarebibliotheken\grqq{}: sie
+  können dynamisch und statisch gelinkt sein\footcite[][141]{Widmer2003a}. Für
+  beide habe die Free Software Foundation jedoch bereits festgelegt, dass
+  \glqq{}[\ldots] sowohl das statischen wie auch das dynamische Verbinden
+  ein einheitliches Werk betrachtet (werde)\grqq{}\footcite[][142
+  Belegt wird das durch den Rückgriff auf die LGPL-Lizenz, die
+  genau dieses in Abs. 10 der Präambel so festlege]{Widmer2003a}. Allerdings
+  gäbe es dazu (2003) \glqq{}noch keine gefestigte rechtliche
+  Meinung\grqq{}\footcite[][142]{Widmer2003a}. Deshalb habe Linus Torvalds
+  zumindest für den Kernel festgelegt, \glqq{}[\ldots] dass
+  Benutzerprogramme, welche auf üblichem Wege die Kerneldienste
+  verwenden, nicht der GPL unterstellt werden
+  (müssten)\grqq{}\footcite[][142 Original unter DiBona Torvalds
+  Kernelmodule.]{Widmer2003a}. Allerdings gelte diese Freistellung - so
+  erneut Torvald - wiederum nicht für Kernelmodule\footcite[][142
+  Original
+  http://www.uwsg.iu.edu/hypermail/linux/kernel/2010.2/0603.html]{Widmer2003a}
+\end{itemize}
+
+Interessant in diesem Zusammenhang ist insbesondere der Hinweis von Widmer auf
+Rosen, demzufolge es erst zuletzt un in den wenigsten Fälle auf technische
+Kriterien ankomme. Vielmehr gelte es, die Intentionen des ursprünglichen
+Entwicklers, des Urhebers in Rechnung zu stellen (Details siehe Kap. 2.4.2
+'Kriterien fürs Abgeleitet sein')
+
+\subsubsection{Fazit}
+
+Insgesamt konstatiert Widmer, dass sich die \glqq{}[\ldots] (Bestimmungen der
+GNU Public License) ohne grössere Schwierigkeiten ins schweizerische
+Urheberrecht einbetten (ließen)\grqq{}, und das obwohl sie \glqq{}[\ldots]
+insgesamt ziemlich stark von den bisher beaknnten Regelungen proprietärer
+Softwarelizenzen abweichen (würden)\grqq{}\footcite[vgl.][182]{Widmer2003a}: Die
+GPL stelle \glqq{}[\ldots] eine auflösend bedingte, einfache Gratis- bzw.
+Freilizenz dar, welche umfassende Nutzungsrechte an jedermann (einräume)\grqq{},
+und sie \glqq{}[\ldots] charakterisiere sich insbesondere durch die
+uneingeschränkte Einräumung von Nutzungsrechten, das Copyleft und das
+Lizenzgebührenverbot\grqq{}\footcite[vgl.][182]{Widmer2003a}.
+
+\subsubsection{Copyleft Lücke}
+Interessanterweise findet Widmer eine \glqq{}Lücke im Regelungsobjekt\grqq{}:
+Der Gedankengang geht in etwa so: Es gibt Patch-Verfahren, die \glqq{}[\ldots]
+keinen Quellcode der ursprünglichen Datei enthalten [\ldots]\grqq{}. Sie können
+somit auch nicht als \glqq{}abgeleitetes Werk im Sinne der GPL\grqq{} gelten.
+Mithin wäre es möglich, aus einem GPL lizeniert Programm etwas Neues zu
+entwickeln, dass zwar faktisch via Pathdateien und davon unabhängigem
+Patchprogrann jeweils immer neu aus dem ursprünglichen GPL-Code 'abgeleitet
+wird, aber diese Patchdateien können ohne unter die GPL-Pflichten zu fallen,
+weitergegeb / weiterverkauft / spezial lizenziert
+werden.\footcite[vgl.][144f]{Widmer2003a}
+
+[Hint: Ich frage mich, ob das richtige ist. M.W. erscheinen zumindest im patch
+Programm selbst doch die zu ersetzenden Zeilen.]
+
+
+\subsubsection{Redistribution und Distribution}
+
+Widmer konstatiert, dass die GPL in sich unheitlich mal von 'Distribution' und
+mal von 'Redistribution' spreche, während andere Lizenzen einheitlich nur von
+Distribution oder nur von Redistribution sprechen
+würden\footcite[vgl.][117 Anm 552]{Widmer2003a}
+
+
+\subsubsection{Pflichten der unveränderten Weitergabe}
+
+Widmer konstatiert für winw GPL adäquate \glqq{}Verbreitung\grqq{} folgende
+\glqq{}drei kumulativ zu erfüllende Bedingungen\grqq{}: es müsse (a)
+\glqq{}mit jeder Kopie [\ldots] ein deutlich sichtbarer Copyrightvermerk
+und eine Enthaftungserklärung veröffentlicht werden\grqq{}, es dürften aber (b)
+\glqq{}[\ldots] bereits bestehende Verweise auf dei GPL und das Fehlen
+einer Garantie [\ldots] nicht verändert werden\grqq{} und es müsse (c)
+\glqq{}den Empfängern der Kopie [\ldots] zusammen mit dem
+Computerprogramm eine Kopie der GPL übergeben
+werden\grqq{}\footcite[vgl.][127f]{Widmer2003a}
+
+\subsubsection{Fragen der Bezahlung}
+Widmer unterstreicht, das der \glqq{}Grundgedanke freier Software\grqq{} nicht
+auf \glqq{}Kostenlosigkeit\grqq{} ziele, \glqq{}[\ldots] sondern Freiheit
+kommunizieren solle\grqq{}\footcite[vgl.][131]{Widmer2003a}: Konsequenterweise
+sei es sehr wohl erlaubt, sich die \glqq{}Verbreitung freier Software\grqq{}
+oder die \glqq{}Einräumung einer Garantie\grqq{} geldlich vergüten zu
+lassen\footcite[vgl.][131]{Widmer2003a}. Was dagegen kostenlos ist und
+automatisch geschieht, ist das \glqq{}Einräumen der Nutzungsrecht\grqq{}, die
+der Urheber - sozusagen über den Kopf des \glqq{}Ersterwerbers\grqq{} hinweg -
+dem \glqq{}Zweiterwerber\grqq{} immer
+einräumt\footcite[vgl.][131f]{Widmer2003a}.
+
+Dass freie Software im Übrigen zumeist günstiger ist, als proprietäre Software,
+sei - so Widmer - \glqq{}[\ldots] aber nicht aufgrund einer angeblich
+statuioierten Preisbeschränkung der Fall, sondern dem
+Lizenzgebührenverbot zuzuschreiben\grqq{}\footcite[vgl.][132]{Widmer2003a}
+
+\begin{quote} \glqq{}Dies [das Lizenzgebührenverbot; KR.] erlaubt es
+jedem Empfänger, kostenlos selber Werkexemplare herzustellen und danach
+in beliebiger Stückzahl zu einem beliebigen Preis zu verbreiten. Das
+ökonomische Prinzip von Angebot und Nachfrage lässt die Preise dann in
+kürzester Zeit auf ein dem Marktwert entsprechendes Niveau
+fallen.\grqq{}\footcite[][132]{Widmer2003a}
+\end{quote}
+
+\section{Specific Aspects}
+
+\subsection{Autokauf versus Softwarekauf: ein bildlicher Vergleich}
+
+Widmer stellt in einem charmanten Vergleich den Kauf eines Autos dem eines
+Softwareprogramms gegenüber. Auffällig sei es demnach, dass wir Käufer
+selbstverständlich davon ausgingen, unsere Autos in einer beliebigen Werkstatt
+unserer Wahl pfegen, reparieren und tunen lassen zu können und zu dürfen. Ganz
+anders sei das bei proprietärer Software: \glqq{}solche Softwareprodukte
+ähneln vielmehr Autos, bei welchen die Kühlerhaube zugeschweisst ist und
+nur der Hersteller Wartungsarbeiten durchführen kann und
+darf\grqq{}\footcite[vgl.][1]{Widmer2003a}.
+
+\subsection{Relevanz der GPL}
+Auch Widmer folgt der Argumentation, dass die GPL die wichtigste Open Source
+Lizenz sei, weil man etwa anhand von Sourceforg.net ablesen könne, wie
+herausragend oft die GPL verwendet werde\footcite[vgl.][102]{Widmer2003a}
+
+\subsection{Problem der Zwischenspeicherung}
+Im Rahmen der Distribution gäbe es, so Widmer, das Problem der
+Zwischenspeicherung \glqq{}lediglich zum Zweck des vorrübergehenden
+Gebrauchs auf einem entfernten Computer\grqq{}.
+Aus Sicht des Urheberrechts \glqq{}[\ldots] nicht mehr von einer
+Verbreitung des Werkexemplars [\ldots] gesprochen werden\grqq{}, aus Sicht der
+GPL könne das aber anders beurteilt werden.\footcite[vgl.][119]{Widmer2003a}.
+Und dann trifft Widmer die wichtige Festlegung:
+\begin{quote} \glqq{} [\ldots] die GPL ist unabhängig vom URG aus sich
+selbst auszulegen.\grqq{}\footcite[][119]{Widmer2003a}
+\end{quote}
+
+\subsection{virale Software}
+
+Widmer erwähnt, dass \glqq{}Copyleft\grqq{} Software - natürlich \glqq{}von
+gegnerischer Seite\grqq{} - \glqq{}[\ldots] in Anlehnung an einen Virus
+als 'viral' bezeichnet (werde)\grqq{}\footcite[][137]{Widmer2003a} und er
+veweist dabei als Urheber auf die Firma Mircosoft, die geschrieben haben soll: 
+
+\begin{quote} \glqq{}These licenses are described as viral because they
+'infect' derivative programs. [\ldots] the GPL [\ldots] is the most
+infectious. It attempts to subject any work that includes GPL licensed
+code to the GPL. Thus, if a government or business uses even a few lines
+of GPL-licensed code in a program, and then redistributes that program to
+others, it would be required to provide the program under the
+GPL\grqq{}\footcite[zit. nach][137. Original unter
+htto://www.microsoft.com/licensing/sharedsource/ssfaq.asp]{Widmer2003a}
+\end{quote}
+
+Insgesamt bleibt dazu aber nur eines zu sagen:
+\begin{quote}
+\glqq{}Die GNU General Public License befällt [\ldots] nicht wie ein
+Virus aus heiterem Himmel fremde Computerprogramme, sondern legt
+lediglich die Spielregeln fest, welche der Urheber selbst der Nutzung
+seiner Software zugrunde gelegt hat\grqq{}\footcite[][183]{Widmer2003a}
+\end{quote}
+
+\subsubsection{Artistic Licence}
+Widmer weist daraufhin, dass zu Zeiten der OSD-Definition vielfach noch auf die
+Artistic Licence rekuriert wurde, die \glqq{}[\ldots] in Art. 5 die
+kommerzielle Verbreitung der Software nur als Bestandteil einer grösseren
+Softwaredistribution, nicht aber losgelöst davon (erlaubte)\grqq{}. Damit
+Programme unter der Artitistic Licence auch als Open Source Software gelten
+können (so z.B. Perl), ist deshalb im Kriterium der 'Free Redistribution' die
+Formulierung aufgenommen worden 'The License shall not restrict any party from
+selling or giving away the software as a componant of an aggregate software
+distribution [\ldots]'\footcite[vgl.][21 insbesonder auch Anm 74]{Widmer2003a}
+
+\subsubsection{Kriterien für das Abgeleitetsein}
+Details sind oben unter Derivation aufgelistet.
+
+Aber hier ein guter anderer Hinweis: 
+\begin{quote} \glqq{}Nach Lawrence Rosen, Rechtsvertreter der Open Source
+Initiative, bedarf es in den wenigsten Fällen der technischen Beurteilung
+der in Frage stehenden Verbindung [von Software]. Vielmehr soll die
+Intention des Entwicklers, welcher das vorgestehende Werk geschaffen hat,
+ausschlaggebend sein. Die Intention lässt sich dabei u.a. aus der Art der
+Verbreitung bzw. Vermarktung feststellen\grqq{}\footcite[vgl.][140]{Widmer2003a}
+\end{quote}
+
+\small
+\bibliography{../bibfiles/oscResourcesDe}
+\end{document}

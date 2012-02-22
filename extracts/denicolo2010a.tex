@@ -1,0 +1,193 @@
+% Telekom osCompendium extract template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
+%
+% select the document class
+% S.26: [ 10pt|11pt|12pt onecolumn|twocolumn oneside|twoside notitlepage|titlepage final|draft
+%         leqno fleqn openbib a4paper|a5paper|b5paper|letterpaper|legalpaper|executivepaper openrigth ]
+% S.25: { article|report|book|letter ... }
+%
+% oder koma-skript S.10 + 16
+\documentclass[DIV=calc,BCOR=5mm,11pt,headings=small,oneside,abstract=true, toc=bib]{scrartcl}
+
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4,ngerman}
+\usepackage[ngerman, english]{babel}
+\selectlanguage{english}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+\input{../btexmat/oscJbibCfgDeInc}
+
+% language specific hyphenation
+\input{../btexmat/oscHyphenationDeInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{headings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+\usepackage[dvips]{epsfig}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+\usepackage[marginal]{footmisc}
+%- end(footnote-configuration)
+
+\begin{document}
+
+%% use all entries of the bliography
+
+%%-- start(titlepage)
+\titlehead{Literaturexzerpt}
+\subject{Autor(en): De Nicolò}
+\title{Titel: Open Source Software - Rechtlich Aspekte \ldots}
+\subtitle{Jahr: 2010 }
+\author{K. Reincke\input{../btexmat/oscLicenseFootnoteInc}}
+
+%\thanks{den Autoren von KOMA-Script und denen von Jurabib}
+\maketitle
+%%-- end(titlepage)
+%\nocite{*}
+
+\begin{abstract}
+\noindent
+Das Werk / The work\footcite[][]{DeNicolo2010a} \\
+\noindent \itshape
+\ldots untersucht, in wie weit Open Source Software - trotz europäischer
+Normierung - im italienischen und deutschen Urheberrecht, Vertragsrecht und
+Haftungsrecht je unterschiedlich behandelt wird. Bzgl. der Urheberrechte bestehe
+ein gleichwertiger Schutz, die 'vertragstypologische Einordnung' stelle dagegen
+eine Herausforderung dar. In Deutschland müsse man bei Copyleft-Lizenzen von
+einem Tauschvertrag ausgehen, für die anderen OS-Lizenzen von einer Schenkung.
+Letzteres sei in Italien aber rechtlich problematisch. In der Haftungsfrage
+herrsche wieder Gleichwertigkeit. \\
+\noindent
+\ldots english summary for the commented bibliography
+\end{abstract}
+\footnotesize
+%\tableofcontents
+\normalsize
+
+\section{Line of Thought}
+Das Buch definiert und beschreibt zu erst Aspekte von Open Source (Lizenzen),
+dann ermittelt es jeweils die Unterschiede zwischen italienischem und deutschem
+Rechtsystem bzgl. des Urheberrechts, des Vertragsrechts und des Haftungsrechts.
+
+(1) Für das Urheberrecht konstiert De Nicolò eine große Ähnlichkeit zwischen
+deutschem und italienischem Verständnis: obwohl man von einem
+\glqq{}wirtschaftlich befremdlichen Open-Source-Modell\grqq{} ausgehen könne,
+\glqq{}[\ldots] (stelle) keine der beiden Rechtsordnungen den urheberechtlichen
+Schutz grundsätzlich in Frage\grqq{}\footcite[vgl.][98]{DeNicolo2010a}.
+
+(2) Für das Vertragsrecht stelle sich die Lage komplizierter dar. De Nicolò
+konstatiert, dass in Deutschland bei echten \glqq{}Copyleft-Lizenzen\grqq{} ein
+\glqq{}Tauschvertrag\grqq{} zustandekomme, bei schwächeren OS-Lizenzen hingegen
+eine \glqq{}Schenkung\grqq{}. Für Italien sei die Schenkung jedoch
+problematisch\footcite[vgl.][144]{DeNicolo2010a}
+
+(3) Beim Haftungsrecht \glqq{}(seien) die Unterschiede \ldots in beiden
+Rechtsordnungen gering\grqq{}. Hier wie das gehe es um \glqq{}die Begrenzung der
+Haftung und Gewährleistung\grqq{}\footcite[vgl.][160]{DeNicolo2010a}
+ 
+\section{Specific Aspects}
+
+\subsection{Definition proprietäre Software}
+Nach Auflistung der üblichen Begriffsbestimmungen bzgl Open-Source-Software und
+Freier Software\footcite[vgl.][11]{DeNicolo2010a}, dem \glqq{}Freiheitsbegriff
+der FSF\grqq{}\footcite[vgl.][11f]{DeNicolo2010a}, den
+Debian-Richtlinien\footcite[vgl.][12]{DeNicolo2010a} und der Definition, wie sie
+von der Open Source Initiative vorgelegt
+wird\footcite[vgl.][13f]{DeNicolo2010a}, liefert De Nicolò den interessanten
+Versuch \glqq{}proprietäre Software\grqq{} dagegen abzugrenzen. In der Tat sei
+das nur ex negativo möglich: \glqq{}\ldots unter proprietäerer Software (werde)
+jede Art von Software verstanden, die nicht vollumfänglich die Kriterien der
+'Open Source Definition' erfüllt. Der Begriff \glqq{}proprietär\grqq{} sei eine
+\glqq{}Neuschöpfung\grqq{}: \glqq{}Im wörtlichen Sinne\grqq{} meiner er die
+Software, \glqq{}[\ldots] die noch durch ein (Eigentums)Recht geschützt
+ist und bei der (noch) nicht auf ein Urheberrecht verzichtet worden
+ist\grqq{}\footcite[vgl.][14f]{DeNicolo2010a}.
+
+\subsection{Open Source Software versus Free Software}
+
+Anders als OS Community erklärt De Nicolò in Anlehnung an Metzger/Jaeger,
+\glqq{}ein wesentlicher Bedeutungsunterschied (sei) nicht
+erkennbar\grqq{}\footcite[vgl.][11]{DeNicolo2010a}. Allerdings bleibt seine
+Spezifikation insgesamt sehr an der Oberfläche.
+
+\subsection{Lizenzklassifikation}
+
+Bei des \glqq{}OSS-Lizenzarten\grqq{} unterscheidet De Nicolò nur zwischen den
+\glqq{}Copyleft-Lizenzen\grqq{} und den \glqq{}Non-Copyleft-Lizenzen\grqq{}: 
+
+Mit den \glqq{}Copyleft-Lizenzen\grqq{} würden zwar \glqq{}[\ldots] im weiten
+Umfang Nutzungsrechte eingeräumt [\ldots]\grqq{}, aber zugleich würden dem
+\glqq{}Lizenznehmer\grqq{} die \glqq{}Verpflichtung\grqq{} auferlegt,
+\glqq{}[\ldots] Änderungen und Erweiterungen des Programms unter den gleichen
+Lizenzbedingungen zu veröffentlichen\grqq{}. Dieses sei eine Klausel, die
+\glqq{}[\ldots] oft (auch im negativen Sinn) als viral berzeichnet
+(werde)\grqq{}\footcite[vgl.][19f]{DeNicolo2010a}.
+
+Den \glqq{}Copyleft-Lizenzen\grqq{} stünden dann die
+\glqq{}Non-Copyleft-Lizenzen\grqq{} gegenüber, die zwar die gleichen
+Nutzungsrechte einräumen, denen andererseits jedoch \glqq{}[\ldots] die
+Verpflichtung (fehle), den Pprogrammcode unter den gleichen Lizenzbedingungen zu
+lizenzieren\grqq{}\footcite[vgl.][20]{DeNicolo2010a}.
+
+Diese Systematik vereinfacht die Dinge zu sehr. Als viral werden gemeinhin
+die Lizenzen bezeichnet, die, sofern der Code in größere eigene Werke eingebaut
+wird, die Lizenzierung auch des größeren Werkes unter derselben Lizenz erzwingen
+(GPL). Lizenzen, die die Veröffentlichung nur insofern erzwingen, als das
+eingebaute kleine Werk geändert wird, sind gerade nicht viral, sie stecken
+keinen anderen Code an.
+
+\small
+\bibliography{../bibfiles/oscResourcesDe}
+
+\end{document}

@@ -1,0 +1,192 @@
+% Telekom osCompendium extract file
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
+%
+% select the document class
+% S.26: [ 10pt|11pt|12pt onecolumn|twocolumn oneside|twoside notitlepage|titlepage final|draft
+%         leqno fleqn openbib a4paper|a5paper|b5paper|letterpaper|legalpaper|executivepaper openrigth ]
+% S.25: { article|report|book|letter ... }
+%
+% oder koma-skript S.10 + 16
+\documentclass[DIV=calc,BCOR=5mm,11pt,headings=small,oneside,abstract=true, toc=bib]{scrartcl}
+
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4,ngerman}
+\usepackage[english, ngerman]{babel}
+\selectlanguage{ngerman}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+\input{../btexmat/oscJbibCfgDeInc}
+
+% language specific hyphenation
+\input{../btexmat/oscHyphenationDeInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{headings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+\usepackage[dvips]{epsfig}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+\usepackage[marginal]{footmisc}
+%- end(footnote-configuration)
+
+
+\begin{document}
+
+%% use all entries of the bliography
+
+%%-- start(titlepage)
+\titlehead{Literaturexzerpt}
+\subject{Autor(en): Niels C. Taubert}
+\title{Titel: Produktive Anarchie}
+\subtitle{Jahr: 2006 }
+\author{K. Reincke\input{../btexmat/oscLicenseFootnoteInc}}
+%\thanks{den Autoren von KOMA-Script und denen von Jurabib}
+\maketitle
+%%-- end(titlepage)
+%\nocite{*}
+
+\begin{abstract}
+\noindent
+\cite[(ist:)][]{Taubert2006a} \\
+Die Arbeit/The work\footcite[][]{Taubert2006a} \\
+\noindent \itshape
+\ldots geht als soziologisches Werk der Frage nach, in welchem Sinne die Idee
+von 'Open Source' resp. 'Freier Software' auch deren Erarbeitungsstil beeinflusst.
+Grob gesagt muss dann Integration heterogener Aspekte eher über Argumentationen
+und Kompromisse erfolgen, als durch normative Zielvorgaben.
+\\
+\noindent
+\ldots This sociological book analyzes, in which sense the idea of 'Open Source'
+or 'Free Software' determines also the style of a cooperating elaboration.
+Roughly said this kind of collaboration must be characterized by argueing and
+making compromises than being determined my external decisions.
+\end{abstract}
+\footnotesize
+%\tableofcontents
+\normalsize
+
+\section{Allgemeines}
+
+Tauber spricht von der \glqq{}sozialen Konstruktion freier Software\grqq{}, wenn
+er die Frage beantworten will, \glqq{}wie [\ldots] es den Entwicklern von freier
+Software unter den Bedingungen der Abwesenheit von Hierarchie und einer klaren
+Rollenzuordnung, einer Projekt-Mailingliste als Medium der Kommunikation sowie
+einer hohen Fluktuation der Teilnehmerschaft (gelinge), ihr Handeln auf ein
+gemeinsames Entwicklungsziel hin zu
+koordinieren\grqq{}\footcite[cf.][205]{Taubert2006a}. Unter diesen Umständen
+sei für das Gelingen die herrschende \glqq{}prinzipielle
+Begründungspflicht\grqq{} ein eher \glqq{}schwacher Modus\grqq{} der
+Erfolgsabsicherung: endlose Diskussionen und \glqq{}hartnäckigen Dissenz\grqq{}
+seien nicht ausgeschlossen. Zur Abfederung und Integration heterogener Ansätze
+diene deshalb der \glqq{}Einbau von Konfigurationsoptionen\grqq{} und die
+Modularisierung\footcite[cf.][206]{Taubert2006a}:
+
+\begin{quote}
+\glqq{}Die Strukturierung des Programms in Module - als Eigenschaft des
+Artefakts - resultiert im Fall von freier Software nicht nur aus der Komplexität
+der zu lösenden Entwicklungsaufgabe, sondern auch aus den
+Integrationserfordernissen, die sich aufgrund der motivationalen Gründe für eine
+Beteiligung auf Seiten der Entwickler und der organisatorischen
+Rahmenbedingungen im Fall von offenen Programmierprojekten
+stellen.\grqq{}\footcite[][206]{Taubert2006a}
+\end{quote}
+
+\section{Spezifisches}
+\subsection{Zur Definition von 'Open Source Software' und 'Freier Software'}
+Die konzeptuelle Klärung rekuriert hier zunächst auf den Begriff der
+\glqq{}freien Software\grqq{}, durchaus im Sinne des GNU Projektes und seinem
+Schwerpunkt der 'Freiheit'\footcite[cf.][17]{Taubert2006a}.  Dem gegenüber
+gestellt wird der später entstandene Begriff 'Open Source' mit seinem
+Schwerpunkt der \glqq{}Zugänglichkeit des
+Quellcodes\grqq{}\footcite[cf.][18]{Taubert2006a}.
+
+Allerdings, so Taubert, \glqq{}[\ldots] (ließen sich) gegen sämtliche
+Bezeichnungen Ein\-wände vorbringen
+[\ldots]\grqq{}\footcite[cf.][19]{Taubert2006a}: Bei der 'Freien Software'
+unterstütze die vordergründige Assoziation 'kostenlos' die intendierte Bedeutung
+der \glqq{}emanzipatorischen Bewegung\grqq{} nicht, zumal nicht jedes kostenlose
+Programm zugleich auch 'freie Software' sei\footcite[cf.][19]{Taubert2006a}.
+Und umgekehrt sei mittlerweile auch nicht mehr all das, dessen Quellcode
+offengelegt werde, zugleich auch 'Open Source' im Sinne dessen, was die OSI
+definiert habe: so könnte Code offengelegt werden, ohne dass das Recht der
+Modifikation mit dem Recht der Einsicht verbunden werde. Das Wort 'Open Source'
+werde so zum \glqq{}Einfallstor\grqq{} von missbräuchlichen
+\glqq{}Marketing-Initiativen\grqq{}\footcite[cf.][19f]{Taubert2006a}.
+
+\subsection{Zur Klassifikation von 'Software' versus 'Open Source Software'}
+
+Bei der Typisierung von Software entscheidet Taubert formal 5 Formen, die
+\glqq{}proprietäre (zum Normalgebrauch)\grqq{}, die
+\glqq{}proprietäre (Händerlizenz)\grqq{}, \glqq{}Shareware\grqq{}, \glqq{}Public
+Domain\grqq{} und \glqq{}Freie Software\grqq{}. Inhaltlich markiert er diese
+Typen über die Eigenschaften \glqq{}Anwendung\grqq{},
+\glqq{}Vervielfältigung\grqq{}, \glqq{}Verbreitung\grqq{} und
+\glqq{}Modifkation\grqq{}. Überraschenderweise werden bei ihm sodann Public
+Domain Software und Freie Software mit derselben Merkmalkombination spezifziert
+(4 * erlaubt), was ihn zu dem Fazit führt, dass der \glqq{}[\ldots] Typus Public
+Domain-Software eine Unterkategorie von freier Software
+(bilde)\grqq\footcite[cf.][25]{Taubert2006a}.
+
+Bedauerlicherweise erläutert Taubert nicht, wieso Public Domain-Software eine
+Unterkategorie von freier Software sei und nicht umgekehrt. Aus den Kriterien
+ist dies ebenso wenig abzuleiten, wie der Unterschied zwischen den beiden
+Typen ansich. Dies deutet an, dass hier eine klassifikatorische Schwäche
+vorliegt. So wird denn auch üblicherweise Public Domain-Software eher in die
+Nähe von Shareware gerückt, als in die Nähe von Open Source Software [wird es
+das wirklich?]
+
+\small
+\bibliography{../bibfiles/oscResourcesDe}
+
+\end{document}

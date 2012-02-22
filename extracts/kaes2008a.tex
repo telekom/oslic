@@ -1,0 +1,222 @@
+% Telekom osCompendium extract template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
+%
+% select the document class
+% S.26: [ 10pt|11pt|12pt onecolumn|twocolumn oneside|twoside notitlepage|titlepage final|draft
+%         leqno fleqn openbib a4paper|a5paper|b5paper|letterpaper|legalpaper|executivepaper openrigth ]
+% S.25: { article|report|book|letter ... }
+%
+% oder koma-skript S.10 + 16
+\documentclass[DIV=calc,BCOR=5mm,11pt,headings=small,oneside,abstract=true, toc=bib]{scrartcl}
+
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4,ngerman}
+\usepackage[ngerman, english]{babel}
+\selectlanguage{english}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+\input{../btexmat/oscJbibCfgEnInc}
+
+% language specific hyphenation
+\input{../btexmat/oscHyphenationEnInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{headings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+\usepackage[dvips]{epsfig}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+\usepackage[marginal]{footmisc}
+%- end(footnote-configuration)
+
+\begin{document}
+
+%% use all entries of the bliography
+
+%%-- start(titlepage)
+\titlehead{Literaturexzerpt}
+\subject{Autor(en): Käs}
+\title{Titel: Rethinking industry practice. The emergence of openness \ldots}
+\subtitle{Jahr: 2008}
+\author{K. Reincke\input{../btexmat/oscLicenseFootnoteInc}}
+
+%\thanks{den Autoren von KOMA-Script und denen von Jurabib}
+\maketitle
+%%-- end(titlepage)
+%\nocite{*}
+
+\begin{abstract}
+\noindent
+as Werk / The work\footcite[][]{Kaes2008a} \\
+\noindent \itshape
+\ldots Untersucht den Wandel hin zur Offenheit in der Softwareentwicklung über
+Interviews innerhalb von 'Embedded-Linux'-Firmen. Das Ergebnis ist, dass die
+Offenheit kundengetrieben sei und zugleich einen Lernprozess innerhalb der
+Firmen bedinge. Das Buch enthält eine kurze, aber präzise Darstellung dessen,
+was OSS auch aus Lizenzsicht ist; eine systematische Darstellung der
+eingegangenen Verpflichtungen liefert es nicht.\\
+\noindent
+\ldots This book analyzes the change to open software developement by
+interviewing 'embedded-linux'-companies. The result is that openness is required by the
+customers and that practicing openness evokes a process of learning. The book
+offers a short but tellingly survey of OSS and their licences, although it
+doesn't offer a systematical review of the obligations established by the
+different licences.
+\end{abstract}
+\footnotesize
+%\tableofcontents
+\normalsize
+
+Hint: Mss Käs uses 'licence' instead of 'license'. Be careful while quoting her.
+\section{Line of Thought}
+
+This book analyzes the change to open software developement by
+interviewing 'embedded-linux'-companies, whereby these
+\glqq{}semi-structured interviews\grqq{} were \glqq{}[\ldots] conducted
+by phone between November 2005 and November
+2006\grqq{}\footcite[cf][100f]{Kaes2008a} . 
+
+The result is simple but important: there are \glqq{}two keyfindings emerged
+from the study\grqq{}: At first it's the \glqq{}key reason for component firms
+to open up\grqq{} that \glqq{}[\ldots] customer[s] demand for
+openness\grqq{}\footcite[cf.][212]{Kaes2008a}. And secondly \glqq{}[\ldots] the
+change towards increased openness [/NextPage] requires substantial learning
+effort by firms, which explains the incremental rather than sudden increase in
+revealing\grqq{}\footcite[cf.][212f]{Kaes2008a}
+
+\section{Specific Aspects: Open Source Software [Chapter 3]}
+
+\subsection{History}
+Mss. Käs firstly outlines the history of the concept 'Open Source'. She
+highlights that in the beginning there were a community exchanging software
+freely. But - following Peerens (1999) \glqq{}in the early 1980s software
+vendors begang restricting the sharing of their software and charging
+fees for each copy\grqq{}. As reaction Mr. Stallmann had \glqq{}[\ldots]
+launched the GNU Project in 1984 to write a complete operating system
+free from constraints on the use of its source code\grqq{}. As core of the idea
+Mss Käs says that \glqq{}there are two preconditions to allow these
+freedoms: copyright owner first have to provide access not only to the
+machine-readable binary code, but also to the human-readable source coe,
+and second have to remove legal restrictions from copyright
+licences\grqq{}\footcite[cf.][59]{Kaes2008a}. One instance of such a
+\glqq{}copyleft licence\grqq{} were the GPL and \glqq{}in 1991,
+programmer Linus Torvalds [\ldots] started to work in the Linux kernel
+under the GNU GPL\grqq{}\footcite[cf.][60]{Kaes2008a}
+
+\subsection{OSS Definition}
+Finally Mss Käs explains the change away from the concept 'free software' to the
+new concept 'open source software': free software as term were considered
+\glqq{}[\ldots] to hamper broad (and commercial) acceptance of the free
+software model [\ldots]\grqq{}, because \glqq{}[\ldots]
+the term 'free software' was often confused
+with 'gratis' software [\ldots]\grqq{}\footcite[cf.][60]{Kaes2008a}. Hence
+\glqq{}In 1998, the Open Source Initiative (OSI) was established to set
+up a consistent set of criteria for what constituted an open source
+licence, called the 'Open Source Definition'
+(OSD)\grqq{}\footcite[cf.][60]{Kaes2008a}. Naturally Mss Käs quotes the ten
+criteria being known as OSD\footcite[cf.][62]{Kaes2008a}.
+
+\subsection{important aspects: typology of licences}
+
+Firstly Mss Käs underlines, \glqq{}[\ldots] that the OSD also covers
+non-copyleft licences (such as the BSD licence or the Apache licence) that
+allow for software or modified versions of the software to be distributed as
+proprietary software\grqq{}\footcite[cf.][63]{Kaes2008a}
+
+Secondly she hints to the \glqq{}copyleft (or viral) licences in the sense of
+the FSF\grqq{}: Following the explanations of Stallmann 2001 these copyleft
+licences \glqq{}[\ldots] require licensing back all 'derived work' from the
+original software under an equivalent open source licence (reciprocity
+obligation)\grqq{}\footcite[cf.][63]{Kaes2008a}. And - so Mss Käs -
+\glqq{}it has to be noted [\ldots], that reciprocity obligations do not
+arise with the use of (modified) software, but with its
+\textit{distribution}\grqq{}\footcite[cf.][63 emph.i.o.]{Kaes2008a}
+
+[Comment: There is onyl ony weakness in this description: viral covers
+recirpocity but not vice verse. The wish to get back the changes (resiprocity)
+might be limited to the borders of the original and therefore might not be
+concern the large work into which the original might be 'included'.]
+
+Nevertheless Ms Käs also hints to Linus Torvalds (1999) [with out page] and the
+fact, that \glqq{}the defintion of \textit{derived work} under GPL is, however,
+still vague [\ldots]\grqq{} and that therefore Linus decided
+that \glqq{}[\ldots] system calls would not be considered to be linking against
+the kernel\grqq{}\footcite[cf.][63 emph.i.o. last part of the quote
+is a requote of Linus statement quoted bei Käs]{Kaes2008a}
+
+And finally Mss Käs hints also to the fact, that \glqq{}the GPL does not
+require a firm to give everybody access to the piece of
+[modified; KR] software. It requires only that recipients of a copy of
+the software [\ldots] be given the opportunity to receive the
+sourcecode\grqq{}\footcite[cf.][77]{Kaes2008a}. [Hint KR:] But to cover this
+fact - as Mss Käs do - under the idea of \glqq{}protection of a piece of
+software\grqq{}\footcite[cf.][77]{Kaes2008a} seems to be difficult. The GPL says
+also, that the recipient gets the right to use, to modify and to distribute the
+received code. Only in between different parts of a company or a poticila office
+this interpretation could be a solution.
+
+\subsection{the difference of work}
+
+Mss Käs states:
+
+\begin{quote} \glqq{}Two aspects that make OSS development fundamentally
+different from proprietary software development account for these
+organizational and market value changes: release of control over the
+source code and the opened-up, collaborative development
+process.\grqq{}\footcite[][65]{Kaes2008a}
+\end{quote}
+\small
+\bibliography{../bibfiles/oscResourcesEn}
+
+\end{document}

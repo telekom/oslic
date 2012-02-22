@@ -1,0 +1,233 @@
+% Telekom osCompendium cloak file English text
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mykeds Scholar Research Framework' 
+%   mykeds-CSR-framework (c) K. Reincke CC BY 3.0  http://www.mykeds.net/ ]
+%
+% \documentclass[DIV=calc,BCOR=5mm,11pt,smallheadings,oneside,abstract=true,toc=bib]{scrartcl}
+\documentclass[DIV=calc,BCOR=5mm,12pt,headings=small,oneside,abstract=true,
+toc=bib]{scrbook}
+
+
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4,ngerman}
+\usepackage[ngerman, english]{babel}
+\selectlanguage{english}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+\input{btexmat/oscJbibCfgEnInc}
+
+% language specific hyphenation
+\input{btexmat/oscHyphenationEnInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{headings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+\usepackage[dvips]{epsfig}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+\usepackage[marginal]{footmisc}
+%- end(footnote-configuration)
+
+\usepackage{amssymb}
+
+\usepackage[intoc]{nomencl}
+\let\abbr\nomenclature
+% Modify Section Title of nomenclature
+\renewcommand{\nomname}{Periodicals, Shortcuts, and Overlapping Abbreviations}
+%\renewcommand{\nomname}{Periodika, ihre Kurzformen und generelle Abkürzungen}
+
+% insert point between abbrewviation and explanation
+\setlength{\nomlabelwidth}{.24\hsize}
+\renewcommand{\nomlabel}[1]{#1 \dotfill}
+% reduce the line distance
+\setlength{\nomitemsep}{-\parsep}
+\makenomenclature
+
+% depth of contents
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+%%%%%%%%%%%%%%
+\begin{document}
+
+%% use all entries of the bliography
+\nocite{*}
+
+%%-- start(titlepage)
+\titlehead{Release \input{release}}
+\subject{\small \itshape A Practical Guide for Developers, Managers, Companies,
+and OS Experts}
+\title{Open Source License Compendium}
+\subtitle{Howto to Use Open Source Software in a Regular Manner}
+\author{K. Reincke, P. Schichl, G. Sharpe, 
+  J. Dobson\input{btexmat/oscLicenseFootnoteInc}}
+\maketitle
+%%-- end(titlepage)
+
+\footnotesize
+\begin{flushright} 
+
+\parbox{100mm}{\itshape
+The Open Source Community is a swarm: it is stronger than a set of some
+accidentally selected experts. We are proud to get its' help. Gladly we thank
+(in alphabetical order):
+}
+
+\parbox{50mm}{
+\tiny
+\begin{flushright}
+Michael Kern,\\
+Thomas Quiehl,\\
+Helene Tamer,\\
+and all the \\
+other\ldots
+\end{flushright}
+}
+\end{flushright}
+\normalsize
+\newpage
+
+\footnotesize
+\tableofcontents
+\newpage
+\input{snippets/en/20110928-Changes}
+\normalsize
+
+\chapter*{Disclaimer}
+\input{snippets/en/20120222-DisclaimerInc}
+
+%%%%%%%%%%%%
+\chapter{Introduction}
+\input{snippets/en/01-introduction/0100-chapterAbstractInc}
+\input{snippets/en/01-introduction/0101-chapterStartInc}
+
+%%%%%%%%%%%%%%%
+\chapter{Prolegomena}
+\input{snippets/en/02-prolegomena/0200-chapterAbstractInc}
+\input{snippets/en/02-prolegomena/0201-why01Inc}
+% 
+% 
+\input{snippets/en/02-prolegomena/0202-APC-LicenseMissedInc}
+\input{snippets/en/02-prolegomena/0203-ifrossWithoutGuideInc}
+\input{snippets/en/02-prolegomena/0204-AnotherCompendiumTryInc}
+% 
+\input{snippets/en/02-prolegomena/0205-why02Inc}
+\input{snippets/en/02-prolegomena/0206-whatInc}
+
+\input{snippets/en/02-prolegomena/0207-PrintAndBibWebAndFreeWebEn}
+
+%\input{snippets/20110905-LitCheckInc}
+
+%%%%%%%%%%%%%%%
+\chapter{Open Source: Idea and Concepts}
+\input{snippets/en/03-osIdeaAndConcepts/0300-chapterAbstractInc}
+\input{snippets/en/03-osIdeaAndConcepts/0301-chapterStartInc}
+\input{snippets/en/03-osIdeaAndConcepts/0302-osOsiAndOsd}
+\input{snippets/en/03-osIdeaAndConcepts/0303-osHistory}
+\input{snippets/en/03-osIdeaAndConcepts/0304-fsVsOs}
+
+%%%%%%%%%%%%%%%
+\chapter{The Same Idea, Different Models of License}
+\input{snippets/en/04-sameIdeaDifferentLicenseModels/0400-chapterAbstractInc}
+\input{snippets/en/04-sameIdeaDifferentLicenseModels/0401-chapterStartInc}
+
+%%%%%%%%%%%%%%%
+\chapter{Open Source: Important Minor Points}
+\input{snippets/en/05-osImportantMinorPoints/0500-chapterAbstractInc}
+\input{snippets/en/05-osImportantMinorPoints/0501-chapterStartInc}
+\input{snippets/en/05-osImportantMinorPoints/0502-derivativeWorks}
+\input{snippets/en/05-osImportantMinorPoints/0503-licenseCompatibility}
+\input{snippets/en/05-osImportantMinorPoints/0504-osAndMoney}
+\input{snippets/en/05-osImportantMinorPoints/0505-oslicAndPatents}
+
+%%%%%%%%%%%%%%%
+\chapter{Open Source: Use Cases As Principle of Classification}
+\input{snippets/en/06-osUseCases/0600-chapterAbstractInc}
+\input{snippets/en/06-osUseCases/0601-chapterStartInc}
+
+%%%%%%%%%%%%%%%
+\chapter{Open Source Licenses: Find Your Specific To-do Lists}
+\input{snippets/en/07-osToDoListFinder/0700-chapterAbstractInc}
+\input{snippets/en/07-osToDoListFinder/0701-chapterStartInc}
+
+%%%%%%%%%%%%%%%
+\chapter{Open Source License Fulfillment: Classified To-do Lists for \ldots}
+\input{snippets/en/08-osFulfillmentByToDoLists/0800-chapterAbstractInc}
+\input{snippets/en/08-osFulfillmentByToDoLists/0801-chapterStartInc}
+\input{snippets/en/08-osFulfillmentByToDoLists/0802-apacheFulfillToDoList}
+\input{snippets/en/08-osFulfillmentByToDoLists/0803-bsdFulfillToDoList}
+\input{snippets/en/08-osFulfillmentByToDoLists/0804-gplv2FulfillToDoList}
+\input{snippets/en/08-osFulfillmentByToDoLists/0805-mitFulfillToDoList}
+
+%%%%%%%%%%%%%%%
+\chapter{Open Source Licenses and Their Legal Environments}
+\input{snippets/en/09-osLegalEnvironments/0900-chapterAbstractInc}
+\input{snippets/en/09-osLegalEnvironments/0901-chapterStartInc}
+
+%%%%%%%%%%%%%%%
+\chapter{Conclusion}
+\input{snippets/en/0a-Conclusion/0a00-chapterAbstractInc}
+\input{snippets/en/0a-Conclusion/0a01-chapterStartInc}
+
+%%%%%%%%%%%%%%%
+\chapter{Appendices}
+\input{snippets/en/0b-Appendices/0b00-chapterAbstractInc}
+\input{snippets/en/0b-Appendices/0b01-chapterStartInc}
+
+\input{snippets/en/0b-Appendices/0b02-MythsOfOsEn} 
+
+\footnotesize
+\input{btexmat/oscNclAbbreviationsEnInc}
+\input{btexmat/oscNclJournalsInc}
+\printnomenclature
+
+\bibliography{bibfiles/oscResourcesEn}
+
+\end{document}

@@ -1,0 +1,349 @@
+% Telekom osCompendium extract template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
+%
+% select the document class
+% S.26: [ 10pt|11pt|12pt onecolumn|twocolumn oneside|twoside notitlepage|titlepage final|draft
+%         leqno fleqn openbib a4paper|a5paper|b5paper|letterpaper|legalpaper|executivepaper openrigth ]
+% S.25: { article|report|book|letter ... }
+%
+% oder koma-skript S.10 + 16
+\documentclass[DIV=calc,BCOR=5mm,11pt,headings=small,oneside,abstract=true, toc=bib]{scrartcl}
+
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4,ngerman}
+\usepackage[ngerman, english]{babel}
+\selectlanguage{english}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+\input{../btexmat/oscJbibCfgEnInc}
+
+% language specific hyphenation
+\input{../btexmat/oscHyphenationEnInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{headings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+\usepackage[dvips]{epsfig}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+\usepackage[marginal]{footmisc}
+%- end(footnote-configuration)
+
+\begin{document}
+
+%% use all entries of the bliography
+
+%%-- start(titlepage)
+\titlehead{Literaturexzerpt}
+\subject{Autor(en): Williams / Williams2002a}
+\title{Titel: Free as in Freedom: Richard Stallman's Crusade\ldots}
+\subtitle{Jahr: \ldots }
+\author{K. Reincke\input{../btexmat/oscLicenseFootnoteInc}}
+
+%\thanks{den Autoren von KOMA-Script und denen von Jurabib}
+\maketitle
+%%-- end(titlepage)
+%\nocite{*}
+
+\begin{abstract}
+Das Werk / The work\footcite[][]{Williams2002a} \\
+\noindent \itshape
+\ldots Die erste(?) Biographie über RMS: sie enthält so viele Interviews and
+Hintergrundinformationen, dass sie als Primärquelle genommen werden kann, und
+zwar nicht nur für die Geschichte von RMS selbst, sondern auch für die
+Geschichte der 'Freien Software' und ihrer internen Gegenspielerin 'Open Source'. \\
+\noindent
+\ldots This is the first(?) biography of RMS. It contains so many interviews and
+background information that it might be read as primary source, not only for the
+history of RMS, but also for the history of the Free Software movement and its
+internal counterpart, the Open Source movement.
+\end{abstract}
+\footnotesize
+%\tableofcontents
+\normalsize
+
+\section{Line of Thought}
+
+\subsection{The Printer as Start}
+
+Williams describes RMS's initial moment of realizing that closed software has
+victims with all the background knowledge:
+
+\begin{itemize}
+  \item Firstly one has to note that in the 1960's and 1970's there was a
+  \glqq{}give-and-take philosophy\grqq{} in the MIT AI lab which includes not
+  only the developer but also the computer companies. And \glqq{}such a
+  philosophy was a major reason why companies [\ldots] made it a policy
+  to donate their machines and software programs where hackers typically
+  congregated\grqq{}. The hackers improved the software and \glqq{}[\ldots]
+  companies could borrow back the improvements [\ldots]\grqq{}: these hackers
+  were \glqq{}[\ldots] an auxiliary research-and-development division
+  available at minimal cost\grqq{}\footcite[cf][4]{Williams2002a}. In this
+  environment even RMS had already debugged printer software
+  successfully\footcite[cf][3 and 5]{Williams2002a}.
+  \item But then a new Xerox laser printer came, \glqq{}a gift to good to
+  refuse\grqq{}\footcite[cf][2]{Williams2002a}, by which the situation was
+  changed: \glqq{}[\ldots] Xerox had been unwilling to share its
+  sourcecode files\grqq{} and Stallman didn't get the sourcecode by Xerox even
+  in a situation where this new printer had also (old)
+  problems\footcite[cf][6]{Williams2002a}. Stallmans next step was to contact a
+  programming colleague at Carnegie mellon AI lab\footcite[cf][7]{Williams2002a}
+  for getting the code from one peer to another\footcite[cf][8]{Williams2002a}.
+  But there RMS got the famous answer, that his colleague \glqq{}[\ldots]
+  had promised not to give (him, RMS) a
+  copy\grqq{}\footcite[cf][8]{Williams2002a} - that answer, which evoked - in
+  the words of RMS - that he noted that non-disclosure answers have
+  victims\footcite[cf][158]{Stallman2001a} - and which made him - following the
+  narration of Williams - \glqq{}[\ldots] so angry (he) couldn't think of a way
+  to express it\grqq{}\footcite[cf][9]{Williams2002a}. Because of these emotions
+  of being helpless and at the mercy of another - so Williams - RMS later
+  decided to help himself and others by avoiding such situations and writing the
+  free operating system and fighting for free
+  software\footcite[cf][11f]{Williams2002a}.
+  \item But even inside the AI lab there was a movement to establish more
+  secrets, for example by introducing passwords. RMS fought also against this
+  movement, firstly by using an empty password, later on by requiring others
+  also to use an empty password because it were \glqq{}[\ldots] much easier to
+  type\grqq{} and finally by using his account 'rms' as password too and by
+  making this fact known to other programmers, even outside of the
+  lab\footcite[cf][53ff, 93f et passim]{Williams2002a}
+\end{itemize}
+
+\subsection{The Young RMS}
+
+Williams suggests by quoting some witnesses that RMS might \glqq{}[\ldots]
+have had some of the qualities of an autistic child\grqq{}, features, which
+later on lead to his radicalism, unwillingness to make a comprize and his and
+obstinacy\footcite[cf][31 et passim]{Williams2002a}.
+
+\subsection{The Emacs Commune}
+
+Following Williams \glqq{}the story of Stallman's work on TECO during 1970's is
+inextricably linked with Stallman's later leadershipd of the free software
+movement\grqq{}\footcite[cf][80]{Williams2002a}. That was concluded by the
+following line of thoughts: Firstly TECO was an editor which required that the
+user inserted \glqq{}extended series of editing instructions\grqq{} before he
+could see the modified text on the screen\footcite[cf][81]{Williams2002a}. Later
+on this editor was improved by the possiblity to (re)call such a set of
+instructions by a simplier key stroke, hence by a
+macro\footcite[cf][82]{Williams2002a}. Based on this feature finally Stallman
+published a set of macros und the project name 'editing macros' or abbreviated
+as \glqq{}emacs\grqq{}\footcite[cf][84f]{Williams2002a}. The philosophy of these
+improvements was, that \glqq{}users were free to modify and redistribute the
+code on the condition that they gave back all the extensions they
+made\grqq{}\footcite[cf][85]{Williams2002a}
+
+\subsection{The Changings (moral choice) 7}
+
+Following Williams RMS announced \glqq{}on September 27, 1983\grqq{} the
+following text\footcite[cf][85]{Williams2002a}:
+
+\begin{quote}
+\glqq{}Starting this Thanksgiving I [RMS; KR] am going to write a complete
+Unix-compatible software system called GNU (for GNU's Not Unix), and give it away free to
+everyone who can use it.
+\grqq{}\footcite[][85]{Williams2002a}
+\end{quote}
+
+As Williams notes \glqq{}Stallman's decision to start developing the GNU
+system was triggered by the end of the ITS system that the AI Lab hackers
+had nurtured for so long\grqq{}\footcite[][91]{Williams2002a}. With the decision
+of the \glqq{}lab's administration\grqq{} in 1982 \glqq{}[\ldots] to
+upgrade its main computer\grqq{} the AI lab decided also, to switch to
+\glqq{}a commercial operating system developed by Digital\grqq{}. And this
+decision was based upon the fear that \glqq{}[\ldots] the lab had lost
+its critical mass of in-house programming
+talent\grqq{}\footcite[cf][92]{Williams2002a}. Hence Stallman met proprietary
+closed software\footcite[cf][92]{Williams2002a}
+
+A second a movement which might have supported the decision to write his own
+operating system were the experiences Stallman made with the 'lisp machine':
+Stallman had had the \glqq{}gentleman agreement\grqq{} with Symbolics to
+\glqq{}review\grqq{} the source code\footcite[cf][95]{Williams2002a}. With the
+revocation of their agreement on March 16,1982
+the so called \glqq{}Symbolics War of 1982-1983\grqq{}
+started\footcite[cf][96]{Williams2002a} in which RMS tried to reimplement all
+new features of the new lisp machine into the older state only by looking at
+the IO of the new program: RMS tried obtain the freedom of the AI lab by redoing
+the complete job, the company had already done. And he \glqq{}[\ldots] made
+sure LMI programmers had direct access to the
+changes\grqq{}\footcite[cf][97]{Williams2002a}. At the end the company won,
+stallman was seen \glqq{}as a troubling anachronism\grqq{} which did not see the
+advantages \glqq{}in commercializing the Lisp
+Machine\grqq{}\footcite[cf][97]{Williams2002a}.
+
+As consequence RMS decided to write his own free operating system, called
+GNU\footcite[cf][101]{Williams2002a}: he faced a \glqq{}stark moral
+choice\grqq{} - in the word of Williams - he had \glqq{}[\ldots] either
+(to) get over his ethical objection for 'proprietary' software [\ldots]
+or (to) dedicate his life to building an alternate, nonproprietary
+system of software programs\grqq{}\footcite[cf][101]{Williams2002a}.
+
+Williams now tells the story as it is known: 
+\begin{itemize}
+   \item in Januray 1984 RMS \glqq{}[\ldots]
+  resigned from the MIT staff [\ldots] to build GNU\grqq{}. But he had
+  \glqq{}enough friends and allies within the AI Lab to retain rent-free
+  access to his MIT office\grqq{}. The value of the resigning was to
+  \glqq{}[\ldots] (negate) any debate about conflict of interists or
+  Institute ownership of the software\grqq{}\footcite[cf][102]{Williams2002a}
+  \item One of the first development task was (re)writing
+  Emacs\footcite[cf][105]{Williams2002a}
+  \item In 1985 with the GNU Manifesto the political ethical embeddation
+  started\footcite[cf][105]{Williams2002a} which was expanded by the foundation
+  of the Free Software Foundation\footcite[cf][106]{Williams2002a} 
+\end{itemize}
+
+\subsection{GPL}
+
+\subsection{GNU/Emacs}
+
+The beginning of the GPL starts with publishing and distributing the
+GNU/Emacs\footcite[cf][123]{Williams2002a}, but in a stronger version as it is
+known today: In these days Stallman allows the users \glqq{}[\ldots] to
+modify GNU Emacs just so long as they published their
+modifications\grqq{}\footcite[cf][124]{Williams2002a}. This was the obligation
+to publish your modifications regardless wether you handover your modifications
+to others or not. Later on Stallman only revoked this obligation because of the
+\glqq{}Big Brother aspect of the original Emacs Commune social contract\grqq{}.
+Stallman shall have said that \glqq{}it was wrong to require to publish all
+changes\grqq{}\footcite[cf][127]{Williams2002a}.
+
+And therefore the GPL only requires to handover the modified code to those  to
+whom you distribute the modified  binary\footcite[cf][128ff]{Williams2002a}.
+
+\subsection{GNU/LInux}
+
+The Open Source Story in this view starts with the lack of a kernel in the GNU
+operating system which originally should be closed by a GNU kernel, named
+\glqq{}HURD\grqq{}. But one has to state, that \glqq{}by 1993, the GNU Project's
+inability to deliver a working kernel was leading to problems both within the
+GNU Project and within the free software movement at
+large\grqq{}\footcite[cf][145]{Williams2002a}. On the other hand the Linux
+kernel began to become reality in these years
+and his developers indeed uses many GNU
+tools for developing it and for making it part of
+a meaningful environment: a pure kernel without an
+operating system is nothing\footcite[cf][143]{Williams2002a}.
+
+The next step of the history of a whole operating system is the Debian
+distribution and the Debian manifesto\footcite[cf][147]{Williams2002a} and so in
+the later 1980s Stallman fought to name the complete system GNU/Linux instead of
+only naming it 'Linux'\footcite[cf][149f]{Williams2002a}
+
+\subsection{Open Source}
+
+The step into Open Source began with the new observation, that developing the
+Linux kernel had used a new developing method, described in the article
+\glqq{}The Cathedral and the Bazaar\grqq{}, written by Eric S.
+Raymond\footcite[cf][159]{Williams2002a}, He had observed the methods of Linus
+Torvalds and tranferred them to his own project
+'fetchmail'\footcite[cf][158]{Williams2002a} and summarized his expericenses in
+this article, presented at some conferences\footcite[cf][159]{Williams2002a}
+
+This new development method seduced Netscape to come closer to the free software
+movement: the wanted to publish their browser\footcite[cf][161]{Williams2002a}.
+
+And in one of these discussions between Raymond and Netscape one wanted to state
+that \glqq{}despite the best efforts of Stallman and other hackers to
+remind people that the word 'free' in free software stood for freedom
+[SW] and not price, the message still wan't getting
+throught\grqq{}\footcite[cf][161f]{Williams2002a}
+
+\begin{quote}
+\glqq{}Most business executives, upon hearing the term for the first time,
+interpreted the word as synonymous with 'zero cost' [\ldots]
+\grqq{}\footcite[][162]{Williams2002a}
+\end{quote}
+
+As result of these misfeelings  [Mrs?] Peterson invented the new term
+\glqq{}Open Source\grqq{}\footcite[cf][162]{Williams2002a} and as concequence of
+a summit,sponsored by O'Reilley - and without invitation andf participation of
+RMS - \glqq{}[\ldots] the term 'open source' won over just enough
+summit-goers to qualify as a success\grqq{}\footcite[cf][162f]{Williams2002a}
+
+Stallmans reaction to this act of 'renaming' an idea \glqq{}[\ldots] was
+slow in coming\grqq{}: only \glqq{}by the end of 1998, Stallman had
+formulated a position: open source, while helpful in communicating the
+technical advantages of free software, also encouraged speakers to
+soft-pedal the issue of software freedom. Given this drawback, Stallman
+would stick withn the term free
+software\grqq{}\footcite[cf][165]{Williams2002a}
+\section{Specific Aspects}
+
+\subsection{viral nature}
+
+Here you find a hint, that the 'viral' nature of the GPL has been published by
+Craig Mundie added by the hint, that the GPL itself shall 'poses a threat'
+\glqq{}[\ldots] to any company that relieser on the uniqueness of its software
+as a competitive asset\grqq{}\footcite[cf][16]{Williams2002a}. And following
+Williams, Mundie shall have added: \glqq{}It also fundamentally undermines the
+independent commercial software sector because it effectively makes it
+impossible to distribute on a basis where recipients pay for the product rather
+than just the cost of
+distribution\grqq{}\grqq{}\footcite[cf][16]{Williams2002a}. [Williams proves his
+quote by claiming that he made an online transcript from speech 'The Commercial
+Software Model' by Craig Mundie\footcite[cf][24]{Williams2002a}. And finally he
+links this quote to the url:
+http://www.microsoft.com/presspass/exec/craig/05-03sharedsource.asp]
+
+\subsection{the beginning is proprietarization}
+
+Williams mentions Bill Gates \glqq{}Open Letter to Hobbyists\grqq{} by which B.
+Gates tried to establich the value of closed software programs by arguing on the
+quality\footcite[cf][100]{Williams2002a}
+\small
+\bibliography{../bibfiles/oscResourcesEn}
+
+\end{document}

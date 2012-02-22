@@ -1,0 +1,416 @@
+% Telekom osCompendium extract template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
+%
+% select the document class
+% S.26: [ 10pt|11pt|12pt onecolumn|twocolumn oneside|twoside notitlepage|titlepage final|draft
+%         leqno fleqn openbib a4paper|a5paper|b5paper|letterpaper|legalpaper|executivepaper openrigth ]
+% S.25: { article|report|book|letter ... }
+%
+% oder koma-skript S.10 + 16
+\documentclass[DIV=calc,BCOR=5mm,11pt,headings=small,oneside,abstract=true, toc=bib]{scrartcl}
+
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4,ngerman}
+\usepackage[english, ngerman]{babel}
+\selectlanguage{ngerman}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+\input{../btexmat/oscJbibCfgDeInc}
+
+% language specific hyphenation
+\input{../btexmat/oscHyphenationDeInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{headings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+\usepackage[dvips]{epsfig}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+\usepackage[marginal]{footmisc}
+%- end(footnote-configuration)
+
+\begin{document}
+
+%% use all entries of the bliography
+
+%%-- start(titlepage)
+\titlehead{Literaturexzerpt}
+\subject{Autor(en): Edward Viesel}
+\title{Titel: Freiheit statt Freibier}
+\subtitle{Jahr: 2006 }
+\author{K. Reincke\input{../btexmat/oscLicenseFootnoteInc}}
+
+%\thanks{den Autoren von KOMA-Script und denen von Jurabib}
+\maketitle
+%%-- end(titlepage)
+%\nocite{*}
+
+\begin{abstract}
+Das Werk / The work\footcite[][]{Viesel2006a} \\
+\noindent \itshape
+\ldots Die zweite Häfte des Buches führt allgemein in GNU/Linux ein, ein
+weiteres Viertel in DRM, Formate und verwandte kollaborative Projekte. Und das
+erste Viertel skizziert die Geschichte von Open Source und die Idee einiger OS
+Lizenzen, durchaus mit interessanten, wenn auch nicht im einzelnen belegten
+Details.
+\\
+\noindent
+\ldots The second half of the book introduces into GNU/Linux, another quarter
+discusses the problem of DRM, formats, and linked collaborative projects. The
+first quarter summarizes the history of Open Source and some ideas of OS
+licenses and mentions special aspects - unfortunately without referring to its
+sources.
+\end{abstract}
+\footnotesize
+%\tableofcontents
+\normalsize
+
+\section{Line of Thought}
+
+Das möchte möchte erkennbar in alle relevanten Felder des Linux-Users einführen:
+\begin{itemize}
+  \item Als erstes skizziert Viesel die \glqq{}Geschichte der Freien
+  Software\grqq{}\footcite[vgl.][11ff]{Viesel2006a}
+  \item Dann beschreibt er kurz die Unterschiede zwischen dem
+  \glqq{}kontinentaleuropäischen
+  Autorenrecht\grqq{}\footcite[vgl.][46ff]{Viesel2006a} und dem
+  \glqq{}angloamerikanischen Copyright\grqq{}\footcite[vgl.][53ff]{Viesel2006a}
+  \item Sodann spezifziert er verschiedenen
+  Lizenzen\grqq{}\footcite[vgl.][58ff]{Viesel2006a}, vornehmlich die
+  verschiedenen GPL Versionen und das \glqq{}Prizip des
+  Copyleft\grqq{}\footcite[vgl.][60ff]{Viesel2006a}, die
+  BSD-Lizenz\footcite[vgl.][67f]{Viesel2006a} und die Nicht-Software-Lizenzen
+  \glqq{}Gnu Free Documentatione
+  License\grqq{}\footcite[vgl.][68f]{Viesel2006a} und das Gefüge
+  \glqq{}Creative-Commons-Lizenzen\grqq{}\footcite[vgl.][69ff]{Viesel2006a}.
+  \item Ferner ergänzt Viesel den theoretischen Teil mit einer
+  Spezifikation von DRM, also über \glqq{}Kopiersperren und
+  Kontrollsystemen\grqq{}\footcite[vgl.][69ff]{Viesel2006a} \ldots
+  \item \ldots und einer Auflistung genereller freier nicht unbedingt auf
+  Software ausgelegter Projekte wie Wikipedia oder
+  Gutenberg\footcite[vgl.][88ff]{Viesel2006a}
+  \item Schließlich spezifiziert Viesel noch verschiedene
+  Datenformate\footcite[vgl.][113ff]{Viesel2006a} \ldots
+  \item \ldots um dann den Linux-Computer an sich und seine
+  Killerapplikationen zu erläutern\footcite[vgl.][141ff]{Viesel2006a}
+  \item 
+\end{itemize}
+Insgesamt möchte dieses Buch eine allumfassende Einführung sein. Leider
+verzichtet Viesel durchgängig darauf, seine Aussagen zu belegen. Das macht seine
+Arbeit nur begrenzt verwertbar.
+
+\section{Specific Aspects}
+
+\subsection{Zur Genese der Freien Software}
+
+\subsubsection{Ausgangspunkt I}
+Als Ausgangspunkt sieht auch Viesel die Kultur des freien Austausches von
+Informationen und Quellcode, wie es in den 1950er und 1960er Jahren in
+universitäterer Tradition gepflegt wurde, will sagen: die
+\glqq{}Hackerkultur\grqq{} als eine \glqq{}[\ldots] Lebensphilosophie, die das
+Miteinanderteilen,  Offenheit, Dezentralisierung und das Praxisgebot [\ldots] in
+den Vordergrund (stellte)\grqq{}\footcite[vgl.][11f]{Viesel2006a}
+
+\subsubsection{Eingriffe I}
+
+Mit den 1970er Jahren setzt Viesel eine 'Popularisierung' der bis dahin er
+Spezialisten vorbehaltenen Idee 'Computer' an, wie sie sich in der allgemeinen
+Bereitstellung und Verbreitung des
+'PDP-10'\grqq{}\footcite[vgl.][14]{Viesel2006a} und des
+'Altair'\footcite[vgl.][16]{Viesel2006a} manifestierte. Darauf aufsetzend resp.
+anknüpfend beginnt - gewissermaßen als \glqq{}Geburt der
+Computerindustrie\grqq{} die Geschichte von Bill Gates und Microsoft als Beigabe
+von Basic zum Altair\footcite[vgl.][17f]{Viesel2006a} und die Geschichte der
+Firma 'Apple'\footcite[vgl.][19]{Viesel2006a}. 
+
+Was daraus resp. dahinein zu lesen ist, ist die These, dass Software einen
+eigenständigen Wert bekommt.
+
+\subsubsection{Eingriffe II}
+
+Sodann erzählt Viesel - unter der Überschrift \glqq{}Richard Stallmans
+Offenbarungserlebnis\grqq{} -, dass die \glqq{}Geburt\grqq{} der Idee einer
+\glqq{}politischen Bewegung für Freie Software\grqq{} letztlich über einen
+\glqq{}Papierstau im Laserdrucker\grqq{} am MIT in Cambridge bei Boston
+ausgelöst worde sei\footcite[vgl.][20ff]{Viesel2006a}, infolge dessen Stallman
+zur Behebung des Übels den Quellcode erhalten wollte, sozusagen auf kleinem
+Diesntwege, \glqq{}von Softwareentwickler zu
+Softwareentwickler\grqq{}\footcite[vgl.][21f]{Viesel2006a} - was allerdings zu
+der berühmten Ablehnung geführt haben soll, die zu der Einsicht führte, dass
+\glqq{}[\ldots] Geheimhaltungsvereinbarungen ihre Opfer
+haben\grqq{}\footcite[vgl.][22]{Viesel2006a}, in diesem Fall RMS.
+
+\subsubsection{Ausgangspunkt II}
+Der zweite Ausgangspunkt ist auch hier Unix und die Sprache C, die zwischen ab
+1969 und 1973 entwickelt\footcite[vgl.][25f]{Viesel2006a} worden sind, aber ob
+der kartellrechtlichen Begrenzungen von AT\&T\footcite[vgl.][26]{Viesel2006a}
+nicht kommerziell verwendet werden konnten. Deshalb sei ab 1975 \glqq{}[\ldots]
+Unix in der Version 6 mitsamt dem Quellcode für den Preis der Datenträger
+einigen Universitäten zur Verfügung gestellt (worden)\grqq{}, was insbesondere
+an der Berkeley Universität auf fruchtbaren Boden
+fiel\footcite[vgl.][26]{Viesel2006a}, sodass zuletzt in den 1990er Jahren mit
+dem 386BSD und den Folge Systemen FreeBSD oder OpenBSD sogar gänzlich freie
+Versionen daraus entwickelt werden konnten\footcite[vgl.][27]{Viesel2006a}.
+
+\subsubsection{Eingriffe III}
+
+Notwendig wurde die Nachentwicklung von freien Unix's durch die Entscheidung von
+AT\&T zu Beginn der 1980er Jahre, Unix zu
+proprietarisieren\footcite[vgl.][27]{Viesel2006a}.
+
+\subsubsection{Eingriffe IV}
+
+Als durchaus \glqq{}kritische\grqq{} Antwort auf die
+\glqq{}Entwicklungvon Unix\grqq{} habe Stallman 1983 angekündigt, GNU als
+\glqq{}komplett freies Betriebnssystem\grqq{} zu
+entwickeln\footcite[vgl.][27]{Viesel2006a}. Voraus gegangen sei dem der
+\glqq{}Symbolics-Krieg\grqq{}, bei dem Stallman proprietäre Neuerung an der
+Sprache LISP - durchaus als \glqq{}Kampf gegen
+Windmühlen\grqq{}\footcite[vgl.][31]{Viesel2006a} - nachprogrammiert hatte, was
+letztlich aber über das Urheberrecht beendet werden
+musste\footcite[vgl.][29f]{Viesel2006a}
+
+\subsubsection{Antwort}
+
+Damit hat Stallman die Proprietarisierung 3x persönlich als eine
+Einschränkung getroffen, beim Druckertreiber, bei seiner gelibeten Sprache LISP
+und durch das Unix-Umfeld. Die Antwort war das GNU Projekt, 1983
+angekündigt\footcite[vgl.][27]{Viesel2006a}, ab 1984 um der eigenen
+Unabhängigkeit willen privat vorangetrieben\footcite[vgl.][31]{Viesel2006a} und
+1985 mit der Fertigstellung des Editors 'Gnu Emacs' und der Veröffentlichung des
+'Gnu Manifesto' konkretisiert\footcite[vgl.][32]{Viesel2006a}
+
+Die erste GNU Lizenz war 1985 noch die \glqq{}Gnu Emacs License\grqq{}, die
+allerdings - verglichen mit der späteren GPL - noch schärferer Anfoderungen an
+die Emacs User stellte\footcite[vgl.][33]{Viesel2006a}: \glqq{}Die (Gnu Emacs)
+Lizenz sah vor, dass jeder das Programm frei kopieren, es verändern und dieser
+veränderte Version weiterverbreiten durfte, jedoch nur, wenn er auf das
+Urheberrecht an der modifizierten Version verzichtete und die Veränderungen
+öffentlich machte\grqq{}\footcite[][33]{Viesel2006a}.
+
+Aus dieser GNU Emacs Lizenz wurde ab 1986 die \glqq{}GNU General Public
+License\grqq{} entwickelt und 1989 in der ersten Version
+veröffentlicht\footcite[vgl.][34]{Viesel2006a}:
+
+\begin{quote}
+\glqq{}Ein wesentlicher Unterschied zwischen der neuen Lizenz und den
+Nutzungsbedingungen der Emacs-Kommune betraf vor allem die Rückmeldung von
+Änderungen an eine zentrale Koordinierungsstelle, den Administrator. Stallman
+war zum Schluß gekommen, dass eine zentrale Koordinierung mit dem Prinzip
+'gleiche Rechte für alle' unvereinbar war. In frr General Public License gilt
+folgendes Prinzip: So lange die Änderun gen jederzeit eingehesehen werden
+können, gibt es keinerlei Verpflichtung, diese beispielsweise Stallmann zur
+Verfügung zu stellen
+\grqq{}\footcite[][34]{Viesel2006a}
+\end{quote}
+
+[KR: So richtig der Wechsel in Sache Veröffentlichungspflicht ist, so falsch
+ist der Ansazu der GPL hier ausgedrückt. Es gibt keinerlei unbedingte Pflicht
+der Veröffentlichung von Veränderungen. Und schon gar nicht gibt es die Pflicht
+zur 'Einsichtnahme'. Was es gibt ist die bedingte Pflicht der Veröffentlichung
+unter denselben Rechten: bedingt ist diese Pflicht insofern, als sie an den Akt
+der Weitergabe geknüpft ist!!!]
+
+Historisch gesehen gab es dann nach GNU emacs und der Lizenz zwei weitere grosse
+Meilensteine, den GNU C Compiler 1987\footcite[vgl.][34]{Viesel2006a}, durch
+Tiemann binnen 6 Monaten zum C+(+?) Compiler
+erweitert\footcite[vgl.][34 VBiesel schreibt nur vom C+-Compiler,
+ist das richtig?]{Viesel2006a}, und den GNU Project Debugger
+1990\footcite[vgl.][35]{Viesel2006a} bevor als Kernel Linux hinzugekommen
+sei\footcite[vgl.][35]{Viesel2006a}, das um freie Programme ergänzt zu
+Linux-Distributionen führtefootcite[vgl.][36]{Viesel2006a}, deren Popularität
+Stallman dazu veränlasste, auf deren Bezeichnung als \glqq{}GNU/Linux\grqq{} zu
+beharren\footcite[vgl.][37]{Viesel2006a}
+
+Weitere Meilensteine des freien Betriebssystems seien dann Ende der 1990er
+Jahren zur Jahtausendwende KDE, GNOME und vor allem die Freigabe von Staroffice
+als 'Openoffice' gewesen\footcite[vgl.][38]{Viesel2006a} und ab 1998 auch die
+Freigabe des Netscape Internetbrowser\footcite[vgl.][41]{Viesel2006a}, aus dem
+dann später Firefox entstanden ist\footcite[vgl.][41]{Viesel2006a}.
+
+
+\subsubsection{Von Free Software zu Open Source}
+
+Im Jahre 1998 habe es dann einen \glqq{}Freeware-Gipfel\grqq{} gegeben,
+\glqq{}[\ldots] zu dem Richard Stallman wegen seiner mangelnden
+Konpromissbereitschaft nicht eingeladen wurde [\ldots]\grqq{}. Dort sei dann der
+von \glqq{}Christine Peterson\grqq{} erfundene, und von \glqq{}Eric
+Raymond\grqq{} propagierte Begriff \glqq{}Open Source\grqq{} als die bessere
+Alternative sozusagen verabschiedet. Der Begriff wird aber von RMS abgelehnt,
+\glqq{}[\ldots] weil er, um sich Unternehmen anzudienen, die Freiheit in
+den Hintergrund rücke\grqq{}\footcite[vgl.][41]{Viesel2006a}.
+
+Zum Beweis der Ablehnung wird RMS ohne Qiellenangabe zitiert: \glqq{}Wir
+müssen nicht verzweifelt versuchen, mit Unternehmen zusammenzuarbeiten,
+weil wir gezeigt haben, was wir können; wir brauchen auch nicht unsere
+Ziele zu verraten\grqq{}\footcite[vgl.][41]{Viesel2006a}
+
+Auf der Basis dea Open Source Begriffes ist dann jedenfalls 1998 die Open Source
+Initiative von Eric Raymond \glqq{}gestartet\grqq{} worden, die mit der Open
+Source Definition - erstellt von Bruce Perens -
+arbeitet\footcite[vgl.][41]{Viesel2006a}. Allerdings habe die OSI
+\glqq{}[\ldots] nie die Bedeutung der Free Software Foundation erreicht\grqq{}
+und Bruce Perens habe die OSI sogar verlassen, \glqq{}[\ldots] weil er
+deren oppositionelle Einstellung zur Free Software Foundation nicht für
+sinnvoll hielt\grqq{}\footcite[vgl.][41]{Viesel2006a}.
+
+\subsection{Urheberrecht versus Copyright}
+
+Allgemein könne man sagen, dass sich \glqq{}das Recht am geistigen
+Eigentum [\ldots] in zwei eigenständigen Traditionen entwickelt (habe),
+dem angloamerikanischen Copyright und dem kontinentaleuropäischen Droit
+d'auteur, also dem Autorenrecht\grqq{}\footcite[vgl.][45]{Viesel2006a}
+
+\subsubsection{das kontinentaleuropäischen Autorenrecht}
+
+Das europäische und insbesondere das deutsche Urheberrecht ist dadurch
+gekennzeichnet, dass ein \glqq{}[\ldots] unzertrennliches Band zwischen Urheber
+und Werk bestehen (bleibt)\grqq{}, geregelt durch das
+\glqq{}Urheberpersönlichkeitsrecht\grqq{}: der Urheber bestimmt über Umfang und
+Art der Verwendung. Und er verliert die Rechte \glqq{}an seiner geistige
+Schöpfung\grqq{} selbst dann nicht, wenn er alle Verwertungsrechte abgetreten
+hat\footcite[vgl.][48]{Viesel2006a}
+
+\subsection{Lizenzen}
+
+\subsubsection{GPL und Coypleft}
+
+Viesel erzählt die Geschichte, derzufolge der begriff 'Copyleft' durch ein
+Wortspiel von Don Hopkins auf einem Aufkleber entstanden sein soll: \glqq{}Aus
+Copyright (R), All Rights Reserved\grqq{} wurde da glqq{}Aus
+Copy\textbf{left} (\textbf{L}), All Rights
+Re\textbf{v}er\textbf{s}ed\grqq{}\footcite[vgl.][60]{Viesel2006a}
+
+Coypleft hier wörtlich zitiert nach Stallmans Originaltext 'Was ist Copyleft'?
+[KR Lieber das Oroginal nehmen]
+
+Interessant der implizite Hinweis auf 'Paying by Doing': Viesel verweist auf den
+Rechtsanwalt 'Mark Fischer', der an der Entstehung der GPL aus der GNU Emacs
+License beteiligt war und der die Idee so zusammengefasst haben soll, dass die
+\glqq{}[\ldots] revolutionäre (Copyleft) Klausel von jedem, der ein Programm an
+die eigenen Bedürfnisse anpassen (wolle), einen Preis\grqq{}: \glqq{}Statt aber
+einen Preis in Geld zu verlangen wird als Gegenleistung die Veröffentlichung der
+gemachten Änderung gefordert\grqq{}\grqq{}\footcite[vgl.][61]{Viesel2006a}.
+[Diese Veröffentlichungspflicht ist jedoch 'nur in abgeschäwchter Form in die
+GPL eingegangen: nur wenn der modifizierte Code weitergegeben wird, muss der
+Quellcode dem Empfänger unter denselben Rechten und Pflichten übergeben werden]
+
+Nach Erwähnung der Veröffentlichungsdaten für die GPL - 1989 die Version
+1.0, 1991 die Version 2.0\footcite[vgl.][61]{Viesel2006a} - erläutert Viesel
+dann den Grundgedanken der juristischen
+Konstruktion\footcite[vgl.][62ff]{Viesel2006a}: Die GPL \glqq{}[\ldots]
+(lehne) die totale Freiheit (ab)\grqq{}, ein \glqq{}Laisser-faire\grqq{} sei
+nicht vorgesehen; \glqq{}die Software des Projektes GNU (sei) ganz
+gezielt keine gemeinfreie Software, mit der jeder machen kann, was er
+will\grqq{}\footcite[vgl.][63]{Viesel2006a}. Vielmehr werde GPL Software zuerst
+unters Copyright gestellt - ein im amerikanischen Coypright notwendiger Schritt,
+um nicht der Public Domain anheim zu fallen -, um dann zur Sihcerung der Rechte
+die Weitergabe und Modifikation an bestimmte Verpflichtung zu
+knüpfen\footcite[vgl.][62f]{Viesel2006a}
+
+Für die Frage nach der Auswirkung auf das abgeleitete Werk konstatiert Viesel,
+dass die GPL Software \glqq{}[\ldots] abwertend als 'viral' oder
+'infektiös' beschrieben worden (sein)\grqq{} - und zwar basierend auf der
+Aussage: \glqq{}Wird Freie Software als Bestandteil in ein größeres
+Programm eingebunden, muss die gesamte resultierende Software unhter den
+Bedingungen der GPL verbreitet werden, ansonsten erlischt automatisch das
+Nutzungsrecht der eingebundenen Freien
+Software\grqq{}\footcite[vgl.][63]{Viesel2006a}.
+
+\subsubsection{LGPL}
+\begin{quote}\glqq{}Im Unterschied zur GNU General Public License dürfen
+Programme jedoch eine unter der LGPL lizenzierte Software vorübergehend
+einbinden, ohne dass das ganze Programm deshalb unter die Freie Lizenz
+gestellt werden müsse.\grqq{}\footcite[vgl.][66]{Viesel2006a}
+\end{quote}
+
+\subsubsection{BSD}
+
+Der Hauptunterschied zur GPL sei hier, \glqq{}[\ldots] dass die
+BSD-Lizenz keine Copyleft (kenne)\grqq{}, dass man bei BSD lizenziertem Code
+\glqq{}[\ldots] nicht verpflichte (sei), den Quellcode seines veränderten
+Programms zu veröffentlichen\grqq{}: \glqq{}Somit eignet sich unter der
+BSD-Lizenz stehende Sogftware auch als Vorlage für kommerzielle oder
+teilweise proprietäre Produkte\grqq{}. Und das habe - so behauptet Viesel OHNE
+NACHWEIS - habe Microsoft für sein Betriebssystem Windows genutzt, indem MS
+\glqq{}[\ldots] große Mengen Code aus dem Betriebssystem FreeBSD [dafür]
+verwenden konnte\grqq{}\footcite[vgl.][67]{Viesel2006a}.
+
+WICHTIG: [Lizenzkompatibilität]
+
+Es habe laut Viesel in der \glqq{}ursprünglichen BSD Lizenz\grqq{} die Pflicht
+gegeben, \glqq{}[\ldots] bei jeglicher Werbung darauf zu verweisen, dass
+in dem beworbenen Produkt an der University of California in Berkeley
+erstellte Software enthalten [Seitenumbruch] (sei)\grqq{} - was als
+\glqq{}advertising clause\grqq{} bezeichnet werde und inhaltlich mit der GPL
+nicht vereinbar sei. Ab 1999 sei diese Klausel aufgehoben
+worden.\footcite[vgl.][67f]{Viesel2006a}
+
+\subsection{KDE versus GNOME}
+
+Viesel erwähnt auch die anfänglichen Lizenzirritationen im KDE Projekt, die
+sogar indirekt als Geburtshelfer für GNOME gewirkt haben: KDE beruht auf der
+Bibliothek QT, erstellt von der \glqq{}norwegischen Firma Trolltech\grqq{}.
+Diese Basisbibliothek wurde aber nicht als Freie Software bereitgestellt, so
+dass die frei Oberfläche KDE (anfänglich) eben im Kern nicht frei gewesen sei.
+Dieses habe dazu geführt, dass GNOME als echzte GPL basierte Alternative gepusht
+worden sei. Erst im Jahre 2000 habe sich Trolltech entschieden, \glqq{}[\ldots]
+QT in einer freien Version unter der [\ldots] GPL zur Verfügung zu
+stellen\grqq{}, sodass auch KDE in freien Distributionen integriert werden
+konnte\footcite[vgl.][165 s.a. 167f]{Viesel2006a}.
+
+\small
+\bibliography{../bibfiles/oscResourcesDe}
+
+\end{document}
