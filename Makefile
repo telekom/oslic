@@ -1,7 +1,7 @@
 # (c) Karsten Reincke, Frankfurt am Main, 2011
 # compile one/all tex-files 
 
-AUX_EXTS=url bbl blg aux dvi toc log lof nlo nls ilg ils
+AUX_EXTS=url bbl blg aux dvi toc log lof nlo nls ilg ils ent
 RES_EXTS=ps pdf bak rtf
 SUB_DIRS=bibfiles btexmat extracts snippets templates
 OSLICDIR=oslic
