@@ -74,30 +74,31 @@ toc=bib]{scrbook}
 \usepackage[marginal]{footmisc}
 %- end(footnote-configuration)
 
-%- start(endnote-configuration)
-% Let all notes being marked with \endnote instead of \footnote
-% become endnotes. This set of endnotes replaces the next 
-% arising command \theendnotes - even if it is not located
-% at the end of the text.
 
-\usepackage{endnotes}
-
-% Format endnotes as Block with indention - Solution 1
-%\renewcommand\enoteformat{%
-%   \noindent\theenmark.) \ \hangindent .7\parindent%
-%}
-
-% Format endnotes as Block with indention - Solution 2
-\makeatletter
-\def\enoteformat{\rightskip\z@ \leftskip0em \parindent=0em \parskip=0em
-\leavevmode\llap{\hbox{\@theenmark.~}}}
-\makeatother
-
-\renewcommand\notesname{Annotations}
-% additionally we shall active a special jurabib option
-% if we want to get all jurabib footnotes as endnotes
-\jurabibsetup{citetoend=true}
-%- end(footnote-configuration)
+% %- start(endnote-configuration) uncomment to activate
+% % Let all notes being marked with \endnote instead of \footnote
+% % become endnotes. This set of endnotes replaces the next 
+% % arising command \theendnotes - even if it is not located
+% % at the end of the text.
+% 
+% \usepackage{endnotes}
+% 
+% % Format endnotes as Block with indention - Solution 1
+% %\renewcommand\enoteformat{%
+% %   \noindent\theenmark.) \ \hangindent .7\parindent%
+% %}
+% 
+% % Format endnotes as Block with indention - Solution 2
+% \makeatletter
+% \def\enoteformat{\rightskip\z@ \leftskip0em \parindent=0em \parskip=0em
+% \leavevmode\llap{\hbox{\@theenmark.~}}}
+% \makeatother
+% 
+% \renewcommand\notesname{Annotations}
+% % additionally we shall active a special jurabib option
+% % if we want to get all jurabib footnotes as endnotes
+% \jurabibsetup{citetoend=true}
+% %- end(footnote-configuration)
 
 % - additional packages
 \usepackage{amssymb}
@@ -129,7 +130,7 @@ toc=bib]{scrbook}
 \subject{\small \itshape A Practical Guide for Developers, Managers, Companies,
 and OS Experts}
 \title{Open Source License Compendium}
-\subtitle{Howto to Use Open Source Software in a Regular Manner}
+\subtitle{How to to Use Open Source Software in a Regular Manner}
 \author{K. Reincke, P. Schichl, G. Sharpe, 
   J. Dobson\input{btexmat/oscLicenseFootnoteInc}}
 \maketitle
@@ -248,7 +249,7 @@ other\ldots
 \input{snippets/en/0b-Appendices/0b02-MythsOfOsEn}
 
 \small
-\theendnotes
+%\theendnotes
 
 
 \footnotesize
