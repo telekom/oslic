@@ -15,13 +15,11 @@
 % original authors and Deutsche Telekom AG into your preface. For normal
 % quotations please use the scientific standard to cite.
 %
-% [ File structure derived from 'mykeds Scholar Research Framework' 
-%   mykeds-CSR-framework (c) K. Reincke CC BY 3.0  http://www.mykeds.net/ ]
-%
-% \documentclass[DIV=calc,BCOR=5mm,11pt,smallheadings,oneside,abstract=true,toc=bib]{scrartcl}
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
 \documentclass[DIV=calc,BCOR=5mm,12pt,headings=small,oneside,abstract=true,
 toc=bib]{scrbook}
-
 
 %%% (1) general configurations %%%
 \usepackage[utf8]{inputenc}
@@ -76,6 +74,32 @@ toc=bib]{scrbook}
 \usepackage[marginal]{footmisc}
 %- end(footnote-configuration)
 
+%- start(endnote-configuration)
+% Let all notes being marked with \endnote instead of \footnote
+% become endnotes. This set of endnotes replaces the next 
+% arising command \theendnotes - even if it is not located
+% at the end of the text.
+
+\usepackage{endnotes}
+
+% Format endnotes as Block with indention - Solution 1
+%\renewcommand\enoteformat{%
+%   \noindent\theenmark.) \ \hangindent .7\parindent%
+%}
+
+% Format endnotes as Block with indention - Solution 2
+\makeatletter
+\def\enoteformat{\rightskip\z@ \leftskip0em \parindent=0em \parskip=0em
+\leavevmode\llap{\hbox{\@theenmark.~}}}
+\makeatother
+
+\renewcommand\notesname{Annotations}
+% additionally we shall active a special jurabib option
+% if we want to get all jurabib footnotes as endnotes
+\jurabibsetup{citetoend=true}
+%- end(footnote-configuration)
+
+% - additional packages
 \usepackage{amssymb}
 
 \usepackage[intoc]{nomencl}
@@ -152,17 +176,17 @@ other\ldots
 \chapter{Prolegomena}
 \input{snippets/en/02-prolegomena/0200-chapterAbstractInc}
 \input{snippets/en/02-prolegomena/0201-why01Inc}
-% 
-% 
+%
+
 \input{snippets/en/02-prolegomena/0202-APC-LicenseMissedInc}
 \input{snippets/en/02-prolegomena/0203-ifrossWithoutGuideInc}
 \input{snippets/en/02-prolegomena/0204-AnotherCompendiumTryInc}
-% 
+%  
 \input{snippets/en/02-prolegomena/0205-why02Inc}
 \input{snippets/en/02-prolegomena/0206-whatInc}
-
+% 
 \input{snippets/en/02-prolegomena/0207-PrintAndBibWebAndFreeWebEn}
-
+% 
 %\input{snippets/20110905-LitCheckInc}
 
 %%%%%%%%%%%%%%%
@@ -221,13 +245,18 @@ other\ldots
 \input{snippets/en/0b-Appendices/0b00-chapterAbstractInc}
 \input{snippets/en/0b-Appendices/0b01-chapterStartInc}
 
-\input{snippets/en/0b-Appendices/0b02-MythsOfOsEn} 
+\input{snippets/en/0b-Appendices/0b02-MythsOfOsEn}
+
+\small
+\theendnotes
+
 
 \footnotesize
 \input{btexmat/oscNclAbbreviationsEnInc}
 \input{btexmat/oscNclJournalsInc}
 \printnomenclature
 
-\bibliography{bibfiles/oscResourcesEn}
+\bibliography{bibfiles/oscResourcesDe}
+
 
 \end{document}
