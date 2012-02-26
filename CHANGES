@@ -1,3 +1,6 @@
+2012-02-26: kreincke
+- updated onto release 0.1.91
+- refactored sources for being configurable as endnote or footnote version 
 2012-02-22: kreincke
 - CHANGES added
 - initial public release 0.1.90 generated
