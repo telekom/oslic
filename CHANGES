@@ -1,4 +1,7 @@
 2012-02-26: kreincke
+- increments releasnumber onto 0.1.92
+- let generated the publishable release oslic-en-0.1.92.pdf
+2012-02-26: kreincke
 - aligned the list of authors according to the oslic internet pages
 - updated onto release 0.1.91
 - refactored sources for being configurable as endnote or footnote version 
