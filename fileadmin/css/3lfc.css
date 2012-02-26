@@ -1,0 +1,30 @@
+/**
+ * "Yet Another Multicolumn Layout" - (X)HTML/CSS Framework
+ *
+ * (en) central stylesheet - layout example "3col_liquid_faux_columns"
+ * (de) Zentrales Stylesheet - Beispiellayout "3col_liquid_faux_columns"
+ *
+ * @copyright       Copyright 2005-2010, Dirk Jesse
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/),
+ *                  YAML-C (http://www.yaml.de/en/license/license-conditions.html)
+ * @link            http://www.yaml.de
+ * @package         yaml
+ * @version         3.3
+ * @revision        $Revision: 466 $
+ * @lastmodified    $Date: 2010-09-14 21:19:30 +0200 (Di, 14 Sep 2010) $
+ */
+
+/* import core styles | Basis-Stylesheets einbinden */
+@import url(../yaml/core/base.css);
+@import url(screen/basemod.css);
+@import url(screen/basemod-3lfc.css);
+@import url(screen/superfish.css);
+@import url(screen/sidenavmod.css);
+@import url(screen/content.css);
+@import url(screen/content-site.css);
+@import url(screen/tele/t-grid.css);
+@import url(screen/tele/t-typo.css);
+@import url(screen/tele/t-color.css);
+
+/* import print layout | Druck-Layout einbinden */
+@import url(../yaml/print/print_003_draft.css);

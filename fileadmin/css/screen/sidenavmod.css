@@ -1,0 +1,175 @@
+@charset "UTF-8";
+/**
+ * "Yet Another Multicolumn Layout" - (X)HTML/CSS Framework
+ *
+ * (en) Vertical list navigation "sideMenuList"
+ * (de) Vertikale Navigationsliste "sideMenuList"
+ *
+ * @copyright       Copyright 2005-2010, Dirk Jesse
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/),
+ *                  YAML-C (http://www.yaml.de/en/license/license-conditions.html)
+ * @link            http://www.yaml.de
+ * @package         yaml
+ * @version         3.2.1
+ * @revision        $Revision:392 $
+ * @lastmodified    $Date:2009-07-05 12:18:40 +0200 (So, 05. Jul 2009) $
+ */
+
+@media all
+{
+
+  #sideMenuList {
+    width:80%;
+    overflow:hidden;
+    margin:0 0 1.5em 0;
+    list-style-type:none;
+    border-bottom:2px #ddd solid;
+  }
+
+  #sideMenuList ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+  }
+
+  #sideMenuList li {
+    float:left; /* LTR */
+    width:100%;
+    margin:0;
+    padding:0;
+    background: #fdfdfd;
+  }
+
+  /* default specification */
+  #sideMenuList a,
+  #sideMenuList strong,
+  #sideMenuList span {
+    display:block;
+    padding:3px 0px 3px 10%;
+    text-decoration:none;
+    border-bottom:1px #ddd solid;
+  }
+
+  #sideMenuList a,
+  #sideMenuList a:visited {
+    color:#444;
+  }
+
+  #sideMenuList li span {
+    display:block;
+    font-weight:bold;
+    text-align: left;
+    border-bottom:1px #ddd solid;
+  }
+
+  /* active list element */
+  #sideMenuList li.active {
+    color:#fff;
+    background:#008;
+    font-weight:normal;
+    font-style:normal;
+  }
+
+  /* Level 1 */
+  #sideMenuList li a,
+  #sideMenuList li strong,
+  #sideMenuList li span { width:94%; padding-left:6%; } /* LTR */
+
+  #sideMenuList li.active,  
+  #sideMenuList li a, 
+  #sideMenuList li a:visited { 
+    background:#fafafa; 
+    color:#444;  
+  }
+
+  #sideMenuList li.current a { 
+    background:#e20074 url("../../images/siteBgSideMenuSel.gif") repeat-x center right;
+    color:#fff; 
+    outline: 0 none; 
+  }
+
+  #sideMenuList li a:focus,
+  #sideMenuList li a:hover,
+  #sideMenuList li a:active { 
+    background:#fafafa;
+    color:#e20074; 
+    outline: 0 none; 
+  }
+
+  /* Level 2 */
+  #sideMenuList li ul li a,
+  #sideMenuList li ul li strong,
+  #sideMenuList li ul li span { width:88%; padding-left:12%; } /* LTR */
+
+  #sideMenuList li.current ul li a,
+  #sideMenuList li ul li.active,
+  #sideMenuList li ul li a, 
+  #sideMenuList li ul li a:visited { 
+    background:#f6f6f6; 
+    color:#333; 
+  }
+   
+  #sideMenuList li ul li.current a { 
+    background: #e20074 url("../../images/siteBgSideMenuSel.gif") repeat-x center right; 
+    color:#fff; 
+  }
+
+  #sideMenuList li ul li a:focus,
+  #sideMenuList li ul li a:hover,
+  #sideMenuList li ul li a:active { 
+    background: #f6f6f6; 
+    color:#e20074; 
+  }
+
+  /* Level 3 */
+  #sideMenuList li ul li ul li a,
+  #sideMenuList li ul li ul li strong,
+  #sideMenuList li ul li ul li span { width:82%; padding-left:18%; } /* LTR */
+
+  #sideMenuList li ul li.current ul li a,
+  #sideMenuList li ul li ul li.active,
+  #sideMenuList li ul li ul li a,
+  #sideMenuList li ul li ul li a:visited{ 
+    background:#f3f3f3; 
+    color:#222; 
+  }
+  #sideMenuList li ul li ul li.current a { 
+    background: #e20074 url("../../images/siteBgSideMenuSel.gif") repeat-x center right; 
+    color:#fff; 
+  }
+
+  #sideMenuList li ul li ul li a:focus,
+  #sideMenuList li ul li ul li a:hover,
+  #sideMenuList li ul li ul li a:active { 
+    background: #f3f3f3; 
+    color:#e20074; 
+  }
+
+  /* Level 4 */
+  #sideMenuList li ul li ul li ul li a,
+  #sideMenuList li ul li ul li ul li strong,
+  #sideMenuList li ul li ul li ul li span { width:76%; padding-left:24%; } /* LTR */
+
+  #sideMenuList li ul li ul li.current ul li a,
+  #sideMenuList li ul li ul li ul li.active,
+  #sideMenuList li ul li ul li ul li a,
+  #sideMenuList li ul li ul li ul li a:visited { 
+    background:#f0f0f0; 
+    color:#111; 
+  }
+  #sideMenuList li ul li ul li ul li.current a { 
+    background: #e20074 url("../../images/siteBgSideMenuSel.gif") repeat-x center right;
+    color:#fff; 
+  }
+
+  #sideMenuList li ul li ul li ul li a:focus,
+  #sideMenuList li ul li ul li ul li a:hover,
+  #sideMenuList li ul li ul li ul li a:active { 
+    background: #f0f0f0;
+    color:#e20074; 
+  }
+
+  #sideteaser {
+    text-align: center; 
+  }
+}

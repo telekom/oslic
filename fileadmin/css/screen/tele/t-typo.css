@@ -1,0 +1,118 @@
+/* typo.css - Typographisches CSS
+ * Stylesheet fuer Webapplikationen
+ * Version: $Revision: 64 $
+ * Date: $Date: 2008-07-01 13:03:16 +0200 (Di, 01 Jul 2008) $
+ * Author: Deutsche Telekom AG, Products & Innovation
+ * Contact: Daniel Schroeder - schroeder.daniel@telekom.de
+ */
+
+
+/*
+h1 {
+    font-size: 24px;
+    line-height: 50px;
+    font-weight: bold;
+}
+*/
+
+div.box {
+    line-height: 17px;
+}
+
+div.box h2 {
+    font-size: 18px;
+    font-weight: normal;
+    text-indent: 10px;
+    line-height: 26px;
+}
+
+div.box h3 {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+div.box ul.bulletlist {
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+div.box ol {
+    list-style-type: decimal;
+}
+
+div.box table td {
+    line-height: 17px;
+}
+
+
+div.box label.radio, div.box label.checkbox {
+    font-weight: normal;
+}
+
+
+table.list caption {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 26px;
+}
+
+table.list thead th {
+    font-size: 12px;
+    line-height: 26px;
+}
+
+table.list thead th, x:-moz-any-link {
+    line-height: 25px;
+}
+
+table.list thead th a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+table.list tbody td a {
+    text-decoration: underline;
+}
+
+table.list tbody td {
+    vertical-align: top;
+    line-height: 17px;
+}
+
+div.steps div {
+    line-height: 23px;
+    text-align: center;
+}
+
+div.steps div span, div.steps div a {
+    text-decoration: none;
+    font-weight: normal;
+    cursor: default;
+}
+
+div.steps div.step_type_a, div.steps div.step_type_e, div.steps div.step_type_h {
+    cursor: default;
+}
+
+div.steps div a {
+    cursor: pointer;
+}
+
+div.steps div.step_type_a a, div.steps div.step_type_a span, div.steps div.step_type_e a, div.steps div.step_type_e span, div.steps div.step_type_h a, div.steps div.step_type_h span {
+    cursor: default;
+}
+
+div#welcome h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+div#welcome p {
+    font-size: 12px;
+    line-height: 12px;
+}
+
+a.specialButton {
+    text-decoration: none !important;
+    font-weight: bold;
+}

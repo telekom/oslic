@@ -1,0 +1,283 @@
+/**
+ * "Yet Another Multicolumn Layout" - (X)HTML/CSS Framework
+ *
+ * (en) Screen layout for YAML examples
+ * (de) Bildschirmlayout für YAML-Beispiele
+ *
+ * @copyright       Copyright 2005-2010, Dirk Jesse
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/),
+ *                  YAML-C (http://www.yaml.de/en/license/license-conditions.html)
+ * @link            http://www.yaml.de
+ * @package         yaml
+ * @version         3.3
+ * @revision        $Revision:426 $
+ * @lastmodified    $Date: 2010-09-14 21:19:30 +0200 (Di, 14 Sep 2010) $
+ */
+@media screen , projection { 
+
+ /** 
+   * (en) Forcing vertical scrollbars in IE8, Firefox, Webkit & Opera 
+   * (de) Erzwingen vertikaler Scrollbalken in IE8, Firefox, Webkit & Opera 
+   *
+   * @workaround
+   * @affected IE8, FF, Webkit, Opera
+   * @css-for all
+   * @valid CSS3
+   */
+	body {
+		overflow-y: scroll;
+	}
+
+	/*------------------------------------------------------------------------------------------------------*/
+
+	/**
+   * (en) Formatting YAML's  basic layout elements
+   * (de) Gestaltung des YAML Basis-Layouts
+   */
+
+	/* (en) Marginal areas & page background */
+	/* (de) Randbereiche & Seitenhintergrund */
+  body {
+    background: #f5f5f5 url("../../images/siteBgBorder.png") repeat top left
+      fixed;
+    padding: 10px 0;
+  }
+
+  .page {
+    background: #dbdbdb;
+  }
+	
+	/* (en) Centering layout in old IE-versions */
+	/* (de) Zentrierung des Layouts in alten IE-versionen */
+	body {
+		text-align: center;
+	}
+	
+	.page_margins {
+		text-align: left;
+		margin: 0 auto;
+	}
+
+	/* (en) Layout:width, background, borders */
+	/* (de) Layout:Breite, Hintergrund, Rahmen */
+	.page_margins {
+		min-width: 740px;
+		max-width: 80em;
+		background: #e5e5e5;
+	}
+	
+	.page {
+		padding: 10px;
+	}
+	#header {
+    color: #888;
+    background: #e5e5e5 repeat-x top left;
+    padding: 6px 10px 10px 10px;
+    height: 54px;
+		position: relative;
+	}	
+	
+  #header span {
+    color: #999;
+  }
+	
+	
+	/* (en) #topnav gets absolute positioning within #header */
+	/* (de) #topnav wird innerhalb von #header absolut positioniert */
+	#topnav {
+		background: transparent;
+		color: #800;
+		position: absolute; 
+		top: 10px;
+		right: 10px; /* LTR */
+		text-align: right; /* LTR */
+		font-size: smaller;
+    font-style: italic;
+	}
+
+	 #toplogo {
+    position: absolute;
+    background-color: transparent;
+    margin: 0px 0px 0px 16px;
+  }
+
+  #topteaser {
+    position: absolute;
+    background: #e5e5e5;
+    margin: 6px 0px 0px 23%;
+    height: 48px;
+    width: 288px;
+    padding: 0px 2px 0px 2px;
+    color: #fff;
+  }
+	
+  #teaserText {
+    margin-top: 0.5em;
+    /* (en) essential for correct alignment in Opera 6 ! */
+    /* (de) Erforderlich, damit im Opera 6 wirklich rechts plaziert ! */
+    text-align: center;
+    font-size: smaller;
+    font-style: italic;
+    color: #222;
+  }
+	
+	#topslogan {
+    position: absolute;
+    top: 4.5em;
+    right: 10px;
+    /* (en) essential for correct alignment in Opera 6 ! */
+    /* (de) Erforderlich, damit im Opera 6 wirklich rechts plaziert ! */
+    text-align: right;
+    font-size: smaller;
+    font-style: italic;
+    color: #222;
+  }
+	 	
+	/* (en) adjustment of main navigation */
+	/* (de) Anpassung der Hauptnavigation */
+	/* fodina.de/kr: original yaml file uses margin-left: 20px; */
+  #nav ul { margin-left: 0px;}
+  
+  /* fodina.de/kr: nescessary to lay the dropdown menu over any other content */
+  #ddnavline { z-index:90000;}
+	
+  #main {
+    background: #e5e5e5;
+    padding: 0px 0;
+  }
+  
+	#footer {
+		color: #666;
+		background: #dbdbdb;
+		padding: 10px 20px;
+		border-top: 5px #efefef solid;
+		line-height: 1.5em;
+	}	
+	
+	/* (en) Backup for correct positioning */
+	/* (de) Absicherung korrekte Positionierung */
+	#header,#nav,#main,#footer {
+		clear: both;
+	}
+
+	/*------------------------------------------------------------------------------------------------------*/
+
+	/**
+   * (en) Formatting content container
+   * (de) Formatierung der Inhalts-Container
+   *
+   * |-------------------------------|
+   * | #header                       |
+   * |-------------------------------|
+   * | #col1   | #col3     | #col2   |
+   * | 20%     | flexible  | 25%     |
+   * |-------------------------------|
+   * | #footer                       |
+   * |-------------------------------|
+   *
+   * Note: Background must be transparent because the liquid images
+   * are set by using the main container (20% transparent gif)
+   * and the page container (75% transparent gif)
+   */
+	#col1 {
+		width: 20%;
+    background-color: #transparent;
+    /* border-right: 1px #aaf solid; */
+
+	}
+	#col1_content {
+		padding: 10px 10px 10px 10px;
+		background-color: transparent;
+	}
+	#col2 {
+		width: 25%;
+		background-color: transparent;
+		/* border-left: 1px #aaf solid; */
+	}
+	#col2_content {
+		padding: 10px 10px 10px 10px;
+    background-color: transparent;
+	}
+	#col3 {
+		margin: 0 25% 0 20%;
+    background-color: transparent;
+	}
+	#col3_content {
+		padding: 10px;
+    background-color: transparent;
+	}
+
+
+	/**
+  * ------------------------------------------------------------------------------------------------- #
+  *
+  * (en) Styling of layout specific elements
+  * (de) Gestaltung layoutabhängiger Elemente
+  */
+	#header h1 {
+		font-weight: bold;
+		font-size: 2.5em;
+		letter-spacing: -2px;
+		line-height: 65%;
+		color: #000;
+	}
+		
+	#header span {
+		color: #999;
+	}
+	
+  #header span.topSloganSource {
+    text-align: right;
+    font-size: 6pt;
+    font-style: italic;
+    color: #444;
+  }
+	
+	 #topnav a {
+    margin: 2px 2px 2px 2px;
+    color: #888;
+    font-weight: normal;
+    background: transparent;
+    text-decoration: none;
+  }
+	
+	#topnav a:focus,#topnav a:hover,#topnav a:active {
+		text-decoration: underline;
+		background-color: transparent;
+	}
+	
+  #topnav a:focus,#topnav a:hover,#topnav a:active {
+    text-decoration: underline;
+    background-color: transparent;
+  }
+	
+	
+	#footer a {
+		color: #999;
+		background: transparent;
+		font-weight: bold;
+	}
+	#footer a:focus,#footer a:hover,#footer a:active {
+		color: #e20074;
+		background-color: transparent;
+		text-decoration: underline;
+	}
+	
+	/**
+  * ------------------------------------------------------------------------------------------------- #
+  *
+  * Skiplinks 
+  *
+  * (en) Visual styling for skiplink navigation
+  * (de) Visuelle Gestaltung der Skiplink-Navigation
+  *
+  * @section content-skiplinks
+  */
+	#skiplinks a.skip:focus,#skiplinks a.skip:active {
+		color: #fff;
+		background: #333;
+		border-bottom: 1px #000 solid;
+		padding: 10px 0;
+		text-decoration: none;
+	}
+}

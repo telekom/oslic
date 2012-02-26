@@ -1,0 +1,52 @@
+/**
+ * "Yet Another Multicolumn Layout" - (X)HTML/CSS Framework
+ *
+ * (en) IE-Patch stylesheet for "3col_faux_columns" layout example with graphic column backgrounds
+ * (de) IE-Korrektur-Stylesheet für das "3col_faux_columns" Beispiellayout mit grafischen Spaltenhintergründen
+ *
+ * @copyright       Copyright 2005-2010, Dirk Jesse
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/),
+ *                  YAML-C (http://www.yaml.de/en/license/license-conditions.html)
+ * @link            http://www.yaml.de
+ * @package         yaml
+ * @version         3.3
+ * @revision        $Revision: 482 $
+ * @lastmodified    $Date: 2010-10-19 18:48:21 +0200 (Di, 19 Okt 2010) $
+ */
+
+/* Layout-independent adjustments | Layout-unabhängige Anpassungen ----------------------------------- */
+@import url(../../yaml/core/iehacks.css);
+
+/* Layout-dependent adjustments | Layout-abhängige Anpassungen --------------------------------------- */
+@media screen, projection
+{
+  /**
+   * Bugfix for IE 3-Pixel-Jog Bug
+   *
+   * @bugfix
+   * @affected   IE 5.x/Win, IE6
+   * @css-for    IE 5.x/Win, IE6
+   * @valid      yes
+   */
+
+  * html #col3 { height: 1%; }
+  * html #col3 { margin-left: 24%; }
+  * html #col3 { margin-right: 24%; }
+
+ /**
+  * min-width/max-width workaround for IE5.x & IE6
+  *
+  * @workaround
+  * @affected   IE 5.x/Win, IE6
+  * @css-for    IE 5.x/Win, IE6
+  * @valid      no
+  */
+
+  * html .page_margins {
+    /* Fallback if JavaScript is disabled */
+    width: 80em;
+
+    /* JS-Expression for min-/max-width simulation */
+  width: expression((document.documentElement && document.documentElement.clientHeight) ? ((document.documentElement.clientWidth < 740) ? "740px" : ((document.documentElement.clientWidth > (80 * 16 * (parseInt(this.parentNode.currentStyle.fontSize) / 100))) ? "80em" : "auto" )) : ((document.body.clientWidth < 740) ? "740px" : ((document.body.clientWidth > (80 * 16 * (parseInt(this.parentNode.currentStyle.fontSize) / 100))) ? "80em" : "auto" )));
+  }
+}

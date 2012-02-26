@@ -1,0 +1,34 @@
+﻿/**
+ * "Yet Another Multicolumn Layout" - (X)HTML/CSS Framework
+ *
+ * (en) Variation of screen layout (basemod.css) - graphical backgrounds "3col_liquid_faux_columns"
+ * (de) Variation des Screenlayouts (basemod.css) - Grafische Spaltenhintergründe "3col_liquid_faux_columns"
+ *
+ * @copyright       Copyright 2005-2010, Dirk Jesse
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/),
+ *                  YAML-C (http://www.yaml.de/en/license/license-conditions.html)
+ * @link            http://www.yaml.de
+ * @package         yaml
+ * @version         3.3
+ * @revision        $Revision: 466 $
+ * @lastmodified    $Date: 2010-09-14 21:19:30 +0200 (Di, 14 Sep 2010) $
+ */
+@media screen , projection {
+	
+	.page {
+		padding: 0;
+		border: 10px #dbdbdb solid;
+	}
+	#main {
+		background-color: transparent;
+		background-image: url("../../images/siteBgColuLeftFlex20Percent.gif");
+		background-repeat: repeat-y;
+		background-position: 20% 0;
+	}
+	.page {
+		background-color: transparent;
+		background-image: url("../../images/siteBgColuRightFlex25Percent.gif");
+		background-repeat: repeat-y;
+		background-position: 75% 0;
+	}
+}

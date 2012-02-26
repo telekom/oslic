@@ -1,0 +1,59 @@
+/* normalizer.css - Browser-Styles-Reset CSS, Generic IE Bugfixing
+ * Stylesheet fuer Webapplikationen
+ * Version: $Revision: 64 $
+ * Date: $Date: 2008-07-01 13:03:16 +0200 (Di, 01 Jul 2008) $
+ * Author: Deutsche Telekom AG, Products & Innovation
+ * Contact: Daniel Schroeder - schroeder.daniel@telekom.de
+ */
+ 
+/*
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+}
+
+
+fieldset, img {
+    border: 0;
+}
+
+
+address, caption, cite, code, dfn, em, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+*/
+ol, ul {
+    list-style: none;
+    position: relative;
+}
+
+li {
+    display: list-item;
+}
+
+caption, th {
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6, table {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+q:before, q:after {
+    content: '';
+}
+
+abbr, acronym {
+    border: 0;
+}

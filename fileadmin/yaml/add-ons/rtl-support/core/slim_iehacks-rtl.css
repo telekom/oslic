@@ -1,0 +1,7 @@
+/* "Yet Another Multicolumn Layout" v3.2 (c) by Alexander Hass, Dirk Jesse (http://www.yaml.de)
+* $Revision: 466 $ $Date: 2010-09-14 21:19:30 +0200 (Di, 14 Sep 2010) $ */
+@media all
+{
+#nav{direction:ltr}
+#nav *{direction:rtl}
+}

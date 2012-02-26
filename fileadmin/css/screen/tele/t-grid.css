@@ -1,0 +1,242 @@
+/* grid.css - Strukturelles CSS
+ * Stylesheet fuer Webapplikationen
+ * Version: $Revision: 64 $
+ * Date: $Date: 2008-07-01 13:03:16 +0200 (Di, 01 Jul 2008) $
+ * Author: Deutsche Telekom AG, Products & Innovation
+ * Contact: Daniel Schroeder - schroeder.daniel@telekom.de
+ */
+
+
+
+
+h1.bfBox {
+    float: right;
+    width: 100%;
+}
+
+h1.bfBox span.pageTitle {
+    float: left;
+}
+
+h1.bfBox span.appTitle {
+    float: right;
+}
+
+
+div.box {
+    float: left;
+    margin: 0px 0px 12px 12px;
+    overflow: hidden;
+}
+div.line {
+    float: left;
+    margin-bottom: 12px;
+}
+
+div.line div.box {
+    height:100% !important;
+    margin-bottom: 0px;
+}
+
+div.box h2 {
+    margin-bottom: 10px;
+}
+
+div.box h3 {
+    margin: 0px 10px;
+}
+
+div.box p, div.box table, div.box ul, div.box ol {
+    margin: 0px 10px 10px 10px;
+}
+
+div.box table tbody td {
+    vertical-align: top;
+}
+
+div.box table tbody td {
+    padding-right: 10px;
+}
+
+div.box ol {
+    margin-left: 35px;
+}
+
+div.tiny {
+    width: 20%;
+}
+div.small {
+    width: 30%;
+}
+div.normal {
+    width: 46%;
+}
+div.big {
+    width: 60%;
+}
+div.large {
+    width: 75%;
+}
+div.huge {
+    width: 95%;
+}
+
+div.error h3, div.error p, div.error table, div.error ul {
+    margin-left: 36px;
+}
+div.error ul {
+    list-style-type: disc;
+    padding-left: 16px;
+}
+div.error ol {
+    margin-left: 90px;
+}
+div.error img {
+    float: left;
+    margin: 0px 10px 10px 10px;
+}
+div.error table {
+    display: block;
+}
+
+div.image h3, div.image p, div.image table, div.image ul {
+    margin-left: 68px;
+}
+div.image ol {
+    margin-left: 90px;
+}
+div.image img {
+    float: left;
+    margin: 0px 10px 10px 10px;
+}
+div.image table {
+    display: block;
+}
+
+div.naked h3, div.naked img {
+    margin-top: 10px;
+}
+
+div.box label.radio, div.box label.checkbox {
+    float: none;
+}
+
+
+table.list {
+    float: left;
+    width: 828px;
+    margin: 0px 0px 12px 12px;
+}
+
+table.list, x:-moz-any-link {
+    margin-left: 13px;
+}
+
+table.small {
+    width: 28%;
+}
+
+table.small, x:-moz-any-link {
+    width: 28%;
+}
+
+table.normal {
+    width: 48%;
+}
+
+table.normal, x:-moz-any-link {
+    width: 48%;
+}
+
+table.big {
+    width: 78%;
+}
+
+table.big, x:-moz-any-link {
+    width: 78%;
+}
+
+table.huge {
+    width: 98%;
+}
+
+table.huge, x:-moz-any-link {
+    width: 98%;
+}
+
+table.list caption {
+    padding-left: 10px;
+}
+
+table.list caption, x:-moz-any-link {
+    margin-left: -1px;
+    margin-top: -1px;
+}
+
+table.list thead th {
+    padding: 0 10px;
+    height: 26px;
+}
+
+table.list tbody td {
+    padding: 5px 10px;
+}
+
+table.list td img {
+    margin-right: 5px;
+}
+
+table.list tbody tr.category td img {
+    float: none;
+}
+
+div.button {
+    background: 0 !important;
+    border: 0 !important;
+    padding: 0 !important;
+    text-align: right;
+}
+
+div.box div.button {
+    margin: 20px 10px 10px 0px;
+}
+
+div.steps {
+    float: left;
+    margin: 0px 0px 12px 12px;
+}
+
+div.steps div {
+    float: left;
+    margin: 0px 5px 0px 13px;
+}
+
+div.steps div span, div.steps div a {
+    position: relative;
+    float: left;
+    left: 18px;
+    height: 23px !important;
+    padding-right: 36px;
+}
+
+
+div.steps div.step_type_a, div.steps div.step_type_d, div.steps div.step_type_f {
+    margin-left: 0px;
+}
+
+
+.hideMe {
+    float: left;
+    display: none;
+}
+
+a.specialButton {
+  float:left;
+  height: 24px;
+  margin: 0px 0px 10px 10px;
+}
+
+a.specialButton span {
+    padding: 2px 7px 7px 7px;
+    display: block;
+}

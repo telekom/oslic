@@ -1,0 +1,119 @@
+/* color.css - Farbschema CSS - Deutsche Telekom Variant
+ * Stylesheet fuer Webapplikationen
+ * Version: $Revision: 64 $
+ * Date: $Date: 2008-07-01 13:03:16 +0200 (Di, 01 Jul 2008) $
+ * Author: Deutsche Telekom AG, Products & Innovation
+ * Contact: Daniel Schroeder - schroeder.daniel@telekom.de
+ */
+
+
+div.box {
+    background: #fff url(../../../images/boxBg.gif) 0px 26px repeat-x;
+    border: 1px solid #ccc;
+}
+
+div.box h2 {
+    color: #000;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+div.naked {
+    background: #fff url(../../../images/backgrounds/boxBg.gif) repeat-x;
+}
+
+div.blank {
+    background: 0;
+    border: 0;
+}
+
+div.error, div.error h2 {
+    color: #ff0000;
+    border-color: #ff0000;
+}
+
+
+table.list {
+    background: #fff;
+    border-left: 1px solid #C6C6C6;
+    border-right: 1px solid #C6C6C6;
+    border-top: 1px solid #C6C6C6;
+}
+
+table.list caption {
+    color: #000;
+    background: #fff;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+
+
+table.list caption, x:-moz-any-link {
+    border-bottom: 1px solid #ccc;
+}
+
+table.list thead th {
+    border-bottom: 1px solid #ccc;
+}
+
+table.list thead th a {
+    color: #000;
+}
+
+table.list tbody td {
+    border-bottom: 1px solid #C6C6C6;
+    background: #fff url(../images/backgrounds/trBg.gif) left top repeat-x;
+}
+
+div.steps div span, div.steps div a, div.steps div a {
+    color: #fff !important;
+}
+
+div.steps div.step_type_a, div.steps div.step_type_d, div.steps div.step_type_f {
+    border-left: 1px solid #D6D6D6;
+}
+
+div.steps div.step_type_a, div.steps div.step_type_e, div.steps div.step_type_h {
+    background: url(../images/backgrounds/steps_active_bg.gif) right top repeat-x;
+}
+
+div.steps div.step_type_d, div.steps div.step_type_f, div.steps div.step_type_b, div.steps div.step_type_c, div.steps div.step_type_g {
+    background: url(../images/backgrounds/steps_inactive_bg.gif) right top repeat-x;
+}
+
+div.steps div.step_type_a a, div.steps div.step_type_a span, div.steps div.step_type_e a, div.steps div.step_type_e span {
+    background: url(../images/backgrounds/steps_type_a.gif) right top no-repeat;
+}
+
+div.steps div.step_type_b a, div.steps div.step_type_b span, div.steps div.step_type_f a, div.steps div.step_type_f span {
+    background: url(../images/backgrounds/steps_type_b.gif) right top no-repeat;
+}
+
+div.steps div.step_type_c a, div.steps div.step_type_c span {
+    background: url(../images/backgrounds/steps_type_c.gif) right top no-repeat;
+}
+
+div.steps div.step_type_d a, div.steps div.step_type_d span, div.steps div.step_type_g a, div.steps div.step_type_g span {
+    background: url(../images/backgrounds/steps_type_d.gif) right top no-repeat;
+}
+
+div.steps div.step_type_h a, div.steps div.step_type_h span {
+    background: url(../images/backgrounds/steps_type_h.gif) right top no-repeat;
+}
+
+.mandatory {
+    color: #e200744;
+}
+
+a.specialButton {
+    color: white !important;
+    background: url(../images/backgrounds/advBtnL.gif) top left no-repeat;
+}
+
+a.specialButton span {
+    background: url(../images/backgrounds/advBtnR.gif) top right no-repeat;
+}
+a.specialButton:hover {
+    color: white !important;
+}

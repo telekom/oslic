@@ -1,0 +1,94 @@
+@charset "UTF-8";
+/**
+ * FODINA Multicolumn Layout" - 
+ *
+ * (en) specific content modifications
+ * (de) spezielle Anpassungen für Inhalte
+ *
+ * @copyright       Copyright 2010 by ${NameDesAutors} ${NameDesOrtes}
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/)
+ * @link            http://www.fodina.de/
+ * @release         1.10.58
+ * @revision        $Revision: 8 $
+ * @lastmodified    $Date: 2008-11-16 16:09:09 +0100 (So, 16. Nov 2008) $
+ *
+ * This file is a derivate of the corresponding file of the
+ * YAML-framework (http://www.yaml.de/), offered by Dirk Jesse
+ */
+
+@media all
+{
+
+  /* (en) base layout gets standard font size 12px */
+  /* (de) Basis-Layout erhält Standardschriftgröße von 12 Pixeln */
+  body {
+    font-family: Arial, Verdana, Helvetica, sans-serif;
+    color: #333;  
+  }
+
+  h1,h2,h3,h4,h5,h6 { 
+  	color:#e20074;
+  }
+
+  h1 { font-size: 166.33%; color:#e20074;}          /* 20px */
+  h2 { font-size: 150%; color:#e20074; }            /* 18px */
+  h3 { font-size: 133.33%;  color:#e20074; }        /* 16px */
+  h4 { font-size: 116.67%; font-style:italic; }  /* 14px */
+  h6 { font-size: 100%;}                        /* 12px */
+  h6 { font-size: 100%; font-style:italic; }     /* 12px */
+
+
+  #col2 {
+    font-size: 80%;
+    color: #222;  
+  }
+  #col2 h1 { font-size: 133.33%;  color:#e20074; }/* 16px */
+  #col2 h2 { font-size: 116.67%; color:#e20074;}  /* 14px */
+  #col2 h3 { font-size: 100%; color:#e20074;}     /* 12px */
+
+
+  /* ### Lists | Listen  #### */
+
+  dt { font-weight: bold; color: #222; }
+  dd { margin: 0 0 1em 2em }
+
+
+
+  a {color: #e20074; text-decoration:none;}
+  a:focus,
+  a:hover,
+  a:active {color:#e20074; text-decoration:underline;}
+    
+  ul.HelperHint{
+    font-size: 100%;
+    font-weight: bold;
+    font-style: italic;
+    color:#444;
+    list-style-type: none;
+  }
+  .FootNote {
+    font-size: 6pt;
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  .FootNoteMarker {
+    font-size: 6pt;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .FootNoteRight {
+    font-size: 6pt;
+    font-weight: normal;
+    font-style: italic;
+    text-align: right;
+  } 
+
+ blockquote:before { content: ""}
+ blockquote:after { content: ""}
+
+
+
+}
+
