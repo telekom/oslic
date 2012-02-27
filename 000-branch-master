@@ -1,1 +1,12 @@
 this is the branch master: a file signalling where we are working
+
+remember: for using git with https (write access) with proxy
+you have to 
+(1) made known the used proxy to git by executing the command
+git config --global http.proxy $YOUR_HTTP_PROXY:$YOUR_PROXY_PORT
+(2) cloning the repository using the command
+git clone https://dtag-dbu@github.com/dtag-dbu/oslic.git
+
+While cloning (pulling, fetching, pushing) anything you then
+will be asked for the password of the github-user dtag-dbu
+
