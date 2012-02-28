@@ -79,6 +79,18 @@
 \usepackage[marginal]{footmisc}
 %- end(footnote-configuration)
 
+\usepackage[intoc]{nomencl}
+\let\abbr\nomenclature
+% Modify Section Title of nomenclature
+\renewcommand{\nomname}{Periodicals, Shortcuts, and Overlapping Abbreviations}
+%\renewcommand{\nomname}{Periodika, ihre Kurzformen und generelle Abkürzungen}
+
+% insert point between abbrewviation and explanation
+\setlength{\nomlabelwidth}{.24\hsize}
+\renewcommand{\nomlabel}[1]{#1 \dotfill}
+% reduce the line distance
+\setlength{\nomitemsep}{-\parsep}
+\makenomenclature
 \begin{document}
 
 %% use all entries of the bliography
@@ -136,5 +148,10 @@ again.
 
 \small
 \bibliography{../bibfiles/oscResourcesEn}
+
+\footnotesize
+\input{oscNclAbbreviationsEnInc}
+\input{oscNclJournalsInc}
+\printnomenclature
 
 \end{document}
