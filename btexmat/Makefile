@@ -1,6 +1,6 @@
 # (c) Karsten Reincke, Frankfurt am Main, 2011
 # compile one/all tex-files 
-AUX_EXTS=url bbl blg aux dvi toc log lof
+AUX_EXTS=url bbl blg aux dvi toc log lof nlo ilg ilg nls
 RES_EXTS=ps pdf bak lyx
 
 all:
@@ -12,6 +12,7 @@ all:
 	@ echo "### converting $< to $@"
 	@ latex $< 
 	@ bibtex `basename $< .tex`
+	@ makeindex `basename $< .tex`.nlo -s nomencl.ist -o `basename $< .tex`.nls
 	@ latex $< 
 	@ latex $< 
 	@ latex $< 
