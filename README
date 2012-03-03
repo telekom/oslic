@@ -1,4 +1,24 @@
 OSLiC (filename or packagename is oslic) be metonymic with
-[Telekom] (O)pen (S)ource (Li)cense (C)ompendium.
+[Telekom] (O)pen (S)ource (Li)cense (C)ompendium. The Open
+Source License Compendium shall reliably specify how to to
+use Open Source Software in a regular manner. Particularly
+it shall ...
 
-(c) [tbd ...]
+(a) support Open Source users to act according to the Open
+Source License requirements without having to become license
+experts themselves
+
+(b) offer strongly reliable and quickly accessible instructions 
+(to-do lists) how to fulfill a touched Open Source license
+
+(c)consolidate reliable background knowledge by gathering and
+verifying information from the net and from libraries
+
+The OSLiC is a set of LaTeX files, BibTex files, and Makefiles
+by which this compendium can be compiled as PDF file. The
+OSLiC is published under CC BY-SA 3.0 Germany: 
+
+
+(c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2012
+
+
