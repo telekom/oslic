@@ -17,9 +17,9 @@
 
 
 
-<title>toslic: install</title>
+<title>OSLiC: install</title>
 <meta name="generator" content="TYPO3 4.3 CMS" />
-<meta name="date" content="2012-02-26T12:34:12" />
+<meta name="date" content="2012-03-04T13:09:59" />
 <meta name="language" content="en" />
 
 <link rel="stylesheet" type="text/css" href="../../typo3temp/stylesheet_42a7d7391a.css" media="all" />
@@ -34,7 +34,7 @@
     * @copyright       Copyright 2012 by Karsten Reincke, Deutsche Telekom AG Darmstadt
     * @license         CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/de/deed.en)
     * @link            http://www.telekom.com/
-    * @release         0.1.92
+    * @release         0.1.98
    -->
 
 <!--[if lte IE 7]>
@@ -82,7 +82,7 @@
       <!-- begin: main navigation #nav -->
 
       <div id="nav" role="navigation">
-        <div id="ddnavline" class="hlist"><ul class="sf-menu"><li><a href="../../en/oslic/manifesto.html" onfocus="blurLink(this);">OSLiC</a><ul><li><a href="../../en/oslic/manifesto.html" onfocus="blurLink(this);">Manifesto</a></li><li><a href="../../en/oslic/license.html" onfocus="blurLink(this);">License</a></li><li><a href="../../en/oslic/authors.html" onfocus="blurLink(this);">Authors</a></li></ul></li><li><a href="../../en/planning/scope.html" onfocus="blurLink(this);">PLANNING</a><ul><li><a href="../../en/planning/scope.html" onfocus="blurLink(this);">Scope</a></li><li><a href="../../en/planning/time.html" onfocus="blurLink(this);">Time</a></li><li><a href="../../en/planning/results.html" onfocus="blurLink(this);">Results</a></li></ul></li><li><a href="../../en/collaboration/community.html" onfocus="blurLink(this);">COLLABORATION</a><ul><li><a href="../../en/collaboration/community.html" onfocus="blurLink(this);">Community</a></li><li><a href="../../en/collaboration/repository.html" onfocus="blurLink(this);">Repository</a></li><li><a href="../../en/collaboration/participation/case-by-case.html" onfocus="blurLink(this);">Participation</a><ul><li><a href="../../en/collaboration/participation/case-by-case.html" onfocus="blurLink(this);">case-by-case</a></li><li><a href="../../en/collaboration/participation/frequent.html" onfocus="blurLink(this);">frequent</a></li><li><a href="../../en/collaboration/participation/permanent.html" onfocus="blurLink(this);">permanent</a></li></ul></li></ul></li><li class="active"><a href="../../en/download/prepare.html" onfocus="blurLink(this);">DOWNLOAD</a><ul><li><a href="../../en/download/prepare.html" onfocus="blurLink(this);">prepare</a></li><li><a href="../../en/download/obtain.html" onfocus="blurLink(this);">obtain</a></li><li class="current"><a href="../../en/download/install.html" onfocus="blurLink(this);">install</a></li><li><a href="../../en/download/use.html" onfocus="blurLink(this);">use</a></li></ul></li></ul></div>
+        <div id="ddnavline" class="hlist"><ul class="sf-menu"><li><a href="../../en/oslic/manifesto.html" onfocus="blurLink(this);">OSLiC</a><ul><li><a href="../../en/oslic/manifesto.html" onfocus="blurLink(this);">Manifesto</a></li><li><a href="../../en/oslic/license.html" onfocus="blurLink(this);">License</a></li><li><a href="../../en/oslic/initiators.html" onfocus="blurLink(this);">Initiators</a></li></ul></li><li><a href="../../en/planning/scope.html" onfocus="blurLink(this);">PLANNING</a><ul><li><a href="../../en/planning/scope.html" onfocus="blurLink(this);">Scope</a></li><li><a href="../../en/planning/milestones.html" onfocus="blurLink(this);">Milestones</a></li><li><a href="../../en/planning/results.html" onfocus="blurLink(this);">Results</a></li></ul></li><li><a href="../../en/collaboration/community.html" onfocus="blurLink(this);">COLLABORATION</a><ul><li><a href="../../en/collaboration/community.html" onfocus="blurLink(this);">Community</a></li><li><a href="../../en/collaboration/repository.html" onfocus="blurLink(this);">Repository</a></li><li><a href="../../en/collaboration/participation/case-by-case.html" onfocus="blurLink(this);">Participation</a><ul><li><a href="../../en/collaboration/participation/case-by-case.html" onfocus="blurLink(this);">case-by-case</a></li><li><a href="../../en/collaboration/participation/frequent.html" onfocus="blurLink(this);">frequent</a></li><li><a href="../../en/collaboration/participation/permanent.html" onfocus="blurLink(this);">permanent</a></li></ul></li></ul></li><li class="active"><a href="../../en/download/prepare.html" onfocus="blurLink(this);">DOWNLOAD</a><ul><li><a href="../../en/download/prepare.html" onfocus="blurLink(this);">prepare</a></li><li><a href="../../en/download/obtain.html" onfocus="blurLink(this);">obtain</a></li><li class="current"><a href="../../en/download/install.html" onfocus="blurLink(this);">install</a></li><li><a href="../../en/download/use.html" onfocus="blurLink(this);">use</a></li></ul></li><li><a href="../../en/download/prepare.html" onfocus="blurLink(this);">ADDONs</a><ul><li><a href="../../en/addons/links.html" onfocus="blurLink(this);">Links</a></li></ul></li></ul></div>
       </div>
 
       <!-- end: main navigation -->
@@ -115,33 +115,33 @@ the zip file (if you pressed the zip button on the OSLiC Github frontend)
 and changing into
 the working directory. There you will find the following directory structure:
 <ul>
-<li>directory <b>bibfiles</b> :- contains the BiBTeX files for managing the
+<li><b>bibfiles</b> (directory) :- contains the BiBTeX files for managing the
 secondary literature.</li>
-<li>directory <b>bin</b> :- will contain some meta scripts 
+<li><b>bin</b> (directory) :- will contain some meta scripts 
 (if necessary later on).</li>
-<li>directory <b>btexmat</b> :- contains documents to configure and test the
+<li><b>btexmat</b> (directory) :- contains documents to configure and test the
 styling of the BibTeX files when they are included into the LaTeX files.</li>
-<li>file <b>CHANGES</b> :- documents major development steps.</li>
-<li>directory <b>extracts</b> :- contains abstracts and summries of some of the
+<li><b>CHANGES</b> (file) :- documents major development steps.</li>
+<li><b>extracts</b> (directory) :- contains abstracts and summaries of some of the
 evaluated secondary literature.</li>
-<li>directory <b>graphics</b> :- contains pictures and their eps derivatives
+<li><b>graphics</b> (directory) :- contains pictures and their eps derivatives
 being embedded into the LaTeX files.
-<li>file <b>Makefile</b> :- is the important compiling tool by which the 
+<li><b>Makefile</b> (file) :- is the important compiling tool by which the 
 LaTeX based OSLiC sources can be converted / compiled into dvi-, pdf-, or rtf-files.
-<li>directory <b>mindmaps</b> :- contains some tools for organizing the 
+<li><b>mindmaps</b> (directory) :- contains some tools for organizing the 
 mental work.
-<li>file <b>oslic-de.tex</b> :- is the German version of the Open Source License 
+<li><b>oslic-de.tex</b> (file) :- is the German version of the Open Source License 
 compendium. (Note: the OSLiC will firstly be written in English and later on
 translated into German.)
-<li>file <b>oslic-en.tex</b> :- is the English version of the Open Source License 
+<li><b>oslic-en.tex</b> (file) :- is the English version of the Open Source License 
 compendium.
-<li>file <b>README</b> :- contains the OSLiC definition for Github.
-<li>file <b>release.tex</b> :- contains the current release for being included 
+<li><b>README</b> (file) :- contains the OSLiC definition for Github.
+<li><b>release.tex</b> (file) :- contains the current release for being included 
 into the LaTex files.
-<li>directory <b>snippets</b> :- contains directories and includable LaTeX
+<li><b>snippets</b> (directory) :- contains directories and includable LaTeX
 files for each chapter, section, and part of the OSLiC.
-<li>directory <b>templates</b> :- contains some templates.
-<li>directory <b>tmp</b> :- is needed by some executing editor.
+<li>d<b>templates</b> (directory) :- contains some templates.
+<li><b>tmp</b> (directory) :- is needed by some executing editor.
 
 </ul>
 </p>
@@ -160,7 +160,7 @@ files for each chapter, section, and part of the OSLiC.
     </div>
     <!-- end: #main -->
     <!-- begin: #footer -->
-    <div id="footer" role="contentinfo"><p>OSLiC-0.1.92 &copy; 2012-2012&nbsp;powered by&nbsp;Deutsche Telekom AG  
+    <div id="footer" role="contentinfo"><p>OSLiC-0.1.98 &copy; 2012-2012&nbsp;powered by&nbsp;Deutsche Telekom AG  
     | Layout based on <a href="http://www.yaml.de/" target="_blank">YAML</a> 
      &copy; by <a href="http://www.highresolution.info" target="_blank">Dirk Jesse</a> 
     | merged with  <a href="http://users.tpg.com.au/j_birch/plugins/superfish/">Superfish</a> dropdown menu
