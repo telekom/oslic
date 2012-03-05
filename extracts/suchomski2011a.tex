@@ -1,0 +1,221 @@
+% Telekom osCompendium extract template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
+%
+% select the document class
+% S.26: [ 10pt|11pt|12pt onecolumn|twocolumn oneside|twoside notitlepage|titlepage final|draft
+%         leqno fleqn openbib a4paper|a5paper|b5paper|letterpaper|legalpaper|executivepaper openrigth ]
+% S.25: { article|report|book|letter ... }
+%
+% oder koma-skript S.10 + 16
+\documentclass[DIV=calc,BCOR=5mm,11pt,headings=small,oneside,abstract=true, toc=bib]{scrartcl}
+
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4,ngerman}
+\usepackage[english, ngerman]{babel}
+\selectlanguage{ngerman}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+\input{../btexmat/oscJbibCfgDeInc}
+
+% language specific hyphenation
+\input{../btexmat/oscHyphenationDeInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{headings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+\usepackage[dvips]{epsfig}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+\usepackage[marginal]{footmisc}
+%- end(footnote-configuration)
+
+\begin{document}
+
+%% use all entries of the bliography
+
+%%-- start(titlepage)
+\titlehead{Literaturexzerpt}
+\subject{Autor(en): Bernd Suchomski}
+\title{Titel: Proprietäres Patentrecht beim Einsatz von Open Source
+Software}
+\subtitle{Jahr: 2011 }
+\author{K. Reincke\input{../btexmat/oscLicenseFootnoteInc}}
+
+%\thanks{den Autoren von KOMA-Script und denen von Jurabib}
+\maketitle
+%%-- end(titlepage)
+%\nocite{*}
+
+\begin{abstract}
+\noindent
+Das Werk / The work\footcite[][]{Suchomski2011a} \\
+\noindent \itshape
+\ldots analysiert, in welchem Sinne man Patente auf der Basis von Open Source
+Software 'gewinnt' resp. 'verliert': Patente können in Deutschland auch aus Open
+Source Software heraus angemeldet werden, ihre Erteilung kann über den Verweis
+auf OS Software kaum verhindert werden. Allerdings erteilt jede Firma bei der
+Weitergabe der Software ein Nutzungsrecht auch an den Patenten: bei OSS ohne
+Copyleft-Klausel implizit über das Einräumen der Nutzungsrechte, bei Software
+mit Copyleft-Klauseln indirekt über die Pflicht zur Freigabe der Veränderungen -
+und bei OSS mit Patentklauseln das alles explizit.
+\\
+\noindent
+\ldots analyzes the meaning of 'gaining' and 'losing' a patent based on OSS:
+Firstly (in Germany) patents can be registers on the base of OSS. But mostly
+it's difficult to prevent their registration with a reference to an already
+existing OS software. Secondly in general a company distributes the right to use
+its' patents with distributing the OSS: In case of Non-Copyleft software the
+right is granted implicitly by granting the right to use the software. In case
+of copyleft software the patent must also be given free because of the
+obligation to publish the changings. And in case of OSS patent clauses all this
+is done
+explicitly.
+\end{abstract}
+\footnotesize
+%\tableofcontents
+\normalsize
+
+\section{Line of Thought}
+
+Dieses Buch - eine Magisterarbeit - analysiert, in welchem Sinne man Patente auf
+der Basis von Open Source Software 'gewinnt' resp. 'verliert':
+
+\subsection{OS basierte Patentanmeldung}
+
+These: \textbf{Patente können in Deutschland auch aus Open Source Software
+heraus angemeldet werden}
+
+Zuerst entsteht die Frage, ob man als Lizenznehmer einer Open Source Software
+basierend auf dieser Software überhaupt ein Patent anmelden könne, weil es ja
+gerade der Lizenzgeber sei, der die urspüngliche 'Idee' programmiert
+hat\footcite[vgl.][21]{Suchomski2011a}. Dies wird in Deutschland über das
+\glqq{}First-to-File-Prinzip\grqq{}
+ermöglicht\footcite[vgl.][21]{Suchomski2011a} - verbunden mit der Tatsache, dass
+in Deutschland bei einer Patentanmeldung nur das technische Prinzip dargestellt
+und der Code gar nicht vorgelegt werden
+müsse\footcite[vgl.][26]{Suchomski2011a}. Und eben darauf beruhe (wenigstens
+teilweise) \glqq{}rechtswissenschftlich und praktisch\grqq{} gesehen die
+\glqq{}[\ldots] oft geäußerte Angst der OSS Comnmunity vor
+Softwarepatenten\grqq{}\footcite[vgl.][27]{Suchomski2011a}: 
+
+\begin{quote}
+\glqq{}Durch die Verbreitung des Quellcodes ohne gleichzeitige Patentanmeldung
+wird ein Anreiz auf für unrechtmäßige Patentgesuche Dritter geschaffen.
+\grqq{}\footcite[vgl.][27]{Suchomski2011a}
+\end{quote}
+
+\subsection{OS basierte Patentbekämpfung}
+Auch umgekehrt sei es mit der Wirksamkeit von OSS nicht so gut bestellt:
+Grundsätzlich gelten \glqq{}Quellen aus dem Internet [\ldots] als
+manipulierbar und können die gesetztlichen Vermutung zugunsten der
+Neuheit der Erfindung [\ldots] nicht
+überwinden\grqq{}\footcite[vgl.][27]{Suchomski2011a}. Das bedeutet, dass ein
+Hinweis auf existierende Open Source Software die Annahme eines Patentantrages
+nicht verhindern könne, weil - nach Argumentation des Bundespatentgerichts -
+\glqq{}[\ldots] digitale Informationen - insbesondere aus dem Internet
+als Hauptverbreitungsmedium - nur selten als Beweis für die
+Neuheitsschädlichkeit zugelassen werden, das etwaige Zeitangaben
+manipulierbar (seien)\grqq{}\footcite[vgl.][33]{Suchomski2011a}.
+
+\subsection{Erteilung der Nutzungsrechte}
+Allerdings erteilt jede Firma bei der Weitergabe der Software ein Nutzungsrecht
+auch an den Patenten, wobei \glqq{}[\ldots] grundsätzlich von einer
+negativen Patentlizenz [\ldots] auszugehen (sei)\grqq{}, sobald \glqq{}[\ldots]
+eine OSS-Lizenz durch einen derzeitigen oder zukünftigen Patentinhaber
+angenommen wird\grqq{}\grqq{}\footcite[vgl.][79]{Suchomski2011a}. Bei einer
+'negativen Patentlizenz' \glqq{}[\ldots] duldet der Patentinhaber die
+Nutzungen durch priviligierte Personengruppen, soweit sie über die
+Scgranken des Patentrechts hinaustreten\grqq{}. Und sie beinhaltet
+\glqq{}einen vertraglichen Verzicht auf
+Klage\grqq{}\footcite[vgl.][69]{Suchomski2011a}
+
+\subsubsection{bei OSS ohne Copyleft-Klausel}
+bei OSS ohne Copyleft-Klausel implizit über das Einräumen der
+Nutzungsrechte\footcite[vgl.][117]{Suchomski2011a}: Hier wird  natürlich
+nur der rechtliche interessante Fall analysiert, dass jemand OSS nutzt =
+ein Lizenznehmer ist, und gleichzeitig ein Patent besitzt oder anmeldet, dass
+der Nutzung dieser Software entgegenstünde: \glqq{}Durch die intendierte
+Gleichbehandlung aller Lizenznehmer [\ldots]\grqq{}, wie sie in den OS Lizenzen
+ausgedrückt wird, \glqq{}[\ldots] wird auf objektiv ersichtlich, dass
+dieser Rahmen allen Entwicklern - Patentinhabern und Nicht-Patentinhabern
+- zustehen soll\grqq{}\footcite[vgl.][118]{Suchomski2011a}: 
+
+\begin{quote}
+\glqq{}Als Lizenznehmer darf der Patentinhaber diesen Vetragszweck daher im Wege
+von Treu und Glauben nicht konterkarieren
+\grqq{}\grqq{}\footcite[][118]{Suchomski2011a}
+\end{quote}
+
+Das ist eine gute Nachricht: Es ist mithin nicht rechtens, bestehende Open
+Source Software zu nehmen, ein Patent darauf anzumelden, die Software
+anschließend möglichst weit zu distribuieren, nur um deren Nutzer dann
+patentrechtlich zu verklagen.
+
+\subsubsection{bei OSS mit Copyleft-Klausel}
+bei Software mit Copyleft-Klauseln indirekt über die Pflicht zur Freigabe der
+Veränderungen, was sich aus der Pflicht zu Veröffentlichung ergibt:
+\glqq{}Die hiermit verbundene konkludenten Einräumung der negativen
+Patentlizenz an seine Abnehmer gestaltet sich [\ldots] wie bei den
+Non-Copyleft-Lizenzen\grqq{}\footcite[vgl.][118]{Suchomski2011a}
+
+\subsubsection{bei OSS mit Patentklauseln}
+und bei OSS mit Patentklauseln das alles explizit, denn \glqq{}was
+ansonsten auch ohne diese Regelgung für die Verbreitung von Software
+durch die Patentinhaber gegolten hätte, wird damit nochmals
+festgehalten\grqq{}\footcite[vgl.][128]{Suchomski2011a}
+
+\small
+\bibliography{../bibfiles/oscResourcesDe}
+
+\end{document}
