@@ -1,12 +1,12 @@
 # (c) Karsten Reincke, Frankfurt am Main, 2011
 # compile one/all tex-files 
-AUX_EXTS=url bbl blg aux dvi toc log lof nlo ilg ilg nls
+AUX_EXTS=url bbl blg aux dvi toc log lof nlo ilg ilg nls 4tc 4ct css html idv lg tmp xref
 RES_EXTS=ps pdf bak lyx
 
 all:
 	echo "only compilations for single files"
 
-.SUFFIXES: .tex .dvi .ps .pdf
+.SUFFIXES: .tex .dvi .ps .pdf .html
 .tex.dvi:
 	@ echo "### `date +'%Y%m%dT%H%M%S'`" 
 	@ echo "### converting $< to $@"
@@ -16,6 +16,10 @@ all:
 	@ latex $< 
 	@ latex $< 
 	@ latex $< 
+
+.dvi.html:
+	@ echo "### converting $< to $@"
+	@ htlatex `basename $< .dvi`.tex
 
 .dvi.ps:
 	@ echo "### `date +'%Y%m%dT%H%M%S'`" 
