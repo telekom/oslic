@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="net.sourceforge.texlipse.templates.tex" deleted="false" description="jurabib footnote citation" enabled="true" name="!footcite">\footcite[vgl.][${cursor}]{}</template><template autoinsert="true" context="net.sourceforge.texlipse.templates.tex" deleted="false" description="&quot;&quot; - deutsch" enabled="true" name="!glqq">\glqq{}${cursor}\grqq{}</template><template autoinsert="true" context="net.sourceforge.texlipse.templates.tex" deleted="false" description="&quot;[...] &quot; deutsch" enabled="true" name="!glqq...">\glqq{}[\ldots] ${cursor}\grqq{}</template><template autoinsert="true" context="net.sourceforge.texlipse.templates.tex" deleted="false" description="direct german quote" enabled="true" name="!quote">\begin{quote}
+\glqq{}${cursor}
+\grqq{}\footcite[][]{}
+\end{quote}</template></templates>
