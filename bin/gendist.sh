@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 REL="0.1.6"
 WD=$HOME
 OSLICNAM="OSLiC-$REL"
