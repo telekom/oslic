@@ -3,7 +3,7 @@
 # only as a reminder not to use incompatible shell commands
 # #!/usr/bin/env bash 
 ####################
-REL="0.2.0"
+REL="0.2.1"
 WD=$HOME
 OSLICNAM="oslic-$REL"
 OSLICDIR="$WD/$OSLICNAM"
@@ -26,11 +26,11 @@ mv *.pdf $OSLICDIR
 
 (
 cd snippets
-make ubRechercheDaFam.pdf
-mv ubRechercheDaFam.pdf  $OSLICDIR
+make oscUbLitRecherche.pdf
+mv *.pdf  $OSLICDIR
 )
 
-make osCompendiumEn.pdf
+make oslic-en.pdf
 
 mv *.pdf $OSLICDIR
 
