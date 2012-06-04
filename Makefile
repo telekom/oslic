@@ -57,7 +57,6 @@ dpdf: apdf
 	@ latex $< 
 	@ latex $< 
 	@ latex2rtf -o `basename $@ .rtf`-`cat release.tex`.rtf  $< 
-	@ oowriter `basename $@ .rtf`-`cat release.tex`.rtf
 
 .dvi.ps:
 	@ echo "### `date +'%Y%m%dT%H%M%S'`" 

@@ -1,4 +1,4 @@
-% Telekom osCompendium English final bib review file 
+% Telekom osCompendium extract template
 %
 % (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
 %
@@ -17,6 +17,7 @@
 %
 % [ File structure derived from 'mind your Scholar Research Framework' 
 %   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
 %
 % select the document class
 % S.26: [ 10pt|11pt|12pt onecolumn|twocolumn oneside|twoside notitlepage|titlepage final|draft
@@ -24,7 +25,7 @@
 % S.25: { article|report|book|letter ... }
 %
 % oder koma-skript S.10 + 16
-\documentclass[DIV=calc,BCOR=5mm,11pt,headings=small,oneside,abstract=true,toc=bib]{scrartcl}
+\documentclass[DIV=calc,BCOR=5mm,11pt,headings=small,oneside,abstract=true, toc=bib]{scrartcl}
 
 %%% (1) general configurations %%%
 \usepackage[utf8]{inputenc}
@@ -37,10 +38,10 @@
 % jurabib configuration
 \usepackage[see]{jurabib}
 \bibliographystyle{jurabib}
-\input{oscJbibCfgEnInc}
+\input{../btexmat/oscJbibCfgEnInc}
 
 % language specific hyphenation
-\input{oscHyphenationEnInc}
+\input{../btexmat/oscHyphenationEnInc}
 
 %%% (3) layout page configuration %%%
 
@@ -79,34 +80,53 @@
 \usepackage[marginal]{footmisc}
 %- end(footnote-configuration)
 
-\usepackage[intoc]{nomencl}
-\let\abbr\nomenclature
-% Modify Section Title of nomenclature
-\renewcommand{\nomname}{Periodicals, Shortcuts, and Overlapping Abbreviations}
-%\renewcommand{\nomname}{Periodika, ihre Kurzformen und generelle Abkürzungen}
-
-% insert point between abbrewviation and explanation
-\setlength{\nomlabelwidth}{.24\hsize}
-\renewcommand{\nomlabel}[1]{#1 \dotfill}
-% reduce the line distance
-\setlength{\nomitemsep}{-\parsep}
-\makenomenclature
-
 \begin{document}
 
 %% use all entries of the bliography
-\nocite{*}
 
 %%-- start(titlepage)
-%%\titlehead{English Configuration}
-\subject{Open Source secondary literature, collected for the OSLiC}
-\title{Verified and evaluated literature (data) in the file
-'oscResourcesEn.bib'}
-\author{K. Reincke\input{oscLicenseFootnoteInc}}
+\titlehead{Literaturexzerpt}
+\subject{Autor(en): R. van Wendel de Joode and J. A. de Bruijn and M. J. G. van
+Eeten}
+\title{Titel: Protecting the Virtual Commons. Self-Organizing Open Source
+and Free Software Communities and Innovative Intellectual Property Regimes}
+\subtitle{Jahr: 2003 }
+\author{K. Reincke\input{../btexmat/oscLicenseFootnoteInc}}
 
+%\thanks{den Autoren von KOMA-Script und denen von Jurabib}
 \maketitle
 %%-- end(titlepage)
-Release [\input{../release}]
+%\nocite{*}
+
+\begin{abstract}
+Das Werk / The work\footcite[][]{VwdjDebVEee2003a} \\
+\noindent \itshape
+\ldots Neben anderen will dieser Bericht die Frage beantworten, warum die
+Community so viele verschiedene FLOSS Lizenzen definiert hat. Die Antwort ist
+vielleicht etwas dünn: der grösste Teil der Lizenzen sei von der BSD oder der
+GPL abgeleitet, um die grundlegenden Prinzipien der Community zu schützen. \\
+\noindent
+\ldots Beside other questions this report wants to answer the question why the
+communities have created so many different Free / Open Source Software licenses.
+The answer is perhaps a little thin: the most part of the licenses are derived
+from BSD or GPL 'to protect the fundamental principles of the communities'.
+\end{abstract}
+\footnotesize
+%\tableofcontents
+\normalsize
+
+Beside other questions this report wants to answer the following question:
+\qlqq{}Why have open source and free software communities created so many
+differentlicenses to protect their intellectual
+property?\grqq{}\footcite[cf.][2]{VwdjDebVEee2003a}. The details are elaborated
+on some pages\footcite[cf.][72ff]{VwdjDebVEee2003a} and finally the authors
+themselves \glqq{}[\ldots] argued that many of the licenses derive from two
+licenses, namely the BSD license and the
+GPL\grqq{}\footcite[cf.][109]{VwdjDebVEee2003a} and that \glqq{} each open
+source and free softwarer license serves morew or less the same function, namely
+to protect the fundamental principles of the
+communities\grqq{}\footcite[cf.][11o]{VwdjDebVEee2003a}
+
 \small
 \bibliography{../bibfiles/oscResourcesEn}
 

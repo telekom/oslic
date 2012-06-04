@@ -1,7 +1,11 @@
-#!/bin/bash
-REL="0.1.6"
+#!/bin/sh
+####################
+# only as a reminder not to use incompatible shell commands
+# #!/usr/bin/env bash 
+####################
+REL="0.2.1"
 WD=$HOME
-OSLICNAM="OSLiC-$REL"
+OSLICNAM="oslic-$REL"
 OSLICDIR="$WD/$OSLICNAM"
 OSLICZIP="oslic-$REL.zip"
 
@@ -14,18 +18,19 @@ cp -rd * $OSLICDIR
 ( 
 cd btexmat
 make oscBibRevResourcesDe.pdf
-mv oscBibRevResourcesDe.pdf ../oscBibRevResourcesDe-$REL.pdf
-make oscBibRevNextActionEn.pdf
-mv oscBibRevNextActionEn.pdf ../oscBibRevNextActionEn-$REL.pdf
+make oscBibRevResourcesEn.pdf
+make oscBibRevCopiedButNotRead.pdf
+make oscBibRevNextAction.pdf
+mv *.pdf $OSLICDIR
 )
 
 (
 cd snippets
-make ubRechercheDaFam.pdf
-mv ubRechercheDaFam.pdf ../ubRechercheDaFam-$REL.pdf
+make oscUbLitRecherche.pdf
+mv *.pdf  $OSLICDIR
 )
 
-make osCompendiumEn.pdf
+make oslic-en.pdf
 
 mv *.pdf $OSLICDIR
 
