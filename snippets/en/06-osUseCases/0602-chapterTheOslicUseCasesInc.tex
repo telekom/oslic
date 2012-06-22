@@ -23,8 +23,74 @@
 %% use all entries of the bibliography
 %\nocite{*}
 
-Based on this information we can no derive and define the use cases by which the
-OSLiC classifies its license fulfilling to-do lists:
+After all these introducing remarks let us summarize our idea: We know that the
+right to use Open Source Software depends on doings required by the Open Source
+Licenses. In opposite to the commercial licenses you can not buy the right to
+use a piece of Open Source software - never. It's part of the Open Source
+Definition that the right to use the software may not be sold. The Open Source
+Definition states firstly that an Open Source License may \glqq{}\ldots not
+restrict any party from selling or giving away the software as a component of (any)
+aggregate software distribution\grqq{} and adds secondly that an Open Source
+License \glqq{}\ldots shall not require a royalty or other fee for such
+sale\grqq{}\footcite[cf.][\nopage wp. §1]{OSI2012a}.
+
+On the other hand it is wrong to simply conclude that you are allowed to use
+Open Source Software without any service in return: generally you have to do
+something for getting the right to use the software. In other words: Open Source
+Software is specified by the idea of 'paying by doing'.
+
+Therefore these Open Source Licenses describe specific circumstances under
+which the user must execute some tasks. These set of conditions may be viewed as
+triggers for a compliant behaviour. So, if we want to offer license fulfilling
+to-do lists, we have to consider these triggers. 
+
+The real challenge is, that such circumstances are not linear and simple. They
+contain combinations of (sometimes) context sensitive conditions. These
+conditions refer to different class of tokens. Such a class of token might refer
+to a feature of the software itself - like being an application or a library. Or
+such class of tokens might refer to the circumstances of using the software -
+like 'using the software only for yourself' or 'distributing the software also
+to third parties'.
+
+In the end we want to determine a set of specific use cases and deliver for each
+of these use cases and for each of the considered Open Source Licenses one list
+of actions, which fulfill the license in the context of this use case. A use
+case is a set of tokens describing the circumstances of the usage. So, in the
+beginning we have to specify the relevant classes of tokens. Then we build the
+valid combinations of tokens, our use cases. And finally - based on these
+specifying tokens - we generate a taxonomy of our use cases for being able to
+offer an easily to use reference to the relevant use cases and the
+corresponding, the license fulfilling to-do list. 
+
+So, let's now start with the classes of tokens by which the circumstances of
+using a piece of Open Source Software can be specified:
+
+\begin{itemize}
+  \item Firstly we will consider the type of the licensed software. We will
+  discriminate between code snippets, modules, libraries and plugins on the one
+  hand and autonomous, processable applications, programs, servers on the other
+  hand. Let's name the first set the 'snipmolibs' and the second the
+  'progappsers' for indicating, that we are not only talking about libraries and
+  applications in the strict, sense. More detailedly spoken, we will ask you,
+  whether the Open Source Software, you want to use, is a software library in
+  the broadest sense (an includable code snippet, a linkable module or library,
+  or a loadable plugin) or whether it is an autonomous application or server
+  which can be executed or processed. In the first case, the answer should be
+  'it's a snipmolib', in the second 'it's a progappser'.
+  \item Secondly we will consider the state of the software: it might be used,
+  as one has got it, or one can modify it, before using it. More detailedly
+  spoken, we will ask you whether you want to leave the evaluated Open Source
+  Software as you have got it or whether you want to modify it before using
+  and/or distributing it to 3rd parties? In the firstcase, the answer should be
+  'unmodified', in the second 'modified'.
+  \item Thirdly we will consider the 
+\end{itemize}
+
+
+
+
+ Based on this information we can no derive and define the use cases by
+which the OSLiC classifies its license fulfilling to-do lists:
 
 Firstly we have to discriminate the usage of Open Source software by the nature
 of the software itself:
