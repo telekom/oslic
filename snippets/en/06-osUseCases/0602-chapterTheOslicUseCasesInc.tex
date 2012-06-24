@@ -25,115 +25,419 @@
 
 After all these introducing remarks let us summarize our idea: We know that the
 right to use Open Source Software depends on doings required by the Open Source
-Licenses. In opposite to the commercial licenses you can not buy the right to
+Licenses. In opposite to the commercial licenses, you can not buy the right to
 use a piece of Open Source software - never. It's part of the Open Source
-Definition that the right to use the software may not be sold. The Open Source
-Definition states firstly that an Open Source License may \glqq{}\ldots not
+Definition that the right to use the software may not be sold. The OSD
+states firstly that an Open Source License may \glqq{}\ldots not
 restrict any party from selling or giving away the software as a component of (any)
-aggregate software distribution\grqq{} and adds secondly that an Open Source
+aggregate software distribution\grqq{}, and adds secondly that an Open Source
 License \glqq{}\ldots shall not require a royalty or other fee for such
 sale\grqq{}\footcite[cf.][\nopage wp. §1]{OSI2012a}.
 
-On the other hand it is wrong to simply conclude that you are allowed to use
-Open Source Software without any service in return: generally you have to do
-something for getting the right to use the software. In other words: Open Source
-Software is specified by the idea of 'paying by doing'.
+But it is not adequate to derive from this rule that you are automatically
+allowed to use Open Source Software without any service in return: generally you
+have to do something for getting the right to use the software. In other words:
+Open Source Software is specified by the idea of 'paying by doing'.
 
 Therefore these Open Source Licenses describe specific circumstances under
-which the user must execute some tasks. These set of conditions may be viewed as
-triggers for a compliant behaviour. So, if we want to offer license fulfilling
+which the user must execute some tasks. These sets of conditions may be viewed
+as triggers for a compliant behaviour. So, if we want to offer license fulfilling
 to-do lists, we have to consider these triggers. 
 
 The real challenge is, that such circumstances are not linear and simple. They
 contain combinations of (sometimes) context sensitive conditions. These
-conditions refer to different class of tokens. Such a class of token might refer
-to a feature of the software itself - like being an application or a library. Or
-such class of tokens might refer to the circumstances of using the software -
+conditions refer to different class of tokens. Such a class of token might
+denote a feature of the software itself - like being an application or a library. Or
+it might denote the circumstances of using the software -
 like 'using the software only for yourself' or 'distributing the software also
 to third parties'.
 
-In the end we want to determine a set of specific use cases and deliver for each
-of these use cases and for each of the considered Open Source Licenses one list
-of actions, which fulfill the license in the context of this use case. A use
-case is a set of tokens describing the circumstances of the usage. So, in the
-beginning we have to specify the relevant classes of tokens. Then we build the
-valid combinations of tokens, our use cases. And finally - based on these
-specifying tokens - we generate a taxonomy of our use cases for being able to
-offer an easily to use reference to the relevant use cases and the
-corresponding, the license fulfilling to-do list. 
+At the end, we want to determine a set of specific OSUCs - Open Source Use
+Cases. And we want to deliver for each of these OSUCs and for each of the
+considered Open Source Licenses one list of actions, which fulfill the license
+in the context of this use case. In our discussion, such an \textit{Open Source
+Use Case} shall be a set of tokens describing the circumstances of a specific
+usage. So, in the beginning we have to specify the relevant classes of tokens.
+Then we build the valid combinations of tokens, our Open Source Use Cases. And
+finally - based on the specifying tokens - we generate a taxonomy. In the
+next chapter this taxonomy will become the base of the Open Source Use Case
+Finder which leads you to your specific OSUC by only a few questions and
+answers. 
 
-So, let's now start with the classes of tokens by which the circumstances of
-using a piece of Open Source Software can be specified:
+In other words: this chapter defines the relevant tokens and derives the
+conceptual structures; the next chapter will use the results without depper
+explanations. So, let's now start with the classes of tokens by which the
+circumstances of using a piece of Open Source Software can be specified:
 
 \begin{itemize}
-  \item Firstly we will consider the type of the licensed software. We will
-  discriminate between code snippets, modules, libraries and plugins on the one
-  hand and autonomous, processable applications, programs, servers on the other
-  hand. Let's name the first set the 'snipmolibs' and the second the
-  'progappsers' for indicating, that we are not only talking about libraries and
+  \item Firstly we will consider the \textbf{type of the Open Source Software}.
+  We will distinguish between code snippets, modules, libraries or plugins on
+  the one hand, and autonomous, processable applications, programs or servers on
+  the other hand. Let's name the first set the 'snimolis' and the second the
+  'proapses' for indicating, that we are not only talking about libraries and
   applications in the strict, sense. More detailedly spoken, we will ask you,
   whether the Open Source Software, you want to use, is a software library in
   the broadest sense (an includable code snippet, a linkable module or library,
-  or a loadable plugin) or whether it is an autonomous application or server
+  or a loadable plugin), or whether it is an autonomous application or server
   which can be executed or processed. In the first case, the answer should be
-  'it's a snipmolib', in the second 'it's a progappser'.
-  \item Secondly we will consider the state of the software: it might be used,
-  as one has got it, or one can modify it, before using it. More detailedly
-  spoken, we will ask you whether you want to leave the evaluated Open Source
-  Software as you have got it or whether you want to modify it before using
-  and/or distributing it to 3rd parties? In the firstcase, the answer should be
-  'unmodified', in the second 'modified'.
-  \item Thirdly we will consider the 
+  'it's a snimoli', in the second 'it's a proapse'.
+  \item Secondly we will consider the \textbf{state of the of the Open Source
+  Software}: It might be used, as one has got it. Or one can modify it, before
+  using it. More detailedly spoken, we will ask you, whether you want to leave
+  the evaluated Open Source Software as you have got it, or whether you want to
+  modify it before using and/or distributing it to 3rd parties. In the first
+  case, the answer should be 'unmodified', in the second 'modified'.
+  \item Thirdly we will consider the \textbf{usage context of the of the Open
+  Source Software}: On the hand you might use the received Open Source Software
+  as one of your readily constructed applications. On the other hand you might
+  construct a larger application based upon the received Open Source, because it
+  is using it as one of its' components. More detailedly spoken, we will ask
+  you, whether you are you using the evaluated Open Source Software as an
+  autonomous piece of software, or whether you are using it in combination
+  with other components for setting up a larger, more complex piece software.
+  \item Fourthly we will consider the \textbf{recipient of the of the Open
+  Source Software}: Sometimes you might intend to use the received Open
+  Source Software only for yourself, in other cases you might to intend to
+  hand over the software also to other people. More detailedly spoken, we will
+  ask you whether you are going to use the evaluated Open Source Software only
+  for yourself or do you plan to (re)distribute it (also) to third parties?
+  \item Fifthly and finally we will consider the \textbf{combining mode of the
+  of the Open Source Software usage}: In this case, we will ask you, whether you
+  are going to combine the evaluated Open Source Software with other
+  software components by linking all together statically, by linking them
+  dynamically, or by textually including the Open Source Software into your
+  larger unit.
 \end{itemize}
 
+In the beginning we defined an Open Source Usecase as a set of classified
+tokens. If we now simply combine all tokens of all classes with all tokens of
+the other classes, we get 2*2*2*3*2 = 48 sets of tokens or 48 Open Source Use
+Cases. But some of these sets are invalid from an empirical view. And some of
+these sets are context sensitive:
 
+Firstly, it offers no additional knowledge to ask you, whether you are going to
+combine the received software with other software components by linking them
+statically or dynamically, or by including it textually into a larger unit, if
+you already have answered, that you want to use the received Open Source
+Software in combination with other elements.
 
+Secondly: If you already have specified that the used Open Source
+Software is a \textit{proapse} - hence an autonomous program, an application,
+or a server -, then your answer includes, that the software is used alone and is
+not used in combination. But if you have specified that the used Open Source
+Software is a \textit{snimoli} - hence a snippet of code, a module, a plugin, or a
+librabry -, then it can indeed be used in combination (if it becomes a
+component of a constructed larger unit) or be used alone (if it is
+'only' re-distributed to 3rd parties).
 
- Based on this information we can no derive and define the use cases by
-which the OSLiC classifies its license fulfilling to-do lists:
+And thirdly - just the other way round: If you already have specified that the
+used Open Source Software is a \textit{snimoli} - hence a snippet of code, a
+module, a plugin, or a library -, and that this \textit{snimoli} shall be used
+only by yourself (not distributed to other 3rd. parties, then your answer
+includes pratically, that this \textit{snimoli} is used in combination. This
+is logical, because if you want to use it in the state \textit{alone}, then you
+would have a software library on your disc (your are 'using' it for yourself)
+without combining it to any other software: hence in this case this librabry
+would lie on your disc and nothing more: a senseless use case.
 
-Firstly we have to discriminate the usage of Open Source software by the nature
-of the software itself:
+Do you think this is complicate? Yes, so we do. We spent a couple of time to
+explain ourselves these constraints. Only when we had transposed all
+combinations and rules into a tree, we got the real insight into situation.
+So let us summarize the these specifications by two little pictures before we
+will specify the real Open Source Use Case finder:
 
-On the one side you can use an application intended to support the work of an
-end-user. It takes input data and generates output data, mostly by using a more
-or less elaborated end-user interface. On the other side you can use a computer
-librabry intended to support the work of a software developer. It mostly offers
-functions and/or objects and is embedded into an overarching work like an
-application.
+\section{The OS Use Case Dimensions: Classes and Tokens}
 
-The use of an application is different from the use of a software library
-because the use of a software library implies the act of developing a new
-overarching piece of software.
+\pstree[treemode=R, levelsep=*0.2, treesep=0.6]{\Toval{tokens}}{ 
+    \pstree[]{\Tr{\fbox{type?}}}{
+      \Toval{proapse} 
+      \Toval{snimoli}
+    }
+    \pstree[]{\Tr{\fbox{state?}}}{
+      \Toval{unmodified} 
+      \Toval{modified}
+    }
+    \pstree[]{\Tr{\fbox{context?}}}{
+      \Toval{alone} 
+      \pstree[]{\Toval{combined}}{
+        \pstree[]{\Tr{\fbox{mode?}}}{
+          \Toval{statically linked}
+          \Toval{dynamically linked}
+          \Toval{textually included}
+        }
+      }
+    }
+    \pstree[]{\Tr{\fbox{recipient?}}}{
+      \Toval{4yourself} 
+      \Toval{4others}
+    }
+  }
+  
+  
 
-Secondly we have to discriminate the usage of Open Source software by the
-addressee:
+\section{The OS Use Case Taxonomy}
+\tiny
+\pstree[treemode=R,levelsep=*0.2, treesep=0.2]{\Toval{OSS}}{ 
+    \pstree[]{\Tr{\fbox{type?}}}{
+      \pstree[]{\Tr{\parbox{4em}{\texttt{\{\underline{proapse}\}}}}}{
+        \pstree[]{\Tr{\fbox{state?}}}{
+          \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{proapse,\\
+                             \hspace*{0.5em}\underline{unmodified}\}}}}}{
+            \pstree[]{\Tr{\fbox{context?}}}{
+              \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{proapse,\\
+                             \hspace*{0.5em}unmodified,\\
+                             \hspace*{0.5em}\underline{alone}\}}}}}{
+                \pstree[]{\Tr{\fbox{recipient?}}}{
+                
+                  \pstree[]{\Toval{\bfseries{OSUC-01}}}{
+              
+                    \Tr{\parbox{5.2em}{
+                             \texttt{\{proapse,\\
+                             \hspace*{0.5em}unmodified,\\
+                             \hspace*{0.5em}alone,\\
+                             \hspace*{0.5em}\underline{4yourself}\}}}}
+                   }                            
+                  \pstree[]{\Toval{\bfseries{OSUC-02}}}{
+                             
+                    \Tr{\parbox{5.2em}{
+                             \texttt{\{proapse,\\
+                             \hspace*{0.5em}unmodified,\\
+                             \hspace*{0.5em}alone,\\
+                             \hspace*{0.5em}\underline{4others}\}}}}
+                    }         
+                }
+              }
+              \pstree[]{\Tr{\parbox{5.4em}{
+                             \texttt{\{proapse,\\
+                             \hspace*{0.5em}unmodified,\\
+                             \hspace*{0.5em}\underline{combined}
+                             \bfseries{\lightning}\}}}}}{
+                \Tr{$\varnothing$}
+              }              
+            }
+          }
+          \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{proapse,\\
+                             \hspace*{0.5em}\underline{modified}\}}}}}{
+            \pstree[]{\Tr{\fbox{context?}}}{
+              \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{proapse,\\
+                             \hspace*{0.5em}modified,\\
+                             \hspace*{0.5em}\underline{alone}\}}}}}{
+                \pstree[]{\Tr{\fbox{recipient?}}}{
+                  \pstree[]{\Toval{\bfseries{OSUC-03}}}{
+                    \Tr{\parbox{5.2em}{
+                             \texttt{\{proapse,\\
+                             \hspace*{0.5em}modified,\\
+                             \hspace*{0.5em}alone,\\
+                             \hspace*{0.5em}\underline{4yourself}\}}}}
+                   }
+                   \pstree[]{\Toval{\bfseries{OSUC-04}}}{         
+                    \Tr{\parbox{5.2em}{
+                             \texttt{\{proapse,\\
+                             \hspace*{0.5em}modified,\\
+                             \hspace*{0.5em}alone,\\
+                             \hspace*{0.5em}\underline{4others}\}}}}
+                   }         
+                }
+              }
+              \pstree[]{\Tr{\parbox{5.4em}{
+                             \texttt{\{proapse,\\
+                             \hspace*{0.5em}modified,\\
+                             \hspace*{0.5em}\underline{combined}
+                             \bfseries{\lightning}\}}}}}{                          
+                \Tr{$\varnothing$}
+              }              
+            }
+          }
+        }
+      } 
+      \pstree[]{\Tr{\parbox{4em}{\texttt{\{\underline{snimoli}\}}}}}{
+        \pstree[]{\Tr{\fbox{state?}}}{
+          \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}\underline{unmodified}\}}}}}{
+            \pstree[]{\Tr{\fbox{context?}}}{
+              \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}unmodified,\\
+                             \hspace*{0.5em}\underline{alone}\}}}}}{
+                \pstree[]{\Tr{\fbox{recipient?}}}{
+                  \pstree[]{
+                    \Tr{\parbox{5.8em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}unmodified,\\
+                             \hspace*{0.5em}alone,\\
+                             \hspace*{0.5em}\underline{4yourself}
+                             \bfseries{\lightning}\}}}}
+                     }{\Tr{$\varnothing$}}        
+                             
+                             
+                   \pstree[]{\Toval{\bfseries{OSUC-05}}}{        
+                    \Tr{\parbox{5.2em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}unmodified,\\
+                             \hspace*{0.5em}alone,\\
+                             \hspace*{0.5em}\underline{4others}\}}}}
+                    }         
+                }
+              }
+              
+              
+              \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}unmodified,\\
+                             \hspace*{0.5em}\underline{combined}\}}}}}{
+                \pstree[]{\Tr{\fbox{recipient?}}}{
+                  \pstree[]{\Toval{\bfseries{OSUC-06}}}{
+                    \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}unmodified,\\
+                             \hspace*{0.5em}combined,\\
+                             \hspace*{0.5em}\underline{4yourself}\}}}}}{
+                               \pstree[]{\Tr{\fbox{$\cup$ mode?}}}{
+                                 \Tr{\parbox{5.6em}{\underline{\textit{OSUC-06a}}\\
+                                 \texttt{\{statically\\
+                                  \hspace*{0.5em}linked\}}}}
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-06a}}\\
+                                \texttt{\{dynamically\\
+                                  \hspace*{0.5em}linked\}}}}
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-06a}}\\
+                                \texttt{\{textually\\
+                                  \hspace*{0.5em}included\}}}}
+                               }
+                             }
+                    }
+                    \pstree[]{\Toval{\bfseries{OSUC-07}}}{        
+                      \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}unmodified,\\
+                             \hspace*{0.5em}combined,\\
+                             \hspace*{0.5em}\underline{4others}\}}}}}{
+                               \pstree[]{\Tr{\fbox{$\cup$ mode?}}}{
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-07a}}\\
+                                \texttt{\{statically\\
+                                  \hspace*{0.5em}linked\}}}}
+                                \Tr{\parbox{5.26em}{\underline{\textit{OSUC-07a}}\\
+                                \texttt{\{dynamically\\
+                                  \hspace*{0.5em}linked\}}}}
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-07a}}\\
+                                \texttt{\{textually\\
+                                  \hspace*{0.5em}included\}}}}
+                               }
+                             }
+                       }     
+                 }
+              }
+              
+                            
+            }
+          }
+          \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}\underline{modified}\}}}}}{
+            \pstree[]{\Tr{\fbox{context?}}}{
+              
+              \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}modified,\\
+                             \hspace*{0.5em}\underline{alone}\}}}}}{
+                \pstree[]{\Tr{\fbox{recipient?}}}{
+                  \pstree[]{
+                    \Tr{\parbox{5.8em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}modified,\\
+                             \hspace*{0.5em}alone,\\
+                             \hspace*{0.5em}\underline{4yourself}
+                             \bfseries{\lightning}\}}}}
+                     }{\Tr{$\varnothing$}}         
+                             
+                   \pstree[]{\Toval{\bfseries{OSUC-08}}}{              
+                    \Tr{\parbox{5.2em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}modified,\\
+                             \hspace*{0.5em}alone,\\
+                             \hspace*{0.5em}\underline{4others}\}}}}
+                    }
+                }
+              }
+              
+              \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}modified,\\
+                             \hspace*{0.5em}\underline{combined}\}}}}}{
+                \pstree[]{\Tr{\fbox{recipient?}}}{
+                  \pstree[]{\Toval{\bfseries{OSUC-09}}}{     
+                    \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}modified,\\
+                             \hspace*{0.5em}combined,\\
+                             \hspace*{0.5em}\underline{4yourself}\}}}}}{
+                               \pstree[]{\Tr{\fbox{$\cup$ mode?}}}{
+                                 \Tr{\parbox{5.6em}{\underline{\textit{OSUC-09a}}\\
+                                 \texttt{\{statically\\
+                                  \hspace*{0.5em}linked\}}}}
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-09a}}\\
+                                \texttt{\{dynamically\\
+                                \hspace*{0.5em}linked\}}}}
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-09a}}\\
+                                \texttt{\{textually\\
+                                  \hspace*{0.5em}included\}}}}
+                               }
+                             }
+                           }
+                   \pstree[]{\Toval{\bfseries{OSUC-10}}}{           
+                    \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}modified,\\
+                             \hspace*{0.5em}combined,\\
+                             \hspace*{0.5em}\underline{4others}\}}}}}{
+                               \pstree[]{\Tr{\fbox{$\cup$ mode?}}}{
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-10a}}\\
+                                \texttt{\{statically\\
+                                  \hspace*{0.5em}linked\}}}}
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-10b}}\\
+                                \texttt{\{dynamically\\
+                                  \hspace*{0.5em}linked\}}}}
+                                \Tr{\parbox{5.2em}{\underline{\textit{OSUC-10c}}\\
+                                \texttt{\{textually\\
+                                  \hspace*{0.5em}included\}}}}
+                               }
+                             }
+                      }
+                 }
+              }
+              
+              
+              
+              %%
+%               \pstree[]{\Tr{\parbox{5.2em}{
+%                              \texttt{\{snimoli!,\\
+%                              \hspace*{0.5em}modified,\\
+%                              \hspace*{0.5em}\underline{combined}\}}}}}{
+%                 \pstree[]{\Tr{\fbox{recipient?}}}{
+%                   \Tr{\parbox{5.2em}{
+%                              \texttt{\{snimoli,\\
+%                              \hspace*{0.5em}modified,\\
+%                              \hspace*{0.5em}combined,\\
+%                              \hspace*{0.5em}\underline{4yourself}\}}}}
+%                    \Tr{\parbox{5.2em}{
+%                              \texttt{\{snimoli,\\
+%                              \hspace*{0.5em}modified,\\
+%                              \hspace*{0.5em}combined,\\
+%                              \hspace*{0.5em}\underline{4others}\}}}}
+%                 }
+%               } 
 
-On the one side you can intend to use the software directly for your own
-purpose. On the other side you can intend to distribute the software to a third
-party.
-
-And thirdly we have to discriminate the usage of Open Source software by nature of
-the usage itself:
-
-One the one side you can intend to use the software as it is, respectively as
-you got it. On the other side you can intend to modify the software before using
-it.
-
-Let's form the corresponding dichotomies
-
-use-it-as-you-got-it <> modify-it
-use-it-for-yourself <> distribute-it
-application <> library
-
-Now we have 8 possibilities to combine these attributes:
-
-Use an application as you got it only for yourself
-Use a library as you got it only for your self
-Distribute an application as you got it to a third party
-Distribute a library as you got it to a third party
-
-
-
-
+             
+            }
+          }
+        }
+      }      
+    }
+  }
+  
+\normalsize{}
 %\bibliography{../../../bibfiles/oscResourcesEn}
