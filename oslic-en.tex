@@ -104,7 +104,8 @@ toc=bib]{scrbook}
 \usepackage{amssymb}
 \usepackage{wasysym}
 \usepackage{pstricks, pst-node, pst-tree}
-
+\usepackage{chngcntr}
+\counterwithout{footnote}{chapter}
 
 \usepackage[intoc]{nomencl}
 \let\abbr\nomenclature
@@ -216,13 +217,13 @@ other\ldots
 \input{snippets/en/05-osImportantMinorPoints/0505-oslicAndPatents}
 
 %%%%%%%%%%%%%%%
-\chapter{Open Source: Use Cases As Principle of Classification}
+\chapter{Open Source Use Cases: Concept and Taxonomy}
 \input{snippets/en/06-osUseCases/0600-chapterAbstractInc}
 \input{snippets/en/06-osUseCases/0601-chapterStartInc}
 \input{snippets/en/06-osUseCases/0602-chapterTheOslicUseCasesInc}
 
 %%%%%%%%%%%%%%%
-\chapter{Open Source Licenses: Find Your Specific To-do Lists}
+\chapter{Open Source Use Cases: Find the License Fulfilling To-do Lists}
 \input{snippets/en/07-osToDoListFinder/0700-chapterAbstractInc}
 \input{snippets/en/07-osToDoListFinder/0701-chapterStartInc}
 

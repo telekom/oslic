@@ -23,34 +23,35 @@
 %% use all entries of the bibliography
 %\nocite{*}
 
-After all these introducing remarks let us summarize our idea: We know that the
-right to use Open Source Software depends on doings required by the Open Source
-Licenses. In opposite to the commercial licenses, you can not buy the right to
-use a piece of Open Source software - never. It's part of the Open Source
-Definition that the right to use the software may not be sold. The OSD
-states firstly that an Open Source License may \glqq{}\ldots not
-restrict any party from selling or giving away the software as a component of (any)
-aggregate software distribution\grqq{}, and adds secondly that an Open Source
-License \glqq{}\ldots shall not require a royalty or other fee for such
-sale\grqq{}\footcite[cf.][\nopage wp. §1]{OSI2012a}.
+After all these introducing remarks let us summarize the center of our idea: We
+know that the right to use Open Source Software depends on the doings required
+by the corresponding Open Source Licenses. In opposite to the commercial
+licenses, you can not buy the right to use a piece of Open Source software.
+Never! It is embedded into the Open Source Definition that the right to use the
+software may not be sold. The OSD states firstly that an Open Source License may
+\glqq{}[\ldots] not restrict any party from selling or giving away the software
+as a component of (any) aggregate software distribution\grqq{}, and adds
+secondly in the same context that an Open Source License \glqq{}[\ldots] shall
+not require a royalty or other fee for such sale\grqq{}\footcite[cf.][\nopage
+wp. §1]{OSI2012a}.
 
-But it is not adequate to derive from this rule that you are automatically
-allowed to use Open Source Software without any service in return: generally you
-have to do something for getting the right to use the software. In other words:
-Open Source Software is specified by the idea of 'paying by doing'.
+But nevertheless, it is not adequate to derive from this statement that you are
+automatically allowed to use Open Source Software without any service in return:
+generally you have to do something for getting the right to use the software. In
+other words: Open Source Software is specified by the idea of 'paying by doing'.
 
 Therefore these Open Source Licenses describe specific circumstances under
-which the user must execute some tasks. These sets of conditions may be viewed
-as triggers for a compliant behaviour. So, if we want to offer license fulfilling
-to-do lists, we have to consider these triggers. 
+which the user must execute some tasks. Such circumstances are often sets of
+conditions and may be viewed as triggers for a compliant behaviour. So, if we
+want to offer license fulfilling to-do lists, we have to consider these triggers. 
 
 The real challenge is, that such circumstances are not linear and simple. They
 contain combinations of (sometimes) context sensitive conditions. These
 conditions refer to different class of tokens. Such a class of token might
-denote a feature of the software itself - like being an application or a library. Or
-it might denote the circumstances of using the software -
-like 'using the software only for yourself' or 'distributing the software also
-to third parties'.
+denote a feature of the software itself - like being an application or a
+library. Or it might denote the circumstances of using the software - like
+'using the software only for yourself' or 'distributing the software also to
+third parties'.
 
 At the end, we want to determine a set of specific OSUCs - Open Source Use
 Cases. And we want to deliver for each of these OSUCs and for each of the
@@ -65,17 +66,27 @@ Finder which leads you to your specific OSUC by only a few questions and
 answers. 
 
 In other words: this chapter defines the relevant tokens and derives the
-conceptual structures; the next chapter will use the results without depper
-explanations. So, let's now start with the classes of tokens by which the
-circumstances of using a piece of Open Source Software can be specified:
+conceptual structures. The following chapter will use the results of this
+chapter - but without deeper discussions.
+
+So, let's now start with the classes of tokens by which the circumstances of
+using a piece of Open Source Software can be specified:
 
 \begin{itemize}
   \item Firstly we will consider the \textbf{type of the Open Source Software}.
   We will distinguish between code snippets, modules, libraries or plugins on
   the one hand, and autonomous, processable applications, programs or servers on
   the other hand. Let's name the first set the 'snimolis' and the second the
-  'proapses' for indicating, that we are not only talking about libraries and
-  applications in the strict, sense. More detailedly spoken, we will ask you,
+  'proapses' for indicating, that we are not only talking about libraries or
+  applications in the well known sense\footnote{Of course, our newly introduced
+  concepts 'snimoli' and 'proapse' are not absolutely one of the most elegant
+  words. So, initially we tried to talk about 'applications' and 'librabries',
+  although in our context these words should denote more than they traditionally
+  do. But we couldn't minimize the irritations of our interlocutors. Too often
+  we had to amend that we were not only talking about applications and
+  librabries in the strict sense of the words, but about clusters of similar
+  entities. Finally we decided to generate our own words. Naturally, each
+  improving proposal is welcome ;-) }. More detailedly spoken, we will ask you,
   whether the Open Source Software, you want to use, is a software library in
   the broadest sense (an includable code snippet, a linkable module or library,
   or a loadable plugin), or whether it is an autonomous application or server
@@ -94,32 +105,48 @@ circumstances of using a piece of Open Source Software can be specified:
   is using it as one of its' components. More detailedly spoken, we will ask
   you, whether you are you using the evaluated Open Source Software as an
   autonomous piece of software, or whether you are using it in combination
-  with other components for setting up a larger, more complex piece software.
+  with other components for setting up a larger, more complex piece of software.
   \item Fourthly we will consider the \textbf{recipient of the of the Open
-  Source Software}: Sometimes you might intend to use the received Open
-  Source Software only for yourself, in other cases you might to intend to
-  hand over the software also to other people. More detailedly spoken, we will
-  ask you whether you are going to use the evaluated Open Source Software only
-  for yourself or do you plan to (re)distribute it (also) to third parties?
+  Source Software}: Sometimes you might wish to use the received Open
+  Source Software only for yourself. In other cases you might intend to
+  hand over the software (also) to other people. More detailedly spoken, we will
+  ask you, whether you are going to use the evaluated Open Source Software only
+  for yourself, or whether you plan to (re)distribute it (also) to third
+  parties,
   \item Fifthly and finally we will consider the \textbf{combining mode of the
   of the Open Source Software usage}: In this case, we will ask you, whether you
   are going to combine the evaluated Open Source Software with other
   software components by linking all together statically, by linking them
-  dynamically, or by textually including the Open Source Software into your
-  larger unit.
+  dynamically, or by textually including (parts of) the Open Source Software
+  into your larger unit.
 \end{itemize}
 
-In the beginning we defined an Open Source Usecase as a set of classified
-tokens. If we now simply combine all tokens of all classes with all tokens of
-the other classes, we get 2*2*2*3*2 = 48 sets of tokens or 48 Open Source Use
-Cases. But some of these sets are invalid from an empirical view. And some of
-these sets are context sensitive:
+In the beginning we defined an \emph{Open Source Use Case} as a set of
+classified tokens. No we have the following classified tokens:
+\begin{itemize}
+  \item \texttt{type::snimoli} or \texttt{type::proapse}
+  \item \texttt{state::unmodified} or \texttt{state::modified}
+  \item \texttt{context::alone} or \texttt{context::combined}
+  \item \texttt{recipient::4yourself} or \texttt{ecipient::4others}
+  \item \texttt{mode::statically-linked} or \texttt{mode::dynamically-linked} or
+  \\ \texttt{mode::textually-included}
+\end{itemize}
 
-Firstly, it offers no additional knowledge to ask you, whether you are going to
-combine the received software with other software components by linking them
-statically or dynamically, or by including it textually into a larger unit, if
-you already have answered, that you want to use the received Open Source
-Software in combination with other elements.
+If we now simply combine all the tokens of all these classes with all the tokens
+of the other classes\footnote{in the sense of the cross product
+TYPE x STATE x CONTEXT x RECIPIENT x MODE}, we get 2*2*2*3*2 = 48 sets of tokens
+or 48 \textit{Open Source Use Cases}. But some of these sets are invalid from
+an empirical or logical view. And some of these sets are context sensitive:
+
+Firstly, it makes no sense to ask you whether you are going to combine the
+received software with other software components by linking them statically or
+dynamically, or by including it textually into a larger unit, if you already
+have answered, that the received Open Source Software is a \textit{proapse} or
+that it shall be used \textit{alone}: A readily prepared application or server
+can't be linked to another application or server, which also contains a
+\texttt{main}-function. And using a \textit{proapse} or \textit{snimoli}
+\textit{alone} includes that it is used \textit{not in combination} with other
+units, simply because they are tokens of the same class.
 
 Secondly: If you already have specified that the used Open Source
 Software is a \textit{proapse} - hence an autonomous program, an application,
@@ -133,18 +160,18 @@ component of a constructed larger unit) or be used alone (if it is
 And thirdly - just the other way round: If you already have specified that the
 used Open Source Software is a \textit{snimoli} - hence a snippet of code, a
 module, a plugin, or a library -, and that this \textit{snimoli} shall be used
-only by yourself (not distributed to other 3rd. parties, then your answer
+only by yourself (not distributed to other 3rd. parties), then your answer
 includes pratically, that this \textit{snimoli} is used in combination. This
-is logical, because if you want to use it in the state \textit{alone}, then you
-would have a software library on your disc (your are 'using' it for yourself)
-without combining it to any other software: hence in this case this librabry
-would lie on your disc and nothing more: a senseless use case.
+conclusion is valid, because if you want to use it in the state \textit{alone},
+then you would have a software library on your disc (your are 'using' it for
+yourself) without combining it to any other software: hence in this case this
+librabry would lie on your disc and nothing more: a senseless use case.
 
-Do you think this is complicate? Yes, so we do. We spent a couple of time to
-explain ourselves these constraints. Only when we had transposed all
+Do you think, this is complicate? So we do. We spent a couple of time to
+explain ourselves these constraints. Only when we had transposed all the
 combinations and rules into a tree, we got the real insight into situation.
-So let us summarize the these specifications by two little pictures before we
-will specify the real Open Source Use Case finder:
+So let us summarize these specifications by two little pictures before we
+will specify the real Open Source Use Case Finder:
 
 \section{The OS Use Case Dimensions: Classes and Tokens}
 
