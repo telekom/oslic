@@ -23,157 +23,11 @@
 %% use all entries of the bibliography
 %\nocite{*}
 
-After all these introducing remarks let us summarize the center of our idea: We
-know that the right to use Open Source Software depends on the doings required
-by the corresponding Open Source Licenses. In opposite to the commercial
-licenses, you can not buy the right to use a piece of Open Source software.
-Never! It is embedded into the Open Source Definition that the right to use the
-software may not be sold. The OSD states firstly that an Open Source License may
-\glqq{}[\ldots] not restrict any party from selling or giving away the software
-as a component of (any) aggregate software distribution\grqq{}, and adds
-secondly in the same context that an Open Source License \glqq{}[\ldots] shall
-not require a royalty or other fee for such sale\grqq{}\footcite[cf.][\nopage
-wp. §1]{OSI2012a}.
-
-But nevertheless, it is not adequate to derive from this statement that you are
-automatically allowed to use Open Source Software without any service in return:
-generally you have to do something for getting the right to use the software. In
-other words: Open Source Software is specified by the idea of 'paying by doing'.
-
-Therefore these Open Source Licenses describe specific circumstances under
-which the user must execute some tasks. Such circumstances are often sets of
-conditions and may be viewed as triggers for a compliant behaviour. So, if we
-want to offer license fulfilling to-do lists, we have to consider these triggers. 
-
-The real challenge is, that such circumstances are not linear and simple. They
-contain combinations of (sometimes) context sensitive conditions. These
-conditions refer to different class of tokens. Such a class of token might
-denote a feature of the software itself - like being an application or a
-library. Or it might denote the circumstances of using the software - like
-'using the software only for yourself' or 'distributing the software also to
-third parties'.
-
-At the end, we want to determine a set of specific OSUCs - Open Source Use
-Cases. And we want to deliver for each of these OSUCs and for each of the
-considered Open Source Licenses one list of actions, which fulfill the license
-in the context of this use case. In our discussion, such an \textit{Open Source
-Use Case} shall be a set of tokens describing the circumstances of a specific
-usage. So, in the beginning we have to specify the relevant classes of tokens.
-Then we build the valid combinations of tokens, our Open Source Use Cases. And
-finally - based on the specifying tokens - we generate a taxonomy. In the
-next chapter this taxonomy will become the base of the Open Source Use Case
-Finder which leads you to your specific OSUC by only a few questions and
-answers. 
-
-In other words: this chapter defines the relevant tokens and derives the
-conceptual structures. The following chapter will use the results of this
-chapter - but without deeper discussions.
-
-So, let's now start with the classes of tokens by which the circumstances of
-using a piece of Open Source Software can be specified:
-
-\begin{itemize}
-  \item Firstly we will consider the \textbf{type of the Open Source Software}.
-  We will distinguish between code snippets, modules, libraries or plugins on
-  the one hand, and autonomous, processable applications, programs or servers on
-  the other hand. Let's name the first set the 'snimolis' and the second the
-  'proapses' for indicating, that we are not only talking about libraries or
-  applications in the well known sense\footnote{Of course, our newly introduced
-  concepts 'snimoli' and 'proapse' are not absolutely one of the most elegant
-  words. So, initially we tried to talk about 'applications' and 'librabries',
-  although in our context these words should denote more than they traditionally
-  do. But we couldn't minimize the irritations of our interlocutors. Too often
-  we had to amend that we were not only talking about applications and
-  librabries in the strict sense of the words, but about clusters of similar
-  entities. Finally we decided to generate our own words. Naturally, each
-  improving proposal is welcome ;-) }. More detailedly spoken, we will ask you,
-  whether the Open Source Software, you want to use, is a software library in
-  the broadest sense (an includable code snippet, a linkable module or library,
-  or a loadable plugin), or whether it is an autonomous application or server
-  which can be executed or processed. In the first case, the answer should be
-  'it's a snimoli', in the second 'it's a proapse'.
-  \item Secondly we will consider the \textbf{state of the of the Open Source
-  Software}: It might be used, as one has got it. Or one can modify it, before
-  using it. More detailedly spoken, we will ask you, whether you want to leave
-  the evaluated Open Source Software as you have got it, or whether you want to
-  modify it before using and/or distributing it to 3rd parties. In the first
-  case, the answer should be 'unmodified', in the second 'modified'.
-  \item Thirdly we will consider the \textbf{usage context of the of the Open
-  Source Software}: On the hand you might use the received Open Source Software
-  as one of your readily constructed applications. On the other hand you might
-  construct a larger application based upon the received Open Source, because it
-  is using it as one of its' components. More detailedly spoken, we will ask
-  you, whether you are you using the evaluated Open Source Software as an
-  autonomous piece of software, or whether you are using it in combination
-  with other components for setting up a larger, more complex piece of software.
-  \item Fourthly we will consider the \textbf{recipient of the of the Open
-  Source Software}: Sometimes you might wish to use the received Open
-  Source Software only for yourself. In other cases you might intend to
-  hand over the software (also) to other people. More detailedly spoken, we will
-  ask you, whether you are going to use the evaluated Open Source Software only
-  for yourself, or whether you plan to (re)distribute it (also) to third
-  parties,
-  \item Fifthly and finally we will consider the \textbf{combining mode of the
-  of the Open Source Software usage}: In this case, we will ask you, whether you
-  are going to combine the evaluated Open Source Software with other
-  software components by linking all together statically, by linking them
-  dynamically, or by textually including (parts of) the Open Source Software
-  into your larger unit.
-\end{itemize}
-
-In the beginning we defined an \emph{Open Source Use Case} as a set of
-classified tokens. No we have the following classified tokens:
-\begin{itemize}
-  \item \texttt{type::snimoli} or \texttt{type::proapse}
-  \item \texttt{state::unmodified} or \texttt{state::modified}
-  \item \texttt{context::alone} or \texttt{context::combined}
-  \item \texttt{recipient::4yourself} or \texttt{ecipient::4others}
-  \item \texttt{mode::statically-linked} or \texttt{mode::dynamically-linked} or
-  \\ \texttt{mode::textually-included}
-\end{itemize}
-
-If we now simply combine all the tokens of all these classes with all the tokens
-of the other classes\footnote{in the sense of the cross product
-TYPE x STATE x CONTEXT x RECIPIENT x MODE}, we get 2*2*2*3*2 = 48 sets of tokens
-or 48 \textit{Open Source Use Cases}. But some of these sets are invalid from
-an empirical or logical view. And some of these sets are context sensitive:
-
-Firstly, it makes no sense to ask you whether you are going to combine the
-received software with other software components by linking them statically or
-dynamically, or by including it textually into a larger unit, if you already
-have answered, that the received Open Source Software is a \textit{proapse} or
-that it shall be used \textit{alone}: A readily prepared application or server
-can't be linked to another application or server, which also contains a
-\texttt{main}-function. And using a \textit{proapse} or \textit{snimoli}
-\textit{alone} includes that it is used \textit{not in combination} with other
-units, simply because they are tokens of the same class.
-
-Secondly: If you already have specified that the used Open Source
-Software is a \textit{proapse} - hence an autonomous program, an application,
-or a server -, then your answer includes, that the software is used alone and is
-not used in combination. But if you have specified that the used Open Source
-Software is a \textit{snimoli} - hence a snippet of code, a module, a plugin, or a
-librabry -, then it can indeed be used in combination (if it becomes a
-component of a constructed larger unit) or be used alone (if it is
-'only' re-distributed to 3rd parties).
-
-And thirdly - just the other way round: If you already have specified that the
-used Open Source Software is a \textit{snimoli} - hence a snippet of code, a
-module, a plugin, or a library -, and that this \textit{snimoli} shall be used
-only by yourself (not distributed to other 3rd. parties), then your answer
-includes pratically, that this \textit{snimoli} is used in combination. This
-conclusion is valid, because if you want to use it in the state \textit{alone},
-then you would have a software library on your disc (your are 'using' it for
-yourself) without combining it to any other software: hence in this case this
-librabry would lie on your disc and nothing more: a senseless use case.
-
-Do you think, this is complicate? So we do. We spent a couple of time to
-explain ourselves these constraints. Only when we had transposed all the
-combinations and rules into a tree, we got the real insight into situation.
-So let us summarize these specifications by two little pictures before we
-will specify the real Open Source Use Case Finder:
 
 \section{The OS Use Case Dimensions: Classes and Tokens}
+
+
+\begin{footnotesize}
 
 \pstree[treemode=R, levelsep=*0.2, treesep=0.6]{\Toval{tokens}}{ 
     \pstree[]{\Tr{\fbox{type?}}}{
@@ -185,8 +39,8 @@ will specify the real Open Source Use Case Finder:
       \Toval{modified}
     }
     \pstree[]{\Tr{\fbox{context?}}}{
-      \Toval{alone} 
-      \pstree[]{\Toval{combined}}{
+      \Toval{independent} 
+      \pstree[]{\Toval{embedded}}{
         \pstree[]{\Tr{\fbox{mode?}}}{
           \Toval{statically linked}
           \Toval{dynamically linked}
@@ -199,11 +53,22 @@ will specify the real Open Source Use Case Finder:
       \Toval{4others}
     }
   }
-  
+
+\end{footnotesize}  
   
 
 \section{The OS Use Case Taxonomy}
-\tiny
+
+This is one tree, 'collecting' the tokens and offering the \emph{Open Source Use
+Cases} as their leafs\footnote{ Each of the invalid use cases (= sets of tokens)
+[for details s. p. \pageref{InvalidFinderTokenCombinations}] is marked by an
+\lightning{} and leads to an empty set (= $\varnothing$): A proapse can not be
+embedded with another software unit, also containing a main-function. Using
+a software library only for yourself and independent (not in combination with larger
+software unit), is like having an unused heap of bytes on your disc.}:
+
+\label{OsucDefinitionTree}
+\begin{tiny}
 \pstree[treemode=R,levelsep=*0.2, treesep=0.2]{\Toval{OSS}}{ 
     \pstree[]{\Tr{\fbox{type?}}}{
       \pstree[]{\Tr{\parbox{4em}{\texttt{\{\underline{proapse}\}}}}}{
@@ -215,7 +80,7 @@ will specify the real Open Source Use Case Finder:
               \pstree[]{\Tr{\parbox{5.2em}{
                              \texttt{\{proapse,\\
                              \hspace*{0.5em}unmodified,\\
-                             \hspace*{0.5em}\underline{alone}\}}}}}{
+                             \hspace*{0.5em}\underline{independent}\}}}}}{
                 \pstree[]{\Tr{\fbox{recipient?}}}{
                 
                   \pstree[]{\Toval{\bfseries{OSUC-01}}}{
@@ -223,7 +88,7 @@ will specify the real Open Source Use Case Finder:
                     \Tr{\parbox{5.2em}{
                              \texttt{\{proapse,\\
                              \hspace*{0.5em}unmodified,\\
-                             \hspace*{0.5em}alone,\\
+                             \hspace*{0.5em}independent,\\
                              \hspace*{0.5em}\underline{4yourself}\}}}}
                    }                            
                   \pstree[]{\Toval{\bfseries{OSUC-02}}}{
@@ -231,7 +96,7 @@ will specify the real Open Source Use Case Finder:
                     \Tr{\parbox{5.2em}{
                              \texttt{\{proapse,\\
                              \hspace*{0.5em}unmodified,\\
-                             \hspace*{0.5em}alone,\\
+                             \hspace*{0.5em}independent,\\
                              \hspace*{0.5em}\underline{4others}\}}}}
                     }         
                 }
@@ -239,7 +104,7 @@ will specify the real Open Source Use Case Finder:
               \pstree[]{\Tr{\parbox{5.4em}{
                              \texttt{\{proapse,\\
                              \hspace*{0.5em}unmodified,\\
-                             \hspace*{0.5em}\underline{combined}
+                             \hspace*{0.5em}\underline{embedded}
                              \bfseries{\lightning}\}}}}}{
                 \Tr{$\varnothing$}
               }              
@@ -252,20 +117,20 @@ will specify the real Open Source Use Case Finder:
               \pstree[]{\Tr{\parbox{5.2em}{
                              \texttt{\{proapse,\\
                              \hspace*{0.5em}modified,\\
-                             \hspace*{0.5em}\underline{alone}\}}}}}{
+                             \hspace*{0.5em}\underline{independent}\}}}}}{
                 \pstree[]{\Tr{\fbox{recipient?}}}{
                   \pstree[]{\Toval{\bfseries{OSUC-03}}}{
                     \Tr{\parbox{5.2em}{
                              \texttt{\{proapse,\\
                              \hspace*{0.5em}modified,\\
-                             \hspace*{0.5em}alone,\\
+                             \hspace*{0.5em}independent,\\
                              \hspace*{0.5em}\underline{4yourself}\}}}}
                    }
                    \pstree[]{\Toval{\bfseries{OSUC-04}}}{         
                     \Tr{\parbox{5.2em}{
                              \texttt{\{proapse,\\
                              \hspace*{0.5em}modified,\\
-                             \hspace*{0.5em}alone,\\
+                             \hspace*{0.5em}independent,\\
                              \hspace*{0.5em}\underline{4others}\}}}}
                    }         
                 }
@@ -273,7 +138,7 @@ will specify the real Open Source Use Case Finder:
               \pstree[]{\Tr{\parbox{5.4em}{
                              \texttt{\{proapse,\\
                              \hspace*{0.5em}modified,\\
-                             \hspace*{0.5em}\underline{combined}
+                             \hspace*{0.5em}\underline{embedded}
                              \bfseries{\lightning}\}}}}}{                          
                 \Tr{$\varnothing$}
               }              
@@ -290,13 +155,13 @@ will specify the real Open Source Use Case Finder:
               \pstree[]{\Tr{\parbox{5.2em}{
                              \texttt{\{snimoli,\\
                              \hspace*{0.5em}unmodified,\\
-                             \hspace*{0.5em}\underline{alone}\}}}}}{
+                             \hspace*{0.5em}\underline{independent}\}}}}}{
                 \pstree[]{\Tr{\fbox{recipient?}}}{
                   \pstree[]{
                     \Tr{\parbox{5.8em}{
                              \texttt{\{snimoli,\\
                              \hspace*{0.5em}unmodified,\\
-                             \hspace*{0.5em}alone,\\
+                             \hspace*{0.5em}independent,\\
                              \hspace*{0.5em}\underline{4yourself}
                              \bfseries{\lightning}\}}}}
                      }{\Tr{$\varnothing$}}        
@@ -306,7 +171,7 @@ will specify the real Open Source Use Case Finder:
                     \Tr{\parbox{5.2em}{
                              \texttt{\{snimoli,\\
                              \hspace*{0.5em}unmodified,\\
-                             \hspace*{0.5em}alone,\\
+                             \hspace*{0.5em}independent,\\
                              \hspace*{0.5em}\underline{4others}\}}}}
                     }         
                 }
@@ -316,22 +181,22 @@ will specify the real Open Source Use Case Finder:
               \pstree[]{\Tr{\parbox{5.2em}{
                              \texttt{\{snimoli,\\
                              \hspace*{0.5em}unmodified,\\
-                             \hspace*{0.5em}\underline{combined}\}}}}}{
+                             \hspace*{0.5em}\underline{embedded}\}}}}}{
                 \pstree[]{\Tr{\fbox{recipient?}}}{
                   \pstree[]{\Toval{\bfseries{OSUC-06}}}{
                     \pstree[]{\Tr{\parbox{5.2em}{
                              \texttt{\{snimoli,\\
                              \hspace*{0.5em}unmodified,\\
-                             \hspace*{0.5em}combined,\\
+                             \hspace*{0.5em}embedded,\\
                              \hspace*{0.5em}\underline{4yourself}\}}}}}{
                                \pstree[]{\Tr{\fbox{$\cup$ mode?}}}{
                                  \Tr{\parbox{5.6em}{\underline{\textit{OSUC-06a}}\\
                                  \texttt{\{statically\\
                                   \hspace*{0.5em}linked\}}}}
-                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-06a}}\\
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-06b}}\\
                                 \texttt{\{dynamically\\
                                   \hspace*{0.5em}linked\}}}}
-                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-06a}}\\
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-06c}}\\
                                 \texttt{\{textually\\
                                   \hspace*{0.5em}included\}}}}
                                }
@@ -341,16 +206,16 @@ will specify the real Open Source Use Case Finder:
                       \pstree[]{\Tr{\parbox{5.2em}{
                              \texttt{\{snimoli,\\
                              \hspace*{0.5em}unmodified,\\
-                             \hspace*{0.5em}combined,\\
+                             \hspace*{0.5em}embedded,\\
                              \hspace*{0.5em}\underline{4others}\}}}}}{
                                \pstree[]{\Tr{\fbox{$\cup$ mode?}}}{
                                 \Tr{\parbox{5.6em}{\underline{\textit{OSUC-07a}}\\
                                 \texttt{\{statically\\
                                   \hspace*{0.5em}linked\}}}}
-                                \Tr{\parbox{5.26em}{\underline{\textit{OSUC-07a}}\\
+                                \Tr{\parbox{5.26em}{\underline{\textit{OSUC-07b}}\\
                                 \texttt{\{dynamically\\
                                   \hspace*{0.5em}linked\}}}}
-                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-07a}}\\
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-07c}}\\
                                 \texttt{\{textually\\
                                   \hspace*{0.5em}included\}}}}
                                }
@@ -370,13 +235,13 @@ will specify the real Open Source Use Case Finder:
               \pstree[]{\Tr{\parbox{5.2em}{
                              \texttt{\{snimoli,\\
                              \hspace*{0.5em}modified,\\
-                             \hspace*{0.5em}\underline{alone}\}}}}}{
+                             \hspace*{0.5em}\underline{independent}\}}}}}{
                 \pstree[]{\Tr{\fbox{recipient?}}}{
                   \pstree[]{
                     \Tr{\parbox{5.8em}{
                              \texttt{\{snimoli,\\
                              \hspace*{0.5em}modified,\\
-                             \hspace*{0.5em}alone,\\
+                             \hspace*{0.5em}independent,\\
                              \hspace*{0.5em}\underline{4yourself}
                              \bfseries{\lightning}\}}}}
                      }{\Tr{$\varnothing$}}         
@@ -385,7 +250,7 @@ will specify the real Open Source Use Case Finder:
                     \Tr{\parbox{5.2em}{
                              \texttt{\{snimoli,\\
                              \hspace*{0.5em}modified,\\
-                             \hspace*{0.5em}alone,\\
+                             \hspace*{0.5em}independent,\\
                              \hspace*{0.5em}\underline{4others}\}}}}
                     }
                 }
@@ -394,22 +259,22 @@ will specify the real Open Source Use Case Finder:
               \pstree[]{\Tr{\parbox{5.2em}{
                              \texttt{\{snimoli,\\
                              \hspace*{0.5em}modified,\\
-                             \hspace*{0.5em}\underline{combined}\}}}}}{
+                             \hspace*{0.5em}\underline{embedded}\}}}}}{
                 \pstree[]{\Tr{\fbox{recipient?}}}{
                   \pstree[]{\Toval{\bfseries{OSUC-09}}}{     
                     \pstree[]{\Tr{\parbox{5.2em}{
                              \texttt{\{snimoli,\\
                              \hspace*{0.5em}modified,\\
-                             \hspace*{0.5em}combined,\\
+                             \hspace*{0.5em}embedded,\\
                              \hspace*{0.5em}\underline{4yourself}\}}}}}{
                                \pstree[]{\Tr{\fbox{$\cup$ mode?}}}{
                                  \Tr{\parbox{5.6em}{\underline{\textit{OSUC-09a}}\\
                                  \texttt{\{statically\\
                                   \hspace*{0.5em}linked\}}}}
-                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-09a}}\\
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-09b}}\\
                                 \texttt{\{dynamically\\
                                 \hspace*{0.5em}linked\}}}}
-                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-09a}}\\
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-09c}}\\
                                 \texttt{\{textually\\
                                   \hspace*{0.5em}included\}}}}
                                }
@@ -419,7 +284,7 @@ will specify the real Open Source Use Case Finder:
                     \pstree[]{\Tr{\parbox{5.2em}{
                              \texttt{\{snimoli,\\
                              \hspace*{0.5em}modified,\\
-                             \hspace*{0.5em}combined,\\
+                             \hspace*{0.5em}embedded,\\
                              \hspace*{0.5em}\underline{4others}\}}}}}{
                                \pstree[]{\Tr{\fbox{$\cup$ mode?}}}{
                                 \Tr{\parbox{5.6em}{\underline{\textit{OSUC-10a}}\\
@@ -435,36 +300,12 @@ will specify the real Open Source Use Case Finder:
                              }
                       }
                  }
-              }
-              
-              
-              
-              %%
-%               \pstree[]{\Tr{\parbox{5.2em}{
-%                              \texttt{\{snimoli!,\\
-%                              \hspace*{0.5em}modified,\\
-%                              \hspace*{0.5em}\underline{combined}\}}}}}{
-%                 \pstree[]{\Tr{\fbox{recipient?}}}{
-%                   \Tr{\parbox{5.2em}{
-%                              \texttt{\{snimoli,\\
-%                              \hspace*{0.5em}modified,\\
-%                              \hspace*{0.5em}combined,\\
-%                              \hspace*{0.5em}\underline{4yourself}\}}}}
-%                    \Tr{\parbox{5.2em}{
-%                              \texttt{\{snimoli,\\
-%                              \hspace*{0.5em}modified,\\
-%                              \hspace*{0.5em}combined,\\
-%                              \hspace*{0.5em}\underline{4others}\}}}}
-%                 }
-%               } 
-
-             
+              }             
             }
           }
         }
       }      
     }
   }
-  
-\normalsize{}
+\end{tiny}
 %\bibliography{../../../bibfiles/oscResourcesEn}

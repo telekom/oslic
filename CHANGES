@@ -1,3 +1,11 @@
+2012-07-05: release 0.4.0
+- textual improvements
+2012-07-03: release 0.3.99
+- completed the break through version containing the
+  finder, the definitions, and the corresponding
+  BSD to-do lists.
+- Integrated Greg's proposals for adding a license
+  specific finder additionally.
 2012-06-24: release 0.3.90
 - completed the OS UC finder introducing chapter
 2012-03-22: released 0.2.1
