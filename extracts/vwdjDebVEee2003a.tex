@@ -1,0 +1,133 @@
+% Telekom osCompendium extract template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
+%
+% select the document class
+% S.26: [ 10pt|11pt|12pt onecolumn|twocolumn oneside|twoside notitlepage|titlepage final|draft
+%         leqno fleqn openbib a4paper|a5paper|b5paper|letterpaper|legalpaper|executivepaper openrigth ]
+% S.25: { article|report|book|letter ... }
+%
+% oder koma-skript S.10 + 16
+\documentclass[DIV=calc,BCOR=5mm,11pt,headings=small,oneside,abstract=true, toc=bib]{scrartcl}
+
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4,ngerman}
+\usepackage[ngerman, english]{babel}
+\selectlanguage{english}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+\input{../btexmat/oscJbibCfgEnInc}
+
+% language specific hyphenation
+\input{../btexmat/oscHyphenationEnInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{headings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+\usepackage[dvips]{epsfig}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+\usepackage[marginal]{footmisc}
+%- end(footnote-configuration)
+
+\begin{document}
+
+%% use all entries of the bliography
+
+%%-- start(titlepage)
+\titlehead{Literaturexzerpt}
+\subject{Autor(en): R. van Wendel de Joode and J. A. de Bruijn and M. J. G. van
+Eeten}
+\title{Titel: Protecting the Virtual Commons. Self-Organizing Open Source
+and Free Software Communities and Innovative Intellectual Property Regimes}
+\subtitle{Jahr: 2003 }
+\author{K. Reincke\input{../btexmat/oscLicenseFootnoteInc}}
+
+%\thanks{den Autoren von KOMA-Script und denen von Jurabib}
+\maketitle
+%%-- end(titlepage)
+%\nocite{*}
+
+\begin{abstract}
+Das Werk / The work\footcite[][]{VwdjDebVEee2003a} \\
+\noindent \itshape
+\ldots Neben anderen will dieser Bericht die Frage beantworten, warum die
+Community so viele verschiedene FLOSS Lizenzen definiert hat. Die Antwort ist
+vielleicht etwas dünn: der grösste Teil der Lizenzen sei von der BSD oder der
+GPL abgeleitet, um die grundlegenden Prinzipien der Community zu schützen. \\
+\noindent
+\ldots Beside other questions this report wants to answer the question why the
+communities have created so many different Free / Open Source Software licenses.
+The answer is perhaps a little thin: the most part of the licenses are derived
+from BSD or GPL 'to protect the fundamental principles of the communities'.
+\end{abstract}
+\footnotesize
+%\tableofcontents
+\normalsize
+
+Beside other questions this report wants to answer the following question:
+\qlqq{}Why have open source and free software communities created so many
+differentlicenses to protect their intellectual
+property?\grqq{}\footcite[cf.][2]{VwdjDebVEee2003a}. The details are elaborated
+on some pages\footcite[cf.][72ff]{VwdjDebVEee2003a} and finally the authors
+themselves \glqq{}[\ldots] argued that many of the licenses derive from two
+licenses, namely the BSD license and the
+GPL\grqq{}\footcite[cf.][109]{VwdjDebVEee2003a} and that \glqq{} each open
+source and free softwarer license serves morew or less the same function, namely
+to protect the fundamental principles of the
+communities\grqq{}\footcite[cf.][11o]{VwdjDebVEee2003a}
+
+\small
+\bibliography{../bibfiles/oscResourcesEn}
+
+\end{document}

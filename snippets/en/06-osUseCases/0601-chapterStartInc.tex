@@ -23,6 +23,165 @@
 %% use all entries of the bibliography
 %\nocite{*}
 
-[TDB \ldots]
+%[todo: \ldots (insert all contexts concerning the idea of use cases)]
+
+After all these introductory remarks, we can summarize our idea. We know that
+the right to use Open Source Software depends on the tasks required by the Open
+Source Licenses. As opposed to commercial licenses, you can not buy the right to
+use a piece of Open Source Software using money. It is embedded into the Open
+Source Definition that the right to use the software may not be sold. The OSD
+states firstly that an Open Source License may \glqq{}[\ldots] not restrict any
+party from selling or giving away the software as a component of (any) aggregate
+software distribution\grqq{}, and adds secondly in the same context that an Open
+Source License \glqq{}[\ldots] shall not require a royalty or other fee for such
+sale\grqq{}\footcite[cf.][\nopage wp. §1]{OSI2012a}.
+
+However, it would be wrong to conclude that you are automatically allowed to use
+Open Source Software without any service in return: generally you have to do
+something to gain the right to use the software. In other words: Open Source
+Software is covered by the idea of ’paying by doing’. As such, Open Source
+Li\-cen\-ses describe specific circumstances under which the user must execute
+some tasks in order to be compliant with the licenses. So, if we want to offer
+to-do lists for fulfilling license conditions, we must consider these tasks and
+circumstances.
+
+In practice, such circumstances are not linear and simple. They contain
+combinations of (sometimes context sensitive) conditions, which can be grouped
+together into classes of tokens. Such a class of tokens might denote a feature
+of the software itself - such as being an application or a library. Or it can
+refer to the circumstances of using the software, such as 'using the software
+only for yourself' or 'distributing the software also to third parties'.
+
+At the end, we want to determine a set of specific OSUCs - the \emph{Open Source
+Use Cases}. And we want to deliver for each of these OSUCs and for each of the
+considered Open Source Licenses one list of actions, which fulfills the license
+in that context\footnote{Fortunately, sometimes one task list fulfills the
+conditions of more than one use case - a welcome reduction of complexity}.
+
+Such an \emph{Open Source Use Case} shall be considered as a set of tokens
+describing the circumstances of a specific usage. Hence, to begin, we must
+specify the relevant classes of tokens, before we can determine the valid
+combinations of these tokens - our \emph{Open Source Use Cases}. Finally, based
+on the tokens, we generate a taxonomy in form of a tree. This tree will become
+the base of the \emph{Open Source Use Case Finder} which will be offered by the
+next chapter, and which leads you to your specific OSUC by evaluating just a few
+questions and answers.
+
+There are only a handful of tokens which are relevant to the circumstances of
+Open Source Software Licenses:
+
+\label{OsucTokens}
+\begin{itemize}
+  \item The \textbf{\underline{type} of the Open Source Software}: On one hand
+  there are code snippets, modules, libraries and plugins, and on the other
+  hand, autonomous applications, programs and servers. We’ll coin the word
+  ’snimolis’ for the first set, and ’proapses’ for the second. This is
+  necessary, as we are not only talking about libraries and applications in the
+  everyday sense, but rather in the broadest sense\footnote{Of course, our newly
+  introduced concepts 'snimoli' and 'proapse' are not absolutely one of the most
+  elegant words. So, initially we tried to talk about 'applications' and
+  'libraries', although in our context these words should denote more, than they
+  traditionally do. But we couldn't minimize the irritations of our
+  interlocutors. Too often we had to amend that we were not only talking about
+  applications and libraries in the strict sense of the words. Finally we
+  decided to find our own words - and to stay open for better proposals ;-) }.
+  More specifially, we will ask you, whether the Open Source Software, you
+  want to use, is an includable code snippet, a linkable module or library, or a
+  loadable plugin, or whether it is an autonomous application or server which
+  can be executed or processed. In the first case, the answer should be 'it's a
+  \underline{snimoli}', in the second 'it's a \underline{proapse}'.
+
+  \item The \textbf{\underline{state} of the of the Open Source Software}: It
+  might be used, as one has got it. Or it can be modified, before being used.
+  More specifially, we will ask you, whether you want to leave the Open Source
+  Software as you have got it, or whether you want to modify it before using
+  and/or distributing it to 3rd parties. In the first case, the answer should be
+  '\underline{unmodified}', in the second '\underline{modified}'.
+  
+  \item The \textbf{usage \underline{context} of the of the Open Source
+  Software}: On the hand you might use the received Open Source Software as a
+  readily prepared application. On the other hand you might embed the received
+  Open Source into a larger application as one of its' components. More
+  specifially, we will ask you, whether you are you using the Open Source
+  Software as an autonomous piece of software, or whether you are using it as an
+  embbeded part of a larger, more complex piece of software. In the first case,
+  the answer should be '\underline{independent}', in the second
+  '\underline{embedded}'.
+  
+  \item The \textbf{\underline{recipient} of the of the Open Source Software}:
+  Sometimes you might wish to use the received Open Source Software only for
+  yourself. In other cases you might intend to hand over the software (also) to
+  other people. More specifially, we will ask you, whether you are going to use
+  the Open Source Software only for yourself, or whether you plan to
+  (re)distribute it (also) to third parties. In the first case, the answer
+  should be '\underline{4yourself}', in the second '\underline{4others}'.
+ 
+  \item The \textbf{\underline{mode} of combination}: In this case, we will ask
+  you, whether you are going to combine or to embed the Open Source Software
+  with other software components by linking them statically, by linking them
+  dynamically, or by textually including (parts of) the Open Source Software
+  into your larger product. In the first case, the answer should be
+  '\underline{statically linked}', in the second '\underline{dynamically
+  linked}', in the third '\underline{textually included}'
+  
+\end{itemize}
+
+From a more programmatic point-of-view, we can summarise these tokens as follows:
+
+\begin{itemize}
+  \item \texttt{type::snimoli} \emph{or} \texttt{type::proapse}
+  \item \texttt{state::unmodified} \emph{or} \texttt{state::modified}
+  \item \texttt{context::independent} \emph{or} \texttt{context::embedded}
+  \item \texttt{recipient::4yourself} \emph{or} \texttt{ecipient::4others}
+  \item \texttt{mode::statically-linked} \emph{or} \texttt{mode::dynamically-linked}
+   \emph{or} \\ \texttt{mode::textually-included}
+\end{itemize}
+
+We already defined an Open Source Use Case as a combination of these tokens. If
+we simply combine all these tokens of all these classes with all the tokens of
+the other classes\footnote{in the sense of the cross product TYPE $\times$ STATE
+$\times$ CONTEXT $\times$ RECIPIENT $\times$ MODE}, we get 2*2*2*2*3 = 48 sets
+of tokens - or 48 \emph{Open Source Use Cases}. Fortunately, some of the
+generated sets are invalid from an empirical or logical view, and some of these
+sets are context sensitive:
+
+\begin{enumerate}
+  
+  \item \label{InvalidFinderTokenCombinations}It makes no sense to ask you
+  whether you are going to combine the received software with other software
+  components by linking them statically or dynamically, or by including it
+  textually into a larger unit, if you already have answered, that the received
+  Open Source Software is a \emph{proapse} or that it shall be used
+  \emph{independently}: A readily prepared application or server can't be linked
+  to another application or server, which also contains a
+  \texttt{main}-function. And using a \emph{proapse} or \emph{snimoli}
+  \emph{independently} includes that it is used \emph{not in combination} with
+  other units, simply because they are tokens of the same class.
+  
+  \item If you already have specified that the used Open Source Software is a
+  \emph{proapse} - hence an autonomous program, an application, or a server -,
+  then your answer includes, that the software is used independently and is not
+  embedded with other components into a larger unit - simply because of the
+  nature of all \emph{proapses}. But if you have specified that the used Open
+  Source Software is a \emph{snimoli} - hence a snippet of code, a module, a
+  plugin, or a library -, then it can indeed be used as an embedded component of
+  a constructed larger application or server, or it can be used independently in
+  case you 'only' re-distribute it to 3rd parties.
+  
+  \item If you already have specified that the used Open Source Software is a
+  \emph{snimoli} - hence a snippet of code, a module, a plugin, or a library -,
+  and that this \emph{snimoli} shall be used only by yourself (not distributed
+  to other 3rd. parties), then your answer must also imply that this
+  \emph{snimoli} is used in combination, as an embedded part of a larger unit.
+  It makes no sense to 'try' to use a library autonomously, without using it
+  as component of another application. In this case, it would simply sit on the
+  disk and would do nothing more than occupying space.
+
+\end{enumerate}
+
+Does this sound complex? We thought so too. We spent much
+time explaining these constraints to ourselves, and only when we had transposed
+all the combinations and rules into a tree, did the situation become clearer.
+The following diagrams shall summarise this way of clarification:
 
 %\bibliography{../../../bibfiles/oscResourcesEn}
