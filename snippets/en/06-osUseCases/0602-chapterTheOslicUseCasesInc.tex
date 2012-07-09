@@ -1,0 +1,311 @@
+% Telekom osCompendium 'for beeing included' snippet template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ Framework derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke 2012 CC BY 3.0  http://mycsrf.fodina.de/ ]
+%
+
+
+%% use all entries of the bibliography
+%\nocite{*}
+
+
+\section{The OS Use Case Dimensions: Classes and Tokens}
+
+
+\begin{footnotesize}
+
+\pstree[treemode=R, levelsep=*0.2, treesep=0.6]{\Toval{tokens}}{ 
+    \pstree[]{\Tr{\fbox{type?}}}{
+      \Toval{proapse} 
+      \Toval{snimoli}
+    }
+    \pstree[]{\Tr{\fbox{state?}}}{
+      \Toval{unmodified} 
+      \Toval{modified}
+    }
+    \pstree[]{\Tr{\fbox{context?}}}{
+      \Toval{independent} 
+      \pstree[]{\Toval{embedded}}{
+        \pstree[]{\Tr{\fbox{mode?}}}{
+          \Toval{statically linked}
+          \Toval{dynamically linked}
+          \Toval{textually included}
+        }
+      }
+    }
+    \pstree[]{\Tr{\fbox{recipient?}}}{
+      \Toval{4yourself} 
+      \Toval{4others}
+    }
+  }
+
+\end{footnotesize}  
+  
+
+\section{The OS Use Case Taxonomy}
+
+This is one tree, 'collecting' the tokens and offering the \emph{Open Source Use
+Cases} as their leafs\footnote{ Each of the invalid use cases (= sets of tokens)
+[for details s. p. \pageref{InvalidFinderTokenCombinations}] is marked by an
+\lightning{} and leads to an empty set (= $\varnothing$): A proapse can not be
+embedded with another software unit, also containing a main-function. Using
+a software library only for yourself and independent (not in combination with larger
+software unit), is like having an unused heap of bytes on your disc.}:
+
+\label{OsucDefinitionTree}
+\begin{tiny}
+\pstree[treemode=R,levelsep=*0.2, treesep=0.2]{\Toval{OSS}}{ 
+    \pstree[]{\Tr{\fbox{type?}}}{
+      \pstree[]{\Tr{\parbox{4em}{\texttt{\{\underline{proapse}\}}}}}{
+        \pstree[]{\Tr{\fbox{state?}}}{
+          \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{proapse,\\
+                             \hspace*{0.5em}\underline{unmodified}\}}}}}{
+            \pstree[]{\Tr{\fbox{context?}}}{
+              \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{proapse,\\
+                             \hspace*{0.5em}unmodified,\\
+                             \hspace*{0.5em}\underline{independent}\}}}}}{
+                \pstree[]{\Tr{\fbox{recipient?}}}{
+                
+                  \pstree[]{\Toval{\bfseries{OSUC-01}}}{
+              
+                    \Tr{\parbox{5.2em}{
+                             \texttt{\{proapse,\\
+                             \hspace*{0.5em}unmodified,\\
+                             \hspace*{0.5em}independent,\\
+                             \hspace*{0.5em}\underline{4yourself}\}}}}
+                   }                            
+                  \pstree[]{\Toval{\bfseries{OSUC-02}}}{
+                             
+                    \Tr{\parbox{5.2em}{
+                             \texttt{\{proapse,\\
+                             \hspace*{0.5em}unmodified,\\
+                             \hspace*{0.5em}independent,\\
+                             \hspace*{0.5em}\underline{4others}\}}}}
+                    }         
+                }
+              }
+              \pstree[]{\Tr{\parbox{5.4em}{
+                             \texttt{\{proapse,\\
+                             \hspace*{0.5em}unmodified,\\
+                             \hspace*{0.5em}\underline{embedded}
+                             \bfseries{\lightning}\}}}}}{
+                \Tr{$\varnothing$}
+              }              
+            }
+          }
+          \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{proapse,\\
+                             \hspace*{0.5em}\underline{modified}\}}}}}{
+            \pstree[]{\Tr{\fbox{context?}}}{
+              \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{proapse,\\
+                             \hspace*{0.5em}modified,\\
+                             \hspace*{0.5em}\underline{independent}\}}}}}{
+                \pstree[]{\Tr{\fbox{recipient?}}}{
+                  \pstree[]{\Toval{\bfseries{OSUC-03}}}{
+                    \Tr{\parbox{5.2em}{
+                             \texttt{\{proapse,\\
+                             \hspace*{0.5em}modified,\\
+                             \hspace*{0.5em}independent,\\
+                             \hspace*{0.5em}\underline{4yourself}\}}}}
+                   }
+                   \pstree[]{\Toval{\bfseries{OSUC-04}}}{         
+                    \Tr{\parbox{5.2em}{
+                             \texttt{\{proapse,\\
+                             \hspace*{0.5em}modified,\\
+                             \hspace*{0.5em}independent,\\
+                             \hspace*{0.5em}\underline{4others}\}}}}
+                   }         
+                }
+              }
+              \pstree[]{\Tr{\parbox{5.4em}{
+                             \texttt{\{proapse,\\
+                             \hspace*{0.5em}modified,\\
+                             \hspace*{0.5em}\underline{embedded}
+                             \bfseries{\lightning}\}}}}}{                          
+                \Tr{$\varnothing$}
+              }              
+            }
+          }
+        }
+      } 
+      \pstree[]{\Tr{\parbox{4em}{\texttt{\{\underline{snimoli}\}}}}}{
+        \pstree[]{\Tr{\fbox{state?}}}{
+          \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}\underline{unmodified}\}}}}}{
+            \pstree[]{\Tr{\fbox{context?}}}{
+              \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}unmodified,\\
+                             \hspace*{0.5em}\underline{independent}\}}}}}{
+                \pstree[]{\Tr{\fbox{recipient?}}}{
+                  \pstree[]{
+                    \Tr{\parbox{5.8em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}unmodified,\\
+                             \hspace*{0.5em}independent,\\
+                             \hspace*{0.5em}\underline{4yourself}
+                             \bfseries{\lightning}\}}}}
+                     }{\Tr{$\varnothing$}}        
+                             
+                             
+                   \pstree[]{\Toval{\bfseries{OSUC-05}}}{        
+                    \Tr{\parbox{5.2em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}unmodified,\\
+                             \hspace*{0.5em}independent,\\
+                             \hspace*{0.5em}\underline{4others}\}}}}
+                    }         
+                }
+              }
+              
+              
+              \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}unmodified,\\
+                             \hspace*{0.5em}\underline{embedded}\}}}}}{
+                \pstree[]{\Tr{\fbox{recipient?}}}{
+                  \pstree[]{\Toval{\bfseries{OSUC-06}}}{
+                    \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}unmodified,\\
+                             \hspace*{0.5em}embedded,\\
+                             \hspace*{0.5em}\underline{4yourself}\}}}}}{
+                               \pstree[]{\Tr{\fbox{$\cup$ mode?}}}{
+                                 \Tr{\parbox{5.6em}{\underline{\textit{OSUC-06a}}\\
+                                 \texttt{\{statically\\
+                                  \hspace*{0.5em}linked\}}}}
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-06b}}\\
+                                \texttt{\{dynamically\\
+                                  \hspace*{0.5em}linked\}}}}
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-06c}}\\
+                                \texttt{\{textually\\
+                                  \hspace*{0.5em}included\}}}}
+                               }
+                             }
+                    }
+                    \pstree[]{\Toval{\bfseries{OSUC-07}}}{        
+                      \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}unmodified,\\
+                             \hspace*{0.5em}embedded,\\
+                             \hspace*{0.5em}\underline{4others}\}}}}}{
+                               \pstree[]{\Tr{\fbox{$\cup$ mode?}}}{
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-07a}}\\
+                                \texttt{\{statically\\
+                                  \hspace*{0.5em}linked\}}}}
+                                \Tr{\parbox{5.26em}{\underline{\textit{OSUC-07b}}\\
+                                \texttt{\{dynamically\\
+                                  \hspace*{0.5em}linked\}}}}
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-07c}}\\
+                                \texttt{\{textually\\
+                                  \hspace*{0.5em}included\}}}}
+                               }
+                             }
+                       }     
+                 }
+              }
+              
+                            
+            }
+          }
+          \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}\underline{modified}\}}}}}{
+            \pstree[]{\Tr{\fbox{context?}}}{
+              
+              \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}modified,\\
+                             \hspace*{0.5em}\underline{independent}\}}}}}{
+                \pstree[]{\Tr{\fbox{recipient?}}}{
+                  \pstree[]{
+                    \Tr{\parbox{5.8em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}modified,\\
+                             \hspace*{0.5em}independent,\\
+                             \hspace*{0.5em}\underline{4yourself}
+                             \bfseries{\lightning}\}}}}
+                     }{\Tr{$\varnothing$}}         
+                             
+                   \pstree[]{\Toval{\bfseries{OSUC-08}}}{              
+                    \Tr{\parbox{5.2em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}modified,\\
+                             \hspace*{0.5em}independent,\\
+                             \hspace*{0.5em}\underline{4others}\}}}}
+                    }
+                }
+              }
+              
+              \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}modified,\\
+                             \hspace*{0.5em}\underline{embedded}\}}}}}{
+                \pstree[]{\Tr{\fbox{recipient?}}}{
+                  \pstree[]{\Toval{\bfseries{OSUC-09}}}{     
+                    \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}modified,\\
+                             \hspace*{0.5em}embedded,\\
+                             \hspace*{0.5em}\underline{4yourself}\}}}}}{
+                               \pstree[]{\Tr{\fbox{$\cup$ mode?}}}{
+                                 \Tr{\parbox{5.6em}{\underline{\textit{OSUC-09a}}\\
+                                 \texttt{\{statically\\
+                                  \hspace*{0.5em}linked\}}}}
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-09b}}\\
+                                \texttt{\{dynamically\\
+                                \hspace*{0.5em}linked\}}}}
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-09c}}\\
+                                \texttt{\{textually\\
+                                  \hspace*{0.5em}included\}}}}
+                               }
+                             }
+                           }
+                   \pstree[]{\Toval{\bfseries{OSUC-10}}}{           
+                    \pstree[]{\Tr{\parbox{5.2em}{
+                             \texttt{\{snimoli,\\
+                             \hspace*{0.5em}modified,\\
+                             \hspace*{0.5em}embedded,\\
+                             \hspace*{0.5em}\underline{4others}\}}}}}{
+                               \pstree[]{\Tr{\fbox{$\cup$ mode?}}}{
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-10a}}\\
+                                \texttt{\{statically\\
+                                  \hspace*{0.5em}linked\}}}}
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-10b}}\\
+                                \texttt{\{dynamically\\
+                                  \hspace*{0.5em}linked\}}}}
+                                \Tr{\parbox{5.2em}{\underline{\textit{OSUC-10c}}\\
+                                \texttt{\{textually\\
+                                  \hspace*{0.5em}included\}}}}
+                               }
+                             }
+                      }
+                 }
+              }             
+            }
+          }
+        }
+      }      
+    }
+  }
+\end{tiny}
+%\bibliography{../../../bibfiles/oscResourcesEn}

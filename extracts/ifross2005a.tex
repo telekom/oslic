@@ -1,0 +1,227 @@
+% Telekom osCompendium extract template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
+%
+% select the document class
+% S.26: [ 10pt|11pt|12pt onecolumn|twocolumn oneside|twoside notitlepage|titlepage final|draft
+%         leqno fleqn openbib a4paper|a5paper|b5paper|letterpaper|legalpaper|executivepaper openrigth ]
+% S.25: { article|report|book|letter ... }
+%
+% oder koma-skript S.10 + 16
+\documentclass[DIV=calc,BCOR=5mm,11pt,headings=small,oneside,abstract=true, toc=bib]{scrartcl}
+
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4,ngerman}
+\usepackage[english, ngerman]{babel}
+\selectlanguage{ngerman}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+\input{../btexmat/oscJbibCfgDeInc}
+
+% language specific hyphenation
+\input{../btexmat/oscHyphenationDeInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{headings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+\usepackage[dvips]{epsfig}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+\usepackage[marginal]{footmisc}
+%- end(footnote-configuration)
+
+\begin{document}
+
+%% use all entries of the bliography
+
+%%-- start(titlepage)
+\titlehead{Literaturexzerpt}
+\subject{Autor(en): \ldots}
+\title{Titel: \ldots}
+\subtitle{Jahr: \ldots }
+\author{K. Reincke\input{../btexmat/oscLicenseFootnoteInc}}
+
+%\thanks{den Autoren von KOMA-Script und denen von Jurabib}
+\maketitle
+%%-- end(titlepage)
+%\nocite{*}
+
+\begin{abstract}
+\noindent
+
+\cite[(ist:)][]{ifross2005a} \\
+Das Werk / The work\footcite[cf.][]{ifross2005a} \\
+\noindent \itshape
+\ldots Erläutert die jurstischen Implikationen und die Bedeutung der GPL -
+Abschnitt für Abschnitt und einschließlich der Bedeutung des Begriffs
+'abgeleitetes Werk' \\
+\noindent
+\ldots This book explains the legal implications and meaning of each GPL section
+- including the meaning of 'derivative work'
+\end{abstract}
+\footnotesize
+%\tableofcontents
+\normalsize
+
+\section{Vertrieb gegen Entgeld}
+
+Die Autoren unterstreichen explizit, \glqq{}[\ldots] dass man die Software
+selbst zu jedem Preis anbieten und veräußern (dürfe)\grqq{} und dass es ein
+davon unabhängiger Aspoekt sei, \glqq{}oib es (gelinge), einen bestimmten Preis
+zu erzielen [\ldots], da ja jeder die Software weitergeben (könne) und es dehalb
+einen starken Wettbewerb (gäbe)\grqq\footcite[cf.][15]{ifross2005a}.
+
+\section{Entstehende Pflichten =  Art der TO-DO-Liste}
+
+Sodann listen die Autoren in nuce auf, was ein NUtzer einer GPL lizenzierten
+Software zu beachten, will sagen: durch sein eigenes Tun sicherzustellen habe:
+So müsse der Lizenztext mitgeliefert werden, die Copyrightvermerke und der
+Haftungsausschluss beim Akt des Kopierens erhalten bleiben und nach außen
+durchgreicht werden, selbst wenn sie im deutschen Raum nur sehr eingteschränkt
+wirksam sind, und der Quelltext müsse zugänglich gemacht
+werden\footcite[cf.][16]{ifross2005a}. Außerdem gäbe es \glqq{}beim Vertrieb von
+Veränderungen eines GPL-Programms\grqq{} zusätzliche Pflichten: So müssen
+deutliche Änderungsvermerke aufgenommen werden, bei interaktiven Kommandos
+müssen (weiterhin) der Haftungsausschluss und die Copyrightvermerke sichtbar
+gemacht sein, und es gelte die zentrale Regel des 'derivative
+works'\footcite[cf.][17]{ifross2005a}:
+
+\begin{quote}
+\glqq{}Wiord ein unter GPL lizenziertes Programm so verändert, dass ein
+'derivative work' [\ldots] entsteht [\ldots], darf die so veränderte Software
+insgesamt nur unter den Lizenzbedingungen der GPKL an Dritte weitergegeben
+werden\grqq{}\footcite[cf.][17]{ifross2005a}
+\end{quote}
+
+Leider ist die Zusammenfassung als Handlungsanweisungen für Programmierer
+zumindets in einer Hinsicht irreführen: Wenn man eine GPL lizenzierte Bibliothek
+oder ein Modul oder ein Plugin oder ein inkludierbares File als Basis für eine
+darauf aufsetzende Entwicklung nimmt, hängt dieses darauf aufsetzende Werk
+sicher von der Bibliothek, dem Modul, dem Plugin oder dem inkludierbares File
+ab, ohne dass diese Bibliothek, dieses Modul, dieses Plugin oder dieses
+inkludierbares File dafür geändert worden sein müsste.
+
+\section{Derivative Work}
+
+Das zentrale Problem bei der GPL sei der \glqq{}virale
+Effekt\grqq{}\footcite[cf.][64]{ifross2005a}
+
+Initial unterstreichen die Autoren, dass \glqq{}[\ldots] in jedem Falle die
+Frage (entscheidend sei), wann  ein 'derivative work', also ein 'abgeleitetes
+Werk' vorliege\grqq{} und dass glqq{}die Antwort auf die Frage (entscheide), ob
+der Rechtsinhaber sein Programm der GPL unterstellen (müsse), oder ob er frei in
+der Lizenzwahl (sei), also eine andere Open Sourcve-Lizenz oder eine proprietäre
+Lizenz verwenden (dürfe)\grqq{}\footcite[cf.][64]{ifross2005a}
+
+\subsection{klare nicht 'derived' Fälle}
+Als einen eindeutigen Fall, bei dem ein 'zugreifendes' Werk trotz technischer
+Verbindung nicht abgeleitet worden sei, stellen die Autoren sodann den
+Linuxkernel selbst dar: Durch eine spezielle Beudetungserklärung durch Linux
+Torvalds sei festgelegt, dass der Zugriff auf 'kernel services' das zugreifende
+Produkt gerade nicht zu einem vom Kernel abgeleiteten Werk mache. Deshalb wirke
+die GPL2 L;izenzierung des Kernels also nicht nach
+außen\footcite[cf.][66]{ifross2005a}.
+
+Des weiteren verweisen die Autoren darauf, dass die glibc, als eine derjenigen
+Bibliotheken, die die Zugriffe auf die Kernlservices kapselt, sozusagen
+sicherhateilshalber selbst nochmal der LGPL unterstellt sei, die ihrerseits
+gerade nicht erzwinge, dass auf sie aufsetzenden Programme ebenfalls GPL
+lizenztiert werden müssen\footcite[cf.][66]{ifross2005a}
+
+\subsection{klare 'derived' Fälle}
+
+Hier schreiben die Autoren klar, dass ein \glqq{}[\ldots] ein eigener Code
+eindeutig der GPL unterstellt werden (müsse), wenn das vorbestehende
+GPL-Programm in seiner bestehenden Form geändert werden[:] Erweiterungen,
+Kürzungen und Abänderungen des Codes führen stets dazu, dass das so geänderte
+Programm der GPL unterstellt werden müsse [\ldots]\grqq{}, vorausgesetzt, es
+werde vertrieben und nicht nur für sich selbst
+genutzt\footcite[cf.][66]{ifross2005a}.
+
+\subsection{unklare 'derived' Fälle}
+
+Hier sagen die Autoren, dass jene Fälle \glqq{}problematisch\grqq{} seien,
+\glqq{}[ldots]  in denen nicht nur eine einfache Weiterentwicklung stattfinde,
+sondern ein GPL-Programm mit anderen Programmen oder Programmbestandenteilen
+kombiniert (werde)\grqq{}, und dass die GPL dazu nur \glqq{}Hinweise\grqq{}
+enthalte, die \glqq{}[ldots] alles andere als eindeutig
+(seien)\grqq{}\footcite[cf.][67]{ifross2005a}
+
+Nach einigen Bemerkungen fassen die Autoren folgende Regeln als Leitschnur
+zusammen
+
+\begin{quote}
+\begin{enumerate}
+  \item Programme oder Softwarebestandeteile, die (inhaltlich) nicht voneinander
+  abgeleitet sind, können unter unterschiedlichen Lizenzen verbreitet werden,
+  wenn sie auch formal getrennt vorliegen;
+  \item Programme oder Softwarebestandeteile, die (inhaltlich) nicht voneinder
+  abgeleitet sind, müssen aber dann insgesamt unter der GPL verbreitet werden,
+  wenn sie ein 'Ganzes' bilden, weil keine formalen Trennung besteht;
+  \item Programme oder Softwarebestandteile, die (inhaltlich) voneinander
+  abgeleitet sind, dürfen stets nur unter der GPL gemeinsam verbreitet werden.
+\end{enumerate}
+\end{quote}\footcite[cf.][69]{ifross2005a}
+
+Abgesehen, dass diese Regeln für sich genommen sprachlich viel zu scharf sind,
+weil sich nicht darauf verweisen, dass immer zumindest eines der kombinierten
+Teile unter GPL lizenziert sein muss, hängt die sonstige Klarheit an den
+selbst unscharfen Begriffen '(inhaltlich) [nicht] voneinander abgeleitet' und
+'formal getrennt'.
+
+Insofern kann man diese Regeln nicht an Entwickler weiterreichen.
+
+\small
+\bibliography{../bibfiles/oscResourcesDe}
+
+\end{document}
