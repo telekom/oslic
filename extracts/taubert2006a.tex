@@ -35,6 +35,10 @@
 \usepackage[english, ngerman]{babel}
 \selectlanguage{ngerman}
 
+%language specific quoting signs
+%default for language emglish is american style of quotes
+\usepackage{csquotes}
+
 % jurabib configuration
 \usepackage[see]{jurabib}
 \bibliographystyle{jurabib}
@@ -118,65 +122,65 @@ making compromises than being determined my external decisions.
 
 \section{Allgemeines}
 
-Tauber spricht von der \glqq{}sozialen Konstruktion freier Software\grqq{}, wenn
-er die Frage beantworten will, \glqq{}wie [\ldots] es den Entwicklern von freier
+Tauber spricht von der \enquote{sozialen Konstruktion freier Software}, wenn
+er die Frage beantworten will, \enquote{wie [\ldots] es den Entwicklern von freier
 Software unter den Bedingungen der Abwesenheit von Hierarchie und einer klaren
 Rollenzuordnung, einer Projekt-Mailingliste als Medium der Kommunikation sowie
 einer hohen Fluktuation der Teilnehmerschaft (gelinge), ihr Handeln auf ein
 gemeinsames Entwicklungsziel hin zu
-koordinieren\grqq{}\footcite[cf.][205]{Taubert2006a}. Unter diesen Umständen
-sei für das Gelingen die herrschende \glqq{}prinzipielle
-Begründungspflicht\grqq{} ein eher \glqq{}schwacher Modus\grqq{} der
-Erfolgsabsicherung: endlose Diskussionen und \glqq{}hartnäckigen Dissenz\grqq{}
+koordinieren}\footcite[cf.][205]{Taubert2006a}. Unter diesen Umständen
+sei für das Gelingen die herrschende \enquote{prinzipielle
+Begründungspflicht} ein eher \enquote{schwacher Modus} der
+Erfolgsabsicherung: endlose Diskussionen und \enquote{hartnäckigen Dissenz}
 seien nicht ausgeschlossen. Zur Abfederung und Integration heterogener Ansätze
-diene deshalb der \glqq{}Einbau von Konfigurationsoptionen\grqq{} und die
+diene deshalb der \enquote{Einbau von Konfigurationsoptionen} und die
 Modularisierung\footcite[cf.][206]{Taubert2006a}:
 
 \begin{quote}
-\glqq{}Die Strukturierung des Programms in Module - als Eigenschaft des
+\enquote{Die Strukturierung des Programms in Module - als Eigenschaft des
 Artefakts - resultiert im Fall von freier Software nicht nur aus der Komplexität
 der zu lösenden Entwicklungsaufgabe, sondern auch aus den
 Integrationserfordernissen, die sich aufgrund der motivationalen Gründe für eine
 Beteiligung auf Seiten der Entwickler und der organisatorischen
 Rahmenbedingungen im Fall von offenen Programmierprojekten
-stellen.\grqq{}\footcite[][206]{Taubert2006a}
+stellen.}\footcite[][206]{Taubert2006a}
 \end{quote}
 
 \section{Spezifisches}
 \subsection{Zur Definition von 'Open Source Software' und 'Freier Software'}
 Die konzeptuelle Klärung rekuriert hier zunächst auf den Begriff der
-\glqq{}freien Software\grqq{}, durchaus im Sinne des GNU Projektes und seinem
+\enquote{freien Software}, durchaus im Sinne des GNU Projektes und seinem
 Schwerpunkt der 'Freiheit'\footcite[cf.][17]{Taubert2006a}.  Dem gegenüber
 gestellt wird der später entstandene Begriff 'Open Source' mit seinem
-Schwerpunkt der \glqq{}Zugänglichkeit des
-Quellcodes\grqq{}\footcite[cf.][18]{Taubert2006a}.
+Schwerpunkt der \enquote{Zugänglichkeit des
+Quellcodes}\footcite[cf.][18]{Taubert2006a}.
 
-Allerdings, so Taubert, \glqq{}[\ldots] (ließen sich) gegen sämtliche
+Allerdings, so Taubert, \enquote{[\ldots] (ließen sich) gegen sämtliche
 Bezeichnungen Ein\-wände vorbringen
-[\ldots]\grqq{}\footcite[cf.][19]{Taubert2006a}: Bei der 'Freien Software'
+[\ldots]}\footcite[cf.][19]{Taubert2006a}: Bei der 'Freien Software'
 unterstütze die vordergründige Assoziation 'kostenlos' die intendierte Bedeutung
-der \glqq{}emanzipatorischen Bewegung\grqq{} nicht, zumal nicht jedes kostenlose
+der \enquote{emanzipatorischen Bewegung} nicht, zumal nicht jedes kostenlose
 Programm zugleich auch 'freie Software' sei\footcite[cf.][19]{Taubert2006a}.
 Und umgekehrt sei mittlerweile auch nicht mehr all das, dessen Quellcode
 offengelegt werde, zugleich auch 'Open Source' im Sinne dessen, was die OSI
 definiert habe: so könnte Code offengelegt werden, ohne dass das Recht der
 Modifikation mit dem Recht der Einsicht verbunden werde. Das Wort 'Open Source'
-werde so zum \glqq{}Einfallstor\grqq{} von missbräuchlichen
-\glqq{}Marketing-Initiativen\grqq{}\footcite[cf.][19f]{Taubert2006a}.
+werde so zum \enquote{Einfallstor} von missbräuchlichen
+\enquote{Marketing-Initiativen}\footcite[cf.][19f]{Taubert2006a}.
 
 \subsection{Zur Klassifikation von 'Software' versus 'Open Source Software'}
 
 Bei der Typisierung von Software entscheidet Taubert formal 5 Formen, die
-\glqq{}proprietäre (zum Normalgebrauch)\grqq{}, die
-\glqq{}proprietäre (Händerlizenz)\grqq{}, \glqq{}Shareware\grqq{}, \glqq{}Public
-Domain\grqq{} und \glqq{}Freie Software\grqq{}. Inhaltlich markiert er diese
-Typen über die Eigenschaften \glqq{}Anwendung\grqq{},
-\glqq{}Vervielfältigung\grqq{}, \glqq{}Verbreitung\grqq{} und
-\glqq{}Modifkation\grqq{}. Überraschenderweise werden bei ihm sodann Public
+\enquote{proprietäre (zum Normalgebrauch)}, die
+\enquote{proprietäre (Händerlizenz)}, \enquote{Shareware}, \enquote{Public
+Domain} und \enquote{Freie Software}. Inhaltlich markiert er diese
+Typen über die Eigenschaften \enquote{Anwendung},
+\enquote{Vervielfältigung}, \enquote{Verbreitung} und
+\enquote{Modifkation}. Überraschenderweise werden bei ihm sodann Public
 Domain Software und Freie Software mit derselben Merkmalkombination spezifziert
-(4 * erlaubt), was ihn zu dem Fazit führt, dass der \glqq{}[\ldots] Typus Public
+(4 * erlaubt), was ihn zu dem Fazit führt, dass der \enquote{[\ldots] Typus Public
 Domain-Software eine Unterkategorie von freier Software
-(bilde)\grqq\footcite[cf.][25]{Taubert2006a}.
+(bilde)}\footcite[cf.][25]{Taubert2006a}.
 
 Bedauerlicherweise erläutert Taubert nicht, wieso Public Domain-Software eine
 Unterkategorie von freier Software sei und nicht umgekehrt. Aus den Kriterien

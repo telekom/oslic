@@ -35,6 +35,10 @@
 \usepackage[english, ngerman]{babel}
 \selectlanguage{ngerman}
 
+%language specific quoting signs
+%default for language emglish is american style of quotes
+\usepackage{csquotes}
+
 % jurabib configuration
 \usepackage[see]{jurabib}
 \bibliographystyle{jurabib}
@@ -120,19 +124,19 @@ different aspects of the topic.
 \section{Line of Thought}
 
 Spindler gibt in seinem Vorwort an, dass die ersten 5 Kapitel Basis eines
-\glqq{}[\ldots] umfangreichen Rechtsgutachtens) des Herausgebers für den Verband
-der Softwareindustire Deutschland (gewesen sei)\grqq{}. Entsprechend nimmt sich
-das Buch vor, die \glqq{}[\ldots] die juristische Diskussion in Deutschland über
+\enquote{[\ldots] umfangreichen Rechtsgutachtens) des Herausgebers für den Verband
+der Softwareindustire Deutschland (gewesen sei)}. Entsprechend nimmt sich
+das Buch vor, die \enquote{[\ldots] die juristische Diskussion in Deutschland über
 diese besondere Form der Liz7enzierung von Software
-voranzutreiben\grqq{}\footcite[vgl.][V]{Spindler2004a}.
+voranzutreiben}\footcite[vgl.][V]{Spindler2004a}.
 
 So ergibt sich für ihn folgender Gedankengang:
 
 \begin{itemize}
   \item Zunächst stellt er sehr kurz die Idee von Open Source
-  dar\footcite[vgl.][1ff]{Spindler2004a} um dann die die \glqq{}Open Source
-  Software Lizenztypen\grqq{} gegeneinander
-  \glqq{}abzugrenzen\grqq{}\footcite[vgl.][9ff]{Spindler2004a}. Er selbst
+  dar\footcite[vgl.][1ff]{Spindler2004a} um dann die die \enquote{Open Source
+  Software Lizenztypen} gegeneinander
+  \enquote{abzugrenzen}\footcite[vgl.][9ff]{Spindler2004a}. Er selbst
   konzentriert sich in den folgenden Kapiteln jedoch auf die
   GPL\footcite[vgl.][21ff]{Spindler2004a} und überlässt es seinen Coautoren, die
   BSD- und die Mozilla-Lizenzen zu
@@ -149,8 +153,8 @@ So ergibt sich für ihn folgender Gedankengang:
   Vergaberecht\footcite[vgl.][281ff]{Spindler2004a} [- alles Punkte, die ich
   nicht ausgewertet habe.]
   \item Von besonderem Interesse ist dann wieder die Darstellung von Arlt,
-  Brinkel und Volkmann bzgl. der \glqq{}'BSD'- und 'Mozilla'-artigen
-  Lizenzen\grqq{}\footcite[vgl.][317ff]{Spindler2004a} [die ich als eigenes
+  Brinkel und Volkmann bzgl. der \enquote{'BSD'- und 'Mozilla'-artigen
+  Lizenzen}\footcite[vgl.][317ff]{Spindler2004a} [die ich als eigenes
   Extract erfasst habe]
   \item 
 \end{itemize}
@@ -163,71 +167,71 @@ So ergibt sich für ihn folgender Gedankengang:
 \subsubsection{Grenzen der Freiheit: Rechtskonstruktion}
 
 Wesentlich hervorgehoben wird hier, dass Open Source eben nicht in dem Sinne
-frei sei, \glqq{}[\ldots] dass es an Open Source keinerlei Urheberrechte
+frei sei, \enquote{[\ldots] dass es an Open Source keinerlei Urheberrechte
 gäbe bzw. die Software und der Quellcode gemeinfrei
-wären\grqq{}\footcite[vgl.][2]{Spindler2004a}:
-\begin{quote}\glqq{}Charakteristisches Merkmal von Open Source Software
+wären}\footcite[vgl.][2]{Spindler2004a}:
+\begin{quote}\enquote{Charakteristisches Merkmal von Open Source Software
 ist vielmehr die Verwendung der urheberrechtlichen Verwertungsrechte, um
 den Nutzer [\ldots] gerade die Pflichten aufzuerlegen, die zur
 kostenfreien Weitergabe und Offenlegung des Quellcodes
-führen.\grqq{}\footcite[][2]{Spindler2004a}
+führen.}\footcite[][2]{Spindler2004a}
 \end{quote}
 
 \subsubsection{Grenzen der Freiheit: Geld}
 
 Eingeschränkt wird das Geschäft mit Open Source nur in einer Hinsicht:
-\glqq{}allein Lizenzgebühren für die Spftware und den Quellcode dürfen
-nicht erhoben werden\grqq{}, der sonstige kommerzielle Vertrieb von Open Source
-Software, bei dem etwa \glqq{}[\ldots] Entgelte für Datenträger, Beratung,
-Garantien oder sonstige Serviceleistungen verlangt werden\grqq{} sei keineswegs
+\enquote{allein Lizenzgebühren für die Spftware und den Quellcode dürfen
+nicht erhoben werden}, der sonstige kommerzielle Vertrieb von Open Source
+Software, bei dem etwa \enquote{[\ldots] Entgelte für Datenträger, Beratung,
+Garantien oder sonstige Serviceleistungen verlangt werden} sei keineswegs
 ausgeschlossen.\footcite[vgl.][5]{Spindler2004a}
 
 Allerdings, so Spindler, dürfte der Versuch, den Gedanken der kostenlosen
-Lizenzierung über 'Fantasiepreise' für die \glqq{}physische Distribution\grqq{}
-sozusagen \glqq{}unterlaufen\grqq{} zu wollen, juristisch \glqq{}[\ldots]
-erheblichen Bedenken ausgsetzt (sein)\grqq{}\footcite[vgl.][6]{Spindler2004a}
+Lizenzierung über 'Fantasiepreise' für die \enquote{physische Distribution}
+sozusagen \enquote{unterlaufen} zu wollen, juristisch \enquote{[\ldots]
+erheblichen Bedenken ausgsetzt (sein)}\footcite[vgl.][6]{Spindler2004a}
 
 \subsubsection{Lizenzabgrenzung}
 
 \paragraph{GPL}
 
 Grundsätzlich könne die GPL so spezifiziert werden, dass sie dem Nutzer ein
-weitgehendes Verwertungsrecht einräume, bei dem ihm \glqq{}[\ldots] ihm
+weitgehendes Verwertungsrecht einräume, bei dem ihm \enquote{[\ldots] ihm
 die Anfertigung beliebiger (unveränderter) Kopien des Quellcodes und auch
-deren Veränderung gestattet wird\grqq{}. Die modifzierten Werke dürfe der
-\glqq{}[\ldots] NUtzer wiederum vervielfältigen und verbreiten [\ldots],
+deren Veränderung gestattet wird}. Die modifzierten Werke dürfe der
+\enquote{[\ldots] NUtzer wiederum vervielfältigen und verbreiten [\ldots],
 sofern er sie wiederum der GPL (unterstelle) und für die Lizenzierung
-kein Entgelt (erhebe)\grqq{}\footcite[vgl.][9]{Spindler2004a}
+kein Entgelt (erhebe)}\footcite[vgl.][9]{Spindler2004a}
 
 \paragraph{LGPL}
 
-Als Hauptzweck zur \glqq{}Schaffung der LGPL\grqq{}, der \glqq{}Lesser
-GPL\grqq{}\footcite[vgl.][10]{Spindler2004a} führt Spindler an, dass durch die
-\glqq{}Inkorporation\grqq{} von GPL lizenzierten \glqq{}[\ldots] (Modulen) in
+Als Hauptzweck zur \enquote{Schaffung der LGPL}, der \enquote{Lesser
+GPL}\footcite[vgl.][10]{Spindler2004a} führt Spindler an, dass durch die
+\enquote{Inkorporation} von GPL lizenzierten \enquote{[\ldots] (Modulen) in
 den Ablauf der [umfassenderen KR] Software diese ebenfalls unter die GPL
-gestellt werden müsste\grqq{}. Wären alle Teile eines Betriebssystems mithin
+gestellt werden müsste}. Wären alle Teile eines Betriebssystems mithin
 rein GPL lizenziert, wäre eine andersartige Nutzung ausgeschlossen. Um den
 Nutzerkreis dennoch zu erweitern, seien eben zentrale Teile des GNU
 Betriebssystems LGPL lizenziert, die auf die Auswirkung auf die übergreifende
 Software unter gewissen Umständen verzichte\footcite[vgl.][11]{Spindler2004a}.
 
 Sodann kommt eine Darstellung der LGPL, die gefährlich FALSCH ist: Zunächst wird
-behauptet, dass \glqq{}Programme, die zwar auf eine LGPL-Bibliothek zugreifen,
+behauptet, dass \enquote{Programme, die zwar auf eine LGPL-Bibliothek zugreifen,
 aber unabhängig hiervon und nicht zusammen mit der Bibliothek vertrieben werden
 ('in isolation'), [\ldots] nach §5 I LGPL nicht unter diese
 Lizenz gestellt werden (müssten), sondern [\ldots] proprietär
-bleiben (könnten)\grqq{}\footcite[vgl.][12]{Spindler2004a} [KR: Wenn das in
+bleiben (könnten)}\footcite[vgl.][12]{Spindler2004a} [KR: Wenn das in
 aller Strenge so gelte, wäre damit jedwede Distributionen, die die Linux LGPL
 Bibliotheken und püropriuetäre Linux-Programnme enthielten, schon mal
 untersagt. Das aber ist gerade nicht der Sinn der LGPL! KR]
 
 Sodann wird behauptet, dass diese Freiheit 'getrennt vertrieben, aber zusammen
-genutzt' sich gerade bei der \glqq{}dynamischen Verlinkung\grqq{} ändere: 
-\begin{quote}\glqq{}Dies ändert sich jedoch bei einer Verknüpfung des
+genutzt' sich gerade bei der \enquote{dynamischen Verlinkung} ändere: 
+\begin{quote}\enquote{Dies ändert sich jedoch bei einer Verknüpfung des
 Programms mit der Bibliothek (dynamischer Verlinkung) und deren
 gemeinsamer Verbreitung, da §5 II, III, LGPL dann das Ergebnis der
 'Zusammenarbeit' zwischen Bibliothek und Programm als ein 'neues'
-Programm bzw. Werk ansieht.\grqq{}footcite[vgl.][12]{Spindler2004a}
+Programm bzw. Werk ansieht.}footcite[vgl.][12]{Spindler2004a}
 \end{quote}
 
 [KR: Dies kann aus technischer Sicht so niemals von der LGPL so gemeint gewesen
@@ -252,30 +256,30 @@ ganzes um ein abgeleitetes Werk handelt!
 
 Die Mozilla-Lizenzen werden ähnlich wie die GPL gesehen, sollen sich aber
 dennoch unterscheiden: Die Rechte, die die Mozilla-Lizenzen einräumen,
-\glqq{}[\ldots] (seien) weitgehend der GPL vergleichbar [im Sinne von
-gleichwertig; KR] [\ldots]\grqq{} und betreffen die \glqq{}Nutzung\grqq{},
-die \glqq{}Vervielfältigung\grqq{}, die \glqq{}Veränderung\grqq{}, die
-\glqq{}Zugänglichmachung\grqq{} und die
-\glqq{}Verbreitung\grqq{}\footcite[vgl.][14]{Spindler2004a}
+\enquote{[\ldots] (seien) weitgehend der GPL vergleichbar [im Sinne von
+gleichwertig; KR] [\ldots]} und betreffen die \enquote{Nutzung},
+die \enquote{Vervielfältigung}, die \enquote{Veränderung}, die
+\enquote{Zugänglichmachung} und die
+\enquote{Verbreitung}\footcite[vgl.][14]{Spindler2004a}
 
 Unterschiedlich seien in gewisser Hinsicht die Pflichten der Nutzer: Zunächst
-sei es \glqq{}im Ergebnis unzweifelhaft\grqq{}, dass der \glqq{}[\ldots]
+sei es \enquote{im Ergebnis unzweifelhaft}, dass der \enquote{[\ldots]
 contributor die Pflicht (habe), seine veränderte Software der
 Mozilla-Lizenz ebenfalls zu
-unterstellen\grqq{}\footcite[vgl.][15]{Spindler2004a}:
-\begin{quote}\glqq{}Anders als bei der GPL wird jedoch nicht jede
+unterstellen}\footcite[vgl.][15]{Spindler2004a}:
+\begin{quote}\enquote{Anders als bei der GPL wird jedoch nicht jede
 Veränderung erfasst, sondern nur diejenige, die entweder in dem selben
 Quellcode enthalten ist oder - bei mehreren Dateien - in denen Quellcode
 geschireben ist. Werden jedoch die Änderungen in einer eigenen Datei
 abgespeichert, müssen diese nicht der Mozilla-Lizenz unterstellt und
-damit auch nicht freigegeben werden\grqq{}\footcite[][15]{Spindler2004a}
+damit auch nicht freigegeben werden}\footcite[][15]{Spindler2004a}
 \end{quote}
 
 Anders gesagt:
 
-\begin{quote}\glqq{}Es muss daher nur ein selbständiger Code in einem
+\begin{quote}\enquote{Es muss daher nur ein selbständiger Code in einem
 eigenständigen File vorliegen, um von der Pflicht zur unentgeltlichen
-Freigabe entbunden werden.\grqq{}\footcite[][15]{Spindler2004a}
+Freigabe entbunden werden.}\footcite[][15]{Spindler2004a}
 
 [ KR: Damit ist eigentlich klar, wie das KOnstrukt funktioniert: Werden
 Änderungen am ursprünglichen Code im Sinne von Dateiänderungen vorgenommen,
@@ -290,7 +294,7 @@ Mozilla-Lizenzen entsprechen also der LGP, nicht der GPL. ]
 \paragraph{Dual Licensing}
 
 
-Spindler erwähnt das \glqq{}Dual Licensing\grqq{} als Methode des
+Spindler erwähnt das \enquote{Dual Licensing} als Methode des
 Urheberrechtsinhabers, sich verschiedene Wege
 offenzuhalten\footcite[vgl.][16]{Spindler2004a}, etwa, wenn man anderen Firmen
 eine proprietäre Weiterentwicklung des eigenen Codes gegen Entgeld ermöglichen
@@ -301,19 +305,19 @@ werden\footcite[vgl.][17]{Spindler2004a}
 \paragraph{Andere Formen}
 
 \begin{itemize}
-  \item \glqq{} Für Public Domain Software (sei) der (versuchte) vollständige
+  \item \enquote{ Für Public Domain Software (sei) der (versuchte) vollständige
   Verzicht auf jegliche Urheberechte kennzeichnend, jedenfalls aber das
   \emph{uneingeschränkte Recht der Verwertung} für den
-  Nutzer\grqq{}\footcite[][17]{Spindler2004a} - im Gegnesatz zur GPL dürfe der
+  Nutzer}\footcite[][17]{Spindler2004a} - im Gegnesatz zur GPL dürfe der
   Nutzer mit solch einer Software also im Prinzip verfahren, wie es ihm gefalle,
   also minsbesondere auch proprietarisieren\footcite[][17]{Spindler2004a}.
   Allerdings sei die aktive Freigabe von Public Domain Software in Deutschland
   kaum möglich, eben weil in Deutschland nicht alle Rechte übertragen werden
   können\footcite[][17]{Spindler2004a}. So bleibt etwa die Autorenschaft
   unauflöslich erhalten.
-  \item Freeware zeichne sich dadurch aus, \glqq{}[\ldots] dass zwar die
+  \item Freeware zeichne sich dadurch aus, \enquote{[\ldots] dass zwar die
   Software selbst kostenlos zur Benutzung überlassen, [\ldots] \emph{der
-  Quellcode aber nicht offengelegt} (werde)\grqq{}
+  Quellcode aber nicht offengelegt} (werde)}
   \item Shared Sourcfe rekuriert auf das MS Modell des Einblicks für ausgewählte
   Kunden ohne das Recht der Änderung, Nutzung, oder
   Weitergabe\footcite[][18]{Spindler2004a}
@@ -355,19 +359,19 @@ zwi9schen GPL und LGPL sdo nicht unterschieden werden kann]
 \subsection{Urheberrecht}
 
 \begin{itemize}
-  \item Grundsätzlich gilt, dass \glqq{}nach §69c UrhG [\ldots] die
+  \item Grundsätzlich gilt, dass \enquote{nach §69c UrhG [\ldots] die
   Verielfältigung, die Bearbeitung und die Verbreitung einer Software nur
-  mit Erlaubnis des Urhebers zulässig (ist)\grqq{}\footcite[][22]{Spindler2004a}
-  \item Mit der GPL geht gerade systematisch intendiert \glqq{}keine
-  Aufgabe des Urheberrechts\grqq{} einher\footcite[][22]{Spindler2004a},
-  vielmehr \glqq{}[\ldots] verwendet (die Open Source Bewegung) lediglich
+  mit Erlaubnis des Urhebers zulässig (ist)}\footcite[][22]{Spindler2004a}
+  \item Mit der GPL geht gerade systematisch intendiert \enquote{keine
+  Aufgabe des Urheberrechts} einher\footcite[][22]{Spindler2004a},
+  vielmehr \enquote{[\ldots] verwendet (die Open Source Bewegung) lediglich
   die von Urheberrecht gebotenen Instrumente, um einen entsprechenden
-  Zweck zu erreichen\grqq{}\footcite[vgl.][26]{Spindler2004a} - daraus könne
-  \glqq{}[\ldots] kein allgemeiner Verstoß der GPL gegen ungeschriebene
+  Zweck zu erreichen}\footcite[vgl.][26]{Spindler2004a} - daraus könne
+  \enquote{[\ldots] kein allgemeiner Verstoß der GPL gegen ungeschriebene
   Grundsätze des Urheberrechts abgeleitet werden
-  [\ldots]\grqq{}\footcite[vgl.][25]{Spindler2004a}
+  [\ldots]}\footcite[vgl.][25]{Spindler2004a}
   \item Wichtig ist bei der Veröffentlichung aber, dass einzelne Autoren, die
-  man einem Code mitarbeiten, als \glqq{}Miturheber\grqq{}
+  man einem Code mitarbeiten, als \enquote{Miturheber}
   gelten\footcite[vgl.][27]{Spindler2004a}, und zwar selbst dann, wenn
   eingereichte Beiträge nur per Commiteebeschluss in das Werk
   eingehen\footcite[vgl.][28]{Spindler2004a} [worau8s zu folgern wäre, dass
@@ -377,23 +381,23 @@ zwi9schen GPL und LGPL sdo nicht unterschieden werden kann]
 
 \subsection{Haftungsrecht}
 
-Ausgehend von der Deutung des \glqq{}isolierten Erwerbs\grqq{} von Open Source
-Software als einer \glqq{}Schenkung\grqq{} ergibt sich für die Haftung gerade
-nicht die vollständige Freistellung, \glqq{}Vorsatz und grobe
-Fahrlässigkeit\grqq{} muss sich der Schenkende als Verursacher zurechnen lassen
+Ausgehend von der Deutung des \enquote{isolierten Erwerbs} von Open Source
+Software als einer \enquote{Schenkung} ergibt sich für die Haftung gerade
+nicht die vollständige Freistellung, \enquote{Vorsatz und grobe
+Fahrlässigkeit} muss sich der Schenkende als Verursacher zurechnen lassen
 und für entsprechende Schäden haften\footcite[vgl.][169f]{Spindler2004a} - daran
 ändert auch nichts der §12, will sagen: die Haftungsausschlussklausel der GPL,
 mit der jegliche Haftung ausgeschlossen werden soll, was aber nach BGB
 grundsätzlich nicht zulässig sei\footcite[vgl.][170]{Spindler2004a}.
 Ähnlich\footcite[vgl.][205]{Spindler2004a}
 
-Interessant ist der Hinweis, dass der \glqq{}Nutzer\grqq{} von Open Source
+Interessant ist der Hinweis, dass der \enquote{Nutzer} von Open Source
 Software - eben weil nur rudimentäre Gewährleistungspflichten bestehen [und
-wie zu ergänzen wäre: weil er um diese Tatsache weiß] - \glqq{}[\ldots]
+wie zu ergänzen wäre: weil er um diese Tatsache weiß] - \enquote{[\ldots]
 je nach Gefahrenpotential, in dessen Zusammenhang Open Source eingesetzt
 wird, verpflichtet sein (kann), entsprechende externe Beratungsleistungen
 undService einzukaufen, wenn er sich nicht eines Organisationsmangels
-schuldig machen möchte\grqq{}\footcite[vgl.][221]{Spindler2004a}
+schuldig machen möchte}\footcite[vgl.][221]{Spindler2004a}
 
 \small
 

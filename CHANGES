@@ -1,3 +1,7 @@
+2012-07-12: release 0.4.1
+- integrated csquotes into all pages
+- replaced qlqq and grqq by enquote{} for using
+  language specific quotation styles  
 2012-07-05: release 0.4.0
 - textual improvements
 2012-07-03: release 0.3.99

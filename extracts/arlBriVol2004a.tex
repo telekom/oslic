@@ -35,6 +35,10 @@
 \usepackage[english, ngerman]{babel}
 \selectlanguage{ngerman}
 
+%language specific quoting signs
+%default for language emglish is american style of quotes
+\usepackage[german=quotes]{csquotes}
+
 % jurabib configuration
 \usepackage[see]{jurabib}
 \bibliographystyle{jurabib}
@@ -113,68 +117,68 @@ differ from the GPL.
 
 \section{Line of Thought}
 
-Dieses Kapitel \glqq{}'BSD'- und 'Mozilla'-artige Lizenzen\grqq{} des Buches
+Dieses Kapitel \enquote{'BSD'- und 'Mozilla'-artige Lizenzen} des Buches
 
 \begin{itemize}
   \item \ldots skizziert sehr kurz die KLizenzgeschichte von BSD und
   Mozilla\footcite[vgl.][318ff]{ArlBriVol2004a}
-  \item \ldots beschreibt danach die \glqq{}Rechteeinräumung und
-  -umfang\grqq{}\footcite[vgl.][323ff]{ArlBriVol2004a}
+  \item \ldots beschreibt danach die \enquote{Rechteeinräumung und
+  -umfang}\footcite[vgl.][323ff]{ArlBriVol2004a}
   \item \ldots geht danach auf die Pflichten ein, die von BSD und
   Mozilla-Lizenzen evoziert werden\footcite[vgl.][342ff]{ArlBriVol2004a}
   \item und stellt schließlich Lizenzen gleichen Typs zusammen, sodass von
-  \glqq{}MPL-artigen Lizenezn\grqq{}\footcite[vgl.][361ff]{ArlBriVol2004a} und
-  von \glqq{}BSD-artigen Lizenzen\grqq{}\footcite[vgl.][364ff]{ArlBriVol2004a}
+  \enquote{MPL-artigen Lizenezn}\footcite[vgl.][361ff]{ArlBriVol2004a} und
+  von \enquote{BSD-artigen Lizenzen}\footcite[vgl.][364ff]{ArlBriVol2004a}
   gesprochen wird.
 \end{itemize}
 
 \subsection{Rechte}
 
-Behauptet wird, dass sich BSD und Mozilla-Lizenzen \glqq{}hinsichtlich
+Behauptet wird, dass sich BSD und Mozilla-Lizenzen \enquote{hinsichtlich
 ihres Schutzumfangs [\ldots] grundsätzlich nhicht von der GPL (unterscheiden)
-\grqq{}\footcite[vgl.][323]{ArlBriVol2004a}, was sich auf ebenso auf die
-\glqq{}einfachen Nutzungsrechte\grqq{}\footcite[vgl.][324]{ArlBriVol2004a} wie
-auf das Recht der \glqq{}Weiterverbreitung\grqq{}, der \glqq{}Bearbeitung\grqq{}
-und der \glqq{}Vervielfältigung\grqq{}
+}\footcite[vgl.][323]{ArlBriVol2004a}, was sich auf ebenso auf die
+\enquote{einfachen Nutzungsrechte}\footcite[vgl.][324]{ArlBriVol2004a} wie
+auf das Recht der \enquote{Weiterverbreitung}, der \enquote{Bearbeitung}
+und der \enquote{Vervielfältigung}
 beziehe\footcite[vgl.][325]{ArlBriVol2004a}.
 
 Und betont wird, dass auch BSD- und Mozilla-Lizenzen eben nicht auf
-Urheberrechte verzichten, \glqq{}[\ldots] sondern [\ldots] sich gerade
+Urheberrechte verzichten, \enquote{[\ldots] sondern [\ldots] sich gerade
 des Urheberrechtsd (bedienen), indem spezifische Nutzungsrechte
-eingeräumt werden\grqq{}\footcite[vgl.][324]{ArlBriVol2004a}
+eingeräumt werden}\footcite[vgl.][324]{ArlBriVol2004a}
 
 Ein leichte Unterschiedung zwischen GPL und Mozilla gibt es hinsichtlich der
-Rechte insofern, als Mozilla das \glqq{}[\ldots] Recht zur
-Unterlizenzierung (einräume)\grqq{} und so die Übetragung der Rechte und
+Rechte insofern, als Mozilla das \enquote{[\ldots] Recht zur
+Unterlizenzierung (einräume)} und so die Übetragung der Rechte und
 Pflichten an dritte un vierte gewährleistet, während die GPL von einer
 automatischen Lizenzierung des ursprünglichen Urhebers
 ausgeht\footcite[vgl.][329]{ArlBriVol2004a}, was sozusagen unter dem Terminus
-\glqq{}Fingierter Ersterwerb in der GPL\grqq{} erfasst
+\enquote{Fingierter Ersterwerb in der GPL} erfasst
 wird\footcite[vgl.][331]{ArlBriVol2004a}
 
 Des weiteren zeichnet sich die MPL durch ihren Umgang mit den Patenten aus,
 deren Nutzung für die Nutzung der SDpfwtare getsattet
 ist\footcite[vgl.][330]{ArlBriVol2004a}  [Achtung Vorsicht: hier wird von
-\glqq{}Patentansprüchen Dritter\grqq{} gefaselt. Ich glaube nicht, dass die MPL
+\enquote{Patentansprüchen Dritter} gefaselt. Ich glaube nicht, dass die MPL
 sich Recht anmaßt, die sie nicht haben kann.]
 
 
 \subsection{Pflichten: BSD}
 
 Bei der Weitergabe einer BSD-Software sei der Weitergebende in der Pflicht,
-\glqq{}[\ldots] den Urhebervermerk, den Lizenztext selsbt sowie den
+\enquote{[\ldots] den Urhebervermerk, den Lizenztext selsbt sowie den
 Haftungs- und Gewährleistungsausschluss
-(beizubehalten)\grqq{} bei der
+(beizubehalten)} bei der
 Distribution in Form des Quellcodes einfach durch das Belassen, bei der
 Distribution in Form von Binärcode durch entsprechende Formulierungen in der
 Dokumentation.\footcite[vgl.][343]{ArlBriVol2004a}:
 
 Für die Weitergabe von modifizierten Versionen konstatieren die Autoren eine
-\glqq{}missverständliche\grqq{}Formulierung\footcite[vgl.][343]{ArlBriVol2004a}:
+\enquote{missverständliche}Formulierung\footcite[vgl.][343]{ArlBriVol2004a}:
 Tatsächlich bezieht sich das Gebot des Lizenzerhaltes vom Lizenztext her nur auf
-den unveränderten Quellcode: \glqq{}Bei der Verwertung modifizierter
+den unveränderten Quellcode: \enquote{Bei der Verwertung modifizierter
 Versionen ist der Nutzer hingegen nicht verpflichtet, Urhebervermerk,
-Gewährleistungs- und Haftungsausschluss oder den Lizenztext hinzuzufügen\grqq{},
+Gewährleistungs- und Haftungsausschluss oder den Lizenztext hinzuzufügen},
 sodass eben gerade keine >Copyleft-Konstruktion
 entsteht\footcite[vgl.][344]{ArlBriVol2004a}
 
@@ -183,64 +187,64 @@ entsteht\footcite[vgl.][344]{ArlBriVol2004a}
 Gravierender sollen die Unterschiede zwischen MPL zu BSD und GPL dadagen bzgl.
 der MPL eigenen Art des Copylefts sein.
 
-Die anderen Pflichten wie \glqq{}Beilegung des Lizenztextes\grqq{}, die
-\glqq{}Einbeziehung von Urheberechtsvermerken\grqq{} und der Umgang mit Gebühren
+Die anderen Pflichten wie \enquote{Beilegung des Lizenztextes}, die
+\enquote{Einbeziehung von Urheberechtsvermerken} und der Umgang mit Gebühren
 etc. gleichen in etwa denen der GPL\footcite[vgl.][346f]{ArlBriVol2004a}.
 
 Bzgl. der Pflichten in Sachen Weitergabe modifizierter Versionen sprechen die
-Autoren dagegen vom \glqq{}beschränkten Copyleft-Effekt der
-MPL\grqq{}\footcite[vgl.][348]{ArlBriVol2004a}. Dies leiten sie wie folgt her:
+Autoren dagegen vom \enquote{beschränkten Copyleft-Effekt der
+MPL}\footcite[vgl.][348]{ArlBriVol2004a}. Dies leiten sie wie folgt her:
 
 \begin{itemize}
   \item Grundsätzlich gäbe es durch die §§ 3.1 und 3.2 der MPL einen der MPL
-  \glqq{}inhärenten Copyleft-Effekt\grqq{}, sodass \glqq{}[\ldots]
+  \enquote{inhärenten Copyleft-Effekt}, sodass \enquote{[\ldots]
   Bearbeitungrn frt >Software grundsätzlich von der Lizenz erfasst
-  (seien)\grqq{}, was besage, dass \glqq{}[\ldots] der Quellcode
+  (seien)}, was besage, dass \enquote{[\ldots] der Quellcode
   inklusive der vorgenommenen Änderungen daher allein unter der MPL
-  vertrieben werden (könne)\grqq{}\footcite[vgl.][349]{ArlBriVol2004a}. Dies
+  vertrieben werden (könne)}\footcite[vgl.][349]{ArlBriVol2004a}. Dies
   gelte dann auch bei der Verbreitung in Maschinencode, bei der der modifizierte
-  Quellcode eben auch \glqq{}zugänglich\grqq{} gemacht werden
+  Quellcode eben auch \enquote{zugänglich} gemacht werden
   müsse\footcite[vgl.][349]{ArlBriVol2004a}, allerdings nicht 'dauerhaft', wie
-  bei der GPL, sondern nur für \glqq{}längstens\grqq{} 12 MOnate.
+  bei der GPL, sondern nur für \enquote{längstens} 12 MOnate.
   \item Eine kleine besonderheit betrifft bei der MPL die Modifikation, auf die
   hier extra hingewiesen werden müssen und die gesondert dokumentiert werden
   müssen, sodass Original und Ableitung auseinanderzuhalten
   ist\footcite[vgl.][350]{ArlBriVol2004a}
   \item Die nächste Besonderheit der MPL betrifft die Erlaubnis, dass der
   Objektcode selbst unter einer beliebigen Lizenz vertrieben werden dürfe,
-  sofern diese\glqq{}[\ldots] nicht die Rechte des Quelltextes
-  (beschränke)\grqq{} und sofern angegeben wird, wo und wie der Quellcode
+  sofern diese\enquote{[\ldots] nicht die Rechte des Quelltextes
+  (beschränke)} und sofern angegeben wird, wo und wie der Quellcode
   erhältnich ist\footcite[vgl.][350]{ArlBriVol2004a}. Damit - so die Autoren -
- \glqq{}dürften die praktischen Auswirkungen dieser 'Aufweichung' des
+ \enquote{dürften die praktischen Auswirkungen dieser 'Aufweichung' des
  Pflichtenprogramms eher als gering einzustufen
- sein\grqq{}\footcite[vgl.][351]{ArlBriVol2004a}
- \item Der Hauptunterschied betrifft die \glqq{}Kombination proprietärer
+ sein}\footcite[vgl.][351]{ArlBriVol2004a}
+ \item Der Hauptunterschied betrifft die \enquote{Kombination proprietärer
  Software mit Open Source Software unter der MPL-Lizenz in einem
- Gesamtpaket, einem sog, 'Larger Work'\grqq{}: Zwar müsse für das eiegntliche
+ Gesamtpaket, einem sog, 'Larger Work'}: Zwar müsse für das eiegntliche
  MPL lizenziert Werk die MPL-Lizenzbedingung eingehalten werden. Aber
- \glqq{}die mit diesem gemeinsam vertriebenen Module müssen dagegen nicht
+ \enquote{die mit diesem gemeinsam vertriebenen Module müssen dagegen nicht
  der MPL unterstellt werden, sodass weder deren Objekt- noch deren
  Quellcode zugänglich gemacht werden
- müssen\grqq{}\footcite[vgl.][352]{ArlBriVol2004a}. Das meint explizit, dass
+ müssen}\footcite[vgl.][352]{ArlBriVol2004a}. Das meint explizit, dass
  Änderungen, Weglassungen und Erweiterung am bestehenden Code eben als
- \glqq{}Bearbeitung\grqq{} aufgefasst
+ \enquote{Bearbeitung} aufgefasst
  werden\footcite[vgl.][354]{ArlBriVol2004a}: Auch wenn der MPL-Code um das
  doppelkte anwüchse, läge immer noch kein 'Larger Work' vor:
- \glqq{}Voraussetzung\grqq{} für eine Larger Work, über dass die Autnomie der
+ \enquote{Voraussetzung} für eine Larger Work, über dass die Autnomie der
  eigen Zutat begründet und der ZUgriff auf dess Code verweigert wird, ist
- \glqq{}[\ldots] dass die neu hinzugefügten Module in eigenständigen
+ \enquote{[\ldots] dass die neu hinzugefügten Module in eigenständigen
  Dateien vorliegen, die selbst keine Bestandteile des Originalcodes
- enthalten\grqq{}\footcite[vgl.][354]{ArlBriVol2004a}
- \item Exkurs zur GPL: Die Autoren unterstreichenh sodann, dass \glqq{}[\ldots]
+ enthalten}\footcite[vgl.][354]{ArlBriVol2004a}
+ \item Exkurs zur GPL: Die Autoren unterstreichenh sodann, dass \enquote{[\ldots]
  bestimmte Foirmen des gemeinsamen Vertriebes proprietärer Software und
- GPL-lizenzierter Software [\ldots] auch nach der GPL denkbar seien\grqq{},
- sofern es sich dabei um identifizierbare Werke handele, \glqq{}[\ldots]
+ GPL-lizenzierter Software [\ldots] auch nach der GPL denkbar seien},
+ sofern es sich dabei um identifizierbare Werke handele, \enquote{[\ldots]
  welche nicht vom Originalprogramm abgeleitet (seiern) und
  vernünftigerweise slebst als unabhängige und eigenständige Werke
- betrachtet werden können\grqq{}\footcite[vgl.][354]{ArlBriVol2004a}. Allerdings
- gäbe es bei der GPL eben das Postulat der \glqq{}Eigenständigkeit\grqq{} oder
- \glqq{}Unabhängikeit\grqq{}, das bei der \glqq{}[\ldots] MPL keine
- Entsprechung (finde)\grqq{}\footcite[vgl.][355]{ArlBriVol2004a}
+ betrachtet werden können}\footcite[vgl.][354]{ArlBriVol2004a}. Allerdings
+ gäbe es bei der GPL eben das Postulat der \enquote{Eigenständigkeit} oder
+ \enquote{Unabhängikeit}, das bei der \enquote{[\ldots] MPL keine
+ Entsprechung (finde)}\footcite[vgl.][355]{ArlBriVol2004a}
 \end{itemize}
 
 
