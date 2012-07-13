@@ -28,6 +28,10 @@
 \usepackage[ngerman, english]{babel}
 \selectlanguage{english}
 
+%language specific quoting signs
+%default for language emglish is american style of quotes
+\usepackage[english=british]{csquotes}
+
 % jurabib configuration
 \usepackage[see]{jurabib}
 \bibliographystyle{jurabib}
@@ -85,7 +89,7 @@
 \maketitle
 %%-- end(titlepage)
 
-\input{en/20110928-Changes}
+\input{oscSnippetInc.tex}
 %\input{oscSnippetInc}
 
 \cite[cf.][231ff esp. p. 232f.]{Fogel2006a}

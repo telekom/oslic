@@ -35,6 +35,10 @@
 \usepackage[ngerman, english]{babel}
 \selectlanguage{english}
 
+%language specific quoting signs
+%default for language emglish is american style of quotes
+\usepackage{csquotes}
+
 % jurabib configuration
 \usepackage[see]{jurabib}
 \bibliographystyle{jurabib}
@@ -110,19 +114,19 @@ similar contexts. Finally the complete commented bibliography is printed.
 \section{Initial quotation \& Repetition by $\backslash$footcite out of
 \emph{jurabib}}
 
-This line simulates the \glqq initial quotation which therefore should be
-referred by the complete set of all bibliographic data\grqq\footcite[cf.
-besides:][S.123ff]{Buchtala2007a}, followed by a \glqq quotation out of the same work
-and the same page\grqq\footcite[cf.][S.123ff]{Buchtala2007a}, which again is
-followed by a \glqq  quotation out of the same work but a different
-page.\grqq\footcite[cf.][S.125f]{Buchtala2007a}.
+This line simulates the \enquote{ initial quotation which therefore should be
+referred by the complete set of all bibliographic data}\footcite[cf.
+besides:][S.123ff]{Buchtala2007a}, followed by a \enquote{ quotation out of the same work
+and the same page}\footcite[cf.][S.123ff]{Buchtala2007a}, which again is
+followed by a \enquote{  quotation out of the same work but a different
+page.}\footcite[cf.][S.125f]{Buchtala2007a}.
 
 If possible there should now be cited another work of the same
 author\footcite[cf.][S.321]{Buchtala2007a}.
 
 Now we cite a complete other work\footcite[cf.
-additionally][S.42]{Spielkamp2008a} for being able to test wether the \glqq
-short-title-abbreviated-quotation'\grqq\footcite[cf.
+additionally][S.42]{Spielkamp2008a} for being able to test wether the \enquote{
+short-title-abbreviated-quotation'}\footcite[cf.
 furthermode][S.123]{Buchtala2007a} is correctly used.
 
 \section{Testzitat $\backslash$cite in $\backslash$footnote}
