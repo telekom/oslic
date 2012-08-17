@@ -35,6 +35,10 @@
 \usepackage[english, ngerman]{babel}
 \selectlanguage{ngerman}
 
+%language specific quoting signs
+%default for language emglish is american style of quotes
+\usepackage[german=quotes]{csquotes}
+
 % jurabib configuration
 \usepackage[see]{jurabib}
 \bibliographystyle{jurabib}
@@ -133,30 +137,30 @@ heute eher falsche Zahlen liefern, dennn Ecllipse und
 Apache werden mittlerweil woanders gehostet. Stimmt
 das?]{BruHarPicCreFieHen2004a}
 
-Danach [Kap4] werden \glqq{}technische Aspekte der Entwicklung und des Einsatzes
-von OSS\grqq{} besprochen\footcite[vgl.][63-94]{BruHarPicCreFieHen2004a},
+Danach [Kap4] werden \enquote{technische Aspekte der Entwicklung und des Einsatzes
+von OSS} besprochen\footcite[vgl.][63-94]{BruHarPicCreFieHen2004a},
 insbesondere auch solche des
-\glqq{}Software-Ent\-wick\-lungs\-pro\-zes\-ses\grqq{}\footcite[vgl.][67ff]{BruHarPicCreFieHen2004a}.
+\enquote{Software-Ent\-wick\-lungs\-pro\-zes\-ses}\footcite[vgl.][67ff]{BruHarPicCreFieHen2004a}.
 
-Zentral [Kap5] ist dann auch die Darstellung \glqq{}ökonomischer Aspekte
+Zentral [Kap5] ist dann auch die Darstellung \enquote{ökonomischer Aspekte
 der Entwicklung und des Einsatzes von
-OSS\grqq{}\footcite[vgl.][95-124]{BruHarPicCreFieHen2004a}, weil hier nicht nur
+OSS}\footcite[vgl.][95-124]{BruHarPicCreFieHen2004a}, weil hier nicht nur
 die Ökonomie der OS selbst thematisiert wird, sondern insbesondere auch die
-\glqq{}Initiierung und Unterstützung von OSS-Projekten durch
-Unternehmen\grqq{}\footcite[vgl.][101-114]{BruHarPicCreFieHen2004a}
+\enquote{Initiierung und Unterstützung von OSS-Projekten durch
+Unternehmen}\footcite[vgl.][101-114]{BruHarPicCreFieHen2004a}
 
-Schließlich werden [Kap6] allgemeine \glqq{}Rahmenbedingungen\grqq{} und
-rechtliche Fragen für \glqq{}OSS und proprietäre
-Software\grqq{}\footcite[vgl.][125-164]{BruHarPicCreFieHen2004a} und
-\glqq{}Auswirkungen von
-OSS\grqq{}\footcite[vgl.][165-176]{BruHarPicCreFieHen2004a} samit
-\glqq{}Ausblick\grqq{}\footcite[vgl.][177-182]{BruHarPicCreFieHen2004a}
+Schließlich werden [Kap6] allgemeine \enquote{Rahmenbedingungen} und
+rechtliche Fragen für \enquote{OSS und proprietäre
+Software}\footcite[vgl.][125-164]{BruHarPicCreFieHen2004a} und
+\enquote{Auswirkungen von
+OSS}\footcite[vgl.][165-176]{BruHarPicCreFieHen2004a} samit
+\enquote{Ausblick}\footcite[vgl.][177-182]{BruHarPicCreFieHen2004a}
 diskutiert.
 
 In unserem Zusammenhang fällt auf, dass man im Rahmen der
 Lizenzanalyse\footcite[vgl.][19-62]{BruHarPicCreFieHen2004a} und insbesondere
-bei der Betrachtung \glqq{}unternehmerischer
-Unterstützung\grqq{}\footcite[vgl.][101-114]{BruHarPicCreFieHen2004a} hätte
+bei der Betrachtung \enquote{unternehmerischer
+Unterstützung}\footcite[vgl.][101-114]{BruHarPicCreFieHen2004a} hätte
 erwarten können, dass die praktischen Pflichten der Unternehmen näher erläutert
 werden, die sie mit der Nutzung, der Distribution oder Modifikation von OSS
 eingehen. Richtig ist, dass es in beiden Abschnitten Ansätze dazu gibt: 
@@ -165,19 +169,19 @@ So enthält einerseits die OS Lizenzanalyse\footcite[was als Open Source Lizenz
 gilt wird analog der OSI/OSDL festgelegt. Vgl.
 dazu][20]{BruHarPicCreFieHen2004a} eine Klassifikation der Lizenzen nach
 folgendem Muster\footcite[vgl.][23 - die Klassifikation in Form einer Tabelle
-erfolgt explizit \glqq{}in Anlehnung an Perens (1999)\grqq{} und ist mit dem
-Label \glqq{}Eigenschaften von OSS-Lizenzen\grqq{}
+erfolgt explizit \enquote{in Anlehnung an Perens (1999)} und ist mit dem
+Label \enquote{Eigenschaften von OSS-Lizenzen}
 untertitelt]{BruHarPicCreFieHen2004a}:
 
 \begin{tabular}[h]{|r|c|c|c|c|}
-& \rotatebox{90}{\glqq{}Quellcode  kann unbegrenzt gelesen, genutzt, modifiziert
-und distribuiert werden\grqq{}} 
-& \rotatebox{90}{\glqq{}Kann mit proprietärer Software verbunden und
-(re-)distribuiert werden ohne OSS-Lizenz\grqq{}} 
-& \rotatebox{90}{\glqq{}Modifikationen am OSS lizenzierten Quellcode können im
-Distributionsfall proprietär bleiben\grqq{}} 
-& \rotatebox{90}{\glqq{}Spezielle Privilegien für den ursprünglichen Copyright
-halter über Modifikationen anderer\grqq{}} 
+& \rotatebox{90}{\enquote{Quellcode  kann unbegrenzt gelesen, genutzt, modifiziert
+und distribuiert werden}} 
+& \rotatebox{90}{\enquote{Kann mit proprietärer Software verbunden und
+(re-)distribuiert werden ohne OSS-Lizenz}} 
+& \rotatebox{90}{\enquote{Modifikationen am OSS lizenzierten Quellcode können im
+Distributionsfall proprietär bleiben}} 
+& \rotatebox{90}{\enquote{Spezielle Privilegien für den ursprünglichen Copyright
+halter über Modifikationen anderer}} 
 \\
 \hline \hline
 GPL & \checkmark & & & \\
@@ -192,56 +196,56 @@ MPL & \checkmark & \checkmark &  & \checkmark\\
 \hline
 \end{tabular}
 
-Oder es enthält etwa die Analyse der \glqq{}ökonomischen Aspekte\grqq{} eine
-Typologisierung hinsichtlich er \glqq{}[\ldots] Roller, die das Unternehmen in
+Oder es enthält etwa die Analyse der \enquote{ökonomischen Aspekte} eine
+Typologisierung hinsichtlich er \enquote{[\ldots] Roller, die das Unternehmen in
 Bezug auf die betreffende Software
-einnimmt\grqq{}\footcite[vgl.][102]{BruHarPicCreFieHen2004a}, nämlich (a) die
-\glqq{}Bereitstellung von OSS als Komplement zu eigenen Produkten\grqq{}, (b)
-die \glqq{}Nutzung von OSS in internen Prozessen\grqq{},(c) die
-\glqq{}Verwendung von OSS in eigenen Pprodukten\grqq{} und (d) die
-\glqq{}Verwendung von OSS als
-Kerngeschäft\grqq{}\footcite[vgl.][103]{BruHarPicCreFieHen2004a}. 
+einnimmt}\footcite[vgl.][102]{BruHarPicCreFieHen2004a}, nämlich (a) die
+\enquote{Bereitstellung von OSS als Komplement zu eigenen Produkten}, (b)
+die \enquote{Nutzung von OSS in internen Prozessen},(c) die
+\enquote{Verwendung von OSS in eigenen Pprodukten} und (d) die
+\enquote{Verwendung von OSS als
+Kerngeschäft}\footcite[vgl.][103]{BruHarPicCreFieHen2004a}. 
 
 Und mehr noch,
 es wird sogar explizit der Fall von 'LinkSys' beschrieben, die als
-\glqq{}Routerhersteller für kleine Netzwerke\grqq{} in ihren Geräten GPL
-lizenzierten Code verwendet hätten und dann von der \glqq{}Free Software
-Foundation\grqq{} aufgefordert worden seien, \glqq{}[\ldots] den
+\enquote{Routerhersteller für kleine Netzwerke} in ihren Geräten GPL
+lizenzierten Code verwendet hätten und dann von der \enquote{Free Software
+Foundation} aufgefordert worden seien, \enquote{[\ldots] den
 Quellcode verfügbar zu
-machen\grqq{}\footcite[vgl.][111]{BruHarPicCreFieHen2004a}
+machen}\footcite[vgl.][111]{BruHarPicCreFieHen2004a}
 
 Ja schließlich werden sogar mögliche Vor- und Nachteile der Open Source
 Nutzung, Distribution oder Modifikation gegenübergestellt. Als Vorteile gelten
 etwa\footcite[vgl.][114]{BruHarPicCreFieHen2004a}:
 \begin{itemize}
-  \item \glqq{}externe Entwicklungsunterstützung\grqq{}
-  \item \glqq{}reduzierte Kosten der Maintenance\grqq{}
-  \item \glqq{}Standardsetzung\grqq{}
-  \item \glqq{}Reputation[s]gewinne (bei gutem Code)\grqq{}
-  \item \glqq{}erhöhte Programmierdisziplin\grqq{}
-  \item \glqq{}Ruf als 'guter OSS-Player'\grqq{}
-  \item \glqq{}erhöhte Attraktivität als Arbeitgeber für Programmierer\grqq{}
-  \item \glqq{}erhöhte Nachfrage nach Komplement / Produkt\grqq{}
-  \item \glqq{}Druck auf Anbieter proprietärer Software\grqq{}
-  \item \glqq{}reduzierte Abhängigkeit von proprietärer Software\grqq{}
-  \item \glqq{}offener Umgang mit Sicherheitslücken\grqq{}
-  \item \glqq{}Rückzug aus Unterstützung alter Software möglich\grqq{}
+  \item \enquote{externe Entwicklungsunterstützung}
+  \item \enquote{reduzierte Kosten der Maintenance}
+  \item \enquote{Standardsetzung}
+  \item \enquote{Reputation[s]gewinne (bei gutem Code)}
+  \item \enquote{erhöhte Programmierdisziplin}
+  \item \enquote{Ruf als 'guter OSS-Player'}
+  \item \enquote{erhöhte Attraktivität als Arbeitgeber für Programmierer}
+  \item \enquote{erhöhte Nachfrage nach Komplement / Produkt}
+  \item \enquote{Druck auf Anbieter proprietärer Software}
+  \item \enquote{reduzierte Abhängigkeit von proprietärer Software}
+  \item \enquote{offener Umgang mit Sicherheitslücken}
+  \item \enquote{Rückzug aus Unterstützung alter Software möglich}
 \end{itemize}
 
 Und als Nachteile gelten dann\footcite[vgl.][114]{BruHarPicCreFieHen2004a}:
 \begin{itemize}
-  \item \glqq{}Risiko des Forkings\grqq{}
-  \item \glqq{}Verlust von Wettbewerbsvorteilen\grqq{}
-  \item \glqq{}Reputationsverlust (bei schlechtem Code)\grqq{}
-  \item \glqq{}Kosten für Vorbereitung des des Codes\grqq{}
-  \item \glqq{}Verletzung von Schutzrechten können leichter entdeckt
-  werden\grqq{}
-  \item \glqq{}Kosten der Maintenance eines OSS-Projektes\grqq{}
-  \item \glqq{}OSS kommt mglw. in erster Linie Wettbewerbern zugute\grqq{}
-  \item \glqq{}Verlust von Bündelungsvorteilen\grqq{}
-  \item \glqq{}Einsicht für Wettbewerber in Geschäftsprozesse\grqq{}
-  \item \glqq{}Sichtbarkeit von Sicherheitslücken\grqq{}
-  \item \glqq{}Lizenzgebühren ausgeschlossen\grqq{}
+  \item \enquote{Risiko des Forkings}
+  \item \enquote{Verlust von Wettbewerbsvorteilen}
+  \item \enquote{Reputationsverlust (bei schlechtem Code)}
+  \item \enquote{Kosten für Vorbereitung des des Codes}
+  \item \enquote{Verletzung von Schutzrechten können leichter entdeckt
+  werden}
+  \item \enquote{Kosten der Maintenance eines OSS-Projektes}
+  \item \enquote{OSS kommt mglw. in erster Linie Wettbewerbern zugute}
+  \item \enquote{Verlust von Bündelungsvorteilen}
+  \item \enquote{Einsicht für Wettbewerber in Geschäftsprozesse}
+  \item \enquote{Sichtbarkeit von Sicherheitslücken}
+  \item \enquote{Lizenzgebühren ausgeschlossen}
 \end{itemize}
 
 Und trotz dieses Gedankengangs und trotz dieser spezifischen Auflistung wird
@@ -256,13 +260,13 @@ Worte mehr bedürfte.
 Für den beschriebenen Fall der Lizenzverletzung durch LinkSys, die so die
 Autoren - in ihren Routerprodukten GPL lizenzierte Software verwendet hätten und
 deshalb von der FSF zur Offenlegung ihres (modifizierten) Codes gezwungen worden
-seien, konstieren die Autoren auch, dass es \glqq{}unangebracht\grqq{} sei,
-\glqq{}[\ldots] bei der Verwendung von GPL-Software in eingebetteten Systemen
+seien, konstieren die Autoren auch, dass es \enquote{unangebracht} sei,
+\enquote{[\ldots] bei der Verwendung von GPL-Software in eingebetteten Systemen
 (von einem 'Risiko') zu
-sprechen\grqq{}\footcite[vgl.][111]{BruHarPicCreFieHen2004a}. Denn \begin{quote}
-\glqq{}Das Problem liegt nicht in den Bedingungen der GPL, sondern im Versuch,
+sprechen}\footcite[vgl.][111]{BruHarPicCreFieHen2004a}. Denn \begin{quote}
+\enquote{Das Problem liegt nicht in den Bedingungen der GPL, sondern im Versuch,
 Software unter Missachtung der Lizenzbedingungen und somit widerrechtlich zu
-nutzen.\grqq{}\footcite[][111]{BruHarPicCreFieHen2004a}
+nutzen.}\footcite[][111]{BruHarPicCreFieHen2004a}
 \end{quote}
 \small
 \bibliography{../bibfiles/oscResourcesDe}

@@ -1,3 +1,19 @@
+2012-08-17: preparation for release 0.5.0
+- integrated dictionaries for using the eclipse spell checker methods
+2012-07-12: release 0.4.1
+- integrated csquotes into all pages
+- replaced qlqq and grqq by enquote{} for using
+  language specific quotation styles  
+2012-07-05: release 0.4.0
+- textual improvements
+2012-07-03: release 0.3.99
+- completed the break through version containing the
+  finder, the definitions, and the corresponding
+  BSD to-do lists.
+- Integrated Greg's proposals for adding a license
+  specific finder additionally.
+2012-06-24: release 0.3.90
+- completed the OS UC finder introducing chapter
 2012-03-22: released 0.2.1
 - generalization of bin/gendist.sh (thanks to Eitan Adler [grimreaper])
 - upgrade of bin/gendist.sh according to changings 0.1.6->0.2.0

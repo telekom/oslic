@@ -29,6 +29,10 @@ toc=bib]{scrbook}
 \usepackage[ngerman, english]{babel}
 \selectlanguage{english}
 
+%language specific quoting signs
+%default for language emglish is american style of quotes
+\usepackage[english=british]{csquotes}
+
 % jurabib configuration
 \usepackage[see]{jurabib}
 \bibliographystyle{jurabib}
@@ -54,7 +58,6 @@ toc=bib]{scrbook}
 % - general no indent for paragraphs
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
-
 
 %%% (4) general package activation %%%
 %\usepackage{utopia}
@@ -102,6 +105,10 @@ toc=bib]{scrbook}
 
 % - additional packages
 \usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{pstricks, pst-node, pst-tree}
+\usepackage{chngcntr}
+\counterwithout{footnote}{chapter}
 
 \usepackage[intoc]{nomencl}
 \let\abbr\nomenclature
@@ -131,8 +138,7 @@ toc=bib]{scrbook}
 and OS Experts}
 \title{Open Source License Compendium}
 \subtitle{How to to Use Open Source Software in a Regular Manner}
-\author{K. Reincke, J. Dobson, G. Sharpe, P. Schichl, 
-  M. Kern\input{btexmat/oscLicenseFootnoteInc}}
+\author{K. Reincke, J. Dobson, G. Sharpe, M. Kern\input{btexmat/oscLicenseFootnoteInc}}
 \maketitle
 %%-- end(titlepage)
 
@@ -150,6 +156,7 @@ accidentally selected experts. We are proud to get its' help. Gladly we thank
 \begin{flushright}
 Eitan Adler,\\
 Thomas Quiehl,\\
+Peter Schichl,\\
 Helene Tamer,\\
 and all the \\
 other\ldots
@@ -213,13 +220,13 @@ other\ldots
 \input{snippets/en/05-osImportantMinorPoints/0505-oslicAndPatents}
 
 %%%%%%%%%%%%%%%
-\chapter{Open Source: Use Cases As Principle of Classification}
+\chapter{Open Source Use Cases: Concept and Taxonomy}
 \input{snippets/en/06-osUseCases/0600-chapterAbstractInc}
 \input{snippets/en/06-osUseCases/0601-chapterStartInc}
 \input{snippets/en/06-osUseCases/0602-chapterTheOslicUseCasesInc}
 
 %%%%%%%%%%%%%%%
-\chapter{Open Source Licenses: Find Your Specific To-do Lists}
+\chapter{Open Source Use Cases: Find the License Fulfilling To-do Lists}
 \input{snippets/en/07-osToDoListFinder/0700-chapterAbstractInc}
 \input{snippets/en/07-osToDoListFinder/0701-chapterStartInc}
 
@@ -258,7 +265,7 @@ other\ldots
 \input{btexmat/oscNclJournalsInc}
 \printnomenclature
 
-\bibliography{bibfiles/oscResourcesDe}
+\bibliography{bibfiles/oscResourcesEn}
 
 
 \end{document}

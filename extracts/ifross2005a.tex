@@ -35,6 +35,10 @@
 \usepackage[english, ngerman]{babel}
 \selectlanguage{ngerman}
 
+%language specific quoting signs
+%default for language emglish is american style of quotes
+\usepackage{csquotes}
+
 % jurabib configuration
 \usepackage[see]{jurabib}
 \bibliographystyle{jurabib}
@@ -115,11 +119,11 @@ Abschnitt für Abschnitt und einschließlich der Bedeutung des Begriffs
 
 \section{Vertrieb gegen Entgeld}
 
-Die Autoren unterstreichen explizit, \glqq{}[\ldots] dass man die Software
-selbst zu jedem Preis anbieten und veräußern (dürfe)\grqq{} und dass es ein
-davon unabhängiger Aspoekt sei, \glqq{}oib es (gelinge), einen bestimmten Preis
+Die Autoren unterstreichen explizit, \enquote{[\ldots] dass man die Software
+selbst zu jedem Preis anbieten und veräußern (dürfe)} und dass es ein
+davon unabhängiger Aspekt sei, \enquote{ob es (gelinge), einen bestimmten Preis
 zu erzielen [\ldots], da ja jeder die Software weitergeben (könne) und es dehalb
-einen starken Wettbewerb (gäbe)\grqq\footcite[cf.][15]{ifross2005a}.
+einen starken Wettbewerb (gäbe)}\footcite[cf.][15]{ifross2005a}.
 
 \section{Entstehende Pflichten =  Art der TO-DO-Liste}
 
@@ -129,18 +133,18 @@ So müsse der Lizenztext mitgeliefert werden, die Copyrightvermerke und der
 Haftungsausschluss beim Akt des Kopierens erhalten bleiben und nach außen
 durchgreicht werden, selbst wenn sie im deutschen Raum nur sehr eingteschränkt
 wirksam sind, und der Quelltext müsse zugänglich gemacht
-werden\footcite[cf.][16]{ifross2005a}. Außerdem gäbe es \glqq{}beim Vertrieb von
-Veränderungen eines GPL-Programms\grqq{} zusätzliche Pflichten: So müssen
+werden\footcite[cf.][16]{ifross2005a}. Außerdem gäbe es \enquote{beim Vertrieb
+von Veränderungen eines GPL-Programms} zusätzliche Pflichten: So müssen
 deutliche Änderungsvermerke aufgenommen werden, bei interaktiven Kommandos
 müssen (weiterhin) der Haftungsausschluss und die Copyrightvermerke sichtbar
 gemacht sein, und es gelte die zentrale Regel des 'derivative
 works'\footcite[cf.][17]{ifross2005a}:
 
 \begin{quote}
-\glqq{}Wiord ein unter GPL lizenziertes Programm so verändert, dass ein
+\enquote{Wiord ein unter GPL lizenziertes Programm so verändert, dass ein
 'derivative work' [\ldots] entsteht [\ldots], darf die so veränderte Software
 insgesamt nur unter den Lizenzbedingungen der GPKL an Dritte weitergegeben
-werden\grqq{}\footcite[cf.][17]{ifross2005a}
+werden}\footcite[cf.][17]{ifross2005a}
 \end{quote}
 
 Leider ist die Zusammenfassung als Handlungsanweisungen für Programmierer
@@ -153,15 +157,15 @@ inkludierbares File dafür geändert worden sein müsste.
 
 \section{Derivative Work}
 
-Das zentrale Problem bei der GPL sei der \glqq{}virale
-Effekt\grqq{}\footcite[cf.][64]{ifross2005a}
+Das zentrale Problem bei der GPL sei der \enquote{virale
+Effekt}\footcite[cf.][64]{ifross2005a}
 
-Initial unterstreichen die Autoren, dass \glqq{}[\ldots] in jedem Falle die
+Initial unterstreichen die Autoren, dass \enquote{[\ldots] in jedem Falle die
 Frage (entscheidend sei), wann  ein 'derivative work', also ein 'abgeleitetes
-Werk' vorliege\grqq{} und dass glqq{}die Antwort auf die Frage (entscheide), ob
+Werk' vorliege} und dass \enquote{die Antwort auf die Frage (entscheide), ob
 der Rechtsinhaber sein Programm der GPL unterstellen (müsse), oder ob er frei in
 der Lizenzwahl (sei), also eine andere Open Sourcve-Lizenz oder eine proprietäre
-Lizenz verwenden (dürfe)\grqq{}\footcite[cf.][64]{ifross2005a}
+Lizenz verwenden (dürfe)}\footcite[cf.][64]{ifross2005a}
 
 \subsection{klare nicht 'derived' Fälle}
 Als einen eindeutigen Fall, bei dem ein 'zugreifendes' Werk trotz technischer
@@ -180,22 +184,22 @@ lizenztiert werden müssen\footcite[cf.][66]{ifross2005a}
 
 \subsection{klare 'derived' Fälle}
 
-Hier schreiben die Autoren klar, dass ein \glqq{}[\ldots] ein eigener Code
+Hier schreiben die Autoren klar, dass ein \enquote{[\ldots] ein eigener Code
 eindeutig der GPL unterstellt werden (müsse), wenn das vorbestehende
 GPL-Programm in seiner bestehenden Form geändert werden[:] Erweiterungen,
 Kürzungen und Abänderungen des Codes führen stets dazu, dass das so geänderte
-Programm der GPL unterstellt werden müsse [\ldots]\grqq{}, vorausgesetzt, es
+Programm der GPL unterstellt werden müsse [\ldots]}, vorausgesetzt, es
 werde vertrieben und nicht nur für sich selbst
 genutzt\footcite[cf.][66]{ifross2005a}.
 
 \subsection{unklare 'derived' Fälle}
 
-Hier sagen die Autoren, dass jene Fälle \glqq{}problematisch\grqq{} seien,
-\glqq{}[ldots]  in denen nicht nur eine einfache Weiterentwicklung stattfinde,
+Hier sagen die Autoren, dass jene Fälle \enquote{problematisch} seien,
+\enquote{[ldots]  in denen nicht nur eine einfache Weiterentwicklung stattfinde,
 sondern ein GPL-Programm mit anderen Programmen oder Programmbestandenteilen
-kombiniert (werde)\grqq{}, und dass die GPL dazu nur \glqq{}Hinweise\grqq{}
-enthalte, die \glqq{}[ldots] alles andere als eindeutig
-(seien)\grqq{}\footcite[cf.][67]{ifross2005a}
+kombiniert (werde)}, und dass die GPL dazu nur \enquote{Hinweise}
+enthalte, die \enquote{[ldots] alles andere als eindeutig
+(seien)}\footcite[cf.][67]{ifross2005a}
 
 Nach einigen Bemerkungen fassen die Autoren folgende Regeln als Leitschnur
 zusammen
