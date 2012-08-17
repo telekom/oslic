@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="net.sourceforge.texlipse.templates.tex" deleted="false" description="direct quote as block" enabled="true" name="!blquote">\begin{quote}
+\enquote{${cursor}
+}\footcite[][]{}
+\end{quote}</template><template autoinsert="true" context="net.sourceforge.texlipse.templates.tex" deleted="false" description="direct quote as block" enabled="true" name="!blquote ...">\begin{quote}
+\enquote{[\ldots] ${cursor}
+}\footcite[][]{}
+\end{quote}</template><template autoinsert="true" context="net.sourceforge.texlipse.templates.tex" deleted="false" description="&quot;&quot;" enabled="true" name="!enquote">\enquote{${cursor}}</template><template autoinsert="true" context="net.sourceforge.texlipse.templates.tex" deleted="false" description="&quot;[...] &quot;" enabled="true" name="!enquote...">\enquote{[\ldots] ${cursor}}</template><template autoinsert="true" context="net.sourceforge.texlipse.templates.tex" deleted="false" description="jurabib footnote citation" enabled="true" name="!footcite">\footcite[vgl.][${cursor}]{}</template></templates>
