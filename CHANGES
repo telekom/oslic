@@ -1,3 +1,5 @@
+2012-08-17: preparation for release 0.5.0
+- integrated dictionaries for using the eclipse spell checker methods
 2012-07-12: release 0.4.1
 - integrated csquotes into all pages
 - replaced qlqq and grqq by enquote{} for using
