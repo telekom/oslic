@@ -6,7 +6,7 @@ RES_EXTS=ps pdf bak rtf
 SUB_DIRS=bibfiles btexmat extracts snippets templates
 OSLICDIR=oslic
 
-all:	alldvi
+all:	advi
 
 advi: clear
 	find . -maxdepth 1 -name "*.tex" -type f |\
