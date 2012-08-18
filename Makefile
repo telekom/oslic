@@ -9,19 +9,19 @@ OSLICDIR=oslic
 all:	advi
 
 advi: clear
-	find . -maxdepth 1 -name "*.tex" -type f |\
+	find . -maxdepth 1 -name "*.tex" -type f ! -name "release.tex" |\
 	while read file; do \
 	  make "`basename $$file .tex`.dvi";\
 	done
 
 aps: clear
-	find . -maxdepth 1 -name "*.tex" -type f |\
+	find . -maxdepth 1 -name "*.tex" -type f ! -name "release.tex" |\
 	while read file; do \
 		make "`basename $$file .tex`.ps";\
 	done
 
 apdf: clear
-	find . -maxdepth 1 -name "*.tex" -type f |\
+	find . -maxdepth 1 -name "*.tex" -type f ! -name "release.tex" |\
 	while read file; do \
 		make "`basename $$file .tex`.pdf";\
 	done
