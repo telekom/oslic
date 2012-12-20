@@ -92,7 +92,291 @@ nevertheless.
 \normalsize
 \ldots
 
-\includegraphics[scale=0.32]{graphics/licenses-cluster.eps}
+
+\begin{tikzpicture}
+\label{LICTAX}
+\footnotesize
+
+% (1.A) list of all licenses and their release numbers Level 5/6
+\node[rectangle,draw,text width=1.4cm] (l0100) at (10,0.5)
+{ \textit{BSD License} };
+\node[text width=1.4cm] (l0101) at (12,0)
+{ \scriptsize{3-Clauses} };
+\node[text width=1.4cm] (l0102) at (12,1)
+{ \scriptsize{2-Clauses} };
+  
+\node[rectangle,draw,text width=1.4cm] (l0200) at (11,2)
+{ \textit{MIT License} }; 
+\node[text width=0.4cm] (l0201) at (12.5,2) {\scriptsize{1.1}};
+  
+\node[rectangle,draw,text width=1.4cm] (l0300) at (12.5,3)
+{ \textit{\textbf{AP}ache \textbf{L}icense}};
+   \node[text width=0.4cm] (l0301) at (14,3) {\scriptsize{2.1}};
+
+\node[rectangle,draw,text width=1.4cm] (l0400) at (13,4.5)
+{ \textit{\textbf{M}icro\textbf{s}oft \textbf{P}ublic \textbf{L}icense} };
+\node[text width=0.4cm] (l0401) at (14.5,4){\scriptsize{1.0}};
+\node[text width=0.4cm,style=dotted] (l0402) at (14.5,5){\scriptsize{\textit{1.1}}};
+  
+\node[rectangle,draw,text width=1.4cm] (l0500) at (13,6)
+{\textit{\textbf{P}ost\textbf{g}res \textbf{L}icense}};
+\node[text width=0.4cm] (l0501) at (14.5,6){ \scriptsize{1.1}};
+  
+\node[rectangle,draw,text width=1.4cm] (l0600) at (13,7)
+{\textit{PHP License}};
+\node[text width=0.4cm] (l0601) at (14.5,7){\scriptsize{1.1}};
+  
+\node[rectangle,draw,text width=1.4cm] (l0700) at (13,8)
+{ \textit{XXX License}};
+\node[text width=0.4cm] (l0701) at (14.5,8){\scriptsize{1.1}};
+
+\node[rectangle,draw,text width=1.4cm] (l0800) at (13,9.5)
+{ \textit{\textbf{M}ozilla \textbf{P}ublic \textbf{L}icense}};
+\node[text width=0.4cm] (l0801) at (14.5,9){\scriptsize{1.1}};
+\node[text width=0.4cm] (l0802) at (14.5,10){\scriptsize{2.0}};
+
+\node[rectangle,draw,text width=1.4cm] (l0900) at (13,11.5)
+{\textit{\textbf{E}clipse \textbf{P}ublic \textbf{L}icense}};
+\node[text width=0.4cm] (l0901) at (14.5,11) {\scriptsize{1.0}};
+\node[text width=0.4cm,style=dotted] (l0902) at (14.5,12){\scriptsize{\textit{1.1}}};
+ 
+\node[rectangle,draw,text width=1.5cm] (l1000) at (13,13.5)
+{\textit{\textbf{E}uropean \textbf{P}ublic \textbf{L}icense}}; 
+\node[text width=0.4cm] (l1001) at (14.5,13){\scriptsize{1.0}};
+\node[text width=0.4cm,style=dotted] (l1002) at (14.5,14){\scriptsize{\textit{1.1}}};
+  
+\node[rectangle,draw,text width=1.4cm] (l1100) at (13,15.5)
+{\textit{\textbf{L}esser \textbf{G}NU \textbf{P}ublic \textbf{L}icense}};
+
+\node[text width=0.4cm] (l1101) at (14.5,15){\scriptsize{2.1}};
+\node[text width=0.4cm] (l1102) at (14.5,16){\scriptsize{3.0} };
+
+\node[rectangle,draw,text width=1.4cm] (l1200) at (13,17.5)
+{\textit{\textbf{G}NU \textbf{P}ublic \textbf{L}icense}};
+
+\node[text width=0.4cm] (l1201) at (14.5,17){\scriptsize{2.1}};
+\node[text width=0.4cm] (l1202) at (14.5,18){\scriptsize{3.0} };
+
+\node[rectangle,draw,text width=1.4cm] (l1300) at (13,19.5)
+{ \textit{\textbf{A}ffero \textbf{G}NU \textbf{P}ublic \textbf{L}icense}};
+\node[text width=0.4cm, style=dotted] (l1301) at (14.5,19){\scriptsize{2.1}};
+\node[text width=0.4cm] (l1302) at (14.5,20){\scriptsize{3.0}};
+
+% 2. the clustering concepts of licenses (level 4)
+\node[rectangle,draw,text width=2.3cm] (n0100) at (10,8)
+ { \textit{protecting the user, the con\-tri\-butor \& the initial code}\\
+   \tiny{Permissive Licenses}      
+ };
+
+\node[rectangle,draw,text width=2.3cm] (n0200) at (10,11.5)
+{ \textit{protecting the user, the con\-tri\-butor, the
+  initial code, \& all di\-rect de\-ri\-va\-tions}\\
+  \tiny{Weak Copyleft}        
+};
+
+\node[rectangle,draw,text width=2.3cm] (n0300) at (10,16.5)
+{ \textit{protecting the user, the con\-tri\-bu\-tor, the 
+  initial code, all di\-rect de\-ri\-va\-tions \& the 
+  (in\-di\-rect\-ly de\-ri\-ved) on-top-deve\-lop\-ments}\\ 
+  \tiny{Strong Copyleft}    
+ };
+
+% 3. the threats (level 3)
+\node[ellipse,draw,text width=1.6cm] (c110000) at (4.5,0)
+{ \textbf{\textit{Patent Disputes}}};
+
+\node[ellipse,draw,text width=1.6cm] (c120000) at (4.5,2)
+{ \textbf{\textit{Loss of Rights}} };
+
+\node[ellipse,draw,text width=1.6cm] (c210000) at (4.5,4)
+{ \textbf{\textit{Warranty Claims}} };
+ 
+\node[ellipse,draw,text width=1.6cm] (c220000) at (4.5,6)
+{ \textbf{\textit{Loss of Feeback}}};
+
+\node[ellipse,draw,text width=0.4cm] (c311000) at (6.2,8)
+{ \tiny{\textit{\textbf{clos\-ings}}}};
+
+\node[ellipse,,draw,text width=0.4cm] (c321000) at (6.2,10)
+{ \tiny{\textit{\textbf{clos\-ings}}} };
+
+\node[ellipse,,draw,text width=0.4cm] (c331000) at (6.2,12)
+{ \tiny{\textit{\textbf{clos\-ings}}} };
+
+\node[ellipse,,draw,text width=0.4cm] (c341000) at (6.2,14)
+{ \tiny{\textit{\textbf{clos\-ings}}} };
+
+\node[ellipse,,draw,text width=0.4cm] (c351000) at (6.2,16)
+{ \tiny{\textit{\textbf{clos\-ings}}} };
+
+\node[ellipse,,draw,text width=1.6cm] (c411000) at (6.2,19)
+{ \textit{\textbf{clos\-ings}} };
+
+
+% 4. the subtypes of protected entities (level 2)
+\node[ellipse,draw,text width=1.5cm] (c310000) at (3,8)
+ { \scriptsize{un\-modified} \textbf{Sources}};
+
+\node[ellipse,draw,text width=1.5cm] (c320000) at (3.25,10)
+ { \scriptsize{un\-modified} \textbf{Binaries}};
+
+\node[ellipse,draw,text width=1.2cm] (c330000) at (3.5,12)
+ { \scriptsize{modified} \textbf{Sources}};
+
+\node[ellipse,draw,text width=1.4cm] (c340000) at (3.25,14)
+ { \scriptsize{modified} \textbf{Binaries}};
+
+\node[ellipse,draw,text width=1.4cm] (c350000) at (3,16)
+ { \scriptsize{part of \textbf{On-Top-Develop\-ments}}};
+
+
+% 5. the protected entities (level 1)
+\node[ellipse,draw,text width=1cm] (c100000) at (1,1)
+ { \textbf{Users} };
+
+\node[ellipse,draw,text width=0.8cm] (c200000) at (1,5)
+ { \textbf{Con\-tribu\-tors}};
+
+\node[ellipse,draw,text width=0.8cm] (c300000) at (1,12)
+ { distri\-buted \textbf{Soft\-ware}};
+ 
+\node[ellipse,draw,text width=2.2cm] (c400000) at (1,19)
+ { un\-distri\-buted \textbf{Soft\-ware}}; 
+
+% 6. main node (leve 0)
+\node[ellipse,draw,text width=1.3cm] (c000000) at (0,8)
+{ \textbf{Open Source License}};
+
+% a linking Licenses to their release numbers (Linking level 5 to 6)
+\foreach \father/\daughter in {
+  l0100/l0101/,
+  l0100/l0102/,
+  l0200/l0201/,   
+  l0300/l0301/,
+  l0400/l0401/,
+  l0400/l0402/,
+  l0500/l0501/,
+  l0600/l0601/,
+  l0700/l0701/,
+  l0800/l0801/,
+  l0800/l0802/,
+  l0900/l0901/,
+  l0900/l0902/,
+  l1000/l1001/,
+  l1000/l1002/,
+  l1100/l1101/,
+  l1100/l1102/,
+  l1200/l1201/,
+  l1200/l1202/,
+  l1300/l1301/,
+  l1300/l1302/
+  }
+  \draw[dashed] (\father) to  (\daughter) ;
+
+% b) linking Licenses to license concepts (Linking level 5 to 4)
+\foreach \father/\daughter/\outangle/\inangle in {
+  n0100/l0100/270/150,       
+  n0100/l0200/280/155,
+  n0100/l0300/290/160,
+  n0100/l0400/300/165,
+  n0100/l0500/310/150,
+  n0100/l0600/340/160,
+  n0100/l0700/360/180,
+  n0200/l0800/300/160,
+  n0200/l0900/340/170,
+  n0200/l1000/20/190,
+  n0200/l1100/60/200,
+  n0300/l1200/40/180,
+  n0300/l1300/80/180 
+  }
+  %\draw[dashed] (\father) to [out=\outangle,in=\inangle] (\daughter) ;
+  \draw[dashed] (\father) to  (\daughter) ;
+
+% c) linking license concepts to the threats against they protect
+% c.1) strong copyleft licenses
+\foreach \father/\daughter/\outangle/\inangle in {
+  c351000/n0300/0/180,
+  c341000/n0300/45/190,
+  c331000/n0300/50/200,
+  c321000/n0300/55/210,
+  c311000/n0300/60/220,
+  c220000/n0300/25/225,
+  c210000/n0300/25/230,
+  c120000/n0300/25/235
+  }
+  \draw[<-,color=blue] (\father) to [out=\outangle,in=\inangle] (\daughter) ;
+% c.2) weak copyleft licenses
+\foreach \father/\daughter/\outangle/\inangle in {
+  c341000/n0200/330/170,
+  c331000/n0200/0/180,
+  c321000/n0200/0/180,
+  c311000/n0200/20/190,
+  c220000/n0200/15/220,
+  c210000/n0200/15/230,
+  c120000/n0200/15/235
+  }
+  \draw[<-,color=cyan] (\father) to [out=\outangle,in=\inangle] (\daughter) ;
+% c.3) permissive licenses
+\foreach \father/\daughter/\outangle/\inangle in {
+  c331000/n0100/355/150,
+  c311000/n0100/0/180,
+  c210000/n0100/5/210,
+  c120000/n0100/10/230
+  }
+  \draw[<-,color=red] (\father) to [out=\outangle,in=\inangle] (\daughter) ;
+%c.4 agpl license
+\foreach \father/\daughter/\outangle/\inangle in {
+  c411000/l1300/0/180    
+}
+  \draw[<-,color=green] (\father) to [out=\outangle,in=\inangle] (\daughter) ;
+
+
+%d linking protected entities, their subtypes and the the relations
+\foreach \father/\daughter/\edgetext/\outangle/\inangle in {
+  c000000/c100000/protecting/260/120,
+  c100000/c110000/against/360/180,
+  c100000/c120000/against/360/180,
+  c000000/c200000/protecting/270/180,
+  c200000/c210000/against/0/180,
+  c200000/c220000/against/0/180,
+  c000000/c300000/protecting/90/230,
+  c300000/c310000/as/300/180,
+  c300000/c320000/as/330/180,
+  c300000/c330000/as/0/180,
+  c300000/c340000/as/30/180,
+  c300000/c350000/as/60/180,
+  c000000/c400000/protecting/100/240,
+  c400000/c411000/against/0/180        
+}
+  \draw[->,dotted,
+    decoration={text along path,
+              text align={center},
+              text={|\itshape|\edgetext}},
+              postaction={decorate},] (\father) to [out=\outangle,in=\inangle] (\daughter) ;
+
+\foreach \father/\daughter/\edgetext/\outangle/\inangle in {
+  c310000/c311000/against/0/180,
+  c320000/c321000/against/0/180,
+  c330000/c331000/against/0/180,
+  c340000/c341000/against/00/180,
+  c350000/c351000/against/0/180        
+}
+  \draw[->,dotted,
+    decoration={text along path,
+              text align={center},
+              text={|\itshape \tiny|\edgetext}},
+              postaction={decorate},] (\father) to [out=\outangle,in=\inangle] (\daughter) ;
+
+%f linking the patent clauses
+\foreach \father/\daughter/\outangle/\inangle in {
+  c110000/l1302/0/295,
+  c110000/l0401/0/360,
+  c110000/l0301/0/360   
+}
+  \draw[<-,color=gray] (\father) to [out=\outangle,in=\inangle] (\daughter) ;
+
+\end{tikzpicture}
+
 
 
 
