@@ -23,83 +23,81 @@
 %% use all entries of the bibliography
 %\nocite{*}
 
-[TDB \ldots]
+Grouping Open Sources licenses is often applied. You may find taxonomies in your
+prefered magazins\footnote{see For example the German Linux Magazine 04/05 2011
+% TODO Linux Magazin 04/05:2011 wegen Taxonomie in bibtex aufnehmen und zitieren
+} or in more or less specific legal literature\footnote{\ldots must be found
+% TODO Taxonomien aus juristischer literature zitieren
+}. Even in the mailing lists of the Open Source Initiative recently it has been
+discussed whether the OSI should cluster the existing licenses into the group of
+the known licenses and the group of the more or less unknown licenses\footnote{
+\ldots belegen
+% TODO OSI license grouping in mailingslist nahschlgane und zitieren
+% TODO OSI site classifcation referieren.
+}.
 
-Be careful: Linux Magazine (04/05 2011) uses another taxonomy which seems not
-to be as elaborated as this taxonomy. This must be discussed[\ldots]
-\ldots
+One of the most known license taxonomies is established by the grouping of the
+'permissive' licenses, the 'weak copyleft licenses' and 'strong copyleft
+licenses'\footnote{ \ldots belegen
+% TODO permissive, weak & strong copyleft taxonomie belegen aus Buch
+}:
 
-\section{Minimal Prescribing Licensemodels: Protecting the developer}
-\footnotesize
-\begin{quote}\itshape
-Here we discuss licenses which only try to protect the developer, like
-the licenses \emph{BSD}, \emph{MIT} and \emph{Apache}.
-\end{quote}
-\normalsize
-\ldots
+% TODO Taxonomie permissive, weak, strong mit psztricks setzen
 
-\section{Reflexive Prescribing Licensemodels: Protecting the code}
-\footnotesize
-\begin{quote}\itshape
-Here we discuss licenses which try to protect the developer and to protect the
-licensed code, like the licenses \emph{EPL?}, \emph{EUPL?} and
-\emph{LGPL}
-\end{quote}
-\normalsize
-\ldots
+All these taxonomies are invented to simplify the talking about Open Source
+licenses: One wants to talk about the groups instead of regarding each license.
+And one wants to elaborate the internal structure of the amorph field of
+licenses. Structuring by generalization is the first method of human beings to
+adopt an area and to produce knowledge:
 
-\section{Overlapping Prescribing Licensemodels: Protecting the on-top-developments}
-\footnotesize
-\begin{quote}\itshape
-Here we discuss licenses which try to protect the developer, which try to
-protect the licensed code, and which try to protect the on-top-developments,
-also known as derivated works. You may expect the licenses \emph{GPL-2},
-\emph{GPL-3}, and \emph{AGPL}\ldots
-\end{quote}
-\normalsize
-\ldots
+The main group is established by the 10 criteria of the Open Source Definition.
+Each Open Source license must fit each of these 10 criteria for being an Open
+Source license. These 10 criteria forms the external borders. So, for getting
+internal groups of this cluster, one has to refer to other criteria. There exist
+extrinsic criteria like 'being known' or 'being unknown' and intrinsic criteria
+like 'being permissive', 'weak copylefted' or 'strong copyleft'.
 
-\subsection{Excursion: GPL is not the Evil}
-\footnotesize
-\begin{quote}\itshape
-Here we simply want to underline that licenses protecting the
-on-top-developments does not 'infect' other proprietary software automatically.
-It's not an aspect of the code of the license, but of the acts of the combining
-developers or managers. It's their decision if they have to fulfill the GPL.
-\end{quote}
-\normalsize
-\ldots
+The most known clustering 'permissive', 'weak copylefted' and 'strong
+copylefted' refers to some consequences one has to respect for getting the right
+to use the software. This is a problematic viewpoint. It seduces the users to
+think that they have only to fulfill these conditions. But indeed, also for the
+most permissive license one has to do specific things. So, with respect to
+question what we have to get the right to use, to modify and/or to distribute
+the software it is a bad solution to think in the categories of 'permissive',
+'weak copylefted' and 'strong copylefted' Open Source licenses.
 
-\subsection{Excursion: The Peculiarity of GPL-3}
-\footnotesize
-\begin{quote}\itshape
-In the same sense we want to explain how the GPL-3 only upholdes former ideas by
-transposing them to new technical trends.
-\end{quote}
-\normalsize
-\ldots
+Nevertheless, the human beings needs structering elements for enabling
+themselves to talk about an area. Hence, we should offer another possibility to
+cluster the Open Source licenses:
 
-\section{Other Models}
-\ldots Do they exist? \ldots
+We think, that in general, licenses have a common purpose: they should protect
+someone or something against something\footnote{which lateron might be refined
+by the type of methods they use}. This is based on the nature of the word
+'protect' is a 3 valent verb: it links someone or something, who protects, to
+someone or something, who is protected and both together to something against
+the protector protects and against the otherone is protected. Licenses do so,
+even Open Source Licenses: They can protect the user (receiver) of the software,
+its' contributor resp. developer and/or distributor, and the software itself.
+And they protect them against different threats. With respect to this viewpoint,
+we can specify the Open Source licenses in a specific, purpose orientied way:
 
-\section{Summary: Our Taxonomy for the analyzed Licenses}
-\footnotesize
-\begin{quote}\itshape
-One pictures and the hint, that the criteria can be implemented differently by
-different licenses and that one therefore has to analyze the single licenses
-nevertheless.
-\end{quote}
-\normalsize
-\ldots
+\begin{itemize}
+  \item Firstly, the BSD Licenses protect the user against the loss of the right
+  to use, to modify and/or to distribute the received copy of the source code or
+  the binary - which directly depends on the Open Source Definition.
+  Secondly they protect the contributor and/or distributor against warranty
+  claims of the user, because they contain a 'No Warranty Clause'. Thirdly they
+  protect distributed sources against a reclosing change of the
+  license, because each modification and distribution must retain the existing
+  copy right notes and the licensing remarks, so that distributing under another
+  license is not allowed.
+  
+  But
+  \item The MIT Licenses protect
+\end{itemize}
 
 
-The word\footnote{ein Testext} 'protect' is a 3 valent verb: it links someone or something, who
-protects, to someone or something, who is protected and both together to
-something against the protector protects and against the otherone is protected.
-Licenses do so, even Open Source Licenses: They can protect the user (receiver)
-of the software, its' contributor resp. developer and/or distributor, and the
-software itself. And they protect them against different
-threats\footcite[cf.][\nopage et passim]{CoaBow2004a}.
+All these specifications can also be covered by a table:
 
 \begin{table}
 \footnotesize
@@ -227,10 +225,7 @@ threats\footcite[cf.][\nopage et passim]{CoaBow2004a}.
 \stepcounter{footnote}
 \footnotetext{Massuchat Institute of Technique [License]}
 
-The content\footnote{ein Testext} of this classifying table can be
-transfered\footcite[cf.][\nopage et passim]{CoaBow2004a}. into a mindmap:
-
-threats
+And the content of this classifying table can also be transfered into a mindmap:
 
 \begin{tikzpicture}
 \label{LICTAX}
@@ -517,7 +512,24 @@ threats
 \end{tikzpicture}
 
 
+Finally, one could generate new groups of Open Source license, new classes, like
+'user protecting licenses'\footnote{all of them because all of them have to
+fulfill the OSD}, 'patent disputes abwehrende licenses', 'modified \ldots'.
 
+But one has to know: all of these grouping viewpoints do not allow to conclude,
+that all members of a group can be respected by fulfilling the same
+requirements. This would only be possible, if the grouping criteria would
+directly refer to the fulfilling tasks. And indeed, nearly all Open Source
+licenses do differ with respect to these criteria, even if the differences are
+very small, they can't be neglected\footnote{Pars pro toto: Both, the BSD
+license and the Apache license require, that you give hint to the developers of
+the application. But in case of the BSD license you xýou have to \ldots. In case
+of the Apache license you have exactly to present the content of the notice file
+distributed together with the application.}. So: reflecting on possible classes
+of Open Source licenses is a got method to become familiar with the area of Open
+Source licenses. But it is not a method to determine, what one has to do for
+getting the right to use the software. For getting these information, one has to
+consider each single license.
 
 
 %\bibliography{../../../bibfiles/oscResourcesEn}
