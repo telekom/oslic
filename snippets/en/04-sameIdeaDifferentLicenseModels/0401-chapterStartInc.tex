@@ -23,7 +23,174 @@
 %% use all entries of the bibliography
 %\nocite{*}
 
-Grouping Open Sources licenses is often applied. You may find taxonomies in your
+Grouping Open Source licenses is often used. Even the set of \emph{Open Source
+Li\-cen\-ses}\footcite[cf.][\nopage wp]{OSI2012b} itself is already a cluster
+which is established by a set of grouping criteria: The \enquote{distribution
+terms} of each software license which wants to be an Open Source License,
+\enquote{[\ldots] must comply with the [\ldots] criteria} of the \emph{Open
+Source Definition}\footcite[cf.][\nopage wp]{OSI2012a}, maintained by the
+\emph{Open Source Initiative}\footcite[cf.][\nopage wp]{OSI2012c} and often
+abbreviated as \emph{OSD}\footnote{For stating it more precisely: to meet the
+OSD, is only a necessary condition for being an Open Source License. The
+sufficient condition for becoming an Open Source license, is the approval by the
+OSI, which offers a process for becoming an officially approved Open Source
+License (\cite[cf.][\nopage wp.]{OSI2012d}).}. This \emph{OSD} demarcates 'the
+group of Open Source Licenses' against 'the group of not Open Sources Licenses'.
+
+Another way to cluster the \emph{Free Software Licenses} is specified by the
+\enquote{Free Software Definition}. This \emph{FSD} contains four conditions
+which must be met by any free software license: it must asign the \enquote{the
+freedom to run a program, for any purpose [\ldots]}, \enquote{the freedom to
+study how it works, and adapt it to your needs [\ldots]}, \enquote{the freedom
+to redistribute copies [\ldots]}, and finally \enquote{the freedom to improve
+the program, and release your improvements
+[\ldots]}\footcite[cf.][41]{Stallman1996a}. Although sometimes seen as a little
+surprise this way to think leeds directly to the position, that being openly
+accessable software is 'only' a derived condition. If the
+\enquote{freedom to make changes and the freedom to publish improved versions}
+shall be \enquote{meaningful}, then the \enquote{access to the source code of
+the program} is a prerequisite. \enquote{Therefore, accessibility of source code
+is a necessary condition for free software.}\footcite[cf.][41]{Stallman1996a}
+
+The difference between these two positions is often described as a difference of
+emphasizing: Although both definitions \enquote{[\ldots] covers almost exactly
+the same range of software}, the \emph{Free Software Foundation} - as it is said
+- \enquote{prefers [\ldots] (to emphazise) the idea of freedom [\ldots]} while
+the \emph{OSI} wants to underline the philosophically indifferent
+\enquote{development methodolgy}\footcite[pars pro toto: cf.][232]{Fogel2006a}.
+
+A third method to establish a special group of free software and free licenses
+is specified by the \enquote{Debian Free Software Guideline}, which is embedded
+into the \enquote{Debian Social Contract}. This \enquote{DFSG} contains nine
+defining criteria which - as Debian itself says - have been \enquote{[\ldots]
+adopted by the free[sic!] software community as the basis of the Open Source
+Definition}\footcite[cf.][wp]{DFSG2013a}.
+
+For comparing the clusters \emph{OSI approved licenses}, \emph{OSD compliant
+Licenses}, \emph{DFSG compliant Licenses}, and \emph{FSD compliant licenses}
+extensionally, one has to ask, whether they could establish different sets of
+licenses:
+
+Firstly, the most easily to determine difference is established that of
+unidirectional an inclusion: By definition, the \emph{OSI approved licenses} and
+the \emph{OSD compliant } meet the requirements of the OSD\footcite[cf.][\nopage
+wp]{OSI2012a}. But only the \emph{OSI approved licenses} have successfully
+passed the OSI process\footcite[cf.][wp]{OSI2012a} and are therefore officially
+listed as an Open Source License\footcite[cf.][\nopage wp]{OSI2012b}. So, one
+can say, that all \emph{OSI approved licenses} are also OSD fulfilling licenses,
+but not vice versa.
+
+Secondly, a similar argumentation leeds to the differences between the
+\emph{DFSG compliant licenses} and the \emph{OSI approved licenses}. As it it
+stated, the OSD \enquote{[\ldots] is based on the Debian Free Software
+Guildeline and any license that meets one definition almost meets the
+other}\footcite[cf.][233]{Fogel2006a}. But again, meeting the definition is not
+enough for being an official Open Source License: the license has to be approved
+by the OSI\footcite[cf.][\nopage wp]{OSI2012b}. So, one can analogically say,
+that all \emph{OSI approved licenses} are also \emph{DFSG compliant licenses},
+but not vice versa.
+
+Thirdly - with a little generosity by ignoring the \enquote{few exceptions},
+which have been appeared \enquote{over the years}\footcite[cf.][233]{Fogel2006a}
+- one can say that, because of their kinsmanlike relation, at least the \emph{OSD
+fulfilling licenses} are also \emph{DFSG compliant licenses} and vice versa.
+
+Last but not least one has to state, that the (potential) set of free software
+licenses must be greater than all the other three sets: On the one side, the FSD
+only requires that the license of a software must allow to read and to use the
+software, to modify and to distribute it\footcite[cf.][41]{Stallman1996a}. These
+conditions are covered by the first three paragraphs of the OSD concerning the
+topics \enquote{Free Redistribution}, \enquote{Source Code}, and
+\enquote{Derived Works}\footcite[cf.][\nopage wp]{OSI2012a}. On the other side,
+the OSD contains seven additional requirements\footnote{For example, see the
+condition that \enquote{the license must be technology-neutral}
+(\cite[cf.][\nopage wp]{OSI2012a}). Here, one has to consider, that we are
+discussing the potentials of the definitions, not the meaning of concrete
+licenses. So, in this context, it is irrelevant, that in reality all existing
+Free Software Licenses like GPL, LGPL or AGPL indeed are also classfiied as Open
+Source Licenses. Here, we are referring to the fact, that there might exist (be
+generated) licenses which fulfill the FSD, but not the OSD.}, which must be met
+by a license for being an OSD compliant license. Hence, logically regarded,
+there might exist licenses, which fulfill the conditions of the FSD, but not
+those of the OSD: the set of \emph{Free Software Licenses} must be greater than
+the set of \emph{Open Source Licenses} and greater than the set of \emph{OSD
+compliant licenses}.
+
+So, if we want to sketch the grouping of free software licenses, we have to
+painnt the following picture:
+
+\begin{tikzpicture}
+\label{LICTAX}
+\small
+
+\node[circle,draw,text width=7.7cm,fill=gray!10] (l0400) at (5,5)
+{  };
+
+\draw [-,dotted,line width=0pt,white,
+    decoration={text along path,
+              text align={center},
+              text={All Software Licenses}},
+              postaction={decorate}] (1.7,5) arc (180:0:3.3cm);
+
+
+\node[circle,draw,text width=3.5cm, fill=gray!30] (l0200) at (5,5)
+{  };
+
+% (1.A) list of all licenses and their release numbers Level 5/6
+\node[circle,draw,text width=1.4cm, fill=gray!40, text centered] (l0100) at (5,5)
+{ \textit{OSI} \\ \textit{approved} \\ \textit{Licenses} };
+
+
+\draw [-,dotted,line width=0pt,white,
+    decoration={text along path,
+              text align={center},
+              text={DFSG Compliant Licenses}},
+              postaction={decorate}] (3.4,5) arc (180:360:1.6cm);
+
+\draw [-,dotted,line width=0pt,white,
+    decoration={text along path,
+              text align={center},
+              text={OSD Compliant Licenses}},
+              postaction={decorate}] (3.6,5) arc (180:0:1.4cm);
+          
+   
+\node[circle,draw,text width=5.6cm] (l0300) at (5,5)
+{ };
+
+\draw [-,dotted,line width=0pt,white,
+    decoration={text along path,
+              text align={center},
+              text={FSD Compliant Licenses}},
+              postaction={decorate}] (2.8,5) arc (180:0:2.2cm);
+              
+
+
+
+
+
+\end{tikzpicture}
+
+Kreis 1: Software Lizenzen im Allgemeinen:
+Kreis 2: Free Software Licenses
+Kreis 3a: unapproved Open Source Licenses
+Kreis 3b: Devian compliant  Licenses
+Kreis 4: unapproved Open Source Licenses
+
+
+Beside this grouping against the others there exist also tries to group the Open
+Source Licenses themselves for making the world more if not palatable but
+discutable. Even recently there has been discussed in the OSI to improve to
+presentation of of the OSL-Lists. In the result, the OSI now groups the licenses
+as \ldots
+
+But as you see, the criteria for grouping the licenses in this sense are in a
+sense externally motivated: \ldots . So, it is clear that you can't conclude
+from an external criteria to the internally prescribed conditions to act
+accroding the licenses of a group.
+
+Another type of taxonomies refer to internal criteria \ldots Different tires\ldots
+
+You may find taxonomies in your
 prefered magazins\footnote{see For example the German Linux Magazine 04/05 2011
 % TODO Linux Magazin 04/05:2011 wegen Taxonomie in bibtex aufnehmen und zitieren
 } or in more or less specific legal literature\footnote{\ldots must be found
@@ -160,6 +327,9 @@ All these specifications can also be covered by a table:
   \multicolumn{5}{c|}{already Opened Software}\\
 \hline
 \hline
+  APL & 2.0 & \checkmark  & \checkmark  & \checkmark & 
+  - & - & - & - & - & - & - & - & - \\
+\hline
   \multirow{2}{*}{BSD}\footnotemark & 3-Cl & \checkmark & \checkmark  & \checkmark  & 
     $\neg$ & $\neg$ & \checkmark & $\neg$  &
     $\neg$ & \checkmark  & $\neg$ & \checkmark & $\neg$ \\
@@ -171,24 +341,12 @@ All these specifications can also be covered by a table:
   MIT\footnotemark & 1.1 & \checkmark  & \checkmark  & \checkmark  &
   - & - & - & - & - & - & - & - & - \\
 \hline
-  APL & 2.0 & \checkmark  & \checkmark  & \checkmark & 
-  - & - & - & - & - & - & - & - & - \\
-\hline
   MsPL & 1.1 & \checkmark  & \checkmark  & \checkmark  & 
   - & - & - & - & - & - & - & - & - \\
 \hline
   PHP & 2.0 & \checkmark  & \checkmark  & \checkmark  &
   - & - & - & - & - & - & - & - & - \\
 \hline
-  PGL & 2.0 & \checkmark & \checkmark  & \checkmark &
-  - & - & - & - & - & - & - & - & - \\
-\hline
-\hline
-  \multirow{2}{*}{MPL} & 1.0 & \checkmark & \checkmark & \checkmark &
-  - & - & - & - & - & - & - & - & - \\
-\cline{2-14}
-  & 2.0 & \checkmark & \checkmark & \checkmark &
-  - & - & - & - & - & - & - & - & - \\
 \hline
   EPL & 1.0 & \checkmark & \checkmark & \checkmark &
   - & - & - & - & - & - & - & - & - \\
@@ -202,18 +360,24 @@ All these specifications can also be covered by a table:
    & 3.0 & \checkmark & \checkmark & \checkmark &
    - & - & - & - & - & - & - & - & - \\
 \hline
-\hline
-  \multirow{2}{*}{GPL} & 2.1 & \checkmark & \checkmark & \checkmark &
-   - & - & - & - & - & - & - & - & - \\
+  \multirow{2}{*}{MPL} & 1.0 & \checkmark & \checkmark & \checkmark &
+  - & - & - & - & - & - & - & - & - \\
 \cline{2-14}
-  & 3.0 & \checkmark & \checkmark & \checkmark &
-   - & - & - & - & - & - & - & - & - \\
+  & 2.0 & \checkmark & \checkmark & \checkmark &
+  - & - & - & - & - & - & - & - & - \\
+\hline
 \hline
   \multirow{2}{*}{AGPL} & 2.1 & \checkmark & \checkmark & \checkmark &
    - & - & - & - & - & - & - & - & - \\
 \cline{2-14}
    & 3.0 & \checkmark & \checkmark & \checkmark &
     - & - & - & - & - & - & - & - & - \\
+\hline
+  \multirow{2}{*}{GPL} & 2.1 & \checkmark & \checkmark & \checkmark &
+   - & - & - & - & - & - & - & - & - \\
+\cline{2-14}
+  & 3.0 & \checkmark & \checkmark & \checkmark &
+   - & - & - & - & - & - & - & - & - \\
 \hline
 \hline
 
