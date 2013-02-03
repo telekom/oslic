@@ -30,13 +30,13 @@ terms} of each software license which wants to be an Open Source License,
 \enquote{[\ldots] must comply with the [\ldots] criteria} of the \emph{Open
 Source Definition}\footcite[cf.][\nopage wp]{OSI2012a}, maintained by the
 \emph{Open Source Initiative}\footcite[cf.][\nopage wp]{OSI2012c} and often
-abbreviated as \emph{OSD}\footnote{For stating it more precisely: to meet the
-OSD, is only a necessary condition for being an Open Source License. The
-sufficient condition for becoming an Open Source license, is the approval by the
-OSI, which offers a process for becoming an officially approved Open Source
-License (\cite[cf.][\nopage wp.]{OSI2012d}).}. So, this \emph{OSD} demarcates
-'the group of Open Source Licenses' against 'the group of not Open Sources
-Licenses'.
+abbreviated as \emph{OSD}. So, this \emph{OSD} demarcates 'the group of
+[potential] Open Source Licenses' against 'the group of not Open Sources
+Licenses'\footnote{For stating it more precisely: to meet the OSD, is only a
+necessary condition for being an Open Source License. The sufficient condition
+for becoming an Open Source license, is the approval by the OSI, which offers a
+process for becoming an officially approved Open Source License
+(\cite[cf.][\nopage wp.]{OSI2012d}).}.
 
 Another way to cluster the \emph{Free Software Licenses} is specified by the
 \enquote{Free Software Definition}. This \emph{FSD} contains four conditions
@@ -68,7 +68,7 @@ nine defining criteria which - as Debian itself says - have been
 \enquote{[\ldots] adopted by the free[sic!] software community as the basis of
 the Open Source Definition}\footcite[cf.][wp]{DFSG2013a}.
 
-A rough understanding of these methods might might allow to conclude that these
+A rough understanding of these methods might allow to conclude that these
 three definitions are extensionally equal and only differ intensionally.
 But is this true? Le us compare the clusters \emph{OSI approved licenses},
 \emph{OSD compliant Licenses}, \emph{DFSG compliant Licenses}, and \emph{FSD
@@ -80,12 +80,12 @@ still could be expanded be developing new licenses which fit the definition.}.
 
 Firstly, the most easily to determine difference is that of an unidirectional an
 inclusion: By definition, the \emph{OSI approved licenses} and the \emph{OSD
-compliant } meet the requirements of the OSD\footcite[cf.][\nopage
+compliant licenses} meet the requirements of the OSD\footcite[cf.][\nopage
 wp]{OSI2012a}. But only the \emph{OSI approved licenses} have successfully
 passed the OSI process\footcite[cf.][wp]{OSI2012a} and are therefore officially
-listed as an Open Source License\footcite[cf.][\nopage wp]{OSI2012b}. So, one
-can say, that all \emph{OSI approved licenses} are also \emph{OSD compliant
-licenses}, but not vice versa.
+listed as \emph{Open Source Licenses}\footcite[cf.][\nopage wp]{OSI2012b}. Hence,
+\emph{OSI approved licenses} are \emph{Open Source Licenses} and vice versa. And
+they are \emph{OSD compliant licenses}, but not vice versa.
 
 Secondly, a similar argumentation leeds to the differences between the
 \emph{DFSG compliant licenses} and the \emph{OSI approved licenses}. As it it
@@ -132,45 +132,47 @@ All in all, we can visualize the situation by a picture like this:
 \label{LICTAX}
 \small
 
-\node[circle,draw,text width=7cm,fill=gray!10] (l0400) at (5,5)
-{  };
+\node[ellipse,minimum height=5.8cm,minimum width=11.6cm,draw,fill=gray!10] (l0210) at (5,5)
+{ };
 
 \draw [-,dotted,line width=0pt,white,
     decoration={text along path,
               text align={center},
-              text={|\itshape \tiny| All Software Licenses}},
-              postaction={decorate}] (1.9,5) arc (180:0:3.1cm);
+              text={|\itshape|All Software Licenses}},
+              postaction={decorate}] (0,6.1) arc (120:60:10cm);
 
-\node[circle,draw,text width=5.4cm, fill=gray!20] (l0300) at (5,5)
+\node[ellipse,minimum height=4.4cm,minimum width=10cm,draw,fill=gray!20] (l0210) at (5,5)
 { };
 
 \draw [-,dotted,line width=0pt,white,
     decoration={text along path,
               text align={center},
               text={|\itshape|FSD Compliant Licenses}},
-              postaction={decorate}] (2.8,5) arc (180:0:2.25cm);
+              postaction={decorate}] (0,5.4) arc (120:60:10cm);
+              
+
+\node[ellipse,minimum height=3cm,minimum width=8.4cm,draw,fill=gray!30] (l0210) at (5,5)
+{ };
 
 
-\node[circle,draw,text width=3.8cm, fill=gray!30] (l0200) at (5,5)
-{  };
-
-
-
-\draw [-,dotted,line width=0pt,white,
-    decoration={text along path,
-              text align={center},
-              text={|\itshape|DFSG Compliant Licenses}},
-              postaction={decorate}] (3.4,5) arc (180:360:1.65cm);
-
+             
 \draw [-,dotted,line width=0pt,white,
     decoration={text along path,
               text align={center},
               text={|\itshape|OSD Compliant Licenses}},
-              postaction={decorate}] (3.6,5) arc (180:0:1.45cm);
+              postaction={decorate}] (0,4.7) arc (120:60:10cm);
+              
+\draw [-,dotted,line width=0pt,white,
+    decoration={text along path,
+              text align={center},
+              text={|\itshape|DFSG Compliant Licenses}},
+              postaction={decorate}] (0,5) arc (240:300:10cm);
           
- % (1.A) list of all licenses and their release numbers Level 5/6
-\node[circle,draw,text width=1.6cm, fill=gray!40, text centered] (l0100) at (5,5)
-{ \bfseries \textit{OSI} \\ \textit{approved} \\ \textit{Licenses} };
+
+\node[ellipse,text width=4.4cm, text centered,minimum height=1.6cm,minimum width=6cm,draw,fill=gray!40] (l0210) at (5,5)
+{ \textit{OSI approved licenses} = \\ \textit{\textbf{Open Source Licenses}}
+};
+
 \end{tikzpicture}
 \end{center}
 
@@ -178,15 +180,15 @@ It should be clear without longer explanations, that these clusters don't allow
 to derive a correct compliant behaviour according to the Open Source Licenses: On the
 one hand, all larger clusters do not talk about the Open Source Licenses. On the
 other hand the Open Source License cluster only collects his elements on the
-base of the OSD which do not stipulates a concrete license fulfilling actions
+base of the OSD which do not stipulates concrete license fulfilling actions
 of the licensee.
 
-The next level of clusteringing Open Source Licenses concerns the inner
-structure of the OSI approved licenses. Even the OSI has recently discussed
-whether a better kind of grouping the listed licenses would better fit the needs
-of the visitors of the OSI site\footcite[cf.][\nopage wp]{OSI2013a}. And finally
-the OSI ends up in the categories \enquote{popular and widely used (licenses) or
-with strong communities}, \enquote{special purpose licenses},
+The next level of clustering \emph{Open Source Licenses} concerns the inner
+structure of the OSI approved licenses. Even the OSI itself has recently
+discussed whether a better kind of grouping the listed licenses would better fit
+the needs of the visitors of the OSI site\footcite[cf.][\nopage wp]{OSI2013a}.
+And finally the OSI ends up in the categories \enquote{popular and widely used
+(licenses) or with strong communities}, \enquote{special purpose licenses},
 \enquote{other/miscellaneous licenses}, \enquote{licenses that are redundant
 with more popular licenses}, \enquote{non-reusable licenses},\enquote{superseded
 licenses}, \enquote{licenses that have been voluntarily retired}, and \enquote{
@@ -198,7 +200,7 @@ licenses}, so named because they were originally created by academic
 institutions}\footcite[cf.][69]{Rosen2005a}, the \enquote{\emph{reciprocal
 licenses}}, so named because they \enquote{[\ldots] require the distributors of
 derivative works to distribute those works under same license including the
-requirement that the source code of those derivative qorks be
+requirement that the source code of those derivative works be
 published}\footcite[cf.][70]{Rosen2005a}, the \enquote{\emph{standard
 licenses}}, so named because the refer to the reusability of \enquote{industry
 standards}\footcite[cf.][70]{Rosen2005a}, and the \enquote{\emph{content
@@ -206,21 +208,21 @@ licenses}}, so named because they refer to
 \enquote{[\ldots] other than software, such as music art, film, literary works}
 and so on\footcite[cf.][71]{Rosen2005a}.
 
-Both taxonomies and their specific categories directly help to find the relevant
-licenses which should be used for new (software) projects. But again: none of
-these categories does allow to infer the license compliant behaviour, because
-the categories are mostly defined on the base of license external criteria:
-whether a license is published by a specific kind of organizations or whether
-license concerns industry standards or other kind of works than software, is not
-a question of the license fulfilling behaviour.
+Both kind of taxonomies directly help to find the relevant licenses which should
+be used for new (software) projects. But again: none of these categories does
+allow to infer the license compliant behaviour, because the categories are
+mostly defined on the base of license external criteria: whether a license is
+published by a specific kind of organizations or whether license concerns
+industry standards or other kind of works than software, is not a question of
+the license fulfilling behaviour.
 
 Only the act of grouping into the \enquote{\emph{academic licenses}} and the
 \enquote{\emph{reciprocal licenses}} touches the idea of license fulfilling
-doings, if one expands the definition of the \enquote{\emph{academic licenses}}
-by the specification, that these licenses \enquote{[\ldots] allow the software
-to be used for any purpose whatsoever with no obligation on the part of the
-licensee to distribute the source code of derivative
-works}\footcite[cf.][71]{Rosen2005a}. With respect to this additional
+doings, if one - as it has been done - expands the definition of the
+\enquote{\emph{academic licenses}} by the specification, that these licenses
+\enquote{[\ldots] allow the software to be used for any purpose whatsoever with
+no obligation on the part of the licensee to distribute the source code of
+derivative works}\footcite[cf.][71]{Rosen2005a}. With respect to this additional
 specification, the clusters \enquote{\emph{academic licenses}} and the
 \enquote{\emph{reciprocal licenses}} might be referred as the \enquote{main
 categories} of (Open Source) licenses\footcite[cf.][179]{Rosen2005a}: By
@@ -274,89 +276,119 @@ following picture:
 \label{LICTAX}
 \small
 
-\node[circle,draw,text width=7cm,fill=gray!10] (l0400) at (5,5)
+
+
+\node[ellipse,minimum height=8.5cm,minimum width=14cm,draw,fill=gray!10] (l0100) at (6.8,6.8)
 {  };
 
+\draw [-,dotted,line width=0pt,white,
+    decoration={text along path,
+              text align={center},
+              text={|\itshape| OSI approved licenses}},
+              postaction={decorate}] (-0.8,6.5) arc (142:38:9.5cm);
 
-
-\node[ellipse,minimum height=7cm,minimum width=4cm,draw,fill=gray!20] (l0100) at (2.5,7.5)
+\draw [-,dotted,line width=0pt,white,
+    decoration={text along path,
+              text align={center},
+              text={|\itshape|Open Source Licenses}},
+              postaction={decorate}] (-0.8,6.5) arc (218:322:9.5cm);
+              
+\node[ellipse,minimum height=6.2cm,minimum width=4cm,draw,fill=gray!20] (l0100) at (2.75,6.8)
 {  };
 
 \draw [-,dotted,line width=0pt,white,
     decoration={text along path,
               text align={center},
               text={|\itshape| permissive licenses}},
-              postaction={decorate}] (-0.4,6.5) arc (180:0:2.9cm);
+              postaction={decorate}] (0.9,7.4) arc (180:0:1.8cm);
 
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0101) at (1,8)
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0101) at (2,8)
 {  \footnotesize \bfseries \textit{APL}};
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0102) at (2.5,8)
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0102) at (3.5,8)
 {  \footnotesize \bfseries \textit{BSD}};
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0103) at (1,6.5)
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0103) at (2,6.5)
 {  \footnotesize \bfseries \textit{MIT}};
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0104) at (2.5,6.5)
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0104) at (3.5,6.5)
 {  \footnotesize \bfseries \textit{MsPL}};
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0105) at (1,3)
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0105) at (2,5)
 {  \footnotesize \bfseries \textit{PgL}};
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0106) at (2.5,3)
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0106) at (3.5,5)
 {  \footnotesize \bfseries \textit{PHP}};
 
-\node[ellipse,minimum height=6cm,minimum width=9.5cm,draw,fill=gray!20] (l0200) at (10,7.5)
+\node[ellipse,minimum height=6cm,minimum width=8.5cm,draw,fill=gray!20] (l0200) at (9.2,6.5)
 {  };
 
-\node[ellipse,minimum height=4.5cm,minimum width=4.2cm,draw,fill=gray!30] (l0210) at (7.75,7.5)
+\node[ellipse,minimum height=4.5cm,minimum width=4.2cm,draw,fill=gray!30] (l0210) at (7.45,6.5)
 {  };
 
 \draw [-,dotted,line width=0pt,white,
     decoration={text along path,
               text align={center},
               text={|\itshape| weak copyleft licenses}},
-              postaction={decorate}] (5.7,7.2) arc (180:0:2cm);
+              postaction={decorate}] (5.4,6.2) arc (180:0:2cm);
 
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0211) at (7,8)
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0211) at (6.7,7)
 {  \footnotesize \bfseries \textit{EPL}};
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0212) at (8.5,8)
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0212) at (8.2,7)
 {  \footnotesize \bfseries \textit{EUPL}};
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0213) at (7,6.5)
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0213) at (6.7,5.5)
 {  \footnotesize \bfseries \textit{LGPL}};
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0214) at (8.5,6.5)
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0214) at (8.2,5.5)
 {  \footnotesize \bfseries \textit{MPL}};
 
-\node[ellipse,minimum height=4.5cm,minimum width=4.2cm,draw,fill=gray!30] (l0220) at (12.2,7.5)
+\node[ellipse,minimum height=4.5cm,minimum width=3cm,draw,fill=gray!30] (l0220) at (11.4,6.5)
 {  };
+ 
+% line width=0pt,white,
 \draw [-,dotted,line width=0pt,white,
     decoration={text along path,
               text align={center},
-              text={|\itshape| strong copyleft licenses}},
-              postaction={decorate}] (10.2,7.2) arc (180:0:2cm);
+              text={|\itshape| strong copyleft}},
+              postaction={decorate}] (10.4,7) arc (180:0:1cm);
 
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0221) at (12.2,8)
+\draw [-,dotted,line width=0pt,white,
+    decoration={text along path,
+              text align={center},
+              text={|\itshape| licenses}},
+              postaction={decorate}] (10.4,5.4) arc (180:360:1cm);        
+
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0221) at (11.4,7)
 {  \footnotesize \bfseries \textit{GPL}};
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0222) at (12.2,6.5)
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0222) at (11.4,5.5)
 {  \footnotesize \bfseries \textit{AGPL}};
 
 
 \end{tikzpicture}
 \end{center}
 
-But again, we have to state that this grouping does not allow to conclude to the
-license fulfilling behavior: Even if both, the BSD license and the apache
-license are permissive license, they can require differnt tasks for being
-fulfilled. And indeed, they do so: The BSD license wants that the copyright note
-to be published. But the apache license requires, that the conten of the notice
+This kind of extensionally based taxonomy is probably known. But it is linked
+with some weaknesses
+
+Because of positive connotation of the word permissive, the antonomy of
+\emph{permissive licenses} versus \emph{copyleft licenses} signals, that the
+\emph{permissive licenses} are in any meaning better, than the \emph{copyleft
+licenses}. It's an underlying message of this pair of concepts. This underlying
+message might be true for those people or companies, who only want to use Open
+Source Software without being restricted and limited by the Giving Back idea of
+the Copyleft principle. But there might be other people and companies which
+emphasizes the protecting effect of the copy left licenses. So: using such a
+taxonomy is implictily colored. And it's better to use neutral statements.
+
+The other challenge is evoked by the concept of 'copyleft licenses'. It
+emphasizes implicitly that fulfilling the licenses means publishing his
+modfications. So, the wrong umkehrschluss, if nothing modified or is using
+software with permissve license, one has not to fulfill any requirements. And
+this viewpoint - often used on the necessrily simplifying level of the
+management is wrong: Firstly: The BSD license wants that the copyright note to
+be published. But the apache license requires, that the conten of the notice
 file must be shown to the user. These are similar tasks with similar purposes,
-but finally they are different task.
+but finally they are different task. Secondly, even if one uses an unmodified
+strong copylefted software, one has to handover a copy of the license.
 
-And there is another difficulty with nearly all these labels of categories: they
-are colored by the underling 'philosophical' positions: Permissive licenses are
-permissive, because they allow companies to use the software with only some
-minor requirements. On the other hand the restrictive licenses are restritive,
-because they are limiting the action room of their users: they are not free to
-use the programm without fulfilling more and harder restrictions.
-
-But the intended meaning of the original author of the most restrictive license,
-the GPL, is not to restrict the users, but to save the freedom in future. Zitat.
-
+So again, we have to state that this grouping does not allow to conclude to the
+license fulfilling behavior: It might be appropiate, if one wants to live with
+these implicite messages. But it is not adequate, if one wants to determine,
+what one has to do for fulfilling the licenses.
 
 
 
@@ -367,38 +399,9 @@ German Linux Magazine 04/05 2011
 % TODO Taxonomien aus juristischer literature zitieren
 }.
 
-One of the most known license taxonomies is established by the grouping of the
-'permissive' licenses, the 'weak copyleft licenses' and 'strong copyleft
-licenses'\footnote{ \ldots belegen
-% TODO permissive, weak & strong copyleft taxonomie belegen aus Buch
-}:
-
-% TODO Taxonomie permissive, weak, strong mit psztricks setzen
-
-All these taxonomies are invented to simplify the talking about Open Source
-licenses: One wants to talk about the groups instead of regarding each license.
-And one wants to elaborate the internal structure of the amorph field of
-licenses. Structuring by generalization is the first method of human beings to
-adopt an area and to produce knowledge:
-
-The main group is established by the 10 criteria of the Open Source Definition.
-Each Open Source license must fit each of these 10 criteria for being an Open
-Source license. These 10 criteria forms the external borders. So, for getting
-internal groups of this cluster, one has to refer to other criteria. There exist
-extrinsic criteria like 'being known' or 'being unknown' and intrinsic criteria
-like 'being permissive', 'weak copylefted' or 'strong copyleft'.
-
-The most known clustering 'permissive', 'weak copylefted' and 'strong
-copylefted' refers to some consequences one has to respect for getting the right
-to use the software. This is a problematic viewpoint. It seduces the users to
-think that they have only to fulfill these conditions. But indeed, also for the
-most permissive license one has to do specific things. So, with respect to
-question what we have to get the right to use, to modify and/or to distribute
-the software it is a bad solution to think in the categories of 'permissive',
-'weak copylefted' and 'strong copylefted' Open Source licenses.
-
 Nevertheless, the human beings needs structering elements for enabling
-themselves to talk about an area. Hence, we should offer another possibility to
+themselves to talk about a domain - even if they at last have to regard the
+single objects of the domain. Hence, we want to offer another possibility to
 cluster the Open Source licenses:
 
 We think, that in general, licenses have a common purpose: they should protect
