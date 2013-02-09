@@ -119,6 +119,9 @@
 \usepackage{wasysym}
 \usepackage{pstricks, pst-node, pst-tree}
 \usepackage{chngcntr}
+\usepackage{nameref}
+
+
 \counterwithout{footnote}{chapter}
 
 \usepackage[intoc]{nomencl}
@@ -189,9 +192,7 @@ other\ldots
 \input{snippets/en/20120222-DisclaimerInc}
 
 %%%%%%%%%%%%
-\chapter{Introduction}
-\input{snippets/en/01-introduction/0100-chapterAbstractInc}
-\input{snippets/en/01-introduction/0101-chapterStartInc}
+\input{snippets/en/01-introduction/0101-chapterIntroductionInc}
 \input{snippets/en/01-introduction/010x-PrintAndBibWebAndFreeWebEn}
 %\input{snippets/20110905-LitCheckInc}
 
@@ -210,7 +211,7 @@ other\ldots
 \input{snippets/en/05-osImportantMinorPoints/0505-oslicAndPatents}
 
 %%%%%%%%%%%%%%%
-\chapter{Open Source Use Cases: Concept and Taxonomy}
+\chapter{Open Source Use Cases: Concept and Taxonomy}\label{sec:OSUCdeduction}
 \input{snippets/en/06-osUseCases/0600-chapterAbstractInc}
 \input{snippets/en/06-osUseCases/0601-chapterStartInc}
 \input{snippets/en/06-osUseCases/0602-chapterTheOslicUseCasesInc}
