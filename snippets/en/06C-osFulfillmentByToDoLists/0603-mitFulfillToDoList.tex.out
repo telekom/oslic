@@ -115,7 +115,14 @@ and that you do not handover it to any 3rd. party in any sense.
   \end{itemize}
 \end{description}
 
-\subsection{MIT-2: Passing the unmodified software}
+\subsection{MIT-2: Passing t\item Finally, we wished to insert a hint to the general (Open Source)
+tradition, to mention the used Open Source Software and their licenses as a
+remark of the 'copyright widget' of an application. This is not required by the
+BSD license. But it is a general, good tradition. Naturally, because of the
+freedom, to use and modify Open Source Software, and to redistribute a modified
+version of it, you are also allowed to insert such references, even if they are
+mmissing. Therefore we added a third voluntary, license tradition fulfilling task
+for all relevant Open Source Use Cases.he unmodified software}
 \label{OSUC-02-MIT} \label{OSUC-05-MIT} \label{OSUC-07-MIT} 
 
 \begin{description}
@@ -130,7 +137,7 @@ a library, or a plugin as an independent package}
 
 \item[requires] the tasks in order to fulfill the license conditions
 \begin{itemize}
-  \item \textbf{[mandatory:]} Ensure, that the licensing elements - eg.
+  \item \textbf{[mandatory:]} Ensure that the licensing elements - eg.
   the MIT license text containing the specific copyright notices of the original
   author(s), the permission notices and the MIT disclaimer - are retained in
   your package in the form you have got them.
@@ -151,7 +158,7 @@ of source code files or as an integrated source code package.}.
 \item[covers] OSUC-04\footnote{For details see pp. \pageref{OSUC-04-DEF}}
 \item[requires] the tasks in order to fulfill the license conditions
 \begin{itemize}
-  \item \textbf{[mandatory:]} Ensure, that the original licensing elements - eg.
+  \item \textbf{[mandatory:]} Ensure that the original licensing elements - eg.
   the MIT license text containing the specific copyright notices of the original
   author(s), the permission notices and the MIT disclaimer - are retained in
   your package in the form you have got them.
@@ -180,7 +187,7 @@ embedding it into another larger software unit.
 \item[covers] OSUC-08\footnote{For details see pp. \pageref{OSUC-08-DEF}}
 \item[requires] the tasks in order to fulfill the license conditions
 \begin{itemize}
-  \item \textbf{[mandatory:]} Ensure, that the original licensing elements - eg.
+  \item \textbf{[mandatory:]} Ensure that the original licensing elements - eg.
   the MIT license text containing the specific copyright notices of the original
   author(s), the permission notices and the MIT disclaimer - are retained in
   your package in the form you have got them.
@@ -198,12 +205,12 @@ embedding it into another larger software unit.
 \begin{description}
 \item[means] that you are going distribute a modified version of the received
 MIT code snippet, module, library, or plugin (snimoli) to 3rd. parties together
-with another larger software unit, which contains this code snippet, module,
+with another larger software unit which contains this code snippet, module,
 library, or plugin as an embedded component.
 \item[covers] OSUC-10\footnote{For details see pp. \pageref{OSUC-10-DEF}}
 \item[requires] the tasks in order to fulfill the license conditions
 \begin{itemize}
-  \item \textbf{[mandatory:]} Ensure, that the original licensing elements - eg.
+  \item \textbf{[mandatory:]} Ensure that the original licensing elements - eg.
   the MIT license text containing the specific copyright notices of the original
   author(s), the permission notices and the MIT disclaimer - are retained in
   your package in the form you have got them.
@@ -217,7 +224,7 @@ library, or plugin as an embedded component.
   page of this used component.
 
   \item \textbf{[voluntary:]} It's also a good tradition to let the documentation of
-  your programm and/or your additional material also mention, that you have used
+  your programm and/or your additional material also mention that you have used
   this component added by a link to the original software component and its' homepage.
 \end{itemize}
 \end{description}
@@ -237,7 +244,7 @@ Here are our interpretations:
 \begin{itemize}
   \item If you do not modify the received MIT licensed application, neither for
   your own purposes, nor for handing over the program to 3rd parties, you can
-  conclude, that all copyright notices and permission notices are already correct.
+  conclude that all copyright notices and permission notices are already correct.
   \item If you modify the received MIT licensed application, regardless for
   which purposes, you are simply not allowed to erase or modify existing
   copyright notes and permission notices. You may add your own modifications
