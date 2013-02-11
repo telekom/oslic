@@ -32,20 +32,20 @@ BSD license contained a fourth clause also known as advertising clause which
 Technology Licensing of the University of California on July 22nd, 1999}.
  Cf.][\nopage wp. Because of the cancellation you can simply act according the
  \textit{BSD 3-Clause license} if you have to fulfill the eldest BSD
- license]{BsdLicense3Clause}. The latest, most modern release is the \textit{BSD
- 2-Clause license}\footcite[cf.][\nopage wp]{BsdLicense2Clause}, the elder
- release is the \textit{BSD 3-Clause license}\footcite[cf.][\nopage
- wp]{BsdLicense3Clause}. Nevertheless, the little differences between the
- two versions have to be respected.
+ license]{BsdLicense3Clause}. The latest release is the \textit{BSD 2-Clause
+ license}\footcite[cf.][\nopage wp]{BsdLicense2Clause}, the elder release is the
+ \textit{BSD 3-Clause license}\footcite[cf.][\nopage wp]{BsdLicense3Clause}.
+ Nevertheless, the little differences between the two versions have to be
+ respected.
 
-All BSD Open Source Licenses explicitly focuses 'only' on the (re-)distribution
+All BSD Open Source Licenses explicitly focus 'only' on the (re-)distribution
 \textit{Open Source Use Cases}, which we have specified by our token
 \textit{4others}. Conditions for the use cases specified by the token
 \textit{4yourself} can be derived\footnote{For details of the \textit{Open
 Source Use Cases tokens} see p. \pageref{OsucTokens}. For Details of the
 \textit{Open Source Use Cases} based on these token see p.
 \pageref{OsucDefinitionTree} }. Additionally the BSD license considers the form
-of the distribution, eg. whether the work is distributed as a (set of) source
+of the distribution, e.g. whether the work is distributed as a (set of) source
 code file(s) or as a (set of) the binary file(s). Use the following tree to find
 the BSD license fulfilling to-do lists.
 
@@ -65,7 +65,7 @@ the BSD license fulfilling to-do lists.
   }
   \pstree[levelsep=*0.2,treesep=0.2]{
     \Tr{\Ovalbox{\shortstack{recipient: \textit{4others}\\
-      \textbf{\textit{distributed to 3rd. parties}}}}} 
+      \textbf{\textit{distributed to 3rd parties}}}}} 
   }{ 
     \pstree[levelsep=*0.2,treesep=0.2]{
       \Tr{\Ovalbox{\shortstack{state:\\\textbf{\textit{unmodified}}}}}
@@ -181,11 +181,10 @@ the BSD license fulfilling to-do lists.
   
 \begin{description}
 \item[means] that you are going to use a received BSD software only for yourself
-and that you do not handover it to any 3rd. party in any sense.
+and that you do not handover it to any 3rd party in any sense.
 \item[covers] OSUC-01, OSUC-03, OSUC-06, and OSUC-09\footnote{For details see pp.
   \pageref{OSUC-01-DEF} - \pageref{OSUC-09-DEF}}
-\item[requires] the tasks in order to fulfill the conditions
-    of the BSD license:
+\item[requires] no tasks in order to fulfill the conditions of the BSD license:
   \begin{itemize}
     \item You are allowed to use any kind of BSD software in any sense and in
     any context without any obligations if you do not handover the software to
@@ -199,7 +198,7 @@ and that you do not handover it to any 3rd. party in any sense.
 
 \begin{description}
 \item[means] that you are going distribute an unmodified version of the received
-BSD software to 3rd. parties in form of a set of source code files or an
+BSD software to 3rd parties in form of a set of source code files or an
 integrated source code package\footnote{In this case it doesn't matter whether
 you  distribute a program, an application, a server, a snippet, a module, a
 library, or a plugin as an independent or an embedded unit} 
@@ -209,7 +208,7 @@ library, or a plugin as an independent or an embedded unit}
 
 \item[requires] the following tasks in order to fulfill the license conditions
 \begin{itemize}
-  \item \textbf{[mandatorily:]} Ensure, that the licensing elements - eg.
+  \item \textbf{[mandatorily:]} Ensure, that the licensing elements - e.g.
   the BSD license text, the specific copyright notice of the original author(s),
   and the BSD disclaimer - are retained in your package in the form you have got
   them.
@@ -226,11 +225,11 @@ library, or a plugin as an independent or an embedded unit}
 \end{itemize}
 \end{description}
 
-\subsubsection{BSD-3: Passing the unmodified software binary}
+\subsubsection{BSD-3: Passing the unmodified software as binary}
 
 \begin{description}
 \item[means] that you are going distribute an unmodified version of the BSD
-received software to 3rd. parties in form of a set of binary files or an
+received software to 3rd parties in form of a set of binary files or an
 integrated bi\-na\-ry package\footnote{In this case it doesn't matter whether
 you distribute a program, an application, a server, a snippet, a module, a library,
 or a plugin as an independent or an embedded unit}
@@ -253,13 +252,19 @@ or a plugin as an independent or an embedded unit}
 
 \begin{itshape}
 \emph{\textbf{General remark for all binary distributions}:} 
-\label{MobileDeviceHint} Even if you are distributing a BSD bi\-na\-ry package
-on a medium, which doesn't allow the user, to see package files directly - some
-mobile devices don't give their users the full access to all stored elements -
-you have to fulfill the mandatory requirements. So, sometimes, it is necessary,
-to let simply the BSD license and the copyright notice become an invisible part
-of the binary package and to deploy the files together with the package. The
-point is: you have fulfilled the license.
+\label{MobileDeviceHint} Sometimes you probably want to distributing a BSD
+bi\-na\-ry package on a medium, which doesn't allow the user, to see package
+files directly - some mobile devices don't give their users the full access to
+all stored elements. But the requirement, 'to give some one the BSD license and
+the copyright notes' includes that he must be able to read it\footnote{to give
+someony anything he can't touch, feel, see etc., is like not giving him anything
+;-)}. Hence, on systems which offer a file browser, it is sufficient, to put
+these file onto the files system. On the other systems, you must present the
+content of the files by your application - maybe in a specific copyright dialog.
+And be aware: Although it's a good tradition to link to the homepages of the
+projects, it is not sufficient to offer only links. If you are required by the
+Open Source licenses to handover something to your users, you (sic!) must do it\footnote{The advantage of doing the job oneself is that one has not to struggle with uncommunicated implicite modfications of the link targets.}.
+The point is: you have to fulfill the license.
 \end{itshape}
 
 \subsubsection{BSD-4: Passing a modified program as source code}
@@ -267,7 +272,7 @@ point is: you have fulfilled the license.
 
 \begin{description}
 \item[means] that you are going distribute a modified version of the received
-BSD program, application, or server (proapse) to 3rd. parties in form of a set
+BSD program, application, or server (proapse) to 3rd parties in form of a set
 of source code files or an integrated source code package.
 \item[covers] OSUC-04\footnote{For details see pp. \pageref{OSUC-04-DEF}}
 \item[requires] the tasks in order to fulfill the license conditions
@@ -292,7 +297,7 @@ of source code files or an integrated source code package.
 
 \begin{description}
 \item[means] that you are going distribute a modified version of the received
-BSD pro\-gram, application, or server (proapse) to 3rd. parties in form of a set
+BSD pro\-gram, application, or server (proapse) to 3rd parties in form of a set
 of binary files or an integrated binary package.
 \item[covers] OSUC-04\footnote{For details see pp. \pageref{OSUC-04-DEF}}
 \item[requires] the tasks in order to fulfill the license conditions
@@ -323,7 +328,7 @@ of binary files or an integrated binary package.
 \label{OSUC-08-BSD}
 \begin{description}
 \item[means] that you are going distribute a modified version of the received
-BSD code snippet, module, library, or plugin (snimoli) to 3rd. parties in form
+BSD code snippet, module, library, or plugin (snimoli) to 3rd parties in form
 of a set of source code files or an integrated source code package, but without
 embedding it into another larger software unit.
 \item[covers] OSUC-08\footnote{For details see pp. \pageref{OSUC-08-DEF}}
@@ -344,7 +349,7 @@ embedding it into another larger software unit.
 
 \begin{description}
 \item[means] that you are going distribute a modified version of the received
-BSD code snippet, module, library, or plugin (snimoli) to 3rd. parties in form
+BSD code snippet, module, library, or plugin (snimoli) to 3rd parties in form
 of a set of binary files or an integrated binary package, but without embedding
 it into another larger software unit.
 \item[covers] OSUC-08\footnote{For details see pp. \pageref{OSUC-08-DEF}}
@@ -368,7 +373,7 @@ it into another larger software unit.
 \label{OSUC-10-BSD}
 \begin{description}
 \item[means] that you are going distribute a modified version of the received
-BSD code snippet, module, library, or plugin (snimoli) to 3rd. parties in form
+BSD code snippet, module, library, or plugin (snimoli) to 3rd parties in form
 of a set of source code files or an integrated source code package together with
 another larger software unit, which contains this code snippet, module, library,
 or plugin as an embedded component.
@@ -396,7 +401,7 @@ or plugin as an embedded component.
 
 \begin{description}
 \item[means] that you are going distribute a modified version of the received
-BSD code snippet, module, library, or plugin to 3rd. parties in form of a set of
+BSD code snippet, module, library, or plugin to 3rd parties in form of a set of
 binary files or an integrated binary package together with another larger
 software unit, which contains this code snippet, module, library, or plugin as
 an embedded component.
@@ -426,7 +431,7 @@ an embedded component.
 \subsection{Software licensed by the \emph{BSD 3-Clause License}}
 
 Compared with the \textit{BSD 2-Clause license}, the \textit{BSD 3-Clause
-license} only contains one additional 3rd. clause, the rest is the same. So, for
+license} only contains one additional 3rd clause, the rest is the same. So, for
 acting according the \textit{BSD 3-Clause license}, do that, what you would have
 to do for fulfilling the 2 clause license. And additionally do not use the name
 of licensing organization or the names of the licensing distributors to promote
@@ -463,7 +468,7 @@ of the license into the package. Hence, you are furthermore not allowed to
 modify these files or corresponding text snippets. For our purposes, we
 translated the bans into the following executable task:
 
-\begin{quote}\textit{Ensure, that the licensing elements - eg. the BSD license
+\begin{quote}\textit{Ensure, that the licensing elements - e.g. the BSD license
 text, the specific copyright notice of the original author(s), and the BSD disclaimer
 - are retained in your package in the form you have got them.}\end{quote}
 
@@ -473,7 +478,7 @@ and/or other materials provided with the
 distribution}\footcite[cf.][\nopage wp]{BsdLicense2Clause}. Hence, this is
 not required as necessary condition for the (re)distribution as source code
 package . But nevertheless, even for a distribution in form of source code, it
-is often possible, to fulfill this rule too - eg., if you offer an own download
+is often possible, to fulfill this rule too - e.g., if you offer an own download
 site for source code packages. In such cases, it is a sign of respect, to
 mention the licensing not only inside of the packages, but also in the text of
 your site. Because of that, we added the following voluntary task for all BSD
