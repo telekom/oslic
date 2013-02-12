@@ -23,6 +23,10 @@
 %% use all entries of the bibliography
 %\nocite{*}
 
+%TODO MM1 Ich würde davon absehen Open Source mit Großbuchstaben zu schreiben. Es ist zwar ein
+%TODO MM1 stehender Begriff, aber kein Eigenname, außer als Teil eines Titels wie OSLiC o.ä.
+%TODO MM1 Das gilt dann auch für alle erweiterten Begriffe wie Open Source Software oder
+%TODO MM1 Open Source License etc.
 
 \chapter{Introduction}
 
@@ -34,8 +38,8 @@ used and the way it can be read - which is indeed not quite the same.
 \normalsize{}
 
 % Content
-This book focuses on just one issue: \emph{What do we have to do for acting
-according to the licenses of those \emph{Open Source Software} we use?} The
+This book focuses on just one issue: \emph{What needs to be done in order to
+comply with the licenses of the \emph{Open Source Software} we are using?} The
 \emph{Open Source License Compendium} aims at reliably answering this question -
 in a simple and easy to understand manner. However, it is not just another book
 on \emph{Open Source} in ge\-ne\-ral\footnote{Meanwhile, there are tons of
@@ -50,71 +54,71 @@ two books for attaining a good overview on the topic of \emph{Open Source
 cf.][\nopage passim]{Moody2001a} - \cite[for an English version
 cf.][passim]{Moody2002a}) and (b) the 'legal basic conditions'
 (\cite[cf.][\nopage passim]{JaeMet2011a}). But fortunately, we are not forced to
-do so.}. the intention is, rather, for it to be a tool for simplifying the
-license compliant behavior.
+do so.}, the intention is, rather, for it to be a tool for achieving license
+conformity.
 
-This compendium was evoked by a challenge of \emph{Deutsche Telekom AG} and some
-of its software developers and project managers: Of course, they want to behave
-license compliantly. But they could not find a reference text which simply lists
-what precisely must be done in order to to fulfill the licenses of that piece of
-Open Source currently being used.
+This compendium was created out of the necessity at \emph{Deutsche Telekom AG}
+and in some of the software projects: Of course developers and project managers
+want to observe each and every license obligation. Unfortunately, there is no
+reference text which simply lists what precisely must be done in order to comply
+with the license of that piece of Open Source being used.
 
 As some of these co-workers in Telekom projects, even we - the initial authors
-of the OSLiC - did not want to become Open Source license experts only for being
-able to use Open Source Software in a regular manner. We did not want to become
-lawyers. We simply wanted to do in a simplier way, what in those days claimed
-much time and many resources. We were searching for clear guidance instead of
-having to determine a correct way through the jungle of Open Source Licenses -
-over and over again, project for project. We loved using the high-quality Open
-Source Software to improve our performance. We liked using it legally. But we
-did not like to laboriously discuss the legal constraints of the many and
-different Open Source Licenses.
+of the OSLiC - did not want to become Open Source License experts only for being
+able to use Open Source Software in a normal way. We did not want to become
+lawyers. We just wanted simplify what used to be time consuming and require a
+lot of resources. We were searching for clear guidance instead of having to
+determine a correct way through the jungle of Open Source Licenses - over and
+over again, project for project. We loved using the high-quality Open Source
+Software to improve our performance. We liked using it properly. But we did not
+like to laboriously discuss the legal constraints of the many and different Open
+Source Licenses.
 
-What we needed, was an easy-to-use handout which would lead us without any
-detours to executable lists of working items. We wished to get To-Do-Lists,
-tailored to our usecases and our licenses. We needed reliable lists of tasks we
-only had to execute for being sure that we were acting according to the Open
-Source License. When we started out, such a compendium did not exist.
+What we needed, was an easy-to-use handout which would directly provide us with
+executable lists of work items. We wanted To-Do-Lists tailored to our use cases
+and our licenses. We needed reliable lists of tasks we only had to execute for
+being sure that we were in accordance with the open Source License. When we
+started out, such a compendium did not exist.
 
 For solving this problem our company took three decisions:
 
-The first decision our company arrived at, was to support a small group of
+The first decision our company arrived at was to support a small group of
 employees to act as \emph{a board of Open Source License experts}: They should
-offer a service for the whole company. Projects, managers, and developers should
-be enabled to ask this board what they have to do for fulfilling a specific Open
-Source License under specific circumstances. And this board should answer with
-reliable to-do lists whose executions would assure that the requestors are
-acting according to the corresponding Open Source Licenses. The idea behind this
-decision was simple. It would save cost and increase quality if one had one
-central group of experts instead of being obliged to select (and to train)
-developers - over and over again, for every new project. So, the \emph{OSRB} -
-the \emph{Telekom Open Source Review Board} - was founded as an internal expert
-group - as a self-organizing, bottom-up driven community.
+offer a service to the whole company. Projects, managers, and developers should
+be able to ask this board what they have to do for complying with a specific
+open Source License under specific circumstances. And this board should return
+authoritative to-do lists, the execution of which would assure that the
+requestors are acting according to the corresponding Open Source License. The
+idea behind this decision was simple. It would save cost and increase quality if
+one had one central group of experts instead of being obliged to select (and to
+train) developers - over and over again, for every new project. So, the
+\emph{OSRB} - the \emph{Telekom Open Source Review Board} - was founded as an
+internal expert group - as a self-organizing, bottom-up driven community.
 
 The second decision our company took, was to allow this \emph{Telekom OSRB} to
-collect their results systematically . The idea behind this decision was also
+%TODO MM1 Die Aussage des ersten Satzes ist mir nicht klar.
+collect their results systematically. The idea behind this decision was also
 simple: The more the internal service becomes known, the more the workload will
 increase: the more work, the more recources, the more costs. So, the idea was to
 save costs and enable the requestors to find answers by themselves without
-becoming license experts - but simply without becoming licenses experts: For all
-default cases, they should find an answer in the compendium instead of having to
-request that their work be analyzed by the OSRB. Thus, the planned \emph{Telekom
-Open Source License Compendium} prevents Telekom from having to increase the
-number of OSRB members in the future.
+becoming license experts: For all default cases, they should find an answer in
+the compendium instead of having to request that their work be analyzed by the
+OSRB. Thus, the planned \emph{Telekom Open Source License Compendium} prevents
+Telekom from having to increase the number of OSRB members in the future.
 
 The third decision our company reached, was to allow the \emph{Telekom OSRB} to
-create the compendium in that mode of cooperation, Open Source projects used to
-do. Again, a simple reason evoked this ruling: If in the future - as a rule -
-not a reviewing OSRB, but a simple manual should assure the Open Source License
-compliant behavior of projects, programmers and managers, this book had of
-course to be particularily reliable. There is a known feature of the Open Source
-working model: the ongoing review by the cooperating community increases the
-quality. Therefore, the decision, not only to write an internal 'Telekom
-handout', but to enable the whole community to use, to modify and to
-redistribute a broader \emph{Open Source License Compendium}, was a decision for
-improving quality. Consequently, the \emph{OSRB} decided to publish the
-\emph{OSLiC} as a set of LaTex sources, publicly available via the open
-repository github\footnote{Get the code by using the link
+create the compendium in the same mode of cooperation used in Open Source
+projects. Again, a simple reason evoked this ruling: If in the future - as a
+rule - not a reviewing OSRB, but a simple manual should assure the Open Source
+License conformity for projects, programmers and managers, this book had of
+course to be particularily authoritative. There is a known feature of the Open
+Source working model: the ongoing review by the cooperating community increases
+the quality. Therefore, the decision not only to write an internal 'Telekom
+handout', but to enable the whole community to use, modify and redistribute a
+broader \emph{Open Source License Compendium}, was a decision for improving
+quality. Consequently, the \emph{OSRB} decided to publish the \emph{OSLiC} as a
+set of LaTex sources, publicly available via the open repository
+github\footnote{Get the code by using the link
 \texttt{https://github.com/dtag-dbu/oslic}; get project information by
 \texttt{http://dtag-dbu.github.com/oslic/} or by
 \texttt{http://www.oslic.org/}.}. And it licensed the OSLiC under Creative
@@ -134,7 +138,7 @@ please use the scientific standard.}.
 
 But to publish the \emph{OSLiC} as a free book has another important connotation -
 at least for the \emph{Telekom OSRB}: It is also intended to be an appreciative
-\emph{giving back} to the \emph{Open Source Community} which has enriched and
+\emph{giving back} to the \emph{Open Source community} which has enriched and
 simplified the life of so many employees and companies over so many years.
 
 Altogether, the OSLiC follows five principles:
@@ -148,9 +152,9 @@ Altogether, the OSLiC follows five principles:
   introduced and discussed without disturbing the usage itself.
 
   \item[Quotations with thoroughly specified sources]\label{QuotationPrinciple}:
-  The OSLiC shall be revisable and reliable. It shall comprehensibly argue and
-  explictly specify why it adopts which information from whom in which version
-  and why\footnote{For that purpose, we are using an 'old-fashioned'
+  The OSLiC shall be revisable and authoritative. It shall comprehensibly argue
+  and explictly specify why it adopts which information from whom in which
+  version and why\footnote{For that purpose, we are using 'old-fashioned'
   bibliographic style footnotes, instead of endnotes or inline-hints.
   We want to enable the users to review or to ignore our comments and hints just
   as they prefer - but on all accounts without being disturbed by large inline
@@ -163,20 +167,21 @@ Altogether, the OSLiC follows five principles:
   passim]{Reincke2012a}. For a more elaborated legitimizing version
   \cite[cf.][\nopage passim]{Reincke2012b}) }.
 
- \item[Not clearing out the forest land, but cutting out a swathe]: The OSLiC
+ \item[No clearing the forest, but cutting a swath]: The OSLiC
   has to deal with licenses and their legal aspects, no doubt. But it shall not
-  discuss all details of every aspect. It shall focus on one possible way to act
-  according to a license in a specific usecase - even it is known that there
+  discuss all details of every aspect. It shall focus on one possible way to
+  comply with a license in a specific usecase - even it is known that there
   might be alternatives\footnote{The OSLiC shall not counsel projects with
   respect to their specific needs. This must remain the task for lawyers and
-  legal experts. They can assess whether a project with its' specfic conditions
-  could also / better use another way to fulfill the Open Source license.}.
+  legal experts. They can assess whether a project with its specfic conditions
+  could also / better use another way of conforming to the Open Source
+  license.}.
   
   \item[Take the license text seriously]: The OSLiC shall not give general
-  lectures on legal discussions, much less shall it participate in them. It
-  shall only find one reliable way for each license and each usecase to comply
-  with the license. The main source for this analysis shall be the exact reading
-  of the Open Source Licenses themselves - based on and supported by the
+  lectures on legal discussions, much less will it participate in them. It shall
+  only find one dependable way for each license and each use case to comply with
+  the license. The main source for this analysis shall be careful observation of
+  the Open Source Licenses themselves - based on and supported by the
   interpretation of benevolent lawyers and rational argueing software
   developers. The OSLiC shall respect that Open Source Licenses are written for
   software developers (and sometimes by developers).
@@ -192,7 +197,7 @@ First and foremost the readers expect to simply and quickly find those to-do
 lists fitting their needs. Here is the respective process\footnote{For the well
 known 'quick and dirty hackers' - as we tend to be, too - we have integrated a
 shortcut: If you already know the license of the Open Source package you want to
-use and if you are very familiar with the meaning of the Open Source Use Cases
+use and if you are very familiar with the meaning of the Open Source use cases
 we defined, then you might directly jump to the corresponding license specific
 chapter, without 'struggling' with \textbf{OSLiC 5 query form} ($\rightarrow$ p.
 \pageref{OSLiCStandardFormForGatheringInformation}), the taxonomic \textbf{Open
@@ -209,10 +214,10 @@ the systematic control of the full OSLiC process as presented here.}:
     text width=4.5em, text badly centered, node distance=4cm, inner sep=0pt]
 
 \tikzstyle{preparation} = [rectangle, draw, fill=gray!30, 
-    text width=11.5em, text centered, rounded corners, minimum height=4em]
+    text width=10em, text centered, rounded corners, minimum height=4em]
  
 \tikzstyle{lprocs} = [rectangle, draw, fill=gray!40, 
-    text width=11.5em, text centered, rounded corners, minimum height=4em]
+    text width=10em, text centered, rounded corners, minimum height=4em]
     
 \tikzstyle{processing} = [rectangle, draw, fill=gray!40, node distance=2.4cm,
     text width=15em, text centered, rounded corners, minimum height=4em]
@@ -227,14 +232,14 @@ the systematic control of the full OSLiC process as presented here.}:
     % Place nodes
     
   \node [cloud] (start) at (1,10) 
-    {$\forall$ your \\ Open Source \\ components};
+    {$\forall$  \\ Open Source \\ components};
   \node [preparation] (select) at (5,10) 
-    {select your next Open Source component};     
+    {select next Open Source component};     
   \node [preparation,  below of=select] (analyze) 
-    {analyze its role in the software architecture and 
-    determine the intended use of the app as whole};  
+    {analyze its role in software architecture and 
+    determine general use of app};  
   \node [preparation,  below of=analyze] (determine) 
-    {determine its Open Source License};
+    {determine Open Source License};
   \node [lprocs,  below of=determine] (fillin)
     {\textbf{fill in the 5 query form} ($\rightarrow$ p.
     \pageref{OSLiCStandardFormForGatheringInformation})};
@@ -248,11 +253,11 @@ the systematic control of the full OSLiC process as presented here.}:
     \pageref{OSUCList}ff.)};
     
   \node [processing,  below of=traverse] (find)
-    {\textbf{Determine} the page of \textbf{the license and use case specific to-do list}
-    being presented in the license specific chapter};
+    {\textbf{Determine} page of \textbf{license and use case specific to-do list}
+    presented in license specific chapter};
  
   \node [processing,  below of=find] (process)
-    {Jump to the indicated page and \textbf{process the license and use case specific
+    {Jump to indicated page and \textbf{process license and use case specific
     to-do list} ($\rightarrow$ \pageref{OSUCToDoLists}ff.)};
     
   \node [decision, right of=process] (other) {more?};
@@ -278,10 +283,10 @@ the systematic control of the full OSLiC process as presented here.}:
 \end{tikzpicture}
 
 Second, the readers might wish to comprehend the whole analysis. So, we
-shortly discuss Open Source Licenses taxonomies as the basis for a license compliant
+shortly discuss Open Source License taxonomies as the basis for license compliant
 behavior\footnote{$\rightarrow$ \enquote{\nameref{sec:LicenseTaxonomies}}, pp.
 \pageref{sec:LicenseTaxonomies}}. We consider some side effects with
-regard to act according to the Open Source Licenses\footnote{$\rightarrow$
+regard to Open Source License compliance\footnote{$\rightarrow$
 \enquote{\nameref{sec:SideEffects}}, pp. \pageref{sec:SideEffects}}. And we
 study the structure of Open Source Use Cases\footnote{$\rightarrow$
 \enquote{\nameref{sec:OSUCdeduction}}, pp. \pageref{sec:OSUCdeduction}}.
