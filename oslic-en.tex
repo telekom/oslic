@@ -130,6 +130,7 @@
 \usepackage{nameref}
 
 
+
 \counterwithout{footnote}{chapter}
 
 \usepackage[intoc]{nomencl}
@@ -155,14 +156,21 @@
 %% \nocite{*}
 
 %%-- start(titlepage)
-\titlehead{Release \input{release}}
+\titlehead{Version \input{rel-number} % -- \input{rel-date}
+}
 \subject{\small \itshape A Practical Guide for Developers, Managers, OS Experts, 
 and Companies} 
 
 \title{Open Source License Compendium}
 
-\subtitle{How to Achieve Open Source License Compliance}
-\author{K. Reincke, G. Sharpe \input{btexmat/oscLicenseFootnoteInc}}
+\subtitle{How to Achieve Open Source License Compliance\input{btexmat/oscLicenseFootnoteInc}}
+\author{
+Karsten Reincke\thanks{Deutsche Telekom AG, Products \& Innovation, 
+T-Online-Allee 1, 64295 Darmstadt}
+\and
+Greg Sharpe\thanks{Deutsche Telekom AG, Telekom Deutschland GmbH, 
+Landgrabenweg, Bonn}}
+
 \maketitle
 %%-- end(titlepage)
 
@@ -181,6 +189,7 @@ arbritarily selected experts. We are proud to have its support. Gladly we thank
 Eitan Adler,\\
 John Dobson, \\
 Steffen Härtlein, \\
+Ta'Id Holmes, \\
 Michael Kern,\\
 Michael Machado,\\
 Thomas Quiehl,\\
@@ -258,15 +267,6 @@ and all the others\ldots
 
 \input{snippets/en/09C-Appendices/0903-ProlegomenaInc}
 
-% \section{Prolegomena}
-% \input{snippets/en/09C-Appendices/0b03a-prolegomenaAbstractInc}
-% \input{snippets/en/09C-Appendices/0b03b-why01Inc}
-% \input{snippets/en/09C-Appendices/0b03c-APC-LicenseMissedInc}
-% \input{snippets/en/09C-Appendices/0b03d-ifrossWithoutGuideInc}
-% \input{snippets/en/09C-Appendices/0b03e-AnotherCompendiumTryInc}
-% 
-% \input{snippets/en/09C-Appendices/0b03f-why02Inc}
-% \input{snippets/en/09C-Appendices/0b03g-whatInc}
 
 \small
 %\theendnotes
