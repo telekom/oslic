@@ -24,12 +24,182 @@
 %\nocite{*}
 
 \section{Excursion: The Problem of Implicitly Freeing Patents}
-\footnotesize
-\begin{quote}\itshape
-Here we analyze the implicitly freeing of patents by licensing code as Open
-Source Software.
+\footnotesize \begin{quote}\itshape In this chapter, we are briefly analyzing
+the effect of patent clauses in open source licenses -- not in general, but with
+respect to those license fulfilling tasks they require, also known as the
+'implicit acceptance of a patent use' by distributing Open Source Software.
 \end{quote}
 \normalsize
-\ldots
 
-%\bibliography{../../../bibfiles/oscResourcesEn}
+At least the free software movement frowns upon the existence of software
+patents\footnote{For an early and elaborated description on the effects of
+software patents based on the viewpoint of the free software movement
+\cite[see][\nopage wp]{Stallmann2001a}. It is a lecture which has been given
+more than onetime and which has also been printed lateron (\cite[cf.][\nopage
+wp]{Stallman2002a}(. Inbetween the first decade of 2000, the focus switched to a
+more political fight against software patents (\cite[cf.][\nopage
+wp]{Stallman2004a}). But recently there seemed to appear another turn in dealing
+with software patents: Not fighting against them, but mitigating there effects:
+The proposal is '[...] (to legislate) that developing, distributing, or running
+a program on generally used computing hardware does not constitute patent
+infringement' (\cite[cf.][\nowpage wp]{STalklmann2012a})} - one of the most
+known witness for that position is the preamble of the GPL itself purporting
+that \enquote{[\ldots] any free program is threatened constantly by software
+patents}\footcite[cf.][wp]{Gpl20OsiLicense1991a}. It is said, that there are
+three threats feared by the open source community. First, they are apprehensive
+of the patent announcement by people who do not develop the open source software
+and which then try to prevent the use of the developed software by installing
+patent ligitations\footcite[cf.][234]{JaeMet2011a}. Second, they fear a bramble
+of general software patents which practically prohibits to write and use newly
+written open source software\footcite[cf.][234]{JaeMet2011a}. Third, they deal
+with nthze possibility that patents can be applied by open source developers
+which then could undermine the open source
+principles\footcite[cf.][235]{JaeMet2011a}.
+
+But regardless wether one tries to fight against (software) patents or not,
+(software) patents have come true. To act law-abindingly requires to manage the
+constraints of patents properly. Open source licenses know and respect that.
+Moreover, at least some of them try to manage the effect of software patents by
+specific patent clauses or general patent phrases.
+
+In opposite to the other conditions of the open source licenses, their patent
+clauses in general do not directly refer to a specific set of actions which has
+to be executed for fulfilling the licenses. Open source patent clauses normally
+do not join in the game 'paying by doing'. Thus, we should actually not to deal
+with the patent clauses. It is the task of the OSLiC to list one possible way to
+fulfill the open soure license with respect to the specific use cases. It is not
+our task to discuss pure theoretical questions.
+
+Unfortunately, although the patent clauses do not directly say \emph{'do this or
+that in these or those circumstances'}, they have nevertheless some side effects
+which evoke that the distributors - in all the open source software use cases
+which include the distribution of open source software - implictly having
+already something done if they are using and distributing a piece of open source
+software. This implicit effect makes it necessary to deal with the patent
+clauses even in the only pragmatically oriented OSLIC.
+
+Patent clause in open source licenses appear with two directions of impact. They
+use two methods to protect the users of the open source software -- and
+sometimes these methods are combined.
+
+\begin{itemize}
+  \item First, an open source license can assure that all contributors /
+  distributors to / of a piece of open source software grant to all users /
+  receivers not only the right to use the open source software itself, but
+  automatically and implicitly also the right to use all those patents --
+  belonging to the contributors / distributors -- which as patents are necessary
+  to use the software legally\footnote{There might arise a legal discussion
+  whether a distributor who does not contribute to the software development
+  really imlictly also has to grant the necessary rights of his patent
+  portfolio. The OSLiC doesn't want to participate in this discussion. We take a
+  simple and pragmatic position: for being sure that you are acting according to
+  such an open source license and its patent clause you should simply assume
+  that you have to do so. If this default position is not reasonable for you it
+  might be a good idea to consult legal experts which -- perhaps -- may find
+  another way for you to use the software legally.}. So, let us - only on the
+  following few pages -- name such licenses the \emph{granting licenses}.
+  \item Second, an open source license can try to automatically terminate the
+  right to use, to modify , and to distribute the software if its user litigates
+  against any of the contributors / distributors with respect to patent. That
+  can be seen as a revocation of earlier granted rights. So, let us name these
+  license the \emph{revoking licenses}.
+\end{itemize}
+
+In which concrete form ever these positions arise in a specific license, one has
+to consider some aspects:
+
+\begin{itemize}
+  
+  \item  Overall, one has to keep in mind, that - even as part of a granting
+  license - of course no patent clause can release the right of to use patents,
+  which are not owned by the licensors, contributors and/or
+  distributors\footnote{This is an important aspect which is often not seen.
+  Inside of DTAG we had a fruitful discussion evoked by Mr. Stephan Altmeyer who
+  -- as patent lawyer -- patiently explained it to us.}. Hence: even for those
+  open source licenses which try to protect the users, the user itself must
+  nevertheless ensure that he is not violating the patents of third parties
+  which can be covered by the patent clauses\footnote{Sometimes, this problem of
+  willingly or unwillingly vioaleted patents of third parties is seen as a
+  weakness of open source software. But that is not true. It is a weakness of
+  every software. Even a commercial licensor (developer) has only the right to
+  license the use of those patents he really owns or he has 'bought' for
+  relicensing them. Moreover, also commercial licensors can willingly or
+  unwillingly violate patents of other persons.}
+  
+  \item In the context of a granting license, one has also to consider, that
+  contributing to and distributing of a piece of software implictly evokes that
+  all patents of the contributor and/or distributor are 'given free' which are
+  necessary to use the software as whole -- including the more or less deeply
+  embedded libraries. This might evoke a problem for those persons,
+  organizations, or companies which see some of these patents as core patents of
+  their patent portfolio.
+  
+  \item Finally, one has to consider in the context of a granting license, that
+  its patent clause give free the use of the patents only in the meaning
+  'allowed to be used for enabling the use of the distributed software'. They do
+  not release the patent use generally. So, the threat of (unwillingly)
+  releasing patents by open source software is not as large as often feared:
+  granted is only the combination of the use of the patent and the software. On
+  the one hand, you may not use the software without having the right to use the
+  patent because the use of the patent is inherently necessary for using use the
+  sofwtare. On the other hand, you are not allowed to use the patent without the
+  software because the patent clauses only refer to the use of that specific
+  open source software licensed by the corresponding open source license.
+
+  \item Summarized one has to consider that granting open source licenses
+  automatically and implicitly enforce you to grant all the rights to the user
+  of the software which are necessary to use the software legally. Open source
+  contributors and distributors should know that\footnote{It might be debatable
+  wether this is also valid for not contributing distributors. From the
+  viewpoint of an open source user who wants to have one reliable way you should
+  assume that there is no difference.}.
+
+  \item With respect to the revoking licenses, one has to consider that it
+  clearly contains a negative condition in form of an interdiction. We will
+  integrate these conditions into a 'prohibits'-section of the to-do lists.
+  
+  \item Finally one should mention, that the form of the revocation used in the
+  revoking license in some cases refers the use of the software, in other cases
+  the use of the patents. But one has to consider that -- from the pragmatic
+  viewpoint of a benevolent open source software user -- also this second case
+  of patent revocation implictly terminates the right to use the software: If
+  the use of a patent is necessary to use a piece of software, one is not
+  allowed to use the software; and if the use of the patent is not necessary for
+  using the software, the patent is not covered by the patent clause. So, in any
+  case, this kind of patent clause terminates the right to use / to distribute
+  and/or to modify the software. Hence, single users as well as companies or
+  organizations should also respect such patent clauses if they want to use open
+  source software compliantly.
+\end{itemize}
+
+For supporting you by using the open source software not only according to
+license in general, but according to its patent clause, we now briefly cite and
+summarize the meaning of the particular patent clauses:
+
+\subsection{Patent clause of the ApL}
+
+\subsection{Patent clause of the ApL}
+
+\subsection{Patent clause of the BSD Licenses}
+
+\subsection{Patent clause of the EPL}
+
+\subsection{Patent clause of the EUPL}
+
+\subsection{Patent clause of the GPL}
+
+\subsection{Patent clause of the LGPL}
+ 
+\subsection{Patent clause of the MIT License}
+
+\subsection{Patent clause of the MPL}         
+
+\subsection{Patent clause of the MS-PL}
+  
+\subsection{Patent clause of the PgL}
+
+\subsection{Patent clause of the PHP License}
+
+
+
+% \bibliography{../../../bibfiles/oscResourcesEn}
