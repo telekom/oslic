@@ -281,38 +281,10 @@ term \enquote{permissive free software licence} in the meaning of \enquote{a
 class of free software licence[s] with minimal requirements about how the
 software can be redistributed} and \enquote{contrasts} them with the
 \enquote{copyleft licences} as those \enquote{with reciprocity / share-alike
-requirements}\footcite[cf.][\Connatural to the clustering into \emph{academic
-licenses} and \emph{reciprocal licenses} is the grouping into \emph{permissive
-licenses}, \emph{weak copyleft licenses}, and \emph{strong copyleft licenses}:
-Even Wikipedia already uses the term \enquote{permissive free software licence}
-in the meaning of \enquote{a class of free software licence[s] with minimal
-requirements about how the software can be redistributed} and
-\enquote{contrasts} them with the \enquote{copyleft licences} as those
-\enquote{with reciprocity / share-alike requirements}\footcite[cf.][\nopage
-wp]{wpPermLic2013a}. Some other authors name the set of \emph{academic licenses}
-the \enquote{permissive licenses} and specify the \emph{reciprocal licenses} as
-\enquote{restrictive licenses}, because in this case -- as consequence of the
-embedded \enquote{copyleft} effect -- the source code must be published in case
-of modifications. They additionally introduce the subset of \enquote{strong
-restrictive licenses} which additionally require that an (overarching)
-derivative work must be published under the same license\footcite[pars pro toto
-cf.][57]{Buchtala2007a}. The next refinement of such clustering concepts
-directly uses the categories \enquote{[open source] licenses with a strict
-copyleft clause}\footcite[Originally stated as \enquote{Lizenzen mit einer
-strengen Copyleft-Klausel}. Cf.][24]{JaeMet2011a}, \enquote{[open source]
-licenses with a restricted copyleft clause}\footcite[Originally stated as
-\enquote{Lizenzen mit einer beschränkten Copyleft-Klausel}.
-Cf.][71]{JaeMet2011a}, and \enquote{[open source] licenses without any copyleft
-clause}\footcite[Originally stated as \enquote{Lizenzen ohne Copyleft-Klausel}.
-Cf.][83]{JaeMet2011a}. Finally, this viewpoint can directly be mapped to the
-categories \emph{strong copyleft} and \emph{weak copyleft}: While on the one
-hand, \enquote{only changes to the weak-copylefted software itself become
-subject to the copyleft provisions of such a license, [and] not changes to the
-software that links to it}, on the other hand, the \enquote{strong copyleft}
-states \enquote{[\ldots] that the copyleft provisions can be efficiently imposed
-on all kinds of derived works}\footcite[cf.][\nopage wp]{wpCopyleft2013a}.nopage
-wp]{wpPermLic2013a}. Some other authors name the set of \emph{academic licenses}
-the \enquote{permissive licenses} and specify the \emph{reciprocal licenses} as
+requirements}\footcite[cf.][cf.][\nopage wp]{wpPermLic2013a}. 
+
+Some other authors name the set of \emph{academic licenses} the
+\enquote{permissive licenses} and specify the \emph{reciprocal licenses} as
 \enquote{restrictive licenses}, because in this case -- as consequence of the
 embedded \enquote{copyleft} effect -- the source code must be published in case
 of modifications. They additionally introduce the subset of \enquote{strong
@@ -340,7 +312,7 @@ the following picture:
 \begin{center}
 
 \begin{tikzpicture}
-\label{LICTAX}
+\label{OSLICTAX}
 \small
 
 
@@ -665,8 +637,9 @@ reference\footnote{$\rightarrow$ table \ref{tab:powerOfLicenses} on p.\
   \multicolumn{5}{c|}{already opened software}\\
 \hline
 \hline
-  ApL & 2.0 & \checkmark  & \checkmark  & \checkmark & 
-  -- & -- & -- & -- & -- & -- & -- & -- & -- \\
+  ApL & 2.0 & \checkmark  & \checkmark  & \checkmark  &
+  \checkmark & $\neg$ & \checkmark & \checkmark & $\neg$ &
+   \checkmark  & $\neg$ & \checkmark & $\neg$ \\
 \hline
   \multirow{2}{*}{BSD} & 3-Cl & \checkmark & \checkmark  & \checkmark  & 
     $\neg$ & $\neg$ & \checkmark & $\neg$  &
@@ -728,7 +701,7 @@ reference\footnote{$\rightarrow$ table \ref{tab:powerOfLicenses} on p.\
 \end{minipage}
 \end{table}
 
-\section{The protecting power of the Affero Gnu Public License (AGPL)}
+\section{The protecting power of the Affero Gnu Public License (AGPL) [tbd]}
 \begin{itemize} 
   \item The Affero Gnu Public License protects \ldots
   \item But the Affero Gnu Public License does not protect \ldots
@@ -737,8 +710,48 @@ reference\footnote{$\rightarrow$ table \ref{tab:powerOfLicenses} on p.\
 
 \section{The protecting power of the Apache License (ApL)}
 \begin{itemize} 
-  \item The Apache License protects \ldots
-  \item But the Apache License does not protect \ldots
+  \item As an approved \emph{open source license}\footcite[cf.][\nopage
+  wp]{OSI2012b}, the Apache License\footnote{The Apache License, version 2.0 is
+  maintained by the Apache Software Foundation (\cite[cf.][\nopage
+  wp]{AsfApacheLicense20a}).  Of course, also the OSI is hosting a duplicate
+  (\cite[cf.][\nopage wp]{Apl20OsiLicense2004a}). By reviewing the
+  \enquote{licenses by name} list of the OSI one can directly see that the OSI
+  has only approved the Apache License, version 2.0: earlier versions are not
+  listed (\cite[cf.][\nopage wp]{OSI2012b}). In the same spirit, also the Apache
+  Software Foundation itself classifies the releases 1.0 and 1.1 as
+  \enquote{historic} (\cite[cf.][\nopage wp]{AsfLicenses2013a}). Thus, in the
+  proper meaning, it is correct to speak of 'the (one) Apache open source
+  license' and to ignore the earlier versions 1.0 and 1.1 in a compendium
+  dealing only with open source licenses. For those, who have to fulfill these
+  earlier Apache licenses it could perhaps be helpful to read them as siblings
+  of the BSD-2Cl and BSD-3CL licenses.} protects the user against the loss of
+  the right to use, to modify and/or to distribute the received copy of the
+  source code or the binaries\footcite[cf.][\nopage wp
+  §2]{Apl20OsiLicense2004a}. Furthermore, based on its patent
+  clause\footnote{$\rightarrow$ OSLiC pp.\ \pageref{subsec:ApLPatentClause}},
+  the ApL protects the users against patent disputes\footcite[cf.][\nopage wp
+  §3]{Apl20OsiLicense2004a}. Because of this patent clause and of its
+  \enquote{disclaimer of warranty} and its \enquote{limitation of liability},
+  the Apache license also protects the contributors / distributors against
+  patents disputes and warranty claims\footcite[cf.][\nopage wp §3, §7,
+  §8]{Apl20OsiLicense2004a}. Finally the ApL also protects the distributed
+  sources \emph{against} a change of the license which would \emph{reset} the
+  work \emph{as closed software}, because first, one \enquote{[\ldots] must give
+  any other recipients of the work or derivative works a copy of (the) license},
+  second, \enquote{in the source form of any derivative works that (one)
+  distributes}, one has \enquote{[\ldots] to retain [\ldots] all copyright,
+  patent, trademark, and attribution notices [\ldots]}, and third, one must
+  \enquote{[\ldots] include a readable copy [\ldots of the] NOTICE file} being
+  supplied by the original package one has received\footcite[cf.][\nopage wp
+  §4]{Apl20OsiLicense2004a}.
+  
+  \item But the Apache License does not protect the contributors against the
+  loss of feedback because it does not 'copyleft' the software. In the same
+  spirit, the ApL does not protect the undistributed software or the distributed
+  binaries against re-closings -- neither in unmodified nor in modified form --
+  because the Apache License allows to (re)distribute the binaries without also
+  supplying the sources -- even if the binaries rest upon sources modified by
+  the distributor.
 \end{itemize}
 
 \section{The protecting power of the BSD licenses}
@@ -748,7 +761,7 @@ reference\footnote{$\rightarrow$ table \ref{tab:powerOfLicenses} on p.\
   \emph{Berkely Software Distribution}. For details of the BSD license release
   and namings \cite[cf.][\nopage wp.\ editorial]{BsdLicense3Clause}} protect the
   user against the loss of the right to use, to modify and/or to distribute the
-  received copy of the source code or the binary\footcite[cf.][\nopage wp
+  received copy of the source code or the binaries\footcite[cf.][\nopage wp
   §1ff]{OSI2012a}. Additionally, they protect the contributors and/or
   distributors against warranty claims of the software users, because these
   licenses contain a 'No Warranty Clause'\footcite[one for all version
@@ -784,25 +797,25 @@ reference\footnote{$\rightarrow$ table \ref{tab:powerOfLicenses} on p.\
   
 \end{itemize}
 
-\section{The protecting power of the Eclipse Public License (EPL)}
+\section{The protecting power of the Eclipse Public License (EPL) [tbd]}
 \begin{itemize} 
   \item The Eclipse Public License protects \ldots
   \item But the Eclipse Public License does not protect \ldots
 \end{itemize}
 
-\section{The protecting power of the European Public License (EUPL)}
+\section{The protecting power of the European Public License (EUPL) [tbd]}
 \begin{itemize} 
   \item The European Public License protects \ldots
   \item But European Public License does not protect \ldots
 \end{itemize}
 
-\section{The protecting power of the Gnu Public License (GPL)}
+\section{The protecting power of the Gnu Public License (GPL) [tbd]}
 \begin{itemize} 
   \item The Gnu Public License protects \ldots
   \item But the Gnu Public License does not protect \ldots
 \end{itemize}
 
-\section{The protecting power of the Lesser Gnu Public License (LGPL)}
+\section{The protecting power of the Lesser Gnu Public License (LGPL) [tbd]}
 \begin{itemize} 
   \item The Lesser Gnu Public License  protects \ldots
   \item But the Lesser Gnu Public License  does not protect \ldots
@@ -815,7 +828,7 @@ reference\footnote{$\rightarrow$ table \ref{tab:powerOfLicenses} on p.\
   \enquote{Massachusetts Institute of Technology} 
   (cf.][\nopage wp).]{wpMitLic2011a} protects the user against the loss of the
   right to use, to modify and/or to distribute the received copy of the source
-  code or the binary\footcite[cf.][\nopage wp 1ff]{OSI2012a}. Additionally, it
+  code or the binaries\footcite[cf.][\nopage wp 1ff]{OSI2012a}. Additionally, it
   protects the contributors and/or distributors against warranty claims of the
   software users, because it contains a 'No Warranty
   Clause'\footcite[cf.][\nopage wp]{MitLicense2012a}. And finally it protects
@@ -844,25 +857,25 @@ reference\footnote{$\rightarrow$ table \ref{tab:powerOfLicenses} on p.\
   
 \end{itemize}
 
-\section{The protecting power of the Mozilla Public License (MPl)}
+\section{The protecting power of the Mozilla Public License (MPl) [tbd]}
 \begin{itemize} 
   \item The Mozilla Public License protects \ldots
   \item But the Mozilla Public License does not protect \ldots
 \end{itemize}
 
-\section{The protecting power of the Microsoft Public License (Ms-Pl)}
+\section{The protecting power of the Microsoft Public License (Ms-Pl) [tbd]}
 \begin{itemize} 
   \item The Microsoft Public License protects \ldots
   \item But the Microsoft Public License does not protect \ldots
 \end{itemize}
 
-\section{The protecting power of the Postgres License (PgL)}
+\section{The protecting power of the Postgres License (PgL) [tbd]}
 \begin{itemize} 
   \item The Postgres License protects \ldots
   \item But the Postgres License does not protect \ldots
 \end{itemize}
 
-\section{The protecting power of the PHP License}
+\section{The protecting power of the PHP License [tbd]}
 \begin{itemize} 
   \item The PHP License protects \ldots
   \item But the PHP License does not protect \ldots
@@ -873,7 +886,7 @@ table\footnote{$rightarrow$ \pageref{tab:powerOfLicenses}}, but also by a
 mindmap:
 
 \begin{tikzpicture}
-\label{LICTAX}
+\label{OSCLICMM}
 \footnotesize
 
 % (1.A) list of all licenses and their release numbers Level 5/6
