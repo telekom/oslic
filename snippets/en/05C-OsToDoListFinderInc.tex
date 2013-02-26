@@ -81,6 +81,14 @@ Class & Questions & Answers\\
     $\square$\hspace{1em}4yourself\\
     $\square$\hspace{1em}4others}\\
 \hline 
+  Form & 
+  \parbox[c][1.6cm][c]{9.4cm}{
+  \textit{If you plan to (re)distribute an open source based work [=4others], do
+  you want to distribute only the binaries or (also) the source code?}}
+  & \parbox{10em}{
+    $\square$\hspace{1em}only binaries\\
+    $\square$\hspace{1em}(also) sources}\\
+\hline 
   Mode & 
   \parbox[c][2.6cm][c]{9.4cm}{
   \textit{Are you going to combine the received open source software with other
@@ -120,7 +128,7 @@ snippet) of the received open source software, or if the larger unit contains an
 include statement referring to a file of the received open source software, or
 if your development environment contains a compiler or linker directive
 referring to the received open source software.
-\item[Recipient] You use the received open source software only for yourself, if
+\item[Recipient:] You use the received open source software only for yourself, if
 you as person do not pass it to other persons, or if you -- as a member of a
 specific development group -- pass it only to the other members of your
 development group. But if you store open source software on any device such as a
@@ -132,7 +140,13 @@ third parties\footnote{Please remember that -- at least in Germany -- there are
 opinions that even handing over software to another legal entity or department
 of the same company is also a kind of distribution. It is always safest
 to take the broadest possible meaning of distributing or handing over.}.
-\item[Mode] is defined by standard terms of the software development.
+\item[Form:] Often it is up to you to decide wether you want to distribute the
+source code, too. But if you do so, you have to respect special
+conditions\footnote{For details concerning a necessary refinement of the open
+source use case taxonomy, please see $\rightarrow$ OSLiC, p.\
+\pageref{sec:SourceBinaryDifference}}.
+\item[Mode:] The definition follows the corresponding standard terms of the
+software development.
 \end{description}
 
 \section{The taxonomic Open Source Use Case Finder}
@@ -410,7 +424,14 @@ branches:
 \end{footnotesize}
 \label{OSLiCUseCaseFinder}
 
-\section{The open source use cases and their links to the to-do lists}
+Please keep in mind, that for reducing the complexity of this general taxonomy,
+we suppressed the differentiation between distributing binaries and distributing
+sources\footnote{For details concerning a necessary refinement of the taxonomy
+$\rightarrow$ OSLiC, p.\ \pageref{sec:SourceBinaryDifference}}. Nevertheless,
+the final to-do lists respect this difference whereever it is necessary. It is
+up to you to select the correct to-do list on the basis of its titles.
+
+\section{The open source use cases and its to-do list references}
 
 On the following pages, each \textbf{O}pen \textbf{S}ource \textbf{U}se
 \textbf{C}ase is textually specified one more time and added by a list of page
@@ -458,9 +479,10 @@ following pages:
 distribute an unmodified open source program, application, or server to 3rd
 parties. In this act of distribution, you do not combine this program,
 application, or server with other software components in the sense of software
-development (= \textit{proapse, unmodified, independent, 4others}). 
-To see the \textit{specific, license fulfilling to-do lists} jump to the
-following pages:
+development (= \textit{proapse, unmodified, independent, 4others})\footnote{For
+differentiating between distributing sources and binaries $\rightarrow$ OSLiC,
+p.\ \pageref{sec:SourceBinaryDifference}}. To see the \textit{specific, license
+fulfilling to-do lists} jump to the following pages:
    \begin{itemize}
     \item p.\ \pageref{OSUC-02-AGPL} for the \textbf{AGPL}
       \textit{(= Affero GNU Public License)} 
@@ -523,7 +545,9 @@ following pages:
 source program, application, or server, before you distribute it to 3rd parties.
 But you do not combine this modified program, application, or server with other
 software components in the sense of software development (= \textit{proapse,
-modified, independent, 4others}).
+modified, independent, 4others})\footnote{For differentiating between
+distributing sources and binaries $\rightarrow$ OSLiC, p.\
+\pageref{sec:SourceBinaryDifference}}.
 To see the \textit{specific, license fulfilling to-do lists} jump to the
 following pages:
   \begin{itemize}
@@ -618,10 +642,12 @@ following pages:
   \end{itemize}
 
 \item[OSUC-07:]\label{OSUC-07-DEF} Just as you received it and before you will
-distribute it to 3rd parties together with the larger software unit, you
-combine an unmodified open source library, code snippet, module, or plugin into
-a larger software unit in the sense of software development (= \textit{snimoli,
-unmodified, embedded, 4others}). 
+distribute it to 3rd parties together with the larger software unit, you combine
+an unmodified open source library, code snippet, module, or plugin into a larger
+software unit in the sense of software development (= \textit{snimoli,
+unmodified, embedded, 4others})\footnote{For differentiating between
+distributing sources and binaries $\rightarrow$ OSLiC, p.\
+\pageref{sec:SourceBinaryDifference}}.
 To see the \textit{specific, license fulfilling to-do lists} jump to the
 following pages:
    \begin{itemize}
@@ -652,10 +678,11 @@ following pages:
 
 \item[OSUC-08:]\label{OSUC-08-DEF} Before you will distribute it, you are going
 to modify an open source library, code snippet, module, or plugin to 3rd
-parties, but you do not combine it with other software components in the sense of
-software development (= \textit{snimoli, modified, independent, 4others}). 
-To see the \textit{specific, license fulfilling to-do lists} jump to the
-following pages:
+parties, but you do not combine it with other software components in the sense
+of software development (= \textit{snimoli, modified, independent,
+4others})\footnote{For differentiating between distributing sources and binaries
+$\rightarrow$ OSLiC, p.\ \pageref{sec:SourceBinaryDifference}}. To see the
+\textit{specific, license fulfilling to-do lists} jump to the following pages:
   \begin{itemize}
     \item p.\ \pageref{OSUC-08-AGPL} for the \textbf{AGPL}
       \textit{(= Affero GNU Public License)} 
@@ -719,8 +746,10 @@ following pages:
 \item[OSUC-10:]\label{OSUC-10-DEF} Before you will distribute it to 3rd parties,
 you are going to modify an open source library, code snippet, module, or plugin,
 which you then combine with other software components in the sense of software
-development (= \textit{snimoli, modified, independent, 4others}). To see the
-\textit{specific, license fulfilling to-do lists} jump to the following pages:
+development (= \textit{snimoli, modified, independent, 4others})\footnote{For
+differentiating between distributing sources and binaries $\rightarrow$ OSLiC,
+p.\ \pageref{sec:SourceBinaryDifference}}. To see the \textit{specific, license
+fulfilling to-do lists} jump to the following pages:
   \begin{itemize}
     \item p.\ \pageref{OSUC-10-AGPL} for the \textbf{AGPL}
       \textit{(= Affero GNU Public License)} 

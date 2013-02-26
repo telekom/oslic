@@ -23,7 +23,7 @@
 %% use all entries of the bibliography
 %\nocite{*}
 
-\section{BSD Licensed Software \ldots}
+\section{BSD licensed software}
 
 As an approved open source license, the BSD license exists in two
 versions\footcite[Following the OSI, there is another 'ancient' 
@@ -43,9 +43,9 @@ Explicitly, all BSD open source licenses 'only' focus on the (re-)distribution
 \textit{open source use cases} which we have specified by our token
 \textit{4others}. Conditions for the other use cases specified by the token
 \textit{4yourself} can be derived\footnote{For details of the \textit{open
-source use case tokens} see p.\ \pageref{OsucTokens}. For Details of the
+source use case tokens} see p.\ \pageref{OsucTokens}. For details of the
 \textit{open source use cases} based on these token see p.
-\pageref{OsucDefinitionTree} }. Additionally the BSD license considers the form
+\pageref{OsucDefinitionTree} }. Additionally the BSD licenses consider the form
 of the distribution, esp.\ whether the work is distributed as a (set of) source
 code file(s) or as a (set of) the binary file(s). Use the following tree to find
 the BSD license fulfilling to-do lists.
@@ -186,7 +186,7 @@ integrated source code package\footnote{In this case it doesn't matter whether
 you  distribute a program, an application, a server, a snippet, a module, a
 library, or a plugin as an independent or an embedded unit} 
 
-\item[covers] OSUC-02, OSUC-05, OSUC-07\footnote{For details see pp.
+\item[covers] OSUC-02, OSUC-05, OSUC-07\footnote{For details see pp.\ 
 \pageref{OSUC-02-DEF} - \pageref{OSUC-07-DEF}}
 
 \item[requires] the following tasks in order to fulfill the license conditions
@@ -222,13 +222,17 @@ or a plugin as an independent or an embedded unit}
 \pageref{OSUC-02-DEF} - \pageref{OSUC-07-DEF}}
 \item[requires] the tasks in order to fulfill the license conditions
 \begin{itemize}
+  
   \item  \textbf{[mandatory:]} Ensure that your distribution contains the
   original copyright notice, the BSD license, and the BSD disclaimer in the form
   you have got them. If you compile the binary file on the base of the source
   code package and if this compilation does not also generate and integrate the
   licensing files then create the copyright notice, the BSD conditions, and the
   BSD disclaimer according to the form of the source code package and insert
-  these files into your distribution manually.
+  these files into your distribution manually\footnote{For implementing the
+  handover of files correctly $\rightarrow$ OSLiC
+  \pageref{DistributingFilesHint}}.
+  
   \item  \textbf{[mandatory:]} Ensure that the documentation of your
   distribution and/or your additional material also contain the author specific
   copyright notice, the BSD conditions, and the BSD disclaimer.
@@ -242,30 +246,6 @@ order to fulfill the license
 \end{itemize}
 \end{description}
 
-\begin{itshape}
-\emph{\textbf{General remark for all binary distributions}:} 
-\label{MobileDeviceHint} Sometimes you probably want to distributing a BSD
-bi\-na\-ry package on a medium which doesn't allow the user, to see package
-files directly -- some mobile devices don't give their users the full access to
-all stored elements. But the requirement, 'to give some one the BSD license and
-the copyright notes' includes that he must be able to read it\footnote{to give
-someone anything he can't touch, feel, see etc., is like not giving him the
-object ;-)}. Hence, on systems which offer a file browser, it is sufficient, to
-put these file onto the files system. On the other systems, you \emph{must}
-present the content of the files by your application -- maybe in a specific
-copyright dialog. But in the open source community, it is a good tradition, to
-present these reference data voluntarily.
-
-This is often done by presenting links to general versions of these licensing
-files etc.\ Be aware: Although it is a good tradition -- especially iy you link
-to the homepages of the projects for being totally transparent -- it is not
-sufficient to offer only links. If you are required by the open source licenses
-to handover something to your users, you (sic!) must do it\footnote{The
-advantage of doing the job oneself is that one has not to struggle with
-uncommunicated implicite modfications of the link targets.}. The point is: you
-have to fulfill the license.
-\end{itshape}
-
 \subsection{BSD-4: Passing a modified program as source code}
 \label{OSUC-04-BSD}
 
@@ -278,8 +258,9 @@ of source code files or an integrated source code package.
 \begin{itemize}
   \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\
   the BSD license text, the specific copyright notice of the original author(s),
-  and the BSD disclaimer -- are retained in your package in the form you have got
-  them. 
+  and the BSD disclaimer -- are retained in your package in the form you have
+  got them.
+  
   \item \textbf{[voluntary:]} Let the documentation of your distribution
   and/or your additional material also contain the original copyright notice, the
   BSD conditions, and the BSD disclaimer.
@@ -315,8 +296,9 @@ of binary files or an integrated binary package.
   code package and if this compilation does not also generate and integrate the
   licensing files then create the copyright notice, the BSD conditions, and the
   BSD disclaimer according to the form of the source code package and insert
-  these files into your distribution manually\footnote{see also our 'Mobile
-  Device Hint' on p.\ \pageref{MobileDeviceHint}}.
+  these files into your distribution manually\footnote{For implementing the
+  handover of files correctly $\rightarrow$ OSLiC
+  \pageref{DistributingFilesHint}}.
 
   \item  \textbf{[mandatory:]} Ensure that the documentation of your
   distribution and/or your additional material also contain the author specific
@@ -381,8 +363,9 @@ it into another larger software unit.
   code package and if this compilation does not also generate and integrate the
   licensing files, then create the copyright notice, the BSD conditions, and the
   BSD disclaimer according to the form of the source code package and insert
-  these files into your distribution manually\footnote{see also our 'Mobile
-  Device Hint' on p.\ \pageref{MobileDeviceHint}}.
+  these files into your distribution manually\footnote{For implementing the
+  handover of files correctly $\rightarrow$ OSLiC
+  \pageref{DistributingFilesHint}}.
   \item  \textbf{[mandatory:]} Ensure that the documentation of your
   distribution and/or your additional material also contain the author specific
   copyright notice, the BSD conditions, and the BSD disclaimer.
@@ -448,8 +431,9 @@ an embedded component.
   code package and if this compilation does not also generate and integrate the
   licensing files, then create the copyright notice, the BSD conditions, and the
   BSD disclaimer according to the form of the source code package and insert
-  these files into your distribution manually\footnote{see also our 'Mobile
-  Device Hint' on p.\ \pageref{MobileDeviceHint}}.
+  these files into your distribution manually\footnote{For implementing the
+  handover of files correctly $\rightarrow$ OSLiC
+  \pageref{DistributingFilesHint}}.
   \item  \textbf{[mandatory:]} Ensure that the documentation of your
   distribution and/or your additional material also contain the author specific
   copyright notice, the BSD conditions, and the BSD disclaimer.
