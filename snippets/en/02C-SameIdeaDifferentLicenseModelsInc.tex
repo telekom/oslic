@@ -281,7 +281,7 @@ term \enquote{permissive free software licence} in the meaning of \enquote{a
 class of free software licence[s] with minimal requirements about how the
 software can be redistributed} and \enquote{contrasts} them with the
 \enquote{copyleft licences} as those \enquote{with reciprocity / share-alike
-requirements}\footcite[cf.][cf.][\nopage wp]{wpPermLic2013a}. 
+requirements}\footcite[cf.][\nopage wp]{wpPermLic2013a}. 
 
 Some other authors name the set of \emph{academic licenses} the
 \enquote{permissive licenses} and specify the \emph{reciprocal licenses} as
@@ -306,8 +306,19 @@ software that links to it}, on the other hand, the \enquote{strong copyleft}
 states \enquote{[\ldots] that the copyleft provisions can be efficiently imposed
 on all kinds of derived works}\footcite[cf.][\nopage wp]{wpCopyleft2013a}.
 
-Based on this approach to an adequate clustering and labeling, we can develop
-the following picture:
+Based on this approach to an adequate clustering and labeling\footnote{Finally,
+we should also mention that there still exists other classifications which might
+become important in other contexts. For example, the ifross license subsumes
+under the main category \enquote{Open Source Licenses} the subcategories
+\enquote{Licenses without Copyleft Effect}, \enquote{Licenses with Strong
+Copyleft}, \enquote{Licenses with Restricted Copyleft}, \enquote{Licenses with
+Restricted Choice}, or \enquote{Licenses with Privilegs} -- and let finally
+denote these categories also licenses not listed by the OSI (\cite[cf.][\nopage
+wp.]{ifross2011a}). This is well reasonable if one refers to the meaning of the
+OSD (\cite[cf.][\nopage wp]{OSI2012a}). The OSLiC has to simplify its object of
+study by referring to the approved open source licenses (\cite[cf.][\nopage
+wp]{OSI2012d}) listed by the OSI (\cite[cf.][\nopage wp]{OSI2012b}).}, we can
+develop the following picture:
 
 \begin{center}
 
@@ -348,7 +359,7 @@ the following picture:
 \node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0103) at (2,6.5)
 {  \footnotesize \bfseries \textit{MIT}};
 \node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0104) at (3.5,6.5)
-{  \scriptsize \bfseries \textit{Ms-Pl}};
+{  \scriptsize \bfseries \textit{MS-PL}};
 \node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0105) at (2,5)
 {  \footnotesize \bfseries \textit{PgL}};
 \node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0106) at (3.5,5)
@@ -653,8 +664,9 @@ reference\footnote{$\rightarrow$ table \ref{tab:powerOfLicenses} on p.\
   $\neg$ & $\neg$ & \checkmark & $\neg$ & $\neg$ &
    \checkmark  & $\neg$ & \checkmark & $\neg$ \\
 \hline
-  Ms-Pl & ~ & \checkmark  & \checkmark  & \checkmark  & 
-  -- & -- & -- & -- & -- & -- & -- & -- & -- \\
+  MS-PL & ~ & \checkmark  & \checkmark  & \checkmark  &
+  \checkmark & $\neg$ & \checkmark & \checkmark & $\neg$ &
+   \checkmark  & $\neg$ & \checkmark & $\neg$ \\
 \hline
   PgL & ~ & \checkmark  & \checkmark  & \checkmark  &
   -- & -- & -- & -- & -- & -- & -- & -- & -- \\
@@ -682,6 +694,9 @@ reference\footnote{$\rightarrow$ table \ref{tab:powerOfLicenses} on p.\
   -- & -- & -- & -- & -- & -- & -- & -- & -- \\
 \cline{2-14}
   & 2.0 & \checkmark & \checkmark & \checkmark &
+  -- & -- & -- & -- & -- & -- & -- & -- & -- \\
+\hline
+  \textit{MS-RL} & ~ & \checkmark & \checkmark & \checkmark &
   -- & -- & -- & -- & -- & -- & -- & -- & -- \\
 \hline
 \hline
@@ -866,10 +881,53 @@ reference\footnote{$\rightarrow$ table \ref{tab:powerOfLicenses} on p.\
   \item But the Mozilla Public License does not protect \ldots
 \end{itemize}
 
-\section{The protecting power of the Microsoft Public License (Ms-Pl) [tbd]}
+\section{The protecting power of the Microsoft Public License (MS-PL)}
 \begin{itemize} 
-  \item The Microsoft Public License protects \ldots
-  \item But the Microsoft Public License does not protect \ldots
+  
+  \item As an approved \emph{open source license}\footcite[cf.][\nopage
+  wp]{OSI2012b}, the Microsoft Public License protects the user against the loss
+  of the right to use, to modify and/or to distribute the received copy of the
+  source code or the binaries\footcite[cf.][\nopage wp.
+  §2]{MsplOsiLicense2013a}. Furthermore, based on its patent
+  clause\footnote{$\rightarrow$ OSLiC pp.\ \pageref{subsec:MsplPatentClause}},
+  the MS-PL protects the users against patent disputes\footcite[cf.][\nopage wp.
+  §2.B and §3.B]{MsplOsiLicense2013a}. Because of this patent clause and of its
+  concise \emph{disclaimer of warranty}, the MS-PL also protects the
+  contributors / distributors against patents disputes and warranty
+  claims\footcite[cf.][\nopage wp. §2B, §3B, §3D]{MsplOsiLicense2013a}.
+  Finally, the Microsoft Public License protects the distributed sources
+  themselves - and even \enquote{portions of these sources} -- \emph{against} a
+  change of the license which would \emph{reset} the work \emph{as closed
+  software}, because first, one \enquote{[\ldots] must retain all copyright,
+  patent, trademark, and attribution notices that are present in the
+  software}\footcite[cf.][\nopage wp. §3C]{MsplOsiLicense2013a}, and because
+  second, one must also incorporate \enquote{a complete copy of this
+  license} into one's own distribution premised one distributes the source
+  code\footcite[cf.][\nopage wp. §3D]{MsplOsiLicense2013a}.
+  
+
+  \item But the Microsoft Public License does not protect the contributors
+  against the loss of feedback because it does not 'copyleft' the software: The
+  license does not contain any sentence which requires that one has to publish
+  the sources, too\footnote{There seem to be at least some misunderstandings on
+  the internet: The English wikipedia page specifies the MS-PL as a permissive
+  license and the MS-RL as a license with copyleft effect (\cite[cf.][\nopage
+  wp.]{wpMsSharedSources2013a}). The German wikipedia page (dedicated to the
+  MS-PL) says, that the MS-PL a license with a \enquote{schwachen [weak]
+  copyleft}(\cite[cf.][\nopage wp.]{wpMspl2013a}() while the page dedicated to
+  the MS-RL also says that the \enquote{Microsoft Reciprocal License} is a
+  license with weak copyleft, too (\cite[cf.][\nopage wp.]{wpMsrl2013a}). But
+  for the very thoroughly working \enquote{ifross license center}, the MS-RL is
+  a license with restricted (weak) copyleft, while the MS-PL is a permissive
+  license wiht some selectable options (\cite[cf.][\nopage wp.]{ifross2011a}).
+  Based on the license text itself and these other readings, we decided to take
+  the MS-PL as a permissive license in accordance to the English wikipedia page
+  and the ifross page.}. In the same spirit, the MS-PL does not protect the
+  undistributed software or the distributed binaries against re-closings --
+  neither in unmodified nor in modified form -- because the MS-PL License allows
+  to (re)distribute the binaries without also supplying the sources -- even if
+  the binaries rest upon sources modified by the distributor.
+  
 \end{itemize}
 
 \section{The protecting power of the Postgres License (PgL) [tbd]}
