@@ -25,8 +25,8 @@
 
 \section{MIT licensed software}
 
-The MIT license is known as one of the most permissive licenses. Therefore the
-MIT specific finder can be simplified too:
+The MIT license is known as one of the most permissive licenses. Thus, the
+MIT specific finder can be simplified:
 
 \begin{center}
 \begin{footnotesize}
@@ -71,7 +71,7 @@ MIT specific finder can be simplified too:
         }{        
             \Tr{\doublebox{\shortstack{\tiny{\textbf{MIT-4}:}\\
             \tiny{\textit{distributing}}\\\tiny{\textit{a modified}}\\
-            \tiny{\textit{library as}}\\\tiny{\textit{independent}}\\
+            \tiny{\textit{library as}}\\\tiny{\textit{independent}}
             \tiny{\textit{pkg}} }}} 
            
         }
@@ -80,7 +80,7 @@ MIT specific finder can be simplified too:
         }{        
             \Tr{\doublebox{\shortstack{\tiny{\textbf{MIT-5}:}\\
             \tiny{\textit{distributing}}\\\tiny{\textit{a modified}}\\
-            \tiny{\textit{library as}}\\\tiny{\textit{embedded}}\\
+            \tiny{\textit{library as}}\\\tiny{\textit{embedded}}
             \tiny{\textit{pkg}} }}} 
            
         }
@@ -134,7 +134,7 @@ module, a library, or a plugin as an independent package}
   \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\
   the MIT license text containing the specific copyright notices of the original
   author(s), the permission notices and the MIT disclaimer -- are retained in
-  your package in the form you have got them.
+  your package in the form you have received them.
   \item \textbf{[voluntary:]} It's a good tradition to let the documentation of
   your distribution and/or your additional material also contain a link to the
   original software (project) and its homepage.
@@ -156,7 +156,7 @@ of source code files or as an integrated source code package.}.
   \item \textbf{[mandatory:]} Ensure that the original licensing elements -- esp.\
   the MIT license text containing the specific copyright notices of the original
   author(s), the permission notices and the MIT disclaimer -- are retained in
-  your package in the form you have got them.
+  your package in the form you have received them.
   \item \textbf{[voluntary:]} Mark your modifications in the sourcecode,
   regardless whether you want to distribute the code or not.
   \item \textbf{[voluntary:]} It's a good tradition to let the documentation of
@@ -166,10 +166,10 @@ of source code files or as an integrated source code package.}.
   notice presented by the program during its user interaction by a hint to your
   own work or part.
   \item \textbf{[voluntary:]} It is a good practice of the open source
-  community, to let the copyright notice which is shown by the running program
-  also state that the program is licensed under the MIT license. Because you are
-  already modifying the program, you can also add such a hint, if the presented
-  original copyright notice lacks such a statement.
+  community, to let the copyright notice which is shown by the program also
+  state that it is based on a version originally licensed under the MIT license.
+  Because you are already modifying the program, you can also add such a hint,
+  if the presented original copyright notice lacks such a statement.
 \end{itemize}
 \item[prohibits] nothing explicitly.
 \end{description}
@@ -186,7 +186,7 @@ embedding it into another larger software unit.
   \item \textbf{[mandatory:]} Ensure that the original licensing elements -- esp.\
   the MIT license text containing the specific copyright notices of the original
   author(s), the permission notices and the MIT disclaimer -- are retained in
-  your package in the form you have got them.
+  your package in the form you have received them.
   \item \textbf{[voluntary:]} Mark your modifications in the sourcecode,
   regardless whether you want to distribute this source code or not.
   \item \textbf{[voluntary:]} It's a good tradition to let the documentation of
@@ -210,7 +210,7 @@ library, or plugin as an embedded component.
   \item \textbf{[mandatory:]} Ensure that the original licensing elements -- esp.\
   the MIT license text containing the specific copyright notices of the original
   author(s), the permission notices and the MIT disclaimer -- are retained in
-  your package in the form you have got them.
+  your package in the form you have received them.
   \item \textbf{[voluntary:]} Mark your modifications in the sourcecode,
   regardless whether you want to distribute this source code or not.
   
@@ -224,6 +224,15 @@ library, or plugin as an embedded component.
   documentation of your programm and/or your additional material also mention
   that you have used this component added by a link to the original software
   component and its homepage.
+  
+  \item \textbf{[voluntary:]} Arrange your distribution so that the the original
+  licensing elements -- esp.\ the MIT license text containing the specific
+  copyright notices of the original author(s), the permission notices and the
+  MIT disclaimer --  clearly refer only to the embedded library and do not
+  disturb the licensing of your own overarching work. It's a good tradition to
+  keep the libraries, modules, snippet, or plugins in specific directiers which
+  contain also all licensing elements.
+  
 \end{itemize}
 \item[prohibits] nothing explicitly.
 \end{description}
@@ -243,7 +252,16 @@ Here are our interpretations:
 \begin{itemize}
   \item If you do not modify the received MIT licensed application, neither for
   your own purposes, nor for handing over the program to 3rd parties, you can
-  conclude that all copyright notices and permission notices are already correct.
+  conclude that all copyright notices and permission notices are already
+  correct.
+  \item Nevertheless, we added the hint not to modify these licensing elements
+  in the context of the use case \emph{used by yourself}. This is evoked by the
+  MIT license itself. It requires explicitly that \enquote{ the above copyright
+  notice and this permission notice shall be included in all[sic!] copies or
+  substantial portions of the Software}\footcite[cf.][\nopage
+  wp]{MitLicense2012a} -- thus also into those copies you make for your own
+  purposes own your own machines, and even if this is probably not so often
+  reviewed.
   \item If you modify the received MIT licensed application, regardless for
   which purposes, you are simply not allowed to erase or modify existing
   copyright notes and permission notices. You may add your own modifications

@@ -23,58 +23,398 @@
 %% use all entries of the bibliography
 %\nocite{*}
 
-\section{Microsoft Public License \ldots [tbd]}
-\label{OSUC-01-MS-PL} \label{OSUC-03-MS-PL} 
-\label{OSUC-06-MS-PL} \label{OSUC-09-MS-PL}
+\section{Microsoft Public License}
 
-\label{OSUC-02-MS-PL} \label{OSUC-04-MS-PL} \label{OSUC-05-MS-PL}
-\label{OSUC-07-MS-PL} \label{OSUC-08-MS-PL} \label{OSUC-10-MS-PL}
 
-% TODO insert MS-PL specifc mini finder
+The MS-PL license is also one of the most permissive licenses. Thus, the
+MS-PL specific finder can be simplified:
 
-\subsection{MS-PL specific use case 1}
-(covers OSUC-X - OSUC-Z)
-% \label{OSUC-10-MS-PL}
+\begin{center}
+\begin{footnotesize}
+\pstree[levelsep=*1,treesep=0.2]{\Toval{MS-PL}}{
+  \pstree{
+    \Tr{\Ovalbox{\shortstack{recipient: \textit{4yourself}\\
+    \textbf{\textit{used by yourself}}}}} 
+  }{
+    \Tr{\doublebox{\shortstack{\tiny{\textbf{MS-PL-1}:}\\
+    \tiny{\textit{using the}}\\\tiny{\textit{software}}\\
+    \tiny{\textit{only for}}\\\tiny{\textit{yourself}} }}} 
+  }
+  \pstree[levelsep=*0.2,treesep=0.2]{
+    \Tr{\Ovalbox{\shortstack{recipient: \textit{4others}\\
+      \textbf{\textit{distributed to 3rd parties}}}}} 
+  }{ 
+    \pstree[levelsep=*0.2,treesep=0.2]{
+      \Tr{\Ovalbox{\shortstack{state:\\\textbf{\textit{unmodified}}}}}
+    }{
+        \Tr{\doublebox{\shortstack{\tiny{\textbf{MS-PL-2}:}\\
+        \tiny{\textit{distributing an}}\\
+        \tiny{\textit{unmodified pkg}} }}}
+
+    }
+
+    \pstree[levelsep=*0.2,treesep=0.2]{
+      \Tr{\Ovalbox{\shortstack{state:\\\textbf{\textit{modified}}}}}
+    }{ 
+      \pstree{
+        \Tr{\Ovalbox{\shortstack{type:\\\textbf{\textit{proapse}}}}}
+      }{
+          \Tr{\doublebox{\shortstack{\tiny{\textbf{MS-PL-3}:}\\
+          \tiny{\textit{distributing}}\\\tiny{\textit{a modified}}\\
+          \tiny{\textit{program}} }}} 
+           
+      }
+      \pstree{
+        \Tr{\Ovalbox{\shortstack{type:\\\textbf{\textit{snimoli}}}}}
+      }{
+        \pstree{
+          \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{independent}}}}}
+        }{        
+            \Tr{\doublebox{\shortstack{\tiny{\textbf{MS-PL-4}:}\\
+            \tiny{\textit{distributing}}\\\tiny{\textit{a modified}}\\
+            \tiny{\textit{library as}}\\\tiny{\textit{independent}}
+            \tiny{\textit{pkg}} }}} 
+           
+        }
+        \pstree{
+          \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{embedded}}}}}
+        }{        
+            \Tr{\doublebox{\shortstack{\tiny{\textbf{MS-PL-5}:}\\
+            \tiny{\textit{distributing}}\\\tiny{\textit{a modified}}\\
+            \tiny{\textit{library as}}\\\tiny{\textit{embedded}}
+            \tiny{\textit{pkg}} }}} 
+           
+        }
+
+
+      }
+ 
+    }
+   }   
+}
+\end{footnotesize}
+\end{center}
+
+\subsection{MS-PL-1: Using the software only for yourself}
+\label{OSUC-01-MS-PL} 
+\label{OSUC-03-MS-PL} 
+\label{OSUC-06-MS-PL}
+\label{OSUC-09-MS-PL}
+  
 \begin{description}
-\item[means] \ldots
-
-\item[covers] OSUC-?? \ldots
-
-\item[requires] the following tasks in order to fulfill the license conditions
-\begin{itemize}
-  \item \textbf{[mandatorily:]} Ensure \ldots
-  \item \textbf{[voluntarily:]} Let \ldots
-\end{itemize}
-
-% \item[prohibits] nothing explicitly.
-\item[prohibits] the following doings in order to fulfill the license conditions
-\begin{itemize}
-  \item \textbf{[directly:]} 
-  \item \textbf{[indirectly:]}
-\end{itemize}
+  \item[means] that you are going to use a received MS-PL software only for
+  yourself and that you do not handover it to any 3rd party in any sense.
+  \item[covers] OSUC-01, OSUC-03, OSUC-06, and OSUC-09\footnote{For details see
+  pp.\ \pageref{OSUC-01-DEF} - \pageref{OSUC-09-DEF}}
+  \item[requires] the tasks in order to fulfill the conditions of the MS-PL
+  license:
+  \begin{itemize}
+    \item You are allowed to use any kind of MS-PL licensed software in any
+    sense and in any context without any other obligations if you do not
+    handover the software to 3rd parties.
+  \end{itemize}
+\item[prohibits] nothing explicitly.
 \end{description}
 
-\subsection{MS-PL specific use case n}
-(covers OSUC-x - OSUC-z)
-% \label{OSUC-10-MS-PL}
+
+\subsection{MS-PL-2: Passing the unmodified software}
+\label{OSUC-02-MS-PL} \label{OSUC-05-MS-PL} \label{OSUC-07-MS-PL} 
+
 \begin{description}
-\item[means] \ldots
+\item[means] that you are going to distribute an unmodified version of the
+received MS-PL software to 3rd parties -- regardless whether you distribute it
+in form of binaries or of source code files\footnote{In this case it also
+doesn't matter whether you distribute a program, an application, a server, a
+snippet, a module, a library, or a plugin as an independent package}
 
-\item[covers] OSUC-?? \ldots
+\item[covers] OSUC-02, OSUC-05, OSUC-07\footnote{For details see pp.
+\pageref{OSUC-02-DEF} - \pageref{OSUC-07-DEF}}
 
-\item[requires] the following tasks in order to fulfill the license conditions
+\item[requires] the tasks in order to fulfill the license conditions
 \begin{itemize}
-  \item \textbf{[mandatorily:]} Ensure \ldots
-  \item \textbf{[voluntarily:]} Let \ldots
+  \item \textbf{[mandatory:]} Ensure that all licensing elements -- esp.\ all
+  copyright, patent, trademark, and attribution notices that are present in the
+  version you received -- are completely retained in your package.
+  
+  \item \textbf{[mandatory:]} Incorporate a complete copy of the MS-PL license
+  into your package, regardless wether you distribute a source code or a binary
+  package\footnote{$\rightarrow$ OSLiC, p.\ \pageref{MsplSourceBinHint}}.
+  
+  \item \textbf{[voluntary:]} It's a good tradition to let the documentation of
+  your distribution and/or your additional material also contain a link to the
+  original software (project) and its homepage.
 \end{itemize}
 
-% \item[prohibits] nothing explicitly.
-\item[prohibits] the following doings in order to fulfill the license conditions
-\begin{itemize}
-  \item \textbf{[directly:]} 
-  \item \textbf{[indirectly:]}
-\end{itemize}
+\item[prohibits] to use any contributors' name, logo, or trademarks (without an
+additional or general legally based approval).
+
 \end{description}
+
+\subsection{MS-PL-3: Passing a modified program as source code}
+\label{OSUC-04-MS-PL}
+
+\begin{description}
+
+\item[means] that you are going to distribute a modified version of the received
+MS-PL licensed program, application, or server (proapse) to 3rd parties as a
+source code package.
+
+\item[covers] OSUC-04\footnote{For details see pp. \pageref{OSUC-04-DEF}}
+
+\item[requires] the tasks in order to fulfill the license conditions
+\begin{itemize}
+  \item \textbf{[mandatory:]} Ensure that all licensing elements -- esp.\ all
+  copyright, patent, trademark, and attribution notices that are present in the
+  version you received -- are completely retained in your package.
+ 
+  \item \textbf{[mandatory:]} Incorporate a complete copy of the MS-PL license
+  into your package.
+  
+  \item \textbf{[mandatory:]} If you do not want to publish your modifications
+  under the MS-PL too, then cleanly separate your own sources and licensing
+  documents from original elements of the adopted work.
+  
+  \item \textbf{[voluntary:]} Mark your modifications in the sourcecode.
+  
+  \item \textbf{[voluntary:]} It's a good tradition to let the documentation of
+  your distribution and/or your additional material also contain a link to the
+  original software (project) and its homepage (as far as this does not clashes
+  with the prohibitions stated below).
+  
+  \item \textbf{[voluntary:]} You are allowed to expand an existing copyright
+  notice of the program by a hint to your own contributions.
+  
+  \item \textbf{[voluntary:]} It is a good practice of the open source
+  community, to let the copyright notice which is shown by the running program
+  also state that the program is licensed under the MS-PL license (as far as
+  this does not clashes with the prohibitions stated below). Because you are
+  already modifying the program, you can also add such a hint, if the 
+  original copyright notice lacks such a statement.
+    
+\end{itemize}
+
+\item[prohibits] to use any contributors' name, logo, or trademarks (without an
+additional or general legally based approval).
+
+\end{description}
+
+
+\subsection{MS-PL-3: Passing a modified program as binary}
+
+\begin{description}
+
+\item[means] that you are going to distribute a modified version of the received
+MS-PL licensed program, application, or server (proapse) to 3rd parties as a
+package of binaries.
+
+\item[covers] OSUC-04\footnote{For details see pp. \pageref{OSUC-04-DEF}}
+
+\item[requires] the tasks in order to fulfill the license conditions
+\begin{itemize}
+  
+  \item \textbf{[voluntary:]} Mark your modifications in the source code even if
+  do not want to distribute it.
+  
+  \item \textbf{[voluntary:]} It's a good tradition to let the documentation of
+  your distribution and/or your additional material also contain a link to the
+  original software (project) and its homepage (as far as this does not clashes
+  with with the prohibitions stated below).
+  
+  \item \textbf{[voluntary:]} It is a good practice of the open source
+  community, to let the copyright notice which is shown by the running program
+  also state that the derivative work is based on a version originally licensed
+  under the MS-PL license (as far as this does not clashes with the prohibitions
+  stated below) -- perhaps by linking to the project homepage of the original.
+  Because you are already modifying the program, you can also add such a hint,
+  if the original copyright notice lacks such a statement.
+    
+\end{itemize}
+
+\item[prohibits] to use any contributors' name, logo, or trademarks (without an
+additional or general legally based approval)
+
+\end{description}
+
+
+
+\subsection{MS-PL-4: Passing a modified library independently as source code}
+\label{OSUC-08-MS-PL}
+\begin{description}
+\item[means] that you are going to distribute a modified version of the received
+MS-PL code snippet, module, library, or plugin (snimoli) to 3rd parties without
+embedding it into another larger software unit.
+\item[covers] OSUC-08\footnote{For details see pp. \pageref{OSUC-08-DEF}}
+\item[requires] the tasks in order to fulfill the license conditions
+
+\begin{itemize}
+  \item \textbf{[mandatory:]} Ensure that all licensing elements -- esp.\ all
+  copyright, patent, trademark, and attribution notices that are present in the
+  version you received -- are completely retained in your package.
+ 
+  \item \textbf{[mandatory:]} Incorporate a complete copy of the MS-PL license
+  into your package.
+  
+  \item \textbf{[mandatory:]} If you do not want to publish your modifications
+  under the MS-PL too, then cleanly separate your own sources and licensing
+  documents from original elements of the adopted part(s).
+  
+  \item \textbf{[voluntary:]} Mark your modifications in the sourcecode.
+  
+  \item \textbf{[voluntary:]} It's a good tradition to let the documentation of
+  your distribution and/or your additional material also contain a link to the
+  original software (project) and its homepage (as far as this does not clashes
+  with with the prohibitions stated below).
+  
+\end{itemize}
+
+\item[prohibits] to use any contributors' name, logo, or trademarks (without an
+additional or general legally based approval)
+
+\end{description}
+
+\subsection{MS-PL-4: Passing a modified library independently as binary}
+\label{OSUC-08-MS-PL}
+\begin{description}
+\item[means] that you are going to distribute a modified version of the received
+MS-PL code snippet, module, library, or plugin (snimoli) to 3rd parties without
+embedding it into another larger software unit.
+\item[covers] OSUC-08\footnote{For details see pp. \pageref{OSUC-08-DEF}}
+\item[requires] the tasks in order to fulfill the license conditions
+
+\begin{itemize}
+  
+  \item \textbf{[voluntary:]} Mark your modifications in the source code even if
+  do not want to distribute it.
+  
+  \item \textbf{[voluntary:]} It's a good tradition to let the documentation of
+  your distribution and/or your additional material also contain a link to the
+  original software (project) and its homepage (as far as this does not clashes
+  with with the prohibitions stated below).
+    
+\end{itemize}
+
+\item[prohibits] to use any contributors' name, logo, or trademarks (without an
+additional or general legally based approval)
+
+\end{description}
+
+
+\subsection{MS-PL-5: Passing a modified library as embedded source code}
+\label{OSUC-10-MS-PL}
+\begin{description}
+\item[means] that you are going to distribute a modified version of the received
+MS-PL licensed code snippet, module, library, or plugin (snimoli) to 3rd parties
+in form of a set of source code files or an integrated source code package
+together with another larger software unit which contains this code snippet,
+module, library, or plugin as an embedded component.
+
+\item[covers] OSUC-10\footnote{For details see pp. \pageref{OSUC-10-DEF}}
+\item[requires] the tasks in order to fulfill the license conditions
+\begin{itemize}
+ 
+ \item \textbf{[mandatory:]} Ensure that all licensing elements -- esp.\ all
+  copyright, patent, trademark, and attribution notices that are present in the
+  version you received -- are completely retained in your package.
+ 
+  \item \textbf{[mandatory:]} Incorporate a complete copy of the MS-PL license
+  into your package.
+  
+  \item \textbf{[mandatory:]} If you do not want to publish your modifications
+  and/or your overarching application under the MS-PL too, then cleanly separate
+  your own sources and licensing documents from original elements of the adopted
+  work.
+  
+  \item \textbf{[voluntary:]} Mark your modifications in the sourcecode.
+  
+  \item \textbf{[voluntary:]} It's a good tradition to let the documentation of
+  your distribution and/or your additional material also contain a link to the
+  original software (project) and its homepage (as far as this does not clashes
+  with with the prohibitions stated below).
+
+  \item \textbf{[voluntary:]} It is a good practice of the open source
+  community, to let the copyright notice shown by your overarching program also
+  state that it is based on a component originally licensed under the MS-PL
+  license -- perhaps by linking the project homepage of the original (as far as
+  this does not clashes with the prohibitions stated below).
+  
+\end{itemize}
+
+\item[prohibits] to use any contributors' name, logo, or trademarks (without an
+additional or general legally based approval)
+
+\end{description}
+
+\subsection{MS-PL-5: Passing a modified library as embedded binary}
+\label{OSUC-10-MS-PL}
+\begin{description}
+\item[means] that you are going to distribute a modified version of the received
+MS-PL licensed code snippet, module, library, or plugin (snimoli) to 3rd parties
+in form of a binary package together with another larger software unit which
+contains this code snippet, module, library, or plugin as an embedded component.
+
+\item[covers] OSUC-10\footnote{For details see pp. \pageref{OSUC-10-DEF}}
+\item[requires] the tasks in order to fulfill the license conditions
+\begin{itemize}
+ 
+  \item \textbf{[voluntary:]} Mark your modifications in the source code even if
+  do not want to distribute it.
+  
+  \item \textbf{[voluntary:]} It's a good tradition to let the documentation of
+  your distribution and/or your additional material also contain a link to the
+  original software (project) and its homepage (as far as this does not clashes
+  with with the prohibitions stated below).
+  
+  \item \textbf{[voluntary:]} It is a good practice of the open source
+  community, to let the copyright notice shown by your own overarching program
+  also state that it is based on a component originally licensed under the MS-PL
+  license -- perhaps by linking the project homepage of the original (as far as
+  this does not clashes with the prohibitions stated below).
+  
+\end{itemize}
+
+\item[prohibits] to use any contributors' name, logo, or trademarks (without an
+additional or general legally based approval)
+
+\end{description}
+
+\subsection{Discussions and Explanations}
+
+The MS-PL is also a very permissive and short license. It requires to do:
+(a) You must preserve existing licensing elements. (b) You must distribute
+the source code as whole or \enquote{portions} of the source code under the
+MS-PL. (c) You must add a copy of the license if you distribute (parts of) the
+source code. (d) If you distribute a binary package, you must distribute (the
+parts of) the work under a license \enquote{that complies with this (MS-PL)
+license}\footcite[cf.][\nopage wp]{MsplOsiLicense2013a}.
+
+The most confusing clause is probably the condition, to \enquote{[\ldots]
+distribute any portion of the software in compiled or object code form [\ldots]
+only [\ldots] under a license that complies with this license}. But a closer
+examination is lighting the situation: The only other conditions of the license
+which refer to the context of distributing binaries are the requirements a) not
+to abuse trademarks, b) not to bring a patent claim against any contributor, and
+c) not to expect any warranties or guarantees with respect to the distributed
+portion\footcite[cf.][\nopage wp. §3A, §3B, §3E]{MsplOsiLicense2013a}.
+
+Based on these readings we decided \ldots
+
+\label{MsplSourceBinHint} 
+\begin{itemize}
+  \item \ldots to let you incorporate a copy of the license into your
+  distribution even if it only contains the binaries of the unmodified version:
+  if you have not modified it, you do not lose any advantage if you add the
+  license, too. So, thgis is the best method to fulfill the \emph{MSL-PL binary
+  condition}.
+  \item \ldots to erase all mandatory conditions in case of the binary
+  distributions: the patent restriction of the MS-PL itself is already covered
+  by the MS-PL patent section of the OSLiC and the no warranty clause of the
+  MS-PL by the OSLiC section concerning the power of the MS-PL while the
+  trademark restrictions are explicitly added into the prohibition section.
+  \item \ldots to erase the hints to a voluntarily updated copyright dialog in
+  case of distributing a snimoli independently because the copyright dialog
+  normally is designed by the overarching work which uses the library, not by
+  the library itself.
+\end{itemize}
 
 
 %\bibliography{../../../bibfiles/oscResourcesEn}
