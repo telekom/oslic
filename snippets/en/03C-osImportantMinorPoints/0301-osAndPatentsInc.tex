@@ -34,17 +34,17 @@ respect to the license fulfilling tasks they require, also known as the
 At least the free software movement frowns on the existence of software
 patents\footnote{For an early and elaborated description on the effects of
 software patents based on the viewpoint of the free software movement
-\cite[see][\nopage wp]{Stallman2001a}. This lecture seems to be given more than
-onetime and seems also to have been printed lateron (\cite[cf.][\nopage
-wp]{Stallman2002a}). Within the first decade of 2000, the focus switched to a
-more political fight against software patents (\cite[cf.][\nopage
-wp]{Stallman2004a}). But recently there seemed to appear another turn in dealing
-with software patents: Not fighting against them, but mitigating their effects:
-The proposal is '[...] (to legislate) that developing, distributing, or running
-a program on generally used computing hardware does not constitute patent
-infringement' (\cite[cf.][\nopage wp]{Stallman2012a})}. One of the most known
-witnesses for that attitude is the GPL itself. Its preamble purports that
-\enquote{[\ldots] any free program is threatened constantly by software
+\cite[see][\nopage wp]{Stallman2001a}. This lecture seems to have been given
+more than once and printed later on (\cite[cf.][\nopage wp]{Stallman2002a}).
+Within the first decade of 2000, the focus switched to a more political fight
+against software patents (\cite[cf.][\nopage wp]{Stallman2004a}). But recently
+there seems to have been appeared another turn in dealing with software patents:
+Not fighting against the patents, but mitigating their effects: The proposal is
+'[...] (to legislate) that developing, distributing, or running a program on
+generally used computing hardware does not constitute patent infringement'
+(\cite[cf.][\nopage wp]{Stallman2012a})}. One of the most known witnesses for
+that attitude is the GPL itself. Its preamble purports that \enquote{[\ldots]
+any free program is threatened constantly by software
 patents}\footcite[cf.][wp]{Gpl20OsiLicense1991a}. One can read that the open
 source community fears three risks: First, they are apprehensive of people who
 hjack the idea of a piece of open source software they do not have developed,
@@ -112,12 +112,14 @@ and sometimes these methods are combined:
 Later on, we will summarize the concrete patent clauses of all the licenses
 discussed in the OSLiC as a proof for the following classification:
 
+% \begin{minipage}
+% \end{minipage}
+\begin{small}
 
 \begin{center}
-
 \begin{tikzpicture}
 \label{LICTAX}
-\small
+
 
 \node[ellipse,minimum height=8.5cm,minimum width=14cm,draw,fill=gray!10] (l0100) at (6.8,6.8)
 {  };
@@ -160,45 +162,46 @@ discussed in the OSLiC as a proof for the following classification:
               postaction={decorate}] (7.5,8.5) arc (120:60:4cm);
 
 
-\node[ellipse,minimum height=4.5cm,minimum width=6cm,draw,fill=gray!30] (l0220) at (10.4,6.5)
+\node[ellipse,minimum height=5cm,minimum width=8cm,draw,fill=gray!40] (l0220) at (9.2,6.2)
 {  };
-\node[ellipse,minimum height=4.5cm,minimum width=5cm,draw,fill=gray!30] (l0210) at (7.45,6.5)
+\node[ellipse,minimum height=4cm,minimum width=4.5cm,draw,fill=gray!30] (l0210) at (7.8,6.2)
 {  };
-\node[ellipse,minimum height=4.5cm,minimum width=6cm,draw] (l0220) at (10.4,6.5)
-{  };
+
 
 
 \draw [-,dotted,line width=0pt,white,
     decoration={text along path,
               text align={center},
-              text={|\itshape| granting}},
-              postaction={decorate}] (5.4,6.2) arc (180:0:2cm);
+              text={|\itshape| granting + revoking}},
+              postaction={decorate}] (4.7,4.7) arc (180:0:3cm);
 
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0211) at (6.7,7)
-{  \footnotesize \bfseries \textit{?}};
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0212) at (8.4,7)
+\node[ellipse,draw,text width=1cm, fill=gray!40, text centered] (l0211) at (6.7,6.5)
+{  \footnotesize \bfseries \textit{EpL}};
+\node[ellipse,draw,text width=1cm, fill=gray!40, text centered] (l0212) at (8.8,6.7)
 {  \footnotesize \bfseries \textit{ApL}};
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0213) at (6.7,5.5)
+\node[ellipse,draw,text width=1cm, fill=gray!40, text centered] (l0213) at (6.7,5.5)
 {  \footnotesize \bfseries \textit{?}};
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0214) at (8.2,5.5)
-{  \footnotesize \bfseries \textit{MS-PL}};
+\node[ellipse,draw,text width=1.1cm, fill=gray!40, text centered] (l0214) at (8.4,5)
+{  \scriptsize \bfseries \textit{MS-PL}};
 
  
 % line width=0pt,white,
 \draw [-,dotted,line width=0pt,white,
     decoration={text along path,
               text align={center},
-              text={|\itshape| revoking}},
-              postaction={decorate}] (10.4,7) arc (180:0:1cm);
+              text={|\itshape| granting}},
+              postaction={decorate}] (8.5,6) arc (180:0:2cm);
 
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0221) at (11.4,7)
+\node[ellipse,draw,text width=1cm, fill=gray!40, text centered] (l0221) at (11.4,7)
 {  \footnotesize \bfseries \textit{??}};
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0222) at (11.4,5.5)
-{  \footnotesize \bfseries \textit{?}};
-
+\node[ellipse,draw,text width=1cm, fill=gray!40, text centered] (l0222) at (11.4,5.5)
+{  \footnotesize \bfseries \textit{??}};
 
 \end{tikzpicture}
 \end{center}
+
+\end{small}
+
 
 But regardless of the final textual form a license is using to express its
 granting or revoking positions, in any case one has to consider some aspects: 
@@ -207,23 +210,31 @@ granting or revoking positions, in any case one has to consider some aspects:
   
   \item Overall, one has to keep in mind that of course no licensor, contributor
   and/or distributor can release the right to use any patents he does not own --
-  even not if he tries to release them by an open source patent clause.
-  Implictly touched patents of third parties not having contributed to the
-  development and/or participated in the distribution can never be implicitly
-  and automatically released on the base of such an (open source) patent clause:
-  no rights, no right to release\footnote{This is an important aspect which is
-  sometimes not considered by programmers. Inside of DTAG we had a fruitful
-  discussion evoked by Mr. Stephan Altmeyer who -- as patent lawyer -- patiently
-  explained this constraint to us.}. Hence: even for those open source licenses
-  which try to protect the users, finally the user itself must nevertheless
-  ensure that he does not violate the patents of third parties being unwillingly
-  touched by the way the code works\footnote{Sometimes, this problem of
-  willingly or unwillingly violated third party patents is seen as a weakness of
-  open source software. But that is not true. It is a weakness of every
-  software. Even a commercial licensor (developer) has only the right to license
-  the use of those patents he really owns or he has 'bought' for relicensing
-  them. Moreover, also commercial licensors can willingly or unwillingly violate
-  patents of other persons.}.
+  even not if he \emph{tries} to release them by an open source patent
+  clause\footnote{The EPL is one of the licenses which insists on this aspect:
+  It the second half of its patent clause, the EPL underlines that
+  \enquote{[\ldots] no assurances are provided by any Contributor that the
+  Program does not infringe the patent or other intellectual property rights of
+  any other entity}. Moreover, it explicitly adds that \enquote{[\ldots] if a
+  third party patent license is required to allow Recipient to distribute the
+  Program, it is Recipient's responsibility to acquire that license before
+  distributing the Program} (\cite[cf.][\nopage wp.
+  §2c]{Epl10OsiLicense2005a}).}. Implictly touched patents of third parties not
+  having contributed to the development and/or participated in the distribution
+  can never be implicitly and automatically released on the base of such an
+  (open source) patent clause: no rights, no right to release\footnote{This is
+  an important aspect which is sometimes not considered by programmers. Inside
+  of DTAG we had a fruitful discussion evoked by Mr. Stephan Altmeyer who -- as
+  patent lawyer -- patiently explained this constraint to us.}. Hence: even for
+  those open source licenses which try to protect the users, finally the user
+  itself must nevertheless ensure that he does not violate the patents of third
+  parties being unwillingly touched by the way the code
+  works\footnote{Sometimes, this problem of willingly or unwillingly violated
+  third party patents is seen as a weakness of open source software. But that is
+  not true. It is a weakness of every software. Even a commercial licensor
+  (developer) has only the right to license the use of those patents he really
+  owns or he has 'bought' for relicensing them. Moreover, also commercial
+  licensors can willingly or unwillingly violate patents of other persons.}.
   
   \item In the context of a granting license, one has also to consider that
   contributing to and distributing of a piece of software implictly evokes that
@@ -321,7 +332,39 @@ respect to the software -- install any litigation concerning an infringement of
 patents, then the rights granted to you are revoked.
 
 
-\subsection{EPL statements concerning patents [tbd]}
+\subsection{EPL statements concerning patents}\label{subsec:EpLPatentClause}
+
+The Eclipse Public License treats the patents being necessary to use the program
+in the same section and under the same headline \enquote{Grant of Rights} like
+all the other rights: First, the EPL clearly states that \enquote{[\ldots] each
+Contributor [\ldots] grants (the recipient) a non-exclusive, worldwide,
+royalty-free patent license under Licensed Patents to make, use, sell, offer to
+sell, import and otherwise transfer the Contribution of such Contributor, if
+any, in source code and object code form}\footcite[cf.][\nopage wp.
+§2.b]{Epl10OsiLicense2005a}. Then the EPL delimits the extend of this act of
+granting: Neither hardware patents of the contributors are covered by this
+releasing patent clause, nor patents that concern aspects out of the area of the
+initially intended software combination\footcite[cf.][\nopage wp.
+§2.b]{Epl10OsiLicense2005a}. Finally, the EPL hints to the general fact that
+3rd. party patents not belonging to the contributors can never be implicity be
+released by such a patent clause. Moreover, it alleges the example that
+\enquote{[\ldots] if a third party patent license is required to allow Recipient
+to distribute the Program, it is Recipient's responsibility to acquire that
+license before distributing the Program}\footcite[cf.][\nopage wp.
+§2.c]{Epl10OsiLicense2005a}.
+
+Like other open source licenses, also the EPL announces at its end that
+\enquote{if (a) Recipient institutes patent litigation against any entity
+[\ldots] alleging that the Program [\ldots] infringes such Recipient's
+patent(s), then such (granted) Recipient's rights [\ldots] shall terminate
+[\ldots]}\footcite[cf.][\nopage wp. §7]{Epl10OsiLicense2005a}.
+
+Thus, also the EpL is - as we are using to say in this chapter - a granting and
+a revoking license: At first you are granted to use all patents of all
+contributors which are necessary to use the software legally. But if you -- with
+respect to the software -- install any litigation concerning an infringement of
+patents, then the rights granted to you are revoked.
+
 
 \subsection{EUPL statements concerning patents [tbd]}
 
@@ -348,11 +391,7 @@ revoking license: At first you are granted to use all patents of all
 contributors which are necessary to use the software legally. But if you -- with
 respect to the software -- install any litigation concerning an infringement of
 patents, then the rights granted to you are revoked.
-  
-  
-\subsection{PGL statements concerning patents [tbd]}
 
-\subsection{PHP statements concerning patents [tbd]}
 
 
 
