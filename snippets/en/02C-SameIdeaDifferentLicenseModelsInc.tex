@@ -700,8 +700,9 @@ reference\footnote{$\rightarrow$ table \ref{tab:powerOfLicenses} on p.\
   \checkmark  & \checkmark  & \checkmark & \checkmark & $\neg$ &
    \checkmark  & \checkmark & \checkmark & \checkmark & $\neg$ \\
 \hline
-  EUPL & 1.1 & \checkmark & \checkmark & \checkmark &
-  -- & -- & -- & -- & -- & -- & -- & -- & -- & -- \\
+  EUPL & 1.1 & \checkmark  & \checkmark  & \checkmark  &
+  \checkmark  & \checkmark  & \checkmark & \checkmark & $\neg$ &
+   \checkmark  & \checkmark & \checkmark & \checkmark & $\neg$ \\
 \hline
   \multirow{2}{*}{LGPL} & 2.1 & \checkmark & \checkmark & \checkmark &
   -- & -- & -- & -- & -- & -- & -- & -- & -- & -- \\
@@ -709,11 +710,9 @@ reference\footnote{$\rightarrow$ table \ref{tab:powerOfLicenses} on p.\
    & 3.0 & \checkmark & \checkmark & \checkmark &
    -- & -- & -- & -- & -- & -- & -- & -- & -- & -- \\
 \hline
-  \multirow{2}{*}{MPL} & 1.1 & \checkmark & \checkmark & \checkmark &
-  -- & -- & -- & -- & -- & -- & -- & -- & -- & -- \\
-\cline{2-15}
-  & 2.0 & \checkmark & \checkmark & \checkmark &
-  -- & -- & -- & -- & -- & -- & -- & -- & -- & -- \\
+   MPL & 2.0 & \checkmark  & \checkmark  & \checkmark  &
+  \checkmark  & \checkmark  & \checkmark & \checkmark & $\neg$ &
+   \checkmark  & \checkmark & \checkmark & \checkmark & $\neg$ \\
 \hline
   \textit{MS-RL} & ~ & \checkmark & \checkmark & \checkmark &
   -- & -- & -- & -- & -- & -- & -- & -- & -- & -- \\
@@ -744,411 +743,478 @@ reference\footnote{$\rightarrow$ table \ref{tab:powerOfLicenses} on p.\
 
 \section{The protecting power of the Apache License (ApL)}
 \label{sec:ProtectPowerOfApL}
-\begin{itemize} 
-  \item As an approved \emph{open source license}\footcite[cf.][\nopage
-  wp]{OSI2012b}, the Apache License\footnote{The Apache License, version 2.0 is
-  maintained by the Apache Software Foundation (\cite[cf.][\nopage
-  wp]{AsfApacheLicense20a}).  Of course, also the OSI is hosting a duplicate
-  (\cite[cf.][\nopage wp]{Apl20OsiLicense2004a}). By having a look at the OSI
-  list, one can directly see that the OSI has only approved the Apache License,
-  version 2.0: earlier versions are not listed (\cite[cf.][\nopage
-  wp]{OSI2012b}). In the same spirit, also the Apache Software Foundation itself
-  classifies the releases 1.0 and 1.1 as \enquote{historic} (\cite[cf.][\nopage
-  wp]{AsfLicenses2013a}). Thus, in the proper meaning, it is correct to speak of
-  'the (one) Apache open source license' and to ignore the earlier versions 1.0
-  and 1.1 in a compendium dealing only with open source licenses. For those, who
-  have to fulfill these earlier Apache licenses it could perhaps be helpful to
-  read them as siblings of the BSD-2CL and BSD-3CL licenses.} protects the user
-  against the loss of the right to use, to modify and/or to distribute the
-  received copy of the source code or the binaries\footcite[cf.][\nopage wp
-  §2]{Apl20OsiLicense2004a}. Furthermore, based on its patent
-  clause\footnote{$\rightarrow$ OSLiC pp.\ \pageref{subsec:ApLPatentClause}},
-  the ApL protects the users against patent disputes\footcite[cf.][\nopage wp
-  §3]{Apl20OsiLicense2004a}. Because of this patent clause and of its
-  \enquote{disclaimer of warranty} together with its \enquote{limitation of
-  liability}, the Apache license also protects the contributors / distributors
-  against patents disputes and warranty claims\footcite[cf.][\nopage wp §3, §7,
-  §8]{Apl20OsiLicense2004a}. Finally, the ApL protects the distributed sources
-  themselves \emph{against} a change of the license which would \emph{reset} the
-  work \emph{as closed software}, because first, one \enquote{[\ldots] must give
-  any other recipients of the work or derivative works a copy of (the Apache)
-  license}, second, \enquote{in the source form of any derivative works that
-  (one) distributes}, one has \enquote{[\ldots] to retain [\ldots] all
-  copyright, patent, trademark, and attribution notices [\ldots]}, and third,
-  one must \enquote{[\ldots] include a readable copy [\ldots of the] NOTICE
-  file} being supplied by the original package one has
-  received\footcite[cf.][\nopage wp §4]{Apl20OsiLicense2004a}.
-  
-  \item But the Apache License does not protect the contributors against the
-  loss of feedback because it does not 'copyleft' the software: the Apache
-  license does not contain any sentence requiring that one has also to publish
-  the source code. In the same spirit, the ApL does not protect the
-  undistributed software or the distributed binaries against re-closings --
-  neither in unmodified nor in modified form -- because the Apache License
-  allows to (re)distribute the binaries without also supplying the sources --
-  even if the binaries rest upon sources modified by the distributor. Finally,
-  the ApL does not protect the on-top developments against a privatizing.
-\end{itemize}
+
+As an approved \emph{open source license}\footcite[cf.][\nopage wp]{OSI2012b},
+the Apache License\footnote{The Apache License, version 2.0 is maintained by the
+Apache Software Foundation (\cite[cf.][\nopage wp]{AsfApacheLicense20a}).  Of
+course, also the OSI is hosting a duplicate (\cite[cf.][\nopage
+wp]{Apl20OsiLicense2004a}) in its list of the officially approved open source
+licenses (\cite[cf.][\nopage wp]{OSI2012b}). The Apache license 1.1 is
+classified by the OSI as \enquote{superseded license}(\cite[cf.][\nopage
+wp]{OSI2013b}). In the same spirit, also the Apache Software Foundation itself
+classifies the releases 1.0 and 1.1 as \enquote{historic} (\cite[cf.][\nopage
+wp]{AsfLicenses2013a}). Thus, the OSLiC only focuses on the most recent APL-2.0
+version. For those, who have to fulfill these earlier Apache licenses it could
+be helpful to read them as siblings of the BSD-2CL and BSD-3CL licenses.}
+protects the user against the loss of the right to use, to modify and/or to
+distribute the received copy of the source code or the
+binaries\footcite[cf.][\nopage wp §2]{Apl20OsiLicense2004a}. Furthermore, based
+on its patent clause\footnote{$\rightarrow$ OSLiC pp.\
+\pageref{subsec:ApLPatentClause}}, the ApL protects the users against patent
+disputes\footcite[cf.][\nopage wp §3]{Apl20OsiLicense2004a}. Because of this
+patent clause and of its \enquote{disclaimer of warranty} together with its
+\enquote{limitation of liability}, the Apache license also protects the
+contributors / distributors against patents disputes and warranty
+claims\footcite[cf.][\nopage wp §3, §7, §8]{Apl20OsiLicense2004a}. Finally, the
+ApL protects the distributed sources themselves \emph{against} a change of the
+license which would \emph{reset} the work \emph{as closed software}, because
+first, one \enquote{[\ldots] must give any other recipients of the work or
+derivative works a copy of (the Apache) license}, second, \enquote{in the source
+form of any derivative works that (one) distributes}, one has \enquote{[\ldots]
+to retain [\ldots] all copyright, patent, trademark, and attribution notices
+[\ldots]}, and third, one must \enquote{[\ldots] include a readable copy [\ldots
+of the] NOTICE file} being supplied by the original package one has
+received\footcite[cf.][\nopage wp §4]{Apl20OsiLicense2004a}.
+
+But the Apache License does not protect the contributors against the loss of
+feedback because it does not 'copyleft' the software: the Apache license does
+not contain any sentence requiring that one has also to publish the source code.
+In the same spirit, the ApL does not protect the undistributed software or the
+distributed binaries against re-closings -- neither in unmodified nor in
+modified form -- because the Apache License allows to (re)distribute the
+binaries without also supplying the sources -- even if the binaries rest upon
+sources modified by the distributor. Finally, the ApL does not protect the
+on-top developments against a privatizing.
+
 
 \section{The protecting power of the BSD licenses}
-\begin{itemize}
-  \item As approved \emph{open source licenses}\footcite[cf.][\nopage
-  wp]{OSI2012b}, the BSD Licenses\footnote{BSD has to be resolved as
-  \emph{Berkely Software Distribution}. For details of the BSD license release
-  and namings \cite[cf.][\nopage wp.\ editorial]{BsdLicense3Clause}} protect the
-  user against the loss of the right to use, to modify and/or to distribute the
-  received copy of the source code or the binaries\footcite[cf.][\nopage wp
-  §1ff]{OSI2012a}. Additionally, they protect the contributors and/or
-  distributors against warranty claims of the software users, because these
-  licenses contain a 'No Warranty Clause'\footcite[one for all version
-  cf.][\nopage wp]{BsdLicense2Clause}. And finally they protect the distributed
-  sources against a change of the license which closes the sources, because each
-  modification and \enquote{redistributions of [the] source code must retain the
-  [\ldots] copyright notice, this list of conditions and the [\ldots]
-  disclaimer}\footcite[cf.][\nopage wp]{BsdLicense2Clause}: Therefore it is
-  incorrect to distribute a BSD licensed code under another license -- regardless,
-  whether it closes the sources or not\footnote{In common sense based discussions
-  you may have heard that BSD licenses allow to republish the work under
-  another, an own license. Taking the words of the BSD License seriously that is
-  not valid under all circumstances: Yes, it is true, you are not required to 
-  redistribute the sourcecode of a modified (derivative) work. You are allowed 
-  to modify a received version and to distribute the results only as binary code 
-  and to keep your improvements closed. But if you distribute the source code of 
-  your modifications, you have retain the licensing, because 
-  \enquote{Redistribution [\ldots] in source [\ldots], with or without 
-  modification, are permitted provided that [\ldots] (the) redistributions of 
-  source code [\ldots] retain the above copyright notice, this list of 
-  conditions and the following disclaimer} 
-  (\cite[cf.][\nopage wp]{BsdLicense2Clause})}.
-  
-  \item But the BSD Licenses protect neither the users nor the contributors
-  and/or distributors against patent disputes (because they do not contain any
-  patent clause). They do not protect the contributors against the loss of
-  feedback (because they do not 'copyleft' the software). Moreover, they do not
-  protect the undistributed software or the distributed binaries against
-  re-closings -- neither in unmodified nor in modified form -- because they
-  allow to redistribute only the binaries without also supplying the source
-  code\footnote{see both, the BSD-2CL License (\cite[cf.][\nopage
-  wp]{BsdLicense2Clause}), and the BSD-3CL License (\cite[cf.][\nopage
-  wp]{BsdLicense3Clause})}. Finally, the BSD licenses do not protect the on-top
-  developments against a privatizing.
-  
-\end{itemize}
+
+As approved \emph{open source licenses}\footcite[cf.][\nopage wp]{OSI2012b}, the
+BSD Licenses\footnote{BSD has to be resolved as \emph{Berkely Software
+Distribution}. For details of the BSD license release and namings
+\cite[cf.][\nopage wp.\ editorial]{BsdLicense3Clause}} protect the user against
+the loss of the right to use, to modify and/or to distribute the received copy
+of the source code or the binaries\footcite[cf.][\nopage wp §1ff]{OSI2012a}.
+Additionally, they protect the contributors and/or distributors against warranty
+claims of the software users, because these licenses contain a 'No Warranty
+Clause'\footcite[one for all version cf.][\nopage wp]{BsdLicense2Clause}. And
+finally they protect the distributed sources against a change of the license
+which closes the sources, because each modification and \enquote{redistributions
+of [the] source code must retain the [\ldots] copyright notice, this list of
+conditions and the [\ldots] disclaimer}\footcite[cf.][\nopage
+wp]{BsdLicense2Clause}: Therefore it is incorrect to distribute a BSD licensed
+code under another license -- regardless, whether it closes the sources or
+not\footnote{In common sense based discussions you may have heard that BSD
+licenses allow to republish the work under another, an own license. Taking the
+words of the BSD License seriously that is not valid under all circumstances:
+Yes, it is true, you are not required to redistribute the sourcecode of a
+modified (derivative) work. You are allowed to modify a received version and to
+distribute the results only as binary code and to keep your improvements closed.
+But if you distribute the source code of your modifications, you have retain the
+licensing, because \enquote{Redistribution [\ldots] in source [\ldots], with or
+without modification, are permitted provided that [\ldots] (the) redistributions
+of source code [\ldots] retain the above copyright notice, this list of
+conditions and the following disclaimer} (\cite[cf.][\nopage
+wp]{BsdLicense2Clause})}.
+
+But the BSD Licenses protect neither the users nor the contributors
+and/or distributors against patent disputes (because they do not contain any
+patent clause). They do not protect the contributors against the loss of
+feedback (because they do not 'copyleft' the software). Moreover, they do not
+protect the undistributed software or the distributed binaries against
+re-closings -- neither in unmodified nor in modified form -- because they
+allow to redistribute only the binaries without also supplying the source
+code\footnote{see both, the BSD-2CL License (\cite[cf.][\nopage
+wp]{BsdLicense2Clause}), and the BSD-3CL License (\cite[cf.][\nopage
+wp]{BsdLicense3Clause})}. Finally, the BSD licenses do not protect the on-top
+developments against a privatizing.
+
 
 \section{The protecting power of the Eclipse Public License (EPL)}
-\begin{itemize} 
-  \item As an approved \emph{open source license}\footcite[cf.][\nopage
-  wp]{OSI2012b}, the Eclipse Public License\footnote{ The Eclipse Public
-  License, version 1.0 is maintained by the Eclipse Software Foundation
-  (\cite[cf.][\nopage wp]{Epl10EclipseFoundation2005a}).  Of course, also the
-  OSI is hosting a duplicate (\cite[cf.][\nopage wp]{Epl10OsiLicense2005a}).}
-  protects the user against the loss of the right to use, to modify and/or to
-  distribute the received copy of the source code or the
-  binaries\footcite[cf.][\nopage wp §2a]{Epl10OsiLicense2005a}. Furthermore,
-  based on its patent clause\footnote{$\rightarrow$ OSLiC pp.\
-  \pageref{subsec:EpLPatentClause}}, the EPL protects the users also against
-  patent disputes\footcite[cf.][\nopage wp §2b \& §2c]{Epl10OsiLicense2005a}.
-  Besides this patent clause, the EPL contains the sections \enquote{no
-  warranty} and \enquote{disclaimer of liability}\footcite[cf.][\nopage wp §5
-  \& §6]{Epl10OsiLicense2005a}. These three elements together protect the
-  contributors / distributors against patents disputes and warranty claims.
-  Finally, the EPL protects the distributed sources themselves \emph{against} a
-  change of the license which would \emph{reset} the work \emph{as closed
-  software}: First, the Eclipse Public Licenses requires that if a work --
-  released under the EPL -- \enquote{[\ldots] is made available in source code
-  form [\ldots] (then) it must be made available under this (EPL) agreement,
-  too} while this act of 'making avalaible' \enquote{must} incorporate a
-  \enquote{copy} of the EPL into \enquote{each copy of the [distributed]
-  program} or program package\footcite[cf.][\nopage wp
-  §3]{Epl10OsiLicense2005a}. But in opposite to the permissive licenses, the EPL
-  does not only protect the distributed source code -- regardless whether it is
-  modified or not. The EPL also protects the distributed modified or unmodified
-  binaries: The EPL allows each modifying \enquote{contributor} and distributor
-  \enquote{[\ldots] to distribute the Program in object code form under (one's)
-  own license agreement [\ldots]} provided this license clearly states that the
-  \enquote{source code for the Program is available} and where the
-  \enquote{licensees} can \enquote{[\ldots] obtain it in a reasonable manner on
-  or through a medium customarily used for software
-  exchange}\footcite[cf.][\nopage wp. §3, esp. §3.b.iv]{Epl10OsiLicense2005a}.
-  Thus, one has to conclude that the EPL is a copyleft license.
-  
-  \item But the Eclipse Public License is not a license with strong copyleft;
-  the EPL uses 'only' a weak copyleft effect\footnote{Even if one can find
-  contrary specifications in the internet. \cite[Pars pro toto cf.][\nopage wp.
-  ]{ifross2011a}: This page is listing the EPL in the section \enquote{Other
-  Licenses with strong Copyleft Effect}}: Indeed, the EPL says that for each EPL
-  licensed \enquote{program} -- distributed in object form -- a place must be
-  made known where one can get the corresponding source
-  code\footcite[cf.][\nopage wp. §3, esp. §3.b.iv]{Epl10OsiLicense2005a}. The
-  term 'Program' is defined as any \enquote{Contribution distributed in
-  accordance with [\ldots] (the EPL)} while the term 'Contribution' refers -
-  besides other elements - to \enquote{changes to the Program, and additions to
-  the Program}\footcite[cf.][\nopage wp.
-  §1]{Epl10OsiLicense2005a}. Unfortunately, this is a circular definition:
-  'Program' is defined by 'Contribution'; and 'Contribution' is defined by
-  'Program'. Nevertheless, one has to read the license benevolently.
-  Uncontroversial should be this: If one distributes any modified EPL licensed
-  program, library, module, or plugin, then one has to publish the modified
-  source code, too. If one \enquote{adds} some own plugins or additional
-  libraries which are used by an EPL licensed program (which on behalf of this
-  use must have been modified by adding [sic!] procedure calls) then one has
-  publish the code of both parts: that of the program and that of the added
-  elements. In this sense, the EPL clearly protects the binaries against
-  re-closings like other weak copyleft using licenses. But if one distributes
-  only an EPL licensed library which is used as a component by another not EPL
-  licensed on-top program, then this library does not depend on the top
-  development -- provided that the library itself does not call any (program)
-  functions or procedures delivered by the overarching on-top development.
-  Hence, nothing is added to the library; and hence, no other code than that of
-  the library must be published. Therefore, the EPL does not use the strong
-  copyleft effect in the meaning of the GPL.
- 
-\end{itemize}
+\label{sec:ProtectingPowerOfEpl}
 
-\section{The protecting power of the European Public License (EUPL) [tbd]}
-\begin{itemize} 
-  
-  
-  
-  
-  \item The European Public License protects \ldots
-  \item But European Public License does not protect \ldots
-  
-  \item As an approved \emph{open source license}\footcite[cf.][\nopage
-  wp]{OSI2012b}, the European Public License\footnote{ The European Public
-  License, version 1.1 is maintained by the European Union and hosted under the
-  label \enquote{Joinup} (\cite[cf.][\nopage wp]{EuplLicense2007en}). This EUPL
-  has officially been translated into many languages, among others into German
-  (\cite[cf.][\nopage wp]{EuplLicense2007de}). Because of this multi lingual
-  instances, the OSI does not offer its own version, but just a landing page
-  linked to the European host \enquote{Joinup} 
-  
-  Eclipse Software Foundation
-  (\cite[cf.][\nopage wp]{Epl10EclipseFoundation2005a}).  Of course, also the
-  OSI is hosting a duplicate (\cite[cf.][\nopage wp]{Epl10OsiLicense2005a}).}
-  protects the user against the loss of the right to use, to modify and/or to
-  distribute the received copy of the source code or the
-  binaries\footcite[cf.][\nopage wp §2a]{Epl10OsiLicense2005a}. 
-  
-  
-  Furthermore,
-  based on its patent clause\footnote{$\rightarrow$ OSLiC pp.\
-  \pageref{subsec:EpLPatentClause}}, the EPL protects the users also against
-  patent disputes\footcite[cf.][\nopage wp §2b \& §2c]{Epl10OsiLicense2005a}.
-  Besides this patent clause, the EPL contains the sections \enquote{no
-  warranty} and \enquote{disclaimer of liability}\footcite[cf.][\nopage wp §5
-  \& §6]{Epl10OsiLicense2005a}. These three elements together protect the
-  contributors / distributors against patents disputes and warranty claims.
-  Finally, the EPL protects the distributed sources themselves \emph{against} a
-  change of the license which would \emph{reset} the work \emph{as closed
-  software}: First, the Eclipse Public Licenses requires that if a work --
-  released under the EPL -- \enquote{[\ldots] is made available in source code
-  form [\ldots] (then) it must be made available under this (EPL) agreement,
-  too} while this act of 'making avalaible' \enquote{must} incorporate a
-  \enquote{copy} of the EPL into \enquote{each copy of the [distributed]
-  program} or program package\footcite[cf.][\nopage wp
-  §3]{Epl10OsiLicense2005a}. But in opposite to the permissive licenses, the EPL
-  does not only protect the distributed source code -- regardless whether it is
-  modified or not. The EPL also protects the distributed modified or unmodified
-  binaries: The EPL allows each modifying \enquote{contributor} and distributor
-  \enquote{[\ldots] to distribute the Program in object code form under (one's)
-  own license agreement [\ldots]} provided this license clearly states that the
-  \enquote{source code for the Program is available} and where the
-  \enquote{licensees} can \enquote{[\ldots] obtain it in a reasonable manner on
-  or through a medium customarily used for software
-  exchange}\footcite[cf.][\nopage wp. §3, esp. §3.b.iv]{Epl10OsiLicense2005a}.
-  Thus, one has to conclude that the EPL is a copyleft license.
-  
-  \item But the Eclipse Public License is not a license with strong copyleft;
-  the EPL uses 'only' a weak copyleft effect\footnote{Even if one can find
-  contrary specifications in the internet. \cite[Pars pro toto cf.][\nopage wp.
-  ]{ifross2011a}: This page is listing the EPL in the section \enquote{Other
-  Licenses with strong Copyleft Effect}}: Indeed, the EPL says that for each EPL
-  licensed \enquote{program} -- distributed in object form -- a place must be
-  made known where one can get the corresponding source
-  code\footcite[cf.][\nopage wp. §3, esp. §3.b.iv]{Epl10OsiLicense2005a}. The
-  term 'Program' is defined as any \enquote{Contribution distributed in
-  accordance with [\ldots] (the EPL)} while the term 'Contribution' refers -
-  besides other elements - to \enquote{changes to the Program, and additions to
-  the Program}\footcite[cf.][\nopage wp.
-  §1]{Epl10OsiLicense2005a}. Unfortunately, this is a circular definition:
-  'Program' is defined by 'Contribution'; and 'Contribution' is defined by
-  'Program'. Nevertheless, one has to read the license benevolently.
-  Uncontroversial should be this: If one distributes any modified EPL licensed
-  program, library, module, or plugin, then one has to publish the modified
-  source code, too. If one \enquote{adds} some own plugins or additional
-  libraries which are used by an EPL licensed program (which on behalf of this
-  use must have been modified by adding [sic!] procedure calls) then one has
-  publish the code of both parts: that of the program and that of the added
-  elements. In this sense, the EPL clearly protects the binaries against
-  re-closings like other weak copyleft using licenses. But if one distributes
-  only an EPL licensed library which is used as a component by another not EPL
-  licensed on-top program, then this library does not depend on the top
-  development -- provided that the library itself does not call any (program)
-  functions or procedures delivered by the overarching on-top development.
-  Hence, nothing is added to the library; and hence, no other code than that of
-  the library must be published. Therefore, the EPL does not use the strong
-  copyleft effect in the meaning of the GPL.
-\end{itemize}
+As an approved \emph{open source license}\footcite[cf.][\nopage wp]{OSI2012b},
+the Eclipse Public License\footnote{ The Eclipse Public License, version 1.0 is
+maintained by the Eclipse Software Foundation (\cite[cf.][\nopage
+wp]{Epl10EclipseFoundation2005a}).  Of course, also the OSI is hosting a
+duplicate (\cite[cf.][\nopage wp]{Epl10OsiLicense2005a}).} protects the user
+against the loss of the right to use, to modify and/or to distribute the
+received copy of the source code or the binaries\footcite[cf.][\nopage wp
+§2a]{Epl10OsiLicense2005a}. Furthermore, based on its patent
+clause\footnote{$\rightarrow$ OSLiC pp.\ \pageref{subsec:EpLPatentClause}}, the
+EPL protects the users also against patent disputes\footcite[cf.][\nopage wp §2b
+\& §2c]{Epl10OsiLicense2005a}. Besides this patent clause, the EPL contains the
+sections \enquote{no warranty} and \enquote{disclaimer of
+liability}\footcite[cf.][\nopage wp §5 \& §6]{Epl10OsiLicense2005a}. These three
+elements together protect the contributors / distributors against patents
+disputes and warranty claims. Finally, the EPL protects the distributed sources
+themselves \emph{against} a change of the license which would \emph{reset} the
+work \emph{as closed software}: First, the Eclipse Public Licenses requires that
+if a work -- released under the EPL -- \enquote{[\ldots] is made available in
+source code form [\ldots] (then) it must be made available under this (EPL)
+agreement, too} while this act of 'making avalaible' \enquote{must} incorporate
+a \enquote{copy} of the EPL into \enquote{each copy of the [distributed]
+program} or program package\footcite[cf.][\nopage wp §3]{Epl10OsiLicense2005a}.
+But in opposite to the permissive licenses, the EPL does not only protect the
+distributed source code -- regardless whether it is modified or not. The EPL
+also protects the distributed modified or unmodified binaries: The EPL allows
+each modifying \enquote{contributor} and distributor \enquote{[\ldots] to
+distribute the Program in object code form under (one's) own license agreement
+[\ldots]} provided this license clearly states that the \enquote{source code for
+the Program is available} and where the \enquote{licensees} can
+\enquote{[\ldots] obtain it in a reasonable manner on or through a medium
+customarily used for software exchange}\footcite[cf.][\nopage wp. §3, esp.
+§3.b.iv]{Epl10OsiLicense2005a}. Thus, one has to conclude that the EPL is a
+copyleft license.
+
+But the Eclipse Public License is not a license with strong copyleft; the EPL
+uses 'only' a weak copyleft effect\footnote{Even if one can find contrary
+specifications in the internet. \cite[Pars pro toto cf.][\nopage wp.
+]{ifross2011a}: This page is listing the EPL in the section \enquote{Other
+Licenses with strong Copyleft Effect}}: Indeed, the EPL says that for each EPL
+licensed \enquote{program} -- distributed in object form -- a place must be made
+known where one can get the corresponding source code\footcite[cf.][\nopage wp.
+§3, esp. §3.b.iv]{Epl10OsiLicense2005a}. The term 'Program' is defined as any
+\enquote{Contribution distributed in accordance with [\ldots] (the EPL)} while
+the term 'Contribution' refers - besides other elements - to \enquote{changes to
+the Program, and additions to the Program}\footcite[cf.][\nopage wp.
+§1]{Epl10OsiLicense2005a}. Unfortunately, this is a circular definition:
+'Program' is defined by 'Contribution'; and 'Contribution' is defined by
+'Program'. Nevertheless, one has to read the license benevolently.
+Uncontroversial should be this: If one distributes any modified EPL licensed
+program, library, module, or plugin, then one has to publish the modified source
+code, too. If one \enquote{adds} some own plugins or additional libraries which
+are used by an EPL licensed program (which on behalf of this use must have been
+modified by adding [sic!] procedure calls) then one has publish the code of both
+parts: that of the program and that of the added elements. In this sense, the
+EPL clearly protects the binaries against re-closings like other weak copyleft
+using licenses. But if one distributes only an EPL licensed library which is
+used as a component by another not EPL licensed on-top program, then this
+library does not depend on the top development -- provided that the library
+itself does not call any (program) functions or procedures delivered by the
+overarching on-top development. Hence, nothing is added to the library; and
+hence, no other code than that of the library must be published. Therefore, the
+EPL does not use the strong copyleft effect in the meaning of the GPL.
+ 
+\section{The protecting power of the European Union Public License (EUPL)}
+
+As an approved \emph{open source license}\footcite[cf.][\nopage wp]{OSI2012b},
+the European Union Public License\footnote{ The European Union Public License,
+version 1.1 is maintained by the European Union and hosted under the label
+\enquote{Joinup} (\cite[cf.][\nopage wp]{EuplLicense2007en}).
+This EUPL has officially been translated into many languages, among others into
+German (\cite[cf.][\nopage wp]{EuplLicense2007de}). Because of this multi
+lingual instances, the OSI does not offer its own version, but just a landing
+page linked to the lading page of the European host \enquote{Joinup}
+(\cite[cf.][\nopage wp]{Eupl11OsiLicense2007a}).} protects the user against the
+loss of the right to use, to modify and/or to distribute the received copy of
+the source code or the binaries\footcite[cf.][\nopage wp.\
+§2]{EuplLicense2007de}. Furthermore, based on its patent
+clause\footnote{$\rightarrow$ OSLiC pp.\ \pageref{subsec:EupLPatentClause}}, the
+EUPL protects the users against patent disputes\footcite[cf.][\nopage wp.\ §2,
+at its tail]{EuplLicense2007en}. Besides this patent clause, the EUPL
+additionally contains a \enquote{Disclaimer of Warranty} and a
+\enquote{Disclaimer of Liability}\footcite[cf.][\nopage wp.\ §7 \&
+§8]{EuplLicense2007en}. These three elements together protect the contributors /
+distributors against patents disputes and warranty claims. Finally, the EUPL
+also protects the distributed sources against a re-closing / re-privatizizing
+and the contributors against the loss of feedback. This protection is based on
+two steps: First, the Europrean Public License contains a particular paragraph
+titled \enquote{Copyleft clause} which stipulates that \enquote{copies of the
+Original Work or Derivative Works based upon the Original Work} must be
+distributed \enquote{under the terms of (the European Union Public)
+License}\footcite[cf.][\nopage wp.\ §5]{EuplLicense2007en}. Second, the EUPL
+requires that each licensee -- as long as he \enquote{[\ldots] continues to
+distribute and/or communicate the Work} -- has also to \enquote{[\ldots] provide
+[\ldots] the Source Code}, either directly or by \enquote{[\ldots] (indicating)
+a repository where this Source will be easily and freely available
+[\ldots]}\footcite[cf.][\nopage wp.\ §5]{EuplLicense2007en}. This condition
+ssems to be so important for the EUPL that the license repeats its message: in
+another paragraph the EUPL requires again that \enquote{if the Work is provided
+as Executable Code, the Licensor provides in addition a machine-readable copy of
+the Source Code of the Work along with each copy of the Work [\ldots] or
+indicates, in a notice [\ldots], a repository where the Source Code is easily
+and freely accessible for as long as the Licensor continues to distribute
+[\ldots] the Work}\footcite[cf.][\nopage wp.\ §3]{EuplLicense2007en}. Based on
+the meaning of \enquote{Work} which is defined by the EUPL as \enquote{the
+Original Work and/or its Derivative Works}\footcite[cf.][\nopage wp.\
+§1]{EuplLicense2007en} it must be concluded that the EUPL is a copyleft license.
+
+But nevertheless, the European Union Public License is not a license with strong
+copyleft: On the one hand, if one takes the core of the EUPL then the license
+seems to protect not only the modifications of the original work against
+re-closings and (re-)privatizings, but also the on-top developments because
+normally you have to publish the source code in both cases. Understood in this
+way, the EUPL would be a 'strong copyleft license'. But on the other hand, the
+EUPL additionally contains a \enquote{Compatibility clause} stating that
+\enquote{if the Licensee Distributes [\ldots] Derivative Works or copies thereof
+based upon both the Original Work and another work licensed under a Compatible
+Licence, this Distribution [\ldots] can be done under the terms of this
+Compatible Licence}\footcite[cf.][\nopage wp.\ §5]{EuplLicense2007en} -- while
+the term \enquote{Compatible Licence} is explicitly defined by a list of
+compatible licenses, for example the Eclipse Public
+License\footcite[cf.][\nopage wp.\ Appendix]{EuplLicense2007en}. Based on this
+compatibility clause the obligation to publish the code of an on-top development
+can be subverted: As first step, you could release a little more or less futile
+on-top application licensed under the Eclipse Public License\footnote{Taking the
+license text very seriously, it is not even necessary that this other work is an
+on-top application which depends on the EUPL library because it calls functions
+of EUPL library  -- what would enforce the on-top application to be a derivative
+work. The license text says that \enquote{another work licensed under a
+Compatible Licence} can be distributed together with \enquote{derivative works}.
+So, the wording of the licenses itself is establishing a contrast between the
+derivative work and the other work - what indicates that the other work has not
+necessarily to be a derivative work.} which uses a library licensed under the
+EUPL. As second step, you add the library as originaly work which you now may
+also distribute under the EPL instead of retaining the EUPL licensing. So,
+finally you obtain the same work under the Eclipse Public License which is a
+weak copyleft license\footnote{$\rightarrow$ OSLiC, p.\
+\pageref{sec:ProtectingPowerOfEpl}}. Hence the protection of the EUPL-1.1 is not
+as comprehensive as one might assume on the base of the license text
+itself\footnote{This kind of specifiying the protective power of the EUPL is
+initially be presented by the FSF (\cite[cf.][wp.\ section 'European Union
+Public License']{FsfEuplStatement2013a}). The EU answers that publishing such a
+trick will comprise its user in the eyes of the open source community
+(\cite[cf.][wp.]{FsfEuplRecomment2013}. That is undoubtely true. But
+unfortunately, this argument does not close the hole in the protecting shield
+put up by the EUPL}, it can at most be a weak copyleft license -- even if the
+reade might get the impression that the authors of the EUPL wished to write a
+strong copyleft license: the EUPL license does not protect the on-top
+developments against a privatizing.
+
 
 \section{The protecting power of the Gnu Public License (GPL) [tbd]}
-\begin{itemize} 
-  \item The Gnu Public License protects \ldots
-  \item But the Gnu Public License does not protect \ldots
-\end{itemize}
+
+The Gnu Public License protects \ldots
+ 
+But the Gnu Public License does not protect \ldots
+
 
 \section{The protecting power of the Lesser Gnu Public License (LGPL) [tbd]}
-\begin{itemize} 
-  \item The Lesser Gnu Public License  protects \ldots
-  \item But the Lesser Gnu Public License  does not protect \ldots
-\end{itemize}
+
+The Lesser Gnu Public License  protects \ldots
+
+But the Lesser Gnu Public License  does not protect \ldots
+
 
 \section{The protecting power of the MIT license}
-\begin{itemize}
-  \item As an approved \emph{open source license}\footcite[cf.][\nopage
-  wp]{OSI2012b}, the MIT License\footcite[MIT has to be resolved as
-  \enquote{Massachusetts Institute of Technology} 
-  (cf.][\nopage wp).]{wpMitLic2011a} protects the user against the loss of the
-  right to use, to modify and/or to distribute the received copy of the source
-  code or the binaries\footcite[cf.][\nopage wp 1ff]{OSI2012a}. Additionally, it
-  protects the contributors and/or distributors against warranty claims of the
-  software users, because it contains a 'No Warranty
-  Clause'\footcite[cf.][\nopage wp]{MitLicense2012a}. And finally it protects
-  the distributed sources against a change of the license which would close the
-  sources, because the \enquote{permission [\ldots] to use, copy, modify,
-  [\ldots] distribute, [\ldots] (is granted) subject to the [\ldots] conditions,
-  [that] the [\ldots] copyright notice and this permission notice shall be
-  included in all copies or substantial portions of the
-  Software}\footnote{\cite[cf.][\nopage wp]{MitLicense2012a}. The argumentation
-  why the source code is protected, but not the binary form follows that of the
-  BSD licenses: By these requirements, one is not obliged to redistribute the
-  sourcecode of a modified (derivative) work. One is allowed to modify a
-  received version and to distribute the results only in binary form and to keep
-  one's improvements closed. But if one distribute the source code of the
-  modifications, the licensing is retained, simply because the MIT
-  \enquote{[\ldots] permission note shall be included in all copies or
-  substantial portions of the software}.}
- 
-  \item But the MIT License does not protect the users or the contributors
-  and/or distributors against patent disputes (because it does not contain any
-  patent clause). Additionally, it does not protect the contributors against the
-  loss of feedback (because it does not 'copyleft' the software). Moreover, the
-  MIT license does not protect the undistributed software or the distributed
-  binaries against re-closings -- neither in unmodified nor in modified form --
-  because it allows to redistribute only the binaries without also supplying the
-  source code\footcite[cf.][\nopage wp]{MitLicense2012a}. Finally, the MIT
-  license does not protect the on-top developments against a privatizing.
-  
-\end{itemize}
 
-\section{The protecting power of the Mozilla Public License (MPl) [tbd]}
-\begin{itemize} 
-  \item The Mozilla Public License protects \ldots
-  \item But the Mozilla Public License does not protect \ldots
-\end{itemize}
+As an approved \emph{open source license}\footcite[cf.][\nopage wp]{OSI2012b},
+the MIT License\footcite[MIT has to be resolved as \enquote{Massachusetts
+Institute of Technology} (cf.][\nopage wp.)]{wpMitLic2011a} protects the user
+against the loss of the right to use, to modify and/or to distribute the
+received copy of the source code or the binaries\footcite[cf.][\nopage wp
+1ff]{OSI2012a}. Additionally, it protects the contributors and/or distributors
+against warranty claims of the software users, because it contains a 'No
+Warranty Clause'\footcite[cf.][\nopage wp]{MitLicense2012a}. And finally it
+protects the distributed sources against a change of the license which would
+close the sources, because the \enquote{permission [\ldots] to use, copy,
+modify, [\ldots] distribute, [\ldots] (is granted) subject to the [\ldots]
+conditions, [that] the [\ldots] copyright notice and this permission notice
+shall be included in all copies or substantial portions of the
+Software}\footnote{\cite[cf.][\nopage wp]{MitLicense2012a}. The argumentation
+why the source code is protected, but not the binary form follows that of the
+BSD licenses: By these requirements, one is not obliged to redistribute the
+sourcecode of a modified (derivative) work. One is allowed to modify a received
+version and to distribute the results only in binary form and to keep one's
+improvements closed. But if one distribute the source code of the modifications,
+the licensing is retained, simply because the MIT \enquote{[\ldots] permission
+note shall be included in all copies or substantial portions of the software}.}
+
+But the MIT License does not protect the users or the contributors and/or
+distributors against patent disputes (because it does not contain any patent
+clause). Additionally, it does not protect the contributors against the loss of
+feedback (because it does not 'copyleft' the software). Moreover, the MIT
+license does not protect the undistributed software or the distributed binaries
+against re-closings -- neither in unmodified nor in modified form -- because it
+allows to redistribute only the binaries without also supplying the source
+code\footcite[cf.][\nopage wp]{MitLicense2012a}. Finally, the MIT license does
+not protect the on-top developments against a privatizing.
+
+
+
+\section{The protecting power of the Mozilla Public License (MPl)}
+ 
+As an approved \emph{open source license}\footcite[cf.][\nopage wp]{OSI2012b},
+the Mozilla Public License\footnote{In 2012 the Mozilla Public License 2.0
+(\cite[cf.][\nopage wp.]{Mpl20MozFoundation2012a}) has been released as a result
+of a longer \enquote{Revision Process}(\cite[cf.][\nopage
+wp.]{Mpl11To20MozFoundation2013a}) by which the  Mozilla Public License 1.1
+(\cite[cf.][\nopage wp.]{Mpl11MozFoundation2013a}) has been ousted. The OSI is
+also hosting its version of the MPL-2.0 (\cite[cf.][\nopage
+wp.]{Mpl20OsiLicense2013a}) and is listing it as an OSI approved license
+(\cite[cf.][\nopage wp.]{OSI2012b}) while it classifies the MPL-1.1 as a
+\enquote{superseded license}(\cite[cf.][\nopage wp.]{OSI2013b}). The Mozilla
+Foundation itself says with respect to the difference between the two licenses,
+that \enquote{the most important part of the license - the file-level copyleft -
+is essentially the same in MPL 2.0 and MPL 1.1} (\cite[cf.][\nopage
+wp.]{Mpl11To20MozFoundation2013a}). While reading the MPL-1.1 one could get the
+impression that if one fulfills all conditions of the MPL-2.0, then one also
+acts in accordance to the MPL-1.1. Thus, for the moment the OSLiC focuses on the
+MPL-2.0.} protects the user against the loss of the right to use, to modify
+and/or to distribute the received copy of the source code or the
+binaries\footcite[cf.][\nopage wp.\ §2.1.a]{Mpl20OsiLicense2013a}. Furthermore,
+based on its split and distributed patent clause\footnote{$\rightarrow$ OSLiC
+pp.\ \pageref{subsec:MplPatentClause}}, the MPL-2.0 protects the users against
+patent disputes\footcite[cf.][\nopage wp.\ §2.1.b, §2.3,
+§5.2]{Mpl20OsiLicense2013a}. Besides this patent sections, the MPL.2.0
+additionally contains a \enquote{Disclaimer of Warranty} and a
+\enquote{Limitation of Liability}\footcite[cf.][\nopage wp.\ §6 \&
+§7]{Mpl20OsiLicense2013a}. These three elements together protect the
+contributors / distributors against patents disputes and warranty claims.
+Finally, the MPL-2.0 also protects the distributed sources against a re-closing
+/ re-privatizizing and the contributors against the loss of feedback: The
+MPL-2.0 clearly says that -- on the one hand -- \enquote{all distribution of
+Covered Software in Source Code Form, including any Modifications[\ldots] must
+be under the terms of this License}\footcite[cf.][\nopage wp.\
+§3.1]{Mpl20OsiLicense2013a} and that -- on the other hand -- an MPL licensed
+software \enquote{[\ldots] (distributed) in Executable Form [\ldots] must also
+be made available in Source Code Form [\ldots]}\footcite[cf.][\nopage wp.\
+§3.2]{Mpl20OsiLicense2013a}. So, it must be concluded that the MPL is a copyleft
+license.
+
+But nevertheless, the Mozilla Public License is not a license with strong
+copyleft. It does not protect the on-top developments against a privatizing: At
+first, the MPL does not use the term \emph{derivative work}\footnote{
+\cite[cf.][\nopage wp]{Mpl20OsiLicense2013a}. The MPL-1.1 uses the term
+\emph{derivative work} only in the context of writing new \enquote{versions of
+the license}, not in the context of licensing software (\cite[cf.][\nopage wp.
+§6.3]{Mpl11MozFoundation2013a}).}. Instead of this, the MPL denotes the
+\enquote{[\ldots] (initial) Source Code Form [\ldots] and Modifications of such
+Source Code Form} by the label \enquote{Covered Software}\footcite[cf.][\nopage
+wp.\ §1.4]{Mpl20OsiLicense2013a} -- while the term \enquote{Modifications}
+refers to \enquote{any file in Source Code Form that results from an addition
+to, deletion from, or modification of the contents of Covered Software or any
+file in Source Code Form that results from an addition to, deletion from, or
+modification of the contents of Covered Software}\footnote{\cite[cf.][\nopage
+wp.\ §1.10]{Mpl20OsiLicense2013a}. The Mozilla Foundation itself denotes this
+definition by the term \enquote{file-level copyleft} (\cite[cf.][\nopage
+wp]{Mpl11To20MozFoundation2013a}).}. Second, the MPL contrasts the source code
+form and its modifications with the \enquote{Larger Work} by specifying that the
+larger work is \enquote{[\ldots] material, in a seperate file or files, that is
+not covered software}\footcite[cf.][\nopage wp.\ §1.7]{Mpl20OsiLicense2013a}.
+Finally, the MPL-2.0 states, that \enquote{you may create and distribute a
+Larger Work under terms of Your choice, provided that You also comply with the
+requirements of this License for the Covered Software}\footcite[cf.][\nopage
+wp.\ §3.3]{Mpl20OsiLicense2013a}. Based on these specifications, it must be
+concluded that an on-top development which depends on MPL licensed libraries
+because they calling some of its functions, can be taken as a larger work whose
+code needs not to be puglished -- provided, that the library and the on-top
+development are distributed as different files\footnote{It might be discussed
+whether integrating a declaration of a function, class, or method into the
+on-top development by including the corresponding header files indeed means that
+one is \enquote{including portions (of the Source Code Form)} into a file which
+therefore has to be taken as \enquote{Modification} (\cite[cf.][\nopage wp.
+§1.4]{Mpl11MozFoundation2013a}). From the viewpoint of a benevolent developer it
+should be difficult to argue that the including of declaring (header) files
+alone can evoke a derivative work. It is the call of the function in one's code
+which establishes the dependency. But that is not the point, the MPL focuses.
+The MPL aims on the textual reuse of (defining) code snippets.
+Hence, one could ignore the textual integration of parts of the declaring header
+files: it should not trigger that one's own work becomes a modification in the
+eyes of the Mozilla Findation. But of course, one would circumvent the idea of
+the MPL if one hides defining code in header files and reuses that code by one's
+own compilation. This would undoubtably be an incorporation of portions and
+therefore would make the incorporating file becoming a modification of the MPL
+licensed initial work. }. Hence, the MPL is license with a weak copyleft effect
+and does not protect the on-top developments against a privatizing.
 
 \section{The protecting power of the Microsoft Public License (MS-PL)}
-\begin{itemize} 
-  
-  \item As an approved \emph{open source license}\footcite[cf.][\nopage
-  wp]{OSI2012b}, the Microsoft Public License protects the user against the loss
-  of the right to use, to modify and/or to distribute the received copy of the
-  source code or the binaries\footcite[cf.][\nopage wp.
-  §2]{MsplOsiLicense2013a}. Furthermore, based on its patent
-  clause\footnote{$\rightarrow$ OSLiC pp.\ \pageref{subsec:MsplPatentClause}},
-  the MS-PL protects the users against patent disputes\footcite[cf.][\nopage wp.
-  §2.B and §3.B]{MsplOsiLicense2013a}. Because of this patent clause and of its
-  concise \emph{disclaimer of warranty}, the MS-PL also protects the
-  contributors / distributors against patents disputes and warranty
-  claims\footcite[cf.][\nopage wp. §2B, §3B, §3D]{MsplOsiLicense2013a}.
-  Finally, the Microsoft Public License protects the distributed sources
-  themselves - and even \enquote{portions of these sources} -- \emph{against} a
-  change of the license which would \emph{reset} the work \emph{as closed
-  software}, because first, one \enquote{[\ldots] must retain all copyright,
-  patent, trademark, and attribution notices that are present in the
-  software}\footcite[cf.][\nopage wp. §3C]{MsplOsiLicense2013a}, and because
-  second, one must also incorporate \enquote{a complete copy of this
-  license} into one's own distribution premised one distributes the source
-  code\footcite[cf.][\nopage wp. §3D]{MsplOsiLicense2013a}.
-  
 
-  \item But the Microsoft Public License does not protect the contributors
-  against the loss of feedback because it does not 'copyleft' the software: The
-  license does not contain any sentence which requires that one has to publish
-  the sources, too\footnote{There seems to be some misunderstandings on the
-  internet: The English wikipedia specifies the MS-PL as a permissive license
-  and the MS-RL as a license with copyleft effect (\cite[cf.][\nopage
-  wp.]{wpMsSharedSources2013a}). The German wikipedia says that the MS-PL is a
-  license with a \enquote{schwachen [weak] copyleft} (\cite[cf.][\nopage
-  wp.]{wpMspl2013a}). And it says also that the \enquote{Microsoft Reciprocal
-  License} (MS-RL) is a license with weak copyleft, too (\cite[cf.][\nopage
-  wp.]{wpMsrl2013a}). But for the very thoroughly working \enquote{ifross
-  license center}, the MS-RL is a license with restricted (weak) copyleft, while
-  the MS-PL is a permissive license with some selectable options
-  (\cite[cf.][\nopage wp.]{ifross2011a}). Based on the license text itself and
-  these other readings, we decided to take the MS-PL as a permissive license in
-  accordance to the English wikipedia page and the ifross page.}. In the same
-  spirit, the MS-PL does not protect the undistributed software or the
-  distributed binaries against re-closings -- neither in unmodified nor in
-  modified form -- because the MS-PL License allows to (re)distribute the
-  binaries without also supplying the sources -- even if the binaries rest upon
-  sources modified by the distributor. Finally, also the MS-PL does not protect
-  the on-top developments against a privatizing.
-  
-\end{itemize}
+As an approved \emph{open source license}\footcite[cf.][\nopage wp]{OSI2012b},
+the Microsoft Public License protects the user against the loss of the right to
+use, to modify and/or to distribute the received copy of the source code or the
+binaries\footcite[cf.][\nopage wp.
+§2]{MsplOsiLicense2013a}. Furthermore, based on its patent
+clause\footnote{$\rightarrow$ OSLiC pp.\ \pageref{subsec:MsplPatentClause}}, the
+MS-PL protects the users against patent disputes\footcite[cf.][\nopage wp.
+§2.B and §3.B]{MsplOsiLicense2013a}. Because of this patent clause and of its
+concise \emph{disclaimer of warranty}, the MS-PL also protects the contributors
+/ distributors against patents disputes and warranty
+claims\footcite[cf.][\nopage wp. §2B, §3B, §3D]{MsplOsiLicense2013a}.
+Finally, the Microsoft Public License protects the distributed sources
+themselves - and even \enquote{portions of these sources} -- \emph{against} a
+change of the license which would \emph{reset} the work \emph{as closed
+software}, because first, one \enquote{[\ldots] must retain all copyright,
+patent, trademark, and attribution notices that are present in the
+software}\footcite[cf.][\nopage wp. §3C]{MsplOsiLicense2013a}, and because
+second, one must also incorporate \enquote{a complete copy of this license} into
+one's own distribution premised one distributes the source
+code\footcite[cf.][\nopage wp. §3D]{MsplOsiLicense2013a}.
+
+But the Microsoft Public License does not protect the contributors against the
+loss of feedback because it does not 'copyleft' the software: The license does
+not contain any sentence which requires that one has to publish the sources,
+too\footnote{There seems to be some misunderstandings on the internet: The
+English wikipedia specifies the MS-PL as a permissive license and the MS-RL as a
+license with copyleft effect (\cite[cf.][\nopage wp.]{wpMsSharedSources2013a}).
+The German wikipedia says that the MS-PL is a license with a \enquote{schwachen
+[weak] copyleft} (\cite[cf.][\nopage wp.]{wpMspl2013a}). And it says also that
+the \enquote{Microsoft Reciprocal License} (MS-RL) is a license with weak
+copyleft, too (\cite[cf.][\nopage wp.]{wpMsrl2013a}). But for the very
+thoroughly working \enquote{ifross license center}, the MS-RL is a license with
+restricted (weak) copyleft, while the MS-PL is a permissive license with some
+selectable options (\cite[cf.][\nopage wp.]{ifross2011a}). Based on the license
+text itself and these other readings, we decided to take the MS-PL as a
+permissive license in accordance to the English wikipedia page and the ifross
+page.}. In the same spirit, the MS-PL does not protect the undistributed
+software or the distributed binaries against re-closings -- neither in
+unmodified nor in modified form -- because the MS-PL License allows to
+(re)distribute the binaries without also supplying the sources -- even if the
+binaries rest upon sources modified by the distributor. Finally, also the MS-PL
+does not protect the on-top developments against a privatizing.
+
 
 \section{The protecting power of the Postgres License (PgL)}
-\begin{itemize} 
-  \item As an approved \emph{open source license}\footcite[cf.][\nopage
-  wp]{OSI2012b}, the PostgreSQL License protects the user against the loss of
-  the right to use, to modify and/or to distribute the received copy of the
-  source code or the binaries\footcite[cf.][\nopage wp.]{PglOsiLicense2013a}.
-  Because of its \emph{disclaimer of warranty}, the PgL also protects the
-  contributors / distributors against warranty claims\footcite[cf.][\nopage
-  wp.]{PglOsiLicense2013a}. Finally, the PgL protects the distributed
-  sources themselves \emph{against} a change of the license which would
-  \emph{reset} the work \emph{as closed software}, because the
-  \enquote{copyright notice} and the whole license must \enquote{[\ldots] appear
-  in all copies}\footcite[cf.][\nopage wp.]{PglOsiLicense2013a}.
-  
-  \item But the PostgreSQL License does not protect the contributors against the
-  loss of feedback because it does not 'copyleft' the software: The license does
-  not contain any sentence which requires that one has to publish the sources,
-  too.  In the same spirit, the PgL does not protect the undistributed software
-  or the distributed binaries against re-closings -- neither in unmodified nor
-  in modified form -- because the PgL allows to (re)distribute the binaries
-  without also supplying the sources -- even if the binaries rest upon sources
-  modified by the distributor. Finally, the PgL does not protect the on-top
-  developments against a privatizing.
-\end{itemize}
+
+As an approved \emph{open source license}\footcite[cf.][\nopage wp]{OSI2012b},
+the PostgreSQL License protects the user against the loss of the right to use,
+to modify and/or to distribute the received copy of the source code or the
+binaries\footcite[cf.][\nopage wp.]{PglOsiLicense2013a}.
+Because of its \emph{disclaimer of warranty}, the PgL also protects the
+contributors / distributors against warranty claims\footcite[cf.][\nopage
+wp.]{PglOsiLicense2013a}. Finally, the PgL protects the distributed sources
+themselves \emph{against} a change of the license which would \emph{reset} the
+work \emph{as closed software}, because the \enquote{copyright notice} and the
+whole license must \enquote{[\ldots] appear in all copies}\footcite[cf.][\nopage
+wp.]{PglOsiLicense2013a}.
+
+But the PostgreSQL License does not protect the contributors against the loss of
+feedback because it does not 'copyleft' the software: The license does not
+contain any sentence which requires that one has to publish the sources, too. 
+In the same spirit, the PgL does not protect the undistributed software or the
+distributed binaries against re-closings -- neither in unmodified nor in
+modified form -- because the PgL allows to (re)distribute the binaries without
+also supplying the sources -- even if the binaries rest upon sources modified by
+the distributor. Finally, the PgL does not protect the on-top developments
+against a privatizing.
+
 
 \section{The protecting power of the PHP License}
-\begin{itemize} 
-  
-  \item As an approved \emph{open source license}\footcite[cf.][\nopage
-  wp]{OSI2012b}, the PHP-3.0 License protects the user against the loss of the
-  right to use, to modify and/or to distribute the received copy of the source
-  code or the binaries\footcite[cf.][\nopage wp.]{Php30OsiLicense2013a}. Because
-  of its \emph{disclaimer of warranty}, the PHP license also protects the
-  contributors / distributors against warranty claims\footcite[cf.][\nopage
-  wp.]{Php30OsiLicense2013a}. Finally, the PHP license protects the distributed
-  sources themselves \emph{against} a change of the license which would
-  \emph{reset} the work \emph{as closed software}, because
-  \enquote{redistributions of source code must retain the [\ldots] copyright
-  notice, this list of conditions and the [\ldots]
-  disclaimer}\footcite[cf.][\nopage wp.]{Php30OsiLicense2013a}.
-  
-  \item But the PHP-3.0 License does not protect the contributors against the
-  loss of feedback because it does not 'copyleft' the software: The license does
-  not contain any sentence which requires that one has to publish the sources,
-  too.  In the same spirit, the PHP license does not protect the undistributed
-  software or the distributed binaries against re-closings -- neither in
-  unmodified nor in modified form -- because the PHP license allows to
-  (re)distribute the binaries without also supplying the sources -- even if the
-  binaries rest upon sources modified by the distributor.
-  
-\end{itemize}
 
+As an approved \emph{open source license}\footcite[cf.][\nopage wp]{OSI2012b},
+the PHP-3.0 License protects the user against the loss of the right to use, to
+modify and/or to distribute the received copy of the source code or the
+binaries\footcite[cf.][\nopage wp.]{Php30OsiLicense2013a}. Because of its
+\emph{disclaimer of warranty}, the PHP license also protects the contributors /
+distributors against warranty claims\footcite[cf.][\nopage
+wp.]{Php30OsiLicense2013a}. Finally, the PHP license protects the distributed
+sources themselves \emph{against} a change of the license which would
+\emph{reset} the work \emph{as closed software}, because
+\enquote{redistributions of source code must retain the [\ldots] copyright
+notice, this list of conditions and the [\ldots]
+disclaimer}\footcite[cf.][\nopage wp.]{Php30OsiLicense2013a}.
+
+But the PHP-3.0 License does not protect the contributors against the loss of
+feedback because it does not 'copyleft' the software: The license does not
+contain any sentence which requires that one has to publish the sources, too. 
+In the same spirit, the PHP license does not protect the undistributed software
+or the distributed binaries against re-closings -- neither in unmodified nor in
+modified form -- because the PHP license allows to (re)distribute the binaries
+without also supplying the sources -- even if the binaries rest upon sources
+modified by the distributor.
+  
+\section{Summary}
 
 All these specifications cannot only be summarized by a
 table\footnote{$\rightarrow$ OSLiC, p. \pageref{tab:powerOfLicenses}}, but also
