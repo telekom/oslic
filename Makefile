@@ -56,7 +56,7 @@ dpdf: apdf
 	@ latex $< 
 	@ latex $< 
 	@ latex $< 
-	@ latex2rtf -o `basename $@ .rtf`-`cat release.tex`.rtf  $< 
+	@ latex2rtf -o `basename $@ .rtf`-`cat re-number.tex`.rtf  $< 
 
 .dvi.ps:
 	@ echo "### `date +'%Y%m%dT%H%M%S'`" 
@@ -67,11 +67,11 @@ dpdf: apdf
 	@ echo "### `date +'%Y%m%dT%H%M%S'`" 
 	@ echo "### converting $< to $@"
 	@ ps2pdf $<
-	@ mv $@ `basename $@ .pdf`-`cat release.tex`.pdf
+	@ mv $@ `basename $@ .pdf`-`cat rel-number.tex`.pdf
 
 dist:
-	tar -czvf ../${OSLICDIR}-`cat release.tex`.tar.gz --exclude=${OSLICDIR}/ecopies/* ../${OSLICDIR}
-	zip -r ../${OSLICDIR}-`cat release.tex`.zip --exclude=../${OSLICDIR}/ecopies/* ../${OSLICDIR}
+	tar -czvf ../${OSLICDIR}-`cat rel-number.tex`.tar.gz --exclude=${OSLICDIR}/ecopies/* ../${OSLICDIR}
+	zip -r ../${OSLICDIR}-`cat rel-number.tex`.zip --exclude=../${OSLICDIR}/ecopies/* ../${OSLICDIR}
 
 clearAuxFiles:
 	$(foreach EXT, ${AUX_EXTS}, if [ ! "x`ls *.${EXT} 2>/dev/null`" = "x" ]; then rm *.${EXT}; fi;)

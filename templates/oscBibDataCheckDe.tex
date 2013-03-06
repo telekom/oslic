@@ -35,6 +35,10 @@
 \usepackage[english,ngerman]{babel}
 \selectlanguage{ngerman}
 
+%language specific quoting signs
+%default for language emglish is american style of quotes
+\usepackage{csquotes}
+
 % jurabib configuration
 \usepackage[see]{jurabib}
 \bibliographystyle{jurabib}
@@ -109,18 +113,18 @@ ganze kommentierte Bibliographie.
 
 \section{Initialzitat \& Repitition per $\backslash$footcite aus \emph{jurabib}}
 
-Hier erscheint das \glqq Initialzitat mit vollständiger bibliographischer
-Angabe\grqq\footcite[vgl. dazu:][123ff]{Buchtala2007a}, gefolgt von dem \glqq
-seitengleichen Wiederholungszitat\grqq\footcite[vgl. dazu:][123ff]{Buchtala2007a},
-und das wiederum gefolgt vom \glqq seitendifferenten
-Wiederholungszitat\grqq\footcite[vgl. dazu:][125f]{Buchtala2007a}.
+Hier erscheint das \enquote{ Initialzitat mit vollständiger bibliographischer
+Angabe}\footcite[vgl. dazu:][123ff]{Buchtala2007a}, gefolgt von dem \enquote{
+seitengleichen Wiederholungszitat}\footcite[vgl. dazu:][123ff]{Buchtala2007a},
+und das wiederum gefolgt vom \enquote{ seitendifferenten
+Wiederholungszitat}\footcite[vgl. dazu:][125f]{Buchtala2007a}.
 
 Nach Möglichkeit sollte hier ein anderes Werk desselben Autors zitiert
 werden\footcite[vgl. dazu:][321]{Buchtala2007a}.
 
 Hier wird ein ganz anderes Werk zitiert\footcite[vgl.
-dazu:][42]{Spielkamp2008a}, um im Anschluss das \glqq
-Kurztitel-Wiederholungszitat'\grqq\footcite[vgl. dazu:][123]{Buchtala2007a} abzu
+dazu:][42]{Spielkamp2008a}, um im Anschluss das \enquote{
+Kurztitel-Wiederholungszitat'}\footcite[vgl. dazu:][123]{Buchtala2007a} abzu
 testen.
 
 \section{Testzitat $\backslash$cite in $\backslash$footnote}

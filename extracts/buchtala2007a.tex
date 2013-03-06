@@ -32,8 +32,12 @@
 
 %%% (2) language specific configurations %%%
 \usepackage[]{a4,ngerman}
-\usepackage[ngerman, english]{babel}
-\selectlanguage{english}
+\usepackage[english,ngerman]{babel}
+\selectlanguage{ngerman}
+
+%language specific quoting signs
+%default for language emglish is american style of quotes
+\usepackage[german=quotes]{csquotes}
 
 % jurabib configuration
 \usepackage[see]{jurabib}
@@ -127,81 +131,81 @@ Die Arbeit möchte die Frage beantworten, "`[\ldots] welche Faktoren [\ldots] di
 Wahl zwischen den unterschiedlichen OSS-Lizenzen (beeinflussen)
 "\footcite[cf.][25]{Buchtala2007a}:
 
-\begin{quotation}\noindent\glqq{}Mit Hilfe eines spieltheoretischen Modells lassen
+\begin{quotation}\noindent\enquote{Mit Hilfe eines spieltheoretischen Modells lassen
 sich die Bedingungen charakterisieren, unter denen ein privater oder ein kommerzieller
 Entwickler sich für eine permissive, restriktive oder hoch restriktive Lizenz
-entschieden wird.\grqq{}\footcite[][26]{Buchtala2007a}
+entschieden wird.}\footcite[][26]{Buchtala2007a}
 \end{quotation}
 
 Mit der Arbeit geht so der Anspruch einer
 'Erklärungsadäquatheit'\footnote{Begriff von mir, KR} einher: Am Anfang eines
 jeden spieltheoretischen Zugriffs steht eine Modellierung der Wirklichkeit als Set von 'Annahmen'. Da, so der Gedankengang im Groben,
-\glqq{}die Vorhersagen des Modells [\ldots] dabei im Einklang mit bisher
-erbrachten empirischen Ergebnissen (stehen) [\ldots]\grqq{}, dürfen die
-modellierten Annahmen \glqq{}[\ldots] als eine mögliche Erklärungen von diesen
-[den Ergebnissen, KR] angesehen werden\grqq{}\footcite[][26]{Buchtala2007a}.
+\enquote{die Vorhersagen des Modells [\ldots] dabei im Einklang mit bisher
+erbrachten empirischen Ergebnissen (stehen) [\ldots]}, dürfen die
+modellierten Annahmen \enquote{[\ldots] als eine mögliche Erklärungen von diesen
+[den Ergebnissen, KR] angesehen werden}\footcite[][26]{Buchtala2007a}.
 
 \subsection{Details}
 
 Ein Kernpunkt der Gesamtargumentation ist die Klassifikation resp. Gruppierung
-bestehender Open Source Lizenzen in \glqq{}permissive, restriktive und
-hochrestriktive Lizenzen\grqq{}\footcite[cf.][55]{Buchtala2007a}: Als Open
+bestehender Open Source Lizenzen in \enquote{permissive, restriktive und
+hochrestriktive Lizenzen}\footcite[cf.][55]{Buchtala2007a}: Als Open
 Source Lizenzen seien sie durch die 10 Kriterien der Open Source Initiative zu
 einer Gruppe zusammengefasst\footcite[cf.][53ff]{Buchtala2007a}. In sich
 ließe sich diese Gruppe allerdings weiter clustern. So stünde der Gruppe von
-Lizenzen, die \glqq{}\ldots es dem Nutzer explizit (erlauben), dass abgeleitete
-Werke proprietarisiert werden können\grqq{}, diejenigen gegenüber, die dieses
+Lizenzen, die \enquote{\ldots es dem Nutzer explizit (erlauben), dass abgeleitete
+Werke proprietarisiert werden können}, diejenigen gegenüber, die dieses
 verbieten\footcite[cf.][55]{Buchtala2007a}. Und diese Gruppe der die
 'Proprietarisierung' verbietenden Lizenzen könne, so Buchtala, in Anlehnung an
-\glqq{}Lerner und Tirole (2005)\grqq{} weiter in zwei Subgruppen unterteilt
-werden, in die Gruppe, bei der \glqq{}Modifikationen \ldots im Distributionsfall
-offengelegt werden (müssen)\grqq{}, und in die andere Gruppe, die für
-abgeleitete Werke eine Publikation \glqq{}unter derselben Lizenz\grqq{}
+\enquote{Lerner und Tirole (2005)} weiter in zwei Subgruppen unterteilt
+werden, in die Gruppe, bei der \enquote{Modifikationen \ldots im Distributionsfall
+offengelegt werden (müssen)}, und in die andere Gruppe, die für
+abgeleitete Werke eine Publikation \enquote{unter derselben Lizenz}
 erfordere\footcite[cf.][56]{Buchtala2007a}.
 
 So kommt Buchtala für die per definitionem quelloffenen Open Source Lizenzen zu
-den Subtypen \glqq{}Permissiv\grqq{} (\glqq{}Quellcode ist einsehbar, frei
-verteilbar und modifiziertbar\grqq{}), \glqq{}Restriktiv\grqq{}
-(\glqq{}Quellcode von Modifikationen muss im Distributionsfall offen gelegt
-werden (Copyleft)\grqq{}) und \glqq{}Hochrestriktiv\grqq{} (\glqq{}Abgeleitete
+den Subtypen \enquote{Permissiv} (\enquote{Quellcode ist einsehbar, frei
+verteilbar und modifiziertbar}), \enquote{Restriktiv}
+(\enquote{Quellcode von Modifikationen muss im Distributionsfall offen gelegt
+werden (Copyleft)}) und \enquote{Hochrestriktiv} (\enquote{Abgeleitete
 Werke dürfen nur mit Software verbunden werden, die unter derselben Lizenz
-veröffentlicht ist (Reziprozität)\grqq{})\footcite[cf.][57 (Typo im
+veröffentlicht ist (Reziprozität)})\footcite[cf.][57 (Typo im
 Original)]{Buchtala2007a}. Die dazu gehörende Grafik signalisiert, dass alle
 restriktiven Lizenzen auch permissiv sind, aber nicht umgekehrt, und dass alle
 restriktiven Lizenzen hoch hochrestriktiv sind, aber nicht
 umgekehrt\footcite[cf.][57]{Buchtala2007a}. Explizit bestätigt wird diese
 Teilmengen basierte Clusterung durch Buchtalas Merkmalsmatrix: Alle behandelten
 Lizenzen (GPL, LGPL, BSD, Artistic License, Apache License (APL), MIT, Mozilla
-Publuc License (MPL)) seien im \glqq{}Quellcode [\ldots] einsehbar, frei
-verteilbar und modifizierbar\grqq{}, bei GPL, LGPL und MPL müssten
-\glqq{}Modifikationen [\ldots] im Distributionsfall offengelegt werden\grqq{}
-und nur bei der GPL dürften \glqq{}abgleitete Werke [\ldots] nur mit Software
+Publuc License (MPL)) seien im \enquote{Quellcode [\ldots] einsehbar, frei
+verteilbar und modifizierbar}, bei GPL, LGPL und MPL müssten
+\enquote{Modifikationen [\ldots] im Distributionsfall offengelegt werden}
+und nur bei der GPL dürften \enquote{abgleitete Werke [\ldots] nur mit Software
 verbunden werden, die unter derselben Lizenz veröffentlicht
-ist\grqq{}\footcite[cf.][62]{Buchtala2007a}
+ist}\footcite[cf.][62]{Buchtala2007a}
 
 In seiner Sichtung der Forschungsliteratur kommt Buchtala sodann zu dem Schluss,
 dass zwar wegen des 'statistischen Primats' der hochrestriktiven Lizenzen - also
-der GPL - die \glqq{}[\ldots] Akteure bei der Auswahl der von ihnen verwendeten
+der GPL - die \enquote{[\ldots] Akteure bei der Auswahl der von ihnen verwendeten
 Lizenzen umso stärker auf (hoch)restriktive Lizenzen zurück greifen würden, je
 wichtiger die Zusammenarbeit mit anderen (hoch)restriktiven Lizenzen bzw. mit
-der OSS-Community ist[\ldots]\grqq{}, dass mit diesem Faktum aber noch nicht die
-Frage beantwortet sei, \glqq{}[\ldots] wovon die ursprüngliche
+der OSS-Community ist[\ldots]}, dass mit diesem Faktum aber noch nicht die
+Frage beantwortet sei, \enquote{[\ldots] wovon die ursprüngliche
 Lizenzentscheidung determiniert
-wird\grqq{}\footcite[cf.][156]{Buchtala2007a}. Einen solchen Grund für die
+wird}\footcite[cf.][156]{Buchtala2007a}. Einen solchen Grund für die
 ursprünglichen Wahl 'nachzureichen', ist dann, wie angekündigt, Hauptziel des
 Buches.
 
-So konstatiert Buchtala, dass \glqq{}[\ldots] die oftmals wahrgenommene
+So konstatiert Buchtala, dass \enquote{[\ldots] die oftmals wahrgenommene
 Verbundenheit zwischen dem OSS-Gedanken und der GPL keineswegs unbegründet oder
-zufällig entstanden (sei)\grqq{}\footcite[cf.][168]{Buchtala2007a}. Dazu
-argumentiert er so: Zum einen könne \glqq{}Code\grqq{}, der \glqq{}[\ldots]
+zufällig entstanden (sei)}\footcite[cf.][168]{Buchtala2007a}. Dazu
+argumentiert er so: Zum einen könne \enquote{Code}, der \enquote{[\ldots]
 unter einer hochrestriktiven Lizenz veröffentlicht wurde, [\ldots] nur dann in
 einem anderen Projekt legal weiterverwendet werden, falls dieses ebenfalls eine
-hochrestriktive Lizenz (verwende)\grqq{}. Andererseits dürfe
-\glqq{}permissiv\grqq{} lizenzierter Code \glqq{}[\ldots] unter praktisch jeder
+hochrestriktive Lizenz (verwende)}. Andererseits dürfe
+\enquote{permissiv} lizenzierter Code \enquote{[\ldots] unter praktisch jeder
 anderen Lizenz, sowohl einer hochrestriktiven als auch einer proprietären,
-veröffentlicht werden\grqq{}. Daraus ergäbe sich dann \glqq{}ein inhärenter
-Vorteil für hochrestriktive Lizenzen und im speziellen für die GPL\grqq{}: Da
+veröffentlicht werden}. Daraus ergäbe sich dann \enquote{ein inhärenter
+Vorteil für hochrestriktive Lizenzen und im speziellen für die GPL}: Da
 'hochrestriktiv lizenzierter Code' auf das Ergebnis einer größeren Anzahl von
 zuarbeitenden OS-Projekten zugreifen könn, nämlich auf die mit permissiven
 Lizenzen UND auf die mit (hoch)restriktiven Lizenzen, während 'permissiv
@@ -209,36 +213,36 @@ lizenzierter Code' eben nur auf das Ergebnis solcher Projekte, die
 selbst permissiv orientiert seien\footcite[cf.][165]{Buchtala2007a}. Buchtala
 fixiert das in folgendem Befund:
 \begin{quotation}\noindent
-\glqq{}Ein Projekt, dass unter einer hochrestriktiven Lizenz veröffentlicht
+\enquote{Ein Projekt, dass unter einer hochrestriktiven Lizenz veröffentlicht
 wird, kann Code von sämtlichen OSS Projekten verwenden, unabhängig von deren Lizenz. Ein
 Projekt, das unter einer permissiven Lizenz veröffentlicht wird, kann nur den
 Code von Projekten verwenden, die ebenfalls unter einer permissiven Lizenz
-veröffentlicht wurden.\grqq{}\footcite[][165]{Buchtala2007a}.
+veröffentlicht wurden.}\footcite[][165]{Buchtala2007a}.
 \end{quotation}
 
 Anm.: Die Fakten widersprechehn der Deduktion. Buchtala kennt nur eine
 hochrestriktive Lizenz, nämlich die
-GPL\grqq{}\footcite[cf.][62]{Buchtala2007a}. Gerade das GNU Projekt resp. die
+\enquote{GPL}\footcite[cf.][62]{Buchtala2007a}. Gerade das GNU Projekt resp. die
 FSF listet explizit auf, dass und mit welchen anderen Lizenzen die GPL gerade
 nicht kompatibel ist. Und darunter befinden sich durchaus auch - um mit Buchtala
 zu sprechen - restriktive oder permissive. Insofern wird dieser irrtümlich
 angesetzte und doch in die spieltheoretische Modellierung eingegangene
-\glqq{}inhärente Vorteil für hochrestriktive
-Lizenzen\grqq{}\grqq{}\footcite[cf.][168]{Buchtala2007a} das Ergebnis
+\enquote{inhärente Vorteil für hochrestriktive
+Lizenzen}\footcite[cf.][168]{Buchtala2007a} das Ergebnis
 verfälschen.
 
 \section{Spezifische Diskussionen}
 
 \subsection{Veröffentlichungspflicht}
 Buchtala unterstreicht, dass bei OS-Lizenzen die Veröffentlichungspflicht von
-Modifikationen nur dann greife, \glqq{}[\ldots] wenn die modifizierte Software
-auch weiter vertrieben wird\grqq{}. Sofern Software nur \glqq{}[\ldots] für den
-internen Gebrauch weiterentwickelt (werde)\grqq{}, sei die Publikation der
+Modifikationen nur dann greife, \enquote{[\ldots] wenn die modifizierte Software
+auch weiter vertrieben wird}. Sofern Software nur \enquote{[\ldots] für den
+internen Gebrauch weiterentwickelt (werde)}, sei die Publikation der
 Modifikationen nicht geboten. Außerdem - betont Buchtala weiter - impliziere das
-Veröffentlichungsgebot eben nicht, dass die Modifikationen \glqq{}[\ldots] für
-alle einsichtig zu machen (seien)[\ldots]\grqq{}. Vielmehr müsse der revidierte
-Code nur konkret denjenigen gegenüber offengelegt werden, an die \glqq{}[\ldots]
-das Produkt distribuiert (werde)\grqq{}\footcite[cf.][168 - B. beruft sich
+Veröffentlichungsgebot eben nicht, dass die Modifikationen \enquote{[\ldots] für
+alle einsichtig zu machen (seien)[\ldots]}. Vielmehr müsse der revidierte
+Code nur konkret denjenigen gegenüber offengelegt werden, an die \enquote{[\ldots]
+das Produkt distribuiert (werde)}\footcite[cf.][168 - B. beruft sich
 selbst auf Henkel 2003 u. 2004b]{Buchtala2007a}.
 
 \subsection{(rein) permissive Lizenzen}
@@ -260,8 +264,8 @@ APL gar nicht möglich.
 Anm-2: Für die Artistic License skizziert Buchtala ein Argument gegen die
 Deutung als permissive Lizenz: Diese fordere im Normalfall zwar, dass
 Modifikation im Distributionsfall offengelegt werden müssen, allerdings erlaube
-sie Ausnahmen. Deshalb werde die Artistic License \glqq{}[\ldots]
-überlicherweise als permissiv angesehen\grqq{}\footcite[cf.][61 B. beruft
+sie Ausnahmen. Deshalb werde die Artistic License \enquote{[\ldots]
+überlicherweise als permissiv angesehen}\footcite[cf.][61 B. beruft
 sich auf Perens, 1999 und Lerner und Tirole 2005, jeweils ohne nähere
 Seitenangabe]{Buchtala2007a}
 
@@ -296,11 +300,11 @@ wie sie gerade in der GPL explizit als Grund für eine Einschränkung genannt wi
 
 \subsection{Reziprozitäts-Missverständnis (?)}
 
-B. erklärt, dass bei \glqq{}hochrestiktive Lizenzen\grqq{} - und er kennt da nur
-eine, nämlich die GPL - von einem so lizenzierten Werk davon \glqq{}abgeleitete
+B. erklärt, dass bei \enquote{hochrestiktive Lizenzen} - und er kennt da nur
+eine, nämlich die GPL - von einem so lizenzierten Werk davon \enquote{abgeleitete
 Werke [\ldots] nur mit Software verbunden werden (dürfen), die unter derselben
 Lizenz veröffentlicht ist
-(Reziprozität)\grqq{}\footcite[cf.][62]{Buchtala2007a}. Dies geht am Kern der
+(Reziprozität)}\footcite[cf.][62]{Buchtala2007a}. Dies geht am Kern der
 GPL-Vorstellung vorbei. Das, was die GPL von dem abgeleiteten Werk fordert, ist,
 dass es selbst ebenfalls unter der GPL veröffentlicht wird. Mit welchen anderen
 Lizenzen das abgeleiete Werk dann verbunden werden darf, hängt von der GPL resp.

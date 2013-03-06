@@ -1,0 +1,788 @@
+% Telekom osCompendium 'for being included' snippet template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ Framework derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke 2012 CC BY 3.0  http://mycsrf.fodina.de/ ]
+%
+
+
+%% use all entries of the bibliography
+%\nocite{*}
+
+\chapter{Open Source Use Cases: Find the License Fulfilling To-do Lists}\label{sec:OSUCfinder}
+
+\footnotesize
+\begin{quote}\itshape
+This chapter offers the \emph{Open Source Use Case Finder}: First, it presents a
+form to gather the specifying information. Second, it offers a tree which can
+easily be traversed using the gathered information. And finally it contains
+the list of \emph{open source use cases}. Each leaf of the tree leads to one
+\emph{open source use case} which itself then refers to the specific license
+fulfilling to-do lists.
+\end{quote}
+\normalsize{}
+
+\section{A standard form for gathering the relevant information}
+\label{OSLiCStandardFormForGatheringInformation}
+ 
+\begin{small}
+\begin{tabular}[h]{|l|l|l|l|}
+\hline 
+  \ & \textit{Which open source software do you want to use?} & \ \\
+\hline 
+  \ & \textit{Under which open source license is it released?} & \ \\
+\hline
+\hline 
+\textbf{Class} & \textbf{Questions} & \textbf{Answers}\\
+\hline 
+\hline 
+  Type
+  & \parbox[c][2.6cm][c]{9.4cm}{
+    \textit{Is the open source software you want to use a software library
+    in the broadest sense (an includable code snippet, a linkable module or
+    library, or a loadable plugin) [=snimoli], or is it an autonomous
+    program, application or server which can be executed or processed
+    [=proapse]?}} & \parbox{10em}{ 
+      $\square$\hspace{1em}snimoli\\ 
+      $\square$\hspace{1em}proapse}
+    \\
+\hline 
+  State & 
+  \parbox[c][1.6cm][c]{9.4cm}{
+  \textit{Do you want to leave your open source software as you have
+  got it, or do you want to modify it before using and/or distributing it to 3rd
+  parties?}} &
+  \parbox{10em}{
+    $\square$\hspace{1em}unmodified\\
+    $\square$\hspace{1em}modified} \\
+\hline 
+  Context & 
+  \parbox[c][2cm][c]{9.4cm}{
+  \textit{Are you using your open source software as an au\-to\-no\-mous piece
+  of software [=independent], or are you using it as an embedded part or component
+  of a larger, more complex piece of software [=embedded]?}} &
+  \parbox{10em}{ $\square$\hspace{1em}independent\\
+    $\square$\hspace{1em}embedded}\\
+\hline 
+  Recipient & 
+  \parbox[c][1.6cm][c]{9.4cm}{
+  \textit{Are you going to use the received open source software only for
+  yourself [=4yourself], or do you plan to (re)distribute it (also) to third
+  parties [=4others]?}}
+  & \parbox{10em}{
+    $\square$\hspace{1em}4yourself\\
+    $\square$\hspace{1em}4others}\\
+\hline 
+  Form & 
+  \parbox[c][1.6cm][c]{9.4cm}{
+  \textit{If you plan to (re)distribute an open source based work [=4others], do
+  you want to distribute only the binaries or (also) the source code?}}
+  & \parbox{10em}{
+    $\square$\hspace{1em}only binaries\\
+    $\square$\hspace{1em}(also) sources}\\
+\hline 
+  Mode & 
+  \parbox[c][2.6cm][c]{9.4cm}{
+  \textit{Are you going to combine the received open source software with other
+  software components by linking all together statically, by linking them
+  dynamically, or by textually including (parts of) the open source software
+  into your larger unit?}} &
+  \parbox{10em}{
+    $\square$\hspace{1em}statically linked\\   
+    $\square$\hspace{1em}dynamically linked\\
+    $\square$\hspace{1em}textually included}\\
+\hline 
+\hline
+\end{tabular}
+\end{small}
+
+As discussed earlier, there are of course some invalid
+combinations\footnote{type::proapse excludes state::embedded;
+recipient::4yourself excludes the combination with state::independent and
+type::snimoli; any value of class 'mode' implies state::embedded [for details
+see page \pageref{InvalidFinderTokenCombinations}]. If you have gathered one of
+these invalid combinations, please check the corresponding explanations}. Here
+are some extra explanations about each class:
+
+\begin{description}
+\item[Type:] A piece of (open source) software shall be viewed as a program, an
+application, or a server, if you can start its binary form with your normal
+program launcher, or (in case of a text file which still must be interpreted by
+an interpreter like php, perl, bash etc.) if you can start an interpreter taking
+the file as one of its arguments. \item[State:] You modify open source software
+if you expand, reduce or modify at least one of the received software files, and
+-- in case of dealing with binary object code -- if you (re)compile and (re)link
+the modified software to a new binary file. If you only modify configuration
+files, you do not modify the open source software.
+\item[Context:] You use open source software embedded into a larger unit, if one
+of your files of the larger unit contains a verbatim or modified copy (i.e.\ a
+snippet) of the received open source software, or if the larger unit contains an
+include statement referring to a file of the received open source software, or
+if your development environment contains a compiler or linker directive
+referring to the received open source software.
+\item[Recipient:] You use the received open source software only for yourself,
+if you as a person do not pass it to other entities like persons, organizations,
+companies etc., or if you -- as a member of a specific development group -- pass
+it only to the other members of your development group. But if you store open
+source software on any device such as a mobile phone, an USB stick, etc.\ or if
+you attach it to any transport medium like email etc.\ and if you then sell,
+give away, or simply send this device or transport medium to anyone (other than
+a direct member of your development group) then you indeed handover the open
+source software to third parties\footnote{Please remember that -- at least in
+Germany -- there are opinions that even handing over software to another legal
+entity or department of the same company is also a kind of distribution. It is
+always safest to take the broadest possible meaning of distributing or handing
+over.}.
+\item[Form:] Often it is up to you to decide whether you want to distribute the
+source code, too. But if you do so, you have to respect special
+conditions\footnote{For details concerning a necessary refinement of the open
+source use case taxonomy, please see $\rightarrow$ OSLiC, p.\
+\pageref{sec:SourceBinaryDifference}}.
+\item[Mode:] The definition follows the corresponding standard terms of the
+software development.
+\end{description}
+
+\section{The taxonomic Open Source Use Case Finder}
+
+Now, after having gathered the necessary information, determine your specific
+open source use case by traversing the following tree and its corresponding
+branches:
+
+\begin{footnotesize}
+
+\pstree[treemode=R,levelsep=*0.2,treesep=0.2]{\Toval{OSS}}{
+  \pstree{
+    \Tr{\Ovalbox{\shortstack{type:\\\textbf{\textit{proapse}}\\
+      \tiny (= Program,\\\tiny Application,\\\tiny Server)      
+      }   
+    }}
+    
+  }{
+    \pstree{
+      \Tr{\Ovalbox{\shortstack{state:\\\textbf{\textit{unmodified}}}}}
+    }{
+      \pstree{
+        \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{independent}}}}}
+      }{
+        
+        \pstree{
+          \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{4yourself}}}}}
+        }{
+          \Tr[edge=none]{\begin{minipage}[b][2em][c]{6em} 
+              $\Rightarrow$ OSUC-01\\
+              \textit{(see p.\ \pageref{OSUC-01-DEF})}\end{minipage} } 
+          }
+        
+        \pstree{
+          \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{4others}}}}}
+        }{
+          \Tr[edge=none]{\begin{minipage}[b][2em][c]{6em} 
+              $\Rightarrow$ OSUC-02\\
+              \textit{(see p.\ \pageref{OSUC-02-DEF})}\end{minipage} } 
+          }        
+      }
+    }
+    \pstree{
+      \Tr{\Ovalbox{\shortstack{state:\\\textbf{\textit{modified}}}}}
+    }{
+      \pstree{
+        \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{independent}}}}}
+      }{
+        \pstree{
+          \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{4yourself}}}}}
+        }{
+          \Tr[edge=none]{\begin{minipage}[b][2em][c]{6em} 
+              $\Rightarrow$ OSUC-03\\
+              \textit{(see p.\ \pageref{OSUC-03-DEF})}\end{minipage} } 
+          }
+        
+        \pstree{
+          \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{4others}}}}}
+        }{
+          \Tr[edge=none]{\begin{minipage}[b][2em][c]{6em} 
+              $\Rightarrow$ OSUC-04\\
+              \textit{(see p.\ \pageref{OSUC-04-DEF})}\end{minipage} } 
+          }        
+      }
+    }
+  }
+  \pstree{
+    \Tr{\Ovalbox{
+      \shortstack{type:\\\textbf{\textit{snimoli}}\\
+      \tiny (= Snippet,\\\tiny Module,\\\tiny Plugin,\\\tiny Library)            
+      }
+    }}
+  }{
+    \pstree{
+      \Tr{\Ovalbox{\shortstack{state:\\\textbf{\textit{unmodified}}}}}
+    }{
+      \pstree{
+        \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{independent}}}}}
+      }{
+      
+        \pstree{
+          \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{4others}}}}}
+        }{
+          \Tr[edge=none]{\begin{minipage}[b][2em][c]{6em} 
+              $\Rightarrow$ OSUC-05\\
+              \textit{(see p.\ \pageref{OSUC-05-DEF})}\end{minipage} } 
+          }        
+      
+      }
+      \pstree{
+        \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{embedded}}}}}
+      }{
+        \pstree{
+          \Tr{
+            \Ovalbox{\shortstack{recipient:\\\textbf{\textit{4yourself}}}}
+           }
+        }{
+          \pstree{
+            \Tr{
+              \begin{tiny}
+              \Ovalbox{\shortstack{mode:\\\textit{statically linked}}}
+              \end{tiny}
+            }
+          }{
+            \Tr[edge=none]{\begin{minipage}[b][2em][c]{7em} 
+              $\Rightarrow$ OSUC-06a\\
+              \textit{(see p.\ \pageref{OSUC-06-DEF})}\end{minipage} } 
+          }        
+        
+          \pstree{
+            \Tr{
+              \begin{tiny}
+              \Ovalbox{\shortstack{mode:\\\textit{dynamically linked}}}
+              \end{tiny}
+            }
+          }{
+            \Tr[edge=none]{\begin{minipage}[b][2em][c]{7em} 
+              $\Rightarrow$ OSUC-06b\\
+              \textit{(see p.\ \pageref{OSUC-06-DEF})}\end{minipage} } 
+          }        
+ 
+          \pstree{
+            \Tr{
+              \begin{tiny}
+              \Ovalbox{\shortstack{mode:\\\textit{textually included}}}
+              \end{tiny}
+            }
+          }{
+            \Tr[edge=none]{\begin{minipage}[b][2em][c]{7em} 
+              $\Rightarrow$ OSUC-06c\\
+              \textit{(see p.\ \pageref{OSUC-06-DEF})}\end{minipage} } 
+          }        
+        
+        }
+        \pstree{
+          \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{4others}}}}}
+        }{
+          \pstree{
+            \Tr{
+              \begin{tiny}
+              \Ovalbox{\shortstack{mode:\\\textit{statically linked}}}
+              \end{tiny}
+            }
+          }{
+            \Tr[edge=none]{\begin{minipage}[b][2em][c]{7em} 
+              $\Rightarrow$ OSUC-07a\\
+              \textit{(see p.\ \pageref{OSUC-07-DEF})}\end{minipage} } 
+          }        
+        
+          \pstree{
+            \Tr{
+              \begin{tiny}
+              \Ovalbox{\shortstack{mode:\\\textit{dynamically linked}}}
+              \end{tiny}
+            }
+          }{
+            \Tr[edge=none]{\begin{minipage}[b][2em][c]{7em} 
+              $\Rightarrow$ OSUC-07b\\
+              \textit{(see p.\ \pageref{OSUC-07-DEF})}\end{minipage} } 
+          }        
+ 
+          \pstree{
+            \Tr{
+              \begin{tiny}
+              \Ovalbox{\shortstack{mode:\\\textit{textually included}}}
+              \end{tiny}
+             }
+          }{
+            \Tr[edge=none]{\begin{minipage}[b][2em][c]{7em} 
+              $\Rightarrow$ OSUC-07c\\
+              \textit{(see p.\ \pageref{OSUC-07-DEF})}\end{minipage} } 
+          }        
+        }
+      }
+    }
+    \pstree{
+      \Tr{\Ovalbox{\shortstack{state:\\\textbf{\textit{modified}}}}}
+    }{
+      \pstree{
+        \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{independent}}}}}
+      }{
+        \pstree{
+          \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{4others}}}}}
+        }{
+          \Tr[edge=none]{\begin{minipage}[b][2em][c]{6em} 
+              $\Rightarrow$ OSUC-08\\
+              \textit{(see p.\ \pageref{OSUC-08-DEF})}\end{minipage} } 
+          }        
+      }
+      \pstree{
+        \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{embedded}}}}}
+      }{
+        \pstree{
+          \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{4yourself}}}}}
+        }{
+          \pstree{
+            \Tr{
+              \begin{tiny}
+              \Ovalbox{\shortstack{mode:\\\textit{statically linked}}}
+              \end{tiny}
+            }
+          }{
+            \Tr[edge=none]{\begin{minipage}[b][2em][c]{7em} 
+              $\Rightarrow$ OSUC-09a\\
+              \textit{(see p.\ \pageref{OSUC-09-DEF})}\end{minipage} } 
+          }        
+        
+          \pstree{
+            \Tr{
+              \begin{tiny}
+              \Ovalbox{\shortstack{mode:\\\textit{dynamically linked}}}
+              \end{tiny}
+            }
+          }{
+            \Tr[edge=none]{\begin{minipage}[b][2em][c]{7em} 
+              $\Rightarrow$ OSUC-09b\\
+              \textit{(see p.\ \pageref{OSUC-09-DEF})}\end{minipage} } 
+          }        
+ 
+          \pstree{
+            \Tr{
+              \begin{tiny}
+              \Ovalbox{\shortstack{mode:\\\textit{textually included}}}
+              \end{tiny}
+             }
+          }{
+            \Tr[edge=none]{\begin{minipage}[b][2em][c]{7em} 
+              $\Rightarrow$ OSUC-09c\\
+              \textit{(see p.\ \pageref{OSUC-09-DEF})}\end{minipage} } 
+          }        
+        }
+        \pstree{
+          \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{4others}}}}}
+        }{
+          \pstree{
+            \Tr{
+              \begin{tiny}
+              \Ovalbox{\shortstack{mode:\\\textit{\tiny statically linked}}}
+              \end{tiny}
+            }
+          }{
+            \Tr[edge=none]{\begin{minipage}[b][2em][c]{7em} 
+              $\Rightarrow$ OSUC-10a\\
+              \textit{(see p.\ \pageref{OSUC-10-DEF})}\end{minipage} } 
+          }        
+        
+          \pstree{
+            \Tr{
+              \begin{tiny}
+              \Ovalbox{\shortstack{mode:\\\textit{dynamically linked}}}
+              \end{tiny}              
+            }
+          }{
+            \Tr[edge=none]{\begin{minipage}[b][2em][c]{7em} 
+              $\Rightarrow$ OSUC-10b\\
+              \textit{(see p.\ \pageref{OSUC-10-DEF})}\end{minipage} } 
+          }        
+ 
+          \pstree{
+            \Tr{
+              \begin{tiny}
+              \Ovalbox{\shortstack{mode:\\\textit{textually included}}} 
+              \end{tiny}
+             }
+          }{
+            \Tr[edge=none]{\begin{minipage}[b][2em][c]{7em} 
+              $\Rightarrow$ OSUC-10c\\
+              \textit{(see p.\ \pageref{OSUC-10-DEF})}\end{minipage} } 
+          }        
+        }
+      }
+    }
+  }
+}
+\end{footnotesize}
+\label{OSLiCUseCaseFinder}
+
+Please keep in mind, that for reducing the complexity of this general taxonomy,
+we suppressed the differentiation between distributing binaries and distributing
+sources\footnote{For details concerning a necessary refinement of the taxonomy
+$\rightarrow$ OSLiC, p.\ \pageref{sec:SourceBinaryDifference}}. Nevertheless,
+the final to-do lists respect this difference whereever it is necessary. It is
+up to you to select the correct to-do list on the basis of its titles.
+
+\section{The open source use cases and its to-do list references}
+
+On the following pages, each \textbf{O}pen \textbf{S}ource \textbf{U}se
+\textbf{C}ase is textually specified one more time and added by a list of page
+numbers. Each of these pages hints to that license-specific to-do list whose
+items together offer a processable way for acting according to the license under
+the circumstances of the described \textbf{O}pen \textbf{S}ource \textbf{U}se
+\textbf{C}ase.
+
+\begin{description}
+\label{OSUCList}
+\item[OSUC-01:]\label{OSUC-01-DEF}
+Only for yourself, you are using an unmodified open source program, application,
+or server -- just as you received it. You are not going to combine it with other
+components in the sense of software development (= \textit{proapse, unmodified,
+independent, 4yourself}). 
+To see the \textit{specific, license fulfilling to-do lists} jump to the
+following pages:
+  \begin{itemize}
+    \item p.\ \pageref{OSUC-01-AGPL} for the \textbf{AGPL}
+      \textit{(= Affero GNU Public License)} 
+    \item p.\ \pageref{OSUC-01-Apache20} for the \textbf{ApL}
+      \textit{(= Apache License)}
+    \item p.\ \pageref{OSUC-01-BSD} for the \textbf{BSD} License
+      \textit{(= Berkeley Software Distribution)}
+    \item p.\ \pageref{OSUC-01-EPL} for the \textbf{EPL}
+      \textit{(= Eclipse Public License)}     
+    \item p.\ \pageref{OSUC-01-EUPL} for the \textbf{EUPL}
+      \textit{(= European Union Public License)} 
+    \item p.\ \pageref{OSUC-01-GPL} for the \textbf{GPL}
+       \textit{(= GNU Public License)} 
+    \item p.\ \pageref{OSUC-01-LGPL} for the \textbf{LGPL}
+      \textit{(= Lesser GNU Public License)}           
+    \item p.\ \pageref{OSUC-01-MIT} for the \textbf{MIT} License
+       \textit{(= Massachusetts Institute of Technology)} 
+    \item p.\ \pageref{OSUC-01-MPL} for \textbf{MPL}
+      \textit{(= Mozilla Public License)}     
+    \item p.\ \pageref{OSUC-01-MS-PL} for the \textbf{MS-PL}
+      \textit{(= Microsoft Public License)} 
+    \item p.\ \pageref{OSUC-01-PGL} for the \textbf{PGL}
+      \textit{(= Postgres License)} 
+    \item p.\ \pageref{OSUC-01-PHP} for the \textbf{PHP} license 
+  \end{itemize}
+
+\item[OSUC-02:]\label{OSUC-02-DEF} Just as you received it, you are going to
+distribute an unmodified open source program, application, or server to 3rd
+parties. In this act of distribution, you do not combine this program,
+application, or server with other software components in the sense of software
+development (= \textit{proapse, unmodified, independent, 4others})\footnote{For
+differentiating between distributing sources and binaries $\rightarrow$ OSLiC,
+p.\ \pageref{sec:SourceBinaryDifference}}. To see the \textit{specific, license
+fulfilling to-do lists} jump to the following pages:
+   \begin{itemize}
+    \item p.\ \pageref{OSUC-02-AGPL} for the \textbf{AGPL}
+      \textit{(= Affero GNU Public License)} 
+    \item p.\ \pageref{OSUC-02-Apache20} for the \textbf{ApL}
+      \textit{(= Apache License)}
+    \item p.\ \pageref{OSUC-02-BSD} for the \textbf{BSD} License
+      \textit{(= Berkeley Software Distribution)}
+    \item p.\ \pageref{OSUC-02-EPL} for the \textbf{EPL}
+      \textit{(= Eclipse Public License)}     
+    \item p.\ \pageref{OSUC-02-EUPL} for the \textbf{EUPL}
+      \textit{(= European Union Public License)} 
+    \item p.\ \pageref{OSUC-02-GPL} for the \textbf{GPL}
+       \textit{(= GNU Public License)} 
+    \item p.\ \pageref{OSUC-02-LGPL} for the \textbf{LGPL}
+      \textit{(= Lesser GNU Public License)}           
+    \item p.\ \pageref{OSUC-02-MIT} for the \textbf{MIT} License
+       \textit{(= Massachusetts Institute of Technology)} 
+    \item p.\ \pageref{OSUC-02-MPL} for \textbf{MPL}
+      \textit{(= Mozilla Public License)}     
+    \item p.\ \pageref{OSUC-02-MS-PL} for the \textbf{MS-PL}
+      \textit{(= Microsoft Public License)} 
+    \item p.\ \pageref{OSUC-02-PGL} for the \textbf{PGL}
+      \textit{(= Postgres License)} 
+    \item p.\ \pageref{OSUC-02-PHP} for the \textbf{PHP} license 
+  \end{itemize}
+
+\item[OSUC-03:]\label{OSUC-03-DEF} Only for yourself, you are modifying a
+received open source program, application, or server, before you are using it.
+But you do not combine it with other components in the sense of software
+development (= \textit{proapse, modified, independent, 4yourself}).
+To see the \textit{specific, license fulfilling to-do lists} jump to the
+following pages:
+   \begin{itemize}
+    \item p.\ \pageref{OSUC-03-AGPL} for the \textbf{AGPL}
+      \textit{(= Affero GNU Public License)} 
+    \item p.\ \pageref{OSUC-03-Apache20} for the \textbf{ApL}
+      \textit{(= Apache License)}
+    \item p.\ \pageref{OSUC-03-BSD} for the \textbf{BSD} License
+      \textit{(= Berkeley Software Distribution)}
+    \item p.\ \pageref{OSUC-03-EPL} for the \textbf{EPL}
+      \textit{(= Eclipse Public License)}     
+    \item p.\ \pageref{OSUC-03-EUPL} for the \textbf{EUPL}
+      \textit{(= European Union Public License)} 
+    \item p.\ \pageref{OSUC-03-GPL} for the \textbf{GPL}
+       \textit{(= GNU Public License)} 
+    \item p.\ \pageref{OSUC-03-LGPL} for the \textbf{LGPL}
+      \textit{(= Lesser GNU Public License)}           
+    \item p.\ \pageref{OSUC-03-MIT} for the \textbf{MIT} License
+       \textit{(= Massachusetts Institute of Technology)} 
+    \item p.\ \pageref{OSUC-03-MPL} for \textbf{MPL}
+      \textit{(= Mozilla Public License)}     
+    \item p.\ \pageref{OSUC-03-MS-PL} for the \textbf{MS-PL}
+      \textit{(= Microsoft Public License)} 
+    \item p.\ \pageref{OSUC-03-PGL} for the \textbf{PGL}
+      \textit{(= Postgres License)} 
+    \item p.\ \pageref{OSUC-03-PHP} for the \textbf{PHP} license 
+  \end{itemize}
+
+\item[OSUC-04:]\label{OSUC-04-DEF} You are going to modify a received open
+source program, application, or server, before you distribute it to 3rd parties.
+But you do not combine this modified program, application, or server with other
+software components in the sense of software development (= \textit{proapse,
+modified, independent, 4others})\footnote{For differentiating between
+distributing sources and binaries $\rightarrow$ OSLiC, p.\
+\pageref{sec:SourceBinaryDifference}}.
+To see the \textit{specific, license fulfilling to-do lists} jump to the
+following pages:
+  \begin{itemize}
+    \item p.\ \pageref{OSUC-04-AGPL} for the \textbf{AGPL}
+      \textit{(= Affero GNU Public License)} 
+    \item p.\ \pageref{OSUC-04-Apache20} for the \textbf{ApL}
+      \textit{(= Apache License)}
+    \item p.\ \pageref{OSUC-04-BSD} for the \textbf{BSD} License
+      \textit{(= Berkeley Software Distribution)}
+    \item p.\ \pageref{OSUC-04-EPL} for the \textbf{EPL}
+      \textit{(= Eclipse Public License)}     
+    \item p.\ \pageref{OSUC-04-EUPL} for the \textbf{EUPL}
+      \textit{(= European Union Public License)} 
+    \item p.\ \pageref{OSUC-04-GPL} for the \textbf{GPL}
+       \textit{(= GNU Public License)} 
+    \item p.\ \pageref{OSUC-04-LGPL} for the \textbf{LGPL}
+      \textit{(= Lesser GNU Public License)}           
+    \item p.\ \pageref{OSUC-04-MIT} for the \textbf{MIT} License
+       \textit{(= Massachusetts Institute of Technology)} 
+    \item p.\ \pageref{OSUC-04-MPL} for \textbf{MPL}
+      \textit{(= Mozilla Public License)}     
+    \item p.\ \pageref{OSUC-04-MS-PL} for the \textbf{MS-PL}
+      \textit{(= Microsoft Public License)} 
+    \item p.\ \pageref{OSUC-04-PGL} for the \textbf{PGL}
+      \textit{(= Postgres License)} 
+    \item p.\ \pageref{OSUC-04-PHP} for the \textbf{PHP} license 
+  \end{itemize}
+
+\item[OSUC-05:]\label{OSUC-05-DEF} Just as you received it, you are going to
+distribute an unmodified open source library, code snippet, module, or plugin to
+3rd parties. In this act of distribution, you do not combine this library, code
+snippet, module, or plugin with other software components in the sense of
+software development (= \textit{snimoli, unmodified, independent, 4others}).
+To see the \textit{specific, license fulfilling to-do lists} jump to the
+following pages:
+  \begin{itemize}
+    \item p.\ \pageref{OSUC-05-AGPL} for the \textbf{AGPL}
+      \textit{(= Affero GNU Public License)} 
+    \item p.\ \pageref{OSUC-05-Apache20} for the \textbf{ApL}
+      \textit{(= Apache License)}
+    \item p.\ \pageref{OSUC-05-BSD} for the \textbf{BSD} License
+      \textit{(= Berkeley Software Distribution)}
+    \item p.\ \pageref{OSUC-05-EPL} for the \textbf{EPL}
+      \textit{(= Eclipse Public License)}     
+    \item p.\ \pageref{OSUC-05-EUPL} for the \textbf{EUPL}
+      \textit{(= European Union Public License)} 
+    \item p.\ \pageref{OSUC-05-GPL} for the \textbf{GPL}
+       \textit{(= GNU Public License)} 
+    \item p.\ \pageref{OSUC-05-LGPL} for the \textbf{LGPL}
+      \textit{(= Lesser GNU Public License)}           
+    \item p.\ \pageref{OSUC-05-MIT} for the \textbf{MIT} License
+       \textit{(= Massachusetts Institute of Technology)} 
+    \item p.\ \pageref{OSUC-05-MPL} for \textbf{MPL}
+      \textit{(= Mozilla Public License)}     
+    \item p.\ \pageref{OSUC-05-MS-PL} for the \textbf{MS-PL}
+      \textit{(= Microsoft Public License)} 
+    \item p.\ \pageref{OSUC-05-PGL} for the \textbf{PGL}
+      \textit{(= Postgres License)} 
+    \item p.\ \pageref{OSUC-05-PHP} for the \textbf{PHP} license 
+  \end{itemize}
+
+\item[OSUC-06:]\label{OSUC-06-DEF} Only for yourself and just as you received
+it, you are going to combine an unmodified open source library, code snippet,
+module, or plugin into a larger software unit as one of its parts. (=
+\textit{snimoli, unmodified, embedded, 4yourself}).
+To see the \textit{specific, license fulfilling to-do lists} jump to the
+following pages:
+   \begin{itemize}
+    \item p.\ \pageref{OSUC-06-AGPL} for the \textbf{AGPL}
+      \textit{(= Affero GNU Public License)} 
+    \item p.\ \pageref{OSUC-06-Apache20} for the \textbf{ApL}
+      \textit{(= Apache License)}
+    \item p.\ \pageref{OSUC-06-BSD} for the \textbf{BSD} License
+      \textit{(= Berkeley Software Distribution)}
+    \item p.\ \pageref{OSUC-06-EPL} for the \textbf{EPL}
+      \textit{(= Eclipse Public License)}     
+    \item p.\ \pageref{OSUC-06-EUPL} for the \textbf{EUPL}
+      \textit{(= European Union Public License)} 
+    \item p.\ \pageref{OSUC-06-GPL} for the \textbf{GPL}
+       \textit{(= GNU Public License)} 
+    \item p.\ \pageref{OSUC-06-LGPL} for the \textbf{LGPL}
+      \textit{(= Lesser GNU Public License)}           
+    \item p.\ \pageref{OSUC-06-MIT} for the \textbf{MIT} License
+       \textit{(= Massachusetts Institute of Technology)} 
+    \item p.\ \pageref{OSUC-06-MPL} for \textbf{MPL}
+      \textit{(= Mozilla Public License)}     
+    \item p.\ \pageref{OSUC-06-MS-PL} for the \textbf{MS-PL}
+      \textit{(= Microsoft Public License)} 
+    \item p.\ \pageref{OSUC-06-PGL} for the \textbf{PGL}
+      \textit{(= Postgres License)} 
+    \item p.\ \pageref{OSUC-06-PHP} for the \textbf{PHP} license 
+  \end{itemize}
+
+\item[OSUC-07:]\label{OSUC-07-DEF} Just as you received it and before you will
+distribute it to 3rd parties together with the larger software unit, you combine
+an unmodified open source library, code snippet, module, or plugin into a larger
+software unit in the sense of software development (= \textit{snimoli,
+unmodified, embedded, 4others})\footnote{For differentiating between
+distributing sources and binaries $\rightarrow$ OSLiC, p.\
+\pageref{sec:SourceBinaryDifference}}.
+To see the \textit{specific, license fulfilling to-do lists} jump to the
+following pages:
+   \begin{itemize}
+    \item p.\ \pageref{OSUC-07-AGPL} for the \textbf{AGPL}
+      \textit{(= Affero GNU Public License)} 
+    \item p.\ \pageref{OSUC-07-Apache20} for the \textbf{ApL}
+      \textit{(= Apache License)}
+    \item p.\ \pageref{OSUC-07-BSD} for the \textbf{BSD} License
+      \textit{(= Berkeley Software Distribution)}
+    \item p.\ \pageref{OSUC-07-EPL} for the \textbf{EPL}
+      \textit{(= Eclipse Public License)}     
+    \item p.\ \pageref{OSUC-07-EUPL} for the \textbf{EUPL}
+      \textit{(= European Union Public License)} 
+    \item p.\ \pageref{OSUC-07-GPL} for the \textbf{GPL}
+       \textit{(= GNU Public License)} 
+    \item p.\ \pageref{OSUC-07-LGPL} for the \textbf{LGPL}
+      \textit{(= Lesser GNU Public License)}           
+    \item p.\ \pageref{OSUC-07-MIT} for the \textbf{MIT} License
+       \textit{(= Massachusetts Institute of Technology)} 
+    \item p.\ \pageref{OSUC-07-MPL} for \textbf{MPL}
+      \textit{(= Mozilla Public License)}     
+    \item p.\ \pageref{OSUC-07-MS-PL} for the \textbf{MS-PL}
+      \textit{(= Microsoft Public License)} 
+    \item p.\ \pageref{OSUC-07-PGL} for the \textbf{PGL}
+      \textit{(= Postgres License)} 
+    \item p.\ \pageref{OSUC-07-PHP} for the \textbf{PHP} license 
+  \end{itemize}
+
+\item[OSUC-08:]\label{OSUC-08-DEF} Before you will distribute it, you are going
+to modify an open source library, code snippet, module, or plugin to 3rd
+parties, but you do not combine it with other software components in the sense
+of software development (= \textit{snimoli, modified, independent,
+4others})\footnote{For differentiating between distributing sources and binaries
+$\rightarrow$ OSLiC, p.\ \pageref{sec:SourceBinaryDifference}}. To see the
+\textit{specific, license fulfilling to-do lists} jump to the following pages:
+  \begin{itemize}
+    \item p.\ \pageref{OSUC-08-AGPL} for the \textbf{AGPL}
+      \textit{(= Affero GNU Public License)} 
+    \item p.\ \pageref{OSUC-08-Apache20} for the \textbf{ApL}
+      \textit{(= Apache License)}
+    \item p.\ \pageref{OSUC-08-BSD} for the \textbf{BSD} License
+      \textit{(= Berkeley Software Distribution)}
+    \item p.\ \pageref{OSUC-08-EPL} for the \textbf{EPL}
+      \textit{(= Eclipse Public License)}     
+    \item p.\ \pageref{OSUC-08-EUPL} for the \textbf{EUPL}
+      \textit{(= European Union Public License)} 
+    \item p.\ \pageref{OSUC-08-GPL} for the \textbf{GPL}
+       \textit{(= GNU Public License)} 
+    \item p.\ \pageref{OSUC-08-LGPL} for the \textbf{LGPL}
+      \textit{(= Lesser GNU Public License)}           
+    \item p.\ \pageref{OSUC-08-MIT} for the \textbf{MIT} License
+       \textit{(= Massachusetts Institute of Technology)} 
+    \item p.\ \pageref{OSUC-08-MPL} for \textbf{MPL}
+      \textit{(= Mozilla Public License)}     
+    \item p.\ \pageref{OSUC-08-MS-PL} for the \textbf{MS-PL}
+      \textit{(= Microsoft Public License)} 
+    \item p.\ \pageref{OSUC-08-PGL} for the \textbf{PGL}
+      \textit{(= Postgres License)} 
+    \item p.\ \pageref{OSUC-08-PHP} for the \textbf{PHP} license 
+  \end{itemize}
+
+
+\item[OSUC-09:]\label{OSUC-09-DEF} Only for yourself, you are going to modify an
+open source library, code snippet, module, or plugin, before you will combine it
+-- in the sense of software development -- into a larger software unit as one of
+its parts. (= \textit{snimoli, modified, embedded, 4yourself}). 
+To see the \textit{specific, license fulfilling to-do lists} jump to the
+following pages:
+  \begin{itemize}
+    \item p.\ \pageref{OSUC-09-AGPL} for the \textbf{AGPL}
+      \textit{(= Affero GNU Public License)} 
+    \item p.\ \pageref{OSUC-09-Apache20} for the \textbf{ApL}
+      \textit{(= Apache License)}
+    \item p.\ \pageref{OSUC-09-BSD} for the \textbf{BSD} License
+      \textit{(= Berkeley Software Distribution)}
+    \item p.\ \pageref{OSUC-09-EPL} for the \textbf{EPL}
+      \textit{(= Eclipse Public License)}     
+    \item p.\ \pageref{OSUC-09-EUPL} for the \textbf{EUPL}
+      \textit{(= European Union Public License)} 
+    \item p.\ \pageref{OSUC-09-GPL} for the \textbf{GPL}
+       \textit{(= GNU Public License)} 
+    \item p.\ \pageref{OSUC-09-LGPL} for the \textbf{LGPL}
+      \textit{(= Lesser GNU Public License)}           
+    \item p.\ \pageref{OSUC-09-MIT} for the \textbf{MIT} License
+       \textit{(= Massachusetts Institute of Technology)} 
+    \item p.\ \pageref{OSUC-09-MPL} for \textbf{MPL}
+      \textit{(= Mozilla Public License)}     
+    \item p.\ \pageref{OSUC-09-MS-PL} for the \textbf{MS-PL}
+      \textit{(= Microsoft Public License)} 
+    \item p.\ \pageref{OSUC-09-PGL} for the \textbf{PGL}
+      \textit{(= Postgres License)} 
+    \item p.\ \pageref{OSUC-09-PHP} for the \textbf{PHP} license 
+  \end{itemize}
+
+
+\item[OSUC-10:]\label{OSUC-10-DEF} Before you will distribute it to 3rd parties,
+you are going to modify an open source library, code snippet, module, or plugin,
+which you then combine with other software components in the sense of software
+development (= \textit{snimoli, modified, independent, 4others})\footnote{For
+differentiating between distributing sources and binaries $\rightarrow$ OSLiC,
+p.\ \pageref{sec:SourceBinaryDifference}}. To see the \textit{specific, license
+fulfilling to-do lists} jump to the following pages:
+  \begin{itemize}
+    \item p.\ \pageref{OSUC-10-AGPL} for the \textbf{AGPL}
+      \textit{(= Affero GNU Public License)} 
+    \item p.\ \pageref{OSUC-10-Apache20} for the \textbf{ApL}
+      \textit{(= Apache License)}
+    \item p.\ \pageref{OSUC-10-BSD} for the \textbf{BSD} License
+      \textit{(= Berkeley Software Distribution)}
+    \item p.\ \pageref{OSUC-10-EPL} for the \textbf{EPL}
+      \textit{(= Eclipse Public License)}     
+    \item p.\ \pageref{OSUC-10-EUPL} for the \textbf{EUPL}
+      \textit{(= European Union Public License)} 
+    \item p.\ \pageref{OSUC-10-GPL} for the \textbf{GPL}
+       \textit{(= GNU Public License)} 
+    \item p.\ \pageref{OSUC-10-LGPL} for the \textbf{LGPL}
+      \textit{(= Lesser GNU Public License)}           
+    \item p.\ \pageref{OSUC-10-MIT} for the \textbf{MIT} License
+       \textit{(= Massachusetts Institute of Technology)} 
+    \item p.\ \pageref{OSUC-10-MPL} for \textbf{MPL}
+      \textit{(= Mozilla Public License)}     
+    \item p.\ \pageref{OSUC-10-MS-PL} for the \textbf{MS-PL}
+      \textit{(= Microsoft Public License)} 
+    \item p.\ \pageref{OSUC-10-PGL} for the \textbf{PGL}
+      \textit{(= Postgres License)} 
+    \item p.\ \pageref{OSUC-10-PHP} for the \textbf{PHP} license 
+  \end{itemize}
+
+\end{description}
+
+%\bibliography{../../../bibfiles/oscResourcesEn}

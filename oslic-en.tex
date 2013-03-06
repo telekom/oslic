@@ -18,8 +18,7 @@
 % [ File structure derived from 'mind your Scholar Research Framework' 
 %   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
 
-\documentclass[DIV=calc,BCOR=5mm,12pt,headings=small,oneside,abstract=true,
-toc=bib]{scrbook}
+\documentclass[DIV=calc,BCOR=5mm,12pt,headings=small,oneside,toc=bib]{scrbook}
 
 %%% (1) general configurations %%%
 \usepackage[utf8]{inputenc}
@@ -28,6 +27,11 @@ toc=bib]{scrbook}
 \usepackage[]{a4,ngerman}
 \usepackage[ngerman, english]{babel}
 \selectlanguage{english}
+
+%language specific quoting signs
+%default for language emglish is american style of quotes
+%\usepackage[english=british]{csquotes}
+\usepackage[english=american]{csquotes}
 
 % jurabib configuration
 \usepackage[see]{jurabib}
@@ -55,7 +59,6 @@ toc=bib]{scrbook}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
 
-
 %%% (4) general package activation %%%
 %\usepackage{utopia}
 %\usepackage{courier}
@@ -71,7 +74,15 @@ toc=bib]{scrbook}
 %- start(footnote-configuration)
 %  flush the cite numbers out of the vertical line and let
 %  the footnote text directly start in the left vertical line
-\usepackage[marginal]{footmisc}
+% \usepackage[marginal,hang]{footmisc}
+% \renewcommand\footnotemargin{1.5em}
+
+% formatting the footnote with koma script tools
+% \deffootnote[1em]{1.5em}{1em}{\textsuperscript{\thefootnotemark}}
+\deffootnote[1.5em]{1.5em}{1.5em}{\textsuperscript{\thefootnotemark)\ }}
+
+
+%\deffootnote[0em]{1.5em}{1em}{\textsuperscript{\thefootnotemark}}
 %- end(footnote-configuration)
 
 
@@ -101,16 +112,35 @@ toc=bib]{scrbook}
 % %- end(footnote-configuration)
 
 % - additional packages
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes,snakes}
+\usetikzlibrary{positioning}
+\usetikzlibrary{decorations.text}
+
+\usepackage{multirow}
+
+\usepackage{blindtext}
+\usepackage{caption}
+
+\usetikzlibrary{matrix}
+
+\usepackage{amsmath,amsfonts}
 \usepackage{amssymb}
 \usepackage{wasysym}
 \usepackage{pstricks, pst-node, pst-tree}
 \usepackage{chngcntr}
+\usepackage{nameref}
+
+
+
 \counterwithout{footnote}{chapter}
 
 \usepackage[intoc]{nomencl}
 \let\abbr\nomenclature
 % Modify Section Title of nomenclature
-\renewcommand{\nomname}{Periodicals, Shortcuts, and Overlapping Abbreviations}
+\renewcommand{\nomname}{Periodicals, Shortcuts, and Abbreviations}
 %\renewcommand{\nomname}{Periodika, ihre Kurzformen und generelle Abkürzungen}
 
 % insert point between abbrewviation and explanation
@@ -127,15 +157,24 @@ toc=bib]{scrbook}
 \begin{document}
 
 %% use all entries of the bliography
-\nocite{*}
+%% \nocite{*}
 
 %%-- start(titlepage)
-\titlehead{Release \input{release}}
-\subject{\small \itshape A Practical Guide for Developers, Managers, Companies,
-and OS Experts}
+\titlehead{Version \input{rel-number} % -- \input{rel-date}
+}
+\subject{\small \itshape A Practical Guide for Developers, Managers, OS Experts, 
+and Companies} 
+
 \title{Open Source License Compendium}
-\subtitle{How to to Use Open Source Software in a Regular Manner}
-\author{K. Reincke, J. Dobson, G. Sharpe, M. Kern\input{btexmat/oscLicenseFootnoteInc}}
+
+\subtitle{How to Achieve Open Source License Compliance\input{btexmat/oscLicenseFootnoteInc}}
+\author{
+Karsten Reincke\thanks{Deutsche Telekom AG, Products \& Innovation, 
+T-Online-Allee 1, 64295 Darmstadt}
+\and
+Greg Sharpe\thanks{Deutsche Telekom AG, Telekom Deutschland GmbH, 
+Landgrabenweg, Bonn}}
+
 \maketitle
 %%-- end(titlepage)
 
@@ -143,8 +182,8 @@ and OS Experts}
 \begin{flushright} 
 
 \parbox{100mm}{\itshape
-The Open Source Community is a swarm: it is stronger than a set of some
-accidentally selected experts. We are proud to get its' help. Gladly we thank
+The Open Source Community is a swarm: it is more powerful than a set of
+arbritarily selected experts. We are proud to have its support. Gladly we thank
 (in alphabetical order):
 }
 
@@ -152,11 +191,19 @@ accidentally selected experts. We are proud to get its' help. Gladly we thank
 \tiny
 \begin{flushright}
 Eitan Adler,\\
+Stefan Altmeyer,\\
+John Dobson, \\
+Steffen Härtlein, \\
+Ta'Id Holmes, \\
+Michael Kern,\\
+Michael Machado,\\
+Thorsten Müller,\\
+Oliver Podebradt,\\
 Thomas Quiehl,\\
 Peter Schichl,\\
 Helene Tamer,\\
-and all the \\
-other\ldots
+Bernhard Tsai,\\
+and all the others\ldots
 \end{flushright}
 }
 \end{flushright}
@@ -173,85 +220,60 @@ other\ldots
 \input{snippets/en/20120222-DisclaimerInc}
 
 %%%%%%%%%%%%
-\chapter{Introduction}
-\input{snippets/en/01-introduction/0100-chapterAbstractInc}
-\input{snippets/en/01-introduction/0101-chapterStartInc}
-
-%%%%%%%%%%%%%%%
-\chapter{Prolegomena}
-\input{snippets/en/02-prolegomena/0200-chapterAbstractInc}
-\input{snippets/en/02-prolegomena/0201-why01Inc}
-%
-
-\input{snippets/en/02-prolegomena/0202-APC-LicenseMissedInc}
-\input{snippets/en/02-prolegomena/0203-ifrossWithoutGuideInc}
-\input{snippets/en/02-prolegomena/0204-AnotherCompendiumTryInc}
-%  
-\input{snippets/en/02-prolegomena/0205-why02Inc}
-\input{snippets/en/02-prolegomena/0206-whatInc}
-% 
-\input{snippets/en/02-prolegomena/0207-PrintAndBibWebAndFreeWebEn}
-% 
+\input{snippets/en/01C-IntroductionInc}
 %\input{snippets/20110905-LitCheckInc}
 
 %%%%%%%%%%%%%%%
-\chapter{Open Source: Idea and Concepts}
-\input{snippets/en/03-osIdeaAndConcepts/0300-chapterAbstractInc}
-\input{snippets/en/03-osIdeaAndConcepts/0301-chapterStartInc}
-\input{snippets/en/03-osIdeaAndConcepts/0302-osOsiAndOsd}
-\input{snippets/en/03-osIdeaAndConcepts/0303-osHistory}
-\input{snippets/en/03-osIdeaAndConcepts/0304-fsVsOs}
+\input{snippets/en/02C-SameIdeaDifferentLicenseModelsInc}
+
 
 %%%%%%%%%%%%%%%
-\chapter{The Same Idea, Different Models of License}
-\input{snippets/en/04-sameIdeaDifferentLicenseModels/0400-chapterAbstractInc}
-\input{snippets/en/04-sameIdeaDifferentLicenseModels/0401-chapterStartInc}
+
+\input{snippets/en/03C-ImportantMinorPointsInc}
+\input{snippets/en/03C-osImportantMinorPoints/0301-osAndPatentsInc}
+\input{snippets/en/03C-osImportantMinorPoints/0302-derivativeWorksInc}
+\input{snippets/en/03C-osImportantMinorPoints/0303-licenseCompatibilityInc}
+\input{snippets/en/03C-osImportantMinorPoints/0304-osAndMoneyInc}
+
 
 %%%%%%%%%%%%%%%
-\chapter{Open Source: Important Minor Points}
-\input{snippets/en/05-osImportantMinorPoints/0500-chapterAbstractInc}
-\input{snippets/en/05-osImportantMinorPoints/0501-chapterStartInc}
-\input{snippets/en/05-osImportantMinorPoints/0502-derivativeWorks}
-\input{snippets/en/05-osImportantMinorPoints/0503-licenseCompatibility}
-\input{snippets/en/05-osImportantMinorPoints/0504-osAndMoney}
-\input{snippets/en/05-osImportantMinorPoints/0505-oslicAndPatents}
+\input{snippets/en/04C-OsucConceptAndTaxonomyInc}
 
 %%%%%%%%%%%%%%%
-\chapter{Open Source Use Cases: Concept and Taxonomy}
-\input{snippets/en/06-osUseCases/0600-chapterAbstractInc}
-\input{snippets/en/06-osUseCases/0601-chapterStartInc}
-\input{snippets/en/06-osUseCases/0602-chapterTheOslicUseCasesInc}
+\input{snippets/en/05C-OsToDoListFinderInc}
+
 
 %%%%%%%%%%%%%%%
-\chapter{Open Source Use Cases: Find the License Fulfilling To-do Lists}
-\input{snippets/en/07-osToDoListFinder/0700-chapterAbstractInc}
-\input{snippets/en/07-osToDoListFinder/0701-chapterStartInc}
+  
+\input{snippets/en/06C-OsFulfillmentByToDoListsInc}
+\input{snippets/en/06C-osFulfillmentByToDoLists/0601-apacheFulfillToDoList}
+\input{snippets/en/06C-osFulfillmentByToDoLists/0602-bsdFulfillToDoList}
+\input{snippets/en/06C-osFulfillmentByToDoLists/0603-mitFulfillToDoList}
+\input{snippets/en/06C-osFulfillmentByToDoLists/0604-msplFulfillToDoList}
+\input{snippets/en/06C-osFulfillmentByToDoLists/0605-pglFulfillToDoList}
+\input{snippets/en/06C-osFulfillmentByToDoLists/0606-phpFulfillToDoList}
+\input{snippets/en/06C-osFulfillmentByToDoLists/0607-eplFulfillToDoList}
+\input{snippets/en/06C-osFulfillmentByToDoLists/0608-euplFulfillToDoList}
+\input{snippets/en/06C-osFulfillmentByToDoLists/0609-mplFulfillToDoList}
+\input{snippets/en/06C-osFulfillmentByToDoLists/0610-lgplFulfillToDoList}
+\input{snippets/en/06C-osFulfillmentByToDoLists/0611-agplFulfillToDoList}
+\input{snippets/en/06C-osFulfillmentByToDoLists/0612-gplFulfillToDoList}
 
 %%%%%%%%%%%%%%%
-\chapter{Open Source License Fulfillment: Classified To-do Lists for \ldots}
-\input{snippets/en/08-osFulfillmentByToDoLists/0800-chapterAbstractInc}
-\input{snippets/en/08-osFulfillmentByToDoLists/0801-chapterStartInc}
-\input{snippets/en/08-osFulfillmentByToDoLists/0802-apacheFulfillToDoList}
-\input{snippets/en/08-osFulfillmentByToDoLists/0803-bsdFulfillToDoList}
-\input{snippets/en/08-osFulfillmentByToDoLists/0804-gplv2FulfillToDoList}
-\input{snippets/en/08-osFulfillmentByToDoLists/0805-mitFulfillToDoList}
+\input{snippets/en/07C-LegalEnvironmentsInc}
 
 %%%%%%%%%%%%%%%
-\chapter{Open Source Licenses and Their Legal Environments}
-\input{snippets/en/09-osLegalEnvironments/0900-chapterAbstractInc}
-\input{snippets/en/09-osLegalEnvironments/0901-chapterStartInc}
-
-%%%%%%%%%%%%%%%
-\chapter{Conclusion}
-\input{snippets/en/0a-Conclusion/0a00-chapterAbstractInc}
-\input{snippets/en/0a-Conclusion/0a01-chapterStartInc}
+\input{snippets/en/08C-ConclusionInc}
 
 %%%%%%%%%%%%%%%
 \chapter{Appendices}
-\input{snippets/en/0b-Appendices/0b00-chapterAbstractInc}
-\input{snippets/en/0b-Appendices/0b01-chapterStartInc}
 
-\input{snippets/en/0b-Appendices/0b02-MythsOfOsEn}
+\input{snippets/en/09C-Appendices/0901-BiblioHintInc}
+
+\input{snippets/en/09C-Appendices/0902-MythsOfOsInc}
+
+\input{snippets/en/09C-Appendices/0903-ProlegomenaInc}
+
 
 \small
 %\theendnotes

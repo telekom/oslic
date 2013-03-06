@@ -7,6 +7,7 @@
 *.toc
 *.url
 *.bak
+*.ilg
 .DS_Store
 .project
 .texlipse

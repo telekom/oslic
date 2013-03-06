@@ -1,3 +1,20 @@
+2012-02-16: closure of the integration of the results of the first call for reviews
+2012-02-11: integrated the received feedback
+2013-02-10: collection of
+- refactoring the structure
+- new introduction
+- improved classification chapter
+2013-02-01: collection of many improvements concerning
+- the license classification
+- the license finder
+- the set of evaluated licenses
+2012-08-17: preparation for release 0.5.0
+- added eclipse license integration structure
+- integrated dictionaries for using the eclipse spell checker methods
+2012-07-12: release 0.4.1
+- integrated csquotes into all pages
+- replaced qlqq and grqq by enquote{} for using
+  language specific quotation styles  
 2012-07-05: release 0.4.0
 - textual improvements
 2012-07-03: release 0.3.99

@@ -1,0 +1,559 @@
+% Telekom osCompendium 'for being included' snippet template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ Framework derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke 2012 CC BY 3.0  http://mycsrf.fodina.de/ ]
+%
+
+
+%% use all entries of the bibliography
+%\nocite{*}
+
+\section{BSD licensed software}
+
+As an approved open source license, the BSD license exists in two
+versions\footcite[Following the OSI, there is another 'ancient' 
+BSD license -- containing a fourth clause known as advertising clause -- which
+\enquote{(\ldots) officially was rescinded by the Director of the Office of
+Technology Licensing of the University of California on July 22nd, 1999}.
+ Cf.][\nopage wp. Because of that cancellation you can simply act according the
+ \textit{BSD 3-Clause license} if you have to fulfill the eldest BSD
+ license]{BsdLicense3Clause}. The latest release is the \textit{BSD 2-Clause
+ license}\footcite[cf.][\nopage wp]{BsdLicense2Clause}, the elder release is the
+ \textit{BSD 3-Clause license}\footcite[cf.][\nopage wp]{BsdLicense3Clause}.
+ The very little differences between the two versions have to be respected
+ exactly. Nevertheless, we could integrate the requirements into one to-do list
+ per use case.
+
+Explicitly, all BSD open source licenses 'only' focus on the (re-)distribution
+\textit{open source use cases} which we have specified by our token
+\textit{4others}. Conditions for the other use cases specified by the token
+\textit{4yourself} can be derived\footnote{For details of the \textit{open
+source use case tokens} see p.\ \pageref{OsucTokens}. For details of the
+\textit{open source use cases} based on these token see p.
+\pageref{OsucDefinitionTree} }. Additionally the BSD licenses consider the form
+of the distribution, esp.\ whether the work is distributed as a (set of) source
+code file(s) or as a (set of) the binary file(s). Use the following tree to find
+the BSD license fulfilling to-do lists.
+
+\tikzstyle{nodv} = [font=\small, ellipse, draw, fill=gray!10, 
+    text width=2cm, text centered, minimum height=2em]
+
+
+\tikzstyle{nods} = [font=\footnotesize, rectangle, draw, fill=gray!20, 
+    text width=1.2cm, text centered, rounded corners, minimum height=3em]
+
+\tikzstyle{nodb} = [font=\footnotesize, rectangle, draw, fill=gray!20, 
+    text width=2.2cm, text centered, rounded corners, minimum height=3em]
+    
+\tikzstyle{leaf} = [font=\tiny, rectangle, draw, fill=gray!30, 
+    text width=1.2cm, text centered, minimum height=6em]
+
+\tikzstyle{edge} = [draw, -latex']
+
+\begin{tikzpicture}[]
+
+\node[nodv] (l81) at (4,11.8) {BSD};
+
+\node[nodv] (l71) at (0,10.2) {3-Clause License};
+\node[nodv] (l72) at (6.5,10.2) {2-Clause License};
+
+
+\node[nodb] (l61) at (0,8.6) {\textit{recipient:} \\ \textbf{4yourself}};
+\node[nodb] (l62) at (6.5,8.6) {\textit{recipient:} \\ \textbf{4others}};
+
+\node[nodb] (l51) at (2.5,7) {\textit{state:} \\ \textbf{unmodified}};
+\node[nodb] (l52) at (9.3,7) {\textit{state:} \\ \textbf{modified}};
+
+\node[nods] (l41) at (1.8,5.4) {\textit{form:} \textbf{source}};
+\node[nods] (l42) at (3.6,5.4) {\textit{form:} \textbf{binary}};
+\node[nodb] (l43) at (6.5,5.4) {\textit{type:} \\ \textbf{proapse}};
+\node[nodb] (l44) at (12,5.4) {\textit{type:} \\ \textbf{snimoli}};
+
+
+\node[nods] (l31) at (5.4,3.8) {\textit{form:} \textbf{source}};
+\node[nods] (l32) at (7.2,3.8) {\textit{form:} \textbf{binary}};
+\node[nodb] (l33) at (10,3.8) {\textit{context:} \\ \textbf{independent}};
+\node[nodb] (l34) at (13.5,3.8) {\textit{context:} \\ \textbf{embedded}};
+
+\node[nods] (l21) at (9,2.2) {\textit{form:} \textbf{source}};
+\node[nods] (l22) at (10.8,2.2) {\textit{form:} \textbf{binary}};
+\node[nods] (l23) at (12.6,2.2) {\textit{form:} \textbf{source}};
+\node[nods] (l24) at (14.4,2.2) {\textit{form:} \textbf{binary}};
+
+\node[leaf] (l11) at (0,0) {\textbf{BSD-1} \textit{using software only
+for yourself}};
+
+\node[leaf] (l12) at (1.8,0) { \textbf{BSD-2} \textit{ distributing unmodified
+software as sources}};
+
+\node[leaf] (l13) at (3.6,0) { \textbf{BSD-3}  \textit{ distributing unmodified
+software as binaries}};
+
+\node[leaf] (l14) at (5.4,0) { \textbf{BSD-4}  \textit{ distributing modified
+program as sources}};
+
+\node[leaf] (l15) at (7.2,0) { \textbf{BSD-5}  \textit{ distributing modified
+program as binaries}};
+
+\node[leaf] (l16) at (9,0) { \textbf{BSD-6}  \textit{ distributing modified
+library as independent sources}};
+
+\node[leaf] (l17) at (10.8,0) { \textbf{BSD-7} \textit{distributing modified
+library as independent binaries}};
+
+\node[leaf] (l18) at (12.6,0) { \textbf{BSD-8}  \textit{distributing
+modified library as embedded sources}};
+
+\node[leaf] (l19) at (14.4,0) { \textbf{BSD-9}  \textit{ distributing modified
+library as embedded binaries}};
+
+\path [edge] (l81) -- (l71);
+\path [edge] (l81) -- (l72);
+\path [edge] (l71) -- (l61);
+\path [edge] (l71) -- (l62);
+\path [edge] (l72) -- (l61);
+\path [edge] (l72) -- (l62);
+\path [edge] (l61) -- (l11);
+\path [edge] (l62) -- (l51);
+\path [edge] (l62) -- (l52);
+\path [edge] (l51) -- (l41);
+\path [edge] (l51) -- (l42);
+\path [edge] (l52) -- (l43);
+\path [edge] (l52) -- (l44);
+\path [edge] (l41) -- (l12);
+\path [edge] (l42) -- (l13);
+\path [edge] (l43) -- (l31);
+\path [edge] (l43) -- (l32);
+\path [edge] (l44) -- (l33);
+\path [edge] (l44) -- (l34);
+\path [edge] (l31) -- (l14);
+\path [edge] (l32) -- (l15);
+\path [edge] (l33) -- (l21);
+\path [edge] (l33) -- (l22);
+\path [edge] (l34) -- (l23);
+\path [edge] (l34) -- (l24);
+\path [edge] (l21) -- (l16);
+\path [edge] (l22) -- (l17);
+\path [edge] (l23) -- (l18);
+\path [edge] (l24) -- (l19);
+
+\end{tikzpicture}
+
+\subsection{BSD-1: Using the software only for yourself}
+\label{OSUC-01-BSD} 
+\label{OSUC-03-BSD} 
+\label{OSUC-06-BSD}
+\label{OSUC-09-BSD}
+  
+\begin{description}
+\item[means] that you are going to use a received BSD software only for yourself
+and that you do not handover it to any 3rd party in any sense.
+\item[covers] OSUC-01, OSUC-03, OSUC-06, and OSUC-09\footnote{For details see pp.
+  \pageref{OSUC-01-DEF} - \pageref{OSUC-09-DEF}}
+\item[requires] no tasks in order to fulfill the conditions of the BSD license
+with respect to this use case:
+  \begin{itemize}
+    \item You are allowed to use any kind of BSD software in any sense and in
+    any context without any obligations premised you do not handover the
+    software to 3rd parties.
+  \end{itemize}
+\item[prohibits] nothing explicitly.
+\end{description}
+
+
+\subsection{BSD-2: Passing the unmodified software as source code}
+\label{OSUC-02-BSD} \label{OSUC-05-BSD} \label{OSUC-07-BSD} 
+
+\begin{description}
+\item[means] that you are going to distribute an unmodified version of the
+received BSD software to 3rd parties in form of a set of source code files or an
+integrated source code package\footnote{In this case it doesn't matter whether
+you  distribute a program, an application, a server, a snippet, a module, a
+library, or a plugin as an independent or an embedded unit}
+
+\item[covers] OSUC-02, OSUC-05, OSUC-07\footnote{For details see pp.\ 
+\pageref{OSUC-02-DEF} - \pageref{OSUC-07-DEF}}
+
+\item[requires] the following tasks in order to fulfill the license conditions
+\begin{itemize}
+  \item \textbf{[mandatorily:]} Ensure that the licensing elements -- esp.\ the
+  BSD license text, the specific copyright notice of the original author(s), and
+  the BSD disclaimer -- are retained in your package in the form you have
+  received them.
+  \item \textbf{[voluntarily:]} Let the documentation of your distribution
+  and/or your additional material also contain the original copyright notice, the
+  BSD conditions, and the BSD disclaimer.
+\end{itemize}
+
+\item[prohibits] nothing explicitly premised you are using the \emph{BSD 2 Clause
+License}. In contrast, the \emph{BSD 3 Clause License} explicitly prohibits to
+use the name of the licensing organization or the names of the licensing
+distributors to promote your own work.
+
+\end{description}
+
+\subsection{BSD-3: Passing the unmodified software as binary}
+
+\begin{description}
+\item[means] that you are going to distribute an unmodified version of the BSD
+received software to 3rd parties in form of a set of binary files or an
+integrated bi\-na\-ry package\footnote{In this case it doesn't matter whether
+you distribute a program, an application, a server, a snippet, a module, a
+library, or a plugin as an independent or an embedded unit}
+\item[covers] OSUC-02, OSUC-05, OSUC-07\footnote{For details see pp.
+\pageref{OSUC-02-DEF} - \pageref{OSUC-07-DEF}}
+\item[requires] the tasks in order to fulfill the license conditions
+\begin{itemize}
+  
+  \item  \textbf{[mandatory:]} Ensure that your distribution contains the
+  original copyright notice, the BSD license, and the BSD disclaimer in the form
+  you have received them. If you compile the binary file on the base of the
+  source code package and if this compilation does not also generate and
+  integrate the licensing files then create the copyright notice, the BSD
+  conditions, and the BSD disclaimer according to the form of the source code
+  package and insert these files into your distribution manually\footnote{For
+  implementing the handover of files correctly $\rightarrow$ OSLiC
+  \pageref{DistributingFilesHint}}.
+  
+  \item  \textbf{[mandatory:]} Ensure that the documentation of your
+  distribution and/or your additional material also contain the author specific
+  copyright notice, the BSD conditions, and the BSD disclaimer.
+\end{itemize}
+
+\item[prohibits] nothing explicitly premised you are using the \emph{BSD 2 Clause
+License}. In contrast, the \emph{BSD 3 Clause License} explicitly prohibits to
+use the name of the licensing organization or the names of the licensing
+distributors to promote your own work.
+
+\end{description}
+
+\subsection{BSD-4: Passing a modified program as source code}
+\label{OSUC-04-BSD}
+
+\begin{description}
+\item[means] that you are going to distribute a modified version of the received
+BSD program, application, or server (proapse) to 3rd parties in form of a set
+of source code files or an integrated source code package.
+\item[covers] OSUC-04\footnote{For details see pp.\ \pageref{OSUC-04-DEF}}
+\item[requires] the tasks in order to fulfill the license conditions
+\begin{itemize}
+  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\
+  the BSD license text, the specific copyright notice of the original author(s),
+  and the BSD disclaimer -- are retained in your package in the form you have
+  received them.
+  
+  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
+  your additional material also contain the original copyright notice, the BSD
+  conditions, and the BSD disclaimer.
+  
+  \item \textbf{[voluntary:]} It is a good practice of the open source
+  community, to let the copyright notice which is shown by the running program
+  also state that the program is licensed under the BSD license. Because you are
+  already modifying the program you can also add such a hint if the presented
+  original copyright notice lacks such a statement.
+\end{itemize}
+
+\item[prohibits] nothing explicitly premised you are using the \emph{BSD 2 Clause
+License}. In contrast, the \emph{BSD 3 Clause License} explicitly prohibits to
+use the name of the licensing organization or the names of the licensing
+distributors to promote your own work.
+
+\end{description}
+
+\subsection{BSD-5: Passing a modified program as binary}
+
+\begin{description}
+\item[means] that you are going to distribute a modified version of the received
+BSD pro\-gram, application, or server (proapse) to 3rd parties in form of a set
+of binary files or an integrated binary package.
+\item[covers] OSUC-04\footnote{For details see pp.\ \pageref{OSUC-04-DEF}}
+\item[requires] the tasks in order to fulfill the license conditions
+\begin{itemize}
+
+  \item  \textbf{[mandatory:]} Ensure that your distribution contains the
+  original copyright notice, the BSD license, and the BSD disclaimer in the form
+  you have received them. If you compile the binary file on the base of the
+  source code package and if this compilation does not also generate and
+  integrate the licensing files then create the copyright notice, the BSD
+  conditions, and the BSD disclaimer according to the form of the source code
+  package and insert these files into your distribution manually\footnote{For
+  implementing the
+  handover of files correctly $\rightarrow$ OSLiC
+  \pageref{DistributingFilesHint}}.
+
+  \item  \textbf{[mandatory:]} Ensure that the documentation of your
+  distribution and/or your additional material also contain the author specific
+  copyright notice, the BSD conditions, and the BSD disclaimer.
+  
+  \item \textbf{[voluntary:]} It is a good practice of the open source
+  community, to let the copyright notice which is shown by the running program
+  also state that the program is licensed under the BSD license. Because you are
+  already modifying the program you can also add such a hint if the presented
+  original copyright notice lacks such a statement.
+\end{itemize}
+
+\item[prohibits] nothing explicitly premised you are using the \emph{BSD 2 Clause
+License}. In contrast, the \emph{BSD 3 Clause License} explicitly prohibits to
+use the name of the licensing organization or the names of the licensing
+distributors to promote your own work.
+
+\end{description}
+
+\subsection{BSD-6: Passing a modified library as independent source code}
+\label{OSUC-08-BSD}
+\begin{description}
+\item[means] that you are going to distribute a modified version of the received
+BSD code snippet, module, library, or plugin (snimoli) to 3rd parties in form
+of a set of source code files or an integrated source code package, but without
+embedding it into another larger software unit.
+\item[covers] OSUC-08\footnote{For details see pp.\ \pageref{OSUC-08-DEF}}
+\item[requires] the tasks in order to fulfill the license conditions
+\begin{itemize}
+  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
+  BSD license text, the specific copyright notice of the original author(s), and
+  the BSD disclaimer -- are retained in your package in the form you have
+  received them.
+  \item \textbf{[voluntary:]} Let the documentation of your distribution
+  and/or your additional material also contain the original copyright notice, the
+  BSD conditions, and the BSD disclaimer.
+\end{itemize}
+
+\item[prohibits] nothing explicitly premised you are using the \emph{BSD 2 Clause
+License}. In contrast, the \emph{BSD 3 Clause License} explicitly prohibits to
+use the name of the licensing organization or the names of the licensing
+distributors to promote your own work.
+
+\end{description}
+
+
+\subsection{BSD-7: Passing a modified library as independent binary}
+
+\begin{description}
+\item[means] that you are going to distribute a modified version of the received
+BSD code snippet, module, library, or plugin (snimoli) to 3rd parties in form
+of a set of binary files or an integrated binary package but without embedding
+it into another larger software unit.
+\item[covers] OSUC-08\footnote{For details see pp.\ \pageref{OSUC-08-DEF}}
+\item[requires] the tasks in order to fulfill the license conditions
+\begin{itemize}
+   \item  \textbf{[mandatory:]} Ensure that your distribution contains the
+  original copyright notice, the BSD license, and the BSD disclaimer in the form
+  you have received them. If you compile the binary file on the base of the
+  source code package and if this compilation does not also generate and
+  integrate the licensing files, then create the copyright notice, the BSD
+  conditions, and the BSD disclaimer according to the form of the source code
+  package and insert these files into your distribution manually\footnote{For
+  implementing the handover of files correctly $\rightarrow$ OSLiC
+  \pageref{DistributingFilesHint}}.
+  \item  \textbf{[mandatory:]} Ensure that the documentation of your
+  distribution and/or your additional material also contain the author specific
+  copyright notice, the BSD conditions, and the BSD disclaimer.
+\end{itemize}
+
+\item[prohibits] nothing explicitly premised you are using the \emph{BSD 2 Clause
+License}. In contrast, the \emph{BSD 3 Clause License} explicitly prohibits to
+use the name of the licensing organization or the names of the licensing
+distributors to promote your own work.
+
+\end{description}
+
+\subsection{BSD-8: Passing a modified library as embedded source code}
+\label{OSUC-10-BSD}
+\begin{description}
+\item[means] that you are going to distribute a modified version of the received
+BSD code snippet, module, library, or plugin (snimoli) to 3rd parties in form
+of a set of source code files or an integrated source code package together with
+another larger software unit which contains this code snippet, module, library,
+or plugin as an embedded component.
+\item[covers] OSUC-10\footnote{For details see pp.\ \pageref{OSUC-10-DEF}}
+\item[requires] the tasks in order to fulfill the license conditions
+\begin{itemize}
+  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
+  BSD license text, the specific copyright notice of the original author(s), and
+  the BSD disclaimer -- are retained in your package in the form you have
+  received them.
+  \item \textbf{[voluntary:]} Let the documentation of your distribution
+  and/or your additional material also contain the original copyright notice, the
+  BSD conditions, and the BSD disclaimer.
+ \item \textbf{[voluntary:]} It is a good practice of the open source
+  community, to let the copyright notice which is shown by the running program
+  also state that it contains components licensed under the BSD license. Because
+  you are embedding this snimoli into a larger software unit, you are
+  developing this larger unit. Hence, you can also expand the copyright notice
+  of this larger unit by such a hint to its BSD components.
+  
+  \item \textbf{[voluntary:]} Arrange your source code distribution so that the
+  the licensing elements -- esp.\ the BSD license text, the specific copyright
+  notice of the original author(s), and the BSD disclaimer -- clearly refer
+  only to the embedded library and do not disturb the licensing of your own
+  overarching work. It's a good tradition to keep the embedded components like
+  libraries, modules, snippets, or plugins in specific directory which contains
+  also all additional licensing elements.
+  
+\end{itemize}
+
+\item[prohibits] nothing explicitly premised you are using the \emph{BSD 2 Clause
+License}. In contrast, the \emph{BSD 3 Clause License} explicitly prohibits to
+use the name of the licensing organization or the names of the licensing
+distributors to promote your own work.
+
+\end{description}
+
+
+\subsection{BSD-9: Passing a modified library as embedded binary}
+
+\begin{description}
+\item[means] that you are going to distribute a modified version of the received
+BSD code snippet, module, library, or plugin to 3rd parties in form of a set of
+binary files or an integrated binary package together with another larger
+software unit which contains this code snippet, module, library, or plugin as
+an embedded component.
+\item[covers] OSUC-10\footnote{For details see pp.\ \pageref{OSUC-10-DEF}}
+\item[requires] the tasks in order to fulfill the license conditions
+\begin{itemize}
+  \item  \textbf{[mandatory:]} Ensure that your distribution contains the
+  original copyright notice, the BSD license, and the BSD disclaimer in the form
+  you have received them. If you compile the binary file on the base of the
+  source code package and if this compilation does not also generate and
+  integrate the licensing files, then create the copyright notice, the BSD
+  conditions, and the BSD disclaimer according to the form of the source code
+  package and insert these files into your distribution manually\footnote{For
+  implementing the handover of files correctly $\rightarrow$ OSLiC
+  \pageref{DistributingFilesHint}}.
+  \item  \textbf{[mandatory:]} Ensure that the documentation of your
+  distribution and/or your additional material also contain the author specific
+  copyright notice, the BSD conditions, and the BSD disclaimer.
+ \item \textbf{[voluntary:]} It is a good practice of the open source
+  community, to let the copyright notice which is shown by the running program
+  also state that it contains components licensed under the BSD license. Because
+  you are embedding this snimoli into a larger software unit, you are
+  developing this larger unit. Hence, you can also expand the copyright notice
+  of this larger unit by such a hint to its BSD components.
+  
+  \item \textbf{[voluntary:]} Arrange your binary distribution so that the
+  licensing elements -- esp.\ the BSD license text, the specific copyright
+  notice of the original author(s), and the BSD disclaimer -- clearly refer
+  only to the embedded library and do not disturb the licensing of your own
+  overarching work. It's a good tradition to keep the librabries, modules,
+  snippet, or plugins in specific directiers which contain also all licensing
+  elements.
+\end{itemize}
+
+\item[prohibits] nothing explicitly premised you are using the \emph{BSD 2 Clause
+License}. In contrast, the \emph{BSD 3 Clause License} explicitly prohibits to
+use the name of the licensing organization or the names of the licensing
+distributors to promote your own work.
+
+\end{description}
+
+\subsection{Discussions and Explanations}
+
+The \textit{BSD 2-Clause license} has a simple structure: In the
+beginning, it generally \enquote{(permits) [the] redistribution and [the] use in
+source and binary forms, with or without modification, [\ldots]}, if one
+fulfills the two rules of the license\footcite[cf.][\nopage
+wp]{BsdLicense2Clause}. The first rule concerns the (re)distribution in form of
+source code, the second the (re)distribution of binary packages. Here are some
+explanations why we translated the rules into which sets of executable tasks:
+
+\begin{itemize}
+\item For the \enquote{redistribution of source code} the license requires,
+that the package must \enquote{ [\ldots] retain the above copyright notice, this
+list of conditions and the following disclaimer}\footcite[cf.][\nopage
+wp]{BsdLicense2Clause}. Hence, you are not allowed, to modify any of the
+copyright notes which are already embedded in the received (source) files. And
+from a logical point of view, there must exist an explicit or implicit
+assertion that the software is licensed under the \textit{BSD 2-Clause
+license}\footcite[The BSD license requires that a re-distributed software
+package must contain the (package specific) copyright notice, the (license
+specific) conditions and the BSD disclaimer. (cf.][\nopage wp.) You might ask
+what you should do, if these elements are missed in the package you received. If so,
+the package you received had not been licensed adequately. Hence, you do not know
+reliably whether you have received it under a BSD license. In other words: If
+you have received a BSD licensed software package, it must contain sufficient
+license fulfilling elements, or it is not a BSD licensed
+software]{BsdLicense2Clause}. This is often implemented by simply adding a copy
+of the license into the package. Hence, you are furthermore not allowed to
+modify these files or corresponding text snippets. For our purposes, we
+translated the bans into the following executable task:
+
+\begin{quote}\textit{Ensure that the licensing elements -- esp.\ the BSD license
+text, the specific copyright notice of the original author(s), and the BSD
+disclaimer -- are retained in your package in the form you have received
+them.}\end{quote}
+
+\item For the redistribution in form of binary files, the license requires, that
+the licensing elements must be \enquote{[\ldots] (reproduced) in the
+documentation and/or other materials provided with the
+distribution}\footcite[cf.][\nopage wp]{BsdLicense2Clause}. Hence, this is not
+required as a necessary condition for the (re)distribution as source code
+package. But nevertheless, even for a distribution in form of source code, it is
+often possible to fulfill this rule too -- e.g.\ if you offer an own download
+site for source code packages. In such cases, it is a sign of respect, to
+mention the licensing not only inside of the packages, but also in the text of
+your site. Because of that, we added the following voluntary task for all BSD
+open source use cases which deal with the redistribution in form of source code:
+
+\begin{quote}\textit{Let the documentation of your distribution and/or your
+additional material also contain the original copyright notice, the BSD
+conditions, and the BSD disclaimer.}\end{quote}
+
+\item Naturally, because the reproduction of the licensing elements \enquote{in
+the documentation and/or other materials provided with the distribution}
+is explicitly required for the \enquote{redistribution in binary
+form}\footcite[cf.][\nopage wp]{BsdLicense2Clause}, we had to rewrite the
+facultative task for a distribution in form of source code as a mandatory task
+for all BSD open source use cases which deals with the redistribution in binary
+form:
+
+\begin{quote}\textit{Ensure that the documentation of your distribution and/or
+your additional material also contains the author specific copyright notice, the
+BSD conditions, and the BSD disclaimer.}\end{quote}
+
+\item In case of (re)distributing the program in form of binary files, it is
+sometimes not enough, to pass the licensing elements as one has received them.
+If you compile the binary package from the source code, it is not necessarily
+true, that the licensing elements are also automatically generated and embedded
+into the 'binary package'. But nevertheless, you have to add the copyright
+notice, the conditions and the disclaimer to this package for acting according
+to the BSD license. Therefore we chose the following form of an executable,
+license fulfilling task for all binary oriented distributions:
+
+\begin{quote}\textit{Ensure that your distribution contains the original
+copyright notice, the BSD license, and the BSD disclaimer in the form you have
+received them. If you compile the binary file on the base of the source code
+package and if this compilation does not also generate and integrate the
+licensing files, then create the copyright notice the BSD conditions, and the
+BSD disclaimer according to the form of the source code package and insert these
+files into your distribution manually.}\end{quote}
+
+\item Finally, we wished to insert a hint to the general (open source)
+tradition, to mention the used open source software and their licenses as a
+remark of the 'copyright widget' of an application. This is not required by the
+BSD license. But it is a general, good tradition. Naturally, because of the
+freedom to use and modify open source software and to redistribute a modified
+version of it, you are also allowed to insert such references, even if they are
+missing. Therefore we added a third voluntary license tradition fulfilling
+task for all relevant open source use cases.
+
+\end{itemize}
+
+
+
+
+%\bibliography{../../../bibfiles/oscResourcesEn}

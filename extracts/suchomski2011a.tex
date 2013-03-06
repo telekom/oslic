@@ -35,6 +35,10 @@
 \usepackage[english, ngerman]{babel}
 \selectlanguage{ngerman}
 
+%language specific quoting signs
+%default for language emglish is american style of quotes
+\usepackage{csquotes}
+
 % jurabib configuration
 \usepackage[see]{jurabib}
 \bibliographystyle{jurabib}
@@ -112,9 +116,9 @@ und bei OSS mit Patentklauseln das alles explizit.
 \\
 \noindent
 \ldots analyzes the meaning of 'gaining' and 'losing' a patent based on OSS:
-Firstly (in Germany) patents can be registers on the base of OSS. But mostly
+First, (in Germany) patents can be registers on the base of OSS. But mostly
 it's difficult to prevent their registration with a reference to an already
-existing OS software. Secondly in general a company distributes the right to use
+existing OS software. Second, in general a company distributes the right to use
 its' patents with distributing the OSS: In case of Non-Copyleft software the
 right is granted implicitly by granting the right to use the software. In case
 of copyleft software the patent must also be given free because of the
@@ -140,61 +144,61 @@ Zuerst entsteht die Frage, ob man als Lizenznehmer einer Open Source Software
 basierend auf dieser Software überhaupt ein Patent anmelden könne, weil es ja
 gerade der Lizenzgeber sei, der die urspüngliche 'Idee' programmiert
 hat\footcite[vgl.][21]{Suchomski2011a}. Dies wird in Deutschland über das
-\glqq{}First-to-File-Prinzip\grqq{}
+\enquote{First-to-File-Prinzip}
 ermöglicht\footcite[vgl.][21]{Suchomski2011a} - verbunden mit der Tatsache, dass
 in Deutschland bei einer Patentanmeldung nur das technische Prinzip dargestellt
 und der Code gar nicht vorgelegt werden
 müsse\footcite[vgl.][26]{Suchomski2011a}. Und eben darauf beruhe (wenigstens
-teilweise) \glqq{}rechtswissenschftlich und praktisch\grqq{} gesehen die
-\glqq{}[\ldots] oft geäußerte Angst der OSS Comnmunity vor
-Softwarepatenten\grqq{}\footcite[vgl.][27]{Suchomski2011a}: 
+teilweise) \enquote{rechtswissenschftlich und praktisch} gesehen die
+\enquote{[\ldots] oft geäußerte Angst der OSS Comnmunity vor
+Softwarepatenten}\footcite[vgl.][27]{Suchomski2011a}: 
 
 \begin{quote}
-\glqq{}Durch die Verbreitung des Quellcodes ohne gleichzeitige Patentanmeldung
+\enquote{Durch die Verbreitung des Quellcodes ohne gleichzeitige Patentanmeldung
 wird ein Anreiz auf für unrechtmäßige Patentgesuche Dritter geschaffen.
-\grqq{}\footcite[vgl.][27]{Suchomski2011a}
+}\footcite[vgl.][27]{Suchomski2011a}
 \end{quote}
 
 \subsection{OS basierte Patentbekämpfung}
 Auch umgekehrt sei es mit der Wirksamkeit von OSS nicht so gut bestellt:
-Grundsätzlich gelten \glqq{}Quellen aus dem Internet [\ldots] als
+Grundsätzlich gelten \enquote{Quellen aus dem Internet [\ldots] als
 manipulierbar und können die gesetztlichen Vermutung zugunsten der
 Neuheit der Erfindung [\ldots] nicht
-überwinden\grqq{}\footcite[vgl.][27]{Suchomski2011a}. Das bedeutet, dass ein
+überwinden}\footcite[vgl.][27]{Suchomski2011a}. Das bedeutet, dass ein
 Hinweis auf existierende Open Source Software die Annahme eines Patentantrages
 nicht verhindern könne, weil - nach Argumentation des Bundespatentgerichts -
-\glqq{}[\ldots] digitale Informationen - insbesondere aus dem Internet
+\enquote{[\ldots] digitale Informationen - insbesondere aus dem Internet
 als Hauptverbreitungsmedium - nur selten als Beweis für die
 Neuheitsschädlichkeit zugelassen werden, das etwaige Zeitangaben
-manipulierbar (seien)\grqq{}\footcite[vgl.][33]{Suchomski2011a}.
+manipulierbar (seien)}\footcite[vgl.][33]{Suchomski2011a}.
 
 \subsection{Erteilung der Nutzungsrechte}
 Allerdings erteilt jede Firma bei der Weitergabe der Software ein Nutzungsrecht
-auch an den Patenten, wobei \glqq{}[\ldots] grundsätzlich von einer
-negativen Patentlizenz [\ldots] auszugehen (sei)\grqq{}, sobald \glqq{}[\ldots]
+auch an den Patenten, wobei \enquote{[\ldots] grundsätzlich von einer
+negativen Patentlizenz [\ldots] auszugehen (sei)}, sobald \enquote{[\ldots]
 eine OSS-Lizenz durch einen derzeitigen oder zukünftigen Patentinhaber
-angenommen wird\grqq{}\grqq{}\footcite[vgl.][79]{Suchomski2011a}. Bei einer
-'negativen Patentlizenz' \glqq{}[\ldots] duldet der Patentinhaber die
+angenommen wird}\footcite[vgl.][79]{Suchomski2011a}. Bei einer
+'negativen Patentlizenz' \enquote{[\ldots] duldet der Patentinhaber die
 Nutzungen durch priviligierte Personengruppen, soweit sie über die
-Scgranken des Patentrechts hinaustreten\grqq{}. Und sie beinhaltet
-\glqq{}einen vertraglichen Verzicht auf
-Klage\grqq{}\footcite[vgl.][69]{Suchomski2011a}
+Scgranken des Patentrechts hinaustreten}. Und sie beinhaltet
+\enquote{einen vertraglichen Verzicht auf
+Klage}\footcite[vgl.][69]{Suchomski2011a}
 
 \subsubsection{bei OSS ohne Copyleft-Klausel}
 bei OSS ohne Copyleft-Klausel implizit über das Einräumen der
 Nutzungsrechte\footcite[vgl.][117]{Suchomski2011a}: Hier wird  natürlich
 nur der rechtliche interessante Fall analysiert, dass jemand OSS nutzt =
 ein Lizenznehmer ist, und gleichzeitig ein Patent besitzt oder anmeldet, dass
-der Nutzung dieser Software entgegenstünde: \glqq{}Durch die intendierte
-Gleichbehandlung aller Lizenznehmer [\ldots]\grqq{}, wie sie in den OS Lizenzen
-ausgedrückt wird, \glqq{}[\ldots] wird auf objektiv ersichtlich, dass
+der Nutzung dieser Software entgegenstünde: \enquote{Durch die intendierte
+Gleichbehandlung aller Lizenznehmer [\ldots]}, wie sie in den OS Lizenzen
+ausgedrückt wird, \enquote{[\ldots] wird auf objektiv ersichtlich, dass
 dieser Rahmen allen Entwicklern - Patentinhabern und Nicht-Patentinhabern
-- zustehen soll\grqq{}\footcite[vgl.][118]{Suchomski2011a}: 
+- zustehen soll}\footcite[vgl.][118]{Suchomski2011a}: 
 
 \begin{quote}
-\glqq{}Als Lizenznehmer darf der Patentinhaber diesen Vetragszweck daher im Wege
+\enquote{Als Lizenznehmer darf der Patentinhaber diesen Vetragszweck daher im Wege
 von Treu und Glauben nicht konterkarieren
-\grqq{}\grqq{}\footcite[][118]{Suchomski2011a}
+}\footcite[][118]{Suchomski2011a}
 \end{quote}
 
 Das ist eine gute Nachricht: Es ist mithin nicht rechtens, bestehende Open
@@ -205,15 +209,15 @@ patentrechtlich zu verklagen.
 \subsubsection{bei OSS mit Copyleft-Klausel}
 bei Software mit Copyleft-Klauseln indirekt über die Pflicht zur Freigabe der
 Veränderungen, was sich aus der Pflicht zu Veröffentlichung ergibt:
-\glqq{}Die hiermit verbundene konkludenten Einräumung der negativen
+\enquote{Die hiermit verbundene konkludenten Einräumung der negativen
 Patentlizenz an seine Abnehmer gestaltet sich [\ldots] wie bei den
-Non-Copyleft-Lizenzen\grqq{}\footcite[vgl.][118]{Suchomski2011a}
+Non-Copyleft-Lizenzen}\footcite[vgl.][118]{Suchomski2011a}
 
 \subsubsection{bei OSS mit Patentklauseln}
-und bei OSS mit Patentklauseln das alles explizit, denn \glqq{}was
+und bei OSS mit Patentklauseln das alles explizit, denn \enquote{was
 ansonsten auch ohne diese Regelgung für die Verbreitung von Software
 durch die Patentinhaber gegolten hätte, wird damit nochmals
-festgehalten\grqq{}\footcite[vgl.][128]{Suchomski2011a}
+festgehalten}\footcite[vgl.][128]{Suchomski2011a}
 
 \small
 \bibliography{../bibfiles/oscResourcesDe}

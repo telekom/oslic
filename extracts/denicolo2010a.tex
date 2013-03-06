@@ -32,8 +32,12 @@
 
 %%% (2) language specific configurations %%%
 \usepackage[]{a4,ngerman}
-\usepackage[ngerman, english]{babel}
-\selectlanguage{english}
+\usepackage[english,ngerman]{babel}
+\selectlanguage{ngerman}
+
+%language specific quoting signs
+%default for language emglish is american style of quotes
+\usepackage{csquotes}
 
 % jurabib configuration
 \usepackage[see]{jurabib}
@@ -122,63 +126,63 @@ Rechtsystem bzgl. des Urheberrechts, des Vertragsrechts und des Haftungsrechts.
 
 (1) Für das Urheberrecht konstiert De Nicolò eine große Ähnlichkeit zwischen
 deutschem und italienischem Verständnis: obwohl man von einem
-\glqq{}wirtschaftlich befremdlichen Open-Source-Modell\grqq{} ausgehen könne,
-\glqq{}[\ldots] (stelle) keine der beiden Rechtsordnungen den urheberechtlichen
-Schutz grundsätzlich in Frage\grqq{}\footcite[vgl.][98]{DeNicolo2010a}.
+\enquote{wirtschaftlich befremdlichen Open-Source-Modell} ausgehen könne,
+\enquote{[\ldots] (stelle) keine der beiden Rechtsordnungen den urheberechtlichen
+Schutz grundsätzlich in Frage}\footcite[vgl.][98]{DeNicolo2010a}.
 
 (2) Für das Vertragsrecht stelle sich die Lage komplizierter dar. De Nicolò
-konstatiert, dass in Deutschland bei echten \glqq{}Copyleft-Lizenzen\grqq{} ein
-\glqq{}Tauschvertrag\grqq{} zustandekomme, bei schwächeren OS-Lizenzen hingegen
-eine \glqq{}Schenkung\grqq{}. Für Italien sei die Schenkung jedoch
+konstatiert, dass in Deutschland bei echten \enquote{Copyleft-Lizenzen} ein
+\enquote{Tauschvertrag} zustandekomme, bei schwächeren OS-Lizenzen hingegen
+eine \enquote{Schenkung}. Für Italien sei die Schenkung jedoch
 problematisch\footcite[vgl.][144]{DeNicolo2010a}
 
-(3) Beim Haftungsrecht \glqq{}(seien) die Unterschiede \ldots in beiden
-Rechtsordnungen gering\grqq{}. Hier wie das gehe es um \glqq{}die Begrenzung der
-Haftung und Gewährleistung\grqq{}\footcite[vgl.][160]{DeNicolo2010a}
+(3) Beim Haftungsrecht \enquote{(seien) die Unterschiede \ldots in beiden
+Rechtsordnungen gering}. Hier wie das gehe es um \enquote{die Begrenzung der
+Haftung und Gewährleistung}\footcite[vgl.][160]{DeNicolo2010a}
  
 \section{Specific Aspects}
 
 \subsection{Definition proprietäre Software}
 Nach Auflistung der üblichen Begriffsbestimmungen bzgl Open-Source-Software und
-Freier Software\footcite[vgl.][11]{DeNicolo2010a}, dem \glqq{}Freiheitsbegriff
-der FSF\grqq{}\footcite[vgl.][11f]{DeNicolo2010a}, den
+Freier Software\footcite[vgl.][11]{DeNicolo2010a}, dem \enquote{Freiheitsbegriff
+der FSF}\footcite[vgl.][11f]{DeNicolo2010a}, den
 Debian-Richtlinien\footcite[vgl.][12]{DeNicolo2010a} und der Definition, wie sie
 von der Open Source Initiative vorgelegt
 wird\footcite[vgl.][13f]{DeNicolo2010a}, liefert De Nicolò den interessanten
-Versuch \glqq{}proprietäre Software\grqq{} dagegen abzugrenzen. In der Tat sei
-das nur ex negativo möglich: \glqq{}\ldots unter proprietäerer Software (werde)
+Versuch \enquote{proprietäre Software} dagegen abzugrenzen. In der Tat sei
+das nur ex negativo möglich: \enquote{\ldots unter proprietäerer Software (werde)
 jede Art von Software verstanden, die nicht vollumfänglich die Kriterien der
-'Open Source Definition' erfüllt. Der Begriff \glqq{}proprietär\grqq{} sei eine
-\glqq{}Neuschöpfung\grqq{}: \glqq{}Im wörtlichen Sinne\grqq{} meiner er die
-Software, \glqq{}[\ldots] die noch durch ein (Eigentums)Recht geschützt
+'Open Source Definition' erfüllt}. Der Begriff \enquote{proprietär} sei eine
+\enquote{Neuschöpfung}: \enquote{Im wörtlichen Sinne} meine er die
+Software, \enquote{[\ldots] die noch durch ein (Eigentums)Recht geschützt
 ist und bei der (noch) nicht auf ein Urheberrecht verzichtet worden
-ist\grqq{}\footcite[vgl.][14f]{DeNicolo2010a}.
+ist}\footcite[vgl.][14f]{DeNicolo2010a}.
 
 \subsection{Open Source Software versus Free Software}
 
 Anders als OS Community erklärt De Nicolò in Anlehnung an Metzger/Jaeger,
-\glqq{}ein wesentlicher Bedeutungsunterschied (sei) nicht
-erkennbar\grqq{}\footcite[vgl.][11]{DeNicolo2010a}. Allerdings bleibt seine
+\enquote{ein wesentlicher Bedeutungsunterschied (sei) nicht
+erkennbar}\footcite[vgl.][11]{DeNicolo2010a}. Allerdings bleibt seine
 Spezifikation insgesamt sehr an der Oberfläche.
 
 \subsection{Lizenzklassifikation}
 
-Bei des \glqq{}OSS-Lizenzarten\grqq{} unterscheidet De Nicolò nur zwischen den
-\glqq{}Copyleft-Lizenzen\grqq{} und den \glqq{}Non-Copyleft-Lizenzen\grqq{}: 
+Bei des \enquote{OSS-Lizenzarten} unterscheidet De Nicolò nur zwischen den
+\enquote{Copyleft-Lizenzen} und den \enquote{Non-Copyleft-Lizenzen}: 
 
-Mit den \glqq{}Copyleft-Lizenzen\grqq{} würden zwar \glqq{}[\ldots] im weiten
-Umfang Nutzungsrechte eingeräumt [\ldots]\grqq{}, aber zugleich würden dem
-\glqq{}Lizenznehmer\grqq{} die \glqq{}Verpflichtung\grqq{} auferlegt,
-\glqq{}[\ldots] Änderungen und Erweiterungen des Programms unter den gleichen
-Lizenzbedingungen zu veröffentlichen\grqq{}. Dieses sei eine Klausel, die
-\glqq{}[\ldots] oft (auch im negativen Sinn) als viral berzeichnet
-(werde)\grqq{}\footcite[vgl.][19f]{DeNicolo2010a}.
+Mit den \enquote{Copyleft-Lizenzen} würden zwar \enquote{[\ldots] im weiten
+Umfang Nutzungsrechte eingeräumt [\ldots]}, aber zugleich würden dem
+\enquote{Lizenznehmer} die \enquote{Verpflichtung} auferlegt,
+\enquote{[\ldots] Änderungen und Erweiterungen des Programms unter den gleichen
+Lizenzbedingungen zu veröffentlichen}. Dieses sei eine Klausel, die
+\enquote{[\ldots] oft (auch im negativen Sinn) als viral berzeichnet
+(werde)}\footcite[vgl.][19f]{DeNicolo2010a}.
 
-Den \glqq{}Copyleft-Lizenzen\grqq{} stünden dann die
-\glqq{}Non-Copyleft-Lizenzen\grqq{} gegenüber, die zwar die gleichen
-Nutzungsrechte einräumen, denen andererseits jedoch \glqq{}[\ldots] die
+Den \enquote{Copyleft-Lizenzen} stünden dann die
+\enquote{Non-Copyleft-Lizenzen} gegenüber, die zwar die gleichen
+Nutzungsrechte einräumen, denen andererseits jedoch \enquote{[\ldots] die
 Verpflichtung (fehle), den Pprogrammcode unter den gleichen Lizenzbedingungen zu
-lizenzieren\grqq{}\footcite[vgl.][20]{DeNicolo2010a}.
+lizenzieren}\footcite[vgl.][20]{DeNicolo2010a}.
 
 Diese Systematik vereinfacht die Dinge zu sehr. Als viral werden gemeinhin
 die Lizenzen bezeichnet, die, sofern der Code in größere eigene Werke eingebaut

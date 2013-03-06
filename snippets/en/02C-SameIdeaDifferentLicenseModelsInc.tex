@@ -1,0 +1,1538 @@
+% Telekom osCompendium 'for being included' snippet template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ Framework derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke 2012 CC BY 3.0  http://mycsrf.fodina.de/ ]
+%
+
+\chapter{Open Source: The Same Idea, Different Licenses}\label{sec:LicenseTaxonomies}
+
+%% use all entries of the bibliography
+%\nocite{*}
+\footnotesize \begin{quote}\itshape This chapter describes different license
+models which follow the common idea of free open source software. We want to
+discuss existing ways of grouping licenses to underline the limits of building
+such clusters: These groups are often used as 'virtual prototypic licenses'
+which shall deliver a simplified view at the conditions how to act according to
+the respective real license instances. But one has to meet the requirements of a
+specific license, not one's own generalized idea of a set of licenses.
+Nonetheless, also we offer a new structuring view into the world of the open
+source licenses. We will use a novel set of grouping criteria by referring
+to the common intended purpose of licenses: each license is designed to protect
+something or someone against something or someone. Following this pattern, we
+can indeed summarize all Open Source Licenses in a comparable way.
+\end{quote}
+\normalsize{}
+
+Grouping open source licenses is commonly done. Even the set of the \emph{open
+source li\-cen\-ses}\footcite[cf.][\nopage wp]{OSI2012b} itself is already a
+cluster being established by a set of grouping criteria: The
+\enquote{distribution terms} of each software license that intends to become an
+open source license, \enquote{[\ldots] must comply with the [\ldots] criteria}
+of the \emph{Open Source De\-fi\-ni\-tion}\footcite[cf.][\nopage wp]{OSI2012a},
+maintained by the \emph{Open Source Initiative}\footcite[cf.][\nopage
+wp]{OSI2012c} and often abbreviated as \emph{OSD}. So, this \emph{OSD}
+demarcates 'the group of [potential] open source licenses' against 'the group of
+not open sources licenses'\footnote{More precisely: meeting the
+OSD is only a necessary condition for becoming an \emph{open source license}. The
+sufficient condition for becoming an \emph{open source license}, is the approval
+by the OSI which offers a process for the officially approval of \emph{open
+source license} (\cite[cf.][\nopage wp.]{OSI2012d}).}.
+
+Another way to cluster the \emph{Free Software Licenses} is specified by the
+\enquote{Free Software Definition}. This \emph{FSD} contains four conditions
+which must be met by any free software license: any FSD compliant license must
+grant \enquote{the freedom to run a program, for any purpose [\ldots]},
+\enquote{the freedom to study how it works, and adapt it to (one's) needs
+[\ldots]}, \enquote{the freedom to redistribute copies [\ldots]}, and finally
+\enquote{the freedom to improve the program, and release your improvements
+[\ldots]}\footcite[cf.][41]{Stallman1996a}. Surprisingly this definition
+implies that the requirement \emph{the sourcecode must be openly accessible},
+is 'only' a derived condition. If the \enquote{freedom to make changes and the
+freedom to publish improved versions} shall be \enquote{meaningful}, then the
+\enquote{access to the source code of the program} is a prerequisite.
+\enquote{Therefore, accessibility of source code is a necessary condition for
+free software.}\footcite[cf.][41]{Stallman1996a}
+
+The difference between the OSD and the FSD has often been described as a
+difference of emphasis\footnote{This is also the viewpoint of Richard M.
+Stallman: On the one hand, he clearly states that the \enquote{Free Software
+movement} and the \enquote{open source movement} generally \enquote{[\ldots]
+disagree on the basic principles, but agree more or less on the practical
+recommendations} and that he \enquote{[\ldots] (does) not think of the open
+source movement as an enemy}.  On the other hand, he delineates the two
+movements by stating that \enquote{for the open source movement, the issue of
+whether software should be open source is a practical question, not an ethical
+one}, while \enquote{for the Free Software movement, non-free software is a
+social problem and free software is the solution}
+(\cite[cf.][55]{Stallman1998a}). \label{RmsFsPriority} Consequently, Richard
+M. Stallman summarizes the positions in a simple way: \enquote{[\ldots] 'open
+source' was designed not to raise [\ldots] the point that users deserve
+freedom}. But he and his friends want \enquote{to spread the idea of freedom}
+and therefore \enquote{[\ldots] stick to the term 'free software'}
+(\cite[][59]{Stallman1998a}). For a brush-up of this position, expressing
+again that \enquote{(o)pen source is a development methodolgy [and that] free
+software is a social movement} with an \enquote{ethical imparative}
+\cite[cf.][31]{Stallman2009a} }: Although both definitions \enquote{[\ldots]
+(cover) almost exactly the same range of software}, the \emph{Free Software
+Foundation} -- as it is said -- \enquote{prefers [\ldots] (to emphazise) the
+idea of freedom [\ldots]} while the \emph{OSI} wants to underline the
+philosophically indifferent \enquote{development methodolgy}\footcite[pars pro
+toto: cf.][232]{Fogel2006a}.
+
+A third method to group of free software and free software licenses is specified
+by the \enquote{Debian Free Software Guideline} which is embedded into the
+\enquote{Debian Social Contract}. This \enquote{DFSG} contains nine defining
+criteria which -- as Debian itself says -- have been \enquote{[\ldots] adopted
+by the free[sic!] software community as the basis of the Open Source
+Definition}\footcite[cf.][wp]{DFSG2013a}.
+
+A rough understanding of these methods might result in the conclusion that these
+three definitions are extensionally equal and only differ intensionally.
+But that is not true. To unveil the differences, let us compare the clusters
+\emph{OSI approved licenses}, \emph{OSD compliant licenses}, \emph{DFSG
+compliant licenses}, and \emph{FSD compliant licenses} extensionally, by asking
+whether they \emph{could} establish different sets of licenses\footnote{Indeed,
+for analyzing the extensional power of the definition we have to regard all
+potentially covered licenses, not only the already existing licenses, because
+the subset of really existing licenses still could be expanded be developing new
+licenses which fit the definition.}.
+
+First, the difference most easy to determine is that of an unidirectional
+inclusion: By definition, the \emph{OSI approved licenses} and the \emph{OSD
+compliant licenses} meet the requirements of the OSD\footcite[cf.][\nopage
+wp]{OSI2012a}. But only the \emph{OSI approved licenses} have successfully
+passed the OSI process\footcite[cf.][\nopage wp]{OSI2012a} and therefore are
+officially listed as \emph{open source licenses}\footcite[cf.][\nopage
+wp]{OSI2012b}. Hence, on the one hand, \emph{OSI approved licenses} are
+\emph{open source licenses} and vice versa. On the other hand, both -- the
+\emph{OSI approved licenses} and the \emph{open source licenses} -- are
+\emph{OSD compliant licenses}, but not vice versa.
+
+Second, a similar argumentation allows to distinguish the \emph{DFSG compliant
+licenses} from the \emph{OSI approved licenses}. As it is stated, the OSD
+\enquote{[\ldots] is based on the Debian Free Software Guideline and any
+license that meets one definition almost meets the
+other}\footcite[cf.][233]{Fogel2006a}. But then again, meeting the definition is
+not enough for being an official open source license: the license has to be
+approved by the OSI\footcite[cf.][\nopage wp]{OSI2012b}. Thus, it follows that
+all \emph{OSI approved licenses} are also \emph{DFSG compliant licenses}, but
+not vice versa.
+
+Third, -- by ignoring the \enquote{few exceptions} which have appeared
+\enquote{over the years}\footcite[cf.][233]{Fogel2006a} -- it can be said that,
+because of their 'kinsmanlike' relation, at least the \emph{OSD compliant
+licenses} are also \emph{DFSG compliant licenses} and vice versa.
+
+Last but not least, it must be stated that the (potential) set of free software
+licenses must be greater than all the other three sets: On the one side, the FSD
+requires that a license of free software must not only allow to read the
+software, but must also permit to use, to modify, and to distribute
+it\footcite[cf.][41]{Stallman1996a}. These conditions are covered by at least
+the first three paragraphs of the OSD concerning the topics \enquote{Free
+Redistribution}, \enquote{Source Code}, and \enquote{Derived
+Works}\footcite[cf.][\nopage wp]{OSI2012a}. On the other side, the OSD contains
+at least some requirements which are not mentioned by the FSD and which
+nevertheless must be met by a license in order to be qualified as an OSD
+compliant license\footnote{For example, see the condition that \enquote{the
+license must be technology-neutral} (\cite[cf.][\nopage wp]{OSI2012a}).}. It
+follows then that there may exist licenses which fulfill all conditions of the
+FSD and nevertheless do not fulfill at least some conditions of the
+OSD\footnote{Again: we must consider the extensional potential of the
+definitions, not the set of really existing licenses. In this context, it is
+irrelevant that actually all existing Free Software Licenses like GPL, LGPL or
+AGPL indeed are also classfied as open source licenses. We are referring to the
+fact that there might be generated licenses which fulfill the FSD, but not the
+OSD.}. So, the set of all (potential) \emph{Free Software Licenses} must be
+greater than the set of all (potential) \emph{open source licenses} and greater
+than the set of \emph{OSD compliant licenses}.
+
+All in all, we can visualize the situation as follows:
+
+\begin{center}
+
+\begin{tikzpicture}
+\label{LICTAX}
+\small
+
+\node[ellipse,minimum height=5.8cm,minimum width=11.6cm,draw,fill=gray!10] (l0210) at (5,5)
+{ };
+
+\draw [-,dotted,line width=0pt,white,
+    decoration={text along path,
+              text align={center},
+              text={|\itshape|All Software Licenses}},
+              postaction={decorate}] (0,6.1) arc (120:60:10cm);
+
+\node[ellipse,minimum height=4.4cm,minimum width=10cm,draw,fill=gray!20] (l0210) at (5,5)
+{ };
+
+\draw [-,dotted,line width=0pt,white,
+    decoration={text along path,
+              text align={center},
+              text={|\itshape|FSD Compliant Licenses}},
+              postaction={decorate}] (0,5.4) arc (120:60:10cm);
+              
+
+\node[ellipse,minimum height=3cm,minimum width=8.4cm,draw,fill=gray!30] (l0210) at (5,5)
+{ };
+
+
+             
+\draw [-,dotted,line width=0pt,white,
+    decoration={text along path,
+              text align={center},
+              text={|\itshape|OSD Compliant Licenses}},
+              postaction={decorate}] (0,4.7) arc (120:60:10cm);
+              
+\draw [-,dotted,line width=0pt,white,
+    decoration={text along path,
+              text align={center},
+              text={|\itshape|DFSG Compliant Licenses}},
+              postaction={decorate}] (0,5) arc (240:300:10cm);
+          
+
+\node[ellipse,text width=4.4cm, text centered,minimum height=1.6cm,minimum width=6cm,draw,fill=gray!40] (l0210) at (5,5)
+{ \textit{OSI approved licenses} = \\ \textit{\textbf{open source licenses}}
+};
+
+\end{tikzpicture}
+\end{center}
+
+It should be clear without longer explanations that these clusters don't allow
+to extrapolare to the correct compliant behaviour according to the \emph{open source
+licenses}: On the one hand, all larger clusters do not talk about the \emph{open
+source licenses}. On the other hand, the \emph{open source license cluster}
+itself only collects its elements on the base of the OSD which does not stipulates
+concrete license fulfilling actions for the licensee.
+
+The next level of clustering \emph{open source licenses} concerns the inner
+structure of these \emph{OSI approved licenses}. Even the OSI itself has recently
+discussed whether a better kind of grouping the listed licenses would better fit
+the needs of the visitors of the OSI site\footcite[cf.][\nopage wp]{OSI2013a}.
+And finally the OSI ends up in the categories \enquote{popular and widely used
+(licenses) or with strong communities}, \enquote{special purpose licenses},
+\enquote{other/miscellaneous licenses}, \enquote{licenses that are redundant
+with more popular licenses}, \enquote{non-reusable licenses},\enquote{superseded
+licenses}, \enquote{licenses that have been voluntarily retired}, and \enquote{
+uncategorized licenses}\footcite[cf.][\nopage wp]{OSI2013b}.
+
+Another way to structure the field of open source licenses is to think in
+\enquote{types of open source licenses} by grouping the \enquote{\emph{academic
+licenses}, named as such because they were originally created by academic
+institutions}\footcite[cf.][69]{Rosen2005a}, the \enquote{\emph{reciprocal
+licenses}}, named as such because they \enquote{[\ldots] require the
+distributors of derivative works to dis\-tri\-bu\-te those works under same
+license including the requirement that the source code of those derivative works
+be published}\footcite[cf.][70]{Rosen2005a}, the \enquote{\emph{standard
+licenses}}, named as such because they refer to the reusability of
+\enquote{industry standards}\footcite[cf.][70]{Rosen2005a}, and the
+\enquote{\emph{content licenses}}, named as such because they refer to
+\enquote{[\ldots] other than software, such as music art, film, literary works}
+and so on\footcite[cf.][71]{Rosen2005a}.
+
+Both kinds of taxonomy directly help to find the relevant licenses which should
+be used for new (software) projects. But again: none of these categories 
+allow to infer the license compliant behaviour, because the categories are
+mostly defined based on license external criteria: whether a license is
+published by a specific kind of organization or whether a license deals with
+industry standards or other kind of works than software, inherently do not
+evoke a license fulfilling behaviour.
+
+Only the act of grouping into the \enquote{\emph{academic licenses}} and the
+\enquote{\emph{reciprocal licenses}} touches the idea of license fulfilling
+doings, if one -- as it has been done -- expands the definition of the
+\enquote{\emph{academic licenses}} by the specification that these licenses
+\enquote{[\ldots] allow the software to be used for any purpose whatsoever with
+no obligation on the part of the licensee to distribute the source code of
+derivative works}\footcite[cf.][71]{Rosen2005a}. With respect to this additional
+specification, the clusters \enquote{\emph{academic licenses}} and the
+\enquote{\emph{reciprocal licenses}} indeed might be referred as the
+\enquote{main categories} of (open source)
+licenses\footcite[cf.][179]{Rosen2005a}: By definition, they are constituting
+not only a contrary, but contradictory opposite. However, it must  be kept in
+mind that they constitute an inherent antagonism, an antinomy inside of the set
+of open source licenses\footnote{Hence, it is at least a little confusing to say
+that \enquote{the open source license (OSL) is a reciprocal license} and
+\enquote{the Academic Free License (AFL) is the exact same license without the
+reciprocity provisions} (\cite[cf.][180]{Rosen2005a}): If the BSD license is an
+AFL and if an AFL is not an OSL and if the OSI approves only OSLs, then the BSD
+license can not be an approved open source license. But in fact, it still is
+(\cite[cf.][\nopage wp]{OSI2012b}).}.
+
+Connatural to the clustering into \emph{academic licenses} and \emph{reciprocal
+licenses} is the grouping into \emph{permissive licenses}, \emph{weak copyleft
+licenses}, and \emph{strong copyleft licenses}: Even Wikipedia already uses the
+term \enquote{permissive free software licence} in the meaning of \enquote{a
+class of free software licence[s] with minimal requirements about how the
+software can be redistributed} and \enquote{contrasts} them with the
+\enquote{copyleft licences} as those \enquote{with reciprocity / share-alike
+requirements}\footcite[cf.][\nopage wp]{wpPermLic2013a}. 
+
+Some other authors name the set of \emph{academic licenses} the
+\enquote{permissive licenses} and specify the \emph{reciprocal licenses} as
+\enquote{restrictive licenses}, because in this case -- as a consequence of the
+embedded \enquote{copyleft} effect -- the source code must be published in case
+of modifications. They additionally introduce the subset of \enquote{strong
+restrictive licenses} which additionally require that an (overarching)
+derivative work must be published under the same license\footcite[pars pro toto
+cf.][57]{Buchtala2007a}. The next refinement of such clustering concepts
+directly uses the categories \enquote{[open source] licenses with a strict
+copyleft clause}\footcite[Originally stated as \enquote{Lizenzen mit einer
+strengen Copyleft-Klausel}. Cf.][24]{JaeMet2011a}, \enquote{[open source]
+licenses with a restricted copyleft clause}\footcite[Originally stated as
+\enquote{Lizenzen mit einer beschränkten Copyleft-Klausel}.
+Cf.][71]{JaeMet2011a}, and \enquote{[open source] licenses without any copyleft
+clause}\footcite[Originally stated as \enquote{Lizenzen ohne Copyleft-Klausel}.
+Cf.][83]{JaeMet2011a}. Finally, this viewpoint can directly be mapped to the
+categories \emph{strong copyleft} and \emph{weak copyleft}: While on the one
+hand, \enquote{only changes to the weak-copylefted software itself become
+subject to the copyleft provisions of such a license, [and] not changes to the
+software that links to it}, on the other hand, the \enquote{strong copyleft}
+states \enquote{[\ldots] that the copyleft provisions can be efficiently imposed
+on all kinds of derived works}\footcite[cf.][\nopage wp]{wpCopyleft2013a}.
+
+Based on this approach to an adequate clustering and labeling\footnote{Finally,
+we should also mention that there still exists other classifications which might
+become important in other contexts. For example, the ifross license subsumes
+under the main category \enquote{Open Source Licenses} the subcategories
+\enquote{Licenses without Copyleft Effect}, \enquote{Licenses with Strong
+Copyleft}, \enquote{Licenses with Restricted Copyleft}, \enquote{Licenses with
+Restricted Choice}, or \enquote{Licenses with Privilegs} -- and let finally
+denote these categories also licenses which are not listed by the OSI
+(\cite[cf.][\nopage wp.]{ifross2011a}). This is well reasonable if one refers to
+the meaning of the OSD (\cite[cf.][\nopage wp]{OSI2012a}). The OSLiC wants to
+simplify its object of study by referring to the approved open source licenses
+(\cite[cf.][\nopage wp]{OSI2012d}) listed by the OSI (\cite[cf.][\nopage
+wp]{OSI2012b}).}, we can develop the following picture:
+
+\begin{center}
+
+\begin{tikzpicture}
+\label{OSLICTAX}
+\small
+
+
+
+\node[ellipse,minimum height=8.5cm,minimum width=14cm,draw,fill=gray!10] (l0100) at (6.8,6.8)
+{  };
+
+\draw [-,dotted,line width=0pt,white,
+    decoration={text along path,
+              text align={center},
+              text={|\itshape| OSI approved licenses}},
+              postaction={decorate}] (-0.8,6.5) arc (142:38:9.5cm);
+
+\draw [-,dotted,line width=0pt,white,
+    decoration={text along path,
+              text align={center},
+              text={|\itshape|open source licenses}},
+              postaction={decorate}] (-0.8,6.5) arc (218:322:9.5cm);
+              
+\node[ellipse,minimum height=6.2cm,minimum width=4cm,draw,fill=gray!20] (l0100) at (2.75,6.8)
+{  };
+
+\draw [-,dotted,line width=0pt,white,
+    decoration={text along path,
+              text align={center},
+              text={|\itshape| permissive licenses}},
+              postaction={decorate}] (0.9,7.4) arc (180:0:1.8cm);
+
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0101) at (2,8)
+{  \footnotesize \bfseries \textit{ApL}};
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0102) at (3.5,8)
+{  \footnotesize \bfseries \textit{BSD}};
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0103) at (2,6.5)
+{  \footnotesize \bfseries \textit{MIT}};
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0104) at (3.5,6.5)
+{  \scriptsize \bfseries \textit{MS-PL}};
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0105) at (2,5)
+{  \footnotesize \bfseries \textit{PgL}};
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0106) at (3.5,5)
+{  \footnotesize \bfseries \textit{PHP}};
+
+\node[ellipse,minimum height=6cm,minimum width=8.5cm,draw,fill=gray!20] (l0200) at (9.2,6.5)
+{  };
+
+\draw [-,dotted,line width=0pt,white,
+    decoration={text along path,
+              text align={center},
+              text={|\itshape| copyleft licenses}},
+              postaction={decorate}] (7.5,8.5) arc (120:60:4cm);
+
+
+\node[ellipse,minimum height=4.5cm,minimum width=4.2cm,draw,fill=gray!30] (l0210) at (7.45,6.5)
+{  };
+
+\draw [-,dotted,line width=0pt,white,
+    decoration={text along path,
+              text align={center},
+              text={|\itshape| weak copyleft licenses}},
+              postaction={decorate}] (5.4,6.2) arc (180:0:2cm);
+
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0211) at (6.7,7)
+{  \footnotesize \bfseries \textit{EPL}};
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0212) at (8.2,7)
+{  \footnotesize \bfseries \textit{EUPL}};
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0213) at (6.7,5.5)
+{  \footnotesize \bfseries \textit{LGPL}};
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0214) at (8.2,5.5)
+{  \footnotesize \bfseries \textit{MPL}};
+
+\node[ellipse,minimum height=4.5cm,minimum width=3cm,draw,fill=gray!30] (l0220) at (11.4,6.5)
+{  };
+ 
+% line width=0pt,white,
+\draw [-,dotted,line width=0pt,white,
+    decoration={text along path,
+              text align={center},
+              text={|\itshape| strong copyleft}},
+              postaction={decorate}] (10.4,7) arc (180:0:1cm);
+
+\draw [-,dotted,line width=0pt,white,
+    decoration={text along path,
+              text align={center},
+              text={|\itshape| licenses}},
+              postaction={decorate}] (10.4,5.4) arc (180:360:1cm);        
+
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0221) at (11.4,7)
+{  \footnotesize \bfseries \textit{GPL}};
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0222) at (11.4,5.5)
+{  \footnotesize \bfseries \textit{AGPL}};
+
+
+\end{tikzpicture}
+\end{center}
+
+This extensionally based clarification of a possible open source license
+taxonomy is probably well-known and often -- more or less explicitly --
+referred to\footnote{Even the FSF itself uses the term 'permissive non-copyleft
+free software license' (\cite[pars pro toto: cf.][\nopage wp/section 'Original BSD
+license']{FsfLicenseList2013a}) and contrasts it with the terms 'weak copyleft'
+and 'strong copyleft' (\cite[pars pro toto: cf.][\nopage wp/section 'European
+Union Public License']{FsfLicenseList2013a})}. Unfortunately, this taxonomy
+still contains some misleading underlying messages:
+
+\emph{Permissive} has a very positive connotation. So, the antinomy of
+\emph{permissive licenses} versus \emph{copyleft licenses} implicitly signals,
+that the \emph{permissive licenses} are in any meaning better, than the
+\emph{copyleft licenses}. Naturally, this 'conclusion' is evoked by
+confusing the extensionally definition and the intensional power of the labels.
+But that is the way we -- the human beings -- like to think. 
+
+Anyway, this underlying message is not necessarily 'wrong'. It might be
+convenient for those people or companies who only want to use open source
+software without being restricted by the \emph{obligation to give something
+back} as it has been introduced by the 'copyleft'\footnote{De facto,
+\emph{copyleft} is not \emph{copyleft}. Apart from the definition, its effect
+depends on the par\-ti\-cu\-ar licenses which determine the conditions for
+applying the copyleft 'method'. For example, in the GPL, the copyleft effect is
+bound to the criteria 'being distributed'. Later on, we will collect these
+conditions systematically (see chapter \emph{\nameref{sec:OSUCdeduction}}, pp.\
+\pageref{sec:OSUCdeduction}). Therefore, here we still permit ourselves to use a
+somewhat 'generalizing' mode of speaking.}. But there might be other people and
+companies who emphasize the protecting effect of the copyleft licenses. And
+indeed, at least the open source license\footnote{Although RMS naturally prefers
+to specify it as a \emph{Free Software License} (s. p.\ \pageref{RmsFsPriority})
+} \emph{GPL}\footnote{As the original source \cite[cf.][\nopage
+wp]{Gpl20FsfLicense1991a}. Inside of the OSLiC, we constantly refer to the
+license versions which are published by the OSI, because we are dealing with
+officially approved open source licenses. For the 'OSI-GPL' \cite[cf.][\nopage
+wp]{Gpl20OsiLicense1991a}} has initially been developed to protect the freedom,
+to enable the developers to help their \enquote{neighbours} and to get the
+modifications back\footnote{The history of the GNU project is multiply told. For
+the GNU project and its initiator \cite[cf.\ pars pro toto][\nopage
+passim]{Williams2002a}. For a broader survey \cite[cf.\ pars pro toto][\nopage
+passim]{Moody2001a}. A very short version is delivered by Richard M. Stallman
+himself where he states that -- in the years while the early free community were
+destroyed -- he saw the \enquote{nondisclosure agreement} which must be signed ,
+\enquote{[\ldots] even to get an executable copy} as a clear \enquote{[\ldots]
+promise not to help your neighbour}: \enquote{A cooperating community was
+forbidden.} (\cite[cf.][16]{Stallman1999a}).}: So, \enquote{Copyleft} is defined
+as a \enquote{[\ldots] method for making a program free software and requiring
+all modified and extended versions of the program to be free software as
+well}\footcite[cf.][89]{Stallman1996c}. It is a method\footnote{Based on the
+American legal copyright system, this method uses two steps: firstly one states,
+\enquote{[\ldots] that it is copyrighted [\ldots]} and secondly one adds those
+\enquote{[\ldots] distribution terms, which are a legal instrument that gives
+everyone the rights to use, modify, and redistribute the program's code or any
+program derived from it but only if the distribution terms are unchanged}
+(\cite[cf.][89]{Stallman1996c}).} by which \enquote{[\ldots] the code and the
+freedoms become legally inseparable}\footcite[cf.][89]{Stallman1996c}. Because
+of these disparate interests of hoping not to be restricted and hoping to be
+protected, it could be helpful to find a better label -- an impartial name for
+the cluster of \emph{permissive licenses}. But until that time, we should at
+least know that this taxonomy still contains an underlying declassing message.
+
+The other misleading interpretation is -- counter-intuitively -- evoked by using
+the concept of 'copyleft licenses'. By referring to a cluster of \emph{copyleft
+licenses} as the opposite of the \emph{permissive licenses}, one implicitly also
+sends two messages: First, that republishing one's own modifications is
+sufficient to comply with the \emph{copyleft licenses}. And, secondly, that the
+\emph{permissive licenses} do not require anything to be done for obtaining the
+right to use the software. Even if one does not wish to evoke such an
+interpretation, we -- the human beings -- tend to take the things as simple as
+possible\footnote{And indeed, in the experience of the authors -- sometimes --
+such simplifications gain their independent existence and determine decisions on
+the management level. But that is not the fault of the managers. It is their
+job, to aggregate, generalize and simplify information. It is the job of the
+experts, to offer better viewpoints without overwhelming the others with
+details.}. But because of several aspects, this understanding of the antinomy of
+\emph{copyleft licenses} and \emph{permissive licenses} is too misleading for
+taking it as a serious generalization:
+
+On the one hand, even the 'strongly copylefted' GPL requires also other tasks
+than just the republishing of derivative works. For example, it also calls for
+to \enquote{[\ldots] give any other recipients of the [GPL licensed] Program a
+copy of this License along with the Program}\footcite[cf.][\nopage wp.\
+§1]{Gpl20OsiLicense1991a}. Furthermore, the 'weakly copylefted' licenses require
+also more and different criteria which has to be fulfilled for acting according
+to these licenses. For example, the EUPL requires that the licensor who does not
+directly deliver the binaries together with the sourcecode, must offer a
+sourcecode version of his work free of charge\footnote{The German version of the
+EUPL uses the phrase \enquote{problemlos und unentgeltlich(sic!) auf den
+Quellcode (zugreifen können)} (\cite[cf.][3, section 3]{EuplLicense2007de})
+while the English version contains the specification \enquote{the Source Code is
+easily and freely accessible} (\cite[cf.][2, section 3]{EuplLicense2007en})},
+while the MPL requires that under the same circumstances a recipient
+\enquote{[\ldots] can obtain a copy of such Source Code Form [\ldots] at a
+charge no more than the cost of distribution to the recipient
+[\ldots]}\footcite[cf.][\nopage section 3.2.a]{Mpl20OsiLicense2013a}.
+And last but not least, also the \emph{permissive licenses} require tasks which
+must be fulfilled for a license compliant usage -- moreover, they also require
+different things. For example, the BSD demands that \enquote{the
+(re)distributions [\ldots] must (retain [and/or]) reproduce the above copyright
+notice [\ldots]}. Because of the structure of the \enquote{copyright notice},
+this compulsory notice implies that the authors / copyright holders of the
+software must be publicly named\footcite[cf.][\nopage wp]{BsdLicense2Clause}. As
+opposed to this, the Apache License requires that \enquote{if the Work includes
+a "NOTICE" text file as part of its distribution, then any Derivative Works that
+You distribute must include a readable copy of the attribution notices contained
+within such NOTICE file} which often means that you have to present central
+parts of such file publicly\footcite[cf.][\nopage wp.\ section
+4.4]{Apl20OsiLicense2004a} -- parts which can contain much more information than
+only the names of the authors / copyright holders.
+
+So, no doubt -- and contrary to the intuitive interpretation of this taxonomy --
+each \emph{open source license} must be fulfilled by some actions, even the most
+permissive one. And for ascertaining these tasks, one has to look into these
+licenses themselves, not the generalized concepts of licenses taxonomies. Hence
+again, we have to state that even this well known type of grouping of \emph{open
+source licenses} does not allow to derive a specific license compliant behavior:
+The taxonomy might be appropriate, if one wants to live with the implicite
+messages and generalizations of some of its concepts. But the taxonomy is not an
+adequate tool to determine, what one has to do for fulfilling an \emph{open
+source license}. A license compliant behaviour for obtaining the right to use a
+specific piece of \emph{open source software} must be based on the concrete
+\emph{open source license} by which the licensor has licensed the software.
+There is no shortcut.
+
+Nevertheless, human beings need generalizing and structuring viewpoints for
+enabling themselves to talk about a domain -- even if they finally have to regard
+the single objects of the domain for specific purposes. We think that there is
+a subtler method to regard and to structure the domain of \emph{open source
+licenses}. So, we want to offer this other possibility to cluster the \emph{open
+source licenses}\footnote{even if also we have to concede that, ultimately, 
+one has to always look into the license itself}:
+
+We think that, in general, licenses have a common purpose: they should protect
+someone or something against something. The structure of this task is based on
+the nature of the word 'protect' which is a trivalent verb: it links someone or
+something who protects, to someone or something who is protected and both
+combined to something against which the protector protects and against the other one
+is protected. Licenses in general do that. Therefore, it is also the purpose of
+open source licenses to protect: They can protect the user (recipient) of the
+software, its contributor resp.\ developer and/or distributor, and the software
+itself. And they can protect them against different threats:
+
+\begin{itemize}
+  \item First, we assume, that - in the context of open source software - the
+  user can be protected against the loss of the right to use it, to modify it,
+  and to redistribute it. Additionally, he can be protected against patent
+  disputes.
+  \item Second, we assume, that open source contributors and distributors can be
+  protected against the loss of feedback in the form of code improvements and
+  derivatives, against warranty claims, and against patent disputes.
+  \item Third, we assume, that the open source programs and their specific forms
+  -- may they be distributed or not, may they be modified or not, may they be
+  distributed as binaries or as sources -- can be protected against the
+  re-closing resp. against the re-privatizing of their further development.
+  \item Fourth, we want to assume that new on-top developments being based on
+  open source components can be protected against the privatizing for enlarging
+  the world of freely usable software\footnote{In a more rigid version, this
+  capability of a license could also be identified as the power to protect the
+  community against a stagnation of the set of open source software -- but this
+  description is at least a little to long to be used by the following pages}.
+\end{itemize}
+
+With respect to these viewpoints, one gets a subtler picture of the license
+specific protecting power. Thus, we are going to describe and deduce the
+protecting power of each of the open source licenses on the following pages.
+Table \ref{tab:powerOfLicenses} summarizes the results as a quick
+reference\footnote{$\rightarrow$ table \ref{tab:powerOfLicenses} on p.\
+\pageref{tab:powerOfLicenses}}.
+
+\begin{table}
+\begin{minipage}{\textwidth}
+\centering
+\footnotesize
+\caption{Open Source Licenses as Protectors}
+\label{tab:powerOfLicenses}
+
+\begin{tabular}{|c|c||c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+  \multicolumn{2}{|c|}{\textit{Open}} &
+  \multicolumn{13}{c|}{\textit{are protecting}}\\
+\cline{3-15}
+  \multicolumn{2}{|c|}{\textit{Source}} &
+  \multicolumn{4}{c|}{ \textbf{Users}} &
+  \multicolumn{3}{c|}{\textbf{Contributors}} &
+  \multicolumn{5}{c|}{\textbf{Open Source Software}} &
+  \multirow{4}{*}{\rotatebox{270}{\scriptsize{\textbf{On-Top Develop.\ }}}} 
+  \\
+\cline{10-14}
+  \multicolumn{2}{|c|}{\textit{Licenses\footnote{'\checkmark' indicates that the
+  license protects with respect to the meaning of the column, '$\neg$' indicates
+  that the license does not protect with regard to the meaning of the column,
+  and '--' indicates, that the corresponding statement must still be evaluated.
+  \textit{Slanted names of licenses} indicate that these licenses are only
+  listed in this table while the corresponding mindmap ($\rightarrow$ p.\
+  \pageref{OSCLICMM}) does not cover them }}} &
+  \multicolumn{4}{c|}{} &
+  \multicolumn{3}{c|}{\tiny{(Distributors)}} &  
+  not &
+  \multicolumn{4}{c|}{distributed as} 
+  & \\
+\cline{3-9}\cline{11-14}
+  \multicolumn{2}{|c|}{} &
+  \multicolumn{4}{c|}{\scriptsize{\textit{who have already got}}} &
+  \multicolumn{3}{c|}{\scriptsize{\textit{who spread open}}} & 
+  distri- &
+  \multicolumn{2}{c|}{unmodified} &
+  \multicolumn{2}{c|}{modified} 
+  & \\
+  \cline{11-14}
+  \multicolumn{2}{|c|}{} &
+  \multicolumn{4}{c|}{\scriptsize{\textit{sources or binaries}}} &
+  \multicolumn{3}{c|}{\scriptsize{\textit{source software}}} & 
+  buted & 
+ \rotatebox{270}{\footnotesize{sources\ }} &
+ \rotatebox{270}{\footnotesize{binaries\ }} &
+ \rotatebox{270}{\footnotesize{sources\ }} &
+ \rotatebox{270}{\footnotesize{binaries\ }} 
+ & \\
+\cline{3-15}
+  \multicolumn{2}{|c|}{} &
+  \multicolumn{13}{c|}{\textit{against}}\\
+\cline{3-15}
+  \multicolumn{2}{|c|}{} &
+  \multicolumn{3}{c|}{the loss of} & 
+  \multirow{3}{*}{\rotatebox{270}{Patent Disputes}} &
+  \multirow{3}{*}{\rotatebox{270}{Loss of Feedback}} & 
+  \multirow{3}{*}{\rotatebox{270}{Warranty Claims}} & 
+  \multirow{3}{*}{\rotatebox{270}{Patent Disputes}} & 
+  \multicolumn{5}{c|}{}
+  & \\
+% no seperator line 
+  \multicolumn{2}{|c|}{} &
+  \multicolumn{3}{c|}{the right to} &
+  & & & &
+  \multicolumn{5}{c|}{\footnotesize{Re-Closings / Re-Privatizings}} &
+  \multirow{3}{*}{\rotatebox{270}{Privatizings}}
+   \\
+\cline{3-5}
+  \multicolumn{2}{|c|}{} & 
+  \rotatebox{270}{use it} & 
+  \rotatebox{270}{modify it} & 
+  \rotatebox{270}{redistribute it\ } &
+  &  &  &  &
+  \multicolumn{5}{c|}{of already opened software}
+  & \\
+\hline
+\hline
+  ApL & 2.0 & \checkmark  & \checkmark  & \checkmark  &
+  \checkmark & $\neg$ & \checkmark & \checkmark & $\neg$ &
+   \checkmark  & $\neg$ & \checkmark & $\neg$ & $\neg$ \\
+\hline
+  \multirow{2}{*}{BSD} & 3-Cl & \checkmark & \checkmark  & \checkmark  & 
+    $\neg$ & $\neg$ & \checkmark & $\neg$  &
+    $\neg$ & \checkmark  & $\neg$ & \checkmark & $\neg$ & $\neg$ \\
+\cline{2-15}
+   & 2-Cl & \checkmark  & \checkmark  & \checkmark  & 
+    $\neg$ & $\neg$ & \checkmark & $\neg$  &
+    $\neg$ & \checkmark  & $\neg$ & \checkmark & $\neg$ & $\neg$ \\
+\hline
+  MIT & ~ & \checkmark  & \checkmark  & \checkmark  &
+  $\neg$ & $\neg$ & \checkmark & $\neg$ & $\neg$ &
+   \checkmark  & $\neg$ & \checkmark & $\neg$ & $\neg$ \\
+\hline
+  MS-PL & ~ & \checkmark  & \checkmark  & \checkmark  &
+  \checkmark & $\neg$ & \checkmark & \checkmark & $\neg$ &
+   \checkmark  & $\neg$ & \checkmark & $\neg$ & $\neg$ \\
+\hline
+  PgL & ~ & \checkmark  & \checkmark  & \checkmark  &
+  $\neg$ & $\neg$ & \checkmark & $\neg$ & $\neg$ &
+   \checkmark  & $\neg$ & \checkmark & $\neg$ & $\neg$ \\
+\hline
+  PHP & 3.0 & \checkmark  & \checkmark  & \checkmark  &
+  $\neg$ & $\neg$ & \checkmark & $\neg$ & $\neg$ &
+   \checkmark  & $\neg$ & \checkmark & $\neg$ & $\neg$ \\
+\hline
+\hline
+  \textit{CDDL} & 1.0 & \checkmark & \checkmark & \checkmark &
+  -- & -- & -- & -- & -- & -- & -- & -- & -- & -- \\
+\hline
+  EPL & 1.0 & \checkmark  & \checkmark  & \checkmark  &
+  \checkmark  & \checkmark  & \checkmark & \checkmark & $\neg$ &
+   \checkmark  & \checkmark & \checkmark & \checkmark & $\neg$ \\
+\hline
+  EUPL & 1.1 & \checkmark  & \checkmark  & \checkmark  &
+  \checkmark  & \checkmark  & \checkmark & \checkmark & $\neg$ &
+   \checkmark  & \checkmark & \checkmark & \checkmark & $\neg$ \\
+\hline
+  \multirow{2}{*}{LGPL} & 2.1 & \checkmark  & \checkmark  & \checkmark  &
+   $\neg$ & \checkmark  & \checkmark & $\neg$ & $\neg$ &
+   \checkmark  & \checkmark & \checkmark & \checkmark & $\neg$ \\
+\cline{2-15}
+   & 3.0 & \checkmark  & \checkmark  & \checkmark  &
+   \checkmark & \checkmark  & \checkmark & \checkmark & $\neg$ &
+   \checkmark  & \checkmark & \checkmark & \checkmark & $\neg$ \\
+\hline
+   MPL & 2.0 & \checkmark  & \checkmark  & \checkmark  &
+  \checkmark  & \checkmark  & \checkmark & \checkmark & $\neg$ &
+   \checkmark  & \checkmark & \checkmark & \checkmark & $\neg$ \\
+\hline
+  \textit{MS-RL} & ~ & \checkmark & \checkmark & \checkmark &
+  -- & -- & -- & -- & -- & -- & -- & -- & -- & -- \\
+\hline
+\hline
+  AGPL & 3.0 & \checkmark & \checkmark & \checkmark &
+  -- & -- & -- & -- & -- & -- & -- & -- & -- & -- \\
+\hline
+  \multirow{2}{*}{GPL} & 2.1 & \checkmark & \checkmark & \checkmark &
+   -- & -- & -- & -- & -- & -- & -- & -- & -- & -- \\
+\cline{2-15}
+  & 3.0 & \checkmark & \checkmark & \checkmark &
+   -- & -- & -- & -- & -- & -- & -- & -- & -- & -- \\
+\hline
+\hline
+
+\end{tabular}
+
+\end{minipage}
+\end{table}
+
+\section{The protecting power of the Affero Gnu Public License (AGPL) [tbd]}
+\begin{itemize} 
+  \item The Affero Gnu Public License protects \ldots
+  \item But the Affero Gnu Public License does not protect \ldots
+\end{itemize}
+
+
+\section{The protecting power of the Apache License (ApL)}
+\label{sec:ProtectPowerOfApL}
+
+As an approved \emph{open source license}\footcite[cf.][\nopage wp]{OSI2012b},
+the Apache License\footnote{The Apache License, version 2.0 is maintained by the
+Apache Software Foundation (\cite[cf.][\nopage wp]{AsfApacheLicense20a}).  Of
+course, also the OSI is hosting a duplicate of the Apache license
+(\cite[cf.][\nopage wp.]{Apl20OsiLicense2004a}) and is listing it as an
+officially approved open source license (\cite[cf.][\nopage wp.]{OSI2012b}). The
+Apache license 1.1 is classified by the OSI as \enquote{superseded
+license}(\cite[cf.][\nopage wp.]{OSI2013b}). In the same spirit, also the Apache
+Software Foundation itself classifies the releases 1.0 and 1.1 as
+\enquote{historic} (\cite[cf.][\nopage wp.]{AsfLicenses2013a}). Thus, the OSLiC
+only focuses on the most recent APL-2.0 version. For those, who have to fulfill
+these earlier Apache licenses it could be helpful to read them as siblings of
+the BSD-2CL and BSD-3CL licenses.} protects the user against the loss of the
+right to use, to modify and/or to distribute the received copy of the source
+code or the binaries\footcite[cf.][\nopage wp §2]{Apl20OsiLicense2004a}.
+Furthermore, based on its patent clause\footnote{$\rightarrow$ OSLiC pp.\
+\pageref{subsec:ApLPatentClause}}, the ApL protects the users against patent
+disputes\footcite[cf.][\nopage wp §3]{Apl20OsiLicense2004a}. Because of this
+patent clause and of its \enquote{disclaimer of warranty} together with its
+\enquote{limitation of liability}, the Apache license also protects the
+contributors / distributors against patents disputes and warranty
+claims\footcite[cf.][\nopage wp §3, §7, §8]{Apl20OsiLicense2004a}. Finally, the
+ApL protects the distributed sources themselves \emph{against} a change of the
+license which would \emph{reset} the work \emph{as closed software}, because
+first, one \enquote{[\ldots] must give any other recipients of the work or
+derivative works a copy of (the Apache) license}, second, \enquote{in the source
+form of any derivative works that (one) distributes}, one has \enquote{[\ldots]
+to retain [\ldots] all copyright, patent, trademark, and attribution notices
+[\ldots]}, and third, one must \enquote{[\ldots] include a readable copy [\ldots
+of the] NOTICE file} being supplied by the original package one has
+received\footcite[cf.][\nopage wp §4]{Apl20OsiLicense2004a}.
+
+But the Apache License does not protect the contributors against the loss of
+feedback because it does not 'copyleft' the software: the Apache license does
+not contain any sentence requiring that one has also to publish the source code.
+In the same spirit, the ApL does not protect the undistributed software or the
+distributed binaries against re-closings -- neither in unmodified nor in
+modified form -- because the Apache License allows to (re)distribute the
+binaries without also supplying the sources -- even if the binaries rest upon
+sources modified by the distributor. Finally, the ApL does not protect the
+on-top developments against a privatizing.
+
+
+\section{The protecting power of the BSD licenses}
+
+As approved \emph{open source licenses}\footcite[cf.][\nopage wp]{OSI2012b}, the
+BSD Licenses\footnote{BSD has to be resolved as \emph{Berkely Software
+Distribution}. For details of the BSD license release and namings
+\cite[cf.][\nopage wp.\ editorial]{BsdLicense3Clause}} protect the user against
+the loss of the right to use, to modify and/or to distribute the received copy
+of the source code or the binaries\footcite[cf.][\nopage wp §1ff]{OSI2012a}.
+Additionally, they protect the contributors and/or distributors against warranty
+claims of the software users, because these licenses contain a 'No Warranty
+Clause'\footcite[one for all version cf.][\nopage wp]{BsdLicense2Clause}. And
+finally they protect the distributed sources against a change of the license
+which closes the sources, because each modification and \enquote{redistributions
+of [the] source code must retain the [\ldots] copyright notice, this list of
+conditions and the [\ldots] disclaimer}\footcite[cf.][\nopage
+wp]{BsdLicense2Clause}: Therefore it is incorrect to distribute a BSD licensed
+code under another license -- regardless, whether it closes the sources or
+not\footnote{In common sense based discussions you may have heard that BSD
+licenses allow to republish the work under another, an own license. Taking the
+words of the BSD License seriously that is not valid under all circumstances:
+Yes, it is true, you are not required to redistribute the sourcecode of a
+modified (derivative) work. You are allowed to modify a received version and to
+distribute the results only as binary code and to keep your improvements closed.
+But if you distribute the source code of your modifications, you have retain the
+licensing, because \enquote{Redistribution [\ldots] in source [\ldots], with or
+without modification, are permitted provided that [\ldots] (the) redistributions
+of source code [\ldots] retain the above copyright notice, this list of
+conditions and the following disclaimer} (\cite[cf.][\nopage
+wp]{BsdLicense2Clause})}.
+
+But the BSD Licenses protect neither the users nor the contributors
+and/or distributors against patent disputes (because they do not contain any
+patent clause). They do not protect the contributors against the loss of
+feedback (because they do not 'copyleft' the software). Moreover, they do not
+protect the undistributed software or the distributed binaries against
+re-closings -- neither in unmodified nor in modified form -- because they
+allow to redistribute only the binaries without also supplying the source
+code\footnote{see both, the BSD-2CL License (\cite[cf.][\nopage
+wp]{BsdLicense2Clause}), and the BSD-3CL License (\cite[cf.][\nopage
+wp]{BsdLicense3Clause})}. Finally, the BSD licenses do not protect the on-top
+developments against a privatizing.
+
+
+\section{The protecting power of the Eclipse Public License (EPL)}
+\label{sec:ProtectingPowerOfEpl}
+
+As an approved \emph{open source license}\footcite[cf.][\nopage wp]{OSI2012b},
+the Eclipse Public License\footnote{ The Eclipse Public License, version 1.0 is
+maintained by the Eclipse Software Foundation (\cite[cf.][\nopage
+wp]{Epl10EclipseFoundation2005a}).  Of course, also the OSI is hosting a
+duplicate (\cite[cf.][\nopage wp]{Epl10OsiLicense2005a}).} protects the user
+against the loss of the right to use, to modify and/or to distribute the
+received copy of the source code or the binaries\footcite[cf.][\nopage wp
+§2a]{Epl10OsiLicense2005a}. Furthermore, based on its patent
+clause\footnote{$\rightarrow$ OSLiC pp.\ \pageref{subsec:EpLPatentClause}}, the
+EPL protects the users also against patent disputes\footcite[cf.][\nopage wp §2b
+\& §2c]{Epl10OsiLicense2005a}. Besides this patent clause, the EPL contains the
+sections \enquote{no warranty} and \enquote{disclaimer of
+liability}\footcite[cf.][\nopage wp §5 \& §6]{Epl10OsiLicense2005a}. These three
+elements together protect the contributors / distributors against patents
+disputes and warranty claims. Finally, the EPL protects the distributed sources
+themselves \emph{against} a change of the license which would \emph{reset} the
+work \emph{as closed software}: First, the Eclipse Public Licenses requires that
+if a work -- released under the EPL -- \enquote{[\ldots] is made available in
+source code form [\ldots] (then) it must be made available under this (EPL)
+agreement, too} while this act of 'making avalaible' \enquote{must} incorporate
+a \enquote{copy} of the EPL into \enquote{each copy of the [distributed]
+program} or program package\footcite[cf.][\nopage wp §3]{Epl10OsiLicense2005a}.
+But in opposite to the permissive licenses, the EPL does not only protect the
+distributed source code -- regardless whether it is modified or not. The EPL
+also protects the distributed modified or unmodified binaries: The EPL allows
+each modifying \enquote{contributor} and distributor \enquote{[\ldots] to
+distribute the Program in object code form under (one's) own license agreement
+[\ldots]} provided this license clearly states that the \enquote{source code for
+the Program is available} and where the \enquote{licensees} can
+\enquote{[\ldots] obtain it in a reasonable manner on or through a medium
+customarily used for software exchange}\footcite[cf.][\nopage wp. §3, esp.
+§3.b.iv]{Epl10OsiLicense2005a}. Thus, one has to conclude that the EPL is a
+copyleft license.
+
+But the Eclipse Public License is not a license with strong copyleft; the EPL
+uses 'only' a weak copyleft effect\footnote{Even if one can find contrary
+specifications in the internet. \cite[Pars pro toto cf.][\nopage wp.
+]{ifross2011a}: This page is listing the EPL in the section \enquote{Other
+Licenses with strong Copyleft Effect}}: Indeed, the EPL says that for each EPL
+licensed \enquote{program} -- distributed in object form -- a place must be made
+known where one can get the corresponding source code\footcite[cf.][\nopage wp.
+§3, esp. §3.b.iv]{Epl10OsiLicense2005a}. The term 'Program' is defined as any
+\enquote{Contribution distributed in accordance with [\ldots] (the EPL)} while
+the term 'Contribution' refers - besides other elements - to \enquote{changes to
+the Program, and additions to the Program}\footcite[cf.][\nopage wp.
+§1]{Epl10OsiLicense2005a}. Unfortunately, this is a circular definition:
+'Program' is defined by 'Contribution'; and 'Contribution' is defined by
+'Program'. Nevertheless, one has to read the license benevolently.
+Uncontroversial should be this: If one distributes any modified EPL licensed
+program, library, module, or plugin, then one has to publish the modified source
+code, too. If one \enquote{adds} some own plugins or additional libraries which
+are used by an EPL licensed program (which on behalf of this use must have been
+modified by adding [sic!] procedure calls) then one has publish the code of both
+parts: that of the program and that of the added elements. In this sense, the
+EPL clearly protects the binaries against re-closings like other weak copyleft
+using licenses. But if one distributes only an EPL licensed library which is
+used as a component by another not EPL licensed on-top program, then this
+library does not depend on the top development -- provided that the library
+itself does not call any (program) functions or procedures delivered by the
+overarching on-top development. Hence, nothing is added to the library; and
+hence, no other code than that of the library must be published. Therefore, the
+EPL does not use the strong copyleft effect in the meaning of the GPL.
+ 
+\section{The protecting power of the European Union Public License (EUPL)}
+
+As an approved \emph{open source license}\footcite[cf.][\nopage wp]{OSI2012b},
+the European Union Public License\footnote{ The European Union Public License,
+version 1.1 is maintained by the European Union and hosted under the label
+\enquote{Joinup} (\cite[cf.][\nopage wp]{EuplLicense2007en}).
+This EUPL has officially been translated into many languages, among others into
+German (\cite[cf.][\nopage wp]{EuplLicense2007de}). Because of this multi
+lingual instances, the OSI does not offer its own version, but just a landing
+page linked to the lading page of the European host \enquote{Joinup}
+(\cite[cf.][\nopage wp]{Eupl11OsiLicense2007a}).} protects the user against the
+loss of the right to use, to modify and/or to distribute the received copy of
+the source code or the binaries\footcite[cf.][\nopage wp.\
+§2]{EuplLicense2007de}. Furthermore, based on its patent
+clause\footnote{$\rightarrow$ OSLiC pp.\ \pageref{subsec:EupLPatentClause}}, the
+EUPL protects the users against patent disputes\footcite[cf.][\nopage wp.\ §2,
+at its tail]{EuplLicense2007en}. Besides this patent clause, the EUPL
+additionally contains a \enquote{Disclaimer of Warranty} and a
+\enquote{Disclaimer of Liability}\footcite[cf.][\nopage wp.\ §7 \&
+§8]{EuplLicense2007en}. These three elements together protect the contributors /
+distributors against patents disputes and warranty claims. Finally, the EUPL
+also protects the distributed sources against a re-closing / re-privatizizing
+and the contributors against the loss of feedback. This protection is based on
+two steps: First, the Europrean Public License contains a particular paragraph
+titled \enquote{Copyleft clause} which stipulates that \enquote{copies of the
+Original Work or Derivative Works based upon the Original Work} must be
+distributed \enquote{under the terms of (the European Union Public)
+License}\footcite[cf.][\nopage wp.\ §5]{EuplLicense2007en}. Second, the EUPL
+requires that each licensee -- as long as he \enquote{[\ldots] continues to
+distribute and/or communicate the Work} -- has also to \enquote{[\ldots] provide
+[\ldots] the Source Code}, either directly or by \enquote{[\ldots] (indicating)
+a repository where this Source will be easily and freely available
+[\ldots]}\footcite[cf.][\nopage wp.\ §5]{EuplLicense2007en}. This condition
+ssems to be so important for the EUPL that the license repeats its message: in
+another paragraph the EUPL requires again that \enquote{if the Work is provided
+as Executable Code, the Licensor provides in addition a machine-readable copy of
+the Source Code of the Work along with each copy of the Work [\ldots] or
+indicates, in a notice [\ldots], a repository where the Source Code is easily
+and freely accessible for as long as the Licensor continues to distribute
+[\ldots] the Work}\footcite[cf.][\nopage wp.\ §3]{EuplLicense2007en}. Based on
+the meaning of \enquote{Work} which is defined by the EUPL as \enquote{the
+Original Work and/or its Derivative Works}\footcite[cf.][\nopage wp.\
+§1]{EuplLicense2007en} it must be concluded that the EUPL is a copyleft license.
+
+But nevertheless, the European Union Public License is not a license with strong
+copyleft: On the one hand, if one takes the core of the EUPL then the license
+seems to protect not only the modifications of the original work against
+re-closings and (re-)privatizings, but also the on-top developments because
+normally you have to publish the source code in both cases. Understood in this
+way, the EUPL would be a 'strong copyleft license'. But on the other hand, the
+EUPL additionally contains a \enquote{Compatibility clause} stating that
+\enquote{if the Licensee Distributes [\ldots] Derivative Works or copies thereof
+based upon both the Original Work and another work licensed under a Compatible
+Licence, this Distribution [\ldots] can be done under the terms of this
+Compatible Licence}\footcite[cf.][\nopage wp.\ §5]{EuplLicense2007en} -- while
+the term \enquote{Compatible Licence} is explicitly defined by a list of
+compatible licenses, for example the Eclipse Public
+License\footcite[cf.][\nopage wp.\ Appendix]{EuplLicense2007en}. Based on this
+compatibility clause the obligation to publish the code of an on-top development
+can be subverted: As first step, you could release a little, more or less futile
+on-top application licensed under the Eclipse Public License\footnote{Taking the
+license text very seriously, it is not even necessary that this little futile
+application must depend on the EUPL library by calling functions of EUPL
+library. The license text only says that \enquote{another [any other] work
+licensed under a Compatible Licence} can be distributed together with
+\enquote{derivative works}. By thisthe wording, the license itself is
+establishing a contrast between the derivative work and the other work - what
+indicates that the other work has not necessarily also to be a derivative work.}
+which uses a library licensed under the EUPL. As second step, you add this 'EUPL
+library' which you now may also distribute under the EPL instead of retaining
+the EUPL licensing. So, finally you obtain the same work under the Eclipse
+Public License which is a weak copyleft license\footnote{$\rightarrow$ OSLiC,
+p.\ \pageref{sec:ProtectingPowerOfEpl}}. Hence the protection of the EUPL-1.1 is
+not as comprehensive as one might assume on the base of the license text
+itself\footnote{This kind of specifiying the protective power of the EUPL is
+initially be presented by the FSF (\cite[cf.][wp.\ section 'European Union
+Public License']{FsfEuplStatement2013a}). The EU answers that publishing such a
+trick will comprise its user in the eyes of the open source community
+(\cite[cf.][wp.]{FsfEuplRecomment2013}). That is undoubtely true. But
+unfortunately, this argument does not close the hole in the protecting shield
+put up by the EUPL}, it can at most be a weak copyleft license -- even if the
+reader might get the impression that the authors of the EUPL wished to write a
+strong copyleft license. Howsoever, the EUPL license does not protect the on-top
+developments against a privatizing.
+
+
+\section{The protecting power of the Gnu Public License (GPL) [tbd]}
+
+The Gnu Public License protects \ldots
+ 
+But the Gnu Public License does not protect \ldots
+
+
+\section{The protecting power of the Lesser Gnu Public License (LGPL) [tbd]}
+
+The Lesser Gnu Public License  protects \ldots
+
+But the Lesser Gnu Public License  does not protect \ldots
+
+
+\section{The protecting power of the MIT license}
+
+As an approved \emph{open source license}\footcite[cf.][\nopage wp]{OSI2012b},
+the MIT License\footcite[MIT has to be resolved as \enquote{Massachusetts
+Institute of Technology} (cf.][\nopage wp.)]{wpMitLic2011a} protects the user
+against the loss of the right to use, to modify and/or to distribute the
+received copy of the source code or the binaries\footcite[cf.][\nopage wp
+1ff]{OSI2012a}. Additionally, it protects the contributors and/or distributors
+against warranty claims of the software users, because it contains a 'No
+Warranty Clause'\footcite[cf.][\nopage wp]{MitLicense2012a}. And finally it
+protects the distributed sources against a change of the license which would
+close the sources, because the \enquote{permission [\ldots] to use, copy,
+modify, [\ldots] distribute, [\ldots] (is granted) subject to the [\ldots]
+conditions, [that] the [\ldots] copyright notice and this permission notice
+shall be included in all copies or substantial portions of the
+Software}\footnote{\cite[cf.][\nopage wp]{MitLicense2012a}. The argumentation
+why the source code is protected, but not the binary form follows that of the
+BSD licenses: By these requirements, one is not obliged to redistribute the
+sourcecode of a modified (derivative) work. One is allowed to modify a received
+version and to distribute the results only in binary form and to keep one's
+improvements closed. But if one distribute the source code of the modifications,
+the licensing is retained, simply because the MIT \enquote{[\ldots] permission
+note shall be included in all copies or substantial portions of the software}.}
+
+But the MIT License does not protect the users or the contributors and/or
+distributors against patent disputes (because it does not contain any patent
+clause). Additionally, it does not protect the contributors against the loss of
+feedback (because it does not 'copyleft' the software). Moreover, the MIT
+license does not protect the undistributed software or the distributed binaries
+against re-closings -- neither in unmodified nor in modified form -- because it
+allows to redistribute only the binaries without also supplying the source
+code\footcite[cf.][\nopage wp]{MitLicense2012a}. Finally, the MIT license does
+not protect the on-top developments against a privatizing.
+
+\section{The protecting power of the Mozilla Public License (MPL)}
+ 
+As an approved \emph{open source license}\footcite[cf.][\nopage wp]{OSI2012b},
+the Mozilla Public License\footnote{In 2012, the Mozilla Public License 2.0
+(\cite[cf.][\nopage wp.]{Mpl20MozFoundation2012a}) has been released as a result
+of a longer \enquote{Revision Process}(\cite[cf.][\nopage
+wp.]{Mpl11To20MozFoundation2013a}) by which the  Mozilla Public License 1.1
+(\cite[cf.][\nopage wp.]{Mpl11MozFoundation2013a}) has been ousted. The OSI is
+also hosting its version of the MPL-2.0 (\cite[cf.][\nopage
+wp.]{Mpl20OsiLicense2013a}) and is listing it as an OSI approved license
+(\cite[cf.][\nopage wp.]{OSI2012b}) while it classifies the MPL-1.1 as a
+\enquote{superseded license}(\cite[cf.][\nopage wp.]{OSI2013b}). The Mozilla
+Foundation itself says concerning the difference between the two licenses that
+\enquote{the most important part of the license - the file-level copyleft - is
+essentially the same in MPL 2.0 and MPL 1.1} (\cite[cf.][\nopage
+wp.]{Mpl11To20MozFoundation2013a}). By reading the MPL-1.1, one could get the
+impression that fulfilling all conditions of the MPL-2.0 would imply also to act
+in accordance to the MPL-1.1. Thus the OSLiC focuses on the MPL-2.0, at least
+for the moment. Nevertheless, in this section we want to use the general label
+'MPL' without any releasenumber for indicating that with respect to its
+protecting power the MPL-2.0 and the MPL-1.1 can be taken as equipollent.}
+protects the user against the loss of the right to use, to modify and/or to
+distribute the received copy of the source code or the
+binaries\footcite[cf.][\nopage wp.\ §2.1.a]{Mpl20OsiLicense2013a}.
+Furthermore, based on its split and distributed patent
+clause\footnote{$\rightarrow$ OSLiC pp.\ \pageref{subsec:MplPatentClause}}, the
+MPL protects the users against patent disputes\footcite[cf.][\nopage wp.\
+§2.1.b, §2.3, §5.2]{Mpl20OsiLicense2013a}. Besides this patent sections, the MPL
+additionally contains a \enquote{Disclaimer of Warranty} and a
+\enquote{Limitation of Liability}\footcite[cf.][\nopage wp.\ §6 \&
+§7]{Mpl20OsiLicense2013a}. These three elements together protect the
+contributors / distributors against patents disputes and warranty claims.
+Finally, the MPL also protects the distributed sources against a re-closing /
+re-privatizing and the contributors against the loss of feedback: The MPL
+clearly says that, on the one hand, \enquote{all distribution of Covered
+Software in Source Code Form, including any Modifications[\ldots] must be under
+the terms of this License}\footcite[cf.][\nopage wp.\
+§3.1]{Mpl20OsiLicense2013a} and that, on the other hand, an MPL licensed
+software \enquote{[\ldots] (distributed) in Executable Form [\ldots] must also
+be made available in Source Code Form [\ldots]}\footcite[cf.][\nopage wp.\
+§3.2]{Mpl20OsiLicense2013a}. So, it must be inferred that the MPL is a copyleft
+license.
+
+But nevertheless, the Mozilla Public License is not a license with strong
+copyleft. It does not protect on-top developments against privatizings: First,
+the MPL does not use the term \emph{derivative work}\footnote{
+\cite[cf.][\nopage wp]{Mpl20OsiLicense2013a}. The MPL-1.1 uses the term
+\emph{derivative work} only in the context of writing new \enquote{versions of
+the license}, not in the context of licensing software (\cite[cf.][\nopage wp.
+§6.3]{Mpl11MozFoundation2013a}).}. Instead of this, the MPL denotes the
+\enquote{[\ldots] (initial) Source Code Form [\ldots] and Modifications of such
+Source Code Form} by the label \enquote{Covered Software}\footcite[cf.][\nopage
+wp.\ §1.4]{Mpl20OsiLicense2013a} -- while the term \enquote{Modifications}
+refers to \enquote{any file in Source Code Form that results from an addition
+to, deletion from, or modification of the contents of Covered Software or any
+file in Source Code Form that results from an addition to, deletion from, or
+modification of the contents of Covered Software}\footnote{\cite[cf.][\nopage
+wp.\ §1.10]{Mpl20OsiLicense2013a}. The Mozilla Foundation denotes this reading
+by the term \enquote{file-level copyleft} (\cite[cf.][\nopage
+wp]{Mpl11To20MozFoundation2013a}).}. Second, the MPL contrasts the source code
+form and its modifications with the \enquote{Larger Work} by specifying that the
+larger work is \enquote{[\ldots] material, in a seperate file or files, that is
+not covered software}\footcite[cf.][\nopage wp.\ §1.7]{Mpl20OsiLicense2013a}.
+Finally, the MPL states, that \enquote{you may create and distribute a Larger
+Work under terms of Your choice, provided that You also comply with the
+requirements of this License for the Covered Software}\footcite[cf.][\nopage
+wp.\ §3.3]{Mpl20OsiLicense2013a}. Based on these specifications, one has to
+reason that an on-top development which depends on MPL licensed libraries by
+calling some of their functions, is undoubtably a derivative work\footnote{This
+follows from the general meaning of a \emph{derivative work} as a benevolent
+software developer would read this term ($\rightarrow$ OSLiC, pp.\
+\pageref{sec:BenevolentDerivativeWorkUnderstanding}). But again: The MPL does
+not focus on this general aspect; it uses its own concept of a \emph{larger
+work}.}, but also only a larger work in the meaning of the MPL so that code of
+this on-top application needs not to be published -- provided, that the library
+and the on-top development are distributed as different files\footnote{It might
+be discussed whether integrating a declaration of a function, class, or method
+into the on-top development by including the corresponding header files indeed
+means that one is \enquote{including portions (of the Source Code Form)} into a
+file which therefore has to be taken as \enquote{Modification}
+(\cite[cf.][\nopage wp.\ §1.4]{Mpl11MozFoundation2013a}). From the viewpoint of
+a benevolent developer it should be difficult to argue that the including of
+declaring (header) files alone can evoke a derivative work. It is the call of
+the function in one's code which establishes the dependency. But that is not the
+point, the MPL focuses. The MPL aims on the textual reuse of (defining) code
+snippets. Hence, one could ignore the textual integration of parts of the
+declaring header files: it should not trigger that one's own work becomes a
+modification in the eyes of the Mozilla Findation. But of course, one would
+circumvent the idea of the MPL if one hides defining code in header files and
+reuses that code by one's own compilation. This would undoubtably be an
+incorporation of portions and therefore would make the incorporating file
+becoming a modification of the MPL licensed initial work. }. Hence, the MPL is
+license with a weak copyleft effect and does not protect the on-top developments
+against privatizings.
+
+\section{The protecting power of the Microsoft Public License (MS-PL)}
+
+As an approved \emph{open source license}\footcite[cf.][\nopage wp]{OSI2012b},
+the Microsoft Public License protects the user against the loss of the right to
+use, to modify and/or to distribute the received copy of the source code or the
+binaries\footcite[cf.][\nopage wp.
+§2]{MsplOsiLicense2013a}. Furthermore, based on its patent
+clause\footnote{$\rightarrow$ OSLiC pp.\ \pageref{subsec:MsplPatentClause}}, the
+MS-PL protects the users against patent disputes\footcite[cf.][\nopage wp.
+§2.B and §3.B]{MsplOsiLicense2013a}. Because of this patent clause and of its
+concise \emph{disclaimer of warranty}, the MS-PL also protects the contributors
+/ distributors against patents disputes and warranty
+claims\footcite[cf.][\nopage wp. §2B, §3B, §3D]{MsplOsiLicense2013a}.
+Finally, the Microsoft Public License protects the distributed sources
+themselves - and even \enquote{portions of these sources} -- \emph{against} a
+change of the license which would \emph{reset} the work \emph{as closed
+software}, because first, one \enquote{[\ldots] must retain all copyright,
+patent, trademark, and attribution notices that are present in the
+software}\footcite[cf.][\nopage wp. §3C]{MsplOsiLicense2013a}, and because
+second, one must also incorporate \enquote{a complete copy of this license} into
+one's own distribution premised one distributes the source
+code\footcite[cf.][\nopage wp. §3D]{MsplOsiLicense2013a}.
+
+But the Microsoft Public License does not protect the contributors against the
+loss of feedback because it does not 'copyleft' the software: The license does
+not contain any sentence which requires that one has to publish the sources,
+too\footnote{There seems to be some misunderstandings on the internet: The
+English wikipedia specifies the MS-PL as a permissive license and the MS-RL as a
+license with copyleft effect (\cite[cf.][\nopage wp.]{wpMsSharedSources2013a}).
+The German wikipedia says that the MS-PL is a license with a \enquote{schwachen
+[weak] copyleft} (\cite[cf.][\nopage wp.]{wpMspl2013a}). And it says also that
+the \enquote{Microsoft Reciprocal License} (MS-RL) is a license with weak
+copyleft, too (\cite[cf.][\nopage wp.]{wpMsrl2013a}). But for the very
+thoroughly working \enquote{ifross license center}, the MS-RL is a license with
+restricted (weak) copyleft, while the MS-PL is a permissive license with some
+selectable options (\cite[cf.][\nopage wp.]{ifross2011a}). Based on the license
+text itself and these other readings, we decided to take the MS-PL as a
+permissive license in accordance to the English wikipedia page and the ifross
+page.}. In the same spirit, the MS-PL does not protect the undistributed
+software or the distributed binaries against re-closings -- neither in
+unmodified nor in modified form -- because the MS-PL License allows to
+(re)distribute the binaries without also supplying the sources -- even if the
+binaries rest upon sources modified by the distributor. Finally, also the MS-PL
+does not protect the on-top developments against a privatizing.
+
+
+\section{The protecting power of the Postgres License (PgL)}
+
+As an approved \emph{open source license}\footcite[cf.][\nopage wp]{OSI2012b},
+the PostgreSQL License protects the user against the loss of the right to use,
+to modify and/or to distribute the received copy of the source code or the
+binaries\footcite[cf.][\nopage wp.]{PglOsiLicense2013a}.
+Because of its \emph{disclaimer of warranty}, the PgL also protects the
+contributors / distributors against warranty claims\footcite[cf.][\nopage
+wp.]{PglOsiLicense2013a}. Finally, the PgL protects the distributed sources
+themselves \emph{against} a change of the license which would \emph{reset} the
+work \emph{as closed software}, because the \enquote{copyright notice} and the
+whole license must \enquote{[\ldots] appear in all copies}\footcite[cf.][\nopage
+wp.]{PglOsiLicense2013a}.
+
+But the PostgreSQL License does not protect the contributors against the loss of
+feedback because it does not 'copyleft' the software: The license does not
+contain any sentence which requires that one has to publish the sources, too. 
+In the same spirit, the PgL does not protect the undistributed software or the
+distributed binaries against re-closings -- neither in unmodified nor in
+modified form -- because the PgL allows to (re)distribute the binaries without
+also supplying the sources -- even if the binaries rest upon sources modified by
+the distributor. Finally, the PgL does not protect the on-top developments
+against a privatizing.
+
+
+\section{The protecting power of the PHP License}
+
+As an approved \emph{open source license}\footcite[cf.][\nopage wp]{OSI2012b},
+the PHP-3.0 License protects the user against the loss of the right to use, to
+modify and/or to distribute the received copy of the source code or the
+binaries\footcite[cf.][\nopage wp.]{Php30OsiLicense2013a}. Because of its
+\emph{disclaimer of warranty}, the PHP license also protects the contributors /
+distributors against warranty claims\footcite[cf.][\nopage
+wp.]{Php30OsiLicense2013a}. Finally, the PHP license protects the distributed
+sources themselves \emph{against} a change of the license which would
+\emph{reset} the work \emph{as closed software}, because
+\enquote{redistributions of source code must retain the [\ldots] copyright
+notice, this list of conditions and the [\ldots]
+disclaimer}\footcite[cf.][\nopage wp.]{Php30OsiLicense2013a}.
+
+But the PHP-3.0 License does not protect the contributors against the loss of
+feedback because it does not 'copyleft' the software: The license does not
+contain any sentence which requires that one has to publish the sources, too. 
+In the same spirit, the PHP license does not protect the undistributed software
+or the distributed binaries against re-closings -- neither in unmodified nor in
+modified form -- because the PHP license allows to (re)distribute the binaries
+without also supplying the sources -- even if the binaries rest upon sources
+modified by the distributor.
+  
+\section{Summary}
+
+All these specifications cannot only be summarized by a
+table\footnote{$\rightarrow$ OSLiC, p. \pageref{tab:powerOfLicenses}}, but also
+by a mindmap:
+
+\begin{tikzpicture}
+\label{OSCLICMM}
+\footnotesize
+
+% (1.A) list of all licenses and their release numbers Level 5/6
+\node[rectangle,draw,text width=1.4cm] (l0100) at (9,4)
+{ \textit{BSD License} };
+\node[text width=1.4cm] (l0101) at (8.25,3)
+{ \scriptsize{3-Clauses} };
+\node[text width=1.4cm] (l0102) at (10,3)
+{ \scriptsize{2-Clauses} };
+  
+\node[rectangle,draw,text width=1.4cm] (l0200) at (10.2,5)
+{ \textit{MIT License} }; 
+  
+\node[rectangle,draw,text width=1.4cm] (l0300) at (12,5.5)
+{ \textit{\textbf{Ap}ache \textbf{L}icense}};
+\node[text width=0.4cm] (l0301) at (12,4.5) {\scriptsize{2.0}};
+
+\node[rectangle,draw,text width=1.4cm] (l0400) at (13,6.8)
+{ \scriptsize{\textit{\textbf{M}icro\textbf{s}oft} \textbf{P}ublic \textbf{L}icense} };
+  
+\node[rectangle,draw,text width=1.4cm] (l0500) at (13,8)
+{\textit{\textbf{P}ost\textbf{g}res \textbf{L}icense}};
+  
+\node[rectangle,draw,text width=1.4cm] (l0600) at (13,9)
+{\textit{\textbf{PHP} License}};
+\node[text width=0.4cm] (l0601) at (14.5,9){\scriptsize{3.0}};
+  
+
+\node[rectangle,draw,text width=1.4cm] (l0800) at (13,10.7)
+{ \textit{\textbf{M}ozilla \textbf{P}ublic \textbf{L}icense}};
+\node[text width=0.4cm] (l0801) at (14.5,10.2){\scriptsize{1.1}};
+\node[text width=0.4cm] (l0802) at (14.5,11.2){\scriptsize{2.0}};
+
+\node[rectangle,draw,text width=1.4cm] (l0900) at (13,12.25)
+{\textit{\textbf{E}clipse \textbf{P}ublic \textbf{L}icense}};
+\node[text width=0.4cm] (l0901) at (14.5,12.25) {\scriptsize{1.0}};
+ 
+\node[rectangle,draw,text width=1.5cm] (l1000) at (13,13.8)
+{\textit{\textbf{E}uropean \textbf{P}ublic \textbf{L}icense}}; 
+\node[text width=0.4cm] (l1001) at (14.5,13.3){\scriptsize{1.1}};
+\node[text width=0.4cm,style=dotted] (l1002) at (14.5,14.3){\scriptsize{\textit{1.2}}};
+  
+\node[rectangle,draw,text width=1.4cm] (l1100) at (13,15.5)
+{\textit{\textbf{L}esser \textbf{G}NU \textbf{P}ublic \textbf{L}icense}};
+
+\node[text width=0.4cm] (l1101) at (14.5,15){\scriptsize{2.1}};
+\node[text width=0.4cm] (l1102) at (14.5,16){\scriptsize{3.0} };
+
+\node[rectangle,draw,text width=1.4cm] (l1200) at (13,17.5)
+{\textit{\textbf{G}NU \textbf{P}ublic \textbf{L}icense}};
+
+\node[text width=0.4cm] (l1201) at (14.5,17){\scriptsize{2.1}};
+\node[text width=0.4cm] (l1202) at (14.5,18){\scriptsize{3.0} };
+
+\node[rectangle,draw,text width=1.4cm] (l1300) at (13,19.5)
+{ \textit{\textbf{A}ffero \textbf{G}NU \textbf{P}ublic \textbf{L}icense}};
+\node[text width=0.4cm] (l1302) at (14.5,19.5){\scriptsize{3.0}};
+
+% 2. the clustering concepts of licenses (level 4)
+\node[rectangle,draw,text width=2.3cm] (n0100) at (10,8)
+ { \textit{protecting the user, the con\-tri\-butor \& the initial code}\\
+   \tiny{Permissive Licenses}      
+ };
+
+\node[rectangle,draw,text width=2.3cm] (n0200) at (10,12.5)
+{ \textit{protecting the user, the con\-tri\-butor, the
+  initial code, \& all di\-rect de\-ri\-va\-tions}\\
+  \tiny{Weak Copyleft}        
+};
+
+\node[rectangle,draw,text width=2.3cm] (n0300) at (10,16.5)
+{ \textit{protecting the user, the con\-tri\-bu\-tor, the 
+  initial code, all di\-rect de\-ri\-va\-tions \& the 
+  (in\-di\-rect\-ly de\-ri\-ved) on-top-deve\-lop\-ments}\\ 
+  \tiny{Strong Copyleft}    
+ };
+
+% 3. the threats (level 3)
+\node[ellipse,draw,text width=1.6cm] (c110000) at (4.5,0)
+{ \textbf{\textit{Patent Disputes}}};
+
+\node[ellipse,draw,text width=1.6cm] (c120000) at (4.5,2)
+{ \textbf{\textit{Loss of Rights}} };
+
+\node[ellipse,draw,text width=1.6cm] (c210000) at (4.5,4)
+{ \textbf{\textit{Warranty Claims}} };
+ 
+\node[ellipse,draw,text width=1.6cm] (c220000) at (4.5,6)
+{ \textbf{\textit{Loss of Feeback}}};
+
+\node[ellipse,draw,text width=0.6cm] (c311000) at (6.2,8)
+{ \tiny{\textit{\textbf{reclos\-ings}}}};
+
+\node[ellipse,,draw,text width=0.6cm] (c321000) at (6.2,10)
+{ \tiny{\textit{\textbf{reclos\-ings}}} };
+
+\node[ellipse,,draw,text width=0.6cm] (c331000) at (6.2,12)
+{ \tiny{\textit{\textbf{reclos\-ings}}} };
+
+\node[ellipse,,draw,text width=0.6cm] (c341000) at (6.2,14)
+{ \tiny{\textit{\textbf{reclos\-ings}}} };
+
+\node[ellipse,,draw,text width=0.6cm] (c351000) at (6.8,16.2)
+{ \tiny{\textit{\textbf{reclos\-ings}}} };
+
+\node[ellipse,,draw,text width=0.7cm] (c361000) at (7.5,17.5)
+{ \tiny{\textit{\textbf{privati\-zings}}} };
+
+\node[ellipse,,draw,text width=1.6cm] (c411000) at (6.5,19)
+{ \textit{\textbf{clos\-ings}} };
+
+
+% 4. the subtypes of protected entities (level 2)
+\node[ellipse,draw,text width=1.5cm] (c310000) at (3,8)
+ { \scriptsize{un\-modified} \textbf{Sources}};
+
+\node[ellipse,draw,text width=1.5cm] (c320000) at (3.25,10)
+ { \scriptsize{un\-modified} \textbf{Binaries}};
+
+\node[ellipse,draw,text width=1.2cm] (c330000) at (3.5,12)
+ { \scriptsize{modified} \textbf{Sources}};
+
+\node[ellipse,draw,text width=1.4cm] (c340000) at (3.25,14)
+ { \scriptsize{modified} \textbf{Binaries}};
+
+\node[ellipse,draw,text width=2cm] (c350000) at (3.6,16)
+ { \tiny{\textbf{part of} On-Top-Developments}};
+
+\node[ellipse,draw,text width=2.9cm] (c360000) at (3.4,17.5)
+ { \tiny{\textbf{On-Top-Developments}}};
+
+
+% 5. the protected entities (level 1)
+\node[ellipse,draw,text width=1cm] (c100000) at (1,1)
+ { \textbf{Users} };
+
+\node[ellipse,draw,text width=0.8cm] (c200000) at (1,5)
+ { \textbf{Con\-tribu\-tors}};
+
+\node[ellipse,draw,text width=0.8cm] (c300000) at (1,12)
+ { distri\-buted \textbf{Soft\-ware}};
+ 
+\node[ellipse,draw,text width=2.2cm] (c400000) at (1,19)
+ { un\-distri\-buted \textbf{Soft\-ware}}; 
+
+% 6. main node (leve 0)
+\node[ellipse,draw,text width=1.3cm] (c000000) at (0,8)
+{ \textbf{open source license}};
+
+% a linking Licenses to their release numbers (Linking level 5 to 6)
+\foreach \father/\daughter in {
+  l0100/l0101/,
+  l0100/l0102/,
+  l0300/l0301/,
+  l0600/l0601/,
+  l0800/l0801/,
+  l0800/l0802/,
+  l0900/l0901/,
+  l1000/l1001/,
+  l1000/l1002/,
+  l1100/l1101/,
+  l1100/l1102/,
+  l1200/l1201/,
+  l1200/l1202/,
+  l1300/l1302/
+  }
+  \draw[dashed] (\father) to  (\daughter) ;
+
+% b) linking Licenses to license concepts (Linking level 5 to 4)
+\foreach \father/\daughter/\outangle/\inangle in {
+  n0100/l0100/270/150,       
+  n0100/l0200/280/155,
+  n0100/l0300/290/160,
+  n0100/l0400/300/165,
+  n0100/l0500/310/150,
+  n0100/l0600/340/160,
+  n0200/l0800/300/160,
+  n0200/l0900/340/170,
+  n0200/l1000/20/190,
+  n0200/l1100/60/200,
+  n0300/l1200/40/180,
+  n0300/l1300/80/180 
+  }
+  %\draw[dashed] (\father) to [out=\outangle,in=\inangle] (\daughter) ;
+  \draw[dashed] (\father) to  (\daughter) ;
+
+% c) linking license concepts to the threats against they protect
+% c.1) strong copyleft licenses
+\foreach \father/\daughter/\outangle/\inangle in {
+  c361000/n0300/0/180,
+  c351000/n0300/0/180,
+  c341000/n0300/45/190,
+  c331000/n0300/50/200,
+  c321000/n0300/55/210,
+  c311000/n0300/60/220,
+  c220000/n0300/25/225,
+  c210000/n0300/25/230,
+  c120000/n0300/25/235
+  }
+  \draw[<-,color=blue] (\father) to [out=\outangle,in=\inangle] (\daughter) ;
+% c.2) weak copyleft licenses
+\foreach \father/\daughter/\outangle/\inangle in {
+  c341000/n0200/330/170,
+  c331000/n0200/0/180,
+  c321000/n0200/0/180,
+  c311000/n0200/20/190,
+  c220000/n0200/15/220,
+  c210000/n0200/15/230,
+  c120000/n0200/15/235
+  }
+  \draw[<-,color=cyan] (\father) to [out=\outangle,in=\inangle] (\daughter) ;
+% c.3) permissive licenses
+\foreach \father/\daughter/\outangle/\inangle in {
+  c331000/n0100/355/150,
+  c311000/n0100/0/180,
+  c210000/n0100/5/210,
+  c120000/n0100/10/230
+  }
+  \draw[<-,color=red] (\father) to [out=\outangle,in=\inangle] (\daughter) ;
+%c.4 agpl license
+\foreach \father/\daughter/\outangle/\inangle in {
+  c411000/l1300/0/180    
+}
+  \draw[<-,color=green] (\father) to [out=\outangle,in=\inangle] (\daughter) ;
+
+
+%d linking protected entities, their subtypes and the the relations
+\foreach \father/\daughter/\edgetext/\outangle/\inangle in {
+  c000000/c100000/protecting/260/120,
+  c100000/c110000/against/360/180,
+  c100000/c120000/against/360/180,
+  c000000/c200000/protecting/270/180,
+  c200000/c110000/against/340/150,
+  c200000/c210000/against/0/180,
+  c200000/c220000/against/0/180,
+  c000000/c300000/protecting/90/230,
+  c300000/c310000/as/300/180,
+  c300000/c320000/as/330/180,
+  c300000/c330000/as/0/180,
+  c300000/c340000/as/30/180,
+  c300000/c350000/as/60/180,
+  c300000/c360000/as/70/180,
+  c000000/c400000/protecting/100/240,
+  c400000/c411000/against/0/180        
+}
+  \draw[->,dotted,
+    decoration={text along path,
+              text align={center},
+              text={|\itshape|\edgetext}},
+              postaction={decorate},] (\father) to [out=\outangle,in=\inangle] (\daughter) ;
+
+\foreach \father/\daughter/\edgetext/\outangle/\inangle in {
+  c310000/c311000/against/0/180,
+  c320000/c321000/against/0/180,
+  c330000/c331000/against/0/180,
+  c340000/c341000/against/00/180,
+  c350000/c351000/against/0/180,
+  c360000/c361000/against/0/180      
+}
+  \draw[->,dotted,
+    decoration={text along path,
+              text align={center},
+              text={|\itshape \tiny|\edgetext}},
+              postaction={decorate},] (\father) to [out=\outangle,in=\inangle] (\daughter) ;
+
+%f linking the patent clauses
+\foreach \father/\daughter/\outangle/\inangle in {
+  c110000/l1302/0/305,
+  c110000/l1202/0/303,
+  c110000/l1201/0/301,
+  c110000/l1102/0/299,
+  c110000/l1101/0/297,
+  c110000/l1002/0/295,
+  c110000/l0901/0/290,
+  c110000/l0802/0/285,
+  c110000/l0400/0/275,
+  c110000/l0301/0/270   
+}
+  \draw[<-,color=gray] (\father) to [out=\outangle,in=\inangle] (\daughter) ;
+
+\end{tikzpicture}
+
+Finally, one could generate new groups of open source license, new classes, like
+'user protecting licenses'\footnote{all of them because all of them have to
+fulfill the OSD}, 'patent disputes fending licenses', an so on.
+% TODO nach Fertigstellung eigene Taxonomie entwickeln
+
+However, it must kept in mind that all of these grouping viewpoints do not
+permit the conclusion that all members of a group can be respected by fulfilling
+the same requirements. This would only be possible if the grouping criteria
+would directly refer to the fulfilling tasks. Indeed, nearly all open source
+licenses do differ with respect to these criteria, and even if the differences
+are very small, they can't be neglected\footnote{Pars pro toto: Both, the BSD
+license and the Apache license require that you provide an indication to the
+developers of the application. But in case of the BSD license you have to
+publish the copyright notice / line, while in case of the Apache license you
+have exactly to present the content of the notice file distributed together with
+the application.}. So: reflecting on possible classes of open source licenses is
+a good method to become familiar with the area of open source licenses. But it
+is not a method to determine, what one needs to be done to obtain the right to
+use the software. For that purpose every license must be considered
+individually.
+
+
+
+%\bibliography{../../../bibfiles/oscResourcesEn}
