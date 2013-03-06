@@ -136,21 +136,21 @@ discussed in the OSLiC as a proof for the following classification:
 \draw [-,dotted,line width=0pt,white,
     decoration={text along path,
               text align={center},
-              text={|\itshape| without patent clauses}},
+              text={|\itshape| without granting patent clauses}},
               postaction={decorate}] (0.9,7.4) arc (180:0:1.8cm);
 
 \node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0101) at (2,8)
-{  \footnotesize \bfseries \textit{?}};
+{  \footnotesize \bfseries \textit{MIT}};
 \node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0102) at (3.5,8)
 {  \footnotesize \bfseries \textit{BSD}};
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0103) at (2,6.5)
-{  \footnotesize \bfseries \textit{MIT}};
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0104) at (3.5,6.5)
-{  \scriptsize \bfseries \textit{?}};
+\node[ellipse,draw,text width=1cm, fill=gray!40, text centered] (l0103) at (1.6,6.5)
+{  \footnotesize \bfseries \textit{LGPL-2.1}};
+\node[ellipse,draw,text width=1cm, fill=gray!40, text centered] (l0104) at (3.6,6.5)
+{  \footnotesize \bfseries \textit{GPL-2.0}};
 \node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0105) at (2,5)
-{  \footnotesize \bfseries \textit{?}};
+{  \footnotesize \bfseries \textit{PHP}};
 \node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0106) at (3.5,5)
-{  \footnotesize \bfseries \textit{?}};
+{  \footnotesize \bfseries \textit{PgL}};
 
 \node[ellipse,minimum height=6cm,minimum width=8.5cm,draw,fill=gray!20] (l0200) at (9.2,6.5)
 {  };
@@ -158,44 +158,45 @@ discussed in the OSLiC as a proof for the following classification:
 \draw [-,dotted,line width=0pt,white,
     decoration={text along path,
               text align={center},
-              text={|\itshape| with patent clauses}},
-              postaction={decorate}] (7.5,8.5) arc (120:60:4cm);
+              text={|\itshape| with granting patent clauses}},
+              postaction={decorate}] (2.2,2) arc (180:0:7cm);
 
 
-\node[ellipse,minimum height=5cm,minimum width=8cm,draw,fill=gray!40] (l0220) at (9.2,6.2)
+\node[ellipse,minimum height=4.5cm,minimum width=6cm,draw,fill=gray!30] (l0210) at (8.4,6.2)
 {  };
-\node[ellipse,minimum height=4cm,minimum width=4.5cm,draw,fill=gray!30] (l0210) at (7.8,6.2)
-{  };
-
-
 
 \draw [-,dotted,line width=0pt,white,
     decoration={text along path,
               text align={center},
               text={|\itshape| granting + revoking}},
-              postaction={decorate}] (4.7,4.7) arc (180:0:3cm);
+              postaction={decorate}] (4.4,3.8) arc (180:0:4cm);
 
-\node[ellipse,draw,text width=1cm, fill=gray!40, text centered] (l0211) at (6.7,6.5)
-{  \footnotesize \bfseries \textit{EpL}};
-\node[ellipse,draw,text width=1cm, fill=gray!40, text centered] (l0212) at (8.8,6.7)
-{  \footnotesize \bfseries \textit{ApL}};
-\node[ellipse,draw,text width=1cm, fill=gray!40, text centered] (l0213) at (6.7,5.5)
-{  \footnotesize \bfseries \textit{?}};
-\node[ellipse,draw,text width=1.1cm, fill=gray!40, text centered] (l0214) at (8.4,5)
+\node[ellipse,draw,text width=1cm, fill=gray!40, text centered] (l0212) at (8.4,7.2)
+{  \scriptsize \bfseries \textit{ApL}};
+
+\node[ellipse,draw,text width=1cm, fill=gray!40, text centered] (l0211) at (6.8,6.6)
+{  \scriptsize \bfseries \textit{EpL}};
+
+\node[ellipse,draw,text width=1cm, fill=gray!40, text centered] (l0213) at (10,6.6)
+{  \scriptsize \bfseries \textit{MpL}};
+
+\node[ellipse,draw,text width=1.2cm, fill=gray!40, text centered] (l0214) at (8.4,6)
 {  \scriptsize \bfseries \textit{MS-PL}};
 
- 
-% line width=0pt,white,
-\draw [-,dotted,line width=0pt,white,
-    decoration={text along path,
-              text align={center},
-              text={|\itshape| granting}},
-              postaction={decorate}] (8.5,6) arc (180:0:2cm);
+\node[ellipse,draw,text width=1.6cm, fill=gray!40, text centered] (l0213) at (7.1,5.3)
+{  \scriptsize \bfseries \textit{LGPL-3.0}};
 
-\node[ellipse,draw,text width=1cm, fill=gray!40, text centered] (l0221) at (11.4,7)
+\node[ellipse,draw,text width=1.4cm, fill=gray!40, text centered] (l0213) at (9.9,5.3)
+{  \scriptsize \bfseries \textit{GPL-3.0}};
+
+\node[ellipse,draw,text width=1.6cm, fill=gray!40, text centered] (l0214) at (8.4,4.5)
+{  \scriptsize \bfseries \textit{AGPL-3.0}};
+ 
+ 
+\node[ellipse,draw,text width=1cm, fill=gray!40, text centered] (l0221) at (11.6,8)
 {  \footnotesize \bfseries \textit{EUPL}};
-\node[ellipse,draw,text width=1cm, fill=gray!40, text centered] (l0222) at (11.4,5.5)
-{  \footnotesize \bfseries \textit{??}};
+\node[ellipse,draw,text width=1cm, fill=gray!40, text centered] (l0222) at (12.4,6.2)
+{  \footnotesize \bfseries \textit{\ }};
 
 \end{tikzpicture}
 \end{center}
@@ -375,17 +376,167 @@ exclusive usage rights to any patents held by the Licensor, to the extent
 necessary to make use of the rights granted on the Work under this
 Licence}\footcite[cf.][\nopage wp.\ §2 at its tail]{EuplLicense2007en}.
 Furthermore the EUPL does not contain any patent specific revoking clause, but
-only a general clause by which \enquote{[\ldots] the rights granted hereunder
-will terminate automatically upon any breach by the Licensee of the terms of the
-Licence}\footcite[cf.][\nopage wp.\ §12]{EuplLicense2007en}. Thus, the EUPL is -
-as we are using to say in this chapter - a granting license and not a revoking
+only an abstract clause requiring that all \enquote{[\ldots] the rights granted
+hereunder will terminate automatically upon any breach by the Licensee of the
+terms of the Licence}\footcite[cf.][\nopage wp.\ §12]{EuplLicense2007en}. Thus,
+the EUPL is - as we are using to say in this chapter - a granting license and
+not a revoking license.
+
+\subsection{GPL statements concerning patents}
+
+Although the LGPL versions 2.1 and 3.0 are aiming for the same results, they
+heavily differ with respect to textual and arguing structure. Therefore, it
+should be helpful to treat these two licenses separately.
+
+\subsubsection {GPL-2.0} \label{subsec:Gpl21PatentClause}
+
+The GPL-2.0 does not contain any specific patent clause by which it would grant
+(and revoke) the rights to use those patents which belong to the contributors
+and  which are necessary to use the software in accordance with the legal patent
+system.
+
+Instead of this, the preamble of the GPL-2.0 alleges that \enquote{[\ldots] any
+free program is threatened constantly by software patents} and that the authors
+of the GPL -- for tackling this threat -- \enquote{[\ldots] had made it clear
+that any patent must be licensed for everyone's free use or not licensed at
+all}\footcite[cf.][\nopage wp., Preamble]{Gpl20OsiLicense1991a}. Unfortunately,
+this specification is only an indirect claim which needs a lot of arguing for
+establishing a protection against patent disputes. Howsoever, this paragraph of
+the GPL-2.0 does not directly grant any rights to the software users to use
+necessary patents too.
+
+With respect to the patent problem, the GPL-2.0 also states that a licensee has
+to fulfill the conditions of the GPL-2.0 completely, even if an existing patent
+infringement -- being \enquote{imposed} on the LGPL licensee --
+\enquote{[\ldots] contradicts the conditions of this license} so, that a waiving
+of the use of the software is the only way to fulfill both
+constraints\footcite[cf.][\nopage wp.\ §11]{Gpl20OsiLicense1991a}. And finally
+the GPL-2.0 allows the original copyright holder to \enquote{add an explicit
+geographical distribution limitation excluding [\ldots] countries} provided that
+these countries \enquote{[\ldots] (restict) the distribution and/or use of the
+library [\ldots] by patents [\ldots]}\footcite[cf.][\nopage wp.\
+§12]{Gpl20OsiLicense1991a}. Based on these statements, one cannot infer that the
+GPL-2.0 grants any patent rights to the software user, neither directly, nor
+indirectly.
+
+Thus, we cannot say that the GPL-2.0 is a granting license or a revoking
 license.
 
-\subsection{GPL statements concerning patents [tbd]}
+\subsubsection {GPL-3.0}\label{subsec:Gpl30PatentClause}
 
-\subsection{LGPL statements concerning patents [tbd]}
+Initially, the GPL-3.0 regrets that \enquote{[\ldots] every program is
+threatened constantly by software patents} what should be seen as the
+\enquote{[\ldots] danger that patents applied to a free program could make it
+effectively proprietary}. And therefore -- as the GPL-3.0 itself summarizes its
+patent rules -- \enquote{[\ldots] the GPL assures that patents cannot be used to
+render the program non-free}\footcite[cf.][\nopage wp.\
+Preamble]{Gpl30OsiLicense2007a}. This kind of protection is then established by
+three steps. First, the GPL-3.0 stipulates that \enquote{each contributor grants
+[\ldots the licensees] a non-exclusive, worldwide, royalty-free patent license
+under the contributor's essential patent claims, to make, use, sell, offer for
+sale, import and otherwise run, modify and propagate the contents of its
+contributor version}\footcite[cf.][\nopage wp.\ §11]{Gpl30OsiLicense2007a}.
+Second, the GPL-3.0 defines that this patent license granted by the contributor
+\enquote{[\ldots] is automatically extended to all recipients} who lateron
+receive any version of the work, even if the indirectly receive them by third
+parties and even if they receive a \enquote{covered work} or \enquote{works
+based on it}\footcite[cf.][\nopage wp.\ §11]{Gpl30OsiLicense2007a}. Moreover,
+the GPL-3.0 also specifies that those distributors of a \enquote{covered work}
+who have the right to use a patent necessary for the use of the distributed
+software but who are not allowed to relicense this patent to third parties must
+solve this problem by making the source code nevertheless available, by
+\enquote{depriving} themselves or by \enquote{extending the patent license to
+downstream recipients}\footcite[cf.][\nopage wp.\ §11]{Gpl30OsiLicense2007a}.
+And finally, the GPL-3.0 also introduces an revoking clause by stating that a
+licensee \enquote{[\ldots] may not initiate litigation [\ldots] alleging that
+any patent claim is infringed by making, using, selling, offering for sale, or
+importing the Program or any portion of it}\footcite[cf.][\nopage wp.\
+§10]{Gpl30OsiLicense2007a} and that this licensee \enquote{automatically} loses
+the rights granted by the GPL-3.0 -- \enquote{including any patent licenses} --
+if he tries to propagate or modify a covered work against the rules of the
+GPL-3.0\footcite[cf.][\nopage wp.\ §8]{Gpl30OsiLicense2007a}.
+
+Thus, GPL-3.0 is - as we are using to say in this chapter - a granting and a
+revoking license: At first you are granted to use all patents of all
+contributors which are necessary to use the software legally. But if you -- with
+respect to the software -- install any litigation concerning an infringement of
+patents, then the rights granted to you are revoked.
+
+
+\subsection{LGPL statements concerning patents}
+
+As already mentioned above, the LGPL versions 2.1 and 3.0 heavily differ  with
+respect to textual and arguing structure. Therefore, they should treated
+separately.
+
+\subsubsection {LGPL-2.1} \label{subsec:Lgpl21PatentClause}
+
+Like the GPL-2.0, the LGPL-2.1 does not contain any specific patent clause by
+which it would grant (and revoke) the rights to use those patents which belong
+to the contributors and  which are necessary to use the software in accordance
+with the legal patent system.
+
+Instead of this, the preamble of the LGPL-2.1 says that \enquote{[\ldots]
+software patents pose a constant threat to the existence of any free program}
+and that the authors of the LGPL -- for tackling this threat --
+\enquote{[\ldots] insist that any patent license obtained for a version of the
+library must be consistent with the full freedom of use specified in this
+license}\footcite[cf.][\nopage wp., Preamble]{Lgpl21OsiLicense1991a}.
+Unfortunately, this specification is only an indirect claim which needs a lot of
+arguing for establishing a protection against patent disputes.
+Howsoever, this paragraph of the LGPL-2.1 does not directly grant any rights to
+the software users to use necessary patents too.
+
+With respect to the patent problem, the LGPL-2.1 also states that a licensee has
+to fulfill the conditions of the LGPL-2.1 completely, even if an existing patent
+infringement -- being \enquote{imposed} on the LGPL licensee --
+\enquote{[\ldots] contradicts the conditions of this license} so that a waiving
+of the use of the software is the only way to fulfill both
+constraints\footcite[cf.][\nopage wp.\ §11]{Lgpl21OsiLicense1991a}. And finally
+the LGPL-2.1 allows the original copyright holder to \enquote{add an explicit
+geographical distribution limitation excluding [\ldots] countries} provided that
+these countries \enquote{[\ldots] (restict) the distribution and/or use of the
+library [\ldots] by patents [\ldots]}\footcite[cf.][\nopage wp.\
+§12]{Lgpl21OsiLicense1991a}. Based on these statements, one cannot infer that
+the LGPL grants any patent rights to the software user, neither directly, nor
+indirectly.
+
+Thus, we cannot say that the LGPL-2.1 is a granting license or a revoking
+license.
+
+\subsubsection {LGPL-3.0}\label{subsec:Lgpl30PatentClause}
+
+The LGPL-3.0 is an extension of the GPL-3.0. Before starting with a section
+\enquote{Additional Definitions}, the LGPL-3.0 states that it \enquote{[\ldots]
+incorporates the terms and conditions of version 3 of the GNU General Public
+License} and then \enquote{supplements} this GPL-3.0 content by some
+\enquote{additional permissions}\footcite[cf.][\nopage
+wp.]{Lgpl30OsiLicense2007a}. The LGPL-3.0 itself does not contain the word
+'patent', but the GPL-3.0\footcite[cf.][\nopage wp.\ §11]{Gpl30OsiLicense2007a}.
+So, the LGPL-3.0 inherits its patent clause from the GPL-3.0 which is - as we
+already described\footnote{$\rightarrow$ OSLiC, p.\
+\pageref{subsec:Gpl30PatentClause}} - a granting and a revoking license.
  
-\subsection{MPL statements concerning patents [tbd]}         
+\subsection{MPL statements concerning patents}\label{subsec:MplPatentClause}
+
+The MPL distributes its statements concerning the tolerated use of the patents
+over three paragraphs: First, it clearly says that \enquote{each Contributor
+[\ldots] grants [\ldots the licensee] a world-wide, royalty-free, non-exclusive
+license [\ldots] under Patent Claims of such Contributor to make, use, sell,
+offer for sale, have made, import, and otherwise transfer either its
+Contributions or its Contributor Version}\footcite[cf.][\nopage wp.\ §2.1, esp.
+§2.1.b]{Mpl20OsiLicense2013a}. Second, it hihlights some
+\enquote{limitations}\footcite[cf.][\nopage wp.\ §2.1, esp.
+§2.3]{Mpl20OsiLicense2013a}. And finally, the MPL introduces a revoking clause
+which signifies that the rights, granted to the licensee \enquote{[\ldots] by
+any and all Contributors [\ldots] shall terminate} if the licensee
+\enquote{initiates litigation against any entity by asserting a patent
+infringement claim [\ldots] alleging that a Contributor Version directly or
+indirectly infringes any patent [\ldots]}\footcite[cf.][\nopage wp.\
+§5.2]{Mpl20OsiLicense2013a}.
+
+Thus, the MPL is - as we are using to say in this chapter - a granting license
+and a revoking license.
 
 \subsection{MS-PL statements concerning patents}\label{subsec:MsplPatentClause}
 

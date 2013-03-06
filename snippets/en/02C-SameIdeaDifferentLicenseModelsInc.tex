@@ -704,11 +704,13 @@ reference\footnote{$\rightarrow$ table \ref{tab:powerOfLicenses} on p.\
   \checkmark  & \checkmark  & \checkmark & \checkmark & $\neg$ &
    \checkmark  & \checkmark & \checkmark & \checkmark & $\neg$ \\
 \hline
-  \multirow{2}{*}{LGPL} & 2.1 & \checkmark & \checkmark & \checkmark &
-  -- & -- & -- & -- & -- & -- & -- & -- & -- & -- \\
+  \multirow{2}{*}{LGPL} & 2.1 & \checkmark  & \checkmark  & \checkmark  &
+   $\neg$ & \checkmark  & \checkmark & $\neg$ & $\neg$ &
+   \checkmark  & \checkmark & \checkmark & \checkmark & $\neg$ \\
 \cline{2-15}
-   & 3.0 & \checkmark & \checkmark & \checkmark &
-   -- & -- & -- & -- & -- & -- & -- & -- & -- & -- \\
+   & 3.0 & \checkmark  & \checkmark  & \checkmark  &
+   \checkmark & \checkmark  & \checkmark & \checkmark & $\neg$ &
+   \checkmark  & \checkmark & \checkmark & \checkmark & $\neg$ \\
 \hline
    MPL & 2.0 & \checkmark  & \checkmark  & \checkmark  &
   \checkmark  & \checkmark  & \checkmark & \checkmark & $\neg$ &
@@ -747,19 +749,19 @@ reference\footnote{$\rightarrow$ table \ref{tab:powerOfLicenses} on p.\
 As an approved \emph{open source license}\footcite[cf.][\nopage wp]{OSI2012b},
 the Apache License\footnote{The Apache License, version 2.0 is maintained by the
 Apache Software Foundation (\cite[cf.][\nopage wp]{AsfApacheLicense20a}).  Of
-course, also the OSI is hosting a duplicate (\cite[cf.][\nopage
-wp]{Apl20OsiLicense2004a}) in its list of the officially approved open source
-licenses (\cite[cf.][\nopage wp]{OSI2012b}). The Apache license 1.1 is
-classified by the OSI as \enquote{superseded license}(\cite[cf.][\nopage
-wp]{OSI2013b}). In the same spirit, also the Apache Software Foundation itself
-classifies the releases 1.0 and 1.1 as \enquote{historic} (\cite[cf.][\nopage
-wp]{AsfLicenses2013a}). Thus, the OSLiC only focuses on the most recent APL-2.0
-version. For those, who have to fulfill these earlier Apache licenses it could
-be helpful to read them as siblings of the BSD-2CL and BSD-3CL licenses.}
-protects the user against the loss of the right to use, to modify and/or to
-distribute the received copy of the source code or the
-binaries\footcite[cf.][\nopage wp §2]{Apl20OsiLicense2004a}. Furthermore, based
-on its patent clause\footnote{$\rightarrow$ OSLiC pp.\
+course, also the OSI is hosting a duplicate of the Apache license
+(\cite[cf.][\nopage wp.]{Apl20OsiLicense2004a}) and is listing it as an
+officially approved open source license (\cite[cf.][\nopage wp.]{OSI2012b}). The
+Apache license 1.1 is classified by the OSI as \enquote{superseded
+license}(\cite[cf.][\nopage wp.]{OSI2013b}). In the same spirit, also the Apache
+Software Foundation itself classifies the releases 1.0 and 1.1 as
+\enquote{historic} (\cite[cf.][\nopage wp.]{AsfLicenses2013a}). Thus, the OSLiC
+only focuses on the most recent APL-2.0 version. For those, who have to fulfill
+these earlier Apache licenses it could be helpful to read them as siblings of
+the BSD-2CL and BSD-3CL licenses.} protects the user against the loss of the
+right to use, to modify and/or to distribute the received copy of the source
+code or the binaries\footcite[cf.][\nopage wp §2]{Apl20OsiLicense2004a}.
+Furthermore, based on its patent clause\footnote{$\rightarrow$ OSLiC pp.\
 \pageref{subsec:ApLPatentClause}}, the ApL protects the users against patent
 disputes\footcite[cf.][\nopage wp §3]{Apl20OsiLicense2004a}. Because of this
 patent clause and of its \enquote{disclaimer of warranty} together with its
@@ -955,31 +957,30 @@ the term \enquote{Compatible Licence} is explicitly defined by a list of
 compatible licenses, for example the Eclipse Public
 License\footcite[cf.][\nopage wp.\ Appendix]{EuplLicense2007en}. Based on this
 compatibility clause the obligation to publish the code of an on-top development
-can be subverted: As first step, you could release a little more or less futile
+can be subverted: As first step, you could release a little, more or less futile
 on-top application licensed under the Eclipse Public License\footnote{Taking the
-license text very seriously, it is not even necessary that this other work is an
-on-top application which depends on the EUPL library because it calls functions
-of EUPL library  -- what would enforce the on-top application to be a derivative
-work. The license text says that \enquote{another work licensed under a
-Compatible Licence} can be distributed together with \enquote{derivative works}.
-So, the wording of the licenses itself is establishing a contrast between the
-derivative work and the other work - what indicates that the other work has not
-necessarily to be a derivative work.} which uses a library licensed under the
-EUPL. As second step, you add the library as originaly work which you now may
-also distribute under the EPL instead of retaining the EUPL licensing. So,
-finally you obtain the same work under the Eclipse Public License which is a
-weak copyleft license\footnote{$\rightarrow$ OSLiC, p.\
-\pageref{sec:ProtectingPowerOfEpl}}. Hence the protection of the EUPL-1.1 is not
-as comprehensive as one might assume on the base of the license text
+license text very seriously, it is not even necessary that this little futile
+application must depend on the EUPL library by calling functions of EUPL
+library. The license text only says that \enquote{another [any other] work
+licensed under a Compatible Licence} can be distributed together with
+\enquote{derivative works}. By thisthe wording, the license itself is
+establishing a contrast between the derivative work and the other work - what
+indicates that the other work has not necessarily also to be a derivative work.}
+which uses a library licensed under the EUPL. As second step, you add this 'EUPL
+library' which you now may also distribute under the EPL instead of retaining
+the EUPL licensing. So, finally you obtain the same work under the Eclipse
+Public License which is a weak copyleft license\footnote{$\rightarrow$ OSLiC,
+p.\ \pageref{sec:ProtectingPowerOfEpl}}. Hence the protection of the EUPL-1.1 is
+not as comprehensive as one might assume on the base of the license text
 itself\footnote{This kind of specifiying the protective power of the EUPL is
 initially be presented by the FSF (\cite[cf.][wp.\ section 'European Union
 Public License']{FsfEuplStatement2013a}). The EU answers that publishing such a
 trick will comprise its user in the eyes of the open source community
-(\cite[cf.][wp.]{FsfEuplRecomment2013}. That is undoubtely true. But
+(\cite[cf.][wp.]{FsfEuplRecomment2013}). That is undoubtely true. But
 unfortunately, this argument does not close the hole in the protecting shield
 put up by the EUPL}, it can at most be a weak copyleft license -- even if the
-reade might get the impression that the authors of the EUPL wished to write a
-strong copyleft license: the EUPL license does not protect the on-top
+reader might get the impression that the authors of the EUPL wished to write a
+strong copyleft license. Howsoever, the EUPL license does not protect the on-top
 developments against a privatizing.
 
 
@@ -1031,12 +1032,10 @@ allows to redistribute only the binaries without also supplying the source
 code\footcite[cf.][\nopage wp]{MitLicense2012a}. Finally, the MIT license does
 not protect the on-top developments against a privatizing.
 
-
-
-\section{The protecting power of the Mozilla Public License (MPl)}
+\section{The protecting power of the Mozilla Public License (MPL)}
  
 As an approved \emph{open source license}\footcite[cf.][\nopage wp]{OSI2012b},
-the Mozilla Public License\footnote{In 2012 the Mozilla Public License 2.0
+the Mozilla Public License\footnote{In 2012, the Mozilla Public License 2.0
 (\cite[cf.][\nopage wp.]{Mpl20MozFoundation2012a}) has been released as a result
 of a longer \enquote{Revision Process}(\cite[cf.][\nopage
 wp.]{Mpl11To20MozFoundation2013a}) by which the  Mozilla Public License 1.1
@@ -1045,37 +1044,40 @@ also hosting its version of the MPL-2.0 (\cite[cf.][\nopage
 wp.]{Mpl20OsiLicense2013a}) and is listing it as an OSI approved license
 (\cite[cf.][\nopage wp.]{OSI2012b}) while it classifies the MPL-1.1 as a
 \enquote{superseded license}(\cite[cf.][\nopage wp.]{OSI2013b}). The Mozilla
-Foundation itself says with respect to the difference between the two licenses,
-that \enquote{the most important part of the license - the file-level copyleft -
-is essentially the same in MPL 2.0 and MPL 1.1} (\cite[cf.][\nopage
-wp.]{Mpl11To20MozFoundation2013a}). While reading the MPL-1.1 one could get the
-impression that if one fulfills all conditions of the MPL-2.0, then one also
-acts in accordance to the MPL-1.1. Thus, for the moment the OSLiC focuses on the
-MPL-2.0.} protects the user against the loss of the right to use, to modify
-and/or to distribute the received copy of the source code or the
-binaries\footcite[cf.][\nopage wp.\ §2.1.a]{Mpl20OsiLicense2013a}. Furthermore,
-based on its split and distributed patent clause\footnote{$\rightarrow$ OSLiC
-pp.\ \pageref{subsec:MplPatentClause}}, the MPL-2.0 protects the users against
-patent disputes\footcite[cf.][\nopage wp.\ §2.1.b, §2.3,
-§5.2]{Mpl20OsiLicense2013a}. Besides this patent sections, the MPL.2.0
+Foundation itself says concerning the difference between the two licenses that
+\enquote{the most important part of the license - the file-level copyleft - is
+essentially the same in MPL 2.0 and MPL 1.1} (\cite[cf.][\nopage
+wp.]{Mpl11To20MozFoundation2013a}). By reading the MPL-1.1, one could get the
+impression that fulfilling all conditions of the MPL-2.0 would imply also to act
+in accordance to the MPL-1.1. Thus the OSLiC focuses on the MPL-2.0, at least
+for the moment. Nevertheless, in this section we want to use the general label
+'MPL' without any releasenumber for indicating that with respect to its
+protecting power the MPL-2.0 and the MPL-1.1 can be taken as equipollent.}
+protects the user against the loss of the right to use, to modify and/or to
+distribute the received copy of the source code or the
+binaries\footcite[cf.][\nopage wp.\ §2.1.a]{Mpl20OsiLicense2013a}.
+Furthermore, based on its split and distributed patent
+clause\footnote{$\rightarrow$ OSLiC pp.\ \pageref{subsec:MplPatentClause}}, the
+MPL protects the users against patent disputes\footcite[cf.][\nopage wp.\
+§2.1.b, §2.3, §5.2]{Mpl20OsiLicense2013a}. Besides this patent sections, the MPL
 additionally contains a \enquote{Disclaimer of Warranty} and a
 \enquote{Limitation of Liability}\footcite[cf.][\nopage wp.\ §6 \&
 §7]{Mpl20OsiLicense2013a}. These three elements together protect the
 contributors / distributors against patents disputes and warranty claims.
-Finally, the MPL-2.0 also protects the distributed sources against a re-closing
-/ re-privatizizing and the contributors against the loss of feedback: The
-MPL-2.0 clearly says that -- on the one hand -- \enquote{all distribution of
-Covered Software in Source Code Form, including any Modifications[\ldots] must
-be under the terms of this License}\footcite[cf.][\nopage wp.\
-§3.1]{Mpl20OsiLicense2013a} and that -- on the other hand -- an MPL licensed
+Finally, the MPL also protects the distributed sources against a re-closing /
+re-privatizing and the contributors against the loss of feedback: The MPL
+clearly says that, on the one hand, \enquote{all distribution of Covered
+Software in Source Code Form, including any Modifications[\ldots] must be under
+the terms of this License}\footcite[cf.][\nopage wp.\
+§3.1]{Mpl20OsiLicense2013a} and that, on the other hand, an MPL licensed
 software \enquote{[\ldots] (distributed) in Executable Form [\ldots] must also
 be made available in Source Code Form [\ldots]}\footcite[cf.][\nopage wp.\
-§3.2]{Mpl20OsiLicense2013a}. So, it must be concluded that the MPL is a copyleft
+§3.2]{Mpl20OsiLicense2013a}. So, it must be inferred that the MPL is a copyleft
 license.
 
 But nevertheless, the Mozilla Public License is not a license with strong
-copyleft. It does not protect the on-top developments against a privatizing: At
-first, the MPL does not use the term \emph{derivative work}\footnote{
+copyleft. It does not protect on-top developments against privatizings: First,
+the MPL does not use the term \emph{derivative work}\footnote{
 \cite[cf.][\nopage wp]{Mpl20OsiLicense2013a}. The MPL-1.1 uses the term
 \emph{derivative work} only in the context of writing new \enquote{versions of
 the license}, not in the context of licensing software (\cite[cf.][\nopage wp.
@@ -1087,37 +1089,43 @@ refers to \enquote{any file in Source Code Form that results from an addition
 to, deletion from, or modification of the contents of Covered Software or any
 file in Source Code Form that results from an addition to, deletion from, or
 modification of the contents of Covered Software}\footnote{\cite[cf.][\nopage
-wp.\ §1.10]{Mpl20OsiLicense2013a}. The Mozilla Foundation itself denotes this
-definition by the term \enquote{file-level copyleft} (\cite[cf.][\nopage
+wp.\ §1.10]{Mpl20OsiLicense2013a}. The Mozilla Foundation denotes this reading
+by the term \enquote{file-level copyleft} (\cite[cf.][\nopage
 wp]{Mpl11To20MozFoundation2013a}).}. Second, the MPL contrasts the source code
 form and its modifications with the \enquote{Larger Work} by specifying that the
 larger work is \enquote{[\ldots] material, in a seperate file or files, that is
 not covered software}\footcite[cf.][\nopage wp.\ §1.7]{Mpl20OsiLicense2013a}.
-Finally, the MPL-2.0 states, that \enquote{you may create and distribute a
-Larger Work under terms of Your choice, provided that You also comply with the
+Finally, the MPL states, that \enquote{you may create and distribute a Larger
+Work under terms of Your choice, provided that You also comply with the
 requirements of this License for the Covered Software}\footcite[cf.][\nopage
-wp.\ §3.3]{Mpl20OsiLicense2013a}. Based on these specifications, it must be
-concluded that an on-top development which depends on MPL licensed libraries
-because they calling some of its functions, can be taken as a larger work whose
-code needs not to be puglished -- provided, that the library and the on-top
-development are distributed as different files\footnote{It might be discussed
-whether integrating a declaration of a function, class, or method into the
-on-top development by including the corresponding header files indeed means that
-one is \enquote{including portions (of the Source Code Form)} into a file which
-therefore has to be taken as \enquote{Modification} (\cite[cf.][\nopage wp.
-§1.4]{Mpl11MozFoundation2013a}). From the viewpoint of a benevolent developer it
-should be difficult to argue that the including of declaring (header) files
-alone can evoke a derivative work. It is the call of the function in one's code
-which establishes the dependency. But that is not the point, the MPL focuses.
-The MPL aims on the textual reuse of (defining) code snippets.
-Hence, one could ignore the textual integration of parts of the declaring header
-files: it should not trigger that one's own work becomes a modification in the
-eyes of the Mozilla Findation. But of course, one would circumvent the idea of
-the MPL if one hides defining code in header files and reuses that code by one's
-own compilation. This would undoubtably be an incorporation of portions and
-therefore would make the incorporating file becoming a modification of the MPL
-licensed initial work. }. Hence, the MPL is license with a weak copyleft effect
-and does not protect the on-top developments against a privatizing.
+wp.\ §3.3]{Mpl20OsiLicense2013a}. Based on these specifications, one has to
+reason that an on-top development which depends on MPL licensed libraries by
+calling some of their functions, is undoubtably a derivative work\footnote{This
+follows from the general meaning of a \emph{derivative work} as a benevolent
+software developer would read this term ($\rightarrow$ OSLiC, pp.\
+\pageref{sec:BenevolentDerivativeWorkUnderstanding}). But again: The MPL does
+not focus on this general aspect; it uses its own concept of a \emph{larger
+work}.}, but also only a larger work in the meaning of the MPL so that code of
+this on-top application needs not to be published -- provided, that the library
+and the on-top development are distributed as different files\footnote{It might
+be discussed whether integrating a declaration of a function, class, or method
+into the on-top development by including the corresponding header files indeed
+means that one is \enquote{including portions (of the Source Code Form)} into a
+file which therefore has to be taken as \enquote{Modification}
+(\cite[cf.][\nopage wp.\ §1.4]{Mpl11MozFoundation2013a}). From the viewpoint of
+a benevolent developer it should be difficult to argue that the including of
+declaring (header) files alone can evoke a derivative work. It is the call of
+the function in one's code which establishes the dependency. But that is not the
+point, the MPL focuses. The MPL aims on the textual reuse of (defining) code
+snippets. Hence, one could ignore the textual integration of parts of the
+declaring header files: it should not trigger that one's own work becomes a
+modification in the eyes of the Mozilla Findation. But of course, one would
+circumvent the idea of the MPL if one hides defining code in header files and
+reuses that code by one's own compilation. This would undoubtably be an
+incorporation of portions and therefore would make the incorporating file
+becoming a modification of the MPL licensed initial work. }. Hence, the MPL is
+license with a weak copyleft effect and does not protect the on-top developments
+against privatizings.
 
 \section{The protecting power of the Microsoft Public License (MS-PL)}
 
