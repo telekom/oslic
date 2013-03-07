@@ -25,14 +25,13 @@
 
 \section{Apache licensed software}
 
-Officially, only the Apache License, Version 2.0 is an approved open source
+Officially, only the Apache License Version 2.0 is an approved open source
 license\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{sec:ProtectPowerOfApL}}.
-Explicitly, it 'only' focuses on the
-\enquote{redistribution}\footcite[cf.][\nopage wp. §4]{OSI2012b}. So, you can
-also use the following simplified Apache specific open source use case
+\pageref{sec:ProtectPowerOfApL}}. Because it focusses primarily on the
+\enquote{redistribution}\footcite[cf.][\nopage wp. §4]{Apl20OsiLicense2004a},
+the following simplified Apache specific open source use case
 finder\footnote{For details of the general OSUC finder $\rightarrow$ OSLiC, pp.\
-\pageref{OsucTokens} and \pageref{OsucDefinitionTree}}:
+\pageref{OsucTokens} and \pageref{OsucDefinitionTree}} can be used:
  
 \tikzstyle{nodv} = [font=\small, ellipse, draw, fill=gray!10, 
     text width=2cm, text centered, minimum height=2em]
@@ -137,15 +136,15 @@ library as embedded binaries}};
 
 \begin{description}
 \item[means] that you are going to use a received Apache licensed software only
-for yourself and that you do not handover it to any 3rd party in any sense.
+for yourself and that you do not hand it over to any 3rd party in any sense.
 \item[covers] OSUC-01, OSUC-03, OSUC-06, and OSUC-09\footnote{For details see
 pp. \pageref{OSUC-01-DEF} - \pageref{OSUC-09-DEF}}
 \item[requires] no tasks in order to fulfill the conditions of the Apache 2.0
 license with respect to this use case:
   \begin{itemize}
     \item You are allowed to use any kind of Apache software in any sense and in
-    any context without any obligations premised you do not handover the
-    software to 3rd parties.
+    any context without any obligations as long as you do not give the software
+    to 3rd parties.
   \end{itemize}
 \item[prohibits] nothing explicitly.
 \end{description}
@@ -155,7 +154,7 @@ license with respect to this use case:
 
 \begin{description}
 \item[means] that you are going to distribute an unmodified version of the
-received Apache software to 3rd parties in form of a set of source code files or
+received Apache software to 3rd parties in the form of a set of source code files or
 an integrated source code package\footnote{In this case it doesn't matter
 whether you  distribute a program, an application, a server, a snippet, a
 module, a library, or a plugin as an independent or an embedded unit}
@@ -163,22 +162,22 @@ module, a library, or a plugin as an independent or an embedded unit}
 \item[covers] OSUC-02, OSUC-05, OSUC-07\footnote{For details see pp.\ 
 \pageref{OSUC-02-DEF} - \pageref{OSUC-07-DEF}}
 
-\item[requires] the following tasks in order to fulfill the license conditions
+\item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
   \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
-  license. If it is still not incorporated into the software package, add
+  license. If it is not already present in the software package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC \pageref{DistributingFilesHint}}.
   \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
   specific copyright notice of the original author(s) -- are retained in your
   package in the form you have received them.
   \item \textbf{[mandatory:]} Ensure that a \emph{notice text file}\footnote{
-  The Apache license seems willingly to be a bit ambigue: it uses the term
+  The Apache license seems purposely to be a bit ambiguous: it uses the term
   \enquote{``Notice'' text file}. In its strict sense, the term refers to a file
   named 'NOTICE.[txt\textbar{}pdf\textbar{}\ldots]'. In a weaker sense, it may
   denote any (text) file containing (licensing) notices. For being sure to act
   according to this requirement you should also read this term in the broader
-  sense if there is no text file name 'NOTICE'} is retained in your package in
+  sense if there is no text file named 'NOTICE'} is retained in your package in
   the form you have received it.
   
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
@@ -197,7 +196,7 @@ the software constitutes patent infringement.
 
 \begin{description}
 \item[means] that you are going to distribute an unmodified version of the
-received Apache software to 3rd parties in form of a set of binary files or an
+received Apache software to 3rd parties in the form of a set of binary files or an
 integrated bi\-na\-ry package\footnote{In this case it doesn't matter
 whether you  distribute a program, an application, a server, a snippet, a
 module, a library, or a plugin as an independent or an embedded unit}
@@ -205,10 +204,10 @@ module, a library, or a plugin as an independent or an embedded unit}
 \item[covers] OSUC-02, OSUC-05, OSUC-07\footnote{For details see pp.
 \pageref{OSUC-02-DEF} - \pageref{OSUC-07-DEF}}
 
-\item[requires] the following tasks in order to fulfill the license conditions
+\item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
   \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
-  license. If it is still not incorporated into your binary package, add
+  license. If it is not already present in the binary package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC \pageref{DistributingFilesHint}}.
   
@@ -245,11 +244,11 @@ the software constitutes patent infringement.
 Apache licensed program, application, or server (proapse) to 3rd parties in form
 of a set of source code files or an integrated source code package.
 \item[covers] OSUC-04\footnote{For details see pp.\ \pageref{OSUC-04-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions
+\item[requires] the tasks in order to fulfill the license conditions:
 \begin{itemize}
   
   \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
-  license. If it is still not incorporated into the source code package, add
+  license. If it is not already present in the software package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC \pageref{DistributingFilesHint}}.
 
@@ -267,8 +266,7 @@ of a set of source code files or an integrated source code package.
   
   \item \textbf{[voluntary:]} Inside of the source code, mark all your
   modifications thoroughly. Generate a \emph{notice text file}, if it still does not
-  exist. Expand (sic!) the \emph{notice text file} by a description of your
-  modifications.
+  exist. Add (sic!) a description of your modifications into the \emph{notice text file}.
    
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material also reproduce the content of the \emph{notice text
@@ -287,13 +285,13 @@ the software constitutes patent infringement.
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
 Apache licensed pro\-gram, application, or server (proapse) to 3rd parties in
-form of a set of binary files or an integrated binary package.
+the form of a set of binary files or an integrated binary package.
 \item[covers] OSUC-04\footnote{For details see pp.\ \pageref{OSUC-04-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions
+\item[requires] the tasks in order to fulfill the license conditions:
 \begin{itemize}
 
  \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
-  license. If it is still not incorporated into your binary package, add
+  license. If it is not already present in the binary package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC \pageref{DistributingFilesHint}}.
   
@@ -334,14 +332,14 @@ the software constitutes patent infringement.
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
 Apache licensed code snippet, module, library, or plugin (snimoli) to 3rd
-parties in form of a set of source code files or an integrated source code
+parties in the form of a set of source code files or an integrated source code
 package, but without embedding it into another larger software unit.
 \item[covers] OSUC-08\footnote{For details see pp.\ \pageref{OSUC-08-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions
+\item[requires] the tasks in order to fulfill the license conditions:
 \begin{itemize}
   
   \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
-  license. If it is still not incorporated into the software package, add
+  license. If it is not already present in the software package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC \pageref{DistributingFilesHint}}.
 
@@ -375,14 +373,14 @@ the software constitutes patent infringement.
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
 Appache licensed code snippet, module, library, or plugin (snimoli) to 3rd
-parties in form of a set of binary files or an integrated binary package but
+parties in the form of a set of binary files or an integrated binary package but
 without embedding it into another larger software unit.
 \item[covers] OSUC-08\footnote{For details see pp.\ \pageref{OSUC-08-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions
+\item[requires] the tasks in order to fulfill the license conditions:
 \begin{itemize}
   
  \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
-  license. If it is still not incorporated into your binary package, add
+  license. If it is not already present in the binary package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC \pageref{DistributingFilesHint}}.
   
@@ -418,15 +416,15 @@ the software constitutes patent infringement.
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
 Apache licensed code snippet, module, library, or plugin (snimoli) to 3rd
-parties in form of a set of source code files or an integrated source code
+parties in the form of a set of source code files or an integrated source code
 package together with another larger software unit which contains this code
 snippet, module, library, or plugin as an embedded component.
 \item[covers] OSUC-10\footnote{For details see pp.\ \pageref{OSUC-10-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions
+\item[requires] the tasks in order to fulfill the license conditions:
 \begin{itemize}
   
   \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
-  license. If it is still not incorporated into the software package, add
+  license. If it is not already present in the software package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC \pageref{DistributingFilesHint}}.
 
@@ -439,8 +437,8 @@ snippet, module, library, or plugin as an embedded component.
  
   \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} is also
   reproduced if and whereever such third-party notices normally appear. If your
-  overarching program displays an own copyright dialog, insert these
-  information.
+  overarching program displays its own copyright dialog, insert this information
+  there.
  
   \item \textbf{[voluntary:]} Inside of the source code, mark all your
   modifications thoroughly. Generate a \emph{notice text file}, if it still does not
@@ -476,11 +474,11 @@ of a set of binary files or an integrated binary package together with another
 larger software unit which contains this code snippet, module, library, or
 plugin as an embedded component.
 \item[covers] OSUC-10\footnote{For details see pp.\ \pageref{OSUC-10-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions
+\item[requires] the tasks in order to fulfill the license conditions:
 \begin{itemize}
   
   \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
-  license. If it is still not incorporated into your binary package, add
+  license. If it is not already present in the binary package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC \pageref{DistributingFilesHint}}.
   
@@ -495,8 +493,8 @@ plugin as an embedded component.
  
   \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} is also
   reproduced if and whereever such third-party notices normally appear. If your
-  overarching program displays an own copyright dialog, insert these
-  information.
+  overarching program displays its own copyright dialog, insert this information
+  there.
      
   \item \textbf{[voluntary:]} Inside of the source code, mark all your
   modifications thoroughly. Generate a \emph{notice text file}, if it still does not
