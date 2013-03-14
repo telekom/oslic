@@ -23,15 +23,24 @@
 %% use all entries of the bibliography
 %\nocite{*}
 
-\section{Apache licensed software}
+\section{EUPL licensed software}
 
-Today, the current release of the Apache open source license is version 2.0,
-elder versions are depricated\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{sec:ProtectPowerOfApL}}. Because it focusses primarily on the
-\enquote{redistribution}\footcite[cf.][\nopage wp\ §4]{Apl20OsiLicense2004a},
-the following simplified Apache specific open source use case
-finder\footnote{For details of the general OSUC finder $\rightarrow$ OSLiC, pp.\
-\pageref{OsucTokens} and \pageref{OsucDefinitionTree}} can be used:
+Explictly, the European Union Public License does not distinguish the
+distribution of the source code from that of the binaries on a finely graduated
+level: first and foremost, the \enquote{Obligations of the Licensee} refer to
+both forms\footcite[cf.][\nopage wp\ §5]{EuplLicense2007en}. Implicitly, there
+nevertheless arises an important difference by the requirement that a
+\enquote{Licensee}, while he \enquote{[\ldots] (distributes) copies of the Work
+[\ldots]} -- which must be read as the \enquote{Original Work and/or its
+Derivative Work} -- has to \enquote{[\ldots] provide a machine-readable copy of
+the Source Code or indicate a repository where this Source (is) easily and
+freely available for as long as the Licensee continues to distribute [\ldots]
+the Work}\footnote{\cite[cf.][\nopage wp\ §5]{EuplLicense2007en} The term
+\enquote{Work} is resolved if §1.}: This requirement is of course already
+fulfilled in the moment the licensee distributes the source code. Thus, for
+getting simply processable task list, the following EUPL specific open source
+use case structure\footnote{For details of the general OSUC finder $\rightarrow$
+OSLiC, pp.\ \pageref{OsucTokens} and \pageref{OsucDefinitionTree}} can be used:
  
 \tikzstyle{nodv} = [font=\small, ellipse, draw, fill=gray!10, 
     text width=2cm, text centered, minimum height=2em]
@@ -49,7 +58,7 @@ finder\footnote{For details of the general OSUC finder $\rightarrow$ OSLiC, pp.\
 
 \begin{tikzpicture}[]
 
-\node[nodv] (l71) at (4,10) {ApL};
+\node[nodv] (l71) at (4,10) {EUPL};
 
 \node[nodb] (l61) at (0,8.6) {\textit{recipient:} \\ \textbf{4yourself}};
 \node[nodb] (l62) at (6.5,8.6) {\textit{recipient:} \\ \textbf{4others}};
@@ -73,31 +82,31 @@ finder\footnote{For details of the general OSUC finder $\rightarrow$ OSLiC, pp.\
 \node[nods] (l23) at (12.6,2.2) {\textit{form:} \textbf{source}};
 \node[nods] (l24) at (14.4,2.2) {\textit{form:} \textbf{binary}};
 
-\node[leaf] (l11) at (0,0) {\textbf{ApL-1} \textit{using software only
+\node[leaf] (l11) at (0,0) {\textbf{EUPL-1} \textit{using software only
 for yourself}};
 
-\node[leaf] (l12) at (1.8,0) { \textbf{ApL-2} \textit{ distributing unmodified
+\node[leaf] (l12) at (1.8,0) { \textbf{EUPL-2} \textit{ distributing unmodified
 software as sources}};
 
-\node[leaf] (l13) at (3.6,0) { \textbf{ApL-3}  \textit{ distributing unmodified
+\node[leaf] (l13) at (3.6,0) { \textbf{EUPL-3}  \textit{ distributing unmodified
 software as binaries}};
 
-\node[leaf] (l14) at (5.4,0) { \textbf{ApL-4}  \textit{ distributing modified
+\node[leaf] (l14) at (5.4,0) { \textbf{EUPL-4}  \textit{ distributing modified
 program as sources}};
 
-\node[leaf] (l15) at (7.2,0) { \textbf{ApL-5}  \textit{ distributing modified
+\node[leaf] (l15) at (7.2,0) { \textbf{EUPL-5}  \textit{ distributing modified
 program as binaries}};
 
-\node[leaf] (l16) at (9,0) { \textbf{ApL-6}  \textit{ distributing modified
+\node[leaf] (l16) at (9,0) { \textbf{EUPL-6}  \textit{ distributing modified
 library as independent sources}};
 
-\node[leaf] (l17) at (10.8,0) { \textbf{ApL-7} \textit{distributing modified
+\node[leaf] (l17) at (10.8,0) { \textbf{EUPL-7} \textit{distributing modified
 library as independent binaries}};
 
-\node[leaf] (l18) at (12.6,0) { \textbf{ApL-8}  \textit{distributing
+\node[leaf] (l18) at (12.6,0) { \textbf{EUPL-8}  \textit{distributing
 modified library as embedded sources}};
 
-\node[leaf] (l19) at (14.4,0) { \textbf{ApL-9}  \textit{ distributing modified
+\node[leaf] (l19) at (14.4,0) { \textbf{EUPL-9}  \textit{ distributing modified
 library as embedded binaries}};
 
 
@@ -130,44 +139,33 @@ library as embedded binaries}};
 \end{tikzpicture}
 
 
-\subsection{ApL-1: Using the software only for yourself}
-\label{OSUC-01-Apache20} \label{OSUC-03-Apache20} 
-\label{OSUC-06-Apache20} \label{OSUC-09-Apache20}
+\subsection{EUPL-1: Using the software only for yourself}
+\label{OSUC-01-EUPL} \label{OSUC-03-EUPL} 
+\label{OSUC-06-EUPL} \label{OSUC-09-EUPL}
 
 \begin{description}
-
-\item[means] that you are going to use a received Apache licensed software only
+\item[means] that you are going to use a received EUPL licensed software only
 for yourself and that you do not hand it over to any 3rd party in any sense.
-
 \item[covers] OSUC-01, OSUC-03, OSUC-06, and OSUC-09\footnote{For details 
 $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-01-DEF} - \pageref{OSUC-09-DEF}}
-
-\item[requires] no tasks in order to fulfill the conditions of the Apache 2.0
+\item[requires] no tasks in order to fulfill the conditions of the EUPL 2.0
 license with respect to this use case:
   \begin{itemize}
-    \item You are allowed to use any kind of Apache software in any sense and in
+    \item You are allowed to use any kind of EUPL software in any sense and in
     any context without any obligations as long as you do not give the software
     to 3rd parties.
   \end{itemize}
-  
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services – based on the this software – by
-  trademarks, service marks, or product names linked to the software except as
-  required for unpartially describing the used software file.
-  \item to institute any patent litigation against anyone alleging that the
-  software constitutes patent infringement.
-\end{itemize}
-
+\item[prohibits] to promote any service you establish on the base of this
+privately used software by trade names, trademarks, service marks, or names of
+licensor
 \end{description}
 
-\subsection{ApL-2: Passing the unmodified software as source code}
-\label{OSUC-02-Apache20} \label{OSUC-05-Apache20} \label{OSUC-07-Apache20} 
+\subsection{EUPL-2: Passing the unmodified software as source code}
+\label{OSUC-02-EUPL} \label{OSUC-05-EUPL} \label{OSUC-07-EUPL} 
 
 \begin{description}
-
 \item[means] that you are going to distribute an unmodified version of the
-received Apache software to 3rd parties in the form of a set of source code files or
+received EUPL software to 3rd parties in the form of a set of source code files or
 an integrated source code package\footnote{In this case it doesn't matter
 whether you  distribute a program, an application, a server, a snippet, a
 module, a library, or a plugin as an independent or an embedded unit}
@@ -177,7 +175,7 @@ module, a library, or a plugin as an independent or an embedded unit}
 
 \item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
-  \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
+  \item \textbf{[mandatory:]} Give the recipient a copy of the EUPL 2.0
   license. If it is not already present in the software package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC, p. \pageref{DistributingFilesHint}}.
@@ -185,7 +183,7 @@ module, a library, or a plugin as an independent or an embedded unit}
   specific copyright notice of the original author(s) -- are retained in your
   package in the form you have received them.
   \item \textbf{[mandatory:]} Ensure that a \emph{notice text file}\footnote{
-  The Apache license seems purposely to be a bit ambiguous: it uses the term
+  The EUPL license seems purposely to be a bit ambiguous: it uses the term
   \enquote{``Notice'' text file}. In its strict sense, the term refers to a file
   named 'NOTICE.[txt\textbar{}pdf\textbar{}\ldots]'. In a weaker sense, it may
   denote any (text) file containing (licensing) notices. For being sure to act
@@ -196,27 +194,20 @@ module, a library, or a plugin as an independent or an embedded unit}
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material also reproduce the content of the \emph{notice text
   file}, a hint to the software name, a link to its homepage, and a link to the
-  Apache 2.0 license.
+  EUPL 2.0 license.
 \end{itemize}
 
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products – based on the this software
-  – by trademarks, service marks, or product names linked to this Apache
-  software, except as required for unpartially describing the used software and
-  for reproducing the notice text file.
-  \item to institute any patent litigation against anyone alleging that the
-  software constitutes patent infringement.
-\end{itemize}
+\item[prohibits] to institute any patent litigation against anyone alleging that
+the software constitutes patent infringement.
 
 \end{description}
 
 
-\subsection{ApL-3: Passing the unmodified software as binaries} 
+\subsection{EUPL-3: Passing the unmodified software as binaries} 
 
 \begin{description}
 \item[means] that you are going to distribute an unmodified version of the
-received Apache software to 3rd parties in the form of a set of binary files or an
+received EUPL software to 3rd parties in the form of a set of binary files or an
 integrated bi\-na\-ry package\footnote{In this case it doesn't matter
 whether you  distribute a program, an application, a server, a snippet, a
 module, a library, or a plugin as an independent or an embedded unit}
@@ -226,7 +217,7 @@ module, a library, or a plugin as an independent or an embedded unit}
 
 \item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
-  \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
+  \item \textbf{[mandatory:]} Give the recipient a copy of the EUPL 2.0
   license. If it is not already present in the binary package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC, p. \pageref{DistributingFilesHint}}.
@@ -242,39 +233,32 @@ module, a library, or a plugin as an independent or an embedded unit}
   it.
   \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} is also
   reproduced if and whereever such third-party notices normally appear --
-  especially, if you are distributing an unmodified Apache licensed library as
+  especially, if you are distributing an unmodified EUPL licensed library as
   embedded component of your own work which displays its own copyright notice.
   
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material also reproduce the content of the \emph{notice text
   file}, a hint to the software name, a link to its homepage, and a link to the
-  Apache 2.0 license -- especially as subsection of your own copyright notice.
+  EUPL 2.0 license -- especially as subsection of your own copyright notice.
 \end{itemize}
 
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products – based on the this software
-  – by trademarks, service marks, or product names linked to this Apache
-  software, except as required for unpartially describing the used software and
-  for reproducing the notice text file.
-  \item to institute any patent litigation against anyone alleging that the
-  software constitutes patent infringement.
-\end{itemize}
+\item[prohibits] to institute any patent litigation against anyone alleging that
+the software constitutes patent infringement.
 
 \end{description}
 
-\subsection{ApL-4: Passing a modified program as source code}
-\label{OSUC-04-Apache20} 
+\subsection{EUPL-4: Passing a modified program as source code}
+\label{OSUC-04-EUPL} 
 
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
-Apache licensed program, application, or server (proapse) to 3rd parties in form
+EUPL licensed program, application, or server (proapse) to 3rd parties in form
 of a set of source code files or an integrated source code package.
 \item[covers] OSUC-04\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-04-DEF}}
 \item[requires] the tasks in order to fulfill the license conditions:
 \begin{itemize}
   
-  \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
+  \item \textbf{[mandatory:]} Give the recipient a copy of the EUPL 2.0
   license. If it is not already present in the software package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC, p. \pageref{DistributingFilesHint}}.
@@ -283,50 +267,41 @@ of a set of source code files or an integrated source code package.
   specific copyright notice of the original author(s) -- are retained in your
   package in the form you have received them.
   
-  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} contains
-  at least all the information of that \emph{notice text file} you have
-  received.
+  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} contains at least
+  all the information of that \emph{notice text file} you have received.
 
   \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} is also
   reproduced if and whereever such third-party notices normally appear. If the
   program already displays a copyright dialog, update it in an appropriate
   manner.
   
-  \item \textbf{[mandatory:]} Inside of the source code, mark all your
-  modifications thoroughly. Generate a \emph{notice text file}, if it still does
-  not exist. \emph{Add} a description of your modifications into the
-  \emph{notice text file}.
+  \item \textbf{[voluntary:]} Inside of the source code, mark all your
+  modifications thoroughly. Generate a \emph{notice text file}, if it still does not
+  exist. Add (sic!) a description of your modifications into the \emph{notice text file}.
    
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material also reproduce the content of the \emph{notice text
   file}, a hint to the software name, a link to its homepage, and a link to the
-  Apache 2.0 license.
+  EUPL 2.0 license.
   
  \end{itemize}
  
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products – based on the this software
-  – by trademarks, service marks, or product names linked to this Apache
-  software, except as required for unpartially describing the used software and
-  for reproducing the notice text file.
-  \item to institute any patent litigation against anyone alleging that the
-  software constitutes patent infringement.
-\end{itemize}
+\item[prohibits] to institute any patent litigation against anyone alleging that
+the software constitutes patent infringement.
 
 \end{description}
 
-\subsection{ApL-5: Passing a modified program as binary}
+\subsection{EUPL-5: Passing a modified program as binary}
 
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
-Apache licensed pro\-gram, application, or server (proapse) to 3rd parties in
+EUPL licensed pro\-gram, application, or server (proapse) to 3rd parties in
 the form of a set of binary files or an integrated binary package.
 \item[covers] OSUC-04\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-04-DEF}}
 \item[requires] the tasks in order to fulfill the license conditions:
 \begin{itemize}
 
- \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
+ \item \textbf{[mandatory:]} Give the recipient a copy of the EUPL 2.0
   license. If it is not already present in the binary package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC, p. \pageref{DistributingFilesHint}}.
@@ -337,51 +312,44 @@ the form of a set of binary files or an integrated binary package.
   sources, ensure that all the licensing elements are also incorporated into the
   package.
   
-  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} contains
-  at least all the information of that \emph{notice text file} you have
-  received. If it still does not exist, create it. \emph{Expand} the
-  \emph{notice text file} by a description of your modifications.
+  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} contains at least
+  all the information of that \emph{notice text file} you have received.
   
   \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} is also
   reproduced if and whereever such third-party notices normally appear. If the
   program already displays a copyright dialog, update it in an appropriate
   manner.
  
-  \item \textbf{[voluntary:]} Even if you do not want to distribute your
-  modified source code, mark all your modifications thoroughly.
+  \item \textbf{[voluntary:]} Inside of the source code, mark all your
+  modifications thoroughly. Generate a \emph{notice text file}, if it still does not
+  exist. Expand (sic!) the \emph{notice text file} by a description of your
+  modifications.
  
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material also reproduce the content of the \emph{notice text
   file}, a hint to the software name, a link to its homepage, and a link to the
-  Apache 2.0 license -- especially as a subsection of your own copyright notice.
+  EUPL 2.0 license -- especially as a subsection of your own copyright notice.
 
 \end{itemize}
 
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products – based on the this software
-  – by trademarks, service marks, or product names linked to this Apache
-  software, except as required for unpartially describing the used software and
-  for reproducing the notice text file.
-  \item to institute any patent litigation against anyone alleging that the
-  software constitutes patent infringement.
-\end{itemize}
+\item[prohibits] to institute any patent litigation against anyone alleging that
+the software constitutes patent infringement.
 
 \end{description}
 
-\subsection{ApL-6: Passing a modified library as independent source code}
-\label{OSUC-08-Apache20}
+\subsection{EUPL-6: Passing a modified library as independent source code}
+\label{OSUC-08-EUPL}
 
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
-Apache licensed code snippet, module, library, or plugin (snimoli) to 3rd
+EUPL licensed code snippet, module, library, or plugin (snimoli) to 3rd
 parties in the form of a set of source code files or an integrated source code
 package, but without embedding it into another larger software unit.
 \item[covers] OSUC-08\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-08-DEF}}
 \item[requires] the tasks in order to fulfill the license conditions:
 \begin{itemize}
   
-  \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
+  \item \textbf{[mandatory:]} Give the recipient a copy of the EUPL 2.0
   license. If it is not already present in the software package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC, p. \pageref{DistributingFilesHint}}.
@@ -390,36 +358,28 @@ package, but without embedding it into another larger software unit.
   specific copyright notice of the original author(s) -- are retained in your
   package in the form you have received them.
   
-  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} contains
-  at least all the information of that \emph{notice text file} you have
-  received.
+  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} contains at least
+  all the information of that \emph{notice text file} you have received.
  
   \item \textbf{[voluntary:]} Inside of the source code, mark all your
-  modifications thoroughly. Generate a \emph{notice text file}, if it still does
-  not exist. \emph{Expand} the \emph{notice text file} by a description of your
+  modifications thoroughly. Generate a \emph{notice text file}, if it still does not
+  exist. Expand (sic!) the \emph{notice text file} by a description of your
   modifications.
    
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material also reproduce the content of the \emph{notice text
   file}, a hint to the software name, a link to its homepage, and a link to the
-  Apache 2.0 license.
+  EUPL 2.0 license.
 
 \end{itemize}
 
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products – based on the this software
-  – by trademarks, service marks, or product names linked to this Apache
-  software, except as required for unpartially describing the used software and
-  for reproducing the notice text file.
-  \item to institute any patent litigation against anyone alleging that the
-  software constitutes patent infringement.
-\end{itemize}.
+\item[prohibits] to institute any patent litigation against anyone alleging that
+the software constitutes patent infringement.
 
 \end{description}
 
 
-\subsection{ApL-7: Passing a modified library as independent binary}
+\subsection{EUPL-7: Passing a modified library as independent binary}
 
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
@@ -430,7 +390,7 @@ without embedding it into another larger software unit.
 \item[requires] the tasks in order to fulfill the license conditions:
 \begin{itemize}
   
- \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
+ \item \textbf{[mandatory:]} Give the recipient a copy of the EUPL 2.0
   license. If it is not already present in the binary package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC, p. \pageref{DistributingFilesHint}}.
@@ -441,39 +401,32 @@ without embedding it into another larger software unit.
   sources, ensure that all the licensing elements are also incorporated into the
   package.
   
-  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} contains
-  at least all the information of that \emph{notice text file} you have
-  received. If it still does not exist, create it. \emph{Expand} the
-  \emph{notice text file} by a description of your modifications.
+  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} contains at least
+  all the information of that \emph{notice text file} you have received.
    
-  \item \textbf{[voluntary:]} Even if you do not want to distribute your
-  modified source code, mark all your modifications thoroughly.
+  \item \textbf{[voluntary:]} Inside of the source code, mark all your
+  modifications thoroughly. Generate a \emph{notice text file}, if it still does not
+  exist. Expand (sic!) the \emph{notice text file} by a description of your
+  modifications.
  
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material also reproduce the content of the \emph{notice text
   file}, a hint to the software name, a link to its homepage, and a link to the
-  Apache 2.0 license -- especially as a subsection of your own copyright notice.
+  EUPL 2.0 license -- especially as a subsection of your own copyright notice.
   
 \end{itemize}
 
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products – based on the this software
-  – by trademarks, service marks, or product names linked to this Apache
-  software, except as required for unpartially describing the used software and
-  for reproducing the notice text file.
-  \item to institute any patent litigation against anyone alleging that the
-  software constitutes patent infringement.
-\end{itemize}.
+\item[prohibits] to institute any patent litigation against anyone alleging that
+the software constitutes patent infringement.
 
 \end{description}
 
-\subsection{ApL-8: Passing a modified library as embedded source code}
-\label{OSUC-10-Apache20}
+\subsection{EUPL-8: Passing a modified library as embedded source code}
+\label{OSUC-10-EUPL}
 
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
-Apache licensed code snippet, module, library, or plugin (snimoli) to 3rd
+EUPL licensed code snippet, module, library, or plugin (snimoli) to 3rd
 parties in the form of a set of source code files or an integrated source code
 package together with another larger software unit which contains this code
 snippet, module, library, or plugin as an embedded component.
@@ -481,7 +434,7 @@ snippet, module, library, or plugin as an embedded component.
 \item[requires] the tasks in order to fulfill the license conditions:
 \begin{itemize}
   
-  \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
+  \item \textbf{[mandatory:]} Give the recipient a copy of the EUPL 2.0
   license. If it is not already present in the software package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC, p. \pageref{DistributingFilesHint}}.
@@ -498,18 +451,18 @@ snippet, module, library, or plugin as an embedded component.
   overarching program displays its own copyright dialog, insert this information
   there.
  
-  \item \textbf{[mandatory:]} Inside of the library\footnote{or snippet, or
-  module, or plugin} source code, mark all your modifications thoroughly.
-  Generate a \emph{notice text file}, if it still does not exist. \emph{Expand}
-  the \emph{notice text file} by a description of your modifications.
+  \item \textbf{[voluntary:]} Inside of the source code, mark all your
+  modifications thoroughly. Generate a \emph{notice text file}, if it still does not
+  exist. Expand (sic!) the \emph{notice text file} by a description of your
+  modifications.
   
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material also reproduce the content of the \emph{notice text
   file}, a hint to the software name, a link to its homepage, and a link to the
-  Apache 2.0 license.
+  EUPL 2.0 license.
 
   \item \textbf{[voluntary:]} Arrange your source code distribution so that the
-  integrated Apache license and the \emph{notice text file} clearly refer only
+  integrated EUPL license and the \emph{notice text file} clearly refer only
   to the embedded library and do not disturb the licensing of your own
   overarching work. It's a good tradition to keep the embedded components like
   libraries, modules, snippets, or plugins in specific directory which contains
@@ -517,24 +470,17 @@ snippet, module, library, or plugin as an embedded component.
  
 \end{itemize}
 
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products – based on the this software
-  – by trademarks, service marks, or product names linked to this Apache
-  software, except as required for unpartially describing the used software and
-  for reproducing the notice text file.
-  \item to institute any patent litigation against anyone alleging that the
-  software constitutes patent infringement.
-\end{itemize}.
+\item[prohibits] to institute any patent litigation against anyone alleging that
+the software constitutes patent infringement.
 
 \end{description}
 
 
-\subsection{ApL-9: Passing a modified library as embedded binary}
+\subsection{EUPL-9: Passing a modified library as embedded binary}
 
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
-Apache licensed code snippet, module, library, or plugin to 3rd parties in form
+EUPL licensed code snippet, module, library, or plugin to 3rd parties in form
 of a set of binary files or an integrated binary package together with another
 larger software unit which contains this code snippet, module, library, or
 plugin as an embedded component.
@@ -542,7 +488,7 @@ plugin as an embedded component.
 \item[requires] the tasks in order to fulfill the license conditions:
 \begin{itemize}
   
-  \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
+  \item \textbf{[mandatory:]} Give the recipient a copy of the EUPL 2.0
   license. If it is not already present in the binary package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC, p. \pageref{DistributingFilesHint}}.
@@ -553,27 +499,27 @@ plugin as an embedded component.
   sources, ensure that all the licensing elements are also incorporated into the
   package.
   
-  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} contains
-  at least all the information of that \emph{notice text file} you have
-  received.  If it still does not exist, create it. \emph{Expand} the
-  \emph{notice text file} by a description of your modifications.
+  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} contains at least
+  all the information of that \emph{notice text file} you have received.
  
   \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} is also
   reproduced if and whereever such third-party notices normally appear. If your
   overarching program displays its own copyright dialog, insert this information
   there.
      
-  \item \textbf{[voluntary:]} Even if you do not want to distribute your
-  modified source code, mark all your modifications of the embedded
-  libary\footnote{or snippet, or module, or plugin} thoroughly.
+  \item \textbf{[voluntary:]} Inside of the source code, mark all your
+  modifications thoroughly. Generate a \emph{notice text file}, if it still does not
+  exist. Expand (sic!) the \emph{notice text file} by a description of your
+  modifications.
  
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material also reproduce the content of the \emph{notice text
   file}, a hint to the software name, a link to its homepage, and a link to the
-  Apache 2.0 license -- especially as subsection of your own copyright notice.
+  EUPL 2.0 license -- especially as subsection of your own copyright notice.
   
+
  \item \textbf{[voluntary:]} Arrange your binary distribution so that the
-  integrated Apache license and the \emph{notice text file} clearly refer only
+  integrated EUPL license and the \emph{notice text file} clearly refer only
   to the embedded library and do not disturb the licensing of your own
   overarching work. It's a good tradition to keep the librabries, modules,
   snippet, or plugins in specific directiers which contain also all licensing
@@ -581,72 +527,23 @@ plugin as an embedded component.
   
 \end{itemize}
 
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products – based on the this software
-  – by trademarks, service marks, or product names linked to this Apache
-  software, except as required for unpartially describing the used software and
-  for reproducing the notice text file.
-  \item to institute any patent litigation against anyone alleging that the
-  software constitutes patent infringement.
-\end{itemize}.
+\item[prohibits] to institute any patent litigation against anyone alleging that
+the software constitutes patent infringement.
 
 \end{description}
 
-\subsection{Discussions and Explanations}
+\subsection{Discussions and Explanations [tbd]}
+
+
+
+
 \begin{itemize}
-  \item On the one hand, the Apache 2.0 license does not permit
-  \enquote{[\ldots] to use the trade names, trademarks, service marks, or
-  product names of the Licensor, except as required for reasonable and customary
-  use in describing the origin of the Work and reproducing the content of the
-  NOTICE file}\footcite[cf.][\nopage wp\ §6]{Apl20OsiLicense2004a}. On the other
-  hand, this license alerts that all the patent licenses – granted to those who
-  \enquote{[\ldots] institute a patent litigation} – will terminate
-  automatically\footcite[cf.][\nopage wp\ §3]{Apl20OsiLicense2004a}. Hence, the
-  OSLiC generally (Apl-1 - Apl-9) interdicts to promote products or services by
-  these elements and to legally fight against patents linked to the software.
-  
-  \item The ApL also requires to \enquote{[\ldots] give any other recipients of
-  the Work or Derivative Works a copy of this License}\footcite[cf.][\nopage wp\
-  §4.1]{Apl20OsiLicense2004a}. Therefore, all \emph{4others} use cases contain a
-  respective mandarory conditions (Apl-2 - Apl-9).
-   
-  \item Additionally, the ApL requires, that modifications must be
-  marked\footcite[cf.][\nopage wp\ §4.2]{Apl20OsiLicense2004a}. Thus, in all
-  cases of passing the modified software in the form of source code the OSLiC
-  requires to mark the modifications and to integrate a hint into the notice
-  file – while in all the cases of passing the modified software in the form of
-  binaries it inserts only a voluntary condition (Apl-4 - Apl-9).
-  
-  \item Furthermore, the ApL requires that one must \enquote{[\ldots] retain, in
-  the Source form of any Derivative Works that You distribute, all copyright,
-  patent, trademark, and attribution notices from the Source form of the Work}
-  So, the OSLIC requires in all contexts (ApL-1 - Apl-9) that the licensing
-  elements are retained in the form you have received them\footnote{This might
-  confuse some readers: Yes, even if you distribute a modified version in the
-  form of binaries you must fulfill this condition. Moreover, you must also hand
-  the license over to your receipient. But, nevertheless, you are not obliged to
-  publish the modified source code, too. ($\rightarrow$ OSLiC, p.
-  \pageref{sec:ProtectPowerOfApL})}.
-  
-  \item Finally, the ApL requires that the received “NOTICE text file” must be
-  integrated as readable copy to each package distributed in the form of source
-  code, or – in case of binary distibutions – must be displayed
-  \enquote{[\ldots] if and wherever such third-party notices normally
-  appear}\footcite[cf.][\nopage wp\ §4.4]{Apl20OsiLicense2004a}. Thus, the OSLiC
-  requires mandatorily that all source code distributions must include the
-  notice text file (Apl-2, Apl-4, Apl-6, ApL-8) and that all distributions of
-  binary applications which normally show such a copyrigth screen must integrate
-  the content of the notice file into this screen (ApL-5, ApL9). For libraries
-  distributed in the form of binaries it is assumed that they normally do not
-  contain such copyright dialogs (ApL-7)
+  \item The EUPL explicitly \enquote{[\ldots] does not grant permission to use
+  the trade na\-mes, trademarks, service marks, or names of the Licensor
+  [\ldots]}\footcite[cf.][\nopage wp\ §5, Section \enquote{Legal
+  Protection}]{EuplLicense2007en}. Thus, we inserted the corresponding
+  interdiction into each 'prohibits'-section of all the fulfilling to-do lists.
 \end{itemize}
-
-
-
-
-
-
 
 
 %\bibliography{../../../bibfiles/oscResourcesEn}
