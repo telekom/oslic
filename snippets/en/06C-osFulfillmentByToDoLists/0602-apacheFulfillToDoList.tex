@@ -25,8 +25,8 @@
 
 \section{Apache licensed software}
 
-Officially, only the Apache License Version 2.0 is an approved open source
-license\footnote{For details $\rightarrow$ OSLiC, pp.\
+Today, the current release of the Apache open source license is version 2.0,
+elder versions are depricated\footnote{For details $\rightarrow$ OSLiC, pp.\
 \pageref{sec:ProtectPowerOfApL}}. Because it focusses primarily on the
 \enquote{redistribution}\footcite[cf.][\nopage wp\ §4]{Apl20OsiLicense2004a},
 the following simplified Apache specific open source use case
@@ -135,24 +135,37 @@ library as embedded binaries}};
 \label{OSUC-06-Apache20} \label{OSUC-09-Apache20}
 
 \begin{description}
+
 \item[means] that you are going to use a received Apache licensed software only
 for yourself and that you do not hand it over to any 3rd party in any sense.
+
 \item[covers] OSUC-01, OSUC-03, OSUC-06, and OSUC-09\footnote{For details 
 $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-01-DEF} - \pageref{OSUC-09-DEF}}
+
 \item[requires] no tasks in order to fulfill the conditions of the Apache 2.0
 license with respect to this use case:
   \begin{itemize}
     \item You are allowed to use any kind of Apache software in any sense and in
-    any context without any obligations as long as you do not give the software
-    to 3rd parties.
+    any context without being obligied to do something as long as you do not
+    give the software to 3rd parties.
   \end{itemize}
-\item[prohibits] nothing explicitly.
+  
+\item[prohibits] \ldots
+\begin{itemize}
+  \item to promote any of your services – based on the this software – by
+  trademarks, service marks, or product names linked to the software except as
+  required for unpartially describing the used software file.
+  \item to institute any patent litigation against anyone alleging that the
+  software constitutes patent infringement.
+\end{itemize}
+
 \end{description}
 
 \subsection{ApL-2: Passing the unmodified software as source code}
 \label{OSUC-02-Apache20} \label{OSUC-05-Apache20} \label{OSUC-07-Apache20} 
 
 \begin{description}
+
 \item[means] that you are going to distribute an unmodified version of the
 received Apache software to 3rd parties in the form of a set of source code files or
 an integrated source code package\footnote{In this case it doesn't matter
@@ -186,8 +199,15 @@ module, a library, or a plugin as an independent or an embedded unit}
   Apache 2.0 license.
 \end{itemize}
 
-\item[prohibits] to institute any patent litigation against anyone alleging that
-the software constitutes patent infringement.
+\item[prohibits] \ldots
+\begin{itemize}
+  \item to promote any of your services or products – based on the this software
+  – by trademarks, service marks, or product names linked to this Apache
+  software, except as required for unpartially describing the used software and
+  for reproducing the notice text file.
+  \item to institute any patent litigation against anyone alleging that the
+  software constitutes patent infringement.
+\end{itemize}
 
 \end{description}
 
@@ -231,8 +251,15 @@ module, a library, or a plugin as an independent or an embedded unit}
   Apache 2.0 license -- especially as subsection of your own copyright notice.
 \end{itemize}
 
-\item[prohibits] to institute any patent litigation against anyone alleging that
-the software constitutes patent infringement.
+\item[prohibits] \ldots
+\begin{itemize}
+  \item to promote any of your services or products – based on the this software
+  – by trademarks, service marks, or product names linked to this Apache
+  software, except as required for unpartially describing the used software and
+  for reproducing the notice text file.
+  \item to institute any patent litigation against anyone alleging that the
+  software constitutes patent infringement.
+\end{itemize}
 
 \end{description}
 
@@ -256,17 +283,19 @@ of a set of source code files or an integrated source code package.
   specific copyright notice of the original author(s) -- are retained in your
   package in the form you have received them.
   
-  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} contains at least
-  all the information of that \emph{notice text file} you have received.
+  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} contains
+  at least all the information of that \emph{notice text file} you have
+  received.
 
   \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} is also
   reproduced if and whereever such third-party notices normally appear. If the
   program already displays a copyright dialog, update it in an appropriate
   manner.
   
-  \item \textbf{[voluntary:]} Inside of the source code, mark all your
-  modifications thoroughly. Generate a \emph{notice text file}, if it still does not
-  exist. Add (sic!) a description of your modifications into the \emph{notice text file}.
+  \item \textbf{[mandatory:]} Inside of the source code, mark all your
+  modifications thoroughly. Generate a \emph{notice text file}, if it still does
+  not exist. \emph{Add} a description of your modifications into the
+  \emph{notice text file}.
    
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material also reproduce the content of the \emph{notice text
@@ -275,8 +304,15 @@ of a set of source code files or an integrated source code package.
   
  \end{itemize}
  
-\item[prohibits] to institute any patent litigation against anyone alleging that
-the software constitutes patent infringement.
+\item[prohibits] \ldots
+\begin{itemize}
+  \item to promote any of your services or products – based on the this software
+  – by trademarks, service marks, or product names linked to this Apache
+  software, except as required for unpartially describing the used software and
+  for reproducing the notice text file.
+  \item to institute any patent litigation against anyone alleging that the
+  software constitutes patent infringement.
+\end{itemize}
 
 \end{description}
 
@@ -301,18 +337,18 @@ the form of a set of binary files or an integrated binary package.
   sources, ensure that all the licensing elements are also incorporated into the
   package.
   
-  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} contains at least
-  all the information of that \emph{notice text file} you have received.
+  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} contains
+  at least all the information of that \emph{notice text file} you have
+  received. If it still does not exist, create it. \emph{Expand} the
+  \emph{notice text file} by a description of your modifications.
   
   \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} is also
   reproduced if and whereever such third-party notices normally appear. If the
   program already displays a copyright dialog, update it in an appropriate
   manner.
  
-  \item \textbf{[voluntary:]} Inside of the source code, mark all your
-  modifications thoroughly. Generate a \emph{notice text file}, if it still does not
-  exist. Expand (sic!) the \emph{notice text file} by a description of your
-  modifications.
+  \item \textbf{[voluntary:]} Even if you do not want to distribute your
+  modified source code, mark all your modifications thoroughly.
  
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material also reproduce the content of the \emph{notice text
@@ -321,8 +357,15 @@ the form of a set of binary files or an integrated binary package.
 
 \end{itemize}
 
-\item[prohibits] to institute any patent litigation against anyone alleging that
-the software constitutes patent infringement.
+\item[prohibits] \ldots
+\begin{itemize}
+  \item to promote any of your services or products – based on the this software
+  – by trademarks, service marks, or product names linked to this Apache
+  software, except as required for unpartially describing the used software and
+  for reproducing the notice text file.
+  \item to institute any patent litigation against anyone alleging that the
+  software constitutes patent infringement.
+\end{itemize}
 
 \end{description}
 
@@ -347,12 +390,13 @@ package, but without embedding it into another larger software unit.
   specific copyright notice of the original author(s) -- are retained in your
   package in the form you have received them.
   
-  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} contains at least
-  all the information of that \emph{notice text file} you have received.
+  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} contains
+  at least all the information of that \emph{notice text file} you have
+  received.
  
   \item \textbf{[voluntary:]} Inside of the source code, mark all your
-  modifications thoroughly. Generate a \emph{notice text file}, if it still does not
-  exist. Expand (sic!) the \emph{notice text file} by a description of your
+  modifications thoroughly. Generate a \emph{notice text file}, if it still does
+  not exist. \emph{Expand} the \emph{notice text file} by a description of your
   modifications.
    
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
@@ -362,8 +406,15 @@ package, but without embedding it into another larger software unit.
 
 \end{itemize}
 
-\item[prohibits] to institute any patent litigation against anyone alleging that
-the software constitutes patent infringement.
+\item[prohibits] \ldots
+\begin{itemize}
+  \item to promote any of your services or products – based on the this software
+  – by trademarks, service marks, or product names linked to this Apache
+  software, except as required for unpartially describing the used software and
+  for reproducing the notice text file.
+  \item to institute any patent litigation against anyone alleging that the
+  software constitutes patent infringement.
+\end{itemize}.
 
 \end{description}
 
@@ -390,13 +441,13 @@ without embedding it into another larger software unit.
   sources, ensure that all the licensing elements are also incorporated into the
   package.
   
-  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} contains at least
-  all the information of that \emph{notice text file} you have received.
+  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} contains
+  at least all the information of that \emph{notice text file} you have
+  received. If it still does not exist, create it. \emph{Expand} the
+  \emph{notice text file} by a description of your modifications.
    
-  \item \textbf{[voluntary:]} Inside of the source code, mark all your
-  modifications thoroughly. Generate a \emph{notice text file}, if it still does not
-  exist. Expand (sic!) the \emph{notice text file} by a description of your
-  modifications.
+  \item \textbf{[voluntary:]} Even if you do not want to distribute your
+  modified source code, mark all your modifications thoroughly.
  
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material also reproduce the content of the \emph{notice text
@@ -405,8 +456,15 @@ without embedding it into another larger software unit.
   
 \end{itemize}
 
-\item[prohibits] to institute any patent litigation against anyone alleging that
-the software constitutes patent infringement.
+\item[prohibits] \ldots
+\begin{itemize}
+  \item to promote any of your services or products – based on the this software
+  – by trademarks, service marks, or product names linked to this Apache
+  software, except as required for unpartially describing the used software and
+  for reproducing the notice text file.
+  \item to institute any patent litigation against anyone alleging that the
+  software constitutes patent infringement.
+\end{itemize}.
 
 \end{description}
 
@@ -440,10 +498,10 @@ snippet, module, library, or plugin as an embedded component.
   overarching program displays its own copyright dialog, insert this information
   there.
  
-  \item \textbf{[voluntary:]} Inside of the source code, mark all your
-  modifications thoroughly. Generate a \emph{notice text file}, if it still does not
-  exist. Expand (sic!) the \emph{notice text file} by a description of your
-  modifications.
+  \item \textbf{[mandatory:]} Inside of the library\footnote{or snippet, or
+  module, or plugin} source code, mark all your modifications thoroughly.
+  Generate a \emph{notice text file}, if it still does not exist. \emph{Expand}
+  the \emph{notice text file} by a description of your modifications.
   
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material also reproduce the content of the \emph{notice text
@@ -459,8 +517,15 @@ snippet, module, library, or plugin as an embedded component.
  
 \end{itemize}
 
-\item[prohibits] to institute any patent litigation against anyone alleging that
-the software constitutes patent infringement.
+\item[prohibits] \ldots
+\begin{itemize}
+  \item to promote any of your services or products – based on the this software
+  – by trademarks, service marks, or product names linked to this Apache
+  software, except as required for unpartially describing the used software and
+  for reproducing the notice text file.
+  \item to institute any patent litigation against anyone alleging that the
+  software constitutes patent infringement.
+\end{itemize}.
 
 \end{description}
 
@@ -488,40 +553,95 @@ plugin as an embedded component.
   sources, ensure that all the licensing elements are also incorporated into the
   package.
   
-  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} contains at least
-  all the information of that \emph{notice text file} you have received.
+  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} contains
+  at least all the information of that \emph{notice text file} you have
+  received.  If it still does not exist, create it. \emph{Expand} the
+  \emph{notice text file} by a description of your modifications.
  
   \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} is also
   reproduced if and whereever such third-party notices normally appear. If your
   overarching program displays its own copyright dialog, insert this information
   there.
      
-  \item \textbf{[voluntary:]} Inside of the source code, mark all your
-  modifications thoroughly. Generate a \emph{notice text file}, if it still does not
-  exist. Expand (sic!) the \emph{notice text file} by a description of your
-  modifications.
+  \item \textbf{[voluntary:]} Even if you do not want to distribute your
+  modified source code, mark all your modifications of the embedded
+  libary\footnote{or snippet, or module, or plugin} thoroughly.
  
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material also reproduce the content of the \emph{notice text
   file}, a hint to the software name, a link to its homepage, and a link to the
   Apache 2.0 license -- especially as subsection of your own copyright notice.
   
-
  \item \textbf{[voluntary:]} Arrange your binary distribution so that the
   integrated Apache license and the \emph{notice text file} clearly refer only
   to the embedded library and do not disturb the licensing of your own
-  overarching work. It's a good tradition to keep the librabries, modules,
-  snippet, or plugins in specific directiers which contain also all licensing
+  overarching work. It's a good tradition to keep the libraries, modules,
+  snippet, or plugins in specific directories which contain also all licensing
   elements.
   
 \end{itemize}
 
-\item[prohibits] to institute any patent litigation against anyone alleging that
-the software constitutes patent infringement.
+\item[prohibits] \ldots
+\begin{itemize}
+  \item to promote any of your services or products – based on the this software
+  – by trademarks, service marks, or product names linked to this Apache
+  software, except as required for unpartially describing the used software and
+  for reproducing the notice text file.
+  \item to institute any patent litigation against anyone alleging that the
+  software constitutes patent infringement.
+\end{itemize}.
 
 \end{description}
 
-\subsection{Discussions and Explanations [tbd]}
+\subsection{Discussions and Explanations}
+\begin{itemize}
+  \item On the one hand, the Apache 2.0 license does not permit
+  \enquote{[\ldots] to use the trade names, trademarks, service marks, or
+  product names of the Licensor, except as required for reasonable and customary
+  use in describing the origin of the Work and reproducing the content of the
+  NOTICE file}\footcite[cf.][\nopage wp\ §6]{Apl20OsiLicense2004a}. On the other
+  hand, this license alerts that all the patent licenses – granted to those who
+  \enquote{[\ldots] institute a patent litigation} – will terminate
+  automatically\footcite[cf.][\nopage wp\ §3]{Apl20OsiLicense2004a}. Hence, the
+  OSLiC generally (ApL-1 - ApL-9) interdicts to promote products or services by
+  these elements and to legally fight against patents linked to the software.
+  
+  \item The ApL also requires to \enquote{[\ldots] give any other recipients of
+  the Work or Derivative Works a copy of this License}\footcite[cf.][\nopage wp\
+  §4.1]{Apl20OsiLicense2004a}. Therefore, all \emph{4others} use cases contain
+  the respective mandatory condition (ApL-2 - ApL-9).
+   
+  \item Additionally, the ApL requires, that modifications must be
+  marked\footcite[cf.][\nopage wp\ §4.2]{Apl20OsiLicense2004a}. Thus, in all
+  cases of passing the modified software in the form of source code the OSLiC
+  requires to mark the modifications and to integrate a hint into the notice
+  file – while in all the cases of passing the modified software in the form of
+  binaries it inserts only a voluntary condition (ApL-4 - ApL-9).
+  
+  \item Furthermore, the ApL requires that one must \enquote{[\ldots] retain, in
+  the Source form of any Derivative Works that You distribute, all copyright,
+  patent, trademark, and attribution notices from the Source form of the Work}
+  So, the OSLIC requires in all contexts (ApL-1 - ApL-9) that the licensing
+  elements are retained in the form you have received them\footnote{This might
+  confuse some readers: Yes, even if you distribute a modified version in the
+  form of binaries you must fulfill this condition. Moreover, you must also hand
+  the license over to your receipient. But, nevertheless, you are not obliged to
+  publish the modified source code, too. ($\rightarrow$ OSLiC, p.
+  \pageref{sec:ProtectPowerOfApL})}.
+  
+  \item Finally, the ApL requires that the received “NOTICE text file” must be
+  integrated as readable copy to each package distributed in the form of source
+  code, or – in case of binary distibutions – must be displayed
+  \enquote{[\ldots] if and wherever such third-party notices normally
+  appear}\footcite[cf.][\nopage wp\ §4.4]{Apl20OsiLicense2004a}. Thus, the OSLiC
+  requires mandatorily that all source code distributions must include the
+  notice text file (ApL-2, ApL-4, ApL-6, ApL-8) and that all distributions of
+  binary applications which normally show such a copyrigth screen must integrate
+  the content of the notice file into this screen (ApL-5, ApL9). For libraries
+  distributed in the form of binaries it is assumed that they normally do not
+  contain such copyright dialogs (ApL-7)
+\end{itemize}
+
 
 
 
