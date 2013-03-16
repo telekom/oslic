@@ -39,9 +39,10 @@ license with weak copyleft ($\rightarrow$ OSLiC, p.\
 distribution in general -- no matter what form or state is
 used\footcite[cf.][\nopage wp\ §3 bottom area]{Epl10OsiLicense2005a}. So, taken
 as whole, the EPL mainly focusses on the distribution of a program. Thus, for
-finding the simply processable task lists, the following EPL specific open source
-use case structure\footnote{For details of the general OSUC finder $\rightarrow$
-OSLiC, pp.\ \pageref{OsucTokens} and \pageref{OsucDefinitionTree}} can be used:
+finding the relevant, simply processable task lists, also the following EPL
+specific open source use case structure\footnote{For details of the general OSUC
+finder $\rightarrow$ OSLiC, pp.\ \pageref{OsucTokens} and
+\pageref{OsucDefinitionTree}} can be used:
  
 \tikzstyle{nodv} = [font=\small, ellipse, draw, fill=gray!10, 
     text width=2cm, text centered, minimum height=2em]
@@ -156,7 +157,7 @@ $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-01-DEF} - \pageref{OSUC-09-DEF}}
 license with respect to this use case:
   \begin{itemize}
     \item You are allowed to use any kind of EPL software in any sense and in
-    any context without being obliged to do something as long as you do not
+    any context without being obliged to do anything as long as you do not
     give the software to 3rd parties.
   \end{itemize}
 
@@ -198,6 +199,13 @@ module, a library, or a plugin as an independent or an embedded unit}
   file of the package does still not clearly state that the package is licensed
   under the EPL, additionally insert your own correct EPL licensing file.
   
+  \item \textbf{[mandatory:]} If still not existing, integrate an explicit, very
+  prominently placed 'No warranty' statement into the distributed source code
+  package. Let this statement clearly say that all (other) contributors to the
+  software do not take over any responsibility for the quality of the software.
+  Then, add the no-warranty clause and the disclaimer of the liability of the
+  EPL itself into that file.
+  
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material also reproduce the content of the existing
   \emph{copyright notice text files}, a hint to the software name, a link to its
@@ -234,8 +242,30 @@ module, a library, or a plugin as an independent or an embedded unit}
   binary from the sources, ensure that all these licensing elements are also
   incorporated into the package.
   
-  TODO: complete binary cases by weak copyleft hint ala EUPL\ldots
+  \item \textbf{[mandatory:]} If still not existing, integrate an explicit, very
+  prominently placed 'No warranty' statement into the distributed source code
+  package. Let this statement clearly say that all (other) contributors to the
+  software do not take over any responsibility for the quality of the software.
+  Then, add the no-warranty clause and the disclaimer of the liability of the
+  EPL itself into that file.
+
+  \item \textbf{[mandatory:]} Make the source code of the software accessible
+  via a repository -- even if you did not modified it: Push the source code
+  package into an internet repository and enable its download function.
+  Integrate an easily to find description into your distribution package which
+  explains how the code can be received from where. Ensure, that this repository
+  is usable reasonably long enough.
   
+  \item \textbf{[mandatory:]} Execute the to-do list of use case EUPL-2\footnote{
+  Making the code accessible via a repository means distributing the software in
+  the form of source code. Hence, you must also fulfill all tasks of the
+  corresponding use case.}.
+  
+  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
+  your additional material also reproduce the content of the existing
+  \emph{copyright notice text files}, a hint to the software name, a link to its
+  homepage, and a link to the EPL 1.0 license.
+    
 \end{itemize}
 
 \item[prohibits] \ldots
@@ -267,7 +297,7 @@ of a set of source code files or an integrated source code package.
   your distribution package.
   
   \item \textbf{[mandatory:]} Mark all modifications of the source code of the
-  program\footnote{or application or server} thoroughly -- namely within the
+  program (proapse) thoroughly -- namely within the
   modfied source code.
   
   \item \textbf{[mandatory:]} Give the recipient a copy of the EPL 1.0 license.
@@ -276,6 +306,14 @@ of a set of source code files or an integrated source code package.
   \pageref{DistributingFilesHint}}. If the licensing statement in the licensing
   file of the package does still not clearly state that the package is licensed
   under the EPL, additionally insert your own correct EPL licensing file.
+
+  \item \textbf{[mandatory:]} If still not existing, integrate an explicit, very
+  prominently placed 'No warranty' statement into the distributed source code
+  package. Let this statement clearly say that all (other) contributors to the
+  software do not take over any responsibility for the quality of the software.
+  Then, add the no-warranty clause and the disclaimer of the liability of the
+  EPL itself into that file. Update an existing copyright screen presented by
+  the program so that it shows the same information.
 
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material also reproduce the content of the existing
@@ -314,11 +352,28 @@ the form of a set of binary files or an integrated binary package.
   your distribution package.
 
   \item \textbf{[mandatory:]} Mark all modifications of the source code of the
-  program\footnote{or application or server} thoroughly -- namely within the
+  program (proapse) thoroughly -- namely within the
   modfied source code.
-  
-  TODO: complete binary cases by weak copyleft hint ala EUPL\ldots  
 
+  \item \textbf{[mandatory:]} If still not existing, integrate an explicit, very
+  prominently placed 'No warranty' statement into the distributed source code
+  package. Let this statement clearly say that all (other) contributors to the
+  software do not take over any responsibility for the quality of the software.
+  Then, add the no-warranty clause and the disclaimer of the liability of the
+  EPL itself into that file. Update an existing copyright screen presented by
+  the program so that it shows the same information.
+
+  \item \textbf{[mandatory:]} Make the source code of the modifed program
+  accessible via a repository: Push the source code package into an internet
+  repository and enable its download function. Integrate an easily to find
+  description into your distribution package which explains how the code can be
+  received from where. Ensure, that this repository is usable reasonably long
+  enough.
+
+  \item \textbf{[mandatory:]} Execute the to-do list of use case EUPL-4\footnote{
+  Making the code accessible via a repository means distributing the software in
+  the form of source code. Hence, you must also fulfill all tasks of the
+  corresponding use case.}.
  
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material  also reproduce the content of the existing
@@ -359,7 +414,7 @@ package, but without embedding it into another larger software unit.
   your distribution package.
 
   \item \textbf{[mandatory:]} Mark all modifications of the source code of the
-  library\footnote{or snippet, or module, or plugin} thoroughly -- namely within
+  library (snimoli) thoroughly -- namely within
   the modfied source code.
   
   \item \textbf{[mandatory:]} Give the recipient a copy of the EPL 1.0 license.
@@ -367,7 +422,14 @@ package, but without embedding it into another larger software unit.
   implementing the handover of files correctly $\rightarrow$ OSLiC, p.
   \pageref{DistributingFilesHint}}. If the licensing statement in the licensing
   file of the package does still not clearly state that the package is licensed
-  under the EPL, additionally insert your own correct EPL licensing file.  
+  under the EPL, additionally insert your own correct EPL licensing file.
+  
+  \item \textbf{[mandatory:]} If still not existing, integrate an explicit, very
+  prominently placed 'No warranty' statement into the distributed source code
+  package. Let this statement clearly say that all (other) contributors to the
+  software do not take over any responsibility for the quality of the software.
+  Then, add the no-warranty clause and the disclaimer of the liability of the
+  EPL itself into that file.
   
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material  also reproduce the content of the existing
@@ -405,13 +467,39 @@ without embedding it into another larger software unit.
   \item \textbf{[mandatory:]} Create a \emph{modification text file}, if such a
   notice file still does not exist. \emph{Expand} the \emph{modification text
   file} by a more general description of your modifications. Incorporate it into
-  your distribution package.
+  your distributio  \item \textbf{[mandatory:]} Make the source code of the library accessible via
+  a repository: Push the source code package into a repository and make it
+  downloadable via the internet. Integrate an easily to find description into
+  your distribution package which explains how the code can be received from
+  where. Ensure, that this repository is usable reasonably long enough.
+  
+  \item \textbf{[mandatory:]} Execute the to-do list of use case EUPL-8\footnote{
+  Making the code accessible via a repository means distributing the software in
+  the form of source code. Hence, you must also fulfill all tasks of the
+  corresponding use case.}.n package.
 
   \item \textbf{[mandatory:]} Mark all modifications of the source code of the
-  library\footnote{or snippet, or module, or plugin} thoroughly -- namely within
-  the modfied source code.
+  library (snimoli) thoroughly -- namely within the modfied source code.
 
-  TODO: complete binary cases by weak copyleft hint ala EUPL\ldots
+  \item \textbf{[mandatory:]} If still not existing, integrate an explicit, very
+  prominently placed 'No warranty' statement into the distributed source code
+  package. Let this statement clearly say that all (other) contributors to the
+  software do not take over any responsibility for the quality of the software.
+  Then, add the no-warranty clause and the disclaimer of the liability of the
+  EPL itself into that file.
+  
+  \item \textbf{[mandatory:]} Make the source code of the modified library
+  accessible via a repository:Push the source code package into an internet
+  repository and enable its download function. Integrate an easily to find
+  description into your distribution package which explains how the code can be
+  received from where. Ensure, that this repository is usable reasonably long
+  enough.
+  
+  \item \textbf{[mandatory:]} Execute the to-do list of use case EUPL-8\footnote{
+  Making the code accessible via a repository means distributing the software in
+  the form of source code. Hence, you must also fulfill all tasks of the
+  corresponding use case.}.
+  
  
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material  also reproduce the content of the existing
@@ -452,8 +540,7 @@ snippet, module, library, or plugin as an embedded component.
   your distribution package.
   
   \item \textbf{[mandatory:]} Mark all modifications of the source code of the
-  embedded libary\footnote{or snippet, or module, or plugin} thoroughly --
-  namely within the source code.
+  embedded library (snimoli) thoroughly -- namely within the source code.
    
   \item \textbf{[mandatory:]} Give the recipient a copy of the EPL 1.0 license.
   If it is not already present in the software package, add it\footnote{For
@@ -461,9 +548,18 @@ snippet, module, library, or plugin as an embedded component.
   \pageref{DistributingFilesHint}}. If the licensing statement in the licensing
   file of the package does still not clearly state that the embedded library is
   licensed under the EPL, additionally insert your own correct EPL licensing file.
+
+  \item \textbf{[mandatory:]} If still not existing, integrate an explicit, very
+  prominently placed 'No warranty' statement into the distributed source code
+  package. Let this statement clearly say that all (other) contributors to the
+  software do not take over any responsibility for the quality of the software.
+  Then, add the no-warranty clause and the disclaimer of the liability of the
+  EPL itself into that file. Let the copyright screen of your own overarching
+  program show the same information -- as a specification for the embedded
+  component.
      
   \item \textbf{[voluntary:]} Arrange your source code distribution so that the
-  integrated EPL and the \emph{licensing file} clearly refer only to the
+  integrated EPL and the \emph{licensing files} clearly refer only to the
   embedded library and do not disturb the licensing of your own overarching
   work. It's a good tradition to keep the embedded components like libraries,
   modules, snippets, or plugins in specific directory which contains also all
@@ -510,9 +606,36 @@ plugin as an embedded component.
   your distribution package.
 
   \item \textbf{[mandatory:]} Mark all modifications of the source code of the
-  embedded libary\footnote{or snippet, or module, or plugin} thoroughly --
-  namely within the source code.  
+  embedded library (snimoli) thoroughly -- namely within the source code.
+
+  \item \textbf{[mandatory:]} If still not existing, integrate an explicit, very
+  prominently placed 'No warranty' statement into the distributed source code
+  package. Let this statement clearly say that all (other) contributors to the
+  software do not take over any responsibility for the quality of the software.
+  Then, add the no-warranty clause and the disclaimer of the liability of the
+  EPL itself into that file. Let the copyright screen of your own overarching
+  program show the same information  -- as a specification for the embedded
+  component.
   
+  \item \textbf{[mandatory:]} Make the source code of the embedded library
+  accessible via a repository: Push the source code package into an internet
+  repository and enable its download function. Integrate an easily to find
+  description into your distribution package which explains how the code can be
+  received from where. Ensure, that this repository is usable reasonably long
+  enough.
+  
+  \item \textbf{[mandatory:]} Execute the to-do list of use case EUPL-8\footnote{
+  Making the code accessible via a repository means distributing the software in
+  the form of source code. Hence, you must also fulfill all tasks of the
+  corresponding use case.}.
+  
+  \item \textbf{[voluntary:]} Arrange your binary distribution so that the
+  integrated EPL and the \emph{licensing files} clearly refer only to the
+  embedded library and do not disturb the licensing of your own overarching
+  work. It's a good tradition to keep the embedded components like libraries,
+  modules, snippets, or plugins in specific directory which contains also all
+  additional licensing elements.
+
   TODO: complete binary cases by weak copyleft hint ala EUPL\ldots
   
 
@@ -587,7 +710,7 @@ following tasks:
   the use cases concerning the distribution of a modified EPL software (EPL-4 -
   EPL-9).
   
-  \item For all distributions in the form of source code, the EPL requires that
+  \item For all distributions in the form of source code the EPL requires that
   the software \enquote{8\ldots] must be made available under this (Eclipse
   Public License 1.0) Agreement} and that \enquote{[\ldots] a copy of this
   Agreement must be included with each copy of the
@@ -597,8 +720,47 @@ following tasks:
   OSLiC, p.\ \pageref{sec:ProtectingPowerOfEpl})}. Therefore, this conditions
   does not cover the overarching program which uses the embedded library (EPL-8)
   
-
-% TODO: unbedingt bei allen copyleft in binrar form auch die abarbeitung der 
+  \item Aside from that the EPL allows to distribute the software in the form of
+  binaries if the distributor \enquote{[\ldots] effectively disclaims on behalf
+  of all Contributors all warranties and conditions [\ldots] (and) effectively
+  excludes on behalf of all Contributorsall liability for damages [\ldots]} --
+  namely in a very broad sense\footcite[cf.][\nopage wp\
+  §3]{Epl10OsiLicense2005a}. This delimitation is so important for the EPL that
+  it subspecifies and explains this aspect in a special section titled
+  \enquote{Commercial Distribution} in which this aspect is no longer only
+  focussed on a distribution in the form of binaries\footcite[cf.][\nopage wp\
+  §4]{Epl10OsiLicense2005a}. Thus, the OSLiC inserts a mandatory clause into all
+  use cases concerning the distribution that the paragraph of \enquote{No
+  Warranty}\footcite[cf.][\nopage wp\ §5]{Epl10OsiLicense2005a} and the
+  \enquote{Disclaimer of Liability}\footcite[cf.][\nopage wp\
+  §6]{Epl10OsiLicense2005a} of the EPL must explicitly be presented in and by
+  the documentation of distribution package and -- if technically possible -- by
+  the copyright screen.
+  
+  \item Finally, the EPL allows the distribution of the software in the form of
+  binaries only if the distributor clearly \enquote{[\ldots] states that the
+  source code for the program is available from such Contributor (distributor)
+  [\ldots]} and if he additionally \enquote{[\ldots] informs licensees how to
+  obtain it in a reasonable manner [\ldots]}\footcite[cf.][\nopage wp\
+  §3]{Epl10OsiLicense2005a}. This requirement can only be fulfilled seriously if
+  the distributor himself offers the source code via repository. It is not
+  sufficient to point to any external download repository in the world wide web.
+  Thus, -- for all use cases concerning the distribution in the form of binaries
+  -- the OSLiC follows the respective requirement introduced by the EUPL (EPL-3,
+  EPL-5, EPL-7, EPL-9). 
+  
+  \item Last but not least, the requirement also to make the source code an EPL
+  licensed software accessible (regardless whether one has modified the software
+  or not) if one distributes the binaries has the same implicit consequence as
+  in all other case of respecting the copyleft effect: even if one distributes
+  the source code retrospectively it is still a distribution of source code and
+  has therefore also to respect the conditions of the corresponding source code
+  use cases. Thus, the OSLiC requires in all cases of a binary distribution to
+  execute also the task-lists of the respective source code use cases.
+ 
+  
+  
+% TODO: unbedingt bei allen copyleft in binrar form auch die abarbeitung der
 
   
 
