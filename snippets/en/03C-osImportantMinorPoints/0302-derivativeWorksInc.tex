@@ -41,8 +41,11 @@ on-top-developments and you have a derivated work.
 \normalsize
 \ldots
 
-As first version, we present an outline of the arguing structure this chapter will
-later present in a more narrative way.
+\textit{\emph{IMPORTANT}: This text is only a first draft which sketches some
+aspects. Later on we will fully elaborate the complete argumentation.}
+
+As first version, we present an outline of the arguing structure this chapter
+will later present in a more narrative way.
 
 \begin{description}
   \item[The meaning 'derivative work' must be known!] Many open source licenses
@@ -72,7 +75,35 @@ later present in a more narrative way.
 \end{itemize}
 \end{description}
 
-This are our rules by which the OSLiC decides to take something as derivative Work:
+Basically we generalize a specific viewpoint of the LGPL: It uses three terms:
+
+\begin{description}
+  \item[\enquote{library}] is defined as \enquote{a collection of software
+  functions and/or data prepared so as to be conveniently linked wiht
+  application programs}\footcite[cf.][\nopage wp §0]{Lgpl21OsiLicense1999a}.
+  \item[\enquote{work based on the library}] is defined as \enquote{either the
+  library or any derivative work}\footcite[cf.][\nopage wp
+  §0]{Lgpl21OsiLicense1999a}.
+  \item[\enquote{work that uses the library}] is defined as something which
+  initially \enquote{[\ldots] is not a derivative work of the library [\ldots]}
+  but can become a derivative work by being combined / linked to the library it
+  uses\footcite[cf.][\nopage wp §5]{Lgpl21OsiLicense1999a}.
+\end{description}
+
+Following these specifications, one has to conclude that there can be derived
+\emph{derivative works} of the library in two different ways: First, the library
+itself can be enhanced without changing the character of being a library. Then,
+of course, the resulting library is a derivative work of the initial library.
+Second, an overaching program can use the library by calling functions, methods
+or data, offered by the library. In this case, the overarching program
+functionally depends on the library and is a derivative work (as soon as it is
+linked to the library).
+
+This viewpoint can be generalized: also snippets, modules, plugins can be
+enhanced and used by overarching programs or even by more complex libraries.
+Based on this viewpoint - which should finally be formulated as the viewpoint of
+a benevolent impartial developer - the OSLiC uses the following rules by which
+the OSLiC decides to take something as derivative Work:
 \label{sec:BenevolentDerivativeWorkUnderstanding}
 
 \begin{description}
@@ -80,13 +111,15 @@ This are our rules by which the OSLiC decides to take something as derivative Wo
   into a target file makes the target file a derivatve work of the source
   file\footnote{ Be careful: this case must still be distinguished from the case
   of an automatically inclusion (header files, script libraries) during the
-  compilation / execution: Header files allon should not evekoe a derivative work.}.
+  compilation / execution: Header files allon should not evekoe a derivative
+  work.}.
   \item[Modify-Case] Inserting any new content or deleting any existing content
   of a source file makes the resulting target file being a derivate work of the
   wource file.
   \item[Call-Case] Inserting into a target file the call of function which is
-  defined inside of and delivered by a sourcefile makes the target file depending
-  on the source file and therefore a derivative work of the delivering source file.
+  defined inside of and delivered by a sourcefile makes the target file
+  depending on the source file and therefore a derivative work of the delivering
+  source file.
 \end{description}
 
 And here are some applications of the rules
@@ -98,5 +131,6 @@ And here are some applications of the rules
   \item \ldots
 \end{itemize}
 
+[\ldots TDB \ldots]
 
 %\bibliography{../../../bibfiles/oscResourcesEn}
