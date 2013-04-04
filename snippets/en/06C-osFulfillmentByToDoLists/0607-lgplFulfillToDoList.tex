@@ -51,11 +51,13 @@ one \enquote{[\ldots] may make, run and propagate covered works that (one does)
 not convey, without conditions so long as (the) license otherwise remains in
 force} (\cite[cf.][\nopage wp.\ §2]{Gpl30OsiLicense2007a}).}. Finally, the
 LGPL-2.1 and the LGPL-3.0 are aiming for the same results and the same spirit by
-requiring nearly the same license fulfilling tasks. Therefore it is appropriate
-to cover both versions in one chapter and to offer the same LGPL specific open
-source use case structure\footnote{For details of the general OSUC finder
-$\rightarrow$ OSLiC, pp.\ \pageref{OsucTokens} and \pageref{OsucDefinitionTree}}
-for finding the easily processable corresponding task lists:
+requiring nearly the same license fulfilling tasks. Therefore it is mostly
+appropriate to cover both versions in one chapter\footnote{The exception
+concerns the distribution of a modified program, application, or server under
+the terms of the LGPL} and to offer the same LGPL specific open source use
+case structure\footnote{For details of the general OSUC finder $\rightarrow$
+OSLiC, pp.\ \pageref{OsucTokens} and \pageref{OsucDefinitionTree}} for finding
+the easily processable corresponding task lists:
  
 \tikzstyle{nodv} = [font=\small, ellipse, draw, fill=gray!10, 
     text width=2cm, text centered, minimum height=2em]
@@ -162,42 +164,28 @@ library as embedded binaries}};
 \end{tikzpicture}
 
 
-
 \subsection{LGPL-1: Using the software only for yourself}
-\label{OSUC-01-LGPL} \label{OSUC-03-LGPL} 
+\label{OSUC-01-LGPL} \label{OSUC-03-LGPL}
 \label{OSUC-06-LGPL} \label{OSUC-09-LGPL}
-
-This LGPL use case is valid for LGPL-2.1 and LGPL-3.0
 
 \begin{description}
 
 \item[means] that you are going to use a received LGPL licensed software only
 for yourself and that you do not hand it over to any 3rd party in any sense.
 
-\item[covers] OSUC-01, OSUC-03, OSUC-06, and OSUC-09\footnote{For details 
+\item[covers] OSUC-01, OSUC-03, OSUC-06, and OSUC-09\footnote{For details
 $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-01-DEF} - \pageref{OSUC-09-DEF}}
 
-
-
-
-
-\item[requires] no tasks in order to fulfill the conditions of the LGPL 1.1
-license with respect to this use case:
+\item[requires] no tasks in order to fulfill the conditions of the LGPL-2.1 or
+the LGPL-3.0 with respect to this use case:
   \begin{itemize}
     \item You are allowed to use any kind of LGPL software in any sense and in
     any context without being obliged to do anything as long as you do not
     give the software to 3rd parties.
   \end{itemize}
-  
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products -- based on the this software
-  -- by trade names, trademarks, service marks, or names linked to this LGPL
-  software, except as required for unpartially describing the used software and
-  reproducing the copyright notice.
-\end{itemize}
-\end{description}
 
+\item[prohibits] nothing explictly with respect to this use case.
+\end{description}
 
 
 \subsection{LGPL-2: Passing the unmodified software as source code}
@@ -211,40 +199,41 @@ an integrated source code package\footnote{In this case it doesn't matter
 whether you  distribute a program, an application, a server, a snippet, a
 module, a library, or a plugin as an independent or an embedded unit}
 
-\item[covers] OSUC-02, OSUC-05, OSUC-07\footnote{For details $\rightarrow$ OSLiC, pp.\ 
-\pageref{OSUC-02-DEF} - \pageref{OSUC-07-DEF}}
+\item[covers] OSUC-02, OSUC-05, OSUC-07\footnote{For details $\rightarrow$
+OSLiC, pp.\ \pageref{OSUC-02-DEF} - \pageref{OSUC-07-DEF}}
 
 \item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
  
- 
- 
- 
- 
+  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
+  notices that refer to the LGPL-2.1 or LGPL-3.0 and to the absence of any
+  warranty -- are retained in your package in the form you have received them.
+
+  \item \textbf{[mandatory:]} Ensure that the distributed software package
+  contains a conspicuously and appropriately designed, esasily to find copyright
+  notice and a disclaimer of warranty. If these elements are missed, add a new
+  file containing the main copyright note and the disclaimer of warranty in the
+  form which is textually defined by the license LGPL-2.1 itself resp. by the
+  LGPL-3.0 itself. (Yes, repeat the disclaimer although it is also part of the
+  license itself and although you are required to hand the license itself over
+  to the receiver.)
   
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
-  copyright, patent or trademarks notices and all notices that refer to the
-  license and to the disclaimer of warranties -- are retained in your package in
-  the form you have received them.
-  
-  \item \textbf{[mandatory:]} Give the recipient a copy of the LGPL 1.1
-  license. If it is not already present in the software package, add
+  \item \textbf{[mandatory:]} Give the recipient a copy of the LGPL-2.1 resp.
+  LGPL-3.0 license. If it is not already part of the software package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC, p. \pageref{DistributingFilesHint}}.
   
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material also reproduce the content of the existing
-  \emph{copyright notice text files}, a hint to the software name, a link to its
-  homepage, and a link to the LGPL 1.1 license.
+  copyright notices, a hint to the software name, a link to its homepage,
+  the respective disclaimer of warranty, and a link to the LGPL-2.1 resp.
+  LGPL-3.0.
+  
+  \item \textbf{[voluntary:]} Retain any existing copyright notice. 
+  
 \end{itemize}
 
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products -- based on the this software
-  -- by trade names, trademarks, service marks, or names linked to this LGPL
-  software, except as required for unpartially describing the used software and
-  reproducing the copyright notice.
-\end{itemize}
+\item[prohibits] nothing explictly with respect to this use case.
 
 \end{description}
 
@@ -264,23 +253,24 @@ module, a library, or a plugin as an independent or an embedded unit}
 \item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
   
+  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
+  notices that refer to the LGPL-2.1 or LGPL-3.0 and to the absence of any
+  warranty -- are retained in your package in the form you have received them.
+
+  \item \textbf{[mandatory:]} Ensure that the distributed software package
+  contains a conspicuously and appropriately designed, esasily to find copyright
+  notice and a disclaimer of warranty. If these elements are missed, add a new
+  file containing the main copyright note and the disclaimer of warranty in the
+  form which is textually defined by the license LGPL-2.1 itself resp. by the
+  LGPL-3.0 itself. (Yes, repeat the disclaimer although it is also part of the
+  license itself and although you are required to hand the license itself over
+  to the receiver.)
   
-  
-  
-  
-  
-  
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
-  copyright, patent or trademarks notices and all notices that refer to the
-  license and to the disclaimer of warranties -- are retained in your package in
-  the form you have received them. If you compile the binary from the sources,
-  ensure that all the licensing elements are also incorporated into the package.
-  
-  \item \textbf{[mandatory:]} Give the recipient a copy of the LGPL 1.1
-  license. If it is not already present in the binary package, add
+  \item \textbf{[mandatory:]} Give the recipient a copy of the LGPL-2.1 resp.
+  LGPL-3.0 license. If it is not already part of the software package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC, p. \pageref{DistributingFilesHint}}.
-
+  
   \item \textbf{[mandatory:]} Make the source code of the distributed software
   accessible via a repository (even if you do not modified it): Push the source
   code package into a repository, make it downloadable via the internet, and
@@ -288,24 +278,25 @@ module, a library, or a plugin as an independent or an embedded unit}
   explains how the code can be received from where. Ensure, that this
   repository is online for as long as you continue to distribute the software.
   
+  \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
+  into your distribution and/or your additional material.
+  
   \item \textbf{[mandatory:]} Execute the to-do list of use case LGPL-2\footnote{
   Making the code accessible via a repository means distributing the software in
   the form of source code. Hence, you must also fulfill all tasks of the
   corresponding use case.}.
- 
+   
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material also reproduce the content of the existing
-  \emph{copyright notice text files}, a hint to the software name, a link to its
-  homepage, and a link to the LGPL 1.1 license.
+  copyright notices, a hint to the software name, a link to its homepage,
+  the respective disclaimer of warranty, and a link to the LGPL-2.1 resp.
+  LGPL-3.0.
+  
+  \item \textbf{[voluntary:]} Retain any existing copyright notice. 
+
 \end{itemize}
 
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products -- based on the this software
-  -- by trade names, trademarks, service marks, or names linked to this LGPL
-  software, except as required for unpartially describing the used software and
-  reproducing the copyright notice.
-\end{itemize}
+\item[prohibits] nothing explictly with respect to this use case.
 
 \end{description}
 
@@ -317,49 +308,60 @@ module, a library, or a plugin as an independent or an embedded unit}
 LGPL licensed program, application, or server (proapse) to 3rd parties in form
 of a set of source code files or an integrated source code package.
 \item[covers] OSUC-04\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-04-DEF}}
+\end{description}
 
-\item[requires] the tasks in order to fulfill the license conditions:
+\subsubsection{under terms of LGPL-2.1}
+
+\begin{description}
+  \item[requires] irrelevant
+  \item[forbids] to modify the received work in a way that the resulting
+  \enquote{modified work} is no longer a software library (but a
+  program)\footnote{$\rightarrow$ OSLiC, pp.\ \pageref{}}. \textbf{Hence:
+  \emph{you are not allowed to distribute a modified program under th terms of
+  LGPL-2.1.}}
+\end{description}
+
+\subsubsection{under terms of LGPL-3.0}
+
+\begin{description}
+\item[requires] to respect
 \begin{itemize}
   
-  
-  
-  
-  
-  
-  
-  
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
-  copyright, patent or trademarks notices and all notices that refer to the
-  license and to the disclaimer of warranties -- are retained in your package in
-  the form you have received them.
-  
-  \item \textbf{[mandatory:]} Give the recipient a copy of the LGPL 1.1
-  license. If it is not already present in the software package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
+  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
+  notices that refer to the LGPL-3.0 and to the absence of any
+  warranty -- are retained in your package in the form you have received them.
 
-  \item \textbf{[mandatory:]} Create a \emph{modification text file}, if such a
-  notice file still does not exist. \emph{Expand} the \emph{modification text
-  file} by a description of your modifications.
-    
+  \item \textbf{[mandatory:]} Ensure that the distributed software package
+  contains a conspicuously and appropriately designed, esasily to find copyright
+  notice and a disclaimer of warranty. If these elements are missed, add a new
+  file containing the main copyright note and the disclaimer of warranty in the
+  form which is textually defined by the license LGPL-3.0 itself. (Yes, repeat
+  the disclaimer although it is also part of the license itself and although you
+  are required to hand the license itself over to the receiver.)
+  
+  \item \textbf{[mandatory:]} Give the recipient a copy of the LGPL-3.0 license.
+  If it is not already part of the software package, add it\footnote{For
+  implementing the handover of files correctly $\rightarrow$ OSLiC, p.
+  \pageref{DistributingFilesHint}}.
+
   \item \textbf{[mandatory:]} Mark all modifications of source code of the
-  program (proapse) thoroughly -- namely within the
-  source code and including the date of the modification.
-   
+  program (proapse) thoroughly -- namely within the source code and including
+  the date of the modification.
+  
+  \item \textbf{[voluntary:]} Create a \emph{modification text file}, if such a
+  notice file still does not exist. \emph{Expand} the \emph{modification text
+  file} by a description of your modifications on a more functional level.
+    
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material also reproduce the content of the existing
-  \emph{copyright notice text files}, a hint to the software name, a link to its
-  homepage, and a link to the LGPL 1.1 license.
+  copyright notices, a hint to the software name, a link to its homepage,
+  the respective disclaimer of warranty, and a link to the LGPL-3.0.
+  
+  \item \textbf{[voluntary:]} Retain any existing copyright notice.  
   
  \end{itemize}
  
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products -- based on the this software
-  -- by trade names, trademarks, service marks, or names linked to this LGPL
-  software, except as required for unpartially describing the used software and
-  reproducing the copyright notice.
-\end{itemize}
+\item[prohibits] nothing explictly with respect to this use case.
 
 \end{description}
 
@@ -370,61 +372,76 @@ of a set of source code files or an integrated source code package.
 LGPL licensed pro\-gram, application, or server (proapse) to 3rd parties in
 the form of a set of binary files or an integrated binary package.
 \item[covers] OSUC-04\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-04-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions:
+\end{description}
+
+\subsubsection{under terms of LGPL-2.1}
+
+\begin{description}
+  \item[requires] irrelevant
+  \item[forbids] to modify the received work in a way that the resulting
+  \enquote{modified work} is no longer a software library (but a
+  program)\footnote{$\rightarrow$ OSLiC, pp.\ \pageref{}}. \textbf{Hence:
+  \emph{you are not allowed to distribute a modified program under th terms of
+  LGPL-2.1.}}
+\end{description}
+
+\subsubsection{under terms of LGPL-3.0}
+\begin{description}
+\item[requires] to respect:
 \begin{itemize}
 
 
+  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
+  notices that refer to the LGPL-3.0 and to the absence of any
+  warranty -- are retained in your package in the form you have received them.
 
-
-
-
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
-  copyright, patent or trademarks notices and all notices that refer to the
-  license and to the disclaimer of warranties -- are retained in your package in
-  the form you have received them. If you compile the binary from the sources,
-  ensure that all the licensing elements are also incorporated into the package.
-
- \item \textbf{[mandatory:]} Give the recipient a copy of the LGPL 1.1
-  license. If it is not already present in the binary package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
+  \item \textbf{[mandatory:]} Ensure that the distributed software package
+  contains a conspicuously and appropriately designed, esasily to find copyright
+  notice and a disclaimer of warranty. If these elements are missed, add a new
+  file containing the main copyright note and the disclaimer of warranty in the
+  form which is textually defined by the license LGPL-3.0 itself. (Yes, repeat
+  the disclaimer although it is also part of the license itself and although you
+  are required to hand the license itself over to the receiver.)
   
-  \item \textbf{[mandatory:]} Create a \emph{modification text file}, if such a
-  notice file still does not exist. \emph{Expand} the \emph{modification text
-  file} by a description of your modifications.
+  \item \textbf{[mandatory:]} Give the recipient a copy of the LGPL-3.0 license.
+  If it is not already part of the software package, add it\footnote{For
+  implementing the handover of files correctly $\rightarrow$ OSLiC, p.
+  \pageref{DistributingFilesHint}}.
 
+  \item \textbf{[mandatory:]} Mark all modifications of source code of the
+  program (proapse) thoroughly namely within the source code and including
+  the date of the modification.
+  
+  \item \textbf{[voluntary:]} Create a \emph{modification text file}, if such a
+  notice file still does not exist. \emph{Expand} the \emph{modification text
+  file} by a description of your modifications on a more functional level.
+  
   \item \textbf{[mandatory:]} Make the source code of the distributed software
   accessible via a repository: Push the source code package into a repository,
   make it downloadable via the internet, and integrate an easily to find
   description into the distribution package which explains how the code can be
   received from where. Ensure, that this repository is online for as long as you
   continue to distribute the software.
-    
+  
+  \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
+  into your distribution and/or your additional material.
+  
   \item \textbf{[mandatory:]} Execute the to-do list of use case LGPL-4\footnote{
   Making the code accessible via a repository means distributing the software in
   the form of source code. Hence, you must also fulfill all tasks of the
   corresponding use case.}.
-  
-  \item \textbf{[voluntary:]} Mark all modifications of source code of the
-  program (proapse) thoroughly -- namely within the
-  source code and including the date of the modification.
- 
+    
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material  also reproduce the content of the existing
-  \emph{copyright notice text files}, a hint to the software name, a link to its
-  homepage, and a link to the LGPL 1.1 license -- especially as a subsection of
-  your own copyright notice.
+  your additional material also reproduce the content of the existing
+  copyright notices, a hint to the software name, a link to its homepage,
+  the respective disclaimer of warranty, and a link to the LGPL-3.0.
+  
+  \item \textbf{[voluntary:]} Retain any existing copyright notice. 
 
 
 \end{itemize}
 
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products -- based on the this software
-  -- by trade names, trademarks, service marks, or names linked to this LGPL
-  software, except as required for unpartially describing the used software and
-  reproducing the copyright notice.
-\end{itemize}
+\item[prohibits] nothing explictly with respect to this use case.
 
 \end{description}
 
@@ -440,42 +457,46 @@ package, but without embedding it into another larger software unit.
 \item[requires] the tasks in order to fulfill the license conditions:
 \begin{itemize}
  
- 
- 
- 
- 
+   \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
+  notices that refer to the LGPL-2.1 or LGPL-3.0 and to the absence of any
+  warranty -- are retained in your package in the form you have received them.
+
+  \item \textbf{[mandatory:]} Ensure that the distributed software package
+  contains a conspicuously and appropriately designed, esasily to find copyright
+  notice and a disclaimer of warranty. If these elements are missed, add a new
+  file containing the main copyright note and the disclaimer of warranty in the
+  form which is textually defined by the license LGPL-2.1 itself resp. by the
+  LGPL-3.0 itself. (Yes, repeat the disclaimer although it is also part of the
+  license itself and although you are required to hand the license itself over
+  to the receiver.)
   
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
-  copyright, patent or trademarks notices and all notices that refer to the
-  license and to the disclaimer of warranties -- are retained in your package in
-  the form you have received them.
-  
-  \item \textbf{[mandatory:]} Give the recipient a copy of the LGPL 1.1
-  license. If it is not already present in the software package, add
+  \item \textbf{[mandatory:]} Give the recipient a copy of the LGPL-2.1 resp.
+  LGPL-3.0 license. If it is not already part of the software package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC, p. \pageref{DistributingFilesHint}}.
-
-  \item \textbf{[mandatory:]} Create a \emph{modification text file}, if such a
-  notice file still does not exist. \emph{Expand} the \emph{modification text
-  file} by a description of your modifications.
   
   \item \textbf{[mandatory:]} Mark all modifications of source code of the
   library (snimoli) thoroughly -- namely within the source code and including
   the date of the modification.
-   
+    
+  \item \textbf{[voluntary:]} Create a \emph{modification text file}, if such a
+  notice file still does not exist. \emph{Expand} the \emph{modification text
+  file} by a description of your modifications.
+  
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material  also reproduce the content of the existing
-  \emph{copyright notice text files}, a hint to the software name, a link to its
-  homepage, and a link to the LGPL 1.1 license.
+  your additional material also reproduce the content of the existing
+  copyright notices, a hint to the software name, a link to its homepage,
+  the respective disclaimer of warranty, and a link to the LGPL-2.1 resp.
+  LGPL-3.0.
+  
+  \item \textbf{[voluntary:]} Retain any existing copyright notice. 
 
 \end{itemize}
 
 \item[prohibits] \ldots
 \begin{itemize}
-  \item to promote any of your services or products -- based on the this software
-  -- by trade names, trademarks, service marks, or names linked to this LGPL
-  software, except as required for unpartially describing the used software and
-  reproducing the copyright notice.
+  \item to modify the library in a way that it is no longer a library
+  (LGPL-2.1).
 \end{itemize}
 
 \end{description}
@@ -492,25 +513,23 @@ without embedding it into another larger software unit.
 \item[requires] the tasks in order to fulfill the license conditions:
 \begin{itemize}
 
+  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
+  notices that refer to the LGPL-2.1 or LGPL-3.0 and to the absence of any
+  warranty -- are retained in your package in the form you have received them.
 
-
-
-
-
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
-  copyright, patent or trademarks notices and all notices that refer to the
-  license and to the disclaimer of warranties -- are retained in your package in
-  the form you have received them. If you compile the binary from the sources,
-  ensure that all the licensing elements are also incorporated into the package.
+  \item \textbf{[mandatory:]} Ensure that the distributed software package
+  contains a conspicuously and appropriately designed, esasily to find copyright
+  notice and a disclaimer of warranty. If these elements are missed, add a new
+  file containing the main copyright note and the disclaimer of warranty in the
+  form which is textually defined by the license LGPL-2.1 itself resp. by the
+  LGPL-3.0 itself. (Yes, repeat the disclaimer although it is also part of the
+  license itself and although you are required to hand the license itself over
+  to the receiver.)
   
- \item \textbf{[mandatory:]} Give the recipient a copy of the LGPL 1.1
-  license. If it is not already present in the binary package, add
+  \item \textbf{[mandatory:]} Give the recipient a copy of the LGPL-2.1 resp.
+  LGPL-3.0 license. If it is not already part of the software package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC, p. \pageref{DistributingFilesHint}}.
-
-  \item \textbf{[mandatory:]} Create a \emph{modification text file}, if such a
-  notice file still does not exist. \emph{Expand} the \emph{modification text
-  file} by a description of your modifications.
 
   \item \textbf{[mandatory:]} Make the source code of the distributed software
   accessible via a repository: Push the source code package into a repository,
@@ -518,30 +537,37 @@ without embedding it into another larger software unit.
   description into the distribution package which explains how the code can be
   received from where. Ensure, that this repository is online for as long as you
   continue to distribute the software.
-
+  
+  \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
+  into your distribution and/or your additional material.
+  
   \item \textbf{[mandatory:]} Execute the to-do list of use case LGPL-6\footnote{
   Making the code accessible via a repository means distributing the software in
   the form of source code. Hence, you must also fulfill all tasks of the
   corresponding use case.}.
-    
-  \item \textbf{[voluntary:]} Mark all modifications of source code of the
+
+  \item \textbf{[mandatory:]} Mark all modifications of source code of the
   library (snimoli) thoroughly -- namely within the source code and including
   the date of the modification.
-  
+
+  \item \textbf{[voluntary:]} Create a \emph{modification text file}, if such a
+  notice file still does not exist. \emph{Expand} the \emph{modification text
+  file} by a description of your modifications.
+
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material  also reproduce the content of the existing
-  \emph{copyright notice text files}, a hint to the software name, a link to its
-  homepage, and a link to the LGPL 1.1 license -- especially as a subsection of
-  your own copyright notice.
+  your additional material also reproduce the content of the existing
+  copyright notices, a hint to the software name, a link to its homepage,
+  the respective disclaimer of warranty, and a link to the LGPL-2.1 resp.
+  LGPL-3.0.
+  
+  \item \textbf{[voluntary:]} Retain any existing copyright notice. 
   
 \end{itemize}
 
 \item[prohibits] \ldots
 \begin{itemize}
-  \item to promote any of your services or products -- based on the this software
-  -- by trade names, trademarks, service marks, or names linked to this LGPL
-  software, except as required for unpartially describing the used software and
-  reproducing the copyright notice.
+  \item to modify the library in a way that it is no longer a library
+  (LGPL-2.1).
 \end{itemize}
 
 \end{description}
@@ -560,45 +586,56 @@ snippet, module, library, or plugin as an embedded component.
 \begin{itemize}
 
 
+  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
+  notices that refer to the LGPL-2.1 or LGPL-3.0 and to the absence of any
+  warranty -- are retained in your package in the form you have received them.
 
-
-
-
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
-  copyright, patent or trademarks notices and all notices that refer to the
-  license and to the disclaimer of warranties -- are retained in your package in
-  the form you have received them.
-
-  \item \textbf{[mandatory:]} Give the recipient a copy of the LGPL 1.1
-  license. If it is not already present in the software package, add
+  \item \textbf{[mandatory:]} Ensure that the distributed software package
+  contains a conspicuously and appropriately designed, esasily to find copyright
+  notice and a disclaimer of warranty. If these elements are missed, add a new
+  file containing the main copyright note and the disclaimer of warranty in the
+  form which is textually defined by the license LGPL-2.1 itself resp. by the
+  LGPL-3.0 itself. (Yes, repeat the disclaimer although it is also part of the
+  license itself and although you are required to hand the license itself over
+  to the receiver.)
+  
+  \item \textbf{[mandatory:]} Give the recipient a copy of the LGPL-2.1 resp.
+  LGPL-3.0 license. If it is not already part of the software package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC, p. \pageref{DistributingFilesHint}}.
-
-  \item \textbf{[mandatory:]} Create a \emph{modification text file}, if such a
-  notice file still does not exist. \emph{Expand} the \emph{modification text
-  file} by a description of your modifications.
-  
-  \item \textbf{[mandatory:]} License your overarching program also under the
-  LGPL 1.1.
-  
+    
   \item \textbf{[mandatory:]} Mark all modifications of source code of the
   embedded library (snimoli) thoroughly --
   namely within the source code and including the date of the modification.
+
+  \item \textbf{[mandatory:]}  Maintain the structural independence of the
+  library.
+   
+  \item \textbf{[mandatory:]} Let the copyright dialog of the on-top development
+  clearly say, that it uses the LGPL licensed library. Let it reproduce the
+  content of the existing copyright notices, a hint to the software name, a link
+  to its homepage, the respective disclaimer of warranty, and a link to the
+  LGPL-2.1 resp. LGPL-3.0.
+     
+  \item \textbf{[voluntary:]} Create a \emph{modification text file}, if such a
+  notice file still does not exist. \emph{Expand} the \emph{modification text
+  file} by a description of your modifications.
+    
   
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material  also reproduce the content of the existing
-  \emph{copyright notice text files}, a hint to the name of the used LGPL
-  licensed component, a link to its homepage, and a link to the LGPL 1.1 license
-  -- especially as subsection of your own copyright notice.
- 
+  \item \textbf{[voluntary:]} Let the copyright dialog of the on-top development
+  clearly say, that it uses the LGPL licensed library. Let it reproduce the
+  content of the existing copyright notices, a hint to the software name, a link
+  to its homepage, the respective disclaimer of warranty, and a link to the
+  LGPL-2.1 resp. LGPL-3.0.   
+  
+  \item \textbf{[voluntary:]} Retain any existing copyright notice. 
+  
 \end{itemize}
 
 \item[prohibits] \ldots
 \begin{itemize}
-  \item to promote any of your services or products -- based on the this software
-  -- by trade names, trademarks, service marks, or names linked to this LGPL
-  software, except as required for unpartially describing the used software and
-  reproducing the copyright notice.
+  \item to modify the library in a way that it is no longer a library
+  (LGPL-2.1).
 \end{itemize}
 
 \end{description}
@@ -617,66 +654,79 @@ plugin as an embedded component.
 \begin{itemize}
   
 
+  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
+  notices that refer to the LGPL-2.1 or LGPL-3.0 and to the absence of any
+  warranty -- are retained in your package in the form you have received them.
 
-
-
-
+  \item \textbf{[mandatory:]} Ensure that the distributed software package
+  contains a conspicuously and appropriately designed, esasily to find copyright
+  notice and a disclaimer of warranty. If these elements are missed, add a new
+  file containing the main copyright note and the disclaimer of warranty in the
+  form which is textually defined by the license LGPL-2.1 itself resp. by the
+  LGPL-3.0 itself. (Yes, repeat the disclaimer although it is also part of the
+  license itself and although you are required to hand the license itself over
+  to the receiver.)
   
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
-  copyright, patent or trademarks notices and all notices that refer to the
-  license and to the disclaimer of warranties -- are retained in your package in
-  the form you have received them. If you compile the binary from the sources,
-  ensure that all the licensing elements are also incorporated into the package.
-  
-  \item \textbf{[mandatory:]} Give the recipient a copy of the LGPL 1.1
-  license. If it is not already present in the binary package, add
+  \item \textbf{[mandatory:]} Give the recipient a copy of the LGPL-2.1 resp.
+  LGPL-3.0 license. If it is not already part of the software package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC, p. \pageref{DistributingFilesHint}}.
- 
-  \item \textbf{[mandatory:]} Create a \emph{modification text file}, if such a
-  notice file still does not exist. \emph{Expand} the \emph{modification text
-  file} by a description of your modifications.
-  
+
   \item \textbf{[mandatory:]} Make the source code of the embedded library and
-  the source code of your overarching program accessible via a
-  repository\footnote{Formally, the LGPL-1.1 is only a license with weak
-  copyleft. But this is only a result of the allowance to relicense the software
-  ($\rightarrow$ OSLiC, p.\ \pageref{sec:ProtectingPowerOfEupl}). So, as long as
-  you do not relicense the embedded library with respect to the list of
-  \enquote{compatible licenses accodring to article 5 LGPL} (\cite[cf.][\nopage
-  wp §5 and Appendix]{Lgpl21OsiLicense1999a}), you also have to publish the code of
-  your overarching work.}: Push the source code package into a repository and
-  make it downloadable via the internet. Integrate an easily to find
-  description into the distribution package which explains how the code can
-  be received from where. Ensure, that this repository is online for as long as
-  you continue to distribute the software.
-  
+  the source code of your overarching program accessible via a repository: Push
+  the source code package into a repository and make it downloadable via the
+  internet. Integrate an easily to find description into the distribution
+  package which explains how the code can be received from where. Ensure, that
+  this repository is online for as long as you continue to distribute the
+  software.
+
+  \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
+  into your distribution and/or your additional material.
+    
   \item \textbf{[mandatory:]} Execute the to-do list of use case LGPL-8\footnote{
   Making the code accessible via a repository means distributing the software in
   the form of source code. Hence, you must also fulfill all tasks of the
   corresponding use case.}.
-  
-  \item \textbf{[mandatory:]} License your overarching program also under the
-  LGPL 1.1.
-  
-  \item \textbf{[voluntary:]} Mark all modifications of source code of the
+
+  \item \textbf{[mandatory:]} Mark all modifications of source code of the
   embedded library (snimoli) thoroughly -- namely within the source code and
   including the date of the modification.
 
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material  also reproduce the content of the existing
-  \emph{copyright notice text files}, a hint to the name of the used LGPL
-  licensed component, a link to its homepage, and a link to the LGPL 1.1 license
-  -- especially as subsection of your own copyright notice.
+  \item \textbf{[mandatory:]}  Maintain the structural independence of the
+  library.
+    
+  \item \textbf{[mandatory:]} Let the copyright dialog of the on-top development
+  clearly say, that it uses the LGPL licensed library. Let it reproduce the
+  content of the existing copyright notices, a hint to the software name, a link
+  to its homepage, the respective disclaimer of warranty, and a link to the
+  LGPL-2.1 resp. LGPL-3.0.
+  
+  \item \textbf{[mandatory:]} Either distribute the on-top development and the
+  library in the form of dynamically linkable parts or distribute the statically
+  linked application together with a written offer, valid for at least three
+  years, to give the user all object-files of the on-top development and the
+  library, so that he can relink the application on its own behalf.
+     
+  \item \textbf{[voluntary:]} Create a \emph{modification text file}, if such a
+  notice file still does not exist. \emph{Expand} the \emph{modification text
+  file} by a description of your modifications.
+    
+  
+  \item \textbf{[voluntary:]} Let the copyright dialog of the on-top development
+  clearly say, that it uses the LGPL licensed library. Let it reproduce the
+  content of the existing copyright notices, a hint to the software name, a link
+  to its homepage, the respective disclaimer of warranty, and a link to the
+  LGPL-2.1 resp. LGPL-3.0.    
+  
+
+  \item \textbf{[voluntary:]} Retain any existing copyright notice. 
   
 \end{itemize}
 
 \item[prohibits] \ldots
 \begin{itemize}
-  \item to promote any of your services or products -- based on the this software
-  -- by trade names, trademarks, service marks, or names linked to this LGPL
-  software, except as required for unpartially describing the used software and
-  reproducing the copyright notice.
+  \item to modify the library in a way that it is no longer a library
+  (LGPL-2.1).
 \end{itemize}
 
 \end{description}
@@ -686,78 +736,145 @@ plugin as an embedded component.
 
 \begin{itemize}
   
-  \item The LGPL generally \enquote{[\ldots] does not grant permission to use
-  the trade names, trademarks, service marks, or names of the Licensor , except
-  as required for reasonable and customary use in describing the origin of the
-  Work and reproducing the content of the copyright
-  notice}\footcite[cf.][\nopage wp\ §5]{Lgpl21OsiLicense1999a}. Therefore, the OSLiC
-  genreally interdicts (LGPL-1 - LGPL-9) to promote any service or product --
-  based on this software -- by such elements.
+  \item The LGPL-2.1 allows to \enquote{[\ldots] to copy \emph{and} (to)
+  distribute verbatim copies of the Library's complete source code as you
+  receive it [...] provided that you [a] conspicuously and appropriately publish
+  on each copy an appropriate copyright notice and disclaimer of warranty; [b]
+  keep intact all the notices that refer to this License and to the absence of
+  any warranty; and [c] distribute a copy of this License along with the
+  Library}\footcite[cf.][\nopage wp.\ §1, emphasizes by
+  KR]{Lgpl21OsiLicense1999a}. Additionally, the LGPL-2.1 allows the the
+  distribution of the modfied source code \enquote{under the terms of Section
+  1}\footcite[cf.][\nopage wp.\ §2]{Lgpl21OsiLicense1999a} and the distribution
+  of binaries \enquote{under the terms of Sections 1 and
+  2}\footcite[cf.][\nopage wp.\ §4]{Lgpl21OsiLicense1999a}. But the LGPL does
+  not require any tasks if you are using the work only for yourself. Thus, the
+  quoted conditions of \enquote{Section 1} are mandatory for all use cases
+  concerning the distribution of an LGPL licensed work (LGPL-2 - LGPL-9).
 
-  \item The LGPL generally requires that \enquote{[\ldots] the Licensee shall
-  keep intact all copyright, patent or trademarks notices and all notices that
-  refer to the Licence and to the disclaimer of
-  warranties}\footcite[cf.][\nopage wp\ §5]{Lgpl21OsiLicense1999a}. In a very strict
-  reading, the LGPL does not limit this requirement to the distribution of the
-  software. But practically, it will be impossible to control the compliant use
-  of the software in those cases (\emph{4yourself}) without 'switching' into the
-  use case 'distribution'. Therefore the OSLiC only inserts this requirement as
-  a mandatory clause for the \emph{4others} use cases (LGPL-2 - LGPL-9).
+  \item Although the LGPL-2.1 does not explicitly require to retain the
+  copyright notices in the form you have received them, it is nevertheless a
+  very good idea not to modify these elements (LGPL-2 - LGPL-9).
   
-  \item The LGPL also requires to \enquote{[\ldots] include [\ldots] a copy of
-  the (LGPL) Licence with every (distributed) copy of the Work
-  [\ldots]}\footcite[cf.][\nopage wp\ §5]{Lgpl21OsiLicense1999a}. Therefore, all
-  \emph{4others} use cases contain the respective mandatory condition (LGPL-2 -
-  LGPL-9).
+  \item The LGPL-2.1 allows to \enquote{[\ldots] copy and (to) distribute the
+  Library (or a portion or derivative of it [\ldots]) in object code or
+  executable form u[\ldots] provided that you accompany it with the complete
+  corresponding machine-readable source code [\ldots] on a medium customarily
+  used for software interchange}. And the license subspecifies this condition in
+  the meaning that if one makes the object code accessible without distributing
+  it directly, then the same 'download' method for the source code fulfills this
+  condition\footcite[cf.][\nopage wp.\ §4]{Lgpl21OsiLicense1999a}. So, no doubt:
+  in a very strict reading, the LGPL requires to distribute the source code and
+  the object code together and by the same method: either both on (for example)
+  DVD or both for being downloaded; but not the one on DVD and the other by a
+  download repository. But the first specification also says, that the
+  \enquote{complete corresponding machine readable source code} has to be
+  distributed \enquote{on a medium customarily used for software
+  interchange}\footcite[cf.][\nopage wp.\ §4]{Lgpl21OsiLicense1999a}. The OSLiC
+  understands the possibility to download files from the internet as a
+  distribution \emph{on a medium [being today] customarily used for software
+  interchange}. Therefore, the OSLiC requires to make the source code of library
+  accessible via an internet repository.
   
-  \item Additionally, the LGPL requires, that the \enquote{licensee} who
-  distribiutes a modified work \enquote{[\ldots] must cause any Derivative Work
-  to carry prominent notices stating that the Work has been modified and the
-  date of modification}\footcite[cf.][\nopage wp\ §5]{Lgpl21OsiLicense1999a}. Thus,
-  the OSLiC integrates the mandatory requirement to generate (update) a
-  respective notice file into all 'modification use cases and recommends to mark
-  all modifications in the source code (LGPL-4 - LGPL-9)
+  \item The LGPL-2.1 allows to \enquote{[\ldots] modify your copy or copies of
+  the Library or any portion of it [\ldots] and (to) copy and distribute such
+  modifications [\ldots]} only under some restrictions and
+  condtions\footcite[cf.][\nopage wp.\ §2]{Lgpl21OsiLicense1999a}:
+  \begin{itemize}
+    \item First, modified files must be marked as modifications and marked by
+    the date of the modification\footcite[cf.][\nopage wp.\
+    §2]{Lgpl21OsiLicense1999a}. This condition must be respected by all open
+    source use cases concerning the distribution of the modified work [LGPL-5 -
+    LGPL -9], because even if one primarily intends to distribute binaries, one
+    has also to deliver the source code. The OSLiC 'replaces' this requirement
+    by the mandatory condition to mark each modified file and by the voluntary
+    condition to update / generate a general changing file.
+    
+    \item Second, it requires not to let the modified version depend on
+    external data structures without \enquote{[\ldots] (making) a good faith
+    effort to ensure that, in the event an application does not supply such
+    function or table, the facility still operates, and performs whatever part
+    of its purpose remains meaningful}\footcite[cf.][\nopage wp.\
+    §2]{Lgpl21OsiLicense1999a}. The OSLiC rewrites this condition as the
+    obligation to maintain the structural independence of the library in case
+    of using the modified library as embedded component. [LGPL-8 - LGPL-9]
+    
+    \item Third, the LGPL definitely requires, that \enquote{the modified work
+    must itself be a software library}\footcite[cf.][\nopage wp.\
+    §2]{Lgpl21OsiLicense1999a}. This conditions can directly be incorprated as
+    an interdiction into all use cases which refer to the modification of a
+    library [LGPL-6 - LGPL-9]. But is difficult to respect the condition if one
+    wants to modify a program which one has received under the terms of the
+    LGPL-2.1. Logically, you can write an application und license it under the
+    LGPL. But - as a consequence - it is more difficult to modify your work
+    because the result must be a library. That's the reason, why the OSLiC
+    mentions the use case, but forbids its execution\footnote{as long as nobody
+    has shown us an exit out of this trap.}.
+  \end{itemize}
   
-  \item Furthermore, the LGPL requires that any distributor of the software
-  \enquote{[\ldots] provide a machine-readable copy of the Source Code [\ldots]}
-  by \enquote{[\ldots] (indicating) a repository where this Source will be
-  easily and freely available for as long as the Licensee continues to
-  distribute [\ldots] the Work}\footnote{\cite[cf.][\nopage wp\
-  §5]{Lgpl21OsiLicense1999a}. To be precise, the LGPL also allows to directly
-  distribute the source code together with the binary packages
-  (\cite[cf.][\nopage wp\ §3]{Lgpl21OsiLicense1999a}). With respect to the OSLiC
-  principle to offer only one reliable way, the OSLiC simplifies this option:
-  It 'only' asks for the repository solution.}. Therefore the OSLiC inserts a
-  respective requirement into the task list of all cases concerning a binary
-  distribution  (LGPL-3, LGPL-5, LGPL-7, LGPL-9)
+  \item Additionally, the LGPL allows the licensee to distribute an overarching
+  on-top development -- in the wording of the LGPL: a \enquote{work that uses
+  the libary} \footcite[cf.][\nopage wp.\ §5, §6]{Lgpl21OsiLicense1999a} --
+  \enquote{as an exception to the Sections above} in \enquote{combination} with
+  the library \enquote{under terms of your choice}\footcite[cf.][\nopage wp.\
+  §6]{Lgpl21OsiLicense1999a}, provided that the licensee fulfills additional
+  conditions:  First, it must clearly be stated that the on-top development
+  depends on the (modified) library. Second, the LGPL must be added into the
+  distributed package. Third, in its own copyright dialog, the on-top
+  development must mention the library, its copyright holder, and that it is
+  licensed under the LGPL\footcite[cf.][\nopage wp.\ §6]{Lgpl21OsiLicense1999a}.
+  This can directly be inserted as conditions into the respective use cases
+  (LGPL-8, LGPL-9). 
   
-  \item Finally, the LGPL contains a \enquote{copyleft clause} stating that if a
-  \enquote{[\ldots] Licensee distributes [\ldots] copies of the Original Works
-  or Derivative Works based upon the Original Work, this Distribution [...] will
-  be done under the terms of this (LGPL) Licence [\ldots]}. In all the use cases
-  which do not concern the use of an embedded component (LGPL-2 - LGPL-7) this
-  copyleft clause is already fulfilled by either distributing the modified
-  sources themselves of by making them accessible via a repository. In those
-  cases where the licensee distributes an overarching program which uses an LGPL
-  licensed component (LGPL-8 - LGPL-9) normally also the code of the overarching
-  work must be distributed. Thus, with respect to the use case (LGPL-8) this is
-  already fulfilled by definition. So, the OSLiC only mentions this default view
-  in the case LGPL-9 and therefore implicitly evokes a strong copyleft effect of
-  the LGPL\footnote{Formally, the LGPL-1.1 is a license with weak copyleft. But
-  this is only a result of the allowance to relicense the software
-  ($\rightarrow$ OSLiC, p.\ \pageref{sec:ProtectingPowerOfEupl}). So, as long as
-  you do not relicense the embedded library with respect to the list of
-  \enquote{compatible licenses according to article 5 LGPL}, you also have to
-  publish the code of your overarching work. Therefore, you can only avoid this
-  consequence by relicensing the embedded component by one of the compatible
-  licenses with a weak copyleft listed in the LGPL appendix (\cite[cf.][\nopage
-  wp §5 and Appendix]{Lgpl21OsiLicense1999a})}.
+  \item The most difficult requirements of the LGPL-2.1 concern the distribution
+  in the form of binaries. In a very strict reading, the LGPL does not require
+  to link the on-top development and the libary only dynamically. At first, the
+  LGPL mentions, that the \enquote{[..] work (that uses the Library), in
+  isolation, is not a derivative work of the Library [\ldots]}. But if it is
+  linked to the library the resulting executable program -- of course -- becomes
+  \enquote{a derivative of the Library} and that it is therefore
+  \enquote{[\ldots] covered by this License (LGPL-2.1)}. But the LGPL-2.1
+  directly continues this statement with the hint, that \enquote{Section 6
+  states terms for distribution of such executables}\footcite[cf.][\nopage wp.\
+  §5]{Lgpl21OsiLicense1999a}. Finally, this section 6 directly starts with
+  statement: \enquote{As an exception to the Sections above, you may also
+  combine or link a "work that uses the Library" with the Library to produce a
+  work containing portions of the Library, and distribute that work under terms
+  of your choice}\footcite[cf.][\nopage wp.\ §6]{Lgpl21OsiLicense1999a}.
+  
+  This is important to know, because until this section 6 one can not directly
+  read or indirectly infer that the LGPL-2.1 distinguished the act of
+  dynamically linking a program and a lirbrary from that of statically linking
+  these parts. The LGPL only wants to ensure that the binaries of the library
+  itself can be replaced by a newer version. And that is required by section
+  6\footcite[cf.][\nopage wp.\ §6]{Lgpl21OsiLicense1999a}.
+  From a technically viewpoint, this can only be guaranteed, if the binaries of
+  the on-top development and the library together are \enquote{used in a
+  suitable shared library mechanism}\footcite[cf.][\nopage wp.\
+  §6]{Lgpl21OsiLicense1999a} or if one also gets all compiled, but not linked
+  object-files of the on-top development and the library, either directly, or
+  via using a \enquote{a written offer, valid for at least three years, to give
+  the same user the (respective) materials}\footcite[cf.][\nopage wp.\
+  §6]{Lgpl21OsiLicense1999a}. In the first case, the user can replace the
+  received version of the library and can let the application be relinked
+  automatically. In the second case, he has to do it manually. It is important
+  to know that these ways exist if one wants or must distribute statically
+  linked works. The LGPL does not forbid to distribute statically linked
+  applications. But it requires to enable the receiver to relink the work.
+  
+  The OSLiC condensed these conditions into the requirement, either to
+  distribute dynamically linkable parts, or to distribute statically linked
+  applications \enquote{(accompanied) [\ldots] with a written offer, valid for
+  at least three years, to give the same user the [complete]
+  materials}\footcite[cf.][\nopage wp.\ §6]{Lgpl21OsiLicense1999a}, so that he
+  can relink the application on its own behalf. It is clear, that this condition
+  is onyl valid for the use case LGPL-9.
   
 
 \end{itemize}
 
 
-\subsection{\ldots concerning the LGPL-3.0}
+\subsection{\ldots concerning the LGPL-3.0 [tbd]}
 
 
 
