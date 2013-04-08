@@ -216,14 +216,17 @@ OSLiC, pp.\ \pageref{OSUC-02-DEF} - \pageref{OSUC-07-DEF}}
   GPL-3.0 license. If it is not already part of the software package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC, p. \pageref{DistributingFilesHint}}.
-  
+
+  \item \textbf{[mandatory:]} Retain any existing copyright notice and all
+  licensing elements.
+    
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material also reproduce the content of the existing
   copyright notices, a hint to the software name, a link to its homepage,
   the respective disclaimer of warranty, and a link to the GPL-2.0 resp.
   GPL-3.0.
   
-  \item \textbf{[voluntary:]} Retain any existing copyright notice. 
+
   
 \end{itemize}
 
@@ -265,15 +268,13 @@ library, or a plugin as an independent or an embedded unit}
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC, p. \pageref{DistributingFilesHint}}.
   
-  
-  
-  
   \item \textbf{[mandatory:]} Make the source code of the distributed software
-  accessible via a repository (even if you do not modified it): Push the source
-  code package into a repository, make it downloadable via the internet, and
-  integrate an easily to find description into the distribution package which
-  explains how the code can be received from where. Ensure, that this
-  repository is online for as long as you continue to distribute the software.
+  accessible via a repository under your own control (even if you do not
+  modified it): Push the source code package into a repository, make it
+  downloadable via the internet, and integrate an easily to find description
+  into the distribution package which explains how the code can be received from
+  where. Ensure, that this repository is online for as long as you continue to
+  distribute the software.
   
   \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
   into your distribution and/or your additional material.
@@ -282,14 +283,15 @@ library, or a plugin as an independent or an embedded unit}
   Making the code accessible via a repository means distributing the software in
   the form of source code. Hence, you must also fulfill all tasks of the
   corresponding use case.}.
-   
+
+  \item \textbf{[mandatory:]} Retain any existing copyright notice and all
+  licensing elements. 
+     
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material also reproduce the content of the existing
   copyright notices, a hint to the software name, a link to its homepage,
   the respective disclaimer of warranty, and a link to the GPL-2.0 resp.
   GPL-3.0.
-  
-  \item \textbf{[voluntary:]} Retain any existing copyright notice. 
 
 \end{itemize}
 
@@ -321,12 +323,16 @@ of a set of source code files or an integrated source code package.
   the disclaimer although it is also part of the license itself and although you
   are required to hand the license itself over to the receiver.)
   
-  \item \textbf{[mandatory:]} Give the recipient a copy of the GPL-3.0 license.
+  \item \textbf{[mandatory:]} Give the recipient a copy of the GPL-3.0 license.  \item \textbf{[mandatory:]} Retain any existing copyright notice.
   If it is not already part of the software package, add it\footnote{For
   implementing the handover of files correctly $\rightarrow$ OSLiC, p.
   \pageref{DistributingFilesHint}}.
   
-  
+  \item \textbf{[mandatory:]} Let the copyright dialog of the program clearly
+  say it is a GPL licensed program. Let it reproduce the content of the existing
+  copyright notices, a hint to the software name, a link to its homepage, the
+  respective disclaimer of warranty, and a link to the GPL-2.0 resp. GPL-3.0. If
+  these conditions are not already fulfilled, add the missed elements.
 
   \item \textbf{[mandatory:]} Mark all modifications of source code of the
   program (proapse) thoroughly -- namely within the source code and including
@@ -377,8 +383,12 @@ the form of a set of binary files or an integrated binary package.
   implementing the handover of files correctly $\rightarrow$ OSLiC, p.
   \pageref{DistributingFilesHint}}.
 
-
-
+  \item \textbf{[mandatory:]} Let the copyright dialog of the program clearly
+  say it is a GPL licensed program. Let it reproduce the content of the existing
+  copyright notices, a hint to the software name, a link to its homepage, the
+  respective disclaimer of warranty, and a link to the GPL-2.0 resp. GPL-3.0. If
+  these conditions are not already fulfilled, add the missed elements.
+  
   \item \textbf{[mandatory:]} Mark all modifications of source code of the
   program (proapse) thoroughly namely within the source code and including
   the date of the modification.
@@ -388,11 +398,11 @@ the form of a set of binary files or an integrated binary package.
   file} by a description of your modifications on a more functional level.
   
   \item \textbf{[mandatory:]} Make the source code of the distributed software
-  accessible via a repository: Push the source code package into a repository,
-  make it downloadable via the internet, and integrate an easily to find
-  description into the distribution package which explains how the code can be
-  received from where. Ensure, that this repository is online for as long as you
-  continue to distribute the software.
+  accessible via a via a repository under your own control: Push the source code
+  package into a repository, make it downloadable via the internet, and
+  integrate an easily to find description into the distribution package which
+  explains how the code can be received from where. Ensure, that this repository
+  is online for as long as you continue to distribute the software.
   
   \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
   into your distribution and/or your additional material.
@@ -428,7 +438,7 @@ package, but without embedding it into another larger software unit.
 \item[requires] the tasks in order to fulfill the license conditions:
 \begin{itemize}
  
-   \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
+  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
   notices that refer to the GPL-2.0 or GPL-3.0 and to the absence of any
   warranty -- are retained in your package in the form you have received them.
 
@@ -445,8 +455,6 @@ package, but without embedding it into another larger software unit.
   GPL-3.0 license. If it is not already part of the software package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC, p. \pageref{DistributingFilesHint}}.
-  
-  
   
   \item \textbf{[mandatory:]} Mark all modifications of source code of the
   library (snimoli) thoroughly -- namely within the source code and including
@@ -466,11 +474,7 @@ package, but without embedding it into another larger software unit.
 
 \end{itemize}
 
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to modify the library in a way that it is no longer a library
-  (GPL-2.0).
-\end{itemize}
+\item[prohibits] nothing with respect to this use case
 
 \end{description}
 
@@ -505,11 +509,11 @@ without embedding it into another larger software unit.
   OSLiC, p. \pageref{DistributingFilesHint}}.
 
   \item \textbf{[mandatory:]} Make the source code of the distributed software
-  accessible via a repository: Push the source code package into a repository,
-  make it downloadable via the internet, and integrate an easily to find
-  description into the distribution package which explains how the code can be
-  received from where. Ensure, that this repository is online for as long as you
-  continue to distribute the software.
+  accessible via a repository under your own control: Push the source code
+  package into a repository, make it downloadable via the internet, and
+  integrate an easily to find description into the distribution package which
+  explains how the code can be received from where. Ensure, that this repository
+  is online for as long as you continue to distribute the software.
   
   \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
   into your distribution and/or your additional material.
@@ -522,7 +526,7 @@ without embedding it into another larger software unit.
   \item \textbf{[mandatory:]} Mark all modifications of source code of the
   library (snimoli) thoroughly -- namely within the source code and including
   the date of the modification.
-
+  
   \item \textbf{[voluntary:]} Create a \emph{modification text file}, if such a
   notice file still does not exist. \emph{Expand} the \emph{modification text
   file} by a description of your modifications.
@@ -576,6 +580,12 @@ snippet, module, library, or plugin as an embedded component.
   GPL-3.0 license. If it is not already part of the software package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC, p. \pageref{DistributingFilesHint}}.
+  
+  \item \textbf{[mandatory:]} Let the copyright dialog of the on-top development
+  clearly say, that it uses the GPL licensed library. Let it reproduce the
+  content of the existing copyright notices, a hint to the software name, a link
+  to its homepage, the respective disclaimer of warranty, and a link to the
+  GPL-2.0 resp. GPL-3.0.  
     
   \item \textbf{[mandatory:]} Mark all modifications of source code of the
   embedded library (snimoli) thoroughly --
@@ -584,32 +594,23 @@ snippet, module, library, or plugin as an embedded component.
   \item \textbf{[mandatory:]}  Maintain the structural independence of the
   library.
    
-  \item \textbf{[mandatory:]} Let the copyright dialog of the on-top development
-  clearly say, that it uses the GPL licensed library. Let it reproduce the
-  content of the existing copyright notices, a hint to the software name, a link
-  to its homepage, the respective disclaimer of warranty, and a link to the
-  GPL-2.0 resp. GPL-3.0.
+
      
   \item \textbf{[voluntary:]} Create a \emph{modification text file}, if such a
   notice file still does not exist. \emph{Expand} the \emph{modification text
   file} by a description of your modifications.
-    
   
-  \item \textbf{[voluntary:]} Let the copyright dialog of the on-top development
-  clearly say, that it uses the GPL licensed library. Let it reproduce the
-  content of the existing copyright notices, a hint to the software name, a link
-  to its homepage, the respective disclaimer of warranty, and a link to the
-  GPL-2.0 resp. GPL-3.0.   
-  
+  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
+  your additional material also reproduce the content of the existing
+  copyright notices, a hint to the software name, a link to its homepage,
+  the respective disclaimer of warranty, and a link to the GPL-2.0 resp.
+  GPL-3.0.
+ 
   \item \textbf{[voluntary:]} Retain any existing copyright notice. 
   
 \end{itemize}
 
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to modify the library in a way that it is no longer a library
-  (GPL-2.0).
-\end{itemize}
+\item[prohibits] nothing with respect to this use case
 
 \end{description}
 
@@ -646,12 +647,12 @@ plugin as an embedded component.
   OSLiC, p. \pageref{DistributingFilesHint}}.
 
   \item \textbf{[mandatory:]} Make the source code of the embedded library and
-  the source code of your overarching program accessible via a repository: Push
-  the source code package into a repository and make it downloadable via the
-  internet. Integrate an easily to find description into the distribution
-  package which explains how the code can be received from where. Ensure, that
-  this repository is online for as long as you continue to distribute the
-  software.
+  the source code of your overarching program accessible via a repository under
+  your own control: Push the source code package into a repository and make it
+  downloadable via the internet. Integrate an easily to find description into
+  the distribution package which explains how the code can be received from
+  where. Ensure, that this repository is online for as long as you continue to
+  distribute the software.
 
   \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
   into your distribution and/or your additional material.
@@ -661,46 +662,45 @@ plugin as an embedded component.
   the form of source code. Hence, you must also fulfill all tasks of the
   corresponding use case.}.
 
-  \item \textbf{[mandatory:]} Mark all modifications of source code of the
-  embedded library (snimoli) thoroughly -- namely within the source code and
-  including the date of the modification.
-
-  \item \textbf{[mandatory:]}  Maintain the structural independence of the
-  library.
-    
   \item \textbf{[mandatory:]} Let the copyright dialog of the on-top development
   clearly say, that it uses the GPL licensed library. Let it reproduce the
   content of the existing copyright notices, a hint to the software name, a link
   to its homepage, the respective disclaimer of warranty, and a link to the
   GPL-2.0 resp. GPL-3.0.
   
+  \item \textbf{[mandatory:]} Mark all modifications of source code of the
+  embedded library (snimoli) thoroughly -- namely within the source code and
+  including the date of the modification.
+    
   \item \textbf{[mandatory:]} Either distribute the on-top development and the
   library in the form of dynamically linkable parts or distribute the statically
   linked application together with a written offer, valid for at least three
   years, to give the user all object-files of the on-top development and the
   library, so that he can relink the application on its own behalf.
-     
+
+  \item \textbf{[mandatory:]} Let the copyright dialog of the on-top development
+  clearly say, that it uses the GPL licensed library. Let it reproduce the
+  content of the existing copyright notices, a hint to the software name, a link
+  to its homepage, the respective disclaimer of warranty, and a link to the
+  GPL-2.0 resp. GPL-3.0.  
+       
   \item \textbf{[voluntary:]} Create a \emph{modification text file}, if such a
   notice file still does not exist. \emph{Expand} the \emph{modification text
   file} by a description of your modifications.
     
+  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
+  your additional material also reproduce the content of the existing copyright
+  notices, a hint to the software name, a link to its homepage, the respective
+  disclaimer of warranty, and a link to the GPL-2.0 resp.
+  GPL-3.0.
   
-  \item \textbf{[voluntary:]} Let the copyright dialog of the on-top development
-  clearly say, that it uses the GPL licensed library. Let it reproduce the
-  content of the existing copyright notices, a hint to the software name, a link
-  to its homepage, the respective disclaimer of warranty, and a link to the
-  GPL-2.0 resp. GPL-3.0.    
   
 
   \item \textbf{[voluntary:]} Retain any existing copyright notice. 
   
 \end{itemize}
 
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to modify the library in a way that it is no longer a library
-  (GPL-2.0).
-\end{itemize}
+\item[prohibits] nothing with respect to this use case
 
 \end{description}
 
@@ -734,32 +734,30 @@ plugin as an embedded component.
   Program (or a work based on it [\ldots]) in object code or executable form
   [\ldots] provided that you accompany it with the complete corresponding
   machine-readable source code [\ldots] on a medium customarily used for
-  software interchange}\footcite[cf.][\nopage wp.\ §4,
-  §4a]{Gpl20OsiLicense1991a}. As a substitute, the GPL-2.0 allows to
-  \enquote{accompany} the binary distribution package \enquote{with a written
-  offer, valid for at least three years, to give any third party, for a charge
-  no more than your cost of physically performing soource distribution, a
-  complete machine-readable copy of the corryponsing source code} .
-  
-  
-  And the license subspecifies this condition in
-  the meaning that if one makes the object code accessible without distributing
-  it directly, then the same 'download' method for the source code fulfills this
-  condition\footcite[cf.][\nopage wp.\ §4]{Gpl20OsiLicense1991a}. So, no doubt:
-  in a very strict reading, the GPL requires to distribute the source code and
-  the object code together and by the same method: either both on (for example)
-  DVD or both for being downloaded; but not the one on DVD and the other by a
-  download repository. But the first specification also says, that the
-  \enquote{complete corresponding machine readable source code} has to be
-  distributed \enquote{on a medium customarily used for software
-  interchange}\footcite[cf.][\nopage wp.\ §4]{Gpl20OsiLicense1991a}. The OSLiC
+  software interchange}\footcite[cf.][\nopage wp.\ §3,
+  §3a]{Gpl20OsiLicense1991a}. As a substitution for this basic condition, the
+  GPL-2.0 allows to \enquote{accompany} the binary distribution package
+  \enquote{with a written offer, valid for at least three years, to give any
+  third party, for a charge no more than your cost of physically performing
+  source distribution, a complete machine-readable copy of the corryponding
+  source code [\ldots] on a medium customarily used for software
+  interchange}\footcite[cf.][\nopage wp.\ §3b]{Gpl20OsiLicense1991a}. The OSLiC
   understands the possibility to download files from the internet as a
   distribution \emph{on a medium [being today] customarily used for software
-  interchange}. Therefore, the OSLiC requires to make the source code of library
-  accessible via an internet repository.
+  interchange}. Therefore, the OSLiC requires for all open source use cases
+  which refer to the distribution of binaries (GPL-3, GPL-5, GPL-7, GPL-9) to
+  make the corresonding source code of the library itself accessible via an
+  internet repository under your own control. The weakness that in this case
+  \enquote{third parties [which have received the binaries] are not compelled to
+  copy the source code [\ldots]} is accepted by the GPL\footcite[cf.][\nopage
+  wp.\ §3, at the end]{Gpl20OsiLicense1991a}. But the necessity to offer the
+  source via a repository under your own control may mostly not be circumvented:
+  The GPL-2.0 allows to redistribute a link to an external source code
+  repository only in case of \enquoter{noncommercial
+  distributions}\footcite[cf.][\nopage wp.\ §3c]{Gpl20OsiLicense1991a}.
   
   \item The GPL-2.0 allows to \enquote{[\ldots] modify your copy or copies of
-  the Library or any portion of it [\ldots] and (to) copy and distribute such
+  the Program or any portion of it [\ldots] and (to) copy and distribute such
   modifications [\ldots]} only under some restrictions and
   condtions\footcite[cf.][\nopage wp.\ §2]{Gpl20OsiLicense1991a}:
   \begin{itemize}
@@ -768,89 +766,40 @@ plugin as an embedded component.
     §2]{Gpl20OsiLicense1991a}. This condition must be respected by all open
     source use cases concerning the distribution of the modified work [GPL-5 -
     GPL -9], because even if one primarily intends to distribute binaries, one
-    has also to deliver the source code. The OSLiC 'replaces' this requirement
-    by the mandatory condition to mark each modified file and by the voluntary
-    condition to update / generate a general changing file.
+    has lateron also to deliver the source code. The OSLiC 'replaces' this
+    requirement by the mandatory condition to mark each modified file and by the
+    voluntary condition to update / generate a general changing file.
     
-    \item Second, it requires not to let the modified version depend on
-    external data structures without \enquote{[\ldots] (making) a good faith
-    effort to ensure that, in the event an application does not supply such
-    function or table, the facility still operates, and performs whatever part
-    of its purpose remains meaningful}\footcite[cf.][\nopage wp.\
-    §2]{Gpl20OsiLicense1991a}. The OSLiC rewrites this condition as the
-    obligation to maintain the structural independence of the library in case
-    of using the modified library as embedded component. [GPL-8 - GPL-9]
+    \item Second, the GPL requires that all copies of the modified software
+    which are using any interactive interface or display must \enquote{[\ldots]
+    print or display an announcement including an appropriate copyright notice
+    and a notice that there is no warranty (or else, saying that you provide a
+    warranty) and that users may redistribute the program under these
+    conditions, and telling the user how to view a copy of this License}. The
+    OSLiC rewrites this condition that the work shall let its copyright dialog
+    clearly reproduce the content of the existing copyright notices, a hint to
+    the software name, a link to its homepage, the respective disclaimer of
+    warranty, and a link to the GPL-2.0-file resp. the GPL-3.0-file which has to
+    be delivered together with the software. These conditions have to be
+    respected by modified programs (GPL-4 \ldots GPL-5) and by programs which
+    are using (modified) libraries as embedded components (GPL-8 \ldots GPL-9).
     
-    \item Third, the GPL definitely requires, that \enquote{the modified work
-    must itself be a software library}\footcite[cf.][\nopage wp.\
-    §2]{Gpl20OsiLicense1991a}. This conditions can directly be incorprated as
-    an interdiction into all use cases which refer to the modification of a
-    library [GPL-6 - GPL-9]. But is difficult to respect the condition if one
-    wants to modify a program which one has received under the terms of the
-    GPL-2.0. Logically, you can write an application und license it under the
-    GPL. But - as a consequence - it is more difficult to modify your work
-    because the result must be a library. That's the reason, why the OSLiC
-    mentions the use case, but forbids its execution\footnote{as long as nobody
-    has shown us an exit out of this trap.}.
+    \item Finally, the GPL requires to \eqnuote{ [\ldots] cause any work (being
+    distributed or published), that in whole or in part contains or is derived
+    from the Program or any part thereof, to be licensed as a whole at no charge
+    to all third parties under the terms of this (GPL)}\footcite[cf.][\nopage
+    wp.\ §2]{Gpl20OsiLicense1991a}. In case of distributing an unmodified work
+    (GPL-2, GPL-3) the OSLiC rewrites this condition as the requirement to
+    retain any existing copyright notice and licensing elements. In case of
+    distributing a modified program (GPL-4, GPL-5) or library (GPL-6, GPL-7) the
+    OSLiC requires that one organizes his modifications in a way that they are
+    covered by the existing licensing elements. In case of distributing a
+    (modified) library as embedded part of an overarching on-top development
+    (GPL-8, GPL-9) the OSLiC requires that one not only organizes his
+    modifications of the library itself in a way that they are covered by the
+    existing licensing elements but that one licenses the on-top development
+    under the terms of the respective GPL.
   \end{itemize}
-  
-  \item Additionally, the GPL allows the licensee to distribute an overarching
-  on-top development -- in the wording of the GPL: a \enquote{work that uses
-  the libary} \footcite[cf.][\nopage wp.\ §5, §6]{Gpl20OsiLicense1991a} --
-  \enquote{as an exception to the Sections above} in \enquote{combination} with
-  the library \enquote{under terms of your choice}\footcite[cf.][\nopage wp.\
-  §6]{Gpl20OsiLicense1991a}, provided that the licensee fulfills additional
-  conditions:  First, it must clearly be stated that the on-top development
-  depends on the (modified) library. Second, the GPL must be added into the
-  distributed package. Third, in its own copyright dialog, the on-top
-  development must mention the library, its copyright holder, and that it is
-  licensed under the GPL\footcite[cf.][\nopage wp.\ §6]{Gpl20OsiLicense1991a}.
-  This can directly be inserted as conditions into the respective use cases
-  (GPL-8, GPL-9). 
-  
-  \item The most difficult requirements of the GPL-2.0 concern the distribution
-  in the form of binaries. In a very strict reading, the GPL does not require
-  to link the on-top development and the libary only dynamically. At first, the
-  GPL mentions, that the \enquote{[..] work (that uses the Library), in
-  isolation, is not a derivative work of the Library [\ldots]}. But if it is
-  linked to the library the resulting executable program -- of course -- becomes
-  \enquote{a derivative of the Library} and that it is therefore
-  \enquote{[\ldots] covered by this License (GPL-2.0)}. But the GPL-2.0
-  directly continues this statement with the hint, that \enquote{Section 6
-  states terms for distribution of such executables}\footcite[cf.][\nopage wp.\
-  §5]{Gpl20OsiLicense1991a}. Finally, this section 6 directly starts with
-  statement: \enquote{As an exception to the Sections above, you may also
-  combine or link a "work that uses the Library" with the Library to produce a
-  work containing portions of the Library, and distribute that work under terms
-  of your choice}\footcite[cf.][\nopage wp.\ §6]{Gpl20OsiLicense1991a}.
-  
-  This is important to know, because until this section 6 one can not directly
-  read or indirectly infer that the GPL-2.0 distinguished the act of
-  dynamically linking a program and a lirbrary from that of statically linking
-  these parts. The GPL only wants to ensure that the binaries of the library
-  itself can be replaced by a newer version. And that is required by section
-  6\footcite[cf.][\nopage wp.\ §6]{Gpl20OsiLicense1991a}.
-  From a technically viewpoint, this can only be guaranteed, if the binaries of
-  the on-top development and the library together are \enquote{used in a
-  suitable shared library mechanism}\footcite[cf.][\nopage wp.\
-  §6]{Gpl20OsiLicense1991a} or if one also gets all compiled, but not linked
-  object-files of the on-top development and the library, either directly, or
-  via using a \enquote{a written offer, valid for at least three years, to give
-  the same user the (respective) materials}\footcite[cf.][\nopage wp.\
-  §6]{Gpl20OsiLicense1991a}. In the first case, the user can replace the
-  received version of the library and can let the application be relinked
-  automatically. In the second case, he has to do it manually. It is important
-  to know that these ways exist if one wants or must distribute statically
-  linked works. The GPL does not forbid to distribute statically linked
-  applications. But it requires to enable the receiver to relink the work.
-  
-  The OSLiC condensed these conditions into the requirement, either to
-  distribute dynamically linkable parts, or to distribute statically linked
-  applications \enquote{(accompanied) [\ldots] with a written offer, valid for
-  at least three years, to give the same user the [complete]
-  materials}\footcite[cf.][\nopage wp.\ §6]{Gpl20OsiLicense1991a}, so that he
-  can relink the application on its own behalf. It is clear, that this condition
-  is onyl valid for the use case GPL-9.
   
 
 \end{itemize}
