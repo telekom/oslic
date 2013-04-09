@@ -243,11 +243,15 @@ module, a library, or a plugin as an independent or an embedded unit}
   OSLiC, p. \pageref{DistributingFilesHint}}.
 
   \item \textbf{[mandatory:]} Make the source code of the distributed software
-  accessible via a repository (even if you do not modified it): Push the source
-  code package into a repository, make it downloadable via the internet, and
-  integrate an easily to find description into the distribution package which
-  explains how the code can be received from where. Ensure, that this
-  repository is online for as long as you continue to distribute the software.
+  accessible via a repository under your own control (even if you do not
+  modified it): Push the source code package into a repository, make it
+  downloadable via the internet, and integrate an easily to find description
+  into the distribution package which explains how the code can be received from
+  where. Ensure, that this repository is online for as long as you continue to
+  distribute the software.
+  
+ \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
+  into your distribution and/or your additional material.
   
   \item \textbf{[mandatory:]} Execute the to-do list of use case EUPL-2\footnote{
   Making the code accessible via a repository means distributing the software in
@@ -296,8 +300,11 @@ of a set of source code files or an integrated source code package.
   file} by a description of your modifications.
     
   \item \textbf{[mandatory:]} Mark all modifications of source code of the
-  program (proapse) thoroughly -- namely within the
-  source code and including the date of the modification.
+  program (proapse) thoroughly -- namely within the source code and including
+  the date of the modification.
+   
+  \item \textbf{[mandatory:]} Organize your modifications in a way that they are
+  covered by the existing EUPL licensing statements.
    
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material also reproduce the content of the existing
@@ -341,12 +348,18 @@ the form of a set of binary files or an integrated binary package.
   notice file still does not exist. \emph{Expand} the \emph{modification text
   file} by a description of your modifications.
 
+  \item \textbf{[mandatory:]} Organize your modifications in a way that they are
+  covered by the existing EUPL licensing statements.
+  
   \item \textbf{[mandatory:]} Make the source code of the distributed software
-  accessible via a repository: Push the source code package into a repository,
-  make it downloadable via the internet, and integrate an easily to find
-  description into the distribution package which explains how the code can be
-  received from where. Ensure, that this repository is online for as long as you
-  continue to distribute the software.
+  accessible via a repository under your own control: Push the source code
+  package into a repository, make it downloadable via the internet, and
+  integrate an easily to find description into the distribution package which
+  explains how the code can be received from where. Ensure, that this repository
+  is online for as long as you continue to distribute the software.
+  
+  \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
+  into your distribution and/or your additional material.
     
   \item \textbf{[mandatory:]} Execute the to-do list of use case EUPL-4\footnote{
   Making the code accessible via a repository means distributing the software in
@@ -406,6 +419,9 @@ package, but without embedding it into another larger software unit.
   library (snimoli) thoroughly -- namely within the source code and including
   the date of the modification.
    
+  \item \textbf{[mandatory:]} Organize your modifications in a way that they are
+  covered by the existing EUPL licensing statements.
+  
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material  also reproduce the content of the existing
   \emph{copyright notice text files}, a hint to the software name, a link to its
@@ -428,7 +444,7 @@ package, but without embedding it into another larger software unit.
 
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
-Appache licensed code snippet, module, library, or plugin (snimoli) to 3rd
+EUPL licensed code snippet, module, library, or plugin (snimoli) to 3rd
 parties in the form of a set of binary files or an integrated binary package but
 without embedding it into another larger software unit.
 \item[covers] OSUC-08\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-08-DEF}}
@@ -450,12 +466,18 @@ without embedding it into another larger software unit.
   notice file still does not exist. \emph{Expand} the \emph{modification text
   file} by a description of your modifications.
 
+  \item \textbf{[mandatory:]} Organize your modifications in a way that they are
+  covered by the existing EUPL licensing statements.
+  
   \item \textbf{[mandatory:]} Make the source code of the distributed software
-  accessible via a repository: Push the source code package into a repository,
-  make it downloadable via the internet, and integrate an easily to find
-  description into the distribution package which explains how the code can be
-  received from where. Ensure, that this repository is online for as long as you
-  continue to distribute the software.
+  accessible via a repository under your own control: Push the source code
+  package into a repository, make it downloadable via the internet, and
+  integrate an easily to find description into the distribution package which
+  explains how the code can be received from where. Ensure, that this repository
+  is online for as long as you continue to distribute the software.
+  
+  \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
+  into your distribution and/or your additional material.
 
   \item \textbf{[mandatory:]} Execute the to-do list of use case EUPL-6\footnote{
   Making the code accessible via a repository means distributing the software in
@@ -510,6 +532,10 @@ snippet, module, library, or plugin as an embedded component.
   \item \textbf{[mandatory:]} Create a \emph{modification text file}, if such a
   notice file still does not exist. \emph{Expand} the \emph{modification text
   file} by a description of your modifications.
+  
+  \item \textbf{[mandatory:]} Organize your modifications of the embedded
+  library in a way that they are covered by the existing EUPL licensing
+  statements. 
   
   \item \textbf{[mandatory:]} License your overarching program also under the
   EUPL 1.1.
@@ -566,23 +592,30 @@ plugin as an embedded component.
   file} by a description of your modifications.
   
   \item \textbf{[mandatory:]} Make the source code of the embedded library and
-  the source code of your overarching program accessible via a
-  repository\footnote{Formally, the EUPL-1.1 is only a license with weak
+  the source code of your overarching program accessible via a repository under
+  your own control \footnote{Formally, the EUPL-1.1 is only a license with weak
   copyleft. But this is only a result of the allowance to relicense the software
   ($\rightarrow$ OSLiC, p.\ \pageref{sec:ProtectingPowerOfEupl}). So, as long as
   you do not relicense the embedded library with respect to the list of
   \enquote{compatible licenses accodring to article 5 EUPL} (\cite[cf.][\nopage
   wp §5 and Appendix]{EuplLicense2007en}), you also have to publish the code of
   your overarching work.}: Push the source code package into a repository and
-  make it downloadable via the internet. Integrate an easily to find
-  description into the distribution package which explains how the code can
-  be received from where. Ensure, that this repository is online for as long as
-  you continue to distribute the software.
+  make it downloadable via the internet. Integrate an easily to find description
+  into the distribution package which explains how the code can be received from
+  where. Ensure, that this repository is online for as long as you continue to
+  distribute the software.
+  
+  \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
+  into your distribution and/or your additional material.
   
   \item \textbf{[mandatory:]} Execute the to-do list of use case EUPL-8\footnote{
   Making the code accessible via a repository means distributing the software in
   the form of source code. Hence, you must also fulfill all tasks of the
   corresponding use case.}.
+  
+  \item \textbf{[mandatory:]} Organize your modifications of the embedded
+  library in a way that they are covered by the existing EUGPL licensing
+  statements. 
   
   \item \textbf{[mandatory:]} License your overarching program also under the
   EUPL 1.1.
