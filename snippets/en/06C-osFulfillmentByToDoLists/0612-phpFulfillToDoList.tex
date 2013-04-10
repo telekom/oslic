@@ -162,10 +162,10 @@ this privately used software by the name 'PHP'.
 
 \begin{description}
 \item[means] that you are going to distribute an unmodified version of the
-received PHP software to 3rd parties in the form of a set of source code files or an
-integrated source code package\footnote{In this case it doesn't matter whether
-you  distribute a program, an application, a server, a snippet, a module, a
-library, or a plugin as an independent or an embedded unit}
+received PHP software to 3rd parties in the form of source code files or as a
+source code package\footnote{In this case it doesn't matter whether you 
+distribute a program, an application, a server, a snippet, a module, a library,
+or a plugin as an independent or an embedded unit}
 
 \item[covers] OSUC-02, OSUC-05, OSUC-07\footnote{For details $\rightarrow$ OSLiC, pp.\ 
 \pageref{OSUC-02-DEF} - \pageref{OSUC-07-DEF}}
@@ -198,10 +198,10 @@ by make the string 'PHP' part of its name.
 \begin{description}
 
 \item[means] that you are going to distribute an unmodified version of the PHP
-received software to 3rd parties in the form of a set of binary files or an
-integrated bi\-na\-ry package\footnote{In this case it doesn't matter whether
-you distribute a program, an application, a server, a snippet, a module, a
-library, or a plugin as an independent or an embedded unit}
+received software to 3rd parties in the form of binary files or as a bi\-na\-ry
+package\footnote{In this case it doesn't matter whether you distribute a
+program, an application, a server, a snippet, a module, a library, or a plugin
+as an independent or an embedded unit}
 
 \item[covers] OSUC-02, OSUC-05, OSUC-07\footnote{For details $\rightarrow$ OSLiC, pp.\
 \pageref{OSUC-02-DEF} - \pageref{OSUC-07-DEF}}
@@ -242,8 +242,8 @@ by make the string 'PHP' part of its name.
 
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
-PHP program, application, or server (proapse) to 3rd parties in the form of a set
-of source code files or an integrated source code package.
+PHP program, application, or server (proapse) to 3rd parties in the form of
+source code files or as a source code package.
 \item[covers] OSUC-04\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-04-DEF}}
 \item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
@@ -286,8 +286,8 @@ by make the string 'PHP' part of its name.
 
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
-PHP pro\-gram, application, or server (proapse) to 3rd parties in the form of a set
-of binary files or an integrated binary package.
+PHP pro\-gram, application, or server (proapse) to 3rd parties in the form of
+binary files or as a binary package.
 \item[covers] OSUC-04\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-04-DEF}}
 \item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
@@ -322,9 +322,9 @@ by make the string 'PHP' part of its name.
 \label{OSUC-08-PHP}
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
-PHP code snippet, module, library, or plugin (snimoli) to 3rd parties in form
-of a set of source code files or an integrated source code package, but without
-embedding it into another larger software unit.
+PHP code snippet, module, library, or plugin (snimoli) to 3rd parties in the
+form of source code files or as a source code package, but without embedding it
+into another larger software unit.
 \item[covers] OSUC-08\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-08-DEF}}
 \item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
@@ -357,9 +357,9 @@ by make the string 'PHP' part of its name.
 \begin{description}
 
 \item[means] that you are going to distribute a modified version of the received
-PHP code snippet, module, library, or plugin (snimoli) to 3rd parties in form
-of a set of binary files or an integrated binary package but without embedding
-it into another larger software unit.
+PHP code snippet, module, library, or plugin (snimoli) to 3rd parties in the
+form of binary files or as a binary package but without embedding it into
+another larger software unit.
 
 \item[covers] OSUC-08\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-08-DEF}}
 
@@ -395,7 +395,7 @@ by make the string 'PHP' part of its name.
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
 PHP code snippet, module, library, or plugin (snimoli) to 3rd parties in form
-of a set of source code files or an integrated source code package together with
+of source code files or an integrated source code package together with
 another larger software unit which contains this code snippet, module, library,
 or plugin as an embedded component.
 \item[covers] OSUC-10\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-10-DEF}}
@@ -446,10 +446,10 @@ by make the string 'PHP' part of its name.
 
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
-PHP code snippet, module, library, or plugin to 3rd parties in the form of a set of
-binary files or an integrated binary package together with another larger
-software unit which contains this code snippet, module, library, or plugin as
-an embedded component.
+PHP code snippet, module, library, or plugin to 3rd parties in the form of
+binary files or as a binary package together with another larger software unit
+which contains this code snippet, module, library, or plugin as an embedded
+component.
 \item[covers] OSUC-10\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-10-DEF}}
 \item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
@@ -489,7 +489,14 @@ by make the string 'PHP' part of its name.
 
 \label{sec:PhpDiscussions}
 
-It might surprise some readers that in case of the binary distribution of
+First of all, it might surprise some readers that the OSLiC also describes the
+open source use cases which concern the distribution of binary files although it
+deals with the PHP license. PHP is a script language. Thus, delivering the
+source code seems to be a must. But one has to consider that the PHP license
+could also be applied to works which are based on other languages constituted on
+the compiler paradigm. Or there might be used PHP compiler.
+
+It might also surprise some readers that in case of the binary distribution of
 modifications the condition to repoduce the php license in the documentation is
 a \emph{must}, while its reproduction in a copyright screen of the program is a
 \emph{should}. This is directly evoked by the binary-conditon of the php license

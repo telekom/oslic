@@ -1,0 +1,211 @@
+% Telekom osCompendium 'for being included' snippet template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ Framework derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke 2012 CC BY 3.0  http://mycsrf.fodina.de/ ]
+%
+
+
+%% use all entries of the bibliography
+%\nocite{*}
+
+\section{Excursion: Why linking is a secondary criteria}
+\footnotesize
+\begin{quote}\itshape
+Distributing statically or dynamically works is often discussed as a problem
+(and sometimes as a solution) for acting compliantly. In this chapter, we
+briefly discuss why this aspect can mostly be ignored and why it does not helps
+to determine the existence of a derivative work.
+\end{quote}
+\normalsize
+
+In an earlier version of the OSLiC, the its finder had also subclassified some
+use cases with respect to the way an application was 'composed' as a larger
+unit: In the form for gathering the necessary information, the OSLiC user had to
+answer whether \emph{one was going to combine the received open source software
+with other software components by linking all together statically, by linking
+them dynamically, or by textually including (parts of) the open source software
+into your larger unit}. From version 0.95.1 this question has totally be erased.
+The authors discovered that it was not necessary to consider this aspect.
+
+We know that being linked statically or dynamically is often and deeply
+discussed by license experts. It seems to be an important aspect:
+
+[TBD: Discussion of the literature]
+%TODO Discus statically dynamicall discussion.
+
+So, let us start with some undeinable facts: The OSLiC deals with the Apache-2.0
+license\footcite [cf.][\nopage wp.]{Apl20OsiLicense2004a}, the BSD-2-Clause
+license\footcite [cf.][\nopage wp.]{BsdLicense2Clause}, the BSD-3-Clause
+license\footcite [cf.][\nopage wp.]{BsdLicense3Clause}, the MIT license\footcite
+[cf.][\nopage wp.]{MitLicense2012a}, the MS-PL\footcite [cf.][\nopage
+wp.]{MsplOsiLicense2013a}, the PgL\footcite [cf.][\nopage
+wp.]{PglOsiLicense2013a} and the PHP license\footcite [cf.][\nopage
+wp.]{Php30OsiLicense2013a} as instances of the permissive licenses.
+Additionally, the OSLiC treats the EPL\footcite [cf.][\nopage
+wp.]{Epl10OsiLicense2005a}, the EUPL\footcite [cf.][\nopage
+wp.]{Eupl11OsiLicense2007a}, the LGPL\footnote{For LGPL-2.1 see \cite
+[cf.][\nopage wp.]{Lgpl21OsiLicense1999a}. For LGPL-3.0 see \cite [cf.][\nopage
+wp.]{Lgpl30OsiLicense2007a} }, and the MPL\footcite [cf.][\nopage
+wp.]{Mpl20OsiLicense2013a} as licenses with weak copy left. Finally, the OSLiC
+thoroughly discusses the GPL\footnote{For GPL-2.0 see \cite [cf.][\nopage
+wp.]{Gpl20OsiLicense1991a}. For GPL-3.0 see \cite [cf.][\nopage
+wp.]{Gpl30OsiLicense2007a} } and the AGPL\cite [cf.][\nopage
+wp.]{Agpl30OsiLicense2007a} as licenses with strong copyleft\footnote{You can
+find html based instances of these licenses in the OSLiC directory 'licenses'.
+They have been downloaded from the OSI pages. All of the following statements
+refer to these files.}
+
+Only three of these licenses mention the word linking (or derivations of it):
+Using the command \texttt{grep -i link * | grep -v
+"<link\textbackslash{}|links\textbackslash{}|skip-link"} in a shell -- as an
+operation on a set of html formatted license files -- directly shows that only
+the AGPL-3.0, the ApL-2.0, the GPL-2.0, the GPL-3.0, the LGPL-2.1 and the
+LGPL-3.0 are using derivations of the word linking. Additionally, the results of
+the command \texttt{grep -i statical *} show that only the LGPL-2.1 uses this
+'statical', while using the command \texttt{grep -i dynamical *} only hints to
+the AGPL-3.0 and the GPL-3.0. This analysis already indicates that being
+statically oder dynamically linked can not be as important for acting
+compliantly as it often is suggested.
+% 
+If one reads the concrete statements, then one can see, that acting compliantly
+depends only losely and only seldom on the kind of being 'combined':
+
+\begin{description}
+  \item[ApL] The Apache-2.0 license uses the word \emph{link} only once for stating
+  that \enquote{[\ldots] Derivative Works shall not include works that [\ldots]
+  link [\ldots] to the interfaces of, the Work and Derivative Works
+  thereof}\footcite [cf.][\nopage wp.\ §0]{Apl20OsiLicense2004a}. Thus, the ApL
+  does not use the criteria 'linkings' for determining a derivative work,
+  neither 'being linked in general', nor 'being statically linked', nor being
+  'dynamically linked'. Hence, for acting in accordance to the ApL these
+  attributes can be ignored.
+  \item[GPL-3.0] The GPL-3.0 uses the word \emph{link} three times: First, it defines the
+  \enquote{\enquote{Corresponding Source} for a work in object code form [\ldots
+  as] all the source code needed to generate, install, and [\ldots] run the
+  object code and to modify the work [\ldots]} and explains that this definition
+  includes \enquote{the source code for shared libraries and dynamically linked
+  subprograms that the work is specifically designed to
+  require}\footcite[cf.][\nopage wp.\ §0]{Gpl30OsiLicense2007a}. Second, the
+  GPL-3.0 allows \enquote{[\ldots] to link or combine any covered work with a
+  work licensed under version 3 of the GNU Affero General Public License into a
+  single combined work, and to convey the resulting work}\footcite[cf.][\nopage
+  wp.\ §13]{Gpl30OsiLicense2007a}. Finally, the GPL-3.0 explains that
+  \enquote{the GNU General Public License [itself] does not permit incorporating
+  your program into proprietary programs} and that the LGPL might be a better
+  license for those licensors who have written a \enquote{subroutine library
+  [\ldots] and may consider it more useful to permit linking proprietary
+  applications with the library [\ldots]}\footcite[cf.][\nopage wp.\ last
+  parapgraph]{Gpl30OsiLicense2007a}. Again, being statically or dynamically
+  linked is not used to trigger any license fulfilling actions. The conditions
+  for \enquote{Conveying Modified [] Versions}] refer to the \enquote{work based
+  on the Program}\footcite[cf.][\nopage wp.\ §5]{Gpl30OsiLicense2007a} which
+  itself is another expression for a \enquote{\enquote{modified version} of the
+  earlier work}\footcite[cf.][\nopage wp.\ §0]{Gpl30OsiLicense2007a}. Moreover,
+  one is required \enquote{[\ldots] to license the entire work, as a whole,
+  under this License to anyone who comes into possession of a
+  copy}\footcite[cf.][\nopage wp.\ §5]{Gpl30OsiLicense2007a} . Hence, from the
+  viewpoint of the GPL-3.0 there is no difference based on the type of linking.
+  One can ignore these features of the work if one wants to determine how to use
+  the software compliantly.
+
+%   \item[AGPL-3.0] Concerning the use and the meaning of the words
+%   \emph{dynamically} and \emph{linking} the AGPL-3.0 exactly follows the
+%   structure of the GPL-3.0: first they arise in the context of defining the
+%   \enquote{Corresponding Source}\footcite[cf.][\nopage wp.\
+%   §0]{Agpl30OsiLicense2007a}; then the word \emph{link} helps to say that AGPL
+%   and GPL are compatible licenses\footcite[cf.][\nopage wp.\
+%   §13]{Agpl30OsiLicense2007a}; and finally the word \emph{link}is used to hint
+%   to the LGPL\footcite[cf.][\nopage wp.\ §5]{Agpl30OsiLicense2007a}. So, again,
+%   one can ignore the feature of being statically or dynamically linked if one
+%   wants to determine how to use the software compliantly.
+%   
+%   \item[GPL-2.0] In the GPL-2.0 the word \emph{link} only arises in the context
+%   of hinting to the LGPL\footcite [cf.][\nopage wp.\ last
+%   paragraph]{Gpl20OsiLicense1991a}. Moreover, the words \emph{statical} and
+%   \emph{dynamical} are not used in this text -- not at all and in no sense: the
+%   copy left feature of the GPL depends 'only' on a specification which refers to
+%   a \enquote{work based on the Program [\ldots] that in whole or in part
+%   contains or is derived from the Program or any part thereof [\ldots]}\footcite
+%   [cf.][\nopage wp\. §2]{Gpl20OsiLicense1991a}. Thus, even in this old version
+%   of the GPL, the criteria of being linked in which way ever does not trigger
+%   any task for the software compliantly.
+%   
+%   \item[LGPL-3.0] In the LGPL-3.0 the word \emph{link} is used to define the
+%   concept of a \enquote{Combined Work} which shall be the name for a
+%   \enquote{[\ldots] work produced by combining or linking an Application with
+%   the Library}\footcite [cf.][\nopage wp\. §0]{Lgpl30OsiLicense2007a}. Finally,
+%   LGPL-3.0 allows to \enquote{[\ldots] convey a Combined Work under terms of
+%   [his own] choice [\ldots]}, provided that one distributes also all material
+%   (including the object files of the overarching on-top developments) being
+%   necessary for enabling the receiver to relink the whole product with a later
+%   incoming newer version of the library or that one presupposes the use of a
+%   \eqnuote{suitable shared library mechanism} so that the receiver can update
+%   the library by this method\footcite [cf.][\nopage wp\.
+%   §4]{Lgpl30OsiLicense2007a}. For fulfilling these conditions it is sufficient
+%   to require that a distributor shall \emph{either distribute the on-top
+%   development and the library in the form of dynamically linkable parts or
+%   distribute the statically linked application together with a written offer,
+%   valid for at least three years, to give the user all object-files of the
+%   on-top development and the library, so that he can relink the application on
+%   its own behalf}.
+% 
+%   \item[LGPL-2.1] Even if the arguing structure of the LGPL-2.1 is more
+%   complicate than all the others, in its preamble it clearly says it want to
+%   evoke: \eqnuote{If you link other code with the library, you must provide
+%   complete object files to the recipients, so that they can relink them with the
+%   library after making changes to the library and recompiling
+%   it[\ldots]}\footcite[cf.][\nopage wp\. preamble]{Lgpl21OsiLicense1999a}. For
+%   that purpose, the LGPL-2.1 firstly states that if \enquote{a program is linked
+%   with a library, whether statically or using a shared library, [thern] the
+%   combination of the two is legally speaking a combined work, a derivative of
+%   the original library}\footcite[cf.][\nopage wp\.
+%   preamble]{Lgpl21OsiLicense1999a}: even if a \enquote{work that uses the
+%   Libary} -- which is only \enquote{[\ldots] designed to work with the Library
+%   by being compiled or linked with it [\ldots]} -- \enquote{[\ldots] in
+%   isolation, is not a derivative work of the library [\ldots]}, it is no
+%   question for the LGPL-2.1, that \enquote{linking a \enquote{work that uses the
+%   Library} with the Library creates an executable that is a derivative of the
+%   Library (because it contains portions of the Library)}\footcite[cf.][\nopage
+%   wp\. §5]{Lgpl21OsiLicense1999a}. But then -- \enquote{as an
+%   exeption} -- the LGPL-2.1 allows to \enquote{[\ldots] combine or link a "work
+%   that uses the Library" with the Library to produce a work containing portions
+%   of the Library, and distribute that work under terms of your choice} provided
+%   that the distributor either presupposes the use of a \eqnuote{suitable shared
+%   library mechanism} or that he distributes also all material (including the
+%   object files of the overarching on-top developments) being necessary for
+%   enabling the receiver to relink the whole product with a later incoming newer
+%   version of the library\footcite[cf.][\nopage wp\. §6, §6b adn §6c together
+%   with §6c]{Lgpl21OsiLicense1999a}. Again, For fulfilling these conditions it is
+%   sufficient to require that a distributor shall \emph{either distribute the
+%   on-top development and the library in the form of dynamically linkable parts
+%   or distribute the statically linked application together with a written offer,
+%   valid for at least three years, to give the user all object-files of the
+%   on-top development and the library, so that he can relink the application on
+%   its own behalf}.
+
+\end{description}
+
+So based, with respect this analysis, there is -- in general -- no need to
+gather more or less complicate whether one wants to distributed statically or
+dynamically linked applications if one wants to derive the necessary tasks to
+distribute this software compliantly. One can directly incorporate the quoted
+contion into the task list of the LGPL -- and only there. This we could simplify
+our leading form
+
+
+%\bibliography{../../../bibfiles/oscResourcesEn}
