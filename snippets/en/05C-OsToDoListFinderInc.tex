@@ -93,17 +93,6 @@ to-do lists.
     $\square$\hspace{1em}only binaries\\
     $\square$\hspace{1em}(also) sources}\\
 \hline 
-  Mode & 
-  \parbox[c][2.6cm][c]{9.4cm}{
-  \textit{Are you going to combine the received open source software with other
-  software components by linking all together statically, by linking them
-  dynamically, or by textually including (parts of) the open source software
-  into your larger unit?}} &
-  \parbox{10em}{
-    $\square$\hspace{1em}statically linked\\   
-    $\square$\hspace{1em}dynamically linked\\
-    $\square$\hspace{1em}textually included}\\
-\hline 
 \hline
 \end{tabular}
 \end{small}
@@ -150,8 +139,6 @@ source code, too. But if you do so, you have to respect special
 conditions\footnote{For details concerning a necessary refinement of the open
 source use case taxonomy, please see $\rightarrow$ OSLiC, p.\
 \pageref{sec:SourceBinaryDifference}}.
-\item[Mode:] The definition follows the corresponding standard terms of the
-software development.
 \end{description}
 
 \section{The taxonomic Open Source Use Case Finder}
@@ -244,87 +231,27 @@ branches:
       \pstree{
         \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{embedded}}}}}
       }{
+      
         \pstree{
           \Tr{
             \Ovalbox{\shortstack{recipient:\\\textbf{\textit{4yourself}}}}
            }
         }{
-          \pstree{
-            \Tr{
-              \begin{tiny}
-              \Ovalbox{\shortstack{mode:\\\textit{statically linked}}}
-              \end{tiny}
-            }
-          }{
-            \Tr[edge=none]{\begin{minipage}[b][2em][c]{7em} 
-              $\Rightarrow$ OSUC-06a\\
-              \textit{(see p.\ \pageref{OSUC-06-DEF})}\end{minipage} } 
-          }        
         
-          \pstree{
-            \Tr{
-              \begin{tiny}
-              \Ovalbox{\shortstack{mode:\\\textit{dynamically linked}}}
-              \end{tiny}
-            }
-          }{
-            \Tr[edge=none]{\begin{minipage}[b][2em][c]{7em} 
-              $\Rightarrow$ OSUC-06b\\
-              \textit{(see p.\ \pageref{OSUC-06-DEF})}\end{minipage} } 
-          }        
- 
-          \pstree{
-            \Tr{
-              \begin{tiny}
-              \Ovalbox{\shortstack{mode:\\\textit{textually included}}}
-              \end{tiny}
-            }
-          }{
-            \Tr[edge=none]{\begin{minipage}[b][2em][c]{7em} 
-              $\Rightarrow$ OSUC-06c\\
-              \textit{(see p.\ \pageref{OSUC-06-DEF})}\end{minipage} } 
-          }        
+          \Tr[edge=none]{\begin{minipage}[b][2em][c]{6em}
+              $\Rightarrow$ OSUC-06\\
+              \textit{(see p.\ \pageref{OSUC-06-DEF})}\end{minipage} }
+          }
         
-        }
+        
         \pstree{
           \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{4others}}}}}
         }{
-          \pstree{
-            \Tr{
-              \begin{tiny}
-              \Ovalbox{\shortstack{mode:\\\textit{statically linked}}}
-              \end{tiny}
-            }
-          }{
-            \Tr[edge=none]{\begin{minipage}[b][2em][c]{7em} 
-              $\Rightarrow$ OSUC-07a\\
-              \textit{(see p.\ \pageref{OSUC-07-DEF})}\end{minipage} } 
-          }        
-        
-          \pstree{
-            \Tr{
-              \begin{tiny}
-              \Ovalbox{\shortstack{mode:\\\textit{dynamically linked}}}
-              \end{tiny}
-            }
-          }{
-            \Tr[edge=none]{\begin{minipage}[b][2em][c]{7em} 
-              $\Rightarrow$ OSUC-07b\\
-              \textit{(see p.\ \pageref{OSUC-07-DEF})}\end{minipage} } 
-          }        
- 
-          \pstree{
-            \Tr{
-              \begin{tiny}
-              \Ovalbox{\shortstack{mode:\\\textit{textually included}}}
-              \end{tiny}
-             }
-          }{
-            \Tr[edge=none]{\begin{minipage}[b][2em][c]{7em} 
-              $\Rightarrow$ OSUC-07c\\
-              \textit{(see p.\ \pageref{OSUC-07-DEF})}\end{minipage} } 
-          }        
-        }
+
+          \Tr[edge=none]{\begin{minipage}[b][2em][c]{6em}
+              $\Rightarrow$ OSUC-07\\
+              \textit{(see p.\ \pageref{OSUC-06-DEF})}\end{minipage} }
+          }
       }
     }
     \pstree{
@@ -347,81 +274,20 @@ branches:
         \pstree{
           \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{4yourself}}}}}
         }{
-          \pstree{
-            \Tr{
-              \begin{tiny}
-              \Ovalbox{\shortstack{mode:\\\textit{statically linked}}}
-              \end{tiny}
-            }
-          }{
-            \Tr[edge=none]{\begin{minipage}[b][2em][c]{7em} 
-              $\Rightarrow$ OSUC-09a\\
+           \Tr[edge=none]{\begin{minipage}[b][2em][c]{6em} 
+              $\Rightarrow$ OSUC-09\\
               \textit{(see p.\ \pageref{OSUC-09-DEF})}\end{minipage} } 
-          }        
+          } 
         
-          \pstree{
-            \Tr{
-              \begin{tiny}
-              \Ovalbox{\shortstack{mode:\\\textit{dynamically linked}}}
-              \end{tiny}
-            }
-          }{
-            \Tr[edge=none]{\begin{minipage}[b][2em][c]{7em} 
-              $\Rightarrow$ OSUC-09b\\
-              \textit{(see p.\ \pageref{OSUC-09-DEF})}\end{minipage} } 
-          }        
- 
-          \pstree{
-            \Tr{
-              \begin{tiny}
-              \Ovalbox{\shortstack{mode:\\\textit{textually included}}}
-              \end{tiny}
-             }
-          }{
-            \Tr[edge=none]{\begin{minipage}[b][2em][c]{7em} 
-              $\Rightarrow$ OSUC-09c\\
-              \textit{(see p.\ \pageref{OSUC-09-DEF})}\end{minipage} } 
-          }        
-        }
         \pstree{
           \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{4others}}}}}
         }{
-          \pstree{
-            \Tr{
-              \begin{tiny}
-              \Ovalbox{\shortstack{mode:\\\textit{\tiny statically linked}}}
-              \end{tiny}
-            }
-          }{
-            \Tr[edge=none]{\begin{minipage}[b][2em][c]{7em} 
-              $\Rightarrow$ OSUC-10a\\
+
+           \Tr[edge=none]{\begin{minipage}[b][2em][c]{6em} 
+              $\Rightarrow$ OSUC-10\\
               \textit{(see p.\ \pageref{OSUC-10-DEF})}\end{minipage} } 
-          }        
-        
-          \pstree{
-            \Tr{
-              \begin{tiny}
-              \Ovalbox{\shortstack{mode:\\\textit{dynamically linked}}}
-              \end{tiny}              
-            }
-          }{
-            \Tr[edge=none]{\begin{minipage}[b][2em][c]{7em} 
-              $\Rightarrow$ OSUC-10b\\
-              \textit{(see p.\ \pageref{OSUC-10-DEF})}\end{minipage} } 
-          }        
- 
-          \pstree{
-            \Tr{
-              \begin{tiny}
-              \Ovalbox{\shortstack{mode:\\\textit{textually included}}} 
-              \end{tiny}
-             }
-          }{
-            \Tr[edge=none]{\begin{minipage}[b][2em][c]{7em} 
-              $\Rightarrow$ OSUC-10c\\
-              \textit{(see p.\ \pageref{OSUC-10-DEF})}\end{minipage} } 
-          }        
-        }
+          } 
+
       }
     }
   }
