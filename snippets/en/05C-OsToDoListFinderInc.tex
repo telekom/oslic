@@ -49,49 +49,52 @@ to-do lists.
 \hline 
 \hline 
   Type
-  & \parbox[c][2.6cm][c]{9.4cm}{
-    \textit{Is the open source software you want to use a software library
-    in the broadest sense (an includable code snippet, a linkable module or
-    library, or a loadable plugin) [=snimoli], or is it an autonomous
-    program, application or server which can be executed or processed
-    [=proapse]?}} & \parbox{10em}{ 
-      $\square$\hspace{1em}snimoli\\ 
+  & \parbox[c][2.6cm][c]{10cm}{
+    \textit{Is the open source software you want to use a library in the
+    broadest sense (an includable code \textbf{\underline{sni}}ppet, a linkable
+    \textbf{\underline{mo}}dule or \textbf{\underline{li}}brary, or a loadable
+    plugin), or is it an autonomous \textbf{\underline{pro}}gram,
+    \textbf{\underline{ap}}plication or \textbf{\underline{se}}rver which can be
+    executed?}} & \parbox{7.5em}{
+      $\square$\hspace{1em}snimoli\\
       $\square$\hspace{1em}proapse}
     \\
 \hline 
   State & 
-  \parbox[c][1.6cm][c]{9.4cm}{
-  \textit{Do you want to leave your open source software as you have
-  got it, or do you want to modify it before using and/or distributing it to 3rd
-  parties?}} &
-  \parbox{10em}{
+  \parbox[c][1.6cm][c]{10cm}{
+  \textit{Do you want to leave the open source software
+  \textbf{\underline{unmodified}} as you have received it, or are you going to
+  create a \textbf{\underline{modified}} version of it?}} &
+  \parbox{7.5em}{
     $\square$\hspace{1em}unmodified\\
     $\square$\hspace{1em}modified} \\
 \hline 
   Context & 
-  \parbox[c][2cm][c]{9.4cm}{
-  \textit{Are you using your open source software as an au\-to\-no\-mous piece
-  of software [=independent], or are you using it as an embedded part or component
-  of a larger, more complex piece of software [=embedded]?}} &
-  \parbox{10em}{ $\square$\hspace{1em}independent\\
+  \parbox[c][1.6cm][c]{10cm}{
+  \textit{Are you going to use / distribute the open source software as an
+  \textbf{\underline{independent}} unit, or do you plan to integrate it as an
+  \textbf{\underline{embedded}} component into a complexer piece of
+  software?}} & \parbox{7.5em}{
+  $\square$\hspace{1em}independent\\
     $\square$\hspace{1em}embedded}\\
 \hline 
   Recipient & 
-  \parbox[c][1.6cm][c]{9.4cm}{
-  \textit{Are you going to use the received open source software only for
-  yourself [=4yourself], or do you plan to (re)distribute it (also) to third
-  parties [=4others]?}}
-  & \parbox{10em}{
+  \parbox[c][1.6cm][c]{10cm}{ \textit{Are you going to use the open source
+  software only \textbf{\underline{for}} \textbf{\underline{yourself}}, or do
+  you plan to (re)distribute it (also) \textbf{\underline{to}}
+  \textbf{\underline{other}} third parties?}}
+  & \parbox{7.5em}{
     $\square$\hspace{1em}4yourself\\
-    $\square$\hspace{1em}4others}\\
+    $\square$\hspace{1em}2others}\\
 \hline 
   Form & 
-  \parbox[c][1.6cm][c]{9.4cm}{
-  \textit{If you plan to (re)distribute an open source based work [=4others], do
-  you want to distribute only the binaries or (also) the source code?}}
-  & \parbox{10em}{
-    $\square$\hspace{1em}only binaries\\
-    $\square$\hspace{1em}(also) sources}\\
+  \parbox[c][1.6cm][c]{10cm}{
+  \textit{Given you want to (re)distribute an open source based work [2others],
+  do you focus on distributing the \textbf{\underline{binaries}} or the
+  \textbf{\underline{sources}}?}}
+  & \parbox{7.5em}{
+    $\square$\hspace{1em}binaries\\
+    $\square$\hspace{1em}sources}\\
 \hline 
 \hline
 \end{tabular}
@@ -106,37 +109,46 @@ these invalid combinations, please check the corresponding explanations}. Here
 are some extra explanations about each class:
 
 \begin{description}
-\item[Type:] A piece of (open source) software shall be viewed as a program, an
-application, or a server, if you can start its binary form with your normal
-program launcher, or (in case of a text file which still must be interpreted by
-an interpreter like php, perl, bash etc.) if you can start an interpreter taking
-the file as one of its arguments. \item[State:] You modify open source software
-if you expand, reduce or modify at least one of the received software files, and
--- in case of dealing with binary object code -- if you (re)compile and (re)link
-the modified software to a new binary file. If you only modify configuration
-files, you do not modify the open source software.
-\item[Context:] You use open source software embedded into a larger unit, if one
-of your files of the larger unit contains a verbatim or modified copy (i.e.\ a
-snippet) of the received open source software, or if the larger unit contains an
-include statement referring to a file of the received open source software, or
-if your development environment contains a compiler or linker directive
-referring to the received open source software.
-\item[Recipient:] You use the received open source software only for yourself,
-if you as a person do not pass it to other entities like persons, organizations,
-companies etc., or if you -- as a member of a specific development group -- pass
-it only to the other members of your development group. But if you store open
-source software on any device such as a mobile phone, an USB stick, etc.\ or if
-you attach it to any transport medium like email etc.\ and if you then sell,
-give away, or simply send this device or transport medium to anyone (other than
-a direct member of your development group) then you indeed handover the open
-source software to third parties\footnote{Please remember that -- at least in
-Germany -- there are opinions that even handing over software to another legal
-entity or department of the same company is also a kind of distribution. It is
-always safest to take the broadest possible meaning of distributing or handing
-over.}.
-\item[Form:] Often it is up to you to decide whether you want to distribute the
-source code, too. But if you do so, you have to respect special
-conditions\footnote{For details concerning a necessary refinement of the open
+\item[Type:] A piece of (open source) software is a program, an application, or
+a server, if you can start its binary form with your normal program launcher, or
+(in case of a text file which still must be interpreted by an interpreter like
+php, perl, bash etc.) if you can start an interpreter which takes the file as
+one of its arguments and executes the commands.
+\item[State:] You are modifying a piece of (open source) software if you expand,
+reduce or modify at least one of the received software files, and -- in case of
+dealing with binary object code -- if you (re)compile and (re)link the modified
+software to a new binary file. But if you only modify some of the configuration
+files, you are not modifying the open source software itself.
+\item[Context:] You are using a piece of open source software as an embedded
+component of a larger unit if
+  \begin{itemize}
+  \item  if one of your files of the larger unit contains a verbatim or a
+  modified copy (i.e.\ a snippet) of the received open source software, or
+  \item if your larger unit contains an include statement referring to a
+  functionally defining file of the received open source software, or
+  \item if your larger unit calls a function defined in the received open source
+  software, or
+  \item if your development environment contains a compiler or linker directive
+  referring to the received open source software (binaries) and if your larger
+  unit can't be executed without resolving this linker directive.
+  \end{itemize}
+\item[Recipient:] You are using the received open source software only for
+yourself, if you as a person do not pass it to other entities like persons,
+organizations, companies etc., or if you -- as a member of a specific
+development group -- pass it only to the other members of your development
+group. But if you store open source software on any device such as a mobile
+phone, an USB stick, etc.\ or if you attach it to any transport medium like
+email etc.\ and if you then sell, give away, or simply send this device or
+transport medium to anyone (other than a direct member of your development
+group) then you indeed handover the open source software to third
+parties\footnote{Please remember that -- at least in Germany -- there are
+opinions that even handing over software to another legal entity or department
+of the same company is also a kind of distribution. It is always safest to take
+the broadest possible meaning of distributing or handing over.}.
+\item[Form:] Mostly it is up to you to decide whether you want to distribute
+only the binaries or whether you are intentionally going to distribute the
+sources (too). But in some cases, you have to respect some special
+conditions.\footnote{For details concerning a necessary refinement of the open
 source use case taxonomy, please see $\rightarrow$ OSLiC, p.\
 \pageref{sec:SourceBinaryDifference}}.
 \end{description}
@@ -167,18 +179,31 @@ branches:
         \pstree{
           \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{4yourself}}}}}
         }{
-          \Tr[edge=none]{\begin{minipage}[b][2em][c]{6em} 
-              $\Rightarrow$ OSUC-01\\
-              \textit{(see p.\ \pageref{OSUC-01-DEF})}\end{minipage} } 
+          \Tr[edge=none]{\begin{minipage}[b][2em][c]{9em} 
+              $\Rightarrow$ OSUC-01: \textit{p.\ \pageref{OSUC-01-DEF}}\end{minipage} } 
           }
         
         \pstree{
           \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{4others}}}}}
         }{
-          \Tr[edge=none]{\begin{minipage}[b][2em][c]{6em} 
-              $\Rightarrow$ OSUC-02\\
+          
+         \pstree{
+            \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{sources}}}}}
+          }{
+            \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
+              $\Rightarrow$ OSUC-02S\\
               \textit{(see p.\ \pageref{OSUC-02-DEF})}\end{minipage} } 
-          }        
+           } 
+           
+          \pstree{
+            \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{binaries}}}}}
+          }{
+            \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
+              $\Rightarrow$ OSUC-02B\\
+              \textit{(see p.\ \pageref{OSUC-02-DEF})}\end{minipage} } 
+           }
+           
+         }       
       }
     }
     \pstree{
@@ -190,18 +215,31 @@ branches:
         \pstree{
           \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{4yourself}}}}}
         }{
-          \Tr[edge=none]{\begin{minipage}[b][2em][c]{6em} 
-              $\Rightarrow$ OSUC-03\\
-              \textit{(see p.\ \pageref{OSUC-03-DEF})}\end{minipage} } 
+          \Tr[edge=none]{\begin{minipage}[b][2em][c]{9em} 
+              $\Rightarrow$ OSUC-03: 
+              \textit{p.\ \pageref{OSUC-03-DEF}}\end{minipage} } 
           }
         
         \pstree{
           \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{4others}}}}}
         }{
-          \Tr[edge=none]{\begin{minipage}[b][2em][c]{6em} 
-              $\Rightarrow$ OSUC-04\\
+        
+         \pstree{
+            \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{sources}}}}}
+          }{
+            \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
+              $\Rightarrow$ OSUC-04S\\
               \textit{(see p.\ \pageref{OSUC-04-DEF})}\end{minipage} } 
-          }        
+           } 
+           
+          \pstree{
+            \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{binaries}}}}}
+          }{
+            \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
+              $\Rightarrow$ OSUC-04B\\
+              \textit{(see p.\ \pageref{OSUC-04-DEF})}\end{minipage} } 
+           }
+         }        
       }
     }
   }
@@ -222,11 +260,24 @@ branches:
         \pstree{
           \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{4others}}}}}
         }{
-          \Tr[edge=none]{\begin{minipage}[b][2em][c]{6em} 
-              $\Rightarrow$ OSUC-05\\
+              
+         \pstree{
+            \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{sources}}}}}
+          }{
+            \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
+              $\Rightarrow$ OSUC-05S\\
               \textit{(see p.\ \pageref{OSUC-05-DEF})}\end{minipage} } 
-          }        
-      
+           } 
+           
+          \pstree{
+            \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{binaries}}}}}
+          }{
+            \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
+              $\Rightarrow$ OSUC-05B\\
+              \textit{(see p.\ \pageref{OSUC-05-DEF})}\end{minipage} } 
+           }   
+   
+         }
       }
       \pstree{
         \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{embedded}}}}}
@@ -238,9 +289,9 @@ branches:
            }
         }{
         
-          \Tr[edge=none]{\begin{minipage}[b][2em][c]{6em}
-              $\Rightarrow$ OSUC-06\\
-              \textit{(see p.\ \pageref{OSUC-06-DEF})}\end{minipage} }
+          \Tr[edge=none]{\begin{minipage}[b][2em][c]{9em}
+              $\Rightarrow$ OSUC-06:
+              \textit{p.\ \pageref{OSUC-06-DEF}}\end{minipage} }
           }
         
         
@@ -248,10 +299,23 @@ branches:
           \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{4others}}}}}
         }{
 
-          \Tr[edge=none]{\begin{minipage}[b][2em][c]{6em}
-              $\Rightarrow$ OSUC-07\\
-              \textit{(see p.\ \pageref{OSUC-06-DEF})}\end{minipage} }
-          }
+          \pstree{
+            \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{sources}}}}}
+          }{
+            \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
+              $\Rightarrow$ OSUC-07S\\
+              \textit{(see p.\ \pageref{OSUC-07-DEF})}\end{minipage} } 
+           } 
+           
+          \pstree{
+            \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{binaries}}}}}
+          }{
+            \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
+              $\Rightarrow$ OSUC-07B\\
+              \textit{(see p.\ \pageref{OSUC-07-DEF})}\end{minipage} } 
+           } 
+
+         }
       }
     }
     \pstree{
@@ -263,9 +327,23 @@ branches:
         \pstree{
           \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{4others}}}}}
         }{
-          \Tr[edge=none]{\begin{minipage}[b][2em][c]{6em} 
-              $\Rightarrow$ OSUC-08\\
+                      
+          \pstree{
+            \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{sources}}}}}
+          }{
+            \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
+              $\Rightarrow$ OSUC-08S\\
               \textit{(see p.\ \pageref{OSUC-08-DEF})}\end{minipage} } 
+           } 
+           
+          \pstree{
+            \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{binaries}}}}}
+          }{
+            \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
+              $\Rightarrow$ OSUC-08B\\
+              \textit{(see p.\ \pageref{OSUC-08-DEF})}\end{minipage} } 
+           }              
+
           }        
       }
       \pstree{
@@ -274,19 +352,32 @@ branches:
         \pstree{
           \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{4yourself}}}}}
         }{
-           \Tr[edge=none]{\begin{minipage}[b][2em][c]{6em} 
-              $\Rightarrow$ OSUC-09\\
-              \textit{(see p.\ \pageref{OSUC-09-DEF})}\end{minipage} } 
+           \Tr[edge=none]{\begin{minipage}[b][2em][c]{9em} 
+              $\Rightarrow$ OSUC-09:
+              \textit{p.\ \pageref{OSUC-09-DEF}}\end{minipage} } 
           } 
         
         \pstree{
           \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{4others}}}}}
         }{
 
-           \Tr[edge=none]{\begin{minipage}[b][2em][c]{6em} 
-              $\Rightarrow$ OSUC-10\\
+          \pstree{
+            \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{sources}}}}}
+          }{
+            \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
+              $\Rightarrow$ OSUC-10S\\
               \textit{(see p.\ \pageref{OSUC-10-DEF})}\end{minipage} } 
-          } 
+           } 
+           
+          \pstree{
+            \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{binaries}}}}}
+          }{
+            \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
+              $\Rightarrow$ OSUC-10B\\
+              \textit{(see p.\ \pageref{OSUC-10-DEF})}\end{minipage} } 
+           } 
+           
+         }
 
       }
     }
@@ -294,13 +385,6 @@ branches:
 }
 \end{footnotesize}
 \label{OSLiCUseCaseFinder}
-
-Please keep in mind, that for reducing the complexity of this general taxonomy,
-we suppressed the differentiation between distributing binaries and distributing
-sources\footnote{For details concerning a necessary refinement of the taxonomy
-$\rightarrow$ OSLiC, p.\ \pageref{sec:SourceBinaryDifference}}. Nevertheless,
-the final to-do lists respect this difference whereever it is necessary. It is
-up to you to select the correct to-do list on the basis of its titles.
 
 \section{The open source use cases and its to-do list references}
 
