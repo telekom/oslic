@@ -41,7 +41,7 @@ MS-PL specific finder can be simplified:
     \tiny{\textit{only for}}\\\tiny{\textit{yourself}} }}} 
   }
   \pstree[levelsep=*0.2,treesep=0.2]{
-    \Tr{\Ovalbox{\shortstack{recipient: \textit{4others}\\
+    \Tr{\Ovalbox{\shortstack{recipient: \textit{2others}\\
       \textbf{\textit{distributed to 3rd parties}}}}} 
   }{ 
     \pstree[levelsep=*0.2,treesep=0.2]{
@@ -118,22 +118,24 @@ MS-PL specific finder can be simplified:
 
 
 \subsection{MS-PL-2: Passing the unmodified software}
-\label{OSUC-02-MS-PL} \label{OSUC-05-MS-PL} \label{OSUC-07-MS-PL} 
+\label{OSUC-02S-MS-PL} \label{OSUC-05S-MS-PL} \label{OSUC-07S-MS-PL} 
+\label{OSUC-02B-MS-PL} \label{OSUC-05B-MS-PL} \label{OSUC-07B-MS-PL} 
 
 \begin{description}
 \item[means] that you are going to distribute an unmodified version of the
-received MS-PL software to 3rd parties -- regardless whether you distribute it
-in the form of binaries or of source code files\footnote{In this case it also
-doesn't matter whether you distribute a program, an application, a server, a
-snippet, a module, a library, or a plugin as an independent package}
+received MS-PL software to 3rd parties -- in the form of binaries or as source
+code files. In this case it also doesn't matter whether you distribute a
+program, an application, a server, a snippet, a module, a library, or a plugin
+as an independent package.
 
-\item[covers] OSUC-02, OSUC-05, OSUC-07\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-02-DEF} - \pageref{OSUC-07-DEF}}
+\item[covers] OSUC-02S, OSUC-02B, OSUC-05S,  OSUC-05B, OSUC-07S,
+OSUC-07B\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-02B-DEF} -
+\pageref{OSUC-07B-DEF}}
 
 \item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
   \item \textbf{[mandatory:]} Ensure that all licensing elements -- esp.\ all
-  copyright, patent, trademark, and attribution notices that are present in the
+  copyright, patent, trademark, and attribution notices that are part of the
   version you received -- are completely retained in your package.
   
   \item \textbf{[mandatory:]} Incorporate a complete copy of the MS-PL license
@@ -151,20 +153,21 @@ additional or general legally based approval).
 \end{description}
 
 \subsection{MS-PL-3: Passing a modified program as source code}
-\label{OSUC-04-MS-PL}
+\label{OSUC-04S-MS-PL}
 
 \begin{description}
 
 \item[means] that you are going to distribute a modified version of the received
-MS-PL licensed program, application, or server (proapse) to 3rd parties as a
-source code package.
+MS-PL licensed program, application, or server (proapse) to 3rd parties - in
+the form of source code files or source code package.
 
-\item[covers] OSUC-04\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-04-DEF}}
+\item[covers] OSUC-04S\footnote{For details $\rightarrow$ OSLiC, pp.\
+\pageref{OSUC-04S-DEF}}
 
 \item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
   \item \textbf{[mandatory:]} Ensure that all licensing elements -- esp.\ all
-  copyright, patent, trademark, and attribution notices that are present in the
+  copyright, patent, trademark, and attribution notices that are part of the
   version you received -- are completely retained in your package.
  
   \item \textbf{[mandatory:]} Incorporate a complete copy of the MS-PL license
@@ -200,14 +203,16 @@ additional or general legally based approval).
 
 
 \subsection{MS-PL-3: Passing a modified program as binary}
+\label{OSUC-04B-MS-PL}
 
 \begin{description}
 
 \item[means] that you are going to distribute a modified version of the received
-MS-PL licensed program, application, or server (proapse) to 3rd parties as a
-package of binaries.
+MS-PL licensed program, application, or server (proapse) to 3rd parties -- in
+the form of binary files or as bianry package.
 
-\item[covers] OSUC-04\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-04-DEF}}
+\item[covers] OSUC-04B\footnote{For details $\rightarrow$ OSLiC, pp.\
+\pageref{OSUC-04B-DEF}}
 
 \item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
@@ -238,17 +243,19 @@ additional or general legally based approval)
 
 
 \subsection{MS-PL-4: Passing a modified library independently as source code}
-\label{OSUC-08-MS-PL}
+\label{OSUC-08S-MS-PL}
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
-MS-PL code snippet, module, library, or plugin (snimoli) to 3rd parties without
-embedding it into another larger software unit.
-\item[covers] OSUC-08\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-08-DEF}}
+MS-PL code snippet, module, library, or plugin (snimoli) to 3rd parties -- in
+the form of source code but without embedding it into another larger software
+unit.
+\item[covers] OSUC-08S\footnote{For details $\rightarrow$ OSLiC, pp.\
+\pageref{OSUC-08S-DEF}}
 \item[requires] the following tasks in order to fulfill the license conditions:
 
 \begin{itemize}
   \item \textbf{[mandatory:]} Ensure that all licensing elements -- esp.\ all
-  copyright, patent, trademark, and attribution notices that are present in the
+  copyright, patent, trademark, and attribution notices that are part of the
   version you received -- are completely retained in your package.
  
   \item \textbf{[mandatory:]} Incorporate a complete copy of the MS-PL license
@@ -273,12 +280,14 @@ additional or general legally based approval)
 \end{description}
 
 \subsection{MS-PL-4: Passing a modified library independently as binary}
-\label{OSUC-08-MS-PL}
+\label{OSUC-08B-MS-PL}
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
-MS-PL code snippet, module, library, or plugin (snimoli) to 3rd parties without
-embedding it into another larger software unit.
-\item[covers] OSUC-08\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-08-DEF}}
+MS-PL code snippet, module, library, or plugin (snimoli) to 3rd parties -- in
+the form of binary files but without embedding it into another larger software
+unit.
+\item[covers] OSUC-08B\footnote{For details $\rightarrow$ OSLiC, pp.\
+\pageref{OSUC-08B-DEF}}
 \item[requires] the following tasks in order to fulfill the license conditions:
 
 \begin{itemize}
@@ -298,22 +307,22 @@ additional or general legally based approval)
 
 \end{description}
 
-
 \subsection{MS-PL-5: Passing a modified library as embedded source code}
-\label{OSUC-10-MS-PL}
+\label{OSUC-10S-MS-PL}
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
 MS-PL licensed code snippet, module, library, or plugin (snimoli) to 3rd parties
-in the form of a set of source code files or an integrated source code package
-together with another larger software unit which contains this code snippet,
-module, library, or plugin as an embedded component.
+-- in the form of source code files or as a source code package together with
+another larger software unit which contains this code snippet, module, library,
+or plugin as an embedded component.
 
-\item[covers] OSUC-10\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-10-DEF}}
+\item[covers] OSUC-10S\footnote{For details $\rightarrow$ OSLiC, pp.\
+\pageref{OSUC-10S-DEF}}
 \item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
  
  \item \textbf{[mandatory:]} Ensure that all licensing elements -- esp.\ all
-  copyright, patent, trademark, and attribution notices that are present in the
+  copyright, patent, trademark, and attribution notices that are part of the
   version you received -- are completely retained in your package.
  
   \item \textbf{[mandatory:]} Incorporate a complete copy of the MS-PL license
@@ -345,14 +354,16 @@ additional or general legally based approval)
 \end{description}
 
 \subsection{MS-PL-5: Passing a modified library as embedded binary}
-\label{OSUC-10-MS-PL}
+\label{OSUC-10B-MS-PL}
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
 MS-PL licensed code snippet, module, library, or plugin (snimoli) to 3rd parties
-in the form of a binary package together with another larger software unit which
-contains this code snippet, module, library, or plugin as an embedded component.
+-- in the form of a binary package together with another larger software unit
+which contains this code snippet, module, library, or plugin as an embedded
+component.
 
-\item[covers] OSUC-10\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-10-DEF}}
+\item[covers] OSUC-10B\footnote{For details $\rightarrow$ OSLiC, pp.\
+\pageref{OSUC-10B-DEF}}
 \item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
  
@@ -394,7 +405,7 @@ examination is lighting the situation: The only other conditions of the license
 which refer to the context of distributing binaries are the requirements a) not
 to abuse trademarks, b) not to bring a patent claim against any contributor, and
 c) not to expect any warranties or guarantees with respect to the distributed
-portion\footcite[cf.][\nopage wp\ §3A, §3B, §3E]{MsplOsiLicense2013a}.
+portion\footcite[cf.][\nopage wp.\ §3A, §3B, §3E]{MsplOsiLicense2013a}.
 
 Based on these readings we decided \ldots
 
