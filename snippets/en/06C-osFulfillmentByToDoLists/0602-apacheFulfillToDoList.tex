@@ -28,7 +28,7 @@
 Today, the current release of the Apache open source license is version 2.0,
 elder versions are depricated\footnote{For details $\rightarrow$ OSLiC, pp.\
 \pageref{sec:ProtectPowerOfApL}}. Because it focusses primarily on the
-\enquote{redistribution}\footcite[cf.][\nopage wp\ §4]{Apl20OsiLicense2004a},
+\enquote{redistribution}\footcite[cf.][\nopage wp.\ §4]{Apl20OsiLicense2004a},
 the following simplified Apache specific open source use case
 finder\footnote{For details of the general OSUC finder $\rightarrow$ OSLiC, pp.\
 \pageref{OsucTokens} and \pageref{OsucDefinitionTree}} can be used:
@@ -52,7 +52,7 @@ finder\footnote{For details of the general OSUC finder $\rightarrow$ OSLiC, pp.\
 \node[nodv] (l71) at (4,10) {ApL};
 
 \node[nodb] (l61) at (0,8.6) {\textit{recipient:} \\ \textbf{4yourself}};
-\node[nodb] (l62) at (6.5,8.6) {\textit{recipient:} \\ \textbf{4others}};
+\node[nodb] (l62) at (6.5,8.6) {\textit{recipient:} \\ \textbf{2others}};
 
 \node[nodb] (l51) at (2.5,7) {\textit{state:} \\ \textbf{unmodified}};
 \node[nodb] (l52) at (9.3,7) {\textit{state:} \\ \textbf{modified}};
@@ -162,23 +162,23 @@ license with respect to this use case:
 \end{description}
 
 \subsection{ApL-2: Passing the unmodified software as source code}
-\label{OSUC-02-Apache20} \label{OSUC-05-Apache20} \label{OSUC-07-Apache20} 
+\label{OSUC-02S-Apache20} \label{OSUC-05S-Apache20} \label{OSUC-07S-Apache20} 
 
 \begin{description}
 
 \item[means] that you are going to distribute an unmodified version of the
-received Apache software to 3rd parties in the form of a set of source code files or
-an integrated source code package\footnote{In this case it doesn't matter
-whether you  distribute a program, an application, a server, a snippet, a
-module, a library, or a plugin as an independent or an embedded unit}
+received Apache software to 3rd parties -- in the form of source code files or
+as a source code package. In this case it doesn't matter whether you are going
+to distribute a program, an application, a server, a snippet, a module, a
+library, or a plugin as an independent or as an embedded unit.
 
-\item[covers] OSUC-02, OSUC-05, OSUC-07\footnote{For details $\rightarrow$ OSLiC, pp.\ 
-\pageref{OSUC-02-DEF} - \pageref{OSUC-07-DEF}}
+\item[covers] OSUC-02S, OSUC-05S, OSUC-07S\footnote{For details $\rightarrow$
+OSLiC, pp.\ \pageref{OSUC-02S-DEF} - \pageref{OSUC-07S-DEF}}
 
 \item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
   \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
-  license. If it is not already present in the software package, add
+  license. If it is not already part of the software package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC, p. \pageref{DistributingFilesHint}}.
   \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
@@ -213,21 +213,22 @@ module, a library, or a plugin as an independent or an embedded unit}
 
 
 \subsection{ApL-3: Passing the unmodified software as binaries} 
+\label{OSUC-02B-Apache20} \label{OSUC-05B-Apache20} \label{OSUC-07B-Apache20}
 
 \begin{description}
 \item[means] that you are going to distribute an unmodified version of the
-received Apache software to 3rd parties in the form of a set of binary files or an
-integrated bi\-na\-ry package\footnote{In this case it doesn't matter
-whether you  distribute a program, an application, a server, a snippet, a
-module, a library, or a plugin as an independent or an embedded unit}
+received Apache software to 3rd parties -- in the form of binary files or as a
+bi\-na\-ry package. In this case it doesn't matter whether you 
+distribute a program, an application, a server, a snippet, a module, a library,
+or a plugin as an independent or an embedded unit.
 
-\item[covers] OSUC-02, OSUC-05, OSUC-07\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-02-DEF} - \pageref{OSUC-07-DEF}}
+\item[covers] OSUC-02B, OSUC-05B, OSUC-07B\footnote{For details $\rightarrow$
+OSLiC, pp.\ \pageref{OSUC-02B-DEF} - \pageref{OSUC-07B-DEF}}
 
 \item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
   \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
-  license. If it is not already present in the binary package, add
+  license. If it is not already part of the binary package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC, p. \pageref{DistributingFilesHint}}.
   
@@ -264,18 +265,19 @@ module, a library, or a plugin as an independent or an embedded unit}
 \end{description}
 
 \subsection{ApL-4: Passing a modified program as source code}
-\label{OSUC-04-Apache20} 
+\label{OSUC-04S-Apache20} 
 
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
-Apache licensed program, application, or server (proapse) to 3rd parties in form
-of a set of source code files or an integrated source code package.
-\item[covers] OSUC-04\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-04-DEF}}
+Apache licensed program, application, or server (proapse) to 3rd parties -- in
+the form of source code files or as a source code package.
+\item[covers] OSUC-04S\footnote{For details $\rightarrow$ OSLiC, pp.\
+\pageref{OSUC-04S-DEF}}
 \item[requires] the tasks in order to fulfill the license conditions:
 \begin{itemize}
   
   \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
-  license. If it is not already present in the software package, add
+  license. If it is not already part of the software package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC, p. \pageref{DistributingFilesHint}}.
 
@@ -317,17 +319,18 @@ of a set of source code files or an integrated source code package.
 \end{description}
 
 \subsection{ApL-5: Passing a modified program as binary}
-
+\label{OSUC-04B-Apache20}
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
-Apache licensed pro\-gram, application, or server (proapse) to 3rd parties in
-the form of a set of binary files or an integrated binary package.
-\item[covers] OSUC-04\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-04-DEF}}
+Apache licensed pro\-gram, application, or server (proapse) to 3rd parties -- in
+the form of binary files or as a binary package.
+\item[covers] OSUC-04B\footnote{For details $\rightarrow$ OSLiC, pp.\
+\pageref{OSUC-04B-DEF}}
 \item[requires] the tasks in order to fulfill the license conditions:
 \begin{itemize}
 
  \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
-  license. If it is not already present in the binary package, add
+  license. If it is not already part of the binary package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC, p. \pageref{DistributingFilesHint}}.
   
@@ -370,19 +373,20 @@ the form of a set of binary files or an integrated binary package.
 \end{description}
 
 \subsection{ApL-6: Passing a modified library as independent source code}
-\label{OSUC-08-Apache20}
+\label{OSUC-08S-Apache20}
 
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
 Apache licensed code snippet, module, library, or plugin (snimoli) to 3rd
-parties in the form of a set of source code files or an integrated source code
-package, but without embedding it into another larger software unit.
-\item[covers] OSUC-08\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-08-DEF}}
+parties -- in the form of source code files or as a source code package, but
+without embedding it into another larger software unit.
+\item[covers] OSUC-08S\footnote{For details $\rightarrow$ OSLiC, pp.\
+\pageref{OSUC-08S-DEF}}
 \item[requires] the tasks in order to fulfill the license conditions:
 \begin{itemize}
   
   \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
-  license. If it is not already present in the software package, add
+  license. If it is not already part of the software package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC, p. \pageref{DistributingFilesHint}}.
 
@@ -420,18 +424,19 @@ package, but without embedding it into another larger software unit.
 
 
 \subsection{ApL-7: Passing a modified library as independent binary}
-
+\label{OSUC-08B-Apache20}
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
-Appache licensed code snippet, module, library, or plugin (snimoli) to 3rd
-parties in the form of a set of binary files or an integrated binary package but
-without embedding it into another larger software unit.
-\item[covers] OSUC-08\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-08-DEF}}
+Apache licensed code snippet, module, library, or plugin (snimoli) to 3rd
+parties -- in the form of binary files or as a binary package but without
+embedding it into another larger software unit.
+\item[covers] OSUC-08B\footnote{For details $\rightarrow$ OSLiC, pp.\
+\pageref{OSUC-08B-DEF}}
 \item[requires] the tasks in order to fulfill the license conditions:
 \begin{itemize}
   
  \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
-  license. If it is not already present in the binary package, add
+  license. If it is not already part of the binary package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC, p. \pageref{DistributingFilesHint}}.
   
@@ -469,20 +474,21 @@ without embedding it into another larger software unit.
 \end{description}
 
 \subsection{ApL-8: Passing a modified library as embedded source code}
-\label{OSUC-10-Apache20}
+\label{OSUC-10S-Apache20}
 
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
 Apache licensed code snippet, module, library, or plugin (snimoli) to 3rd
-parties in the form of a set of source code files or an integrated source code
-package together with another larger software unit which contains this code
-snippet, module, library, or plugin as an embedded component.
-\item[covers] OSUC-10\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-10-DEF}}
+parties -- in the form of source code files or as a source code package together
+with another larger software unit which contains this code snippet, module,
+library, or plugin as an embedded component.
+\item[covers] OSUC-10S\footnote{For details $\rightarrow$ OSLiC, pp.\
+\pageref{OSUC-10S-DEF}}
 \item[requires] the tasks in order to fulfill the license conditions:
 \begin{itemize}
   
   \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
-  license. If it is not already present in the software package, add
+  license. If it is not already part of the software package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC, p. \pageref{DistributingFilesHint}}.
 
@@ -531,19 +537,20 @@ snippet, module, library, or plugin as an embedded component.
 
 
 \subsection{ApL-9: Passing a modified library as embedded binary}
-
+\label{OSUC-10B-Apache20}
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
-Apache licensed code snippet, module, library, or plugin to 3rd parties in form
-of a set of binary files or an integrated binary package together with another
-larger software unit which contains this code snippet, module, library, or
-plugin as an embedded component.
-\item[covers] OSUC-10\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-10-DEF}}
+Apache licensed code snippet, module, library, or plugin to 3rd parties -- in
+the form of binary files or as a binary package together with another larger
+software unit which contains this code snippet, module, library, or plugin as an
+embedded component.
+\item[covers] OSUC-10B\footnote{For details $\rightarrow$ OSLiC, pp.\
+\pageref{OSUC-10B-DEF}}
 \item[requires] the tasks in order to fulfill the license conditions:
 \begin{itemize}
   
   \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
-  license. If it is not already present in the binary package, add
+  license. If it is not already part of the binary package, add
   it\footnote{For implementing the handover of files correctly $\rightarrow$
   OSLiC, p. \pageref{DistributingFilesHint}}.
   
@@ -599,20 +606,20 @@ plugin as an embedded component.
   \enquote{[\ldots] to use the trade names, trademarks, service marks, or
   product names of the Licensor, except as required for reasonable and customary
   use in describing the origin of the Work and reproducing the content of the
-  NOTICE file}\footcite[cf.][\nopage wp\ §6]{Apl20OsiLicense2004a}. On the other
+  NOTICE file}\footcite[cf.][\nopage wp.\ §6]{Apl20OsiLicense2004a}. On the other
   hand, this license alerts that all the patent licenses – granted to those who
   \enquote{[\ldots] institute a patent litigation} – will terminate
-  automatically\footcite[cf.][\nopage wp\ §3]{Apl20OsiLicense2004a}. Hence, the
+  automatically\footcite[cf.][\nopage wp.\ §3]{Apl20OsiLicense2004a}. Hence, the
   OSLiC generally (ApL-1 - ApL-9) interdicts to promote products or services by
   these elements and to legally fight against patents linked to the software.
   
   \item The ApL also requires to \enquote{[\ldots] give any other recipients of
-  the Work or Derivative Works a copy of this License}\footcite[cf.][\nopage wp\
-  §4.1]{Apl20OsiLicense2004a}. Therefore, all \emph{4others} use cases contain
+  the Work or Derivative Works a copy of this License}\footcite[cf.][\nopage wp.\
+  §4.1]{Apl20OsiLicense2004a}. Therefore, all \emph{2others} use cases contain
   the respective mandatory condition (ApL-2 - ApL-9).
    
   \item Additionally, the ApL requires, that modifications must be
-  marked\footcite[cf.][\nopage wp\ §4.2]{Apl20OsiLicense2004a}. Thus, in all
+  marked\footcite[cf.][\nopage wp.\ §4.2]{Apl20OsiLicense2004a}. Thus, in all
   cases of passing the modified software in the form of source code the OSLiC
   requires to mark the modifications and to integrate a hint into the notice
   file – while in all the cases of passing the modified software in the form of
@@ -633,7 +640,7 @@ plugin as an embedded component.
   integrated as readable copy to each package distributed in the form of source
   code, or – in case of binary distibutions – must be displayed
   \enquote{[\ldots] if and wherever such third-party notices normally
-  appear}\footcite[cf.][\nopage wp\ §4.4]{Apl20OsiLicense2004a}. Thus, the OSLiC
+  appear}\footcite[cf.][\nopage wp.\ §4.4]{Apl20OsiLicense2004a}. Thus, the OSLiC
   requires mandatorily that all source code distributions must include the
   notice text file (ApL-2, ApL-4, ApL-6, ApL-8) and that all distributions of
   binary applications which normally show such a copyrigth screen must integrate

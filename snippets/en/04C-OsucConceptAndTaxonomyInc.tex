@@ -124,15 +124,14 @@ open source software licenses:
   other people. More specifically, we will ask you, whether you are going to use
   the open source software only for yourself, or whether you plan to
   (re)distribute it (also) to third parties. In the first case, the answer
-  should be '\underline{4yourself}', in the second '\underline{4others}'.
+  should be '\underline{4yourself}', in the second '\underline{2others}'.
  
-  \item The \textbf{\underline{mode} of combination}: In this case, we will ask
-  you, whether you are going to combine or to embed the open source software
-  with other software components by linking them statically or dynamically, or
-  by textually including (parts of) the open source software into your larger
-  product. In the first case, the answer should be '\underline{statically
-  linked}', in the second '\underline{dynamically linked}', in the third
-  '\underline{textually included}'
+  \item The \textbf{\underline{form} of the distributed files}: Many licenses
+  also draw a distinction between distributing the software as sources and
+  distributing the files as binaries. In this case, we will ask you, whether you
+  want to distribute the software in the form of binaries or as source code. In
+  the first case, the answer should be '\underline{binaries}', in the second
+  '\underline{sources}'
   
 \end{itemize}
 
@@ -143,22 +142,26 @@ follows:
   \item \texttt{type::snimoli} \emph{or} \texttt{type::proapse}
   \item \texttt{state::unmodified} \emph{or} \texttt{state::modified}
   \item \texttt{context::independent} \emph{or} \texttt{context::embedded}
-  \item \texttt{recipient::4yourself} \emph{or} \texttt{recipient::4others}
-  \item \texttt{mode::statically-linked} \emph{or} \texttt{mode::dynamically-linked}
-   \emph{or} \\ \texttt{mode::textually-included}
+  \item \texttt{recipient::4yourself} \emph{or} \texttt{recipient::2others}
+  \item \texttt{form::binaries} \emph{or} \texttt{form::sources}
 \end{itemize}
 
-We already defined an open source use case as a combination of these tokens. If
-we simply combine all these tokens of all these classes with all the tokens of
-the other classes\footnote{in the sense of the cross product TYPE $\times$ STATE
-$\times$ CONTEXT $\times$ RECIPIENT $\times$ MODE}, we get 2*2*2*2*3 = 48 sets
-of tokens -- or 48 \emph{open source use cases}. Fortunately, some of the
-generated sets are invalid from an empirical or logical view, and some of these
-sets are context sensitive:
-\label{InvalidFinderTokenCombinations}
+We have already defined the \emph{open source use case} as the combination of
+these tokens. If we simply combine all these tokens of all these classes with
+all the tokens of the other classes\footnote{in the sense of the cross product
+TYPE $\times$ STATE $\times$ CONTEXT $\times$ RECIPIENT $\times$ FORM. In some
+earlier versions of the OSLiC, we also asked whether you are going to combine or
+to embed the open source software with other software components by linking them
+statically or dynamically, or by textually including (parts of) the open source
+software into your larger product. Meanwhile, we clearly discovered that it is
+unnecessary to increase the complexity by the results of this question. For
+Details $\rightarrow$ OSLiC p.\ \pageref{sec:LinkingSecondary}}, we get
+2*2*2*2*2 = 32 sets of tokens -- or 32 \emph{open source use cases}.
+Fortunately, some of the generated sets are invalid from an empirical or logical
+view, and some of these sets are context sensitive:
 
 \begin{enumerate}
-  
+  \label{InvalidFinderTokenCombinations}
   \item It would be unreasonable to ask you whether you are going to combine the
   received software with other software components by linking them statically or
   dynamically, or by including it textually into a larger unit, if you already
@@ -192,7 +195,7 @@ sets are context sensitive:
 Does this sound complex? We thought so, too. We spent much time explaining these
 constraints to ourselves, and only when we had transposed all the combinations
 and rules into a tree, the situation became clearer. The following diagrams
-shall summarize this way of clarification:
+shall summarize our own clarifications:
 
 \section{Overview of the OSUC classes and tokens}
 
@@ -209,23 +212,15 @@ shall summarize this way of clarification:
       \Toval{modified}
     }
     \pstree[]{\Tr{\fbox{context?}}}{
-      \Toval{independent} 
-      \pstree[]{\Toval{embedded}}{
-        \pstree[]{\Tr{\fbox{mode?}}}{
-          \Toval{statically linked}
-          \Toval{dynamically linked}
-          \Toval{textually included}
-        }
-      }
+      \Toval{independent}
+      \Toval{embedded} 
     }
     \pstree[]{\Tr{\fbox{recipient?}}}{
       \Toval{4yourself}
-      \pstree[]{\Toval{4others}}{
-      \pstree[]{\Tr{\fbox{\tiny \textit{form\footnote{For differentiating
-      between distributing sources and binaries $\rightarrow$ OSLiC, p.\
-      \pageref{sec:SourceBinaryDifference}}}?}}}{
-          \Toval{\tiny \textit{sources}}
-          \Toval{\tiny \textit{binaries}}
+      \pstree[]{\Toval{2others}}{
+      \pstree[]{\Tr{\fbox{form?}}}{
+          \Toval{\textit{sources}}
+          \Toval{\textit{binaries}}
         }
       }
     }
@@ -269,12 +264,20 @@ like having an unused heap of bytes on your disc.}:
                              \hspace*{0.5em}\underline{4yourself}\}}}}
                    }                            
                   \pstree[]{\Toval{\bfseries{OSUC-02}}}{
-                             
-                    \Tr{\parbox{5.2em}{
+                        
+                      \pstree[]{\Tr{\parbox{5.2em}{
                              \texttt{\{proapse,\\
                              \hspace*{0.5em}unmodified,\\
                              \hspace*{0.5em}independent,\\
-                             \hspace*{0.5em}\underline{4others}\}}}}
+                             \hspace*{0.5em}\underline{2others}\}}}}}{
+                               \pstree[]{\Tr{\fbox{$\cup$ form?}}}{
+                                 \Tr{\parbox{5.6em}{\underline{\textit{OSUC-02s}}\\
+                                 \texttt{\{sources\}}}}
+
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-02b}}\\
+                                \texttt{\{binaries\}}}}
+                               }
+                             }                                  
                     }         
                 }
               }
@@ -303,12 +306,23 @@ like having an unused heap of bytes on your disc.}:
                              \hspace*{0.5em}independent,\\
                              \hspace*{0.5em}\underline{4yourself}\}}}}
                    }
-                   \pstree[]{\Toval{\bfseries{OSUC-04}}}{         
-                    \Tr{\parbox{5.2em}{
+                   \pstree[]{\Toval{\bfseries{OSUC-04}}}{ 
+                           
+                      \pstree[]{\Tr{\parbox{5.2em}{
                              \texttt{\{proapse,\\
                              \hspace*{0.5em}modified,\\
                              \hspace*{0.5em}independent,\\
-                             \hspace*{0.5em}\underline{4others}\}}}}
+                             \hspace*{0.5em}\underline{2others}\}}}}}{
+                               \pstree[]{\Tr{\fbox{$\cup$ form?}}}{
+                                 \Tr{\parbox{5.6em}{\underline{\textit{OSUC-04s}}\\
+                                 \texttt{\{sources\}}}}
+
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-04b}}\\
+                                \texttt{\{binaries\}}}}
+                               }
+                             }       
+
+                             
                    }         
                 }
               }
@@ -343,13 +357,24 @@ like having an unused heap of bytes on your disc.}:
                              \bfseries{\lightning}\}}}}
                      }{\Tr{$\varnothing$}}        
                              
-                             
-                   \pstree[]{\Toval{\bfseries{OSUC-05}}}{        
-                    \Tr{\parbox{5.2em}{
+
+                   \pstree[]{\Toval{\bfseries{OSUC-05}}}{
+                   
+                    \pstree[]{\Tr{\parbox{5.2em}{
                              \texttt{\{snimoli,\\
                              \hspace*{0.5em}unmodified,\\
                              \hspace*{0.5em}independent,\\
-                             \hspace*{0.5em}\underline{4others}\}}}}
+                             \hspace*{0.5em}\underline{2others}\}}}}}{
+                               \pstree[]{\Tr{\fbox{$\cup$ form?}}}{
+                                 \Tr{\parbox{5.6em}{\underline{\textit{OSUC-05s}}\\
+                                 \texttt{\{sources\}}}}
+
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-05b}}\\
+                                \texttt{\{binaries\}}}}
+                               }
+                             }
+                                          
+                             
                     }         
                 }
               }
@@ -361,40 +386,27 @@ like having an unused heap of bytes on your disc.}:
                              \hspace*{0.5em}\underline{embedded}\}}}}}{
                 \pstree[]{\Tr{\fbox{recipient?}}}{
                   \pstree[]{\Toval{\bfseries{OSUC-06}}}{
-                    \pstree[]{\Tr{\parbox{5.2em}{
+                  
+                    \Tr{\parbox{5.2em}{
                              \texttt{\{snimoli,\\
                              \hspace*{0.5em}unmodified,\\
                              \hspace*{0.5em}embedded,\\
-                             \hspace*{0.5em}\underline{4yourself}\}}}}}{
-                               \pstree[]{\Tr{\fbox{$\cup$ mode?}}}{
-                                 \Tr{\parbox{5.6em}{\underline{\textit{OSUC-06a}}\\
-                                 \texttt{\{statically\\
-                                  \hspace*{0.5em}linked\}}}}
-                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-06b}}\\
-                                \texttt{\{dynamically\\
-                                  \hspace*{0.5em}linked\}}}}
-                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-06c}}\\
-                                \texttt{\{textually\\
-                                  \hspace*{0.5em}included\}}}}
-                               }
-                             }
+                             \hspace*{0.5em}\underline{4yourself}\}}}}
+                  
+                             
                     }
                     \pstree[]{\Toval{\bfseries{OSUC-07}}}{        
                       \pstree[]{\Tr{\parbox{5.2em}{
                              \texttt{\{snimoli,\\
                              \hspace*{0.5em}unmodified,\\
                              \hspace*{0.5em}embedded,\\
-                             \hspace*{0.5em}\underline{4others}\}}}}}{
-                               \pstree[]{\Tr{\fbox{$\cup$ mode?}}}{
-                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-07a}}\\
-                                \texttt{\{statically\\
-                                  \hspace*{0.5em}linked\}}}}
-                                \Tr{\parbox{5.26em}{\underline{\textit{OSUC-07b}}\\
-                                \texttt{\{dynamically\\
-                                  \hspace*{0.5em}linked\}}}}
-                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-07c}}\\
-                                \texttt{\{textually\\
-                                  \hspace*{0.5em}included\}}}}
+                             \hspace*{0.5em}\underline{2others}\}}}}}{
+                               \pstree[]{\Tr{\fbox{$\cup$ form?}}}{
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-07s}}\\
+                                \texttt{\{sources\}}}}
+
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-07b}}\\
+                                \texttt{\{binaries\}}}}
                                }
                              }
                        }     
@@ -423,12 +435,22 @@ like having an unused heap of bytes on your disc.}:
                              \bfseries{\lightning}\}}}}
                      }{\Tr{$\varnothing$}}         
                              
-                   \pstree[]{\Toval{\bfseries{OSUC-08}}}{              
-                    \Tr{\parbox{5.2em}{
+                   \pstree[]{\Toval{\bfseries{OSUC-08}}}{ 
+
+                    \pstree[]{\Tr{\parbox{5.2em}{
                              \texttt{\{snimoli,\\
                              \hspace*{0.5em}modified,\\
                              \hspace*{0.5em}independent,\\
-                             \hspace*{0.5em}\underline{4others}\}}}}
+                             \hspace*{0.5em}\underline{2others}\}}}}}{
+                               \pstree[]{\Tr{\fbox{$\cup$ form?}}}{
+                                 \Tr{\parbox{5.6em}{\underline{\textit{OSUC-08s}}\\
+                                 \texttt{\{sources\}}}}
+
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-08b}}\\
+                                \texttt{\{binaries\}}}}
+                               }
+                             }
+                                                             
                     }
                 }
               }
@@ -438,41 +460,26 @@ like having an unused heap of bytes on your disc.}:
                              \hspace*{0.5em}modified,\\
                              \hspace*{0.5em}\underline{embedded}\}}}}}{
                 \pstree[]{\Tr{\fbox{recipient?}}}{
-                  \pstree[]{\Toval{\bfseries{OSUC-09}}}{     
-                    \pstree[]{\Tr{\parbox{5.2em}{
+                  \pstree[]{\Toval{\bfseries{OSUC-09}}}{  
+
+                    \Tr{\parbox{5.2em}{
                              \texttt{\{snimoli,\\
                              \hspace*{0.5em}modified,\\
                              \hspace*{0.5em}embedded,\\
-                             \hspace*{0.5em}\underline{4yourself}\}}}}}{
-                               \pstree[]{\Tr{\fbox{$\cup$ mode?}}}{
-                                 \Tr{\parbox{5.6em}{\underline{\textit{OSUC-09a}}\\
-                                 \texttt{\{statically\\
-                                  \hspace*{0.5em}linked\}}}}
-                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-09b}}\\
-                                \texttt{\{dynamically\\
-                                \hspace*{0.5em}linked\}}}}
-                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-09c}}\\
-                                \texttt{\{textually\\
-                                  \hspace*{0.5em}included\}}}}
-                               }
-                             }
+                             \hspace*{0.5em}\underline{4yourself}\}}}}                             
                            }
+                           
                    \pstree[]{\Toval{\bfseries{OSUC-10}}}{           
                     \pstree[]{\Tr{\parbox{5.2em}{
                              \texttt{\{snimoli,\\
                              \hspace*{0.5em}modified,\\
                              \hspace*{0.5em}embedded,\\
-                             \hspace*{0.5em}\underline{4others}\}}}}}{
-                               \pstree[]{\Tr{\fbox{$\cup$ mode?}}}{
-                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-10a}}\\
-                                \texttt{\{statically\\
-                                  \hspace*{0.5em}linked\}}}}
-                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-10b}}\\
-                                \texttt{\{dynamically\\
-                                  \hspace*{0.5em}linked\}}}}
-                                \Tr{\parbox{5.2em}{\underline{\textit{OSUC-10c}}\\
-                                \texttt{\{textually\\
-                                  \hspace*{0.5em}included\}}}}
+                             \hspace*{0.5em}\underline{2others}\}}}}}{
+                               \pstree[]{\Tr{\fbox{$\cup$ form?}}}{
+                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-10s}}\\
+                                \texttt{\{sources\}}}}
+                                \Tr{\parbox{5.2em}{\underline{\textit{OSUC-10b}}\\
+                                \texttt{\{binaries\}}}}
                                }
                              }
                       }
@@ -485,19 +492,5 @@ like having an unused heap of bytes on your disc.}:
     }
   }
 \end{tiny}
-
-\section{About a suppressed degree of complexity}
-\label{sec:SourceBinaryDifference}
-Many licenses also draw a distinction between distributing the software as
-sources and distributing them as binaries. This aspect is not covered by the
-OSLiC taxonomy. Thus, for being truly complete, all the branches of the taxonomy
-referring to the token \emph{4others} should have been split by tokens like
-\emph{distributing sources} and \emph{distributing binaries}. But this would
-have made the taxonomy unusable. So, we suppressed these criteria. But -- of
-course -- we do not want to reduce the reality inadequately; we want to solve
-the problem in a suitable manner. Therefore, we have implicitly split all
-relevant use cases by writing two to-do lists for them, one concerning the
-\emph{distribution of sources} and the other the \emph{distribution of
-binaries}. Please select the relevant to-do list based on its title.
 
 %\bibliography{../../../bibfiles/oscResourcesEn}
