@@ -199,8 +199,9 @@ library as embedded binaries}};
 
 \begin{description}
 
-\item[means] that you are going to use a received GPL licensed software only
-for yourself and that you do not hand it over to any 3rd party in any sense.
+\item[means] that you are going to use a received GPL-V2 or GPL-V3 licensed
+software only for yourself and that you do not hand it over to any 3rd party in
+any sense.
 
 \item[covers] OSUC-01, OSUC-03, OSUC-06, and OSUC-09\footnote{For details
 $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-01-DEF} - \pageref{OSUC-09-DEF}}
@@ -223,10 +224,10 @@ the GPL-V3 with respect to this use case:
 \begin{description}
 
 \item[means] that you are going to distribute an unmodified version of the
-received GPL software to 3rd parties -- as an independent unit and in the form
-of source code files or as a source code package. In this case, it doesn't
-matter whether you distribute a program, an application, a server, a snippet, a
-module, a library, or a plugin.
+received GPL-V2 or GPL-V3 licensed software to 3rd parties -- as an independent
+unit and in the form of source code files or as a source code package. In this
+case, it doesn't matter whether you distribute a program, an application, a
+server, a snippet, a module, a library, or a plugin.
 
 \item[covers] OSUC-02S, OSUC-05S\footnote{For details $\rightarrow$
 OSLiC, pp.\ \pageref{OSUC-02S-DEF} - \pageref{OSUC-05S-DEF}}
@@ -275,10 +276,10 @@ OSLiC, pp.\ \pageref{OSUC-02S-DEF} - \pageref{OSUC-05S-DEF}}
 
 
 \item[means] that you are going to distribute an unmodified version of the
-received GPL software to 3rd parties -- as an independent unit and in the form
-of binary files or as a binary package. In this case, it doesn't matter whether
-you distribute a program, an application, a server, a snippet, a module, a
-library, or a plugin.
+received GPL-V2 or GPL-V3 licensed software to 3rd parties -- as an independent
+unit and in the form of binary files or as a binary package. In this case, it
+doesn't matter whether you distribute a program, an application, a server, a
+snippet, a module, a library, or a plugin.
 
 
 \item[covers] OSUC-02B, OSUC-05B\footnote{For details $\rightarrow$ OSLiC, pp.\
@@ -342,9 +343,9 @@ library, or a plugin.
 \begin{description}
 
 \item[means] that you are going to distribute an unmodified version of the
-received GPL licensed snippet, module or library to 3rd parties -- as embedded
-component of a larger unit and in the form of source code files or as a source
-code package.
+received GPL-V2 or GPL-V3 licensed licensed snippet, module or library to 3rd
+parties -- as embedded component of a larger unit and in the form of source code
+files or as a source code package.
 
 \item[covers] OSUC-07S\footnote{For details $\rightarrow$
 OSLiC, pp.\ \pageref{OSUC-07S-DEF}}
@@ -402,9 +403,9 @@ OSLiC, pp.\ \pageref{OSUC-07S-DEF}}
 
 \begin{description}
 \item[means] that you are going to distribute an unmodified version of the
-received GPL licensed snippet, module or library to 3rd parties -- as embedded
-component of a larger unit and in the form of binary files or as a bi\-na\-ry
-package.
+received GPL-V2 or GPL-V3 licensed licensed snippet, module or library to 3rd
+parties -- as embedded component of a larger unit and in the form of binary
+files or as a bi\-na\-ry package.
 
 
 \item[covers] OSUC-07B\footnote{For details $\rightarrow$ OSLiC, pp.\
@@ -481,8 +482,8 @@ package.
 
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
-GPL licensed program, application, or server (proapse) to 3rd parties -- in the
-form of source code files or as a source code package.
+GPL-V2 or GPL-V3 licensed program, application, or server (proapse) to 3rd
+parties -- in the form of source code files or as a source code package.
 \item[covers] OSUC-04S\footnote{For details $\rightarrow$ OSLiC, pp.\
 \pageref{OSUC-04S-DEF}}
 
@@ -490,18 +491,19 @@ form of source code files or as a source code package.
 \begin{itemize}
   
   \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
-  notices that refer to the GPL-V3 and to the absence of any
+  notices that refer to the GPL-V2 resp. GPL-V3 and to the absence of any
   warranty -- are retained in your package in the form you have received them.
 
   \item \textbf{[mandatory:]} Ensure that the distributed source code package
   contains a conspicuously and appropriately designed, easily to find copyright
   notice and a disclaimer of warranty. If these elements are missed, add a new
-  file containing the main copyright notice and the disclaimer of warranty in the
-  form which is textually defined by the license GPL-V3 itself. (Yes, repeat
-  the disclaimer although it is also part of the license itself and although you
-  are required to hand the license itself over to the receiver.)
+  file containing the main copyright notice and the disclaimer of warranty in
+  the form which is textually defined by the license GPL-V2 or GPL-V3 itself.
+  (Yes, repeat the disclaimer although it is also part of the license itself and
+  although you are required to hand the license itself over to the receiver.)
   
-  \item \textbf{[mandatory:]} Give the recipient a copy of the GPL-V3 license.  
+  \item \textbf{[mandatory:]} Give the recipient a copy of the GPL-V2 resp.
+  GPL-V3 license.
   
   \item \textbf{[mandatory:]} Retain all existing copyright notices and
   licensing elements.
@@ -518,16 +520,20 @@ form of source code files or as a source code package.
   the date of the modification.
   
   \item \textbf{[mandatory:]} Organize your modifications in a way that they are
-  covered by the existing GPL licensing statements.
-  
+  covered by the existing GPL licensing statements. If you add new source code
+  files, insert a header containing your copyright line and a licensing the
+  statement in the form required by the GNU project\footnote{For details see
+  section 'How to Apply These Terms to Your New Programs' in the GPL-v2 resp.
+  GPL-v3 license.}.
+   
   \item \textbf{[voluntary:]} Create a \emph{modification text file}, if such a
   notice file still does not exist. \emph{Expand} the \emph{modification text
   file} by a description of your modifications on a more functional level.
     
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also reproduce the content of the existing
-  copyright notices, a hint to the software name, a link to its homepage,
-  the respective disclaimer of warranty, and a link to the GPL-V3.
+  your additional material also reproduce the content of the existing copyright
+  notices, a hint to the software name, a link to its homepage, the respective
+  disclaimer of warranty, and a link to the GPL-V3 resp. to the GPL-V3.
   
  \end{itemize}
  
@@ -540,8 +546,8 @@ form of source code files or as a source code package.
 
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
-GPL licensed pro\-gram, application, or server (proapse) to 3rd parties -- in
-the form of binary files or as a binary package.
+GPL-V2 or GPL-V3 licensed licensed pro\-gram, application, or server (proapse)
+to 3rd parties -- in the form of binary files or as a binary package.
 \item[covers] OSUC-04B\footnote{For details $\rightarrow$ OSLiC, pp.\
 \pageref{OSUC-04B-DEF}}
 
@@ -549,21 +555,22 @@ the form of binary files or as a binary package.
 \begin{itemize}
 
   \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
-  notices that refer to the GPL-V3 and to the absence of any
+  notices that refer to the GPL-V2resp. the GPL-V3 and to the absence of any
   warranty -- are retained in your package in the form you have received them.
 
   \item \textbf{[mandatory:]} Ensure that the distributed software binary
   package contains a conspicuously and appropriately designed, easily to find
   copyright notice and a disclaimer of warranty. If these elements are missed,
   add a new file containing the main copyright notice and the disclaimer of
-  warranty in the form which is textually defined by the license GPL-V3 itself.
-  (Yes, repeat the disclaimer although it is also part of the license itself and
-  although you are required to hand the license itself over to the receiver.)
+  warranty in the form which is textually defined by the license GPL-V2 resp.
+  GPL-V3 itself. (Yes, repeat the disclaimer although it is also part of the
+  license itself and although you are required to hand the license itself over
+  to the receiver.)
   
-  \item \textbf{[mandatory:]} Give the recipient a copy of the GPL-V3 license.
-  If it is not already part of the software package, add it\footnote{For
-  implementing the handover of files correctly $\rightarrow$ OSLiC, p.
-  \pageref{DistributingFilesHint}}.
+  \item \textbf{[mandatory:]} Give the recipient a copy of the GPL-V2 resp.
+  GPL-V3 license. If it is not already part of the software package, add
+  it\footnote{For implementing the handover of files correctly $\rightarrow$
+  OSLiC, p. \pageref{DistributingFilesHint}}.
   
   \item \textbf{[mandatory:]} Retain all existing copyright notices and
   licensing elements.
@@ -604,9 +611,9 @@ the form of binary files or as a binary package.
   file} by a description of your modifications on a more functional level.
       
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also reproduce the content of the existing
-  copyright notices, a hint to the software name, a link to its homepage,
-  the respective disclaimer of warranty, and a link to the GPL-V3.
+  your additional material also reproduce the content of the existing copyright
+  notices, a hint to the software name, a link to its homepage, the respective
+  disclaimer of warranty, and a link to the GPL-V2 resp. to the GPL-V3.
 
 
 \end{itemize}
@@ -620,9 +627,9 @@ the form of binary files or as a binary package.
 
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
-GPL licensed code snippet, module, library, or plugin (snimoli) to 3rd parties
--- in the form of source code files or as a source code package, but without
-embedding it into another larger software unit.
+GPL-V2 or GPL-V3 licensed code snippet, module, library, or plugin (snimoli) to
+3rd parties -- in the form of source code files or as a source code package, but
+without embedding it into another larger software unit.
 \item[covers] OSUC-08S\footnote{For details $\rightarrow$ OSLiC, pp.\
 \pageref{OSUC-08S-DEF}}
 \item[requires] the tasks in order to fulfill the license conditions:
@@ -654,7 +661,11 @@ embedding it into another larger software unit.
   the date of the modification.
   
   \item \textbf{[mandatory:]} Organize your modifications in a way that they are
-  covered by the existing GPL licensing statements.
+  covered by the existing GPL licensing statements. If you add new source code
+  files, insert a header containing your copyright line and a licensing the
+  statement in the form required by the GNU project\footnote{For details see
+  section 'How to Apply These Terms to Your New Programs' in the GPL-v2 resp.
+  GPL-v3 license.}.
     
   \item \textbf{[voluntary:]} Create a \emph{modification text file}, if such a
   notice file still does not exist. \emph{Expand} the \emph{modification text
@@ -678,9 +689,9 @@ embedding it into another larger software unit.
 
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
-GPL licensed code snippet, module, library, or plugin (snimoli) to 3rd parties
--- in the form of binary files or as a binary package but without embedding it
-into another larger software unit.
+GPL-V2 or GPL-V3 licensed code snippet, module, library, or plugin (snimoli) to
+3rd parties -- in the form of binary files or as a binary package but without
+embedding it into another larger software unit.
 \item[covers] OSUC-08B\footnote{For details $\rightarrow$ OSLiC, pp.\
 \pageref{OSUC-08B-DEF}}
 \item[requires] the tasks in order to fulfill the license conditions:
@@ -750,10 +761,10 @@ into another larger software unit.
 
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
-GPL licensed code snippet, module, library, or plugin (snimoli) to 3rd parties
--- in the form of source code files or as a source code package together with
-another larger software unit which contains this code snippet, module, library,
-or plugin as an embedded component.
+GPL-V2 or GPL-V3 licensed code snippet, module, library, or plugin (snimoli) to
+3rd parties -- in the form of source code files or as a source code package
+together with another larger software unit which contains this code snippet,
+module, library, or plugin as an embedded component.
 \item[covers] OSUC-10S\footnote{For details $\rightarrow$ OSLiC, pp.\
 \pageref{OSUC-10S-DEF}}
 \item[requires] the tasks in order to fulfill the license conditions:
@@ -794,7 +805,10 @@ or plugin as an embedded component.
   
   \item \textbf{[mandatory:]} Organize your modifications of the embedded
   library in a way that they are covered by the existing GPL licensing
-  statements. 
+  statements. If you add new source code files to library itself, insert a
+  header containing your copyright line and a licensing the statement in the
+  form required by the GNU project\footnote{For details see section 'How to
+  Apply These Terms to Your New Programs' in the GPL-v2 resp. GPL-v3 license.}.
   
   \item \textbf{[mandatory:]} Organize the sources of the on-top development in
   a way that they are also covered by the GPL-V2 resp. GPL-V3 licensing
@@ -821,10 +835,10 @@ or plugin as an embedded component.
 
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
-GPL licensed code snippet, module, library, or plugin to 3rd parties -- in the
-form of binary files or as a binary package together with another larger
-software unit which contains this code snippet, module, library, or plugin as an
-embedded component.
+GPL-V2 or GPL-V3 licensed code snippet, module, library, or plugin to 3rd
+parties -- in the form of binary files or as a binary package together with
+another larger software unit which contains this code snippet, module, library,
+or plugin as an embedded component.
 \item[covers] OSUC-10B\footnote{For details $\rightarrow$ OSLiC, pp.\
 \pageref{OSUC-10B-DEF}}
 \item[requires] the tasks in order to fulfill the license conditions:
