@@ -74,31 +74,31 @@ cases}. Thus, the PHP specific finder can be simplified:
 \node[nods] (l23) at (12.6,2.2) {\textit{form:} \textbf{source}};
 \node[nods] (l24) at (14.4,2.2) {\textit{form:} \textbf{binary}};
 
-\node[leaf] (l11) at (0,0) {\textbf{PHP-1} \textit{using software only
+\node[leaf] (l11) at (0,0) {\textbf{PHP-C1} \textit{using software only
 for yourself}};
 
-\node[leaf] (l12) at (1.8,0) { \textbf{PHP-2} \textit{ distributing unmodified
+\node[leaf] (l12) at (1.8,0) { \textbf{PHP-C2} \textit{ distributing unmodified
 software as sources}};
 
-\node[leaf] (l13) at (3.6,0) { \textbf{PHP-3}  \textit{ distributing unmodified
+\node[leaf] (l13) at (3.6,0) { \textbf{PHP-C3}  \textit{ distributing unmodified
 software as binaries}};
 
-\node[leaf] (l14) at (5.4,0) { \textbf{PHP-4}  \textit{ distributing modified
+\node[leaf] (l14) at (5.4,0) { \textbf{PHP-C4}  \textit{ distributing modified
 program as sources}};
 
-\node[leaf] (l15) at (7.2,0) { \textbf{PHP-5}  \textit{ distributing modified
+\node[leaf] (l15) at (7.2,0) { \textbf{PHP-C5}  \textit{ distributing modified
 program as binaries}};
 
-\node[leaf] (l16) at (9,0) { \textbf{PHP-6}  \textit{ distributing modified
+\node[leaf] (l16) at (9,0) { \textbf{PHP-C6}  \textit{ distributing modified
 library as independent sources}};
 
-\node[leaf] (l17) at (10.8,0) { \textbf{PHP-7} \textit{distributing modified
+\node[leaf] (l17) at (10.8,0) { \textbf{PHP-C7} \textit{distributing modified
 library as independent binaries}};
 
-\node[leaf] (l18) at (12.6,0) { \textbf{PHP-8}  \textit{distributing
+\node[leaf] (l18) at (12.6,0) { \textbf{PHP-C8}  \textit{distributing
 modified library as embedded sources}};
 
-\node[leaf] (l19) at (14.4,0) { \textbf{PHP-9}  \textit{ distributing modified
+\node[leaf] (l19) at (14.4,0) { \textbf{PHP-C9}  \textit{ distributing modified
 library as embedded binaries}};
 
 \path [edge] (l71) -- (l61);
@@ -129,7 +129,7 @@ library as embedded binaries}};
 
 \end{tikzpicture}
 
-\subsection{PHP-1: Using the software only for yourself}
+\subsection{PHP-C1: Using the software only for yourself}
 \label{OSUC-01-PHP} 
 \label{OSUC-03-PHP} 
 \label{OSUC-06-PHP}
@@ -157,7 +157,7 @@ this privately used software by the name 'PHP'.
 \end{description}
 
 
-\subsection{PHP-2: Passing the unmodified software as source code}
+\subsection{PHP-C2: Passing the unmodified software as source code}
 \label{OSUC-02S-PHP} \label{OSUC-05S-PHP} \label{OSUC-07S-PHP} 
 
 \begin{description}
@@ -193,7 +193,7 @@ by make the string 'PHP' part of its name.
 
 \end{description}
 
-\subsection{PHP-3: Passing the unmodified software as binary}
+\subsection{PHP-C3: Passing the unmodified software as binary}
 \label{OSUC-02B-PHP} \label{OSUC-05B-PHP} \label{OSUC-07B-PHP} 
 
 \begin{description}
@@ -238,7 +238,7 @@ by make the string 'PHP' part of its name.
 
 \end{description}
 
-\subsection{PHP-4: Passing a modified program as source code}
+\subsection{PHP-C4: Passing a modified program as source code}
 \label{OSUC-04S-PHP}
 
 \begin{description}
@@ -284,7 +284,7 @@ by make the string 'PHP' part of its name.
 
 \end{description}
 
-\subsection{PHP-5: Passing a modified program as binary}
+\subsection{PHP-C5: Passing a modified program as binary}
 \label{OSUC-04B-PHP}
 
 \begin{description}
@@ -322,7 +322,7 @@ by make the string 'PHP' part of its name.
 
 \end{description}
 
-\subsection{PHP-6: Passing a modified library as independent source code}
+\subsection{PHP-C6: Passing a modified library as independent source code}
 \label{OSUC-08S-PHP}
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
@@ -357,7 +357,7 @@ by make the string 'PHP' part of its name.
 \end{description}
 
 
-\subsection{PHP-7: Passing a modified library as independent binary}
+\subsection{PHP-C7: Passing a modified library as independent binary}
 \label{OSUC-08B-PHP}
 
 \begin{description}
@@ -397,7 +397,7 @@ by make the string 'PHP' part of its name.
 
 \end{description}
 
-\subsection{PHP-8: Passing a modified library as embedded source code}
+\subsection{PHP-C8: Passing a modified library as embedded source code}
 \label{OSUC-10S-PHP}
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
@@ -450,7 +450,7 @@ by make the string 'PHP' part of its name.
 \end{description}
 
 
-\subsection{PHP-9: Passing a modified library as embedded binary}
+\subsection{PHP-C9: Passing a modified library as embedded binary}
 \label{OSUC-10B-PHP}
 
 \begin{description}
