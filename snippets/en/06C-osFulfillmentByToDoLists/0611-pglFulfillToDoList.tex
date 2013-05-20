@@ -35,7 +35,7 @@ PGL specific finder can be simplified:
     \Tr{\Ovalbox{\shortstack{recipient: \textit{4yourself}\\
     \textbf{\textit{used by yourself}}}}} 
   }{
-    \Tr{\doublebox{\shortstack{\tiny{\textbf{PGL-1}:}\\
+    \Tr{\doublebox{\shortstack{\tiny{\textbf{PGL-C1}:}\\
     \tiny{\textit{using the}}\\\tiny{\textit{software}}\\
     \tiny{\textit{only for}}\\\tiny{\textit{yourself}} }}} 
   }
@@ -46,7 +46,7 @@ PGL specific finder can be simplified:
     \pstree[levelsep=*0.2,treesep=0.2]{
       \Tr{\Ovalbox{\shortstack{state:\\\textbf{\textit{unmodified}}}}}
     }{
-        \Tr{\doublebox{\shortstack{\tiny{\textbf{PGL-2}:}\\
+        \Tr{\doublebox{\shortstack{\tiny{\textbf{PGL-C2}:}\\
         \tiny{\textit{distributing an}}\\
         \tiny{\textit{unmodified pkg}} }}}
 
@@ -58,7 +58,7 @@ PGL specific finder can be simplified:
       \pstree{
         \Tr{\Ovalbox{\shortstack{type:\\\textbf{\textit{proapse}}}}}
       }{
-          \Tr{\doublebox{\shortstack{\tiny{\textbf{PGL-3}:}\\
+          \Tr{\doublebox{\shortstack{\tiny{\textbf{PGL-C3}:}\\
           \tiny{\textit{distributing}}\\\tiny{\textit{a modified}}\\
           \tiny{\textit{program}} }}} 
            
@@ -69,7 +69,7 @@ PGL specific finder can be simplified:
         \pstree{
           \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{independent}}}}}
         }{        
-            \Tr{\doublebox{\shortstack{\tiny{\textbf{PGL-4}:}\\
+            \Tr{\doublebox{\shortstack{\tiny{\textbf{PGL-C4}:}\\
             \tiny{\textit{distributing}}\\\tiny{\textit{a modified}}\\
             \tiny{\textit{library as}}\\\tiny{\textit{independent}}
             \tiny{\textit{pkg}} }}} 
@@ -78,7 +78,7 @@ PGL specific finder can be simplified:
         \pstree{
           \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{embedded}}}}}
         }{        
-            \Tr{\doublebox{\shortstack{\tiny{\textbf{PGL-5}:}\\
+            \Tr{\doublebox{\shortstack{\tiny{\textbf{PGL-C5}:}\\
             \tiny{\textit{distributing}}\\\tiny{\textit{a modified}}\\
             \tiny{\textit{library as}}\\\tiny{\textit{embedded}}
             \tiny{\textit{pkg}} }}}     
@@ -90,7 +90,7 @@ PGL specific finder can be simplified:
 \end{footnotesize}
 \end{center}
 
-\subsection{PGL-1: Using the software only for yourself}
+\subsection{PGL-C1: Using the software only for yourself}
 \label{OSUC-01-PGL} 
 \label{OSUC-03-PGL} 
 \label{OSUC-06-PGL}
@@ -104,8 +104,8 @@ and that you do not hand it over to any 3rd party in any sense.
 \item[covers] OSUC-01, OSUC-03, OSUC-06, and OSUC-09\footnote{For details
 $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-01-DEF} - \pageref{OSUC-09-DEF}}
 
-\item[requires] the following tasks in order to fulfill the conditions of the
-PGL license:
+\item[requires] no tasks in order to fulfill the conditions of the PGL with
+respect to this use case:
   \begin{itemize}
     \item You are allowed to use any kind of PGL licensed software in any sense
     and in any context without any other obligations if you do not handover the
@@ -117,7 +117,7 @@ PGL license:
 
 \end{description}
 
-\subsection{PGL-2: Passing the unmodified software}
+\subsection{PGL-C2: Passing the unmodified software}
 \label{OSUC-02S-PGL} \label{OSUC-05S-PGL} \label{OSUC-07S-PGL} 
 \label{OSUC-02B-PGL} \label{OSUC-05B-PGL} \label{OSUC-07B-PGL} 
 
@@ -125,9 +125,9 @@ PGL license:
 
 \item[means] that you are going to distribute an unmodified version of the
 received PGL software to 3rd parties -- regardless whether you distribute it in
-the form of binaries or as source code files. In this case it also
-doesn't matter whether you distribute a program, an application, a server, a
-snippet, a module, a library, or a plugin as an independent package.
+the form of binaries or as source code files. In this case it is not
+discriminating to distribute a program, an application, a server, a snippet, a
+module, a library, or a plugin as an independent package.
 
 \item[covers] OSUC-02S,  OSUC-02B, OSUC-05S, OSUC-05B, OSUC-07S,
 OSUC-07B\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-02S-DEF} -
@@ -147,7 +147,7 @@ OSUC-07B\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-02S-DEF} -
 
 \end{description}
 
-\subsection{PGL-3: Passing a modified program}
+\subsection{PGL-C3: Passing a modified program}
 \label{OSUC-04S-PGL} \label{OSUC-04B-PGL}
 
 \begin{description}
@@ -164,7 +164,7 @@ whether you distribute it in the form of binaries or as source code files.
   including the copyright notice, the permission notices, and the PGL disclaimer
   -- are retained in your package in the form you have received them.
   \item \textbf{[voluntary:]} Mark your modifications in the source code,
-  whether or not you want to distribute the code.
+  regardless whether you want to distribute the code or not.
   \item \textbf{[voluntary:]} It's a good tradition to let the documentation of
   your distribution and/or your additional material also contain a link to the
   original software (project) and its homepage.
@@ -182,7 +182,7 @@ whether you distribute it in the form of binaries or as source code files.
 
 \end{description}
 
-\subsection{PGL-4: Passing a modified library independently}
+\subsection{PGL-C4: Passing a modified library independently}
 \label{OSUC-08S-PGL}\label{OSUC-08B-PGL}
 \begin{description}
 
@@ -200,7 +200,7 @@ distribute it in the form of binaries or as source code files.
   including the copyright notice, the permission notices, and the PGL disclaimer
   -- are retained in your package in the form you have received them.
   \item \textbf{[voluntary:]} Mark your modifications in the source code,
-  whether or not you want to distribute the code.
+  regardless whether you want to distribute the code or not.
   \item \textbf{[voluntary:]} It's a good tradition to let the documentation of
   your distribution and/or your additional material also contain a link to the
   original software (project) and its homepage.
@@ -211,7 +211,7 @@ distribute it in the form of binaries or as source code files.
 \end{description}
 
 
-\subsection{PGL-5: Passing a modified library as embedded component}
+\subsection{PGL-C5: Passing a modified library as embedded component}
 \label{OSUC-10S-PGL} \label{OSUC-10B-PGL}
 
 \begin{description}
@@ -232,7 +232,7 @@ it in the form of binaries or as source code files.
   -- are retained in your package in the form you have received them.
 
   \item \textbf{[voluntary:]} Mark your modifications in the source code,
-  whether or not you want to distribute the code.
+  regardless whether you want to distribute the code or not.
   
   \item \textbf{[voluntary:]} It is a good practice of the open source
   community, to let the copyright notice which is shown by the running program
@@ -245,7 +245,7 @@ it in the form of binaries or as source code files.
   that you have used this component added by a link to the original software
   component and its homepage.
   
-  \item \textbf{[voluntary:]} Arrange your distribution so that the the original
+  \item \textbf{[voluntary:]} Arrange your distribution so that the original
   licensing elements -- esp.\ the PGL license text containing the specific
   copyright notices of the original author(s), the permission notices and the
   PGL disclaimer --  clearly refer only to the embedded library and do not

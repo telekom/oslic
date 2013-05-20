@@ -29,73 +29,100 @@
 The MS-PL license is also one of the most permissive licenses. Thus, the
 MS-PL specific finder can be simplified:
 
-\begin{center}
-\begin{footnotesize}
-\pstree[levelsep=*1,treesep=0.2]{\Toval{MS-PL}}{
-  \pstree{
-    \Tr{\Ovalbox{\shortstack{recipient: \textit{4yourself}\\
-    \textbf{\textit{used by yourself}}}}} 
-  }{
-    \Tr{\doublebox{\shortstack{\tiny{\textbf{MS-PL-1}:}\\
-    \tiny{\textit{using the}}\\\tiny{\textit{software}}\\
-    \tiny{\textit{only for}}\\\tiny{\textit{yourself}} }}} 
-  }
-  \pstree[levelsep=*0.2,treesep=0.2]{
-    \Tr{\Ovalbox{\shortstack{recipient: \textit{2others}\\
-      \textbf{\textit{distributed to 3rd parties}}}}} 
-  }{ 
-    \pstree[levelsep=*0.2,treesep=0.2]{
-      \Tr{\Ovalbox{\shortstack{state:\\\textbf{\textit{unmodified}}}}}
-    }{
-        \Tr{\doublebox{\shortstack{\tiny{\textbf{MS-PL-2}:}\\
-        \tiny{\textit{distributing an}}\\
-        \tiny{\textit{unmodified pkg}} }}}
 
-    }
+\tikzstyle{nodv} = [font=\small, ellipse, draw, fill=gray!10, 
+    text width=2cm, text centered, minimum height=2em]
 
-    \pstree[levelsep=*0.2,treesep=0.2]{
-      \Tr{\Ovalbox{\shortstack{state:\\\textbf{\textit{modified}}}}}
-    }{ 
-      \pstree{
-        \Tr{\Ovalbox{\shortstack{type:\\\textbf{\textit{proapse}}}}}
-      }{
-          \Tr{\doublebox{\shortstack{\tiny{\textbf{MS-PL-3}:}\\
-          \tiny{\textit{distributing}}\\\tiny{\textit{a modified}}\\
-          \tiny{\textit{program}} }}} 
-           
-      }
-      \pstree{
-        \Tr{\Ovalbox{\shortstack{type:\\\textbf{\textit{snimoli}}}}}
-      }{
-        \pstree{
-          \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{independent}}}}}
-        }{        
-            \Tr{\doublebox{\shortstack{\tiny{\textbf{MS-PL-4}:}\\
-            \tiny{\textit{distributing}}\\\tiny{\textit{a modified}}\\
-            \tiny{\textit{library as}}\\\tiny{\textit{independent}}
-            \tiny{\textit{pkg}} }}} 
-           
-        }
-        \pstree{
-          \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{embedded}}}}}
-        }{        
-            \Tr{\doublebox{\shortstack{\tiny{\textbf{MS-PL-5}:}\\
-            \tiny{\textit{distributing}}\\\tiny{\textit{a modified}}\\
-            \tiny{\textit{library as}}\\\tiny{\textit{embedded}}
-            \tiny{\textit{pkg}} }}} 
-           
-        }
+\tikzstyle{nods} = [font=\footnotesize, rectangle, draw, fill=gray!20, 
+    text width=1.2cm, text centered, rounded corners, minimum height=3em]
+
+\tikzstyle{nodb} = [font=\footnotesize, rectangle, draw, fill=gray!20, 
+    text width=2.2cm, text centered, rounded corners, minimum height=3em]
+    
+\tikzstyle{leaf} = [font=\tiny, rectangle, draw, fill=gray!30, 
+    text width=1.2cm, text centered, minimum height=6em]
+
+\tikzstyle{edge} = [draw, -latex']
+
+\begin{tikzpicture}[]
+
+\node[nodv] (l71) at (4,10) {MS-PL};
+
+\node[nodb] (l61) at (0,8.6) {\textit{recipient:} \\ \textbf{4yourself}};
+\node[nodb] (l62) at (6.5,8.6) {\textit{recipient:} \\ \textbf{2others}};
+
+\node[nodb] (l51) at (2.5,7) {\textit{state:} \\ \textbf{unmodified}};
+\node[nodb] (l52) at (9.3,7) {\textit{state:} \\ \textbf{modified}};
+
+\node[nodb] (l43) at (6.5,5.4) {\textit{type:} \\ \textbf{proapse}};
+\node[nodb] (l44) at (12,5.4) {\textit{type:} \\ \textbf{snimoli}};
 
 
-      }
- 
-    }
-   }   
-}
-\end{footnotesize}
-\end{center}
+\node[nods] (l31) at (5.4,3.8) {\textit{form:} \textbf{source}};
+\node[nods] (l32) at (7.2,3.8) {\textit{form:} \textbf{binary}};
+\node[nodb] (l33) at (10,3.8) {\textit{context:} \\ \textbf{independent}};
+\node[nodb] (l34) at (13.5,3.8) {\textit{context:} \\ \textbf{embedded}};
 
-\subsection{MS-PL-1: Using the software only for yourself}
+\node[nods] (l21) at (9,2.2) {\textit{form:} \textbf{source}};
+\node[nods] (l22) at (10.8,2.2) {\textit{form:} \textbf{binary}};
+\node[nods] (l23) at (12.6,2.2) {\textit{form:} \textbf{source}};
+\node[nods] (l24) at (14.4,2.2) {\textit{form:} \textbf{binary}};
+
+\node[leaf] (l11) at (0,0) {\textbf{MS-PL-C1} \textit{using software only
+for yourself}};
+
+\node[leaf] (l12) at (2.5,0) { \textbf{MS-PL-C2} \textit{ distributing unmodified
+software}};
+
+\node[leaf] (l14) at (5.4,0) { \textbf{MS-PL-C3}  \textit{ distributing modified
+program as sources}};
+
+\node[leaf] (l15) at (7.2,0) { \textbf{MS-PL-C4}  \textit{ distributing modified
+program as binaries}};
+
+\node[leaf] (l16) at (9,0) { \textbf{MS-PL-C5}  \textit{ distributing modified
+library as independent sources}};
+
+\node[leaf] (l17) at (10.8,0) { \textbf{MS-PL-C6} \textit{distributing modified
+library as independent binaries}};
+
+\node[leaf] (l18) at (12.6,0) { \textbf{MS-PL-C7}  \textit{distributing
+modified library as embedded sources}};
+
+\node[leaf] (l19) at (14.4,0) { \textbf{MS-PL-C8}  \textit{ distributing modified
+library as embedded binaries}};
+
+
+\path [edge] (l71) -- (l61);
+\path [edge] (l71) -- (l62);
+\path [edge] (l61) -- (l11);
+\path [edge] (l62) -- (l51);
+\path [edge] (l62) -- (l52);
+\path [edge] (l52) -- (l43);
+\path [edge] (l52) -- (l44);
+\path [edge] (l51) -- (l12);
+
+
+\path [edge] (l43) -- (l31);
+\path [edge] (l43) -- (l32);
+\path [edge] (l44) -- (l33);
+\path [edge] (l44) -- (l34);
+\path [edge] (l31) -- (l14);
+\path [edge] (l32) -- (l15);
+\path [edge] (l33) -- (l21);
+\path [edge] (l33) -- (l22);
+\path [edge] (l34) -- (l23);
+\path [edge] (l34) -- (l24);
+\path [edge] (l21) -- (l16);
+\path [edge] (l22) -- (l17);
+\path [edge] (l23) -- (l18);
+\path [edge] (l24) -- (l19);
+
+\end{tikzpicture}
+
+
+
+\subsection{MS-PL-C1: Using the software only for yourself}
 \label{OSUC-01-MS-PL} 
 \label{OSUC-03-MS-PL} 
 \label{OSUC-06-MS-PL}
@@ -106,25 +133,26 @@ MS-PL specific finder can be simplified:
   yourself and that you do not hand it over to any 3rd party in any sense.
   \item[covers] OSUC-01, OSUC-03, OSUC-06, and OSUC-09\footnote{For details see
   pp.\ \pageref{OSUC-01-DEF} - \pageref{OSUC-09-DEF}}
-  \item[requires] the following tasks in order to fulfill the conditions of the MS-PL
-  license:
+  \item[requires] no tasks in order to fulfill the conditions of the MS-PL 
+license with respect to this use case:
   \begin{itemize}
     \item You are allowed to use any kind of MS-PL licensed software in any
     sense and in any context without any other obligations if you do not
     handover the software to 3rd parties.
   \end{itemize}
-\item[prohibits] nothing explicitly.
+\item[prohibits] to use any contributors' name, logo, or trademarks (without an
+additional or general legally based approval).
 \end{description}
 
 
-\subsection{MS-PL-2: Passing the unmodified software}
+\subsection{MS-PL-C2: Passing the unmodified software}
 \label{OSUC-02S-MS-PL} \label{OSUC-05S-MS-PL} \label{OSUC-07S-MS-PL} 
 \label{OSUC-02B-MS-PL} \label{OSUC-05B-MS-PL} \label{OSUC-07B-MS-PL} 
 
 \begin{description}
 \item[means] that you are going to distribute an unmodified version of the
 received MS-PL software to 3rd parties -- in the form of binaries or as source
-code files. In this case it also doesn't matter whether you distribute a
+code files. In this case it is not discriminating to distribute a
 program, an application, a server, a snippet, a module, a library, or a plugin
 as an independent package.
 
@@ -152,7 +180,7 @@ additional or general legally based approval).
 
 \end{description}
 
-\subsection{MS-PL-3: Passing a modified program as source code}
+\subsection{MS-PL-C3: Passing a modified program as source code}
 \label{OSUC-04S-MS-PL}
 
 \begin{description}
@@ -202,7 +230,7 @@ additional or general legally based approval).
 \end{description}
 
 
-\subsection{MS-PL-3: Passing a modified program as binary}
+\subsection{MS-PL-C4: Passing a modified program as binary}
 \label{OSUC-04B-MS-PL}
 
 \begin{description}
@@ -242,7 +270,7 @@ additional or general legally based approval)
 
 
 
-\subsection{MS-PL-4: Passing a modified library independently as source code}
+\subsection{MS-PL-C5: Passing a modified library independently as source code}
 \label{OSUC-08S-MS-PL}
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
@@ -279,7 +307,7 @@ additional or general legally based approval)
 
 \end{description}
 
-\subsection{MS-PL-4: Passing a modified library independently as binary}
+\subsection{MS-PL-C6: Passing a modified library independently as binary}
 \label{OSUC-08B-MS-PL}
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
@@ -307,7 +335,7 @@ additional or general legally based approval)
 
 \end{description}
 
-\subsection{MS-PL-5: Passing a modified library as embedded source code}
+\subsection{MS-PL-C7: Passing a modified library as embedded source code}
 \label{OSUC-10S-MS-PL}
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
@@ -353,7 +381,7 @@ additional or general legally based approval)
 
 \end{description}
 
-\subsection{MS-PL-5: Passing a modified library as embedded binary}
+\subsection{MS-PL-C8: Passing a modified library as embedded binary}
 \label{OSUC-10B-MS-PL}
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received

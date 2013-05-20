@@ -79,31 +79,31 @@ finder $\rightarrow$ OSLiC, pp.\ \pageref{OsucTokens} and
 \node[nods] (l23) at (12.6,2.2) {\textit{form:} \textbf{source}};
 \node[nods] (l24) at (14.4,2.2) {\textit{form:} \textbf{binary}};
 
-\node[leaf] (l11) at (0,0) {\textbf{MPL-1} \textit{using software only
+\node[leaf] (l11) at (0,0) {\textbf{MPL-C1} \textit{using software only
 for yourself}};
 
-\node[leaf] (l12) at (1.8,0) { \textbf{MPL-2} \textit{ distributing unmodified
+\node[leaf] (l12) at (1.8,0) { \textbf{MPL-C2} \textit{ distributing unmodified
 software as sources}};
 
-\node[leaf] (l13) at (3.6,0) { \textbf{MPL-3}  \textit{ distributing unmodified
+\node[leaf] (l13) at (3.6,0) { \textbf{MPL-C3}  \textit{ distributing unmodified
 software as binaries}};
 
-\node[leaf] (l14) at (5.4,0) { \textbf{MPL-4}  \textit{ distributing modified
+\node[leaf] (l14) at (5.4,0) { \textbf{MPL-C4}  \textit{ distributing modified
 program as sources}};
 
-\node[leaf] (l15) at (7.2,0) { \textbf{MPL-5}  \textit{ distributing modified
+\node[leaf] (l15) at (7.2,0) { \textbf{MPL-C5}  \textit{ distributing modified
 program as binaries}};
 
-\node[leaf] (l16) at (9,0) { \textbf{MPL-6}  \textit{ distributing modified
+\node[leaf] (l16) at (9,0) { \textbf{MPL-C6}  \textit{ distributing modified
 library as independent sources}};
 
-\node[leaf] (l17) at (10.8,0) { \textbf{MPL-7} \textit{distributing modified
+\node[leaf] (l17) at (10.8,0) { \textbf{MPL-C7} \textit{distributing modified
 library as independent binaries}};
 
-\node[leaf] (l18) at (12.6,0) { \textbf{MPL-8}  \textit{distributing
+\node[leaf] (l18) at (12.6,0) { \textbf{MPL-C8}  \textit{distributing
 modified library as embedded sources}};
 
-\node[leaf] (l19) at (14.4,0) { \textbf{MPL-9}  \textit{ distributing modified
+\node[leaf] (l19) at (14.4,0) { \textbf{MPL-C9}  \textit{ distributing modified
 library as embedded binaries}};
 
 
@@ -135,8 +135,7 @@ library as embedded binaries}};
 
 \end{tikzpicture}
 
-
-\subsection{MPL-1: Using the software only for yourself}
+\subsection{MPL-C1: Using the software only for yourself}
 \label{OSUC-01-MPL} \label{OSUC-03-MPL} 
 \label{OSUC-06-MPL} \label{OSUC-09-MPL}
 
@@ -169,14 +168,14 @@ license with respect to this use case:
 
 \end{description}
 
-\subsection{MPL-2: Passing the unmodified software as source code}
+\subsection{MPL-C2: Passing the unmodified software as source code}
 \label{OSUC-02S-MPL} \label{OSUC-05S-MPL} \label{OSUC-07S-MPL} 
 
 \begin{description}
 
 \item[means] that you are going to distribute an unmodified version of the
 received MPL software to 3rd parties - in the form of source code files or as a
-source code package. In this case it doesn't matter whether you distribute a
+source code package. In this case it is not discriminating to distribute a
 program, an application, a server, a snippet, a module, a library, or a plugin
 as an independent or an embedded unit
 
@@ -221,13 +220,13 @@ OSLiC, pp.\ \pageref{OSUC-02S-DEF} - \pageref{OSUC-07S-DEF}}
 \end{description}
 
 
-\subsection{MPL-3: Passing the unmodified software as binaries} 
+\subsection{MPL-C3: Passing the unmodified software as binaries} 
 \label{OSUC-02B-MPL} \label{OSUC-05B-MPL} \label{OSUC-07B-MPL}
 
 \begin{description}
 \item[means] that you are going to distribute an unmodified version of the
 received MPL software to 3rd parties -- in the form of binary files or as a
-bi\-na\-ry package. In this case it doesn't matter whether you distribute a
+bi\-na\-ry package. In this case it is not discriminating to distribute a
 program, an application, a server, a snippet, a module, a library, or a plugin
 as an independent or an embedded unit.
 
@@ -253,7 +252,7 @@ OSLiC, pp.\ \pageref{OSUC-02B-DEF} - \pageref{OSUC-07B-DEF}}
   \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
   into your distribution and/or your additional material.
   
-  \item \textbf{[mandatory:]} Execute the to-do list of use case MPL-2\footnote{
+  \item \textbf{[mandatory:]} Execute the to-do list of use case MPL-C2\footnote{
   Making the code accessible via a repository means distributing the software in
   the form of source code. Hence, you must also fulfill all tasks of the
   corresponding use case.}.
@@ -289,16 +288,16 @@ OSLiC, pp.\ \pageref{OSUC-02B-DEF} - \pageref{OSUC-07B-DEF}}
 
 \end{description}
 
-\subsection{MPL-4: Passing a modified program as source code}
+\subsection{MPL-C4: Passing a modified program as source code}
 \label{OSUC-04S-MPL} 
 
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
 MPL licensed program, application, or server (proapse) to 3rd parties -- in the
-form of source code files or aa a source code package.
+form of source code files or a source code package.
 \item[covers] OSUC-04S\footnote{For details $\rightarrow$ OSLiC, pp.\
 \pageref{OSUC-04S-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions:
+\item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
   
   \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
@@ -318,7 +317,9 @@ form of source code files or aa a source code package.
   http://mozilla.org/MPL/2.0/}.  
   
   \item \textbf{[mandatory:]} Organize your modifications in a way that they are
-  covered by the existing MPL licensing statements.
+  covered by the existing MPL licensing statements. If you add new source code
+  files, insert a header containing your copyright line and an MPL adequate
+  licensing the statement.
   
   \item \textbf{[voluntary:]} Create a \emph{modification text file}, if such a
   notice file still does not exist. \emph{Expand} the \emph{modification text
@@ -348,7 +349,7 @@ form of source code files or aa a source code package.
 
 \end{description}
 
-\subsection{MPL-5: Passing a modified program as binary}
+\subsection{MPL-C5: Passing a modified program as binary}
 \label{OSUC-04B-MPL} 
 
 \begin{description}
@@ -357,7 +358,7 @@ MPL licensed pro\-gram, application, or server (proapse) to 3rd parties -- in
 the form of binary files or as a binary package.
 \item[covers] OSUC-04B\footnote{For details $\rightarrow$ OSLiC, pp.\
 \pageref{OSUC-04B-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions:
+\item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
 
   \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
@@ -376,7 +377,7 @@ the form of binary files or as a binary package.
   \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
   into your distribution and/or your additional material. 
 
-  \item \textbf{[mandatory:]} Execute the to-do list of use case MPL-4\footnote{
+  \item \textbf{[mandatory:]} Execute the to-do list of use case MPL-C4\footnote{
   Making the code accessible via a repository means distributing the software in
   the form of source code. Hence, you must also fulfill all tasks of the
   corresponding use case.}.
@@ -421,7 +422,7 @@ the form of binary files or as a binary package.
 
 \end{description}
 
-\subsection{MPL-6: Passing a modified library as independent source code}
+\subsection{MPL-C6: Passing a modified library as independent source code}
 \label{OSUC-08S-MPL}
 
 \begin{description}
@@ -431,7 +432,7 @@ MPL licensed code snippet, module, library, or plugin (snimoli) to 3rd parties
 embedding it into another larger software unit.
 \item[covers] OSUC-08S\footnote{For details $\rightarrow$ OSLiC, pp.\
 \pageref{OSUC-08S-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions:
+\item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
 
   \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
@@ -451,7 +452,9 @@ embedding it into another larger software unit.
   http://mozilla.org/MPL/2.0/}.
   
   \item \textbf{[mandatory:]} Organize your modifications in a way that they are
-  covered by the existing MPL licensing statements.
+  covered by the existing MPL licensing statements. If you add new source code
+  files, insert a header containing your copyright line and an MPL adequate
+  licensing the statement.
   
   \item \textbf{[voluntary:]} Create a \emph{modification text file}, if such a
   notice file still does not exist. \emph{Expand} the \emph{modification text
@@ -483,7 +486,7 @@ embedding it into another larger software unit.
 \end{description}
 
 
-\subsection{MPL-7: Passing a modified library as independent binary}
+\subsection{MPL-C7: Passing a modified library as independent binary}
 \label{OSUC-08B-MPL}
 
 \begin{description}
@@ -493,7 +496,7 @@ MPL licensed code snippet, module, library, or plugin (snimoli) to 3rd parties
 into another larger software unit.
 \item[covers] OSUC-08B\footnote{For details $\rightarrow$ OSLiC, pp.\
 \pageref{OSUC-08B-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions:
+\item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
 
   \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
@@ -512,7 +515,7 @@ into another larger software unit.
   \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
   into your distribution and/or your additional material.
 
-  \item \textbf{[mandatory:]} Execute the to-do list of use case EUPL-6\footnote{
+  \item \textbf{[mandatory:]} Execute the to-do list of use case MPL-6\footnote{
   Making the code accessible via a repository means distributing the software in
   the form of source code. Hence, you must also fulfill all tasks of the
   corresponding use case.}.
@@ -557,7 +560,7 @@ into another larger software unit.
 
 \end{description}
 
-\subsection{MPL-8: Passing a modified library as embedded source code}
+\subsection{MPL-C8: Passing a modified library as embedded source code}
 \label{OSUC-10S-MPL}
 
 \begin{description}
@@ -568,7 +571,7 @@ another larger software unit which contains this code snippet, module, library,
 or plugin as an embedded component.
 \item[covers] OSUC-10S\footnote{For details $\rightarrow$ OSLiC, pp.\
 \pageref{OSUC-10S-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions:
+\item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
 
   \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
@@ -587,16 +590,19 @@ or plugin as an embedded component.
   distributed with this file, You can obtain one at
   http://mozilla.org/MPL/2.0/}.
 
+  \item \textbf{[mandatory:]} Organize your modifications of the embedded
+  library in a way that they are covered by the existing MPL licensing
+  statements. If you add new source code files to the library itself, insert a
+  header containing your copyright line and an MPL adequate licensing the
+  statement.
+  
   \item \textbf{[voluntary:]} Arrange your source code distribution so that the
   integrated MPL and the \emph{licensing files} clearly refer only to the
   embedded library and do not disturb the licensing of your own overarching
   work. It's a good tradition to keep the embedded components like libraries,
   modules, snippets, or plugins in specific directory which contains also all
   additional licensing elements.
-  
-  \item \textbf{[mandatory:]} Organize your modifications of the embedded
-  library in a way that they are covered by the existing MPL licensing
-  statements. 
+
 
   \item \textbf{[voluntary:]} Create a \emph{modification text file}, if such a
   notice file still does not exist. \emph{Expand} the \emph{modification text
@@ -628,7 +634,7 @@ or plugin as an embedded component.
 \end{description}
 
 
-\subsection{MPL-9: Passing a modified library as embedded binary}
+\subsection{MPL-C9: Passing a modified library as embedded binary}
 \label{OSUC-10B-MPL}
 
 \begin{description}
@@ -639,7 +645,7 @@ software unit which contains this code snippet, module, library, or plugin as an
 embedded component.
 \item[covers] OSUC-10B\footnote{For details $\rightarrow$ OSLiC, pp.\
 \pageref{OSUC-10B-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions:
+\item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
 
   \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
@@ -647,11 +653,6 @@ embedded component.
   liability -- are retained in your package in exact the form you have received
   them. If you compile the binary from the sources, ensure that all these
   licensing elements are also incorporated into the package.
-  
-  \item \textbf{[voluntary:]} Create a \emph{modification text file}, if such a
-  notice file still does not exist. \emph{Expand} the \emph{modification text
-  file} by a more general description of your modifications. Incorporate it into
-  your distribution package.
 
   \item \textbf{[mandatory:]} Make the source code of the embedded library
   accessible via a repository under your own control: Push the source code
@@ -664,10 +665,19 @@ embedded component.
   \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
   into your distribution and/or your additional material.
 
-  \item \textbf{[mandatory:]} Execute the to-do list of use case MPL-8\footnote{
+  \item \textbf{[mandatory:]} Execute the to-do list of use case MPL-C8\footnote{
   Making the code accessible via a repository means distributing the software in
   the form of source code. Hence, you must also fulfill all tasks of the
   corresponding use case.}.
+
+  \item \textbf{[mandatory:]} Organize your modifications of the embedded
+  library in a way that they are covered by the existing MPL licensing
+  statements. 
+    
+  \item \textbf{[voluntary:]} Create a \emph{modification text file}, if such a
+  notice file still does not exist. \emph{Expand} the \emph{modification text
+  file} by a more general description of your modifications. Incorporate it into
+  your distribution package.
   
   \item \textbf{[voluntary:]} Give the recipient a copy of the MPL 2.0 license.
   If it is not already part of the software package, add it\footnote{For
@@ -687,9 +697,6 @@ embedded component.
   modules, snippets, or plugins in specific directory which contains also all
   additional licensing elements.
   
-  \item \textbf{[mandatory:]} Organize your modifications of the embedded
-  library in a way that they are covered by the existing MPL licensing
-  statements. 
   
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material  also reproduce the content of the existing
@@ -740,9 +747,9 @@ With respect to this structure, we can detect the following tasks:
   Following its principle to offer one reliable way and to ignore variants of
   secondary importance, the OSLiC simplifies this condition to the general
   proscription to modify any licensing material -- namely for all use cases
-  [MPL-1 - MPL-9]. But for emphasizing that this is a job which must be activily
+  [MPL-C1 - MPL-C9]. But for emphasizing that this is a job which must be activily
   done, the OSLiC additionally rewrites this interdiction into all
-  \emph{2others} use cases [MPL-2 - MPL-9] as the task to retain the licensing
+  \emph{2others} use cases [MPL-C2 - MPL-C9] as the task to retain the licensing
   notices in the form one has obtained them.
   
   \item Moreover, the MPL requires for all \enquote{distributions of [the]
@@ -751,25 +758,25 @@ With respect to this structure, we can detect the following tasks:
   \enquote{[\ldots] must inform} all \enquote{recipients} that the software
   \enquote{[\ldots] is governed by the terms of (the MPL), and how (the
   recipients) can obtain a copy of this license}\footcite[cf.][\nopage wp.\
-  §3.1]{Mpl20OsiLicense2013a}. For the respective use case (MPL-2, MPL-4, MPL-6,
-  MPL-8), the OSLiC rewrites these conditions so that each MPL source code
+  §3.1]{Mpl20OsiLicense2013a}. For the respective use case (MPL-C2, MPL-C4, MPL-C6,
+  MPL-C8), the OSLiC rewrites these conditions so that each MPL source code
   package must mandatorily contain the MPL itself as textfile and an additional
   licensing file or statement strictly following the text given by the addendum
   of the MPL\footcite[cf.][\nopage wp.\ Exhibit A]{Mpl20OsiLicense2013a}. Because
   the MPL is 'only' a license with weak copyleft, the OSLiC proposes to separate
-  the MPL licensed, embedded component from the overarching program (MPL-8).
+  the MPL licensed, embedded component from the overarching program (MPL-C8).
   
   \item But the MPL does not explicitly require to mark all modifications.
   Nevertheless, this is state of the art in computer emgineering. Therefore,
-  with respect to the cases of distributing modified source code (MPL-4, MPL-6
-  and MPL-8), the OSLiC proposes to mark all modifications inside of the source
+  with respect to the cases of distributing modified source code (MPL-C4, MPL-C6
+  and MPL-C8), the OSLiC proposes to mark all modifications inside of the source
   code and to update the description of the functional changes. In case of
   distributing the modified software in the form of binaries, it should be
   sufficient, to describe the modifications only on the functional level.
   
   \item Furthermore, the MPL requires that the \enquote{Covered Software} -- in
-  all cases of distributing it in an \enquote{Executable Form} (MPL-3, MPL-5,
-  MPL-7, MPL-9) -- \enquote{[\ldots] must also be made available in Source Code
+  all cases of distributing it in an \enquote{Executable Form} (MPL-C3, MPL-C5,
+  MPL-C7, MPL-C9) -- \enquote{[\ldots] must also be made available in Source Code
   Form [\ldots]} and that the distributor \enquote{[\ldots] must inform
   recipients of the Executable Form how they can obtain a copy of such Source
   Code Form by reasonable means in a timely manner, at a charge no more than the
@@ -785,13 +792,13 @@ With respect to this structure, we can detect the following tasks:
   wp.\ §3.2.b]{Mpl20OsiLicense2013a}. This possibility might become important for
   those cases where the license compatibility must explicitly be managed.
   Normally, it should be sufficient also to distribute the binaries under the
-  MPL. Thus, in case of distributing binaries ((MPL-3, MPL-5, MPL-7, MPL-9), the
+  MPL. Thus, in case of distributing binaries ((MPL-C3, MPL-C5, MPL-C7, MPL-C9), the
   OSLiC proposes to insert into the distribution packages the MPL itself and an
   additional licensing file or statement strictly following the text given by
   the addendum of the MPL\footcite[cf.][\nopage wp.\ Exhibit
   A]{Mpl20OsiLicense2013a}. But again, because the MPL is 'only' a license with
   weak copyleft, the OSLiC proposes to separate the MPL licensed embedded
-  component from the overarching program (MPL-9)
+  component from the overarching program (MPL-C9)
   
   
   \item Finally, one has clearly to state that this rule above evokes a real

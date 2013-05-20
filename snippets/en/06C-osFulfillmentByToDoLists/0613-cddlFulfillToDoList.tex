@@ -1,0 +1,357 @@
+% Telekom osCompendium 'for being included' snippet template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ Framework derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke 2012 CC BY 3.0  http://mycsrf.fodina.de/ ]
+%
+
+
+%% use all entries of the bibliography
+%\nocite{*}
+
+\section{CDDL licensed software [tbd]}
+
+Also, [\ldots]
+
+Thus, for
+finding the relevant, simply processable task lists, also the following CDDL
+specific open source use case structure\footnote{For details of the general OSUC
+finder $\rightarrow$ OSLiC, pp.\ \pageref{OsucTokens} and
+\pageref{OsucDefinitionTree}} can be used:
+ 
+\tikzstyle{nodv} = [font=\small, ellipse, draw, fill=gray!10, 
+    text width=2cm, text centered, minimum height=2em]
+
+\tikzstyle{nods} = [font=\footnotesize, rectangle, draw, fill=gray!20, 
+    text width=1.2cm, text centered, rounded corners, minimum height=3em]
+
+\tikzstyle{nodb} = [font=\footnotesize, rectangle, draw, fill=gray!20, 
+    text width=2.2cm, text centered, rounded corners, minimum height=3em]
+    
+\tikzstyle{leaf} = [font=\tiny, rectangle, draw, fill=gray!30, 
+    text width=1.2cm, text centered, minimum height=6em]
+
+\tikzstyle{edge} = [draw, -latex']
+
+\begin{tikzpicture}[]
+
+\node[nodv] (l71) at (4,10) {CDDL};
+
+\node[nodb] (l61) at (0,8.6) {\textit{recipient:} \\ \textbf{4yourself}};
+\node[nodb] (l62) at (6.5,8.6) {\textit{recipient:} \\ \textbf{2others}};
+
+\node[nodb] (l51) at (2.5,7) {\textit{state:} \\ \textbf{unmodified}};
+\node[nodb] (l52) at (9.3,7) {\textit{state:} \\ \textbf{modified}};
+
+\node[nods] (l41) at (1.8,5.4) {\textit{form:} \textbf{source}};
+\node[nods] (l42) at (3.6,5.4) {\textit{form:} \textbf{binary}};
+\node[nodb] (l43) at (6.5,5.4) {\textit{type:} \\ \textbf{proapse}};
+\node[nodb] (l44) at (12,5.4) {\textit{type:} \\ \textbf{snimoli}};
+
+
+\node[nods] (l31) at (5.4,3.8) {\textit{form:} \textbf{source}};
+\node[nods] (l32) at (7.2,3.8) {\textit{form:} \textbf{binary}};
+\node[nodb] (l33) at (10,3.8) {\textit{context:} \\ \textbf{independent}};
+\node[nodb] (l34) at (13.5,3.8) {\textit{context:} \\ \textbf{embedded}};
+
+\node[nods] (l21) at (9,2.2) {\textit{form:} \textbf{source}};
+\node[nods] (l22) at (10.8,2.2) {\textit{form:} \textbf{binary}};
+\node[nods] (l23) at (12.6,2.2) {\textit{form:} \textbf{source}};
+\node[nods] (l24) at (14.4,2.2) {\textit{form:} \textbf{binary}};
+
+\node[leaf] (l11) at (0,0) {\textbf{CDDL-1} \textit{using software only
+for yourself}};
+
+\node[leaf] (l12) at (1.8,0) { \textbf{CDDL-2} \textit{ distributing unmodified
+software as sources}};
+
+\node[leaf] (l13) at (3.6,0) { \textbf{CDDL-3}  \textit{ distributing unmodified
+software as binaries}};
+
+\node[leaf] (l14) at (5.4,0) { \textbf{CDDL-4}  \textit{ distributing modified
+program as sources}};
+
+\node[leaf] (l15) at (7.2,0) { \textbf{CDDL-5}  \textit{ distributing modified
+program as binaries}};
+
+\node[leaf] (l16) at (9,0) { \textbf{CDDL-6}  \textit{ distributing modified
+library as independent sources}};
+
+\node[leaf] (l17) at (10.8,0) { \textbf{CDDL-7} \textit{distributing modified
+library as independent binaries}};
+
+\node[leaf] (l18) at (12.6,0) { \textbf{CDDL-8}  \textit{distributing
+modified library as embedded sources}};
+
+\node[leaf] (l19) at (14.4,0) { \textbf{CDDL-9}  \textit{ distributing modified
+library as embedded binaries}};
+
+
+\path [edge] (l71) -- (l61);
+\path [edge] (l71) -- (l62);
+\path [edge] (l61) -- (l11);
+\path [edge] (l62) -- (l51);
+\path [edge] (l62) -- (l52);
+\path [edge] (l51) -- (l41);
+\path [edge] (l51) -- (l42);
+\path [edge] (l52) -- (l43);
+\path [edge] (l52) -- (l44);
+\path [edge] (l41) -- (l12);
+\path [edge] (l42) -- (l13);
+\path [edge] (l43) -- (l31);
+\path [edge] (l43) -- (l32);
+\path [edge] (l44) -- (l33);
+\path [edge] (l44) -- (l34);
+\path [edge] (l31) -- (l14);
+\path [edge] (l32) -- (l15);
+\path [edge] (l33) -- (l21);
+\path [edge] (l33) -- (l22);
+\path [edge] (l34) -- (l23);
+\path [edge] (l34) -- (l24);
+\path [edge] (l21) -- (l16);
+\path [edge] (l22) -- (l17);
+\path [edge] (l23) -- (l18);
+\path [edge] (l24) -- (l19);
+
+\end{tikzpicture}
+
+
+\subsection{CDDL-1: Using the software only for yourself}
+\label{OSUC-01-CDDL} \label{OSUC-03-CDDL} 
+\label{OSUC-06-CDDL} \label{OSUC-09-CDDL}
+
+\begin{description}
+
+\item[means] that you are going to use a received CDDL licensed software only
+for yourself and that you do not hand it over to any 3rd party in any sense.
+
+\item[covers] OSUC-01, OSUC-03, OSUC-06, and OSUC-09\footnote{For details 
+$\rightarrow$ OSLiC, pp.\ \pageref{OSUC-01-DEF} - \pageref{OSUC-09-DEF}}
+
+\item[requires] \ldots
+
+\item[prohibits] \ldots
+
+
+\end{description}
+
+\subsection{CDDL-2: Passing the unmodified software as source code}
+\label{OSUC-02S-CDDL} \label{OSUC-05S-CDDL} \label{OSUC-07S-CDDL} 
+
+\begin{description}
+
+\item[means] that you are going to distribute an unmodified version of the
+received CDDL software to 3rd parties - in the form of source code files or as a
+source code package. In this case it is not discriminating to distribute a
+program, an application, a server, a snippet, a module, a library, or a plugin
+as an independent or an embedded unit
+
+\item[covers] OSUC-02S, OSUC-05S, OSUC-07S\footnote{For details $\rightarrow$
+OSLiC, pp.\ \pageref{OSUC-02S-DEF} - \pageref{OSUC-07S-DEF}}
+
+\item[requires] the following tasks in order to fulfill the license conditions:
+\begin{itemize}
+  
+  \item \ldots
+  
+\end{itemize}
+
+\item[prohibits] \ldots
+\begin{itemize}
+  \item \ldots
+\end{itemize}
+\end{description}
+
+
+\subsection{CDDL-3: Passing the unmodified software as binaries} 
+\label{OSUC-02B-CDDL} \label{OSUC-05B-CDDL} \label{OSUC-07B-CDDL}
+
+\begin{description}
+\item[means] that you are going to distribute an unmodified version of the
+received CDDL software to 3rd parties -- in the form of binary files or as a
+bi\-na\-ry package. In this case it is not discriminating to distribute a
+program, an application, a server, a snippet, a module, a library, or a plugin
+as an independent or an embedded unit.
+
+\item[covers] OSUC-02B, OSUC-05B, OSUC-07B\footnote{For details $\rightarrow$
+OSLiC, pp.\ \pageref{OSUC-02B-DEF} - \pageref{OSUC-07B-DEF}}
+
+\item[requires] the following tasks in order to fulfill the license conditions:
+\begin{itemize}
+  
+  \item \ldots
+  
+\end{itemize}
+
+\item[prohibits] \ldots
+\begin{itemize}
+  \item \ldots
+\end{itemize}
+\end{description}
+
+
+\subsection{CDDL-4: Passing a modified program as source code}
+\label{OSUC-04S-CDDL} 
+
+\begin{description}
+\item[means] that you are going to distribute a modified version of the received
+CDDL licensed program, application, or server (proapse) to 3rd parties -- in the
+form of source code files or a source code package.
+\item[covers] OSUC-04S\footnote{For details $\rightarrow$ OSLiC, pp.\
+\pageref{OSUC-04S-DEF}}
+\item[requires] the following tasks in order to fulfill the license conditions:
+\begin{itemize}
+  
+  \item \ldots
+  
+\end{itemize}
+
+\item[prohibits] \ldots
+\begin{itemize}
+  \item \ldots
+\end{itemize}
+\end{description}
+
+\subsection{CDDL-5: Passing a modified program as binary}
+\label{OSUC-04B-CDDL} 
+
+\begin{description}
+\item[means] that you are going to distribute a modified version of the received
+CDDL licensed pro\-gram, application, or server (proapse) to 3rd parties -- in
+the form of binary files or as a binary package.
+\item[covers] OSUC-04B\footnote{For details $\rightarrow$ OSLiC, pp.\
+\pageref{OSUC-04B-DEF}}
+\item[requires] the following tasks in order to fulfill the license conditions:
+\begin{itemize}
+  
+  \item \ldots
+  
+\end{itemize}
+
+\item[prohibits] \ldots
+\begin{itemize}
+  \item \ldots
+\end{itemize}
+\end{description}
+
+\subsection{CDDL-6: Passing a modified library as independent source code}
+\label{OSUC-08S-CDDL}
+
+\begin{description}
+\item[means] that you are going to distribute a modified version of the received
+CDDL licensed code snippet, module, library, or plugin (snimoli) to 3rd parties
+-- in the form of source code files or as a source code package, but without
+embedding it into another larger software unit.
+\item[covers] OSUC-08S\footnote{For details $\rightarrow$ OSLiC, pp.\
+\pageref{OSUC-08S-DEF}}
+\item[requires] the following tasks in order to fulfill the license conditions:
+\begin{itemize}
+  
+  \item \ldots
+  
+\end{itemize}
+
+\item[prohibits] \ldots
+\begin{itemize}
+  \item \ldots
+\end{itemize}
+\end{description}
+
+\subsection{CDDL-7: Passing a modified library as independent binary}
+\label{OSUC-08B-CDDL}
+
+\begin{description}
+\item[means] that you are going to distribute a modified version of the received
+CDDL licensed code snippet, module, library, or plugin (snimoli) to 3rd parties
+-- in the form of binary files or as a binary package but without embedding it
+into another larger software unit.
+\item[covers] OSUC-08B\footnote{For details $\rightarrow$ OSLiC, pp.\
+\pageref{OSUC-08B-DEF}}
+\item[requires] the following tasks in order to fulfill the license conditions:
+\begin{itemize}
+  
+  \item \ldots
+  
+\end{itemize}
+
+\item[prohibits] \ldots
+\begin{itemize}
+  \item \ldots
+\end{itemize}
+\end{description}
+
+\subsection{CDDL-8: Passing a modified library as embedded source code}
+\label{OSUC-10S-CDDL}
+
+\begin{description}
+\item[means] that you are going to distribute a modified version of the received
+CDDL licensed code snippet, module, library, or plugin (snimoli) to 3rd parties
+-- in the form of source code files or as a source code package together with
+another larger software unit which contains this code snippet, module, library,
+or plugin as an embedded component.
+\item[covers] OSUC-10S\footnote{For details $\rightarrow$ OSLiC, pp.\
+\pageref{OSUC-10S-DEF}}
+\item[requires] the following tasks in order to fulfill the license conditions:
+\begin{itemize}
+  
+  \item \ldots
+  
+\end{itemize}
+
+\item[prohibits] \ldots
+\begin{itemize}
+  \item \ldots
+\end{itemize}
+\end{description}
+
+\subsection{CDDL-9: Passing a modified library as embedded binary}
+\label{OSUC-10B-CDDL}
+
+\begin{description}
+\item[means] that you are going to distribute a modified version of the received
+CDDL licensed code snippet, module, library, or plugin to 3rd parties -- in the
+form of binary files or as a binary package together with another larger
+software unit which contains this code snippet, module, library, or plugin as an
+embedded component.
+\item[covers] OSUC-10B\footnote{For details $\rightarrow$ OSLiC, pp.\
+\pageref{OSUC-10B-DEF}}
+\item[requires] the following tasks in order to fulfill the license conditions:
+\begin{itemize}
+  
+  \item \ldots
+  
+\end{itemize}
+
+\item[prohibits] \ldots
+\begin{itemize}
+  \item \ldots
+\end{itemize}
+\end{description}
+
+\subsection{Discussions and Explanations}
+
+The CDDL offers \ldots which contains nearly all
+requirements\footcite[cf.][\nopage wp.\ §3]{Cddl10OsiLicense2004a}. Only for some
+
+\begin{itemize}
+
+  \item 
+
+\end{itemize}
+
+
+%\bibliography{../../../bibfiles/oscResourcesEn}
