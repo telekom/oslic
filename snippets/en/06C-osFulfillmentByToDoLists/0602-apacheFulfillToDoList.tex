@@ -73,31 +73,31 @@ finder\footnote{For details of the general OSUC finder $\rightarrow$ OSLiC, pp.\
 \node[nods] (l23) at (12.6,2.2) {\textit{form:} \textbf{source}};
 \node[nods] (l24) at (14.4,2.2) {\textit{form:} \textbf{binary}};
 
-\node[leaf] (l11) at (0,0) {\textbf{ApL-1} \textit{using software only
+\node[leaf] (l11) at (0,0) {\textbf{ApL-C1} \textit{using software only
 for yourself}};
 
-\node[leaf] (l12) at (1.8,0) { \textbf{ApL-2} \textit{ distributing unmodified
+\node[leaf] (l12) at (1.8,0) { \textbf{ApL-C2} \textit{ distributing unmodified
 software as sources}};
 
-\node[leaf] (l13) at (3.6,0) { \textbf{ApL-3}  \textit{ distributing unmodified
+\node[leaf] (l13) at (3.6,0) { \textbf{ApL-C3}  \textit{ distributing unmodified
 software as binaries}};
 
-\node[leaf] (l14) at (5.4,0) { \textbf{ApL-4}  \textit{ distributing modified
+\node[leaf] (l14) at (5.4,0) { \textbf{ApL-C4}  \textit{ distributing modified
 program as sources}};
 
-\node[leaf] (l15) at (7.2,0) { \textbf{ApL-5}  \textit{ distributing modified
+\node[leaf] (l15) at (7.2,0) { \textbf{ApL-C5}  \textit{ distributing modified
 program as binaries}};
 
-\node[leaf] (l16) at (9,0) { \textbf{ApL-6}  \textit{ distributing modified
+\node[leaf] (l16) at (9,0) { \textbf{ApL-C6}  \textit{ distributing modified
 library as independent sources}};
 
-\node[leaf] (l17) at (10.8,0) { \textbf{ApL-7} \textit{distributing modified
+\node[leaf] (l17) at (10.8,0) { \textbf{ApL-C7} \textit{distributing modified
 library as independent binaries}};
 
-\node[leaf] (l18) at (12.6,0) { \textbf{ApL-8}  \textit{distributing
+\node[leaf] (l18) at (12.6,0) { \textbf{ApL-C8}  \textit{distributing
 modified library as embedded sources}};
 
-\node[leaf] (l19) at (14.4,0) { \textbf{ApL-9}  \textit{ distributing modified
+\node[leaf] (l19) at (14.4,0) { \textbf{ApL-C9}  \textit{ distributing modified
 library as embedded binaries}};
 
 
@@ -130,7 +130,7 @@ library as embedded binaries}};
 \end{tikzpicture}
 
 
-\subsection{ApL-1: Using the software only for yourself}
+\subsection{ApL-C1: Using the software only for yourself}
 \label{OSUC-01-Apache20} \label{OSUC-03-Apache20} 
 \label{OSUC-06-Apache20} \label{OSUC-09-Apache20}
 
@@ -161,14 +161,14 @@ license with respect to this use case:
 
 \end{description}
 
-\subsection{ApL-2: Passing the unmodified software as source code}
+\subsection{ApL-C2: Passing the unmodified software as source code}
 \label{OSUC-02S-Apache20} \label{OSUC-05S-Apache20} \label{OSUC-07S-Apache20} 
 
 \begin{description}
 
 \item[means] that you are going to distribute an unmodified version of the
 received Apache software to 3rd parties -- in the form of source code files or
-as a source code package. In this case it doesn't matter whether you are going
+as a source code package. In this case it is not discriminating 
 to distribute a program, an application, a server, a snippet, a module, a
 library, or a plugin as an independent or as an embedded unit.
 
@@ -212,14 +212,14 @@ OSLiC, pp.\ \pageref{OSUC-02S-DEF} - \pageref{OSUC-07S-DEF}}
 \end{description}
 
 
-\subsection{ApL-3: Passing the unmodified software as binaries} 
+\subsection{ApL-C3: Passing the unmodified software as binaries} 
 \label{OSUC-02B-Apache20} \label{OSUC-05B-Apache20} \label{OSUC-07B-Apache20}
 
 \begin{description}
 \item[means] that you are going to distribute an unmodified version of the
 received Apache software to 3rd parties -- in the form of binary files or as a
-bi\-na\-ry package. In this case it doesn't matter whether you 
-distribute a program, an application, a server, a snippet, a module, a library,
+bi\-na\-ry package. In this case it is not discriminating to distribute a
+program, an application, a server, a snippet, a module, a library,
 or a plugin as an independent or an embedded unit.
 
 \item[covers] OSUC-02B, OSUC-05B, OSUC-07B\footnote{For details $\rightarrow$
@@ -264,7 +264,7 @@ OSLiC, pp.\ \pageref{OSUC-02B-DEF} - \pageref{OSUC-07B-DEF}}
 
 \end{description}
 
-\subsection{ApL-4: Passing a modified program as source code}
+\subsection{ApL-C4: Passing a modified program as source code}
 \label{OSUC-04S-Apache20} 
 
 \begin{description}
@@ -318,7 +318,7 @@ the form of source code files or as a source code package.
 
 \end{description}
 
-\subsection{ApL-5: Passing a modified program as binary}
+\subsection{ApL-C5: Passing a modified program as binary}
 \label{OSUC-04B-Apache20}
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
@@ -372,7 +372,7 @@ the form of binary files or as a binary package.
 
 \end{description}
 
-\subsection{ApL-6: Passing a modified library as independent source code}
+\subsection{ApL-C6: Passing a modified library as independent source code}
 \label{OSUC-08S-Apache20}
 
 \begin{description}
@@ -423,7 +423,7 @@ without embedding it into another larger software unit.
 \end{description}
 
 
-\subsection{ApL-7: Passing a modified library as independent binary}
+\subsection{ApL-C7: Passing a modified library as independent binary}
 \label{OSUC-08B-Apache20}
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
@@ -473,7 +473,7 @@ embedding it into another larger software unit.
 
 \end{description}
 
-\subsection{ApL-8: Passing a modified library as embedded source code}
+\subsection{ApL-C8: Passing a modified library as embedded source code}
 \label{OSUC-10S-Apache20}
 
 \begin{description}
@@ -536,7 +536,7 @@ library, or plugin as an embedded component.
 \end{description}
 
 
-\subsection{ApL-9: Passing a modified library as embedded binary}
+\subsection{ApL-C9: Passing a modified library as embedded binary}
 \label{OSUC-10B-Apache20}
 \begin{description}
 \item[means] that you are going to distribute a modified version of the received
@@ -610,25 +610,25 @@ embedded component.
   hand, this license alerts that all the patent licenses – granted to those who
   \enquote{[\ldots] institute a patent litigation} – will terminate
   automatically\footcite[cf.][\nopage wp.\ §3]{Apl20OsiLicense2004a}. Hence, the
-  OSLiC generally (ApL-1 - ApL-9) interdicts to promote products or services by
+  OSLiC generally (ApL-C1 - ApL-C9) interdicts to promote products or services by
   these elements and to legally fight against patents linked to the software.
   
   \item The ApL also requires to \enquote{[\ldots] give any other recipients of
   the Work or Derivative Works a copy of this License}\footcite[cf.][\nopage wp.\
   §4.1]{Apl20OsiLicense2004a}. Therefore, all \emph{2others} use cases contain
-  the respective mandatory condition (ApL-2 - ApL-9).
+  the respective mandatory condition (ApL-C2 - ApL-C9).
    
   \item Additionally, the ApL requires, that modifications must be
   marked\footcite[cf.][\nopage wp.\ §4.2]{Apl20OsiLicense2004a}. Thus, in all
   cases of passing the modified software in the form of source code the OSLiC
   requires to mark the modifications and to integrate a hint into the notice
   file – while in all the cases of passing the modified software in the form of
-  binaries it inserts only a voluntary condition (ApL-4 - ApL-9).
+  binaries it inserts only a voluntary condition (ApL-C4 - ApL-C9).
   
   \item Furthermore, the ApL requires that one must \enquote{[\ldots] retain, in
   the Source form of any Derivative Works that You distribute, all copyright,
   patent, trademark, and attribution notices from the Source form of the Work}
-  So, the OSLIC requires in all contexts (ApL-1 - ApL-9) that the licensing
+  So, the OSLIC requires in all contexts (ApL-C1 - ApL-C9) that the licensing
   elements are retained in the form you have received them\footnote{This might
   confuse some readers: Yes, even if you distribute a modified version in the
   form of binaries you must fulfill this condition. Moreover, you must also hand
@@ -642,11 +642,11 @@ embedded component.
   \enquote{[\ldots] if and wherever such third-party notices normally
   appear}\footcite[cf.][\nopage wp.\ §4.4]{Apl20OsiLicense2004a}. Thus, the OSLiC
   requires mandatorily that all source code distributions must include the
-  notice text file (ApL-2, ApL-4, ApL-6, ApL-8) and that all distributions of
+  notice text file (ApL-C2, ApL-C4, ApL-C6, ApL-C8) and that all distributions of
   binary applications which normally show such a copyrigth screen must integrate
-  the content of the notice file into this screen (ApL-5, ApL9). For libraries
+  the content of the notice file into this screen (ApL-C5, ApL9). For libraries
   distributed in the form of binaries it is assumed that they normally do not
-  contain such copyright dialogs (ApL-7)
+  contain such copyright dialogs (ApL-C7)
 \end{itemize}
 
 

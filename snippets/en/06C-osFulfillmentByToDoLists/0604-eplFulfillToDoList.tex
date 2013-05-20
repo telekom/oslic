@@ -84,31 +84,31 @@ finder $\rightarrow$ OSLiC, pp.\ \pageref{OsucTokens} and
 \node[nods] (l23) at (12.6,2.2) {\textit{form:} \textbf{source}};
 \node[nods] (l24) at (14.4,2.2) {\textit{form:} \textbf{binary}};
 
-\node[leaf] (l11) at (0,0) {\textbf{EPL-1} \textit{using software only
+\node[leaf] (l11) at (0,0) {\textbf{EPL-C1} \textit{using software only
 for yourself}};
 
-\node[leaf] (l12) at (1.8,0) { \textbf{EPL-2} \textit{ distributing unmodified
+\node[leaf] (l12) at (1.8,0) { \textbf{EPL-C2} \textit{ distributing unmodified
 software as sources}};
 
-\node[leaf] (l13) at (3.6,0) { \textbf{EPL-3}  \textit{ distributing unmodified
+\node[leaf] (l13) at (3.6,0) { \textbf{EPL-C3}  \textit{ distributing unmodified
 software as binaries}};
 
-\node[leaf] (l14) at (5.4,0) { \textbf{EPL-4}  \textit{ distributing modified
+\node[leaf] (l14) at (5.4,0) { \textbf{EPL-C4}  \textit{ distributing modified
 program as sources}};
 
-\node[leaf] (l15) at (7.2,0) { \textbf{EPL-5}  \textit{ distributing modified
+\node[leaf] (l15) at (7.2,0) { \textbf{EPL-C5}  \textit{ distributing modified
 program as binaries}};
 
-\node[leaf] (l16) at (9,0) { \textbf{EPL-6}  \textit{ distributing modified
+\node[leaf] (l16) at (9,0) { \textbf{EPL-C6}  \textit{ distributing modified
 library as independent sources}};
 
-\node[leaf] (l17) at (10.8,0) { \textbf{EPL-7} \textit{distributing modified
+\node[leaf] (l17) at (10.8,0) { \textbf{EPL-C7} \textit{distributing modified
 library as independent binaries}};
 
-\node[leaf] (l18) at (12.6,0) { \textbf{EPL-8}  \textit{distributing
+\node[leaf] (l18) at (12.6,0) { \textbf{EPL-C8}  \textit{distributing
 modified library as embedded sources}};
 
-\node[leaf] (l19) at (14.4,0) { \textbf{EPL-9}  \textit{ distributing modified
+\node[leaf] (l19) at (14.4,0) { \textbf{EPL-C9}  \textit{ distributing modified
 library as embedded binaries}};
 
 
@@ -141,7 +141,7 @@ library as embedded binaries}};
 \end{tikzpicture}
 
 
-\subsection{EPL-1: Using the software only for yourself}
+\subsection{EPL-C1: Using the software only for yourself}
 \label{OSUC-01-EPL} \label{OSUC-03-EPL} 
 \label{OSUC-06-EPL} \label{OSUC-09-EPL}
 
@@ -169,14 +169,14 @@ license with respect to this use case:
 
 \end{description}
 
-\subsection{EPL-2: Passing the unmodified software as source code}
+\subsection{EPL-C2: Passing the unmodified software as source code}
 \label{OSUC-02S-EPL} \label{OSUC-05S-EPL} \label{OSUC-07S-EPL} 
 
 \begin{description}
 
 \item[means] that you are going to distribute an unmodified version of the
 received EPL software to 3rd parties -- in the form of source code files or as a
-source code package. In this case it doesn't matter whether you distribute a
+source code package. In this case it is not discriminating to distribute a
 program, an application, a server, a snippet, a module, a library, or a plugin
 as an independent or an embedded unit.
 
@@ -219,13 +219,13 @@ OSLiC, pp.\ \pageref{OSUC-02S-DEF} - \pageref{OSUC-07S-DEF}}
 \end{description}
 
 
-\subsection{EPL-3: Passing the unmodified software as binaries} 
+\subsection{EPL-C3: Passing the unmodified software as binaries} 
 \label{OSUC-02B-EPL} \label{OSUC-05B-EPL} \label{OSUC-07B-EPL} 
 
 \begin{description}
 \item[means] that you are going to distribute an unmodified version of the
 received EPL software to 3rd parties -- in the form of binary files or as a
-bi\-na\-ry package. In this case it doesn't matter whether you distribute a
+bi\-na\-ry package. In this case it is not discriminating to distribute a
 program, an application, a server, a snippet, a module, a library, or a plugin
 as an independent or an embedded unit.
 
@@ -258,7 +258,7 @@ OSLiC, pp.\ \pageref{OSUC-02B-DEF} - \pageref{OSUC-07B-DEF}}
   \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
   into your distribution and/or your additional material.
   
-  \item \textbf{[mandatory:]} Execute the to-do list of use case EPL-2\footnote{
+  \item \textbf{[mandatory:]} Execute the to-do list of use case EPL-C2\footnote{
   Making the code accessible via a repository means distributing the software in
   the form of source code. Hence, you must also fulfill all tasks of the
   corresponding use case.}.
@@ -278,7 +278,7 @@ OSLiC, pp.\ \pageref{OSUC-02B-DEF} - \pageref{OSUC-07B-DEF}}
 
 \end{description}
 
-\subsection{EPL-4: Passing a modified program as source code}
+\subsection{EPL-C4: Passing a modified program as source code}
 \label{OSUC-04S-EPL} 
 
 \begin{description}
@@ -311,7 +311,9 @@ form of source code files or as a source code package.
   under the EPL, additionally insert your own correct EPL licensing file.
 
   \item \textbf{[mandatory:]} Organize your modifications in a way that they are
-  covered by the existing EPL licensing statements.
+  covered by the existing EPL licensing statements. If you add new source code
+  files, insert a header containing your copyright line and an EPL adequate
+  licensing the statement.
   
   \item \textbf{[mandatory:]} If still not existing, integrate an explicit, very
   prominently placed 'No warranty' statement into the distributed source code
@@ -336,7 +338,7 @@ form of source code files or as a source code package.
 
 \end{description}
 
-\subsection{EPL-5: Passing a modified program as binary}
+\subsection{EPL-C5: Passing a modified program as binary}
 \label{OSUC-04B-EPL}
 
 \begin{description}
@@ -345,7 +347,7 @@ EPL licensed pro\-gram, application, or server (proapse) to 3rd parties -- in
 the form of binary files or as a binary package.
 \item[covers] OSUC-04B\footnote{For details $\rightarrow$ OSLiC, pp.\
 \pageref{OSUC-04B-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions:
+\item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
 
   \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
@@ -364,7 +366,7 @@ the form of binary files or as a binary package.
   modfied source code.
   
   \item \textbf{[mandatory:]} Organize your modifications in a way that they are
-  covered by the existing MPL licensing statements.
+  covered by the (existing) EPL licensing statements.
 
   \item \textbf{[mandatory:]} If still not existing, integrate an explicit, very
   prominently placed 'No warranty' statement into the distributed source code
@@ -384,7 +386,7 @@ the form of binary files or as a binary package.
   \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
   into your distribution and/or your additional material.
 
-  \item \textbf{[mandatory:]} Execute the to-do list of use case EPL-4\footnote{
+  \item \textbf{[mandatory:]} Execute the to-do list of use case EPL-C4\footnote{
   Making the code accessible via a repository means distributing the software in
   the form of source code. Hence, you must also fulfill all tasks of the
   corresponding use case.}.
@@ -406,7 +408,7 @@ the form of binary files or as a binary package.
 
 \end{description}
 
-\subsection{EPL-6: Passing a modified library as independent source code}
+\subsection{EPL-C6: Passing a modified library as independent source code}
 \label{OSUC-08S-EPL}
 
 \begin{description}
@@ -415,8 +417,9 @@ EPL licensed code snippet, module, library, or plugin (snimoli) to 3rd parties
 -- in the form of source code files or as a source code package, but without
 embedding it into another larger software unit.
 \item[covers] OSUC-08S\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-08S-DEF}} \item[requires] the tasks in order to fulfill the
-license conditions:
+\pageref{OSUC-08S-DEF}} 
+\item[]
+\item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
 
   \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
@@ -440,7 +443,9 @@ license conditions:
   under the EPL, additionally insert your own correct EPL licensing file.
   
   \item \textbf{[mandatory:]} Organize your modifications in a way that they are
-  covered by the existing EPL licensing statements.
+  covered by the existing EPL licensing statements. If you add new source code
+  files, insert a header containing your copyright line and an EPL adequate
+  licensing the statement.
   
   \item \textbf{[mandatory:]} If still not existing, integrate an explicit, very
   prominently placed 'No warranty' statement into the distributed source code
@@ -465,7 +470,7 @@ license conditions:
 \end{description}
 
 
-\subsection{EPL-7: Passing a modified library as independent binary}
+\subsection{EPL-C7: Passing a modified library as independent binary}
 \label{OSUC-08B-EPL}
 
 \begin{description}
@@ -475,7 +480,7 @@ EPL licensed code snippet, module, library, or plugin (snimoli) to 3rd parties
 into another larger software unit.
 \item[covers] OSUC-08B\footnote{For details $\rightarrow$ OSLiC, pp.\
 \pageref{OSUC-08B-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions:
+\item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
 
   \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
@@ -534,7 +539,7 @@ into another larger software unit.
 
 \end{description}
 
-\subsection{EPL-8: Passing a modified library as embedded source code}
+\subsection{EPL-C8: Passing a modified library as embedded source code}
 \label{OSUC-10S-EPL}
 
 \begin{description}
@@ -545,7 +550,7 @@ another larger software unit which contains this code snippet, module, library,
 or plugin as an embedded component.
 \item[covers] OSUC-10S\footnote{For details $\rightarrow$ OSLiC, pp.\
 \pageref{OSUC-10S-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions:
+\item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
 
   \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
@@ -575,17 +580,19 @@ or plugin as an embedded component.
   EPL itself into that file. Let the copyright screen of your own overarching
   program show the same information -- as a specification for the embedded
   component.
-     
+
+  \item \textbf{[mandatory:]} Organize your modifications of the embedded
+  library in a way that they are covered by the existing EPL licensing
+  statements. If you add new source code files into the scope of the library,
+  insert a header containing your copyright line and an EPL adequate licensing
+  the statement.
+       
   \item \textbf{[voluntary:]} Arrange your source code distribution so that the
   integrated EPL and the \emph{licensing files} clearly refer only to the
   embedded library and do not disturb the licensing of your own overarching
   work. It's a good tradition to keep the embedded components like libraries,
   modules, snippets, or plugins in specific directory which contains also all
   additional licensing elements.
-  
-  \item \textbf{[mandatory:]} Organize your modifications of the embedded
-  library in a way that they are covered by the existing EPL licensing
-  statements. 
   
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material also reproduce the content of the existing
@@ -604,7 +611,7 @@ or plugin as an embedded component.
 \end{description}
 
 
-\subsection{EPL-9: Passing a modified library as embedded binary}
+\subsection{EPL-C9: Passing a modified library as embedded binary}
 \label{OSUC-10B-EPL}
 
 \begin{description}
@@ -615,7 +622,7 @@ software unit which contains this code snippet, module, library, or plugin as an
 embedded component.
 \item[covers] OSUC-10B\footnote{For details $\rightarrow$ OSLiC, pp.\
 \pageref{OSUC-10B-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions:
+\item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
 
   \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
@@ -651,7 +658,7 @@ embedded component.
   \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
   into your distribution and/or your additional material.
   
-  \item \textbf{[mandatory:]} Execute the to-do list of use case EPL-8\footnote{
+  \item \textbf{[mandatory:]} Execute the to-do list of use case EPL-C8\footnote{
   Making the code accessible via a repository means distributing the software in
   the form of source code. Hence, you must also fulfill all tasks of the
   corresponding use case.}.
@@ -712,10 +719,10 @@ following tasks:
   to -- for example -- the EUPL, the EPL clearly contains this interdiction. The
   OSLiC solves this practical inconsistence duplicating the message: On the one
   hand, it rewrites the negative condition as a mandatory positive assertion for
-  the \emph{2others} use cases (EPL-2 - EPL-9). This should emphasize the
+  the \emph{2others} use cases (EPL-C2 - EPL-C9). This should emphasize the
   \emph{activity} to retain the copyright notes in exact the form one has
   received them. On the other hand, the OSLiC inserts the interdictios into the
-  'prohibits' section of the \emph{4yourself} use cases (EPL-1 - EPL-9).
+  'prohibits' section of the \emph{4yourself} use cases (EPL-C1 - EPL-C9).
   
   \item Furthermore, the EPL requires that \enquote{each Contributor must
   identify itself as the originator of its Contributions [\ldots] in a manner
@@ -735,18 +742,18 @@ following tasks:
   correspoding code\footcite[cf.][\nopage wp.\ §3]{Epl10OsiLicense2005a}. So,
   distributing the binaries implies the distribution of the source code.
   Therefore the OSLiC inserts the two requirements as mandatory clauses into all
-  the use cases concerning the distribution of a modified EPL software (EPL-4 -
-  EPL-9).
+  the use cases concerning the distribution of a modified EPL software (EPL-C4 -
+  EPL-C9).
   
   \item For all distributions in the form of source code the EPL requires that
   the software \enquote{[\ldots] must be made available under this (Eclipse
   Public License 1.0) Agreement} and that \enquote{[\ldots] a copy of this
   Agreement must be included with each copy of the
   Program}\footcite[cf.][\nopage wp.\ §3]{Epl10OsiLicense2005a}. Thus, the OSLiC
-  inserts a respective mandatory clause into the use cases (EPL-4, EPL-6,
-  EPL-8). But the EPL is a license with a weak copyleft\footnote{($\rightarrow$
+  inserts a respective mandatory clause into the use cases (EPL-C4, EPL-C6,
+  EPL-C8). But the EPL is a license with a weak copyleft\footnote{($\rightarrow$
   OSLiC, p.\ \pageref{sec:ProtectingPowerOfEpl})}. Therefore, this conditions
-  does not cover the overarching program which uses the embedded library (EPL-8)
+  does not cover the overarching program which uses the embedded library (EPL-C8)
   
   \item Additionally, the EPL allows to distribute the software in the form
   of binaries if the distributor \enquote{[\ldots] effectively disclaims on
@@ -775,7 +782,7 @@ following tasks:
   the source code via repository. It is not sufficient to point to any external
   download repository in the world wide web. Thus, -- for all use cases
   concerning the distribution in the form of binaries -- the OSLiC follows the
-  respective requirement introduced by the EUPL (EPL-3, EPL-5, EPL-7, EPL-9).
+  respective requirement introduced by the EUPL (EPL-C3, EPL-C5, EPL-C7, EPL-C9).
   
   \item Finally, one has clearly to state that this rule above evokes a real
   source code distribution which therefore must follow the rules of distributing
