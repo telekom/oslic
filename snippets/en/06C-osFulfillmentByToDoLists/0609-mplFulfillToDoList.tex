@@ -135,7 +135,6 @@ library as embedded binaries}};
 
 \end{tikzpicture}
 
-
 \subsection{MPL-C1: Using the software only for yourself}
 \label{OSUC-01-MPL} \label{OSUC-03-MPL} 
 \label{OSUC-06-MPL} \label{OSUC-09-MPL}
@@ -298,7 +297,7 @@ MPL licensed program, application, or server (proapse) to 3rd parties -- in the
 form of source code files or a source code package.
 \item[covers] OSUC-04S\footnote{For details $\rightarrow$ OSLiC, pp.\
 \pageref{OSUC-04S-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions:
+\item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
   
   \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
@@ -359,7 +358,7 @@ MPL licensed pro\-gram, application, or server (proapse) to 3rd parties -- in
 the form of binary files or as a binary package.
 \item[covers] OSUC-04B\footnote{For details $\rightarrow$ OSLiC, pp.\
 \pageref{OSUC-04B-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions:
+\item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
 
   \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
@@ -433,7 +432,7 @@ MPL licensed code snippet, module, library, or plugin (snimoli) to 3rd parties
 embedding it into another larger software unit.
 \item[covers] OSUC-08S\footnote{For details $\rightarrow$ OSLiC, pp.\
 \pageref{OSUC-08S-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions:
+\item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
 
   \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
@@ -497,7 +496,7 @@ MPL licensed code snippet, module, library, or plugin (snimoli) to 3rd parties
 into another larger software unit.
 \item[covers] OSUC-08B\footnote{For details $\rightarrow$ OSLiC, pp.\
 \pageref{OSUC-08B-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions:
+\item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
 
   \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
@@ -516,7 +515,7 @@ into another larger software unit.
   \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
   into your distribution and/or your additional material.
 
-  \item \textbf{[mandatory:]} Execute the to-do list of use case EUPL-6\footnote{
+  \item \textbf{[mandatory:]} Execute the to-do list of use case MPL-6\footnote{
   Making the code accessible via a repository means distributing the software in
   the form of source code. Hence, you must also fulfill all tasks of the
   corresponding use case.}.
@@ -572,7 +571,7 @@ another larger software unit which contains this code snippet, module, library,
 or plugin as an embedded component.
 \item[covers] OSUC-10S\footnote{For details $\rightarrow$ OSLiC, pp.\
 \pageref{OSUC-10S-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions:
+\item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
 
   \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
@@ -591,18 +590,19 @@ or plugin as an embedded component.
   distributed with this file, You can obtain one at
   http://mozilla.org/MPL/2.0/}.
 
+  \item \textbf{[mandatory:]} Organize your modifications of the embedded
+  library in a way that they are covered by the existing MPL licensing
+  statements. If you add new source code files to the library itself, insert a
+  header containing your copyright line and an MPL adequate licensing the
+  statement.
+  
   \item \textbf{[voluntary:]} Arrange your source code distribution so that the
   integrated MPL and the \emph{licensing files} clearly refer only to the
   embedded library and do not disturb the licensing of your own overarching
   work. It's a good tradition to keep the embedded components like libraries,
   modules, snippets, or plugins in specific directory which contains also all
   additional licensing elements.
-  
-  \item \textbf{[mandatory:]} Organize your modifications of the embedded
-  library in a way that they are covered by the existing MPL licensing
-  statements. If you add new source code files to the library itself, insert a
-  header containing your copyright line and an MPL adequate licensing the
-  statement.
+
 
   \item \textbf{[voluntary:]} Create a \emph{modification text file}, if such a
   notice file still does not exist. \emph{Expand} the \emph{modification text
@@ -645,7 +645,7 @@ software unit which contains this code snippet, module, library, or plugin as an
 embedded component.
 \item[covers] OSUC-10B\footnote{For details $\rightarrow$ OSLiC, pp.\
 \pageref{OSUC-10B-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions:
+\item[requires] the following tasks in order to fulfill the license conditions:
 \begin{itemize}
 
   \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
@@ -653,11 +653,6 @@ embedded component.
   liability -- are retained in your package in exact the form you have received
   them. If you compile the binary from the sources, ensure that all these
   licensing elements are also incorporated into the package.
-  
-  \item \textbf{[voluntary:]} Create a \emph{modification text file}, if such a
-  notice file still does not exist. \emph{Expand} the \emph{modification text
-  file} by a more general description of your modifications. Incorporate it into
-  your distribution package.
 
   \item \textbf{[mandatory:]} Make the source code of the embedded library
   accessible via a repository under your own control: Push the source code
@@ -674,6 +669,15 @@ embedded component.
   Making the code accessible via a repository means distributing the software in
   the form of source code. Hence, you must also fulfill all tasks of the
   corresponding use case.}.
+
+  \item \textbf{[mandatory:]} Organize your modifications of the embedded
+  library in a way that they are covered by the existing MPL licensing
+  statements. 
+    
+  \item \textbf{[voluntary:]} Create a \emph{modification text file}, if such a
+  notice file still does not exist. \emph{Expand} the \emph{modification text
+  file} by a more general description of your modifications. Incorporate it into
+  your distribution package.
   
   \item \textbf{[voluntary:]} Give the recipient a copy of the MPL 2.0 license.
   If it is not already part of the software package, add it\footnote{For
@@ -693,9 +697,6 @@ embedded component.
   modules, snippets, or plugins in specific directory which contains also all
   additional licensing elements.
   
-  \item \textbf{[mandatory:]} Organize your modifications of the embedded
-  library in a way that they are covered by the existing MPL licensing
-  statements. 
   
   \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
   your additional material  also reproduce the content of the existing
