@@ -9,9 +9,9 @@ Last update: 2009-04-06
 //*****parameters to set*****
 //into this array insert the paths of your pics.
 var def_imges=new Array
-(  '../../fileadmin/images/myappletree-mugshot-20100313-300x400.png', 
-   '../../fileadmin/images/myappletree-mugshot-20100320-300x400.png', 
-   '../../fileadmin/images/myappletree-mugshot-20100328-300x400.png' 
+(  'fileadmin/images/myappletree-mugshot-20100313-300x400.png', 
+   'fileadmin/images/myappletree-mugshot-20100320-300x400.png', 
+   'fileadmin/images/myappletree-mugshot-20100328-300x400.png' 
 );
 var def_divid="greatAppletreeMugshot"; //the id of the div container that will hold the slideshow
 var def_picwid=300; //set this to the width of your widest pic

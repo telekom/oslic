@@ -9,9 +9,9 @@ Last update: 2009-04-06
 //*****parameters to set*****
 //into this array insert the paths of your pics.
 var def_imges=new Array
-(  '../../fileadmin/images/siteTopTeaserSlideShow-288x32-a.png', 
-   '../../fileadmin/images/siteTopTeaserSlideShow-288x32-b.png', 
-   '../../fileadmin/images/siteTopTeaserSlideShow-288x32-c.png' 
+(  'fileadmin/images/siteTopTeaserSlideShow-288x32-a.png', 
+   'fileadmin/images/siteTopTeaserSlideShow-288x32-b.png', 
+   'fileadmin/images/siteTopTeaserSlideShow-288x32-c.png' 
 );
 var def_divid="topTeaserSlideShow"; //the id of the div container that will hold the slideshow
 var def_picwid=288; //set this to the width of your widest pic

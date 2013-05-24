@@ -1,79 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>http://toslic.fodina.de/en/site/xml-sitemap.html</loc>
+		<loc>http://dtag-dbu.github.io/osclin/en/site/xml-sitemap.html</loc>
 		<lastmod>2010-04-07</lastmod>
 	</url>
 	<url>
-		<loc>http://toslic.fodina.de/en/site/html-sitemap.html</loc>
+		<loc>http://dtag-dbu.github.io/osclin/en/site/html-sitemap.html</loc>
 		<lastmod>2012-02-24</lastmod>
 	</url>
 	<url>
-		<loc>http://toslic.fodina.de/en/collaboration/community.html</loc>
+		<loc>http://dtag-dbu.github.io/osclin/en/collaboration/community.html</loc>
 		<lastmod>2012-03-02</lastmod>
 	</url>
 	<url>
-		<loc>http://toslic.fodina.de/en/oslic/manifesto.html</loc>
-		<lastmod>2013-05-20</lastmod>
+		<loc>http://dtag-dbu.github.io/osclin/en/oslic/manifesto.html</loc>
+		<lastmod>2013-05-24</lastmod>
 	</url>
 	<url>
-		<loc>http://toslic.fodina.de/en/oslic/license.html</loc>
+		<loc>http://dtag-dbu.github.io/osclin/en/oslic/license.html</loc>
 		<lastmod>2012-02-24</lastmod>
 	</url>
 	<url>
-		<loc>http://toslic.fodina.de/en/oslic/initiators.html</loc>
+		<loc>http://dtag-dbu.github.io/osclin/en/oslic/initiators.html</loc>
 		<lastmod>2013-03-15</lastmod>
 	</url>
 	<url>
-		<loc>http://toslic.fodina.de/en/planning/scope.html</loc>
+		<loc>http://dtag-dbu.github.io/osclin/en/planning/scope.html</loc>
 		<lastmod>2012-03-02</lastmod>
 	</url>
 	<url>
-		<loc>http://toslic.fodina.de/en/planning/milestones.html</loc>
+		<loc>http://dtag-dbu.github.io/osclin/en/planning/milestones.html</loc>
 		<lastmod>2013-05-20</lastmod>
 	</url>
 	<url>
-		<loc>http://toslic.fodina.de/en/planning/results.html</loc>
+		<loc>http://dtag-dbu.github.io/osclin/en/planning/results.html</loc>
 		<lastmod>2013-05-20</lastmod>
 	</url>
 	<url>
-		<loc>http://toslic.fodina.de/en/collaboration/repository.html</loc>
+		<loc>http://dtag-dbu.github.io/osclin/en/collaboration/repository.html</loc>
 		<lastmod>2012-03-04</lastmod>
 	</url>
 	<url>
-		<loc>http://toslic.fodina.de/en/collaboration/participation/case-by-case.html</loc>
+		<loc>http://dtag-dbu.github.io/osclin/en/collaboration/participation/case-by-case.html</loc>
+		<lastmod>2013-05-24</lastmod>
+	</url>
+	<url>
+		<loc>http://dtag-dbu.github.io/osclin/en/collaboration/participation/frequent.html</loc>
 		<lastmod>2012-03-03</lastmod>
 	</url>
 	<url>
-		<loc>http://toslic.fodina.de/en/collaboration/participation/frequent.html</loc>
+		<loc>http://dtag-dbu.github.io/osclin/en/collaboration/participation/permanent.html</loc>
 		<lastmod>2012-03-03</lastmod>
 	</url>
 	<url>
-		<loc>http://toslic.fodina.de/en/collaboration/participation/permanent.html</loc>
+		<loc>http://dtag-dbu.github.io/osclin/en/download/prepare.html</loc>
 		<lastmod>2012-03-03</lastmod>
 	</url>
 	<url>
-		<loc>http://toslic.fodina.de/en/download/prepare.html</loc>
-		<lastmod>2012-03-03</lastmod>
-	</url>
-	<url>
-		<loc>http://toslic.fodina.de/en/download/obtain.html</loc>
+		<loc>http://dtag-dbu.github.io/osclin/en/download/obtain.html</loc>
 		<lastmod>2013-02-27</lastmod>
 	</url>
 	<url>
-		<loc>http://toslic.fodina.de/en/download/use.html</loc>
+		<loc>http://dtag-dbu.github.io/osclin/en/download/use.html</loc>
 		<lastmod>2012-03-08</lastmod>
 	</url>
 	<url>
-		<loc>http://toslic.fodina.de/en/download/install.html</loc>
+		<loc>http://dtag-dbu.github.io/osclin/en/download/install.html</loc>
 		<lastmod>2013-05-20</lastmod>
 	</url>
 	<url>
-		<loc>http://toslic.fodina.de/en/addons/literature.html</loc>
+		<loc>http://dtag-dbu.github.io/osclin/en/addons/literature.html</loc>
 		<lastmod>2012-03-16</lastmod>
 	</url>
 	<url>
-		<loc>http://toslic.fodina.de/en/addons/links.html</loc>
+		<loc>http://dtag-dbu.github.io/osclin/en/addons/links.html</loc>
 		<lastmod>2012-03-16</lastmod>
+	</url>
+	<url>
+		<loc>http://dtag-dbu.github.io/osclin/en/addons/presentations.html</loc>
+		<lastmod>2013-05-24</lastmod>
 	</url>
 </urlset>
