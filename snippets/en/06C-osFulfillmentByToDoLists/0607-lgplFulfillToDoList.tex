@@ -59,107 +59,129 @@ case structure\footnote{For details of the general OSUC finder $\rightarrow$
 OSLiC, pp.\ \pageref{OsucTokens} and \pageref{OsucDefinitionTree}} for finding
 the easily processable corresponding task lists:
  
-\tikzstyle{nodv} = [font=\small, ellipse, draw, fill=gray!10, 
+\tikzstyle{nodv} = [font=\scriptsize, ellipse, draw, fill=gray!10, 
     text width=2cm, text centered, minimum height=2em]
 
 
-\tikzstyle{nods} = [font=\footnotesize, rectangle, draw, fill=gray!20, 
-    text width=1.2cm, text centered, rounded corners, minimum height=3em]
+\tikzstyle{nods} = [font=\tiny, rectangle, draw, fill=gray!20, 
+    text width=1cm, text centered, rounded corners, minimum height=3em]
 
-\tikzstyle{nodb} = [font=\footnotesize, rectangle, draw, fill=gray!20, 
-    text width=2.2cm, text centered, rounded corners, minimum height=3em]
+\tikzstyle{nodb} = [font=\tiny, rectangle, draw, fill=gray!20, 
+    text width=1.5cm, text centered, rounded corners, minimum height=3em]
     
 \tikzstyle{leaf} = [font=\tiny, rectangle, draw, fill=gray!30, 
-    text width=1.2cm, text centered, minimum height=6em]
+    text width=1.4cm, text centered, minimum height=6em]
+
+\tikzstyle{slimleaf} = [font=\tiny, rectangle, draw, fill=gray!30, 
+    text width=1.4cm, text centered, minimum height=6em]
+
 
 \tikzstyle{edge} = [draw, -latex']
 
 \begin{tikzpicture}[]
 
-\node[nodv] (l81) at (4,11.8) {LGPL};
+\node[nodv] (l801) at (3,11.8) {LGPL};
 
-\node[nodv] (l71) at (0,10.2) {version 2.1};
-\node[nodv] (l72) at (6.5,10.2) {version 3.0};
-
-
-\node[nodb] (l61) at (0,8.6) {\textit{recipient:} \\ \textbf{4yourself}};
-\node[nodb] (l62) at (6.5,8.6) {\textit{recipient:} \\ \textbf{2others}};
-
-\node[nodb] (l51) at (2.5,7) {\textit{state:} \\ \textbf{unmodified}};
-\node[nodb] (l52) at (9.3,7) {\textit{state:} \\ \textbf{modified}};
-
-\node[nods] (l41) at (1.8,5.4) {\textit{form:} \textbf{source}};
-\node[nods] (l42) at (3.6,5.4) {\textit{form:} \textbf{binary}};
-\node[nodb] (l43) at (6.5,5.4) {\textit{type:} \\ \textbf{proapse}};
-\node[nodb] (l44) at (12,5.4) {\textit{type:} \\ \textbf{snimoli}};
+\node[nodv] (l701) at (0,10.2) {version 2.0};
+\node[nodv] (l702) at (4.8,10.2) {version 3.0};
 
 
-\node[nods] (l31) at (5.4,3.8) {\textit{form:} \textbf{source}};
-\node[nods] (l32) at (7.2,3.8) {\textit{form:} \textbf{binary}};
-\node[nodb] (l33) at (10,3.8) {\textit{context:} \\ \textbf{independent}};
-\node[nodb] (l34) at (13.5,3.8) {\textit{context:} \\ \textbf{embedded}};
+\node[nodb] (l601) at (0,8.6) {\textit{recipient:} \\ \textbf{4yourself}};
+\node[nodb] (l602) at (5.4,8.6) {\textit{recipient:} \\ \textbf{2others}};
 
-\node[nods] (l21) at (9,2.2) {\textit{form:} \textbf{source}};
-\node[nods] (l22) at (10.8,2.2) {\textit{form:} \textbf{binary}};
-\node[nods] (l23) at (12.6,2.2) {\textit{form:} \textbf{source}};
-\node[nods] (l24) at (14.4,2.2) {\textit{form:} \textbf{binary}};
+\node[nodb] (l501) at (3,7) {\textit{state:} \\ \textbf{unmodified}};
+\node[nodb] (l502) at (9,7) {\textit{state:} \\ \textbf{modified}};
 
-\node[leaf] (l11) at (0,0) {\textbf{LGPL-C1} \textit{using software only
-for yourself}};
+\node[nodb] (l401) at (1.8,5.4) {\textit{type:} \\ \textbf{proapse or snimoli}};
+\node[nodb] (l402) at (3.7,5.4) {\textit{type:} \\ \textbf{snimoli}};
+\node[nodb] (l403) at (6.4,5.4) {\textit{type:} \\ \textbf{proapse}};
+\node[nodb] (l404) at (12,5.4) {\textit{type:} \\ \textbf{snimoli}};
 
-\node[leaf] (l12) at (1.8,0) { \textbf{LGPL-C2} \textit{ distributing unmodified
-software as sources}};
 
-\node[leaf] (l13) at (3.6,0) { \textbf{LGPL-C3}  \textit{ distributing unmodified
-software as binaries}};
+\node[nodb] (l301) at (1.8,3.8) {\textit{context:} \\ \textbf{independent}};
+\node[nodb] (l302) at (3.7,3.8) {\textit{context:} \\ \textbf{embedded}};
+\node[nodb] (l303) at (6.4,3.8) {\textit{context:} \\ \textbf{independent}};
+\node[nodb] (l304) at (10,3.8) {\textit{context:} \\ \textbf{independent}};
+\node[nodb] (l305) at (13.6,3.8) {\textit{context:} \\ \textbf{embedded}};
 
-\node[leaf] (l14) at (5.4,0) { \textbf{LGPL-C4}  \textit{ distributing modified
-program as sources}};
+\node[nods] (l201) at (1.9,2.2) {\textit{form:} \textbf{source}};
+\node[nods] (l204) at (3.7,2.2) {\textit{form:} \textbf{binary}};
+\node[nods] (l205) at (5.5,2.2) {\textit{form:} \textbf{source}};
+\node[nods] (l206) at (7.3,2.2) {\textit{form:} \textbf{binary}};
+\node[nods] (l207) at (9.1,2.2) {\textit{form:} \textbf{source}};
+\node[nods] (l208) at (10.9,2.2) {\textit{form:} \textbf{binary}};
+\node[nods] (l209) at (12.7,2.2) {\textit{form:} \textbf{source}};
+\node[nods] (l210) at (14.5,2.2) {\textit{form:} \textbf{binary}};
 
-\node[leaf] (l15) at (7.2,0) { \textbf{LGPL-C5}  \textit{ distributing modified
-program as binaries}};
+\node[slimleaf] (l101) at (0,0) {\textbf{LGPL-C1} \newline \textit{using
+software only for yourself}};
 
-\node[leaf] (l16) at (9,0) { \textbf{LGPL-C6}  \textit{ distributing modified
-library as independent sources}};
+\node[leaf] (l102) at (1.8,0) { \textbf{LGPL-C2} \textit{ distributing
+unmodified software as independent or embedded sources}};
 
-\node[leaf] (l17) at (10.8,0) { \textbf{LGPL-C7} \textit{distributing modified
-library as independent binaries}};
+\node[leaf] (l105) at (3.6,0) { \textbf{LGPL-C3}  \textit{ distributing
+unmodified library as independent or embedded binaries}};
 
-\node[leaf] (l18) at (12.6,0) { \textbf{LGPL-C8}  \textit{distributing
+\node[slimleaf] (l106) at (5.4,0) { \textbf{LGPL-C4}  \textit{ distributing
+modified program as sources}};
+
+\node[slimleaf] (l107) at (7.2,0) { \textbf{LGPL-C5}  \textit{ distributing
+modified program as binaries}};
+
+\node[slimleaf] (l108) at (9.0,0) { \textbf{LGPL-C6}  \textit{ distributing
+modified library as independent sources}};
+
+\node[slimleaf] (l109) at (10.8,0) { \textbf{LGPL-C7} \textit{distributing
+modified library as independent binaries}};
+
+\node[leaf] (l110) at (12.6,0) { \textbf{LGPL-C8}  \textit{distributing
 modified library as embedded sources}};
 
-\node[leaf] (l19) at (14.4,0) { \textbf{LGPL-C9}  \textit{ distributing modified
-library as embedded binaries}};
+\node[leaf] (l111) at (14.4,0) { \textbf{LGPL-C9}  \textit{ distributing
+modified library as embedded binaries}};
 
-\path [edge] (l81) -- (l71);
-\path [edge] (l81) -- (l72);
-\path [edge] (l71) -- (l61);
-\path [edge] (l71) -- (l62);
-\path [edge] (l72) -- (l61);
-\path [edge] (l72) -- (l62);
-\path [edge] (l61) -- (l11);
-\path [edge] (l62) -- (l51);
-\path [edge] (l62) -- (l52);
-\path [edge] (l51) -- (l41);
-\path [edge] (l51) -- (l42);
-\path [edge] (l52) -- (l43);
-\path [edge] (l52) -- (l44);
-\path [edge] (l41) -- (l12);
-\path [edge] (l42) -- (l13);
-\path [edge] (l43) -- (l31);
-\path [edge] (l43) -- (l32);
-\path [edge] (l44) -- (l33);
-\path [edge] (l44) -- (l34);
-\path [edge] (l31) -- (l14);
-\path [edge] (l32) -- (l15);
-\path [edge] (l33) -- (l21);
-\path [edge] (l33) -- (l22);
-\path [edge] (l34) -- (l23);
-\path [edge] (l34) -- (l24);
-\path [edge] (l21) -- (l16);
-\path [edge] (l22) -- (l17);
-\path [edge] (l23) -- (l18);
-\path [edge] (l24) -- (l19);
+\path [edge] (l801) -- (l701);
+\path [edge] (l801) -- (l702);
+\path [edge] (l701) -- (l601);
+\path [edge] (l701) -- (l602);
+\path [edge] (l702) -- (l601);
+\path [edge] (l702) -- (l602);
+
+\path [edge] (l602) -- (l501);
+\path [edge] (l602) -- (l502);
+
+\path [edge] (l501) -- (l401);
+\path [edge] (l501) -- (l402);
+\path [edge] (l502) -- (l403);
+\path [edge] (l502) -- (l404);
+
+\path [edge] (l401) -- (l301);
+\path [edge] (l402) -- (l302);
+\path [edge] (l403) -- (l303);
+\path [edge] (l404) -- (l304);
+\path [edge] (l404) -- (l305);
+
+\path [edge] (l301) -- (l201);
+\path [edge] (l301) -- (l204);
+\path [edge] (l302) -- (l201);
+\path [edge] (l302) -- (l204);
+\path [edge] (l303) -- (l205);
+\path [edge] (l303) -- (l206);
+\path [edge] (l304) -- (l207);
+\path [edge] (l304) -- (l208);
+\path [edge] (l305) -- (l209);
+\path [edge] (l305) -- (l210);
+
+\path [edge] (l601) -- (l101);
+\path [edge] (l201) -- (l102);
+
+\path [edge] (l204) -- (l105);
+\path [edge] (l205) -- (l106);
+\path [edge] (l206) -- (l107);
+\path [edge] (l207) -- (l108);
+\path [edge] (l208) -- (l109);
+\path [edge] (l209) -- (l110);
+\path [edge] (l210) -- (l111);
 
 \end{tikzpicture}
 

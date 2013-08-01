@@ -34,6 +34,10 @@
 \usepackage[ngerman, english]{babel}
 \selectlanguage{english}
 
+%language specific quoting signs
+%default for language emglish is american style of quotes
+\usepackage{csquotes}
+
 % jurabib configuration
 \usepackage[see]{jurabib}
 \bibliographystyle{jurabib}
@@ -106,7 +110,7 @@
 
 \maketitle
 %%-- end(titlepage)
-Release [\input{../release}]
+Release [\input{../rel-number}]
 \small
 \bibliography{../bibfiles/oscResourcesEn}
 
