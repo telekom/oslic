@@ -34,13 +34,17 @@
 \usepackage[ngerman, english]{babel}
 \selectlanguage{english}
 
+%language specific quoting signs
+%default for language emglish is american style of quotes
+\usepackage{csquotes}
+
 % jurabib configuration
 \usepackage[see]{jurabib}
 \bibliographystyle{jurabib}
-\input{oscJbibCfgEnInc}
+\input{../btexmat/oscJbibCfgEnInc}
 
 % language specific hyphenation
-\input{oscHyphenationEnInc}
+\input{../btexmat/oscHyphenationEnInc}
 
 %%% (3) layout page configuration %%%
 
@@ -103,7 +107,7 @@
 \subject{BiBTeX-Files}
 \title{Complete Review of all Bib-Files}
 \subtitle{for reviewing the overall state}
-\author{K. Reincke\input{oscLicenseFootnoteInc}}%\thanks{den Autoren von KOMA-Script und denen von Jurabib}
+\author{K. Reincke\input{../btexmat/oscLicenseFootnoteInc}}
 \maketitle
 %%-- end(titlepage)
 
