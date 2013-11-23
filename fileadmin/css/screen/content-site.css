@@ -54,11 +54,14 @@
 
 
 
-  a {color: #e20074; text-decoration:none;}
+  a {color: #0000ff; text-decoration:none;}
   a:focus,
   a:hover,
-  a:active {color:#e20074; text-decoration:underline;}
-    
+  a:active {color:#0000ff; text-decoration:underline;}
+  
+
+  ul {list-style-type: square;} 
+ 
   ul.HelperHint{
     font-size: 100%;
     font-weight: bold;
@@ -85,10 +88,8 @@
     text-align: right;
   } 
 
- blockquote:before { content: ""}
- blockquote:after { content: ""}
-
-
+ blockquote:before { content: "";}
+ blockquote:after { content: "";}
 
 }
 

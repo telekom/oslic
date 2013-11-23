@@ -53,7 +53,6 @@
   /*--- Headings | Überschriften ------------------------------------------------------------------------*/
 
   h1,h2,h3,h4,h5,h6 {
-    font-family:"Times New Roman", Times, serif;
     font-weight:normal;
     color:#222;
     margin:0 0 0.25em 0;
@@ -85,10 +84,9 @@
   p { line-height:1.5em; margin:0 0 1em 0; }
 
   blockquote, cite, q {
-    font-family:Georgia, "Times New Roman", Times, serif;
     font-style:italic;
   }
-  blockquote { margin:0 0 1em 1.6em; color:#006; }
+  blockquote { margin:0 0 1em 1.6em; color:#222; }
 
   strong,b { font-weight:bold; }
   em,i { font-style:italic; }
@@ -123,15 +121,15 @@
 
   /*--- Links ----------------------------------------------------------------------------------------- */
 
-  a { color:#e20074; background:transparent; text-decoration:none; }
-  a:visited  { color:#e20074; }
+  a { color:#0000ff; background:transparent; text-decoration:none; }
+  a:visited  { color:#000088; }
 
   /* (en) maximum constrast for tab focus - change with great care */
   /* (en) Maximaler Kontrast für Tab Focus - Ändern Sie diese Regel mit Bedacht */
-  a:focus { text-decoration:underline; color:#e20074; 
+  a:focus { text-decoration:underline; color:#0000ff; 
   background: #fff; outline: 3px #f93 solid; }
   a:hover,
-  a:active { color:#e20074; text-decoration:underline; outline: 0 none; }
+  a:active { color:#0000ff; text-decoration:underline; outline: 0 none; }
 
   /* --- images (with optional captions) | Bilder (mit optionaler Bildunterschrift) ------------------ */
 
@@ -179,7 +177,8 @@
   * @section content-tables
   */
 
-  table { width:auto; border-collapse:collapse; margin-bottom:0.5em; border-top:2px #888 solid; border-bottom:2px #888 solid; }
+  table { width:auto; border-collapse:collapse; margin-bottom:0.5em; 
+  border-top:2px #888 solid; border-bottom:2px #888 solid; }
   table caption { font-variant:small-caps; }
   table.full { width:100%; }
   table.fixed { table-layout:fixed; }
@@ -191,6 +190,17 @@
 
   tbody th { border-bottom:1px solid #fff; text-align:left; }
   tbody td { border-bottom:1px solid #eee; }
+
+
+  table.inner { width:auto; border-collapse:collapse; 
+    margin-bottom:0em; 
+    border-top:0px #888 solid; 
+    border-bottom:0px #888 solid}
+
+  th.inner,td.inner { padding:1px; border-bottom:0px solid #eee;}
+
+
+
 
 /*
   tbody tr:hover th[scope="row"],

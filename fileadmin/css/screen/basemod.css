@@ -38,13 +38,12 @@
 	/* (en) Marginal areas & page background */
 	/* (de) Randbereiche & Seitenhintergrund */
   body {
-    background: #f5f5f5 url("../../images/siteBgBorder.png") repeat top left
-      fixed;
+    background: #ffffff;
     padding: 10px 0;
   }
 
   .page {
-    background: #dbdbdb;
+    background: #ffffff;
   }
 	
 	/* (en) Centering layout in old IE-versions */
@@ -63,7 +62,7 @@
 	.page_margins {
 		min-width: 740px;
 		max-width: 80em;
-		background: #e5e5e5;
+		background: #ffffff;
 	}
 	
 	.page {
@@ -71,8 +70,8 @@
 	}
 	#header {
     color: #888;
-    background: #e5e5e5 repeat-x top left;
-    padding: 6px 10px 10px 10px;
+    background: #ffffff repeat-x top left;
+    padding: 10px 10px 10px 0px;
     height: 54px;
 		position: relative;
 	}	
@@ -95,18 +94,20 @@
     font-style: italic;
 	}
 
-	 #toplogo {
+  #toplogo {
     position: absolute;
-    background-color: transparent;
-    margin: 0px 0px 0px 16px;
+    background-color: #ffffff;
+    margin: 0px 0px 0px 0px;
+    height: 60px;
+    width: 128px;
   }
 
   #topteaser {
     position: absolute;
-    background: #e5e5e5;
-    margin: 6px 0px 0px 23%;
-    height: 48px;
-    width: 288px;
+    background: #ffffff;
+    margin: 0px 0px 0px 30%;
+    height: 60px;
+    width: 256px;
     padding: 0px 2px 0px 2px;
     color: #fff;
   }
@@ -148,9 +149,9 @@
   
 	#footer {
 		color: #666;
-		background: #dbdbdb;
+		background: #ffffff;
 		padding: 10px 20px;
-		border-top: 5px #efefef solid;
+		border-top: 2px #d0d0d0 solid;
 		line-height: 1.5em;
 	}	
 	

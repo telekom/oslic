@@ -17,17 +17,15 @@
 	
 	.page {
 		padding: 0;
-		border: 10px #dbdbdb solid;
+		border: 10px #ffffff solid;
 	}
 	#main {
 		background-color: transparent;
-		background-image: url("../../images/siteBgColuLeftFlex20Percent.gif");
 		background-repeat: repeat-y;
 		background-position: 20% 0;
 	}
 	.page {
 		background-color: transparent;
-		background-image: url("../../images/siteBgColuRightFlex25Percent.gif");
 		background-repeat: repeat-y;
 		background-position: 75% 0;
 	}

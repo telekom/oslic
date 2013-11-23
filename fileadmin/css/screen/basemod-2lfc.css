@@ -17,11 +17,10 @@
 	
 	.page {
 		padding: 0;
-		border: 10px #dbdbdb solid;
+		border: 10px #ffffff solid;
 	}
 	#main {
-		background-color: #e5e5e5;
-		background-image: url("../../images/siteBgColuLeftFlex20Percent.gif");
+		background-color: transparent;
 		background-repeat: repeat-y;
 		background-position: 20% 0;
 	}

@@ -1,1 +1,1 @@
-Copyright 2012 by Karsten Reincke, Deutsche Telekom AG Darmstadt
+Copyright 2013 by Karsten Reincke, Deutsche Telekom AG Darmstadt

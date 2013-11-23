@@ -46,10 +46,20 @@ div.box h3 {
     margin: 0px 10px;
 }
 
-div.box p, div.box table, div.box ul, div.box ol {
+div.box h4 {
+    margin: 0px 10px;
+}
+
+div.box h5 {
+    margin: 0px 10px;
+}
+div.box p,  div.box ul, div.box ol {
     margin: 0px 10px 10px 10px;
 }
 
+div.box table {
+    margin: 0px 2px 2px 2px;
+}
 div.box table tbody td {
     vertical-align: top;
 }
@@ -61,6 +71,7 @@ div.box table tbody td {
 div.box ol {
     margin-left: 35px;
 }
+
 
 div.tiny {
     width: 20%;
@@ -81,6 +92,7 @@ div.huge {
     width: 95%;
 }
 
+
 div.error h3, div.error p, div.error table, div.error ul {
     margin-left: 36px;
 }
@@ -95,13 +107,15 @@ div.error img {
     float: left;
     margin: 0px 10px 10px 10px;
 }
+
 div.error table {
     display: block;
 }
 
-div.image h3, div.image p, div.image table, div.image ul {
+div.image h3, div.image h4, div.image h5, div.image p, div.image table, div.image ul {
     margin-left: 68px;
 }
+
 div.image ol {
     margin-left: 90px;
 }
@@ -122,16 +136,18 @@ div.box label.radio, div.box label.checkbox {
 }
 
 
+
 table.list {
     float: left;
     width: 828px;
     margin: 0px 0px 12px 12px;
 }
 
+
 table.list, x:-moz-any-link {
     margin-left: 13px;
 }
-
+/*
 table.small {
     width: 28%;
 }
@@ -139,7 +155,7 @@ table.small {
 table.small, x:-moz-any-link {
     width: 28%;
 }
-
+*/
 table.normal {
     width: 48%;
 }
@@ -163,6 +179,7 @@ table.huge {
 table.huge, x:-moz-any-link {
     width: 98%;
 }
+
 
 table.list caption {
     padding-left: 10px;
@@ -190,6 +207,7 @@ table.list tbody tr.category td img {
     float: none;
 }
 
+*/
 div.button {
     background: 0 !important;
     border: 0 !important;
@@ -240,3 +258,4 @@ a.specialButton span {
     padding: 2px 7px 7px 7px;
     display: block;
 }
+
