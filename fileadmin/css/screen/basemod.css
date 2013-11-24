@@ -258,7 +258,7 @@
 		font-weight: bold;
 	}
 	#footer a:focus,#footer a:hover,#footer a:active {
-		color: #e20074;
+		color: #000088;
 		background-color: transparent;
 		text-decoration: underline;
 	}

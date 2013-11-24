@@ -83,7 +83,7 @@
   }
 
   #sideMenuList li.current a { 
-    background:#e20074 url("../../images/siteBgSideMenuSel.gif") repeat-x center right;
+    background:#000088 url("../../images/siteBgSideMenuSel.gif") repeat-x center right;
     color:#fff; 
     outline: 0 none; 
   }
@@ -92,7 +92,7 @@
   #sideMenuList li a:hover,
   #sideMenuList li a:active { 
     background:#fafafa;
-    color:#e20074; 
+    color:#000088; 
     outline: 0 none; 
   }
 
@@ -110,7 +110,7 @@
   }
    
   #sideMenuList li ul li.current a { 
-    background: #e20074 url("../../images/siteBgSideMenuSel.gif") repeat-x center right; 
+    background: #000088 url("../../images/siteBgSideMenuSel.gif") repeat-x center right; 
     color:#fff; 
   }
 
@@ -118,7 +118,7 @@
   #sideMenuList li ul li a:hover,
   #sideMenuList li ul li a:active { 
     background: #f6f6f6; 
-    color:#e20074; 
+    color:#000088; 
   }
 
   /* Level 3 */
@@ -134,7 +134,7 @@
     color:#222; 
   }
   #sideMenuList li ul li ul li.current a { 
-    background: #e20074 url("../../images/siteBgSideMenuSel.gif") repeat-x center right; 
+    background: #000088 url("../../images/siteBgSideMenuSel.gif") repeat-x center right; 
     color:#fff; 
   }
 
@@ -142,7 +142,7 @@
   #sideMenuList li ul li ul li a:hover,
   #sideMenuList li ul li ul li a:active { 
     background: #f3f3f3; 
-    color:#e20074; 
+    color:#000088; 
   }
 
   /* Level 4 */
@@ -158,7 +158,7 @@
     color:#111; 
   }
   #sideMenuList li ul li ul li ul li.current a { 
-    background: #e20074 url("../../images/siteBgSideMenuSel.gif") repeat-x center right;
+    background: #000088 url("../../images/siteBgSideMenuSel.gif") repeat-x center right;
     color:#fff; 
   }
 
@@ -166,7 +166,7 @@
   #sideMenuList li ul li ul li ul li a:hover,
   #sideMenuList li ul li ul li ul li a:active { 
     background: #f0f0f0;
-    color:#e20074; 
+    color:#000088; 
   }
 
   #sideteaser {

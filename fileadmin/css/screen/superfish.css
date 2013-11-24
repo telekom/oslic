@@ -106,7 +106,7 @@ ul.sf-menu li li li.sfHover ul {
 .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
 	background:		#fcfcfc url("../../images/siteBgMenuSel.png") repeat center;
 	outline:		0;
-	color: #e20074;
+	color: #000088;
 }
 
 /*** arrows **/

@@ -27,12 +27,12 @@
   }
 
   h1,h2,h3,h4,h5,h6 { 
-  	color:#e20074;
+  	color:#000088;
   }
 
-  h1 { font-size: 166.33%; color:#e20074;}          /* 20px */
-  h2 { font-size: 150%; color:#e20074; }            /* 18px */
-  h3 { font-size: 133.33%;  color:#e20074; }        /* 16px */
+  h1 { font-size: 166.33%; color:#000088;}          /* 20px */
+  h2 { font-size: 150%; color:#000088; }            /* 18px */
+  h3 { font-size: 133.33%;  color:#000088; }        /* 16px */
   h4 { font-size: 116.67%; font-style:italic; }  /* 14px */
   h6 { font-size: 100%;}                        /* 12px */
   h6 { font-size: 100%; font-style:italic; }     /* 12px */
@@ -42,9 +42,9 @@
     font-size: 80%;
     color: #222;  
   }
-  #col2 h1 { font-size: 133.33%;  color:#e20074; }/* 16px */
-  #col2 h2 { font-size: 116.67%; color:#e20074;}  /* 14px */
-  #col2 h3 { font-size: 100%; color:#e20074;}     /* 12px */
+  #col2 h1 { font-size: 133.33%;  color:#000088; }/* 16px */
+  #col2 h2 { font-size: 116.67%; color:#000088;}  /* 14px */
+  #col2 h3 { font-size: 100%; color:#000088;}     /* 12px */
 
 
   /* ### Lists | Listen  #### */
@@ -54,10 +54,10 @@
 
 
 
-  a {color: #e20074; text-decoration:none;}
+  a {color: #000088; text-decoration:none;}
   a:focus,
   a:hover,
-  a:active {color:#e20074; text-decoration:underline;}
+  a:active {color:#000088; text-decoration:underline;}
     
   ul.HelperHint{
     font-size: 100%;
