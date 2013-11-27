@@ -1,83 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>http://dtag-dbu.github.io/osclin/en/site/xml-sitemap.html</loc>
+		<loc>http://dtag-dbu.github.io/oslic/en/site/xml-sitemap.html</loc>
 		<lastmod>2010-04-07</lastmod>
 	</url>
 	<url>
-		<loc>http://dtag-dbu.github.io/osclin/en/site/html-sitemap.html</loc>
+		<loc>http://dtag-dbu.github.io/oslic/en/site/html-sitemap.html</loc>
 		<lastmod>2012-02-24</lastmod>
 	</url>
 	<url>
-		<loc>http://dtag-dbu.github.io/osclin/en/collaboration/community.html</loc>
+		<loc>http://dtag-dbu.github.io/oslic/en/collaboration/community.html</loc>
 		<lastmod>2012-03-02</lastmod>
 	</url>
 	<url>
-		<loc>http://dtag-dbu.github.io/osclin/en/oslic/manifesto.html</loc>
-		<lastmod>2013-11-24</lastmod>
+		<loc>http://dtag-dbu.github.io/oslic/en/oslic/manifesto.html</loc>
+		<lastmod>2013-11-27</lastmod>
 	</url>
 	<url>
-		<loc>http://dtag-dbu.github.io/osclin/en/oslic/license.html</loc>
+		<loc>http://dtag-dbu.github.io/oslic/en/oslic/license.html</loc>
 		<lastmod>2012-02-24</lastmod>
 	</url>
 	<url>
-		<loc>http://dtag-dbu.github.io/osclin/en/oslic/initiators.html</loc>
+		<loc>http://dtag-dbu.github.io/oslic/en/oslic/initiators.html</loc>
 		<lastmod>2013-03-15</lastmod>
 	</url>
 	<url>
-		<loc>http://dtag-dbu.github.io/osclin/en/planning/scope.html</loc>
-		<lastmod>2013-08-19</lastmod>
+		<loc>http://dtag-dbu.github.io/oslic/en/planning/scope.html</loc>
+		<lastmod>2013-11-27</lastmod>
 	</url>
 	<url>
-		<loc>http://dtag-dbu.github.io/osclin/en/planning/milestones.html</loc>
+		<loc>http://dtag-dbu.github.io/oslic/en/planning/milestones.html</loc>
 		<lastmod>2013-11-24</lastmod>
 	</url>
 	<url>
-		<loc>http://dtag-dbu.github.io/osclin/en/planning/results.html</loc>
-		<lastmod>2013-11-24</lastmod>
+		<loc>http://dtag-dbu.github.io/oslic/en/planning/results.html</loc>
+		<lastmod>2013-11-27</lastmod>
 	</url>
 	<url>
-		<loc>http://dtag-dbu.github.io/osclin/en/collaboration/repository.html</loc>
+		<loc>http://dtag-dbu.github.io/oslic/en/collaboration/repository.html</loc>
 		<lastmod>2012-03-04</lastmod>
 	</url>
 	<url>
-		<loc>http://dtag-dbu.github.io/osclin/en/collaboration/participation/case-by-case.html</loc>
+		<loc>http://dtag-dbu.github.io/oslic/en/collaboration/participation/case-by-case.html</loc>
 		<lastmod>2013-05-24</lastmod>
 	</url>
 	<url>
-		<loc>http://dtag-dbu.github.io/osclin/en/collaboration/participation/frequent.html</loc>
+		<loc>http://dtag-dbu.github.io/oslic/en/collaboration/participation/frequent.html</loc>
 		<lastmod>2012-03-03</lastmod>
 	</url>
 	<url>
-		<loc>http://dtag-dbu.github.io/osclin/en/collaboration/participation/permanent.html</loc>
+		<loc>http://dtag-dbu.github.io/oslic/en/collaboration/participation/permanent.html</loc>
 		<lastmod>2012-03-03</lastmod>
 	</url>
 	<url>
-		<loc>http://dtag-dbu.github.io/osclin/en/download/prepare.html</loc>
+		<loc>http://dtag-dbu.github.io/oslic/en/download/prepare.html</loc>
 		<lastmod>2012-03-03</lastmod>
 	</url>
 	<url>
-		<loc>http://dtag-dbu.github.io/osclin/en/download/obtain.html</loc>
+		<loc>http://dtag-dbu.github.io/oslic/en/download/obtain.html</loc>
 		<lastmod>2013-02-27</lastmod>
 	</url>
 	<url>
-		<loc>http://dtag-dbu.github.io/osclin/en/download/use.html</loc>
+		<loc>http://dtag-dbu.github.io/oslic/en/download/use.html</loc>
 		<lastmod>2012-03-08</lastmod>
 	</url>
 	<url>
-		<loc>http://dtag-dbu.github.io/osclin/en/download/install.html</loc>
+		<loc>http://dtag-dbu.github.io/oslic/en/download/install.html</loc>
 		<lastmod>2013-05-20</lastmod>
 	</url>
 	<url>
-		<loc>http://dtag-dbu.github.io/osclin/en/addons/links.html</loc>
+		<loc>http://dtag-dbu.github.io/oslic/en/addons/links.html</loc>
 		<lastmod>2013-11-24</lastmod>
 	</url>
 	<url>
-		<loc>http://dtag-dbu.github.io/osclin/en/addons/presentations.html</loc>
+		<loc>http://dtag-dbu.github.io/oslic/en/addons/presentations.html</loc>
 		<lastmod>2013-05-24</lastmod>
 	</url>
 	<url>
-		<loc>http://dtag-dbu.github.io/osclin/en/site/imprint.html</loc>
+		<loc>http://dtag-dbu.github.io/oslic/en/site/imprint.html</loc>
 		<lastmod>2013-11-24</lastmod>
 	</url>
 </urlset>
