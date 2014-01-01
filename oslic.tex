@@ -18,7 +18,7 @@
 % [ File structure derived from 'mind your Scholar Research Framework' 
 %   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
 
-\documentclass[DIV=calc,BCOR=5mm,12pt,headings=small,oneside,toc=bib]{scrbook}
+\documentclass[DIV=calc,BCOR=5mm,12pt,headings=small,oneside,toc=bib,dvips,draft]{scrbook}
 
 %%% (1) general configurations %%%
 \usepackage[utf8]{inputenc}
@@ -37,7 +37,6 @@
 \usepackage[see]{jurabib}
 \bibliographystyle{jurabib}
 \input{btexmat/oscJbibCfgPureInc} %no annotations
-
 
 % language specific hyphenation
 \input{btexmat/oscHyphenationEnInc}
@@ -64,7 +63,7 @@
 %\usepackage{utopia}
 %\usepackage{courier}
 %\usepackage{avant}
-\usepackage[dvips]{epsfig}
+\usepackage{epsfig}
 
 % graphic
 \usepackage{graphicx,color}
@@ -119,15 +118,17 @@
 \usetikzlibrary{shapes,snakes}
 \usetikzlibrary{positioning}
 \usetikzlibrary{decorations.text}
+\usetikzlibrary{trees}
 
 \usepackage{multirow}
 
-\usepackage{blindtext}
+%RPD%%%\usepackage{blindtext}
 \usepackage{caption}
 
 \usetikzlibrary{matrix}
 
-\usepackage{amsmath,amsfonts}
+\usepackage{amsmath}
+\usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{wasysym}
 \usepackage{pstricks, pst-node, pst-tree}
@@ -152,6 +153,16 @@
 % depth of contents
 \setcounter{secnumdepth}{5}
 \setcounter{tocdepth}{5}
+
+% Hyperlinks
+%\usepackage{hyperref}
+%\hypersetup{bookmarks=true,breaklinks=true,colorlinks=true,citecolor=blue,draft=false}
+%\usepackage{hypdvips}
+
+\newcommand{\texorpdfstring}[2]{#1}
+% Abbreviations
+\newcommand{\oslic}{OSLiC}
+
 %%%%%%%%%%%%%%
 \begin{document}
 
