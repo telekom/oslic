@@ -18,7 +18,7 @@
 % [ File structure derived from 'mind your Scholar Research Framework' 
 %   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
 
-\documentclass[DIV=calc,BCOR=5mm,12pt,headings=small,oneside,toc=bib,dvips,draft]{scrbook}
+\documentclass[DIV=calc,BCOR=5mm,12pt,headings=small,oneside,toc=bib,draft]{scrbook}
 
 %%% (1) general configurations %%%
 \usepackage[utf8]{inputenc}
@@ -63,7 +63,6 @@
 %\usepackage{utopia}
 %\usepackage{courier}
 %\usepackage{avant}
-\usepackage{epsfig}
 
 % graphic
 \usepackage{graphicx,color}
@@ -131,7 +130,6 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{wasysym}
-\usepackage{pstricks, pst-node, pst-tree}
 \usepackage{chngcntr}
 \usepackage{nameref}
 
@@ -155,11 +153,12 @@
 \setcounter{tocdepth}{5}
 
 % Hyperlinks
-%\usepackage{hyperref}
-%\hypersetup{bookmarks=true,breaklinks=true,colorlinks=true,citecolor=blue,draft=false}
-%\usepackage{hypdvips}
+\usepackage{hyperref}
+\hypersetup{bookmarks=true,breaklinks=true,colorlinks=true,citecolor=blue,draft=false}
 
-\newcommand{\texorpdfstring}[2]{#1}
+% Compatibility command if hyperref cannot be used
+%\newcommand{\texorpdfstring}[2]{#1}
+
 % Abbreviations
 \newcommand{\oslic}{OSLiC}
 

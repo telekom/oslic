@@ -150,12 +150,12 @@ We have already defined the \emph{open source use case} as the combination of
 these tokens. If we simply combine all these tokens of all these classes with
 all the tokens of the other classes\footnote{in the sense of the cross product
 TYPE $\times$ STATE $\times$ CONTEXT $\times$ RECIPIENT $\times$ FORM. In some
-earlier versions of the OSLiC, we also asked whether you are going to combine or
+earlier versions of the \oslic{}, we also asked whether you are going to combine or
 to embed the open source software with other software components by linking them
 statically or dynamically, or by textually including (parts of) the open source
 software into your larger product. Meanwhile, we clearly discovered that it is
 unnecessary to increase the complexity by the results of this question. For
-Details $\rightarrow$ OSLiC p.\ \pageref{sec:LinkingSecondary}}, we get
+Details $\rightarrow$ \oslic{} p.\ \pageref{sec:LinkingSecondary}}, we get
 $2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 = 32$ sets of tokens -- or 32 \emph{open source use cases}.
 Fortunately, some of the generated sets are invalid from an empirical or logical
 view, and some of these sets are context sensitive:
@@ -189,35 +189,38 @@ shall summarize our own clarifications:
 
 \section{Overview of the OSUC classes and tokens}
 
-
-\begin{footnotesize}
-\begin{minipage}{\textwidth}
-\pstree[treemode=R, levelsep=*0.2, treesep=0.6]{\Toval{tokens}}{ 
-    \pstree[]{\Tr{\fbox{type?}}}{
-      \Toval{proapse} 
-      \Toval{snimoli}
-    }
-    \pstree[]{\Tr{\fbox{state?}}}{
-      \Toval{unmodified} 
-      \Toval{modified}
-    }
-    \pstree[]{\Tr{\fbox{context?}}}{
-      \Toval{independent}
-      \Toval{embedded} 
-    }
-    \pstree[]{\Tr{\fbox{recipient?}}}{
-      \Toval{4yourself}
-      \pstree[]{\Toval{2others}}{
-      \pstree[]{\Tr{\fbox{form?}}}{
-          \Toval{\textit{sources}}
-          \Toval{\textit{binaries}}
-        }
+\begin{tikzpicture}[
+    font=\footnotesize,
+    grow'=right, 
+    level 1/.style={sibling distance=6em},
+    level 2/.style={sibling distance=2.5em},
+    level distance=2.5cm          
+]
+\node [ellipse,draw] {tokens}
+  child { node [rectangle,draw] {type?}
+    child { node [ellipse,draw] {proapse}}
+    child { node [ellipse,draw] {snimoli}}
+  }
+  child { node [rectangle,draw] {state?}
+    child { node [ellipse,draw] {unmodified}}
+    child { node [ellipse,draw] {modified}}
+  }
+  child { node [rectangle,draw] {context?}
+    child { node [ellipse,draw] {independent}}
+    child { node [ellipse,draw] {dependent}}
+  }
+  child { node [rectangle,draw] {recipient?}
+    child { node [ellipse,draw] {4yourself}}
+    child { node [ellipse,draw] {2others}
+      child { node [rectangle,draw] {form?}
+        child { node[ellipse,draw] {sources}}
+        child { node[ellipse,draw] {binaries}}
       }
     }
-  }
-\end{minipage}
-\end{footnotesize}  
-  
+  };
+\end{tikzpicture}
+
+
 \section{The OSUC taxonomy}
 
 This is one of the possible trees 'collecting' the tokens and offering the
@@ -230,257 +233,395 @@ for yourself and independent (not in combination with larger software unit), is
 like having an unused heap of bytes on your disc.}:
 
 \label{OsucDefinitionTree}
-\begin{tiny}
-\pstree[treemode=R,levelsep=*0.2, treesep=0.2]{\Toval{OSS}}{ 
-    \pstree[]{\Tr{\fbox{type?}}}{
-      \pstree[]{\Tr{\parbox{4em}{\texttt{\{\underline{proapse}\}}}}}{
-        \pstree[]{\Tr{\fbox{state?}}}{
-          \pstree[]{\Tr{\parbox{5.2em}{
-                             \texttt{\{proapse,\\
-                             \hspace*{0.5em}\underline{unmodified}\}}}}}{
-            \pstree[]{\Tr{\fbox{context?}}}{
-              \pstree[]{\Tr{\parbox{5.2em}{
-                             \texttt{\{proapse,\\
-                             \hspace*{0.5em}unmodified,\\
-                             \hspace*{0.5em}\underline{independent}\}}}}}{
-                \pstree[]{\Tr{\fbox{recipient?}}}{
-                
-                  \pstree[]{\Toval{\bfseries{OSUC-01}}}{
-              
-                    \Tr{\parbox{5.2em}{
-                             \texttt{\{proapse,\\
-                             \hspace*{0.5em}unmodified,\\
-                             \hspace*{0.5em}independent,\\
-                             \hspace*{0.5em}\underline{4yourself}\}}}}
-                   }                            
-                  \pstree[]{\Toval{\bfseries{OSUC-02}}}{
-                        
-                      \pstree[]{\Tr{\parbox{5.2em}{
-                             \texttt{\{proapse,\\
-                             \hspace*{0.5em}unmodified,\\
-                             \hspace*{0.5em}independent,\\
-                             \hspace*{0.5em}\underline{2others}\}}}}}{
-                               \pstree[]{\Tr{\fbox{$\cup$ form?}}}{
-                                 \Tr{\parbox{5.6em}{\underline{\textit{OSUC-02s}}\\
-                                 \texttt{\{sources\}}}}
-
-                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-02b}}\\
-                                \texttt{\{binaries\}}}}
-                               }
-                             }                                  
-                    }         
-                }
-              }
-              \pstree[]{\Tr{\parbox{5.4em}{
-                             \texttt{\{proapse,\\
-                             \hspace*{0.5em}unmodified,\\
-                             \hspace*{0.5em}\underline{embedded}
-                             \bfseries{\lightning}\}}}}}{
-                \Tr{$\varnothing$}
-              }              
-            }
+\begin{tikzpicture}[
+    font=\tiny,
+    align=left,
+    grow'=right,
+    level 1/.style={level distance=1.3cm},
+    level 2/.style={sibling distance=24em, level distance=1cm},
+    level 3/.style={sibling distance=12em, level distance=1cm},
+    level 4/.style={sibling distance=6em, level distance=1.5cm},
+    level 5/.style={sibling distance=3.5em, level distance=2cm},
+    level 6/.style={sibling distance=3.5em, level distance=1.8cm},
+    level 7/.style={sibling distance=3.5em, level distance=1.5cm}
+]
+\node [ellipse,draw] {OSS}
+  child { node [rectangle,draw] {type?} 
+    child { node [rectangle,draw] {state?} 
+      child { node [rectangle,draw] {context?} 
+        child { node [rectangle,draw] {recipient?} 
+          child { node [ellipse,draw] {OSUC-01}
+            child { node {proapse,\\unmodified,\\independent,\\4yourself}}
+            edge from parent node {\{4yourself\}}
           }
-          \pstree[]{\Tr{\parbox{5.2em}{
-                             \texttt{\{proapse,\\
-                             \hspace*{0.5em}\underline{modified}\}}}}}{
-            \pstree[]{\Tr{\fbox{context?}}}{
-              \pstree[]{\Tr{\parbox{5.2em}{
-                             \texttt{\{proapse,\\
-                             \hspace*{0.5em}modified,\\
-                             \hspace*{0.5em}\underline{independent}\}}}}}{
-                \pstree[]{\Tr{\fbox{recipient?}}}{
-                  \pstree[]{\Toval{\bfseries{OSUC-03}}}{
-                    \Tr{\parbox{5.2em}{
-                             \texttt{\{proapse,\\
-                             \hspace*{0.5em}modified,\\
-                             \hspace*{0.5em}independent,\\
-                             \hspace*{0.5em}\underline{4yourself}\}}}}
-                   }
-                   \pstree[]{\Toval{\bfseries{OSUC-04}}}{ 
-                           
-                      \pstree[]{\Tr{\parbox{5.2em}{
-                             \texttt{\{proapse,\\
-                             \hspace*{0.5em}modified,\\
-                             \hspace*{0.5em}independent,\\
-                             \hspace*{0.5em}\underline{2others}\}}}}}{
-                               \pstree[]{\Tr{\fbox{$\cup$ form?}}}{
-                                 \Tr{\parbox{5.6em}{\underline{\textit{OSUC-04s}}\\
-                                 \texttt{\{sources\}}}}
-
-                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-04b}}\\
-                                \texttt{\{binaries\}}}}
-                               }
-                             }       
-
-                             
-                   }         
-                }
+          child { node [ellipse,draw] {OSUC-02}
+            child { node {proapse,\\unmodified,\\independent,\\2others} 
+              child { node [rectangle,draw] {form?}
+                child { node {$\underline{OSUC-02s}$\\\{sources\}}} 
+                child { node {$\underline{OSUC-02b}$\\\{binaries\}}} 
               }
-              \pstree[]{\Tr{\parbox{5.4em}{
-                             \texttt{\{proapse,\\
-                             \hspace*{0.5em}modified,\\
-                             \hspace*{0.5em}\underline{embedded}
-                             \bfseries{\lightning}\}}}}}{                          
-                \Tr{$\varnothing$}
-              }              
             }
+            edge from parent node {\{2others\}}
           }
+          edge from parent node { \{independent\} }
         }
-      } 
-      \pstree[]{\Tr{\parbox{4em}{\texttt{\{\underline{snimoli}\}}}}}{
-        \pstree[]{\Tr{\fbox{state?}}}{
-          \pstree[]{\Tr{\parbox{5.2em}{
-                             \texttt{\{snimoli,\\
-                             \hspace*{0.5em}\underline{unmodified}\}}}}}{
-            \pstree[]{\Tr{\fbox{context?}}}{
-              \pstree[]{\Tr{\parbox{5.2em}{
-                             \texttt{\{snimoli,\\
-                             \hspace*{0.5em}unmodified,\\
-                             \hspace*{0.5em}\underline{independent}\}}}}}{
-                \pstree[]{\Tr{\fbox{recipient?}}}{
-                  \pstree[]{
-                    \Tr{\parbox{5.8em}{
-                             \texttt{\{snimoli,\\
-                             \hspace*{0.5em}unmodified,\\
-                             \hspace*{0.5em}independent,\\
-                             \hspace*{0.5em}\underline{4yourself}
-                             \bfseries{\lightning}\}}}}
-                     }{\Tr{$\varnothing$}}        
+        child { node {$\emptyset$} 
+          edge from parent node { \{embedded\} }
+        }
+        edge from parent node { \{unmodified\} }
+      }
+      child { node [rectangle,draw] {context?} 
+        child { node [rectangle,draw] {recipient?} 
+          child { node [ellipse,draw] {OSUC-03} 
+            child { node {proapse,\\modified,\\independent,\\4yourself} }
+            edge from parent node {\{4yourself\}}
+          }
+          child { node [ellipse,draw] {OSUC-04}
+            child { node {proapse,\\modified,\\independent,\\2others} 
+              child { node [rectangle,draw] {form?}
+                child { node {$\underline{OSUC-04s}$\\\{sources\}} }
+                child { node {$\underline{OSUC-04b}$\\\{binaries\}} }
+              }
+            }
+            edge from parent node {\{2others\}}
+          }
+          edge from parent node { \{independent\} }
+        }
+        child { node {$\emptyset$} 
+          edge from parent node { \{embedded\} }
+        }
+        edge from parent node { \{modified\} }
+      }
+      edge from parent node { \{proapse\} }
+    }
+    child { node [rectangle,draw] {state?} 
+      child { node [rectangle,draw] {context?} 
+        child { node [rectangle,draw] {recipient?} 
+          child { node {$\emptyset$} 
+            edge from parent node {\{4yourself\}}
+          }
+          child { node [ellipse,draw] {OSUC-05}
+            child { node {snimoli,\\unmodified,\\independent,\\2others} 
+              child { node [rectangle,draw] {form?}
+                child { node {$\underline{OSUC-05s}$\\\{sources\}} }
+                child { node {$\underline{OSUC-05b}$\\\{binaries\}} }
+              }
+            }
+            edge from parent node {\{2others\}}
+          }
+          edge from parent node { \{independent\} }
+        }
+        child { node [rectangle,draw] {recipient?} 
+          child { node [ellipse,draw] {OSUC-06} 
+            child { node {snimoli,\\unmodified,\\embedded,\\4yourself} }
+            edge from parent node {\{4yourself\}}
+          }
+          child { node [ellipse,draw] {OSUC-07}
+            child { node {snimoli,\\unmodified,\\embedded,\\2others} 
+              child { node [rectangle,draw] {form?}
+                child { node {$\underline{OSUC-07s}$\\\{sources\}} }
+                child { node {$\underline{OSUC-07b}$\\\{binaries\}} }
+              }
+            }
+            edge from parent node {\{2others\}}
+          }
+          edge from parent node { \{embedded\} }
+        }
+        edge from parent node { \{unmodified\} }
+      }
+      child { node [rectangle,draw] {context?} 
+        child { node [rectangle,draw] {recipient?} 
+          child { node {$\emptyset$} 
+            edge from parent node {\{4yourself\}}
+          }
+          child { node [ellipse,draw] {OSUC-08}
+            child { node {snimoli,\\modified,\\embedded,\\2others} 
+              child { node [rectangle,draw] {form?}
+                child { node {$\underline{OSUC-08s}$\\\{sources\}} }
+                child { node {$\underline{OSUC-08b}$\\\{binaries\}} }
+              }
+            }
+            edge from parent node {\{2others\}}
+          }
+          edge from parent node { \{independent\} }
+        }
+        child { node [rectangle,draw] {recipient?} 
+          child { node [ellipse,draw] {OSUC-09} 
+            child { node {snimoli,\\modified,\\embedded,\\4yourself} }
+            edge from parent node {\{4yourself\}}
+          }
+          child { node [ellipse,draw] {OSUC-10}
+            child { node {snimoli,\\unmodified,\\embedded,\\2others} 
+              child { node [rectangle,draw] {form?}
+                child { node {$\underline{OSUC-10s}$\\\{sources\}} }
+                child { node {$\underline{OSUC-10b}$\\\{binaries\}} }
+              }
+            }
+            edge from parent node {\{2others\}}
+          }
+          edge from parent node { \{embedded\} }
+        }
+        edge from parent node { \{modified\} }
+      }
+      edge from parent node { \{snimoli\} }
+    }
+  };
+\end{tikzpicture}
+
+%% RPD: Obsolete PSTricks graphic
+%% \label{OsucDefinitionTree}
+%% \begin{tiny}
+%% \pstree[treemode=R,levelsep=*0.2, treesep=0.2]{\Toval{OSS}}{ 
+%%     \pstree[]{\Tr{\fbox{type?}}}{
+%%       \pstree[]{\Tr{\parbox{4em}{\texttt{\{\underline{proapse}\}}}}}{
+%%         \pstree[]{\Tr{\fbox{state?}}}{
+%%           \pstree[]{\Tr{\parbox{5.2em}{
+%%                              \texttt{\{proapse,\\
+%%                              \hspace*{0.5em}\underline{unmodified}\}}}}}{
+%%             \pstree[]{\Tr{\fbox{context?}}}{
+%%               \pstree[]{\Tr{\parbox{5.2em}{
+%%                              \texttt{\{proapse,\\
+%%                              \hspace*{0.5em}unmodified,\\
+%%                              \hspace*{0.5em}\underline{independent}\}}}}}{
+%%                 \pstree[]{\Tr{\fbox{recipient?}}}{
+                
+%%                   \pstree[]{\Toval{\bfseries{OSUC-01}}}{
+              
+%%                     \Tr{\parbox{5.2em}{
+%%                              \texttt{\{proapse,\\
+%%                              \hspace*{0.5em}unmodified,\\
+%%                              \hspace*{0.5em}independent,\\
+%%                              \hspace*{0.5em}\underline{4yourself}\}}}}
+%%                    }                            
+%%                   \pstree[]{\Toval{\bfseries{OSUC-02}}}{
+                        
+%%                       \pstree[]{\Tr{\parbox{5.2em}{
+%%                              \texttt{\{proapse,\\
+%%                              \hspace*{0.5em}unmodified,\\
+%%                              \hspace*{0.5em}independent,\\
+%%                              \hspace*{0.5em}\underline{2others}\}}}}}{
+%%                                \pstree[]{\Tr{\fbox{$\cup$ form?}}}{
+%%                                  \Tr{\parbox{5.6em}{\underline{\textit{OSUC-02s}}\\
+%%                                  \texttt{\{sources\}}}}
+
+%%                                 \Tr{\parbox{5.6em}{\underline{\textit{OSUC-02b}}\\
+%%                                 \texttt{\{binaries\}}}}
+%%                                }
+%%                              }                                  
+%%                     }         
+%%                 }
+%%               }
+%%               \pstree[]{\Tr{\parbox{5.4em}{
+%%                              \texttt{\{proapse,\\
+%%                              \hspace*{0.5em}unmodified,\\
+%%                              \hspace*{0.5em}\underline{embedded}
+%%                              \bfseries{\lightning}\}}}}}{
+%%                 \Tr{$\varnothing$}
+%%               }              
+%%             }
+%%           }
+%%           \pstree[]{\Tr{\parbox{5.2em}{
+%%                              \texttt{\{proapse,\\
+%%                              \hspace*{0.5em}\underline{modified}\}}}}}{
+%%             \pstree[]{\Tr{\fbox{context?}}}{
+%%               \pstree[]{\Tr{\parbox{5.2em}{
+%%                              \texttt{\{proapse,\\
+%%                              \hspace*{0.5em}modified,\\
+%%                              \hspace*{0.5em}\underline{independent}\}}}}}{
+%%                 \pstree[]{\Tr{\fbox{recipient?}}}{
+%%                   \pstree[]{\Toval{\bfseries{OSUC-03}}}{
+%%                     \Tr{\parbox{5.2em}{
+%%                              \texttt{\{proapse,\\
+%%                              \hspace*{0.5em}modified,\\
+%%                              \hspace*{0.5em}independent,\\
+%%                              \hspace*{0.5em}\underline{4yourself}\}}}}
+%%                    }
+%%                    \pstree[]{\Toval{\bfseries{OSUC-04}}}{ 
+                           
+%%                       \pstree[]{\Tr{\parbox{5.2em}{
+%%                              \texttt{\{proapse,\\
+%%                              \hspace*{0.5em}modified,\\
+%%                              \hspace*{0.5em}independent,\\
+%%                              \hspace*{0.5em}\underline{2others}\}}}}}{
+%%                                \pstree[]{\Tr{\fbox{$\cup$ form?}}}{
+%%                                  \Tr{\parbox{5.6em}{\underline{\textit{OSUC-04s}}\\
+%%                                  \texttt{\{sources\}}}}
+
+%%                                 \Tr{\parbox{5.6em}{\underline{\textit{OSUC-04b}}\\
+%%                                 \texttt{\{binaries\}}}}
+%%                                }
+%%                              }       
+
+                             
+%%                    }         
+%%                 }
+%%               }
+%%               \pstree[]{\Tr{\parbox{5.4em}{
+%%                              \texttt{\{proapse,\\
+%%                              \hspace*{0.5em}modified,\\
+%%                              \hspace*{0.5em}\underline{embedded}
+%%                              \bfseries{\lightning}\}}}}}{                          
+%%                 \Tr{$\varnothing$}
+%%               }              
+%%             }
+%%           }
+%%         }
+%%       } 
+%%       \pstree[]{\Tr{\parbox{4em}{\texttt{\{\underline{snimoli}\}}}}}{
+%%         \pstree[]{\Tr{\fbox{state?}}}{
+%%           \pstree[]{\Tr{\parbox{5.2em}{
+%%                              \texttt{\{snimoli,\\
+%%                              \hspace*{0.5em}\underline{unmodified}\}}}}}{
+%%             \pstree[]{\Tr{\fbox{context?}}}{
+%%               \pstree[]{\Tr{\parbox{5.2em}{
+%%                              \texttt{\{snimoli,\\
+%%                              \hspace*{0.5em}unmodified,\\
+%%                              \hspace*{0.5em}\underline{independent}\}}}}}{
+%%                 \pstree[]{\Tr{\fbox{recipient?}}}{
+%%                   \pstree[]{
+%%                     \Tr{\parbox{5.8em}{
+%%                              \texttt{\{snimoli,\\
+%%                              \hspace*{0.5em}unmodified,\\
+%%                              \hspace*{0.5em}independent,\\
+%%                              \hspace*{0.5em}\underline{4yourself}
+%%                              \bfseries{\lightning}\}}}}
+%%                      }{\Tr{$\varnothing$}}        
                              
 
-                   \pstree[]{\Toval{\bfseries{OSUC-05}}}{
+%%                    \pstree[]{\Toval{\bfseries{OSUC-05}}}{
                    
-                    \pstree[]{\Tr{\parbox{5.2em}{
-                             \texttt{\{snimoli,\\
-                             \hspace*{0.5em}unmodified,\\
-                             \hspace*{0.5em}independent,\\
-                             \hspace*{0.5em}\underline{2others}\}}}}}{
-                               \pstree[]{\Tr{\fbox{$\cup$ form?}}}{
-                                 \Tr{\parbox{5.6em}{\underline{\textit{OSUC-05s}}\\
-                                 \texttt{\{sources\}}}}
+%%                     \pstree[]{\Tr{\parbox{5.2em}{
+%%                              \texttt{\{snimoli,\\
+%%                              \hspace*{0.5em}unmodified,\\
+%%                              \hspace*{0.5em}independent,\\
+%%                              \hspace*{0.5em}\underline{2others}\}}}}}{
+%%                                \pstree[]{\Tr{\fbox{$\cup$ form?}}}{
+%%                                  \Tr{\parbox{5.6em}{\underline{\textit{OSUC-05s}}\\
+%%                                  \texttt{\{sources\}}}}
 
-                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-05b}}\\
-                                \texttt{\{binaries\}}}}
-                               }
-                             }
+%%                                 \Tr{\parbox{5.6em}{\underline{\textit{OSUC-05b}}\\
+%%                                 \texttt{\{binaries\}}}}
+%%                                }
+%%                              }
                                           
                              
-                    }         
-                }
-              }
+%%                     }         
+%%                 }
+%%               }
               
               
-              \pstree[]{\Tr{\parbox{5.2em}{
-                             \texttt{\{snimoli,\\
-                             \hspace*{0.5em}unmodified,\\
-                             \hspace*{0.5em}\underline{embedded}\}}}}}{
-                \pstree[]{\Tr{\fbox{recipient?}}}{
-                  \pstree[]{\Toval{\bfseries{OSUC-06}}}{
+%%               \pstree[]{\Tr{\parbox{5.2em}{
+%%                              \texttt{\{snimoli,\\
+%%                              \hspace*{0.5em}unmodified,\\
+%%                              \hspace*{0.5em}\underline{embedded}\}}}}}{
+%%                 \pstree[]{\Tr{\fbox{recipient?}}}{
+%%                   \pstree[]{\Toval{\bfseries{OSUC-06}}}{
                   
-                    \Tr{\parbox{5.2em}{
-                             \texttt{\{snimoli,\\
-                             \hspace*{0.5em}unmodified,\\
-                             \hspace*{0.5em}embedded,\\
-                             \hspace*{0.5em}\underline{4yourself}\}}}}
+%%                     \Tr{\parbox{5.2em}{
+%%                              \texttt{\{snimoli,\\
+%%                              \hspace*{0.5em}unmodified,\\
+%%                              \hspace*{0.5em}embedded,\\
+%%                              \hspace*{0.5em}\underline{4yourself}\}}}}
                   
                              
-                    }
-                    \pstree[]{\Toval{\bfseries{OSUC-07}}}{        
-                      \pstree[]{\Tr{\parbox{5.2em}{
-                             \texttt{\{snimoli,\\
-                             \hspace*{0.5em}unmodified,\\
-                             \hspace*{0.5em}embedded,\\
-                             \hspace*{0.5em}\underline{2others}\}}}}}{
-                               \pstree[]{\Tr{\fbox{$\cup$ form?}}}{
-                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-07s}}\\
-                                \texttt{\{sources\}}}}
+%%                     }
+%%                     \pstree[]{\Toval{\bfseries{OSUC-07}}}{        
+%%                       \pstree[]{\Tr{\parbox{5.2em}{
+%%                              \texttt{\{snimoli,\\
+%%                              \hspace*{0.5em}unmodified,\\
+%%                              \hspace*{0.5em}embedded,\\
+%%                              \hspace*{0.5em}\underline{2others}\}}}}}{
+%%                                \pstree[]{\Tr{\fbox{$\cup$ form?}}}{
+%%                                 \Tr{\parbox{5.6em}{\underline{\textit{OSUC-07s}}\\
+%%                                 \texttt{\{sources\}}}}
 
-                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-07b}}\\
-                                \texttt{\{binaries\}}}}
-                               }
-                             }
-                       }     
-                 }
-              }
+%%                                 \Tr{\parbox{5.6em}{\underline{\textit{OSUC-07b}}\\
+%%                                 \texttt{\{binaries\}}}}
+%%                                }
+%%                              }
+%%                        }     
+%%                  }
+%%               }
               
                             
-            }
-          }
-          \pstree[]{\Tr{\parbox{5.2em}{
-                             \texttt{\{snimoli,\\
-                             \hspace*{0.5em}\underline{modified}\}}}}}{
-            \pstree[]{\Tr{\fbox{context?}}}{
+%%             }
+%%           }
+%%           \pstree[]{\Tr{\parbox{5.2em}{
+%%                              \texttt{\{snimoli,\\
+%%                              \hspace*{0.5em}\underline{modified}\}}}}}{
+%%             \pstree[]{\Tr{\fbox{context?}}}{
               
-              \pstree[]{\Tr{\parbox{5.2em}{
-                             \texttt{\{snimoli,\\
-                             \hspace*{0.5em}modified,\\
-                             \hspace*{0.5em}\underline{independent}\}}}}}{
-                \pstree[]{\Tr{\fbox{recipient?}}}{
-                  \pstree[]{
-                    \Tr{\parbox{5.8em}{
-                             \texttt{\{snimoli,\\
-                             \hspace*{0.5em}modified,\\
-                             \hspace*{0.5em}independent,\\
-                             \hspace*{0.5em}\underline{4yourself}
-                             \bfseries{\lightning}\}}}}
-                     }{\Tr{$\varnothing$}}         
+%%               \pstree[]{\Tr{\parbox{5.2em}{
+%%                              \texttt{\{snimoli,\\
+%%                              \hspace*{0.5em}modified,\\
+%%                              \hspace*{0.5em}\underline{independent}\}}}}}{
+%%                 \pstree[]{\Tr{\fbox{recipient?}}}{
+%%                   \pstree[]{
+%%                     \Tr{\parbox{5.8em}{
+%%                              \texttt{\{snimoli,\\
+%%                              \hspace*{0.5em}modified,\\
+%%                              \hspace*{0.5em}independent,\\
+%%                              \hspace*{0.5em}\underline{4yourself}
+%%                              \bfseries{\lightning}\}}}}
+%%                      }{\Tr{$\varnothing$}}         
                              
-                   \pstree[]{\Toval{\bfseries{OSUC-08}}}{ 
+%%                    \pstree[]{\Toval{\bfseries{OSUC-08}}}{ 
 
-                    \pstree[]{\Tr{\parbox{5.2em}{
-                             \texttt{\{snimoli,\\
-                             \hspace*{0.5em}modified,\\
-                             \hspace*{0.5em}independent,\\
-                             \hspace*{0.5em}\underline{2others}\}}}}}{
-                               \pstree[]{\Tr{\fbox{$\cup$ form?}}}{
-                                 \Tr{\parbox{5.6em}{\underline{\textit{OSUC-08s}}\\
-                                 \texttt{\{sources\}}}}
+%%                     \pstree[]{\Tr{\parbox{5.2em}{
+%%                              \texttt{\{snimoli,\\
+%%                              \hspace*{0.5em}modified,\\
+%%                              \hspace*{0.5em}independent,\\
+%%                              \hspace*{0.5em}\underline{2others}\}}}}}{
+%%                                \pstree[]{\Tr{\fbox{$\cup$ form?}}}{
+%%                                  \Tr{\parbox{5.6em}{\underline{\textit{OSUC-08s}}\\
+%%                                  \texttt{\{sources\}}}}
 
-                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-08b}}\\
-                                \texttt{\{binaries\}}}}
-                               }
-                             }
+%%                                 \Tr{\parbox{5.6em}{\underline{\textit{OSUC-08b}}\\
+%%                                 \texttt{\{binaries\}}}}
+%%                                }
+%%                              }
                                                              
-                    }
-                }
-              }
+%%                     }
+%%                 }
+%%               }
               
-              \pstree[]{\Tr{\parbox{5.2em}{
-                             \texttt{\{snimoli,\\
-                             \hspace*{0.5em}modified,\\
-                             \hspace*{0.5em}\underline{embedded}\}}}}}{
-                \pstree[]{\Tr{\fbox{recipient?}}}{
-                  \pstree[]{\Toval{\bfseries{OSUC-09}}}{  
+%%               \pstree[]{\Tr{\parbox{5.2em}{
+%%                              \texttt{\{snimoli,\\
+%%                              \hspace*{0.5em}modified,\\
+%%                              \hspace*{0.5em}\underline{embedded}\}}}}}{
+%%                 \pstree[]{\Tr{\fbox{recipient?}}}{
+%%                   \pstree[]{\Toval{\bfseries{OSUC-09}}}{  
 
-                    \Tr{\parbox{5.2em}{
-                             \texttt{\{snimoli,\\
-                             \hspace*{0.5em}modified,\\
-                             \hspace*{0.5em}embedded,\\
-                             \hspace*{0.5em}\underline{4yourself}\}}}}                             
-                           }
+%%                     \Tr{\parbox{5.2em}{
+%%                              \texttt{\{snimoli,\\
+%%                              \hspace*{0.5em}modified,\\
+%%                              \hspace*{0.5em}embedded,\\
+%%                              \hspace*{0.5em}\underline{4yourself}\}}}}                             
+%%                            }
                            
-                   \pstree[]{\Toval{\bfseries{OSUC-10}}}{           
-                    \pstree[]{\Tr{\parbox{5.2em}{
-                             \texttt{\{snimoli,\\
-                             \hspace*{0.5em}modified,\\
-                             \hspace*{0.5em}embedded,\\
-                             \hspace*{0.5em}\underline{2others}\}}}}}{
-                               \pstree[]{\Tr{\fbox{$\cup$ form?}}}{
-                                \Tr{\parbox{5.6em}{\underline{\textit{OSUC-10s}}\\
-                                \texttt{\{sources\}}}}
-                                \Tr{\parbox{5.2em}{\underline{\textit{OSUC-10b}}\\
-                                \texttt{\{binaries\}}}}
-                               }
-                             }
-                      }
-                 }
-              }             
-            }
-          }
-        }
-      }      
-    }
-  }
-\end{tiny}
+%%                    \pstree[]{\Toval{\bfseries{OSUC-10}}}{           
+%%                     \pstree[]{\Tr{\parbox{5.2em}{
+%%                              \texttt{\{snimoli,\\
+%%                              \hspace*{0.5em}modified,\\
+%%                              \hspace*{0.5em}embedded,\\
+%%                              \hspace*{0.5em}\underline{2others}\}}}}}{
+%%                                \pstree[]{\Tr{\fbox{$\cup$ form?}}}{
+%%                                 \Tr{\parbox{5.6em}{\underline{\textit{OSUC-10s}}\\
+%%                                 \texttt{\{sources\}}}}
+%%                                 \Tr{\parbox{5.2em}{\underline{\textit{OSUC-10b}}\\
+%%                                 \texttt{\{binaries\}}}}
+%%                                }
+%%                              }
+%%                       }
+%%                  }
+%%               }             
+%%             }
+%%           }
+%%         }
+%%       }      
+%%     }
+%%   }
+%% \end{tiny}
+%% END PSTricks
 
 %\bibliography{../../../bibfiles/oscResourcesEn}
