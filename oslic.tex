@@ -24,8 +24,8 @@
 \usepackage[utf8]{inputenc}
 
 %%% (2) language specific configurations %%%
-\usepackage[]{a4,ngerman}
-\usepackage[ngerman, english]{babel}
+\usepackage[]{a4}
+\usepackage[english]{babel}
 \selectlanguage{english}
 
 \usepackage{microtype}
@@ -163,6 +163,23 @@
 % Abbreviations
 \newcommand{\oslic}{OSLiC}
 
+% Often Cited Sources
+% --------------------
+% first (optional) argument is text at beginning, defaults to "cf."
+% second argument is location, like "§2"; must be "wp" if no paragraph is given 
+\newcommand*{\citeAGPL}[2][cf.]{\footcite[#1][\nopage wp #2]{Agpl30OsiLicense2007a}}
+\newcommand*{\citeAPL}[2][cf.]{\footcite[#1][\nopage wp #2]{Apl20OsiLicense2004a}}
+\newcommand*{\citeCDDL}[2][cf.]{\footcite[#1][\nopage wp #2]{Cddl10OsiLicense2004a}}
+\newcommand*{\citeEPL}[2][cf.]{\footcite[#1][\nopage wp #2]{Epl10OsiLicense2005a}}
+\newcommand*{\citeEUPL}[2][cf.]{\footcite[#1][\nopage wp #2]{Eupl11OsiLicense2007a}}
+\newcommand*{\citeGPLthree}[2][cf.]{\footcite[#1][\nopage wp #2]{Gpl30OsiLicense2007a}}
+\newcommand*{\citeGPLtwo}[2][cf.]{\footcite[#1][\nopage wp #2]{Gpl20OsiLicense1991a}}
+\newcommand*{\citeLGPLthree}[2][cf.]{\footcite[#1][\nopage wp #2]{Lgpl30OsiLicense2007a}}
+\newcommand*{\citeLGPLtwo}[2][cf.]{\footcite[#1][\nopage wp #2]{Lgpl21OsiLicense1999a}}
+\newcommand*{\citeMPL}[2][cf.]{\footcite[#1][\nopage wp #2]{Mpl20OsiLicense2013a}}
+\newcommand*{\citeMSPL}[2][cf.]{\footcite[#1][\nopage wp #2]{MsplOsiLicense2013a}}
+\newcommand*{\citePGL}[2][cf.]{\footcite[#1][\nopage wp #2]{PglOsiLicense2013a}}
+\newcommand*{\citePHP}[2][cf.]{\footcite[#1][\nopage wp #2]{Php30OsiLicense2013a}}
 %%%%%%%%%%%%%%
 \begin{document}
 
