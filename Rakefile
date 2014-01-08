@@ -6,7 +6,7 @@ require 'find'
 
 VERSION_NUMBER = IO.read("rel-number.tex").chomp
 
-PROTECTED_DIRS=%w{license}
+PROTECTED_DIRS=%w{license presentations}
 AUX_EXTS=%w{url bbl blg aux dvi toc log lof nlo nls ilg ils ent}
 RES_EXTS=%w{ps pdf rtf} + AUX_EXTS
 
