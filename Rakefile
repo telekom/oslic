@@ -7,7 +7,7 @@ require 'find'
 VERSION_NUMBER = IO.read("rel-number.tex").chomp
 
 PROTECTED_DIRS=%w{license presentations}
-AUX_EXTS=%w{url bbl blg aux dvi toc log lof nlo nls ilg ils ent}
+AUX_EXTS=%w{url bbl blg aux dvi toc log lof nlo nls ilg ils ent out}
 RES_EXTS=%w{ps pdf rtf} + AUX_EXTS
 
 DIR_REGEX=%r{^(\./)?#{PROTECTED_DIRS.join('|')}}
