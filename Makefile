@@ -1,6 +1,8 @@
 # (c) Karsten Reincke, Frankfurt am Main, 2011
 # compile one/all tex-files 
 
+LATEX=pdflatex
+
 AUX_EXTS=url bbl blg aux dvi toc log lof nlo nls ilg ils ent
 RES_EXTS=ps pdf bak rtf
 SUB_DIRS=bibfiles btexmat extracts snippets templates
@@ -8,6 +10,7 @@ OSLICDIR=oslic
 
 all:	advi
 
+ifneq ($(LATEX),pdflatex)
 advi: clear
 	find . -maxdepth 1 -name "*.tex" -type f ! -name "rel*.tex"|\
 	while read file; do \
@@ -19,6 +22,7 @@ aps: clear
 	while read file; do \
 		make "`basename $$file .tex`.ps";\
 	done
+endif
 
 apdf: clear
 	find . -maxdepth 1 -name "*.tex" -type f ! -name "rel*.tex"|\
@@ -26,17 +30,37 @@ apdf: clear
 		make "`basename $$file .tex`.pdf";\
 	done
 
+ifneq ($(LATEX),pdflatex)
 ddvi: advi
 	$(foreach DIR, ${SUB_DIRS}, cd ${DIR} && make advi && cd ..; done)
 
 dps: aps
 	$(foreach DIR, ${SUB_DIRS}, cd ${DIR} && make aps && cd ..; done)
+endif
 
 dpdf: apdf
 	$(foreach DIR, ${SUB_DIRS}, cd ${DIR} && make apdf && cd ..; done)
 
 
 .SUFFIXES: .tex .dvi .ps .pdf .rtf
+
+.tex.pdf:
+	@ echo "### `date +'%Y%m%dT%H%M%S'`" 
+	@ echo "### converting $< to $@"
+	@ $(LATEX) $< 
+	@ bibtex `basename $< .tex`
+	@ makeindex `basename $< .tex`.nlo -s btexmat/nomencl.ist -o `basename $< .tex`.nls
+	@ $(LATEX) $< 
+	@ $(LATEX) $< 
+	@ $(LATEX) $< 
+ifneq ($(LATEX),pdflatex)
+	@ echo "### converting DVI to PostScript"
+	@ dvips $<
+	@ echo "### converting PostScript to PDF"
+	@ ps2pdf $<
+endif
+	@ mv $@ `basename $@ .pdf`-`cat rel-number.tex`.pdf
+
 .tex.dvi:
 	@ echo "### `date +'%Y%m%dT%H%M%S'`" 
 	@ echo "### converting $< to $@"
