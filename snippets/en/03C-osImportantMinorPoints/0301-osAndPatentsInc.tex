@@ -19,108 +19,106 @@
 %   mycsrf (c) K. Reincke 2012 CC BY 3.0  http://mycsrf.fodina.de/ ]
 %
 
-
 %% use all entries of the bibliography
 %\nocite{*}
 
 \section{The problem of implicitly releasing patents}
-\footnotesize \begin{quote}\itshape In this chapter, we are briefly analyzing
-the effect of patent clauses in open source licenses -- not in general, but with
+\footnotesize \begin{quote}\itshape In this chapter, we briefly analyze
+the effects of patent clauses in open source licenses---not in general, but with
 respect to the license fulfilling tasks they require, also known as the
-'implicit acceptance of a patent use' by distributing open source software.
+`implicit acceptance of a patent use' by distributing open source software.
 \end{quote}
 \normalsize
 
 At least the free software movement frowns on the existence of software
-patents\footnote{For an early and elaborated description on the effects of
-software patents based on the viewpoint of the free software movement
-\cite[see][\nopage wp]{Stallman2001a}. This lecture seems to have been given
-more than once and printed later on (\cite[cf.][\nopage wp]{Stallman2002a}).
-Within the first decade of 2000, the focus switched to a more political fight
-against software patents (\cite[cf.][\nopage wp]{Stallman2004a}). But recently
-there seems to have been appeared another turn in dealing with software patents:
-Not fighting against the patents, but mitigating their effects: The proposal is
-'[...] (to legislate) that developing, distributing, or running a program on
-generally used computing hardware does not constitute patent infringement'
-(\cite[cf.][\nopage wp]{Stallman2012a})}. One of the most known witnesses for
-that attitude is the GPL itself. Its preamble purports that \enquote{[\ldots]
-any free program is threatened constantly by software
-patents}\footcite[cf.][wp]{Gpl20OsiLicense1991a}. One can read that the open
+patents.%
+  \footnote{For an early and elaborate description on the effects of
+  software patents based on the viewpoint of the free software movement
+  \cite[see][\nopage wp]{Stallman2001a}. This lecture seems to have been given
+  more than once and printed later on (\cite[cf.][\nopage wp]{Stallman2002a}).
+  Within the first decade of 2000, the focus switched to a more political fight
+  against software patents (\cite[cf.][\nopage wp]{Stallman2004a}). But recently
+  there seems to have appeared another turn in dealing with software patents:
+  Not fighting against the patents, but mitigating their effects. The proposal is
+  `[...] (to legislate) that developing, distributing, or running a program on
+  generally used computing hardware does not constitute patent infringement'
+  (\cite[cf.][\nopage wp]{Stallman2012a})}
+One of the best known witnesses for that attitude is the GPL itself. Its
+preamble purports that \enquote{[\ldots] any free program is threatened
+constantly by software patents.}\citeGPLtwo{} One can read that the open
 source community fears three risks: First, they are apprehensive of people who
 hijack the idea of a piece of open source software they do not have developed,
 register a corresponding patent, and finally try to earn money by preventing the
-use of the software or by envolving its users into patent
-ligitations\footcite[cf.][234]{JaeMet2011a}. Second, they fear a bramble of
+use of the software or by involving its users in patent
+ligitations.\footcite[cf.][234]{JaeMet2011a} Second, they fear a bramble of
 general software patents which practically prohibits them to develop open source
-software legally\footcite[cf.][234]{JaeMet2011a}. Third, they anticipate the
+software legally.\footcite[cf.][234]{JaeMet2011a} Third, they anticipate the
 possibility that (not quite benevolent) open source developers could try to
-register patents for undermining the open source
-principles\footcite[cf.][235]{JaeMet2011a}.
+register patents with the intention of undermining the open source
+principles.\footcite[cf.][235]{JaeMet2011a}
 
 Howsoever, regardless whether one tries to fight against software patents or not,
-software patents have come true. To act law-abidingly requires to manage the
+software patents have become a reality. To abide by the law requires managing the
 constraints of patents properly. Open source licenses know and respect this
 necessity. Moreover, at least some of them try to manage the effect of software
-patents by specific patent clauses\footcite[pars pro toto cf.][\nopage wp
-§3]{Apl20OsiLicense2004a} or by several sentences distributed in the license
-text\footcite[pars pro toto cf.][\nopage wp]{Epl10OsiLicense2005a}. But why
-does the OSLiC have to deal with this topic, if the OSLiC does not want to
+patents by specific patent clauses\citeAPL[pars pro toto cf.]{§3} or by several
+sentences distributed in the license text.\citeEPL[pars pro toto cf.]{wp} But why
+does the \oslic{} have to deal with this topic, if the \oslic{} does not want to
 participate in general discussions?
 
-In opposite to the other conditions of the open source licenses, their patent
+Opposite to the other conditions of the open source licenses, their patent
 clauses or propositions in general do not directly refer to a specific set of
-actions which has to be executed for acting in accordance to the licenses. Open
-source patent clauses normally do not join in the game 'paying by doing'. So,
+actions which have to be executed for acting in accordance with the licenses. Open
+source patent clauses normally do not join in the game `paying by doing.' So,
 actually, it does not seem to be necessary to mention the patent clauses here.
 
-Unfortunately, although the patent clauses do not directly say \emph{'do this or
-that in these or those circumstances'}, some of them nevertheless trigger side
-effects which evoke that the distributors of open source software implicitly
-having already something done if they actually are distributing a piece of open
+Unfortunately, although the patent clauses do not directly say \emph{`do this or
+that in these or those circumstances,'} some of them nevertheless have side
+effects which imply that the distributors of open source software already
+have something done if they actually distribute a piece of open
 source software. This implicit effect makes it necessary to deal with the patent
-clauses even in an only pragmatic OSLIC.
+clauses even in an only pragmatic \oslic.
 
 Patent clauses in open source licenses can have two different directions of
-impact. They use two methods to protect the users of the open source software --
+impact. They use two methods to protect the users of the open source software---%
 and sometimes these methods are combined:
 
 \begin{itemize}
-  \item First, an open source license can assure that all contributors /
-  distributors to / of a piece of open source software grant to all users /
+  \item An open source license can assure that all contributors to and
+  distributors of a piece of open source software grant to all users/%
   recipients not only the right to use the open source software itself, but
-  automatically and implicitly also the right to use all those patents --
-  belonging to the contributors / distributors -- which as patents are necessary
-  to use the software legally\footnote{There might arise a legal discussion
-  whether a distributor who does not contribute to the software development
-  really imlictly also has to grant the necessary rights of his patent
-  portfolio. The OSLiC doesn't want to participate in this discussion. We take a
-  simple and pragmatic position: for being sure that you are acting according to
-  an open source license with such a patent clause you should simply assume that
-  you have to do so. If this default position is not reasonable for you it might
-  be a good idea to consult legal experts which -- perhaps -- may find another
-  way for you to use the software legally.}. So, let us -- a little simplifying
-  and therefore only on the following few pages -- name such licenses the
-  \emph{granting licenses}.
-  \item Second, an open source license can try to automatically terminate the
+  automatically and implicitly also the right to use all those patents 
+  belonging to the contributors/distributors which as patents are necessary
+  to use the software legally.%
+    \footnote{There might arise a legal discussion
+    whether even a distributor who does not contribute to the software development
+    has to grant the necessary rights of his patent
+    portfolio. The \oslic{} does not want to participate in this discussion. We take a
+    simple and pragmatic position: to be sure that you are acting according to
+    an open source license with such a patent clause you should simply assume that
+    you have to do so. If this default position is not reasonable for you it might
+    be a good idea to consult legal experts which---perhaps---may find another
+    way for you to use the software legally.} 
+  So, let us---a little simplifying and therefore only on the following few
+  pages---name such licenses the \emph{granting licenses}.
+  \item An open source license can try to automatically terminate the
   right to use, to modify, and to distribute the software if its user initiates
-  litigations against any of the contributors / distributors with respect to an
-  infringement of patent. That can be seen as a revocation of earlier granted
-  rights. So, let us name these license the \emph{revoking licenses}.
+  litigations against any of the contributors/distributors with respect to an
+  infringement of patent. That can be seen as a revocation of rights granted 
+  earlier. So, let us name these license the \emph{revoking licenses.}
 \end{itemize}
 
 Later on, we will summarize the concrete patent clauses of all the licenses
-discussed in the OSLiC as a proof for the following classification:
+discussed in the \oslic{} as a proof for the following classification:
 
-% \begin{minipage}
-% \end{minipage}
 \begin{small}
 
 \begin{center}
 \begin{tikzpicture}
-\label{LICTAX}
+\label{PATTAX}
 
 
-\node[ellipse,minimum height=8.5cm,minimum width=14cm,draw,fill=gray!10] (l0100) at (6.8,6.8)
+\node[ellipse,minimum height=8.5cm,minimum width=14.2cm,draw,fill=gray!10] (l0100) at (6.7,6.8)
 {  };
 
 \draw [-,dotted,line width=0pt,white,
@@ -129,26 +127,26 @@ discussed in the OSLiC as a proof for the following classification:
               text={|\itshape|open source licenses}},
               postaction={decorate}] (-0.8,6.5) arc (218:322:9.5cm);
               
-\node[ellipse,minimum height=6.2cm,minimum width=4.4cm,draw,fill=gray!20] (l0100) at (2.6,6.8)
+\node[ellipse,minimum height=6.2cm,minimum width=4.6cm,draw,fill=gray!20] (l0100) at (2.5,6.8)
 {  };
 
 \draw [-,dotted,line width=0pt,white,
     decoration={text along path,
               text align={center},
               text={|\itshape| without granting patent clauses}},
-              postaction={decorate}] (0.9,7.4) arc (180:0:1.8cm);
+              postaction={decorate}] (0.75,7.5) arc (180:0:1.8cm);
 
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0101) at (2,8)
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0101) at (1.8,8)
 {  \footnotesize \bfseries \textit{MIT}};
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0102) at (3.5,8)
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0102) at (3.3,8)
 {  \footnotesize \bfseries \textit{BSD}};
-\node[ellipse,draw,text width=1cm, fill=gray!40, text centered] (l0103) at (1.6,6.5)
+\node[ellipse,draw,text width=1.3cm, fill=gray!40, text centered] (l0103) at (1.4,6.5)
 {  \footnotesize \bfseries \textit{LGPL-2.1}};
-\node[ellipse,draw,text width=1cm, fill=gray!40, text centered] (l0104) at (3.6,6.5)
+\node[ellipse,draw,text width=1.1cm, fill=gray!40, text centered] (l0104) at (3.6,6.5)
 {  \footnotesize \bfseries \textit{GPL-2.0}};
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0105) at (2,5)
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0105) at (1.8,5)
 {  \footnotesize \bfseries \textit{PHP}};
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0106) at (3.5,5)
+\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0106) at (3.3,5)
 {  \footnotesize \bfseries \textit{PgL}};
 
 \node[ellipse,minimum height=6cm,minimum width=8.5cm,draw,fill=gray!20] (l0200) at (9.2,6.5)
@@ -192,10 +190,8 @@ discussed in the OSLiC as a proof for the following classification:
 {  \scriptsize \bfseries \textit{AGPL-3.0}};
  
  
-\node[ellipse,draw,text width=1cm, fill=gray!40, text centered] (l0221) at (11.6,8)
+\node[ellipse,draw,text width=1.1cm, fill=gray!40, text centered] (l0221) at (11.6,8)
 {  \footnotesize \bfseries \textit{EUPL}};
-\node[ellipse,draw,text width=1cm, fill=gray!40, text centered] (l0222) at (12.4,6.2)
-{  \footnotesize \bfseries \textit{\ }};
 
 \end{tikzpicture}
 \end{center}
@@ -203,95 +199,100 @@ discussed in the OSLiC as a proof for the following classification:
 \end{small}
 
 
-But regardless of the final textual form a license is using to express its
+But regardless of the final textual form a license uses to express its
 granting or revoking positions, in any case one has to consider some aspects: 
 
 \begin{itemize}
   
   \item Overall, one has to keep in mind that of course no licensor, contributor
-  and/or distributor can release the right to use any patents he does not own --
-  even not if he \emph{tries} to release them by an open source patent
-  clause\footnote{The EPL is one of the licenses which insists on this aspect:
-  It the second half of its patent clause, the EPL underlines that
-  \enquote{[\ldots] no assurances are provided by any Contributor that the
-  Program does not infringe the patent or other intellectual property rights of
-  any other entity}. Moreover, it explicitly adds that \enquote{[\ldots] if a
-  third party patent license is required to allow Recipient to distribute the
-  Program, it is Recipient's responsibility to acquire that license before
-  distributing the Program} (\cite[cf.][\nopage wp
-  §2c]{Epl10OsiLicense2005a}).}. Implictly touched patents of third parties not
-  having contributed to the development and/or participated in the distribution
-  can never be implicitly and automatically released on the base of such an
-  (open source) patent clause: no rights, no right to release\footnote{This is
-  an important aspect which is sometimes not considered by programmers. Inside
-  of DTAG we had a fruitful discussion evoked by Mr. Stephan Altmeyer who -- as
-  patent lawyer -- patiently explained this constraint to us.}. Hence: even for
-  those open source licenses which try to protect the users, finally the user
-  itself must nevertheless ensure that he does not violate the patents of third
-  parties being unwillingly touched by the way the code works or the processes
-  in which the software is used\footnote{Sometimes, this problem of willingly or
-  unwillingly violated third party patents is seen as a weakness of open source
-  software. But that is not true. It is a weakness of every software. Even a
-  commercial licensor (developer) has only the right to license the use of those
-  patents he really owns or he has 'bought' for relicensing them. Moreover, also
-  commercial licensors can willingly or unwillingly violate patents of other
-  persons.}.
+  and/or distributor can release the right to use any patents he does not own---%
+  not even if he \emph{tries} to release them by an open source patent
+  clause.%
+    \footnote{The EPL is one of the licenses which insists on this aspect:
+    It the second half of its patent clause, the EPL underlines that
+    \enquote{[\ldots] no assurances are provided by any Contributor that the
+    Program does not infringe the patent or other intellectual property rights of
+    any other entity.} Moreover, it explicitly adds that \enquote{[\ldots] if a
+    third party patent license is required to allow Recipient to distribute the
+    Program, it is Recipient's responsibility to acquire that license before
+    distributing the Program} (\cite[cf.][\nopage wp §2c]{Epl10OsiLicense2005a}).}
+  Implictly touched patents of third parties not having contributed to the
+  development and/or participated in the distribution can never be implicitly
+  and automatically released on the base of such an (open source) patent clause:
+  no rights, no right to release.% 
+    \footnote{This is an important aspect which is sometimes not considered by
+    programmers. Inside of DTAG we had a fruitful discussion evoked by Mr. Stephan
+    Altmeyer who---as patent lawyer---patiently explained this constraint to us.} 
+  Hence: even for those open source licenses which try to protect the users,
+  finally the users themselves must nevertheless ensure that they do not violate
+  the patents of third parties being unwillingly touched by the way the code
+  works or the processes in which the software is used.%
+    \footnote{Sometimes, this problem of willingly or
+    unwillingly violated third party patents is seen as a weakness of open source
+    software. But that is not true. It is a weakness of every software. Even a
+    commercial licensor (developer) has only the right to license the use of those
+    patents he really owns or he has `bought' for relicensing. Moreover, even
+    commercial licensors can willingly or unwillingly violate patents of other
+    persons.}
   
   \item In the context of a granting license, one has also to consider that
-  contributing to and distributing of a piece of software implicitly evokes that
-  all patents of the contributor and/or distributor are 'given free' which are
-  necessary to use the software as whole -- including the more or less deeply
+  contributing to and distributing a piece of software implicitly evokes that
+  all patents of the contributor and/or distributor are `given free' which are
+  necessary to use the software as whole---including the more or less deeply
   embedded libraries. So, if one wants to check whether some of the core patents
   of one's patent portfolio are afflicted by a patent clause (and whether one
-  therefore better should not use / distribute the corresponding piece of open
+  therefore better should not use/distribute the corresponding piece of open
   source software), one should not forget to check the embedded libraries, too.
   
   \item Finally, one has to consider in the context of a granting license that
   its patent clause only releases the use of the patents in the meaning of
-  'allowed to be used for enabling the use of the distributed software'. The
+  `allowed to be used for enabling the use of the distributed software.' The
   patent clause does not release the patents generally. Thus, the threat of
   (unwillingly) releasing patents by open source software is not as large as
   sometimes feared: the use of the patent is only granted in combination with
   the software. On the one hand, you may not use the open source software
   without having the right to use the patent because the use of the patent is
-  inherently necessary for using the software -- regardless, whether the open
+  inherently necessary for using the software---regardless, whether the open
   source software is embedded into a larger process or not. On the other hand,
-  you are not allowed to use patents -- released by the patent clause of an open
-  source license -- without exactly that open source software which has been
+  you are not allowed to use patents---released by the patent clause of an open
+  source license---without exactly that open source software which has been
   licensed under this open source license, because the patent clause only refers
   to the use of just that open source software.
+  % TODO: this is not completely accurat. OSS license grant downstream patent
+  % licenses even for modified software.  The extent to which the software may
+  % be modified varies between diffenrent licenses. (RPD)
 
   \item Summarized, one has to consider that the granting open source licenses
-  automatically and implicitly enforce you to grant all the rights which are
+  automatically and implicitly force you to grant all the rights which are
   necessary to use the software legally. Open source contributors and
-  distributors should know that\footnote{Again: It might be debatable whether
+  distributors should know that.\footnote{Again: It might be debatable whether
   this is also valid for the distributors which do not contribute anything to
-  the development. That's a legal discussion the OSLiC do not wish to participate
+  the development. That's a legal discussion the \oslic{} does not wish to participate
   in. From the viewpoint of an open source user who only wants to have one
   reliable and secure way to use open source software compliantly, one should
-  perhaps assume that there is no difference.}.
+  perhaps assume that there is no difference.}
 
   \item With respect to the revoking licenses, one has to consider that their
   patent clauses contain negative conditions which may be read as interdictions.
-  The OSLiC will integrate these conditions into specific 'prohibits'-sections
+  The \oslic{} will integrate these conditions into specific `prohibits'-sections
   of its to-do lists.
   
   \item Finally one should mention that in some cases, the form of the
   revocation used by the revoking license refers to the use of the software, in
-  other cases to the use of the patents. But nevertheless, one can reason that
-  -- from the pragmatic viewpoint of a benevolent open source software user --
-  also this second case of patent revocation implicitly terminates the right to
+  other cases to the use of the patents. But nevertheless, one can reason that%
+  ---from the pragmatic viewpoint of a benevolent open source software user---%
+  this second case of patent revocation also implicitly terminates the right to
   use the software: If the use of a patent is necessary to use a piece of
   software legally, one is not allowed to use the software without having the
   right to use the patent, too; and if the use of the patent is not necessary
   for using the software, then the patent is not covered by the patent clause.
   So, in any case, this kind of patent clauses seems to terminate the right to
-  use / to distribute and/or to modify the software. Hence, single users as well
+  use, distribute or modify the software. Hence, single users as well
   as companies or organizations should also respect such patent clauses if they
   want to be sure to use open source software compliantly.
 \end{itemize}
 
-The OSLiC wants to support its readers not only to act according to the licenses
+The \oslic{} wants to support its readers not only to act according to the licenses
 in general, but also according to its patent clause. Thus, we now briefly cite
 and summarize the meaning of particular patent clauses:
 
@@ -300,150 +301,200 @@ and summarize the meaning of particular patent clauses:
 (prelimiary text)
 
 The AGPL-3.0 is a license derived from the GPL-3.0: apart from the preamble and
-the paragraphs §11 and §13, they contain nearly the same text\footnote{compare
-\cite[][\nopage]{Agpl30OsiLicense2007a} and
-\cite[][\nopage]{Gpl30OsiLicense2007a} in both §1 \ldots §11}.
+the paragraphs §11 and §13, they contain nearly the same text.%
+  \footnote{compare \cite[][\nopage]{Agpl30OsiLicense2007a} and
+  \cite[][\nopage]{Gpl30OsiLicense2007a} in both §1 \ldots §11}
 In §13, the AGPL explictly refers to the focus on a \enquote{remote network
 interaction} which shall also be able to trigger the delivery of the
 corresponding source code; and in §11, the AGPL establishes its specific patent
 clause \cite[cf.][\nopage §11 and §13]{Agpl30OsiLicense2007a}.
 
 Like the GPL-3.0, the AGPL-3.0 tries to protect all licensees against patent
-claims This kind of protection is then established by three steps:
+claims. This kind of protection is then established by three steps:
 
 First, the AGPL-3.0 assures that \enquote{each contributor grants a non
 exclusive, worldwide, royalty free patent license under the contributor’s
-essential patent claims , to make, use, sell offer for sale, import and
+essential patent claims, to make, use, sell offer for sale, import and
 otherwise run, modify and propagate the contents of its contributor
-version.}\footcite[cf.][\nopage §11]{Agpl30OsiLicense2007a} Furthermore, the
-patent license defines that this patent license granted by the contributor is
-automatically extended to all downstream recipients who later on receive any
-version of the work even if they indirectly receive them by third parties and
-even if they receive a covered work or work based on the
-program\footcite[cf.][\nopage §11]{Agpl30OsiLicense2007a}.
+version.}\citeAGPL{§11} Furthermore, the patent license defines that this patent
+license granted by the contributor is automatically extended to all downstream
+recipients who later on receive any version of the work even if they indirectly
+receive them by third parties and even if they receive a covered work or work
+based on the program.\citeAGPL{§11}
 
 Second, the AGPL enforces not only the grant of patent licenses by the
-\enquote{contributors}, the license even requires the same from licensees who
+\enquote{contributors,} the license even requires the same from licensees who
 distributes the program unchanged: \enquote{If, pursuant to or in connection
 with a single transaction or arrangement, you convey, or propagate by procuring
 conveyance of, a covered work, and grant a patent license to some of the parties
 receiving the covered work authorizing them to use, propagate, modify or convey
 a specific copy of the covered work, then the patent license you grant is
 automatically extended to all recipients of the covered work and works based on
-it.}\footcite[cf.][\nopage §11]{Agpl30OsiLicense2007a}
+it.}\citeAGPL{§11}
 
 Finally, the AGPL-3.0 introduces an revoking clause by stating that a licensee
 \enquote{[\ldots] may not initiate litigation (including a cross-claim or
 counterclaim in a lawsuit) alleging that any patent claim is infringed by
 making, using, selling, offering for sale, or importing the Program or any
-portion of it}\footcite[cf.][\nopage §10]{Agpl30OsiLicense2007a} and that this
-licensee \enquote{automatically} loses the rights granted by the AGPL-3.0 --
-\enquote{including any patent licenses} -- if he tries to propagate or modify a
-covered work against the sections of the AGPL-3.0\footcite[cf.][\nopage
-§8]{Agpl30OsiLicense2007a}
+portion of it}\citeAGPL{§10} and that this licensee \enquote{automatically}
+loses the rights granted by the AGPL-3.0 \enquote{including any patent
+licenses} if he tries to propagate or modify a covered work against the
+regulations of the AGPL-3.0.\citeAGPL{§8} 
 
 According to that, the AGPL-3.0 is like the GPL-3.0 a granting and a revoking
 license: At first, one is granted the right to use all patents of all
-contributors which are necessary to use the software legally. But if one install
-any litigation regarding an infringement of patents, then the rights granted to
-you are revoked.
+contributors which are necessary to use the software legally. But if one
+installs any litigation regarding an infringement of patents, then the rights
+granted to him are revoked.
 
 
 \subsection{ApL statements concerning patents}\label{subsec:ApLPatentClause}
 
-Titled by the headline \enquote{Grant of Patent License}, the Apache License 2.0
+Titled by the headline \enquote{Grant of Patent License}, the Apache License~2.0
 contains a specific patent clause being comprised of two very long and condensed
-sentences\footcite[cf.][\nopage wp §3]{Apl20OsiLicense2004a}. Outside of this
-patent clause, the word \emph{patent} is only used once again -- for requiring
-that one \enquote{[\ldots] must retain, in the (sources) [\ldots] all [\ldots]
-patent [\ldots] notices [\ldots]}\footcite[cf.][\nopage wp
-§4.3]{Apl20OsiLicense2004a}.
+sentences.\citeAPL{§3} Outside of this patent clause, the word \emph{patent} is
+only used once again---for requiring that one \enquote{[\ldots] must retain, in
+the (sources) [\ldots] all [\ldots] patent [\ldots] notices [\ldots]}\citeAPL{§4.3}
 
-The one core message of the ApL patent clause is the statement that
+The one core message of the ApL patent clause is that
 \enquote{[\ldots] each Contributor hereby grants to You a perpetual, worldwide,
 non-exclusive, no-charge, royalty-free, irrevocable [\ldots] patent license to
 make, have made, use, offer to sell, sell, import, and otherwise transfer the
-Work [\ldots]}\footnote{\cite[cf.][\nopage wp §3]{Apl20OsiLicense2004a}. The \enquote{Contributor},
-\enquote{Work} and \enquote{You} are defined in §1: \emph{Contributor} refers to
-the original licensor and to all others whose contributions have been
-incorporated into the Work. The \emph{Work} denotes the result of the
-development process regardless of its form. \emph{You} denote the
-licensees.}.
+Work [\ldots]}%
+  \footnote{\cite[cf.][\nopage wp §3]{Apl20OsiLicense2004a}. The
+  \enquote{Contributor,} \enquote{Work,} and \enquote{You} are defined in §1:
+  \emph{Contributor} refers to the original licensor and to all others whose
+  contributions have been incorporated into the Work. The \emph{Work} denotes
+  the result of the development process regardless of its form. \emph{You}
+  denotes the licensees.}
 
 The second core message of the ApL patent clause is the statement that
 \enquote{if You institute patent litigation against any entity [\ldots] alleging
 that the Work [\ldots] constitutes [\ldots] patent infringement, then any patent
-licenses granted to You [\ldots] shall terminate [\ldots]}\footcite[cf.][\nopage
-wp §3]{Apl20OsiLicense2004a}.
+licenses granted to You [\ldots] shall terminate [\ldots]}\citeAPL{§3}
 
 The third message of the ApL patent clause is the statement, that the
 \enquote{[\ldots] license applies only to those patent claims licensable by such
 Contributor that are necessarily infringed by their Contribution(s) alone or by
 combination of their Contribution(s) with the Work to which such Contribution(s)
-was submitted}\footcite[cf.][\nopage wp §3]{Apl20OsiLicense2004a}.
+was submitted}.\citeAPL{§3}
 
-Thus, the ApL is -- as we are using to say in this chapter -- a granting and a
+Thus, the ApL is---as we use to say in this chapter---a granting and a
 revoking license: At first you are granted to use all patents of all
-contributors which are necessary to use the software legally. But if you -- with
-respect to the software -- install any litigation concerning an infringement of
+contributors which are necessary to use the software legally. But if you---with
+respect to the software---install any litigation concerning the infringement of
 patents, then the rights granted to you are revoked.
 
-\subsection{CDDL statements concerning patents [tbd]}\label{subsec:CddlPatentClause}
-[\ldots]
+\subsection{CDDL statements concerning patents}\label{subsec:CddlPatentClause}
+
+The patent clauses of the CDDL are similiar in spirit to the Apache License: 
+The license grants rights to each contributors patents that are neccessarily
+infringed by distributing or using the software. The license also revokes all
+rights granted to someone who files a patent litigation with respect to the
+software against any contributor.  The CDDL differs from other licenses in that
+the litigant does not lose his rights automatically and immediately but gets a
+grace period of 60 days. If he withdraws his claims during this period, the
+license granted to him will not be terminated.
+
+The actual wording used in the CDDL is complicated by the fact that the CDDL
+distinguished between the \enquote{Initial Developer} and other
+\enquote{Contributors.}  A \enquote{Contributor} receives a version of the
+software to which he then adds some \enquote{Modifications} thus creating the
+\enquote{Contributor Version.} For all practical purposes we can treat the
+\enquote{Initial Developer} as another contributor who happens to not receive
+any software and whose \enquote{Contributor Version} (officially called
+\enquote{Original Software}) equals his \enquote{Modifications.}
+
+The patent licenses are granted in the clause (b) of the sections titled
+\enquote{The Initial Developer Grant}\citeCDDL{§2.1(b)} and \enquote{Contributor
+  Grant.}\citeCDDL{§2.2(b)} Each contributor grants the licensee \enquote{a
+  world-wide, royalty-free, non-exclusive license under Patent Claims infringed
+  by the making, using, or selling of Modifications made by that Contributor
+  either alone and/or in combination with its Contributor Version [\ldots], to
+  make, use, sell, offer for sale, have made, and/or otherwise dispose of: (1)
+  Modifications made by that Contributor [\ldots]; and (2) the combination of
+  Modifications made by that Contributor with its Contributor Version [\ldots]} 
+This limits the patent license to patents infringed by code present in the
+contributor version. And clause (d) limits the grant even further to exclude
+\enquote{infringements caused by[\ldots]third party modifications of Contributor
+Version}\citeCDDL{§2.2(d)} or {Covered Software in the absence of Modifications
+made by that Contributor.}\citeCDDL{§2.2(d)}
+This ensures that no contributor is required to tolerate an infringement of his
+patents caused by code modified after he made his contribution and, in
+particular, it is not possible to remove the contributors modifications completely
+without also removing all other causes of infringement of the patent claims
+because the patent license does not carry over to such a use of the software.
+
+The section titled \enquote{TERMINATION} contains the usual defense
+against patent infringement claims by declaring that any such claim
+against a \enquote{Participant%
+  \footnote{The \enquote{Contributor} or \enquote{Initial Developer} against
+  whom the claim is made}
+[\ldots] alleging that the Participant Software [\ldots] directly or indirectly
+infringes any patent, then any and all rights granted directly or indirectly to 
+You\footnote{The party making the patent infringement claim}
+[\ldots] under Sections 2.1 and/or 2.2 of this
+License shall, upon 60 days notice from Participant terminate prospectively and
+automatically at the expiration of such 60 day notice period, unless [\ldots] 
+You withdraw Your claim [\ldots] against such Participant either unilaterally or
+pursuant to a written agreement with Participant.}
+
+Thus, not only has the Participant to actively initiate the termination of the
+licenses, the licensee also has 60 days to either settle the case by an
+agreement with the Participant or to withdraw his claims.
+
 
 \subsection{EPL statements concerning patents}\label{subsec:EpLPatentClause}
 
-The Eclipse Public License treats the patents being necessary to use the program
+The Eclipse Public License treats the patents necessary to use the program
 in the same section and under the same headline \enquote{Grant of Rights} like
 all the other rights: First, the EPL clearly states that \enquote{[\ldots] each
 Contributor [\ldots] grants (the recipient) a non-exclusive, worldwide,
 royalty-free patent license under Licensed Patents to make, use, sell, offer to
 sell, import and otherwise transfer the Contribution of such Contributor, if
-any, in source code and object code form}\footcite[cf.][\nopage wp
-§2.b]{Epl10OsiLicense2005a}. Then the EPL delimits the extend of this act of
-granting: Neither hardware patents of the contributors are covered by this
-releasing patent clause, nor patents that concern aspects out of the area of the
-initially intended software combination\footcite[cf.][\nopage wp
-§2.b]{Epl10OsiLicense2005a}. Finally, the EPL hints to the general fact that
-3rd party patents not belonging to the contributors can never be implicity be
-released by such a patent clause. Moreover, it alleges the example that
-\enquote{[\ldots] if a third party patent license is required to allow Recipient
-to distribute the Program, it is Recipient's responsibility to acquire that
-license before distributing the Program}\footcite[cf.][\nopage wp
-§2.c]{Epl10OsiLicense2005a}.
+any, in source code and object code form.}\citeEPL{§2.b} Then the EPL delimits
+the extend of this act of granting: Neither hardware patents of the contributors
+are covered by this releasing patent clause, nor patents that concern aspects
+out of the area of the initially intended software combination.\citeEPL{§2.b}
+Finally, the EPL hints to the general fact that 3$^{rd}$ party patents not
+belonging to the contributors can never be implicity be released by such a
+patent clause. Moreover, it gives the example that \enquote{[\ldots] if a third
+party patent license is required to allow Recipient to distribute the Program,
+it is Recipient's responsibility to acquire that license before distributing the
+Program.}\citeEPL{§2.c}
 
-Like other open source licenses, also the EPL announces at its end that
+Like other open source licenses, the EPL announces at its end that
 \enquote{if (a) Recipient institutes patent litigation against any entity
 [\ldots] alleging that the Program [\ldots] infringes such Recipient's
 patent(s), then such (granted) Recipient's rights [\ldots] shall terminate
-[\ldots]}\footcite[cf.][\nopage wp §7]{Epl10OsiLicense2005a}.
+[\ldots]}\citeEPL{§7}
 
-Thus, also the EPL is -- as we are using to say in this chapter -- a granting and
-a revoking license: At first you are granted to use all patents of all
-contributors which are necessary to use the software legally. But if you -- with
-respect to the software -- install any litigation concerning an infringement of
+Thus, the EPL, too, is a granting and a revoking license: 
+At first you are granted the use of all patents of all
+contributors which are necessary to use the software legally. But if you---with
+respect to the software---install any litigation concerning an infringement of
 patents, then the rights granted to you are revoked.
 
 \subsection{EUPL statements concerning patents}\label{subsec:EupLPatentClause}
-The European Union Public License contains a very brief patent clause. It 'only'
+
+The European Union Public License contains a very brief patent clause. It only
 states, that \enquote{the Licensor grants to the Licensee royalty-free, non
 exclusive usage rights to any patents held by the Licensor, to the extent
 necessary to make use of the rights granted on the Work under this
-Licence}\footcite[cf.][\nopage wp.\ §2 at its tail]{EuplLicense2007en}.
+Licence.}\citeEUPL{end of §2}
 Furthermore the EUPL does not contain any patent specific revoking clause, but
 only an abstract clause requiring that all \enquote{[\ldots] the rights granted
 hereunder will terminate automatically upon any breach by the Licensee of the
-terms of the Licence}\footcite[cf.][\nopage wp.\ §12]{EuplLicense2007en}. Thus,
-the EUPL is -- as we are using to say in this chapter -- a granting license and
-not a revoking license.
+terms of the Licence}\citeEUPL{§12}. Thus, the EUPL is -- as we are using to say
+in this chapter -- a granting license but not a revoking license.
 
 \subsection{GPL statements concerning patents}
 
 Although the GPL versions 2.0 and 3.0 are aiming for the same results, they
-heavily differ with respect to textual and arguing structure. Therefore, it
+differ heavily with respect to textual and arguing structure. Therefore, it
 should be helpful to treat these two licenses separately.
 
-\subsubsection {GPL-2.0} \label{subsec:Gpl20PatentClause}
+\subsubsection{GPL-2.0}\label{subsec:Gpl20PatentClause}
 
 The GPL-2.0 does not contain any specific patent clause by which it would grant
 (and revoke) the rights to use those patents belonging to the contributors and 
@@ -451,77 +502,72 @@ being necessary to use the software in accordance with the legal patent system.
 
 Instead of this, the preamble of the GPL-2.0 alleges that \enquote{[\ldots] any
 free program is threatened constantly by software patents} and that the authors
-of the GPL -- for tackling this threat -- \enquote{[\ldots] had made it clear
+of the GPL---for tackling this threat---\enquote{[\ldots] had made it clear
 that any patent must be licensed for everyone's free use or not licensed at
-all}\footcite[cf.][\nopage wp, Preamble]{Gpl20OsiLicense1991a}. Unfortunately,
-this specification is only an indirect claim which needs a lot of arguing for
-establishing a protective effect against patent disputes. Howsoever, this
-paragraph of the GPL-2.0 does not directly grant any rights to the software
-users to use necessary patents, too.
+all}\citeGPLtwo{Preamble}. Unfortunately, this specification is only an indirect
+claim which needs a lot of arguing for establishing a protective effect against
+patent disputes. Howsoever, this paragraph of the GPL-2.0 does not directly
+grant any rights to the software users to use necessary patents, too.
 
 With respect to the patent problem, the GPL-2.0 also states that a licensee has
 to fulfill the conditions of the GPL-2.0 completely, even if an existing patent
-infringement -- being \enquote{imposed} on the GPL licensee -- \enquote{[\ldots]
+infringement---being \enquote{imposed} on the GPL licensee---\enquote{[\ldots]
 contradicts the conditions of this license} so, that a waiver of the use of the
-software is the only way to fulfill both constraints\footcite[cf.][\nopage wp.\
-§11]{Gpl20OsiLicense1991a}. And finally the GPL-2.0 allows the original
-copyright holder to \enquote{add an explicit geographical distribution
-limitation excluding [\ldots] countries} provided that these countries
-\enquote{[\ldots] (restict) the distribution and/or use of the library [\ldots]
-by patents [\ldots]}\footcite[cf.][\nopage wp.\ §12]{Gpl20OsiLicense1991a}.
+software is the only way to fulfill both constraints.\citeGPLtwo{§11} And
+finally the GPL-2.0 allows the original copyright holder to \enquote{add an
+explicit geographical distribution limitation excluding [\ldots] countries}
+provided that these countries \enquote{[\ldots] (restict) the distribution
+and/or use of the library [\ldots] by patents [\ldots]}\citeGPLtwo{§12}
 Based on these statements, one cannot infer that the GPL-2.0 grants any patent
 rights to the software user, neither directly, nor indirectly.
 
-Thus, the GPL-2.0 is not a granting or a granting and revoking license.
+Thus, the GPL-2.0 is neither a granting nor a revoking license.
 
 \subsubsection {GPL-3.0}\label{subsec:Gpl30PatentClause}
 
 Initially, the GPL-3.0 regrets that \enquote{[\ldots] every program is
 threatened constantly by software patents} what should be seen as the
 \enquote{[\ldots] danger that patents applied to a free program could make it
-effectively proprietary}. And therefore -- as the GPL-3.0 itself summarizes its
-patent rules -- \enquote{[\ldots] the GPL assures that patents cannot be used to
-render the program non-free}\footcite[cf.][\nopage wp.\
-Preamble]{Gpl30OsiLicense2007a}. This kind of protection is then established by
-three steps. First, the GPL-3.0 stipulates that \enquote{each contributor grants
-[\ldots the licensees] a non-exclusive, worldwide, royalty-free patent license
-under the contributor's essential patent claims, to make, use, sell, offer for
-sale, import and otherwise run, modify and propagate the contents of its
-contributor version}\footcite[cf.][\nopage wp.\ §11]{Gpl30OsiLicense2007a}.
+effectively proprietary}. And therefore---as the GPL-3.0 itself summarizes its
+patent rules---\enquote{[\ldots] the GPL assures that patents cannot be used to
+render the program non-free.}\citeGPLthree{Preamble}. This kind of protection is
+then established by three steps. First, the GPL-3.0 stipulates that
+\enquote{each contributor grants [\ldots the licensees] a non-exclusive,
+worldwide, royalty-free patent license under the contributor's essential patent
+claims, to make, use, sell, offer for sale, import and otherwise run, modify and
+propagate the contents of its contributor version.}\citeGPLthree{§11}
 Second, the GPL-3.0 defines that this patent license granted by the contributor
 \enquote{[\ldots] is automatically extended to all recipients} who later on
 receive any version of the work, even if they indirectly receive them by third
 parties and even if they receive a \enquote{covered work} or \enquote{works
-based on it}\footcite[cf.][\nopage wp.\ §11]{Gpl30OsiLicense2007a}. Moreover,
-the GPL-3.0 also specifies that those distributors of a \enquote{covered work}
-who have the right to use a patent necessary for the use of the distributed
-software but who are not allowed to relicense this patent to third parties must
-solve this problem by making the source code available nevertheless, by
-\enquote{depriving} themselves or by \enquote{extending the patent license to
-downstream recipients}\footcite[cf.][\nopage wp.\ §11]{Gpl30OsiLicense2007a}.
+based on it.}\citeGPLthree{§11} Moreover, the GPL-3.0 also specifies that those
+distributors of a \enquote{covered work} who have the right to use a patent
+necessary for the use of the distributed software but who are not allowed to
+relicense this patent to third parties must solve this problem by making the
+source code available nevertheless, by \enquote{depriving} themselves or by
+\enquote{extending the patent license to downstream recipients.}\citeGPLthree{§11} 
 And finally, the GPL-3.0 also introduces a revoking clause by stating that a
 licensee \enquote{[\ldots] may not initiate litigation [\ldots] alleging that
 any patent claim is infringed by making, using, selling, offering for sale, or
-importing the Program or any portion of it}\footcite[cf.][\nopage wp.\
-§10]{Gpl30OsiLicense2007a} and that this licensee \enquote{automatically} loses
-the rights granted by the GPL-3.0 -- \enquote{including any patent licenses} --
-if he tries to propagate or modify a covered work against the rules of the
-GPL-3.0\footcite[cf.][\nopage wp.\ §8]{Gpl30OsiLicense2007a}.
+importing the Program or any portion of it}\citeGPLthree{§10} and that this
+licensee \enquote{automatically} loses the rights granted by the GPL-3.0
+\enquote{including any patent licenses} if he tries to propagate or modify a
+covered work against the rules of the GPL-3.0.\citeGPLthree{§8}
 
-Thus, GPL-3.0 is -- as we are using to say in this chapter -- a granting and a
-revoking license: At first, one is granted the right to use all patents of all
-contributors which are necessary to use the software legally. But if you -- with
-respect to the software -- install any litigation concerning an infringement of
-patents, then the rights granted to you are revoked.
+Thus, GPL-3.0 is a granting and a revoking license: At first, one is granted the
+right to use all patents of all contributors which are necessary to use the
+software legally. But if you---with respect to the software---install any
+litigation concerning an infringement of patents, then the rights granted to you
+are revoked. 
 
 
 \subsection{LGPL statements concerning patents}
 
-As already mentioned above, the LGPL versions 2.1 and 3.0 heavily differ  with
+As already mentioned above, the LGPL versions 2.1 and~3.0 differ heavily with
 respect to textual and arguing structure. Therefore, they should be treated
 separately.
 
-\subsubsection {LGPL-2.1} \label{subsec:Lgpl21PatentClause}
+\subsubsection{LGPL-2.1}\label{subsec:Lgpl21PatentClause}
 
 Like the GPL-2.0, the LGPL-2.1 does not contain any specific patent clause by
 which it would grant (and revoke) the rights to use those patents belonging to
@@ -530,84 +576,74 @@ legal patent system.
 
 Instead of this, the preamble of the LGPL-2.1 says that \enquote{[\ldots]
 software patents pose a constant threat to the existence of any free program}
-and that the authors of the LGPL -- for tackling this threat --
+and that the authors of the LGPL---for tackling this threat---%
 \enquote{[\ldots] insist that any patent license obtained for a version of the
 library must be consistent with the full freedom of use specified in this
-license}\footcite[cf.][\nopage wp, Preamble]{Lgpl21OsiLicense1999a}.
+license.}\citeLGPLtwo{Preamble}
 Unfortunately, this specification is again only an indirect claim which needs a
-lot of arguing for establishing a protective effect against patent disputes.
+lot of arguing to establish a protective effect against patent disputes.
 Howsoever, this paragraph of the LGPL-2.1 does not directly grant any rights to
-the software users to use necessary patents too.
+the software users to use necessary patents.
 
 With respect to the patent problem, the LGPL-2.1 also states that a licensee has
 to fulfill the conditions of the LGPL-2.1 completely, even if an existing patent
-infringement -- being \enquote{imposed} on the LGPL licensee --
+infringement---being \enquote{imposed} on the LGPL licensee---%
 \enquote{[\ldots] contradicts the conditions of this license} so that a waiving
 of the use of the software is the only way to fulfill both
-constraints\footcite[cf.][\nopage wp.\ §11]{Lgpl21OsiLicense1999a}. And finally
-the LGPL-2.1 allows the original copyright holder to \enquote{add an explicit
-geographical distribution limitation excluding [\ldots] countries} provided that
-these countries \enquote{[\ldots] (restict) the distribution and/or use of the
-library [\ldots] by patents [\ldots]}\footcite[cf.][\nopage wp.\
-§12]{Lgpl21OsiLicense1999a}. Based on these statements, one cannot infer that
+constraints.\citeLGPLtwo{§11} And finally the LGPL-2.1 allows the original
+copyright holder to \enquote{add an explicit geographical distribution limitation
+excluding [\ldots] countries} provided that these countries \enquote{[\ldots]
+(restict) the distribution and/or use of the library [\ldots] by patents
+[\ldots]}\citeLGPLtwo{§12} Based on these statements, one cannot infer that 
 the LGPL grants any patent rights to the software user, neither directly, nor
 indirectly.
 
-Thus, also the LGPL-2.1 is not a granting or a granting and revoking license.
+Thus, the LGPL-2.1 is neither a granting nor revoking license.
 
 \subsubsection {LGPL-3.0}\label{subsec:Lgpl30PatentClause}
 
 The LGPL-3.0 is an extension of the GPL-3.0. Before starting with a section
 \enquote{Additional Definitions}, the LGPL-3.0 states that it \enquote{[\ldots]
-incorporates the terms and conditions of version 3 of the GNU General Public
+incorporates the terms and conditions of version~3 of the GNU General Public
 License} and then \enquote{supplements} this GPL-3.0 content by some
-\enquote{additional permissions}\footcite[cf.][\nopage
-wp]{Lgpl30OsiLicense2007a}. The LGPL-3.0 itself does not contain the word
-'patent', but the GPL-3.0\footcite[cf.][\nopage wp.\ §11]{Gpl30OsiLicense2007a}.
-So, the LGPL-3.0 inherits its patent clause from the GPL-3.0 which is -- as we
-already described\footnote{$\rightarrow$ OSLiC, p.\
-\pageref{subsec:Gpl30PatentClause}} -- a granting and a revoking license.
+\enquote{additional permissions.}\citeLGPLthree{wp} The LGPL-3.0 itself does not
+contain the word `patent,' but the GPL-3.0 does.\citeGPLthree{§11}
+So, the LGPL-3.0 inherits its patent clause from the GPL-3.0 which is---as we
+already described\footnote{$\rightarrow$ \oslic{}, p.\
+\pageref{subsec:Gpl30PatentClause}}---a granting and a revoking license.
  
 \subsection{MPL statements concerning patents}\label{subsec:MplPatentClause}
 
 The MPL distributes its statements concerning the tolerated use of the patents
 over three paragraphs: First, it clearly says that \enquote{each Contributor
-[\ldots] grants [\ldots the licensee] a world-wide, royalty-free, non-exclusive
-license [\ldots] under Patent Claims of such Contributor to make, use, sell,
-offer for sale, have made, import, and otherwise transfer either its
-Contributions or its Contributor Version}\footcite[cf.][\nopage wp.\ §2.1, esp.
-§2.1.b]{Mpl20OsiLicense2013a}. Second, it hihlights some
-\enquote{limitations}\footcite[cf.][\nopage wp.\ §2.1, esp.
-§2.3]{Mpl20OsiLicense2013a}. And finally, the MPL introduces a revoking clause
-which signifies that the rights, granted to the licensee \enquote{[\ldots] by
-any and all Contributors [\ldots] shall terminate} if the licensee
-\enquote{initiates litigation against any entity by asserting a patent
-infringement claim [\ldots] alleging that a Contributor Version directly or
-indirectly infringes any patent [\ldots]}\footcite[cf.][\nopage wp.\
-§5.2]{Mpl20OsiLicense2013a}.
+[\ldots] grants [\ldots the licensee] a world-wide, royalty-free,
+non-exclusive license [\ldots] under Patent Claims of such Contributor to
+make, use, sell, offer for sale, have made, import, and otherwise transfer
+either its Contributions or its Contributor Version}\citeMPL{§2.1,
+esp. §2.1.b} Second, it hihlights some \enquote{limitations.}\citeMPL{§2.3}
+And finally, the MPL introduces a revoking clause which signifies that the
+rights, granted to the licensee \enquote{[\ldots] by any and all Contributors
+[\ldots] shall terminate} if the licensee \enquote{initiates litigation
+against any entity by asserting a patent infringement claim [\ldots] alleging
+that a Contributor Version directly or indirectly infringes any patent
+[\ldots]}\citeMPL{§5.2}
 
-Thus, the MPL is -- as we are using to say in this chapter -- a granting license
-and a revoking license.
+Thus, the MPL is a granting license and a revoking license.
 
 \subsection{MS-PL statements concerning patents}\label{subsec:MsplPatentClause}
 
-First, the MS-PL contains a statement, by which \enquote{[\ldots] each
-contributor grants (the software users) a non-exclusive, worldwide, royalty-free
-license under its licensed patents to make, have made, use, sell, offer for
-sale, import, and/or otherwise dispose of its contribution in the software or
-derivative works of the contribution in the software}\footcite[cf.][\nopage wp
-§2.B]{MsplOsiLicense2013a}. Second, the MS-PL says that \enquote{if you bring a
-patent claim against any contributor[\ldots] your patent license from such
-contributor to the software ends automatically}\footcite[cf.][\nopage wp
-§3.B]{MsplOsiLicense2013a}.
+First, the MS-PL contains a statement, by which \enquote{[\ldots] each 
+contributor grants (the software users) a non-exclusive, worldwide, royalty-free 
+license under its licensed patents to make, have made, use, sell, offer for 
+sale, import, and/or otherwise dispose of its contribution in the software or 
+derivative works of the contribution in the software.}\citeMSPL{§2.B} Second,
+the MS-PL says that \enquote{if you bring a patent claim against any
+contributor[\ldots] your patent license from such contributor to the software
+ends automatically.}\citeMSPL{§3.B} 
 
-Thus, the MS-PL is -- as we are using to say in this chapter -- a granting and a
-revoking license: At first you are granted to use all patents of all
-contributors which are necessary to use the software legally. But if you -- with
-respect to the software -- install any litigation concerning an infringement of
-patents, then the rights granted to you are revoked.
-
-
-
+Thus, the MS-PL is a granting and a revoking license: At first you are granted
+to use all patents of all contributors which are necessary to use the software
+legally. But if you install any litigation concerning an infringement of
+patents with respect to the software, then the rights granted to you are revoked. 
 
 % \bibliography{../../../bibfiles/oscResourcesEn}

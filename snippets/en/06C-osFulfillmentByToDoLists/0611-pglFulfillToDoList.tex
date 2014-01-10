@@ -28,67 +28,124 @@
 Like the MIT License Postgres License is a very permissive licenses. Thus, the
 PGL specific finder can be simplified:
 
-\begin{center}
-\begin{footnotesize}
-\pstree[levelsep=*1,treesep=0.2]{\Toval{PgL}}{
-  \pstree{
-    \Tr{\Ovalbox{\shortstack{recipient: \textit{4yourself}\\
-    \textbf{\textit{used by yourself}}}}} 
-  }{
-    \Tr{\doublebox{\shortstack{\tiny{\textbf{PGL-C1}:}\\
-    \tiny{\textit{using the}}\\\tiny{\textit{software}}\\
-    \tiny{\textit{only for}}\\\tiny{\textit{yourself}} }}} 
-  }
-  \pstree[levelsep=*0.2,treesep=0.2]{
-    \Tr{\Ovalbox{\shortstack{recipient: \textit{2others}\\
-      \textbf{\textit{distributed to 3rd parties}}}}} 
-  }{ 
-    \pstree[levelsep=*0.2,treesep=0.2]{
-      \Tr{\Ovalbox{\shortstack{state:\\\textbf{\textit{unmodified}}}}}
-    }{
-        \Tr{\doublebox{\shortstack{\tiny{\textbf{PGL-C2}:}\\
-        \tiny{\textit{distributing an}}\\
-        \tiny{\textit{unmodified pkg}} }}}
+\tikzstyle{nodv} = [font=\small, ellipse, draw, fill=gray!10, 
+    text width=2cm, text centered, minimum height=2em]
 
-    }
+\tikzstyle{nods} = [font=\footnotesize, rectangle, draw, fill=gray!20, 
+    text width=1.2cm, text centered, rounded corners, minimum height=3em]
 
-    \pstree[levelsep=*0.2,treesep=0.2]{
-      \Tr{\Ovalbox{\shortstack{state:\\\textbf{\textit{modified}}}}}
-    }{ 
-      \pstree{
-        \Tr{\Ovalbox{\shortstack{type:\\\textbf{\textit{proapse}}}}}
-      }{
-          \Tr{\doublebox{\shortstack{\tiny{\textbf{PGL-C3}:}\\
-          \tiny{\textit{distributing}}\\\tiny{\textit{a modified}}\\
-          \tiny{\textit{program}} }}} 
+\tikzstyle{nodb} = [font=\footnotesize, rectangle, draw, fill=gray!20, 
+    text width=2.2cm, text centered, rounded corners, minimum height=3em]
+
+\tikzstyle{nodx} = [font=\footnotesize, rectangle, draw, fill=gray!20, 
+    text width=2.4cm, text centered, rounded corners, minimum height=3em]
+    
+\tikzstyle{leaf} = [font=\tiny, rectangle, draw, fill=gray!30, 
+    text width=1.2cm, text centered, minimum height=6em]
+
+\tikzstyle{edge} = [draw, -latex']
+
+\begin{tikzpicture}[]
+
+\node[nodv] (l61) at ( 2.4, 9.2) {PgL};
+
+\node[nodb] (l51) at ( 0.0, 7.8) {\textit{recipient:} \\ \textbf{4yourself}};
+\node[nodb] (l52) at ( 4.8, 7.8) {\textit{recipient:} \\ \textbf{2others}};
+
+\node[nodb] (l41) at ( 2.5, 6.2) {\textit{state:} \\ \textbf{unmodified}};
+\node[nodb] (l42) at ( 7.0, 6.2) {\textit{state:} \\ \textbf{modified}};
+
+\node[nodb] (l31) at ( 5.0, 4.6) {\textit{type:} \\ \textbf{proapse}};
+\node[nodb] (l32) at ( 9.0, 4.6) {\textit{type:} \\ \textbf{snimoli}};
+
+\node[nodx] (l21) at ( 7.5, 2.8) {\textit{context:} \\ \textbf{independent}};
+\node[nodx] (l22) at (10.5, 2.8) {\textit{context:} \\ \textbf{embedded}};
+
+\node[leaf] (l11) at ( 0.0, 0.0) {\textbf{PGL-C1} \textit{using software only for yourself}};
+\node[leaf] (l12) at ( 2.5, 0.0) {\textbf{PGL-C2} \textit{distributing unmodified package}};
+\node[leaf] (l13) at ( 5.0, 0.0) {\textbf{PGL-C3} \textit{distributing modified program}};
+\node[leaf] (l14) at ( 7.5, 0.0) {\textbf{PGL-C4} \textit{distributing modified library as independent package}};
+\node[leaf] (l15) at (10.5, 0.0) {\textbf{PGL-C5} \textit{distributing modified library as embedded package}};
+
+
+\path [edge] (l61) -- (l51);
+\path [edge] (l61) -- (l52);
+\path [edge] (l51) -- (l11);
+\path [edge] (l52) -- (l41);
+\path [edge] (l52) -- (l42);
+\path [edge] (l41) -- (l12);
+\path [edge] (l42) -- (l31);
+\path [edge] (l42) -- (l32);
+\path [edge] (l31) -- (l13);
+\path [edge] (l32) -- (l21);
+\path [edge] (l32) -- (l22);
+\path [edge] (l21) -- (l14);
+\path [edge] (l22) -- (l15);
+
+\end{tikzpicture}
+
+%% RPD obsolete PSTricks
+%% \begin{center}
+%% \begin{footnotesize}
+%% \pstree[levelsep=*1,treesep=0.2]{\Toval{PgL}}{
+%%   \pstree{
+%%     \Tr{\Ovalbox{\shortstack{recipient: \textit{4yourself}\\
+%%     \textbf{\textit{used by yourself}}}}} 
+%%   }{
+%%     \Tr{\doublebox{\shortstack{\tiny{\textbf{PGL-C1}:}\\
+%%     \tiny{\textit{using the}}\\\tiny{\textit{software}}\\
+%%     \tiny{\textit{only for}}\\\tiny{\textit{yourself}} }}} 
+%%   }
+%%   \pstree[levelsep=*0.2,treesep=0.2]{
+%%     \Tr{\Ovalbox{\shortstack{recipient: \textit{2others}\\
+%%       \textbf{\textit{distributed to 3rd parties}}}}} 
+%%   }{ 
+%%     \pstree[levelsep=*0.2,treesep=0.2]{
+%%       \Tr{\Ovalbox{\shortstack{state:\\\textbf{\textit{unmodified}}}}}
+%%     }{
+%%         \Tr{\doublebox{\shortstack{\tiny{\textbf{PGL-C2}:}\\
+%%         \tiny{\textit{distributing an}}\\
+%%         \tiny{\textit{unmodified pkg}} }}}
+
+%%     }
+
+%%     \pstree[levelsep=*0.2,treesep=0.2]{
+%%       \Tr{\Ovalbox{\shortstack{state:\\\textbf{\textit{modified}}}}}
+%%     }{ 
+%%       \pstree{
+%%         \Tr{\Ovalbox{\shortstack{type:\\\textbf{\textit{proapse}}}}}
+%%       }{
+%%           \Tr{\doublebox{\shortstack{\tiny{\textbf{PGL-C3}:}\\
+%%           \tiny{\textit{distributing}}\\\tiny{\textit{a modified}}\\
+%%           \tiny{\textit{program}} }}} 
            
-      }
-      \pstree{
-        \Tr{\Ovalbox{\shortstack{type:\\\textbf{\textit{snimoli}}}}}
-      }{
-        \pstree{
-          \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{independent}}}}}
-        }{        
-            \Tr{\doublebox{\shortstack{\tiny{\textbf{PGL-C4}:}\\
-            \tiny{\textit{distributing}}\\\tiny{\textit{a modified}}\\
-            \tiny{\textit{library as}}\\\tiny{\textit{independent}}
-            \tiny{\textit{pkg}} }}} 
+%%       }
+%%       \pstree{
+%%         \Tr{\Ovalbox{\shortstack{type:\\\textbf{\textit{snimoli}}}}}
+%%       }{
+%%         \pstree{
+%%           \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{independent}}}}}
+%%         }{        
+%%             \Tr{\doublebox{\shortstack{\tiny{\textbf{PGL-C4}:}\\
+%%             \tiny{\textit{distributing}}\\\tiny{\textit{a modified}}\\
+%%             \tiny{\textit{library as}}\\\tiny{\textit{independent}}
+%%             \tiny{\textit{pkg}} }}} 
            
-        }
-        \pstree{
-          \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{embedded}}}}}
-        }{        
-            \Tr{\doublebox{\shortstack{\tiny{\textbf{PGL-C5}:}\\
-            \tiny{\textit{distributing}}\\\tiny{\textit{a modified}}\\
-            \tiny{\textit{library as}}\\\tiny{\textit{embedded}}
-            \tiny{\textit{pkg}} }}}     
-        }
-      }
-    }
-   }   
-}
-\end{footnotesize}
-\end{center}
+%%         }
+%%         \pstree{
+%%           \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{embedded}}}}}
+%%         }{        
+%%             \Tr{\doublebox{\shortstack{\tiny{\textbf{PGL-C5}:}\\
+%%             \tiny{\textit{distributing}}\\\tiny{\textit{a modified}}\\
+%%             \tiny{\textit{library as}}\\\tiny{\textit{embedded}}
+%%             \tiny{\textit{pkg}} }}}     
+%%         }
+%%       }
+%%     }
+%%    }   
+%% }
+%% \end{footnotesize}
+%% \end{center}
 
 \subsection{PGL-C1: Using the software only for yourself}
 \label{OSUC-01-PGL} 

@@ -18,15 +18,17 @@
 % [ File structure derived from 'mind your Scholar Research Framework' 
 %   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
 
-\documentclass[DIV=calc,BCOR=5mm,12pt,headings=small,oneside,toc=bib]{scrbook}
+\documentclass[DIV=calc,BCOR=5mm,12pt,headings=small,oneside,toc=bib,draft]{scrbook}
 
 %%% (1) general configurations %%%
 \usepackage[utf8]{inputenc}
 
 %%% (2) language specific configurations %%%
-\usepackage[]{a4,ngerman}
-\usepackage[ngerman, english]{babel}
+\usepackage[]{a4}
+\usepackage[english]{babel}
 \selectlanguage{english}
+
+\usepackage{microtype}
 
 %language specific quoting signs
 %default for language emglish is american style of quotes
@@ -37,7 +39,6 @@
 \usepackage[see]{jurabib}
 \bibliographystyle{jurabib}
 \input{btexmat/oscJbibCfgPureInc} %no annotations
-
 
 % language specific hyphenation
 \input{btexmat/oscHyphenationEnInc}
@@ -64,7 +65,6 @@
 %\usepackage{utopia}
 %\usepackage{courier}
 %\usepackage{avant}
-\usepackage[dvips]{epsfig}
 
 % graphic
 \usepackage{graphicx,color}
@@ -85,7 +85,6 @@
 
 %\deffootnote[0em]{1.5em}{1em}{\textsuperscript{\thefootnotemark}}
 %- end(footnote-configuration)
-
 
 % %- start(endnote-configuration) uncomment to activate
 % % Let all notes being marked with \endnote instead of \footnote
@@ -119,18 +118,19 @@
 \usetikzlibrary{shapes,snakes}
 \usetikzlibrary{positioning}
 \usetikzlibrary{decorations.text}
+\usetikzlibrary{trees}
 
 \usepackage{multirow}
 
-\usepackage{blindtext}
+%RPD%%%\usepackage{blindtext}
 \usepackage{caption}
 
 \usetikzlibrary{matrix}
 
-\usepackage{amsmath,amsfonts}
+\usepackage{amsmath}
+\usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{wasysym}
-\usepackage{pstricks, pst-node, pst-tree}
 \usepackage{chngcntr}
 \usepackage{nameref}
 
@@ -152,6 +152,34 @@
 % depth of contents
 \setcounter{secnumdepth}{5}
 \setcounter{tocdepth}{5}
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{bookmarks=true,breaklinks=true,colorlinks=true,citecolor=blue,draft=false}
+
+% Compatibility command if hyperref cannot be used
+%\newcommand{\texorpdfstring}[2]{#1}
+
+% Abbreviations
+\newcommand{\oslic}{OSLiC}
+
+% Often Cited Sources
+% --------------------
+% first (optional) argument is text at beginning, defaults to "cf."
+% second argument is location, like "§2"; must be "wp" if no paragraph is given 
+\newcommand*{\citeAGPL}[2][cf.]{\footcite[#1][\nopage wp #2]{Agpl30OsiLicense2007a}}
+\newcommand*{\citeAPL}[2][cf.]{\footcite[#1][\nopage wp #2]{Apl20OsiLicense2004a}}
+\newcommand*{\citeCDDL}[2][cf.]{\footcite[#1][\nopage wp #2]{Cddl10OsiLicense2004a}}
+\newcommand*{\citeEPL}[2][cf.]{\footcite[#1][\nopage wp #2]{Epl10OsiLicense2005a}}
+\newcommand*{\citeEUPL}[2][cf.]{\footcite[#1][\nopage wp #2]{Eupl11OsiLicense2007a}}
+\newcommand*{\citeGPLthree}[2][cf.]{\footcite[#1][\nopage wp #2]{Gpl30OsiLicense2007a}}
+\newcommand*{\citeGPLtwo}[2][cf.]{\footcite[#1][\nopage wp #2]{Gpl20OsiLicense1991a}}
+\newcommand*{\citeLGPLthree}[2][cf.]{\footcite[#1][\nopage wp #2]{Lgpl30OsiLicense2007a}}
+\newcommand*{\citeLGPLtwo}[2][cf.]{\footcite[#1][\nopage wp #2]{Lgpl21OsiLicense1999a}}
+\newcommand*{\citeMPL}[2][cf.]{\footcite[#1][\nopage wp #2]{Mpl20OsiLicense2013a}}
+\newcommand*{\citeMSPL}[2][cf.]{\footcite[#1][\nopage wp #2]{MsplOsiLicense2013a}}
+\newcommand*{\citePGL}[2][cf.]{\footcite[#1][\nopage wp #2]{PglOsiLicense2013a}}
+\newcommand*{\citePHP}[2][cf.]{\footcite[#1][\nopage wp #2]{Php30OsiLicense2013a}}
 %%%%%%%%%%%%%%
 \begin{document}
 

@@ -23,91 +23,101 @@
 %% use all entries of the bibliography
 %\nocite{*}
 
+{
+\newcommand{\softbreak}{\hspace{0pt plus 1cm}}
+\newcommand{\sourceNeeded}{\footnote{cite the sources}}
+
 \section{Excursion: What is a 'Derivative Work' - the basic idea of open source}
 \footnotesize \begin{quote}\itshape This chapter briefly discusses aspects of
 being a derivated pieces of software which have to be known for using open
-source software compliantly. As used in all its other parts, the OSLiC
+source software compliantly. As usually, the \oslic{}
 only tries to find one safe interpretation. The authors know that there
 exist many other ways to consider this topic. So, if you feel, that the
-viewpoint of the OSLiC does not fit the specific circumstances of your
+viewpoint of the \oslic{} does not fit the specific circumstances of your
 particular case, do not hesitate to ask your own lawyer. But if you agree with
-the OSLiC, be aware that you dealing with this topic from the viewpoint of a
+the \oslic{}, be aware that you dealing with this topic from the viewpoint of a
 benevolent user.
 \end{quote}
 \normalsize
-Let us start with the outline of an arguing structure:
+Let us outline the argumentation:
 
 \begin{description}
-  \item[The meaning 'derivative work' must be known!] Many open source licenses
-  are using the term 'derivative work'\footnote{cite the sources}, either
-  directly or indirectly in form of the work 'modification'\footnote{cite the
-  sources}[Write a table as survey]. And nearly all licenses, which are using
-  the term 'derivative work' etc., are linking tasks which must be executed to
-  comply with the corresponding license, to the precondition, that something is
-  a derivative work [table survey]. \textbf{Hence, for acting in accordance to
-  such a license, it has to be known, what a derivate work is}
-  \item[Unfortunately the meaning is not clearly fixed]. The exist some
-  different readings of the term 'derivative work' [specify the differences and
-  cite the sources] \textbf{Hence, it is not as clear as wished what a derivative
-  work is}
-  \item[So, let us argue from the viewpoint of a benevolent developer]: Open
-  source licenses are written for software developers, mostly to preserve their
-  freedom, to develop software. And sometimes these licenses are also written by
-  software developers -- or at least by the assistance of. So, one should be
-  able to answer the question under which circumstances a piece of software is a
-  'derivative work' of another piece of software on the base of two principles:
+  \item[The meaning `derivative work' must be known!]\softbreak
+    Many open source licenses use the term `derivative work,'\sourceNeeded
+    either directly or indirectly in form of the word `modification.'\sourceNeeded
+    [Write a table as survey] 
+    And nearly all licenses that are using the term `derivative work' etc., 
+    are linking tasks that must be executed to comply with the corresponding
+    license, to the precondition that something is a derivative work. 
+    [table survey] 
+    \textbf{Hence, for acting in accordance with such a license, it has to be
+    known what a derivate work is.}  
+
+  \item[Unfortunately the meaning is not clearly fixed.]\softbreak
+    There exist different readings of the term `derivative work.' 
+    [specify the differences and cite the sources] 
+    \textbf{Hence, it is not as clear what a derivative work is as one could wish}
+
+  \item[So, let us argue from the viewpoint of a benevolent developer:]\softbreak
+    Open source licenses are written for software developers, mostly to preserve
+    their freedom to develop software. And sometimes these licenses are also
+    written by software developers---or at least with their assistance. So, one
+    should be able to answer the question under which circumstances a piece of
+    software is a `derivative work' of another piece of software based on two
+    principles: 
   \begin{itemize}
-  \item Let us argue on the base of a benevolent neutral software developer
-  without hidden interests or a hidden agenda.
-  \item In case of doubts let us preferably assume that the two pieces
-  interrelate as source and derivative work -- so that the OSLiC rather recommends
-  to execute the required tasks than to put them away.
-\end{itemize}
+    \item Let us argue from the viewpoint of a benevolent neutral software
+      developer without hidden interests or a hidden agenda.
+    \item In case of doubts let us preferably assume that the two pieces
+      interrelate as source and derivative work---so that the \oslic{} rather
+      recommends to perform the required tasks.
+  \end{itemize}
 \end{description}
 
-Basically we generalize a specific viewpoint of the LGPL: It uses three terms:
+We generalize a specific viewpoint of the LGPL. It uses three terms:
 
 \begin{description}
   \item[\enquote{library}] is defined as \enquote{a collection of software
   functions and/or data prepared so as to be conveniently linked with
-  application programs}\footcite[cf.][\nopage wp §0]{Lgpl21OsiLicense1999a}.
+  application programs.}\footcite[cf.][\nopage wp §0]{Lgpl21OsiLicense1999a}
   \item[\enquote{work based on the library}] is defined as \enquote{either the
-  library or any derivative work}\footcite[cf.][\nopage wp
-  §0]{Lgpl21OsiLicense1999a}.
+  library or any derivative work.}\footcite[cf.][\nopage wp
+  §0]{Lgpl21OsiLicense1999a}
   \item[\enquote{work that uses the library}] is defined as something which
   initially \enquote{[\ldots] is not a derivative work of the library [\ldots]}
   but can become a derivative work by being combined / linked to the library it
-  uses\footcite[cf.][\nopage wp §5]{Lgpl21OsiLicense1999a}.
+  uses.\footcite[cf.][\nopage wp §5]{Lgpl21OsiLicense1999a}
 \end{description}
 
-Following these specifications, one has to conclude that there can be derived
-\emph{derivative works} of the library in two different ways: First, the library
-itself can be enhanced without changing the character of being a library. Then,
-of course, the resulting library is a derivative work of the initial library.
-Second, an overaching program can use the library by calling functions, methods
-or data, offered by the library. In this case, the overarching program
-functionally depends on the library and is a derivative work (as soon as it is
-linked to the library).
+Following these specifications, one has to conclude that 
+\emph{derivative works} of the library can be drieved in two different ways: 
+First, the library itself can be enhanced without changing the character of 
+being a library. Then, of course, the resulting library is a derivative work 
+of the initial library.  Second, an overaching program can use the library by 
+calling functions, methods, or data offered by the library. In this case, the 
+overarching program functionally depends on the library and is a derivative work 
+(as soon as it is linked to the library).
 
-This viewpoint can be generalized: also snippets, modules, plugins can be
+This viewpoint can be generalized: snippets, modules, plugins can be
 enhanced and used by overarching programs or even by more complex libraries.
-Based on this viewpoint - which should finally be formulated as the viewpoint of
-a benevolent impartial developer - the OSLiC uses the following rules by which
-the OSLiC decides to take something as derivative Work:
+Based on this viewpoint---which should finally be formulated as the viewpoint of
+a benevolent impartial developer---the \oslic{} uses the following rules by which
+the \oslic{} decides to take something as derivative Work:
 \label{sec:BenevolentDerivativeWorkUnderstanding}
 
 \begin{description}
   \item[Copy-Case] Copying a piece of code from a source file and pasting it
   into a target file makes the target file a derivatve work of the source
-  file\footnote{ Be careful: this case must still be distinguished from the case
-  of an automatically inclusion (header files, script libraries) during the
-  compilation / execution: Header files allon should not evekoe a derivative
-  work.}.
+  file.\footnote{Be careful: this case must still be distinguished from the case
+  of an automatic inclusion (header files, script libraries) during the
+  compilation / execution: Inclusion of header files alone should not create a derivative
+  work.}
   \item[Modify-Case] Inserting any new content or deleting any existing content
-  of a source file makes the resulting target file being a derivate work of the
+  of a source file makes the resulting target file a derivate work of the
   source file.
-  \item[Call-Case] Inserting into a target file the call of function which is
-  defined inside of and delivered by a sourcefile makes the target file
+  %% RPD: what is the rationale for the call-case?
+  \item[Call-Case] Inserting the call of function which is defined inside of and 
+  delivered by a sourcefile into a target file makes that target file
   depending on the source file and therefore a derivative work of the delivering
   source file.
 \end{description}
@@ -115,31 +125,37 @@ the OSLiC decides to take something as derivative Work:
 And here are some applications of these rules:
 
 \begin{itemize}
-  \item \textbf{Enlarging an existing source file by an external text evokes a
+  \item \textbf{Enlarging an existing source file by an external text creates a
   derivative work!} Why? \emph{Because you are going to reuse the
   external code for simplifying our life.} [see 'Copy Case']
-  \item \textbf{Reducing a source file evokes a derivative work!} Why?
+  \item \textbf{Reducing a source file creates a derivative work!} Why?
   \emph{Because you are going to prepare the given file(s) for a better reuse.}
   [see 'Modify-Case']
-  \item \textbf{Replacing something in a source file evokes a derivative work!}
+  \item \textbf{Replacing something in a source file creates a derivative work!}
   Why? \emph{Because you are going to reuse parts of the existing code for
-  simplifying our life.} [see 'Modify Case']
+  simplifying your life.} [see 'Modify Case']
   \item \textbf{Integrating a foreign snippet into an existing source code
-  evokes a derivative work!} Why? \emph{Because you are going to simplify
+  creates a derivative work!} Why? \emph{Because you are going to simplify
   your life by reusing both, the foreign snippet and the original file.} [see
   'Copy Case' and 'Modify-Case']
+  %% RPD The following example claims that if you split a file A into a
+  %% library part L (offering a function that was part of A)  and a client 
+  %% part C (containing everything in A that is not in L) then
+  %% - C and L are derived from A (obviuosly)
+  %% - C is derived from L (call-case; but this makes it clear, that there 
+  %%   is no such thing as a call case.)
   \item \textbf{Refactoring a given work by extracting a function / method into
-  an autonmous file evokes a derivative work in two respects!} Why?
-  \emph{Because first you are going to let depend all modified / generated
-  files on the original file and  second because you are going to let
-  depend those files with function calls on the function defining file itself.}
+  an autonomous file creates a derivative work in two respects!} Why?
+  \emph{Because, first, all modified / generated files depend
+  on the original file and, second, because those function calls in the files
+  introduce a dependecy on the file defining the function itself.}
   [see 'Modify-Case' and 'Call-Case]
-  \item \textbf{Calling a function - served by a defining module - let the
+  \item \textbf{Calling a function - served by a defining module - lets the
   calling file become a derivative work of the serving module!} Why?
   \emph{Because you are going to simplify your life by reusing an already
   prepared work (often offered by other developers).} [see 'Call-Case']
-  \item \textbf{Calling elements - served by a defining library - let the
-  calling file become a derivative work of the serving library!} Why? 
+  \item \textbf{By calling elements - served by a defining library - the
+  calling file becomes a derivative work of the serving library!} Why? 
   \emph{Because you are going to simplify your life by reusing an already
   prepared work (often offered by other developers).} [see
   'Call-Case']\footnote{In this context, you may sometimes read that one has to
@@ -158,17 +174,18 @@ And now some additional 'ideas' which might invite to be discussed:
   a function, offered by the framework itself).}
   \item \textbf{Does a framework depend on its plugin? Let us try to answer:
   Sometimes yes, sometimes no.} Why? \emph{If the framwork crashes when it is
-  missing its plugin, then it clearly depends on the plugin. Not doubt. It is
+  missing its plugin, then it clearly depends on the plugin. No doubt. It is
   simply not autonomous. But if it does not crash, then it perfectly does for
   which it has been designed: it is offering a place which might be filled by
   the plugin, but not necessarily. This kind of a framework is like an
   application listing to a port for getting data which it shall process and
   which are served by another application.}
   \item \textbf{Does a program using inter process communication depend on its
-  IO-partners? Definitely not!} Why? \emph{Because we otherwise need not discuss
-  all these cases, every thing depends on everything -- in each running system.}
+  IO-partners? Definitely not!} Why? \emph{Because, otherwise, we need not discuss
+  all these cases, every thing would depend on everything---in each running system.}
 \end{itemize}
 
 [\ldots TBD \ldots]
 
+}
 %\bibliography{../../../bibfiles/oscResourcesEn}

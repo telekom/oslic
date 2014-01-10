@@ -37,6 +37,13 @@ to-do lists.
 \section{A standard form for gathering the relevant information}
 \label{OSLiCStandardFormForGatheringInformation}
  
+{
+\newcommand{\question[1]}{\parbox[c][#1][c]{8.6cm}}
+\newcommand{\checkboxes}[2]{%
+    \parbox{7.5em}{
+        $\square$\hspace{1em}#1\\
+        $\square$\hspace{1em}#2}}
+
 \begin{small}
 \begin{tabular}[h]{|l|l|l|l|}
 \hline 
@@ -49,63 +56,60 @@ to-do lists.
 \hline 
 \hline 
   Type
-  & \parbox[c][2.6cm][c]{10cm}{
+  & \question[2.9cm]{
     \textit{Is the open source software you want to use a library in the
     broadest sense (an includable code \textbf{\underline{sni}}ppet, a linkable
     \textbf{\underline{mo}}dule or \textbf{\underline{li}}brary, or a loadable
     plugin), or is it an autonomous \textbf{\underline{pro}}gram,
-    \textbf{\underline{ap}}plication or \textbf{\underline{se}}rver which can be
-    executed?}} & \parbox{7.5em}{
-      $\square$\hspace{1em}snimoli\\
-      $\square$\hspace{1em}proapse}
-    \\
+    \textbf{\underline{ap}}plication, or \textbf{\underline{se}}rver which can be
+    executed?}} 
+  & \checkboxes{snimoli}{proapse}
+  \\
 \hline 
-  State & 
-  \parbox[c][1.6cm][c]{10cm}{
-  \textit{Do you want to leave the open source software
-  \textbf{\underline{unmodified}} as you have received it, or are you going to
-  create a \textbf{\underline{modified}} version of it?}} &
-  \parbox{7.5em}{
-    $\square$\hspace{1em}unmodified\\
-    $\square$\hspace{1em}modified} \\
+  State 
+  & \question[1.7cm]{
+    \textit{Do you want to leave the open source software
+    \textbf{\underline{unmodified}} as you have received it, or are you going to
+    create a \textbf{\underline{modified}} version of it?}} 
+  & \checkboxes{unmodified}{modified}
+  \\
 \hline 
-  Context & 
-  \parbox[c][1.6cm][c]{10cm}{
-  \textit{Are you going to use / distribute the open source software as an
-  \textbf{\underline{independent}} unit, or do you plan to integrate it as an
-  \textbf{\underline{embedded}} component into a complexer piece of
-  software?}} & \parbox{7.5em}{
-  $\square$\hspace{1em}independent\\
-    $\square$\hspace{1em}embedded}\\
+  Context 
+  & \question[2.15cm]{ 
+    \textit{Are you going to use / distribute the open source software as an
+    \textbf{\underline{independent}} unit, or do you plan to integrate it as an
+    \textbf{\underline{embedded}} component into a complexer piece of software?}}
+  & \checkboxes{independent}{embedded}
+  \\
 \hline 
-  Recipient & 
-  \parbox[c][1.6cm][c]{10cm}{ \textit{Are you going to use the open source
-  software only \textbf{\underline{for}} \textbf{\underline{yourself}}, or do
-  you plan to (re)distribute it (also) \textbf{\underline{to}}
-  \textbf{\underline{other}} third parties?}}
-  & \parbox{7.5em}{
-    $\square$\hspace{1em}4yourself\\
-    $\square$\hspace{1em}2others}\\
+  Recipient 
+  & \question[1.7cm]{ 
+    \textit{Are you going to use the open source
+    software only \textbf{\underline{for}} \textbf{\underline{yourself}}, or do
+    you plan to (re)distribute it (also) \textbf{\underline{to}}
+    \textbf{\underline{other}} third parties?}}
+  & \checkboxes{4yourself}{2others}
+  \\
 \hline 
-  Form & 
-  \parbox[c][1.6cm][c]{10cm}{
-  \textit{Given you want to (re)distribute an open source based work [2others],
-  do you focus on distributing the \textbf{\underline{binaries}} or the
-  \textbf{\underline{sources}}?}}
-  & \parbox{7.5em}{
-    $\square$\hspace{1em}binaries\\
-    $\square$\hspace{1em}sources}\\
+  Form 
+  & \question[1.7cm]{
+    \textit{Given you want to (re)distribute an open source based work [2others],
+    do you focus on distributing the \textbf{\underline{binaries}} or the
+    \textbf{\underline{sources}}?}}
+  & \checkboxes{binaries}{sources}
+  \\
 \hline 
 \hline
 \end{tabular}
 \end{small}
+}
 
 As discussed earlier, there are of course some invalid
-combinations\footnote{type::proapse excludes state::embedded;
+combinations.\footnote{type::proapse excludes state::embedded;
 recipient::4yourself excludes the combination with state::independent and
 type::snimoli; any value of class 'mode' implies state::embedded [for details
-see page \pageref{InvalidFinderTokenCombinations}]. If you have gathered one of
-these invalid combinations, please check the corresponding explanations.}. Here
+see page \pageref{InvalidFinderTokenCombinations}]. If you have encountered one of
+these invalid combinations, please check the corresponding explanations.} Here
 are some extra explanations concerning the classes resp. the focuses:
 
 \begin{description}
@@ -115,8 +119,8 @@ launcher, or (in case of a text file which still must be interpreted by an
 interpreter like php, perl, bash etc.) if you can start an interpreter which
 takes the file as one of its arguments and executes the commands.
 \item[State:] You are modifying a piece of (open source) software if you expand,
-reduce or modify at least one of the received software files, and -- in case of
-dealing with binary object code -- if you (re)compile and (re)link the modified
+reduce or modify at least one of the received software files, and---in case of
+dealing with binary object code---if you (re)compile and (re)link the modified
 software to a new binary file. But if you only modify some of the configuration
 files, you are not modifying the open source software itself.
 \item[Context:] You are using a piece of open source software as an embedded
@@ -134,257 +138,373 @@ component of a larger unit \ldots
   \end{itemize}
 \item[Recipient:] You are using the received open source software only for
 yourself, if you as a person do not pass it to other entities like persons,
-organizations, companies etc., or if you -- as a member of a specific
-development group -- pass it only to the other members of your development
+organizations, companies etc., or if you---as a member of a specific
+development group---pass it only to the other members of your development
 group. But if you store open source software on any device such as a mobile
 phone, an USB stick, etc.\ or if you attach it to any transport medium like
 email etc.\ and if you then sell, give away, or simply send this device or
 transport medium to anyone (other than a direct member of your development
-group) then you indeed handover the open source software to third
-parties\footnote{Please remember that -- at least in Germany -- there are
+group) then you indeed hand the open source software over to third
+parties.\footnote{Please remember that---at least in Germany---there are
 opinions that even handing over software to another legal entity or department
 of the same company is also a kind of distribution. It is always safest to take
-the broadest possible meaning of distributing or handing over.}.
+the broadest possible meaning of distributing or handing over.}
 \item[Form:] Mostly it is up to you to decide whether you want to distribute
 only the binaries or whether you are intentionally going to distribute the
 sources (too). But in some cases, you have to respect some special
-conditions\footnote{For details concerning a necessary refinement of the open
-source use case taxonomy, please see $\rightarrow$ OSLiC, p.\
-\pageref{sec:SourceBinaryDifference} [TODO broken reference]}.
+conditions.
 \end{description}
 
 \section{The taxonomic Open Source Use Case Finder}
 
-Now, after having gathered the necessary information, determine your specific
+Now, after having gathered the necessary information, determine your 
 open source use case by traversing the following tree and its corresponding
 branches:
 
-\begin{footnotesize}
+{
+\newcommand{\choicetext}[2]{\tiny #1:\\ \textbf{\textit{#2}}}
 
-\pstree[treemode=R,levelsep=*0.2,treesep=0.2]{\Toval{OSS}}{
-  \pstree{
-    \Tr{\Ovalbox{\shortstack{type:\\\textbf{\textit{proapse}}\\
-      \tiny (= Program,\\\tiny Application,\\\tiny Server)      
-      }   
-    }}
-    
-  }{
-    \pstree{
-      \Tr{\Ovalbox{\shortstack{state:\\\textbf{\textit{unmodified}}}}}
-    }{
-      \pstree{
-        \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{independent}}}}}
-      }{
-        
-        \pstree{
-          \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{4yourself}}}}}
-        }{
-          \Tr[edge=none]{\begin{minipage}[b][2em][c]{9em} 
-              $\Rightarrow$ OSUC-01: \textit{p.\ \pageref{OSUC-01-DEF}}\end{minipage} } 
+\newcommand{\cunmodified}{\choicetext{state}{unmodified}}
+\newcommand{\cmodified}{\choicetext{state}{unmodified}}
+\newcommand{\cindependent}{\choicetext{context}{independent}}
+\newcommand{\cembedded}{\choicetext{context}{embedded}}
+\newcommand{\cyourself}{\choicetext{recipient}{4yourself}}
+\newcommand{\cothers}{\choicetext{recipient}{2others}}
+\newcommand{\csources}{\choicetext{form}{sources}}
+\newcommand{\cbinaries}{\choicetext{form}{binaries}}
+
+\newcommand{\osuctxtshort}[1]{$\Rightarrow$ OSUC-#1: \textit{p.\ \pageref{OSUC-#1-DEF}}}
+\newcommand{\osuctxtbreak}[1]{$\Rightarrow$ OSUC-#1\\ \textit{(see p.\ \pageref{OSUC-#1-DEF})}}
+\newcommand{\osucchild}[1]{child { node[anchor=west] {#1} edge from parent[draw=none] }}
+
+\tikzset{choice/.style={rectangle, draw, rounded corners}}
+
+\begin{tikzpicture}[
+    font=\scriptsize,
+    align=left,
+    grow'=right,
+    level 1/.style={sibling distance=24em, level distance=10mm},
+    level 2/.style={sibling distance=14em, level distance=10mm},
+    level 3/.style={sibling distance=7em,  level distance=18mm, anchor=west, minimum width=2cm},
+    level 4/.style={sibling distance=3em,  level distance=18mm, minimum width=1.65cm},
+    level 5/.style={sibling distance=3em,  level distance=18mm, minimum width=1.45cm},
+    level 6/.style={sibling distance=3em,  level distance=6mm},
+]
+\node [ellipse,draw] {OSS}
+    child { node [choice] { \choicetext{type}{proapse} }
+      child { node [choice] {\cunmodified}
+        child { node [choice] {\cindependent}
+          child { node[choice] {\cyourself} 
+            \osucchild{\osuctxtshort{01}}
           }
-        
-        \pstree{
-          \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{2others}}}}}
-        }{
-          
-         \pstree{
-            \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{sources}}}}}
-          }{
-            \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
-              $\Rightarrow$ OSUC-02S\\
-              \textit{(see p.\ \pageref{OSUC-02S-DEF})}\end{minipage} } 
-           } 
-           
-          \pstree{
-            \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{binaries}}}}}
-          }{
-            \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
-              $\Rightarrow$ OSUC-02B\\
-              \textit{(see p.\ \pageref{OSUC-02B-DEF})}\end{minipage} } 
-           }
-           
-         }       
-      }
-    }
-    \pstree{
-      \Tr{\Ovalbox{\shortstack{state:\\\textbf{\textit{modified}}}}}
-    }{
-      \pstree{
-        \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{independent}}}}}
-      }{
-        \pstree{
-          \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{4yourself}}}}}
-        }{
-          \Tr[edge=none]{\begin{minipage}[b][2em][c]{9em} 
-              $\Rightarrow$ OSUC-03: 
-              \textit{p.\ \pageref{OSUC-03-DEF}}\end{minipage} } 
+          child { node[choice] {\cothers} 
+            child { node[choice] {\csources} 
+              \osucchild{\osuctxtbreak{02S}}
+            }
+            child { node[choice] {\cbinaries} 
+             \osucchild{\osuctxtbreak{02B}}
+            }
           }
-        
-        \pstree{
-          \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{2others}}}}}
-        }{
-        
-         \pstree{
-            \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{sources}}}}}
-          }{
-            \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
-              $\Rightarrow$ OSUC-04S\\
-              \textit{(see p.\ \pageref{OSUC-04S-DEF})}\end{minipage} } 
-           } 
-           
-          \pstree{
-            \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{binaries}}}}}
-          }{
-            \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
-              $\Rightarrow$ OSUC-04B\\
-              \textit{(see p.\ \pageref{OSUC-04B-DEF})}\end{minipage} } 
-           }
-         }        
+        }
       }
-    }
-  }
-  \pstree{
-    \Tr{\Ovalbox{
-      \shortstack{type:\\\textbf{\textit{snimoli}}\\
-      \tiny (= Snippet,\\\tiny Module,\\\tiny Plugin,\\\tiny Library)            
-      }
-    }}
-  }{
-    \pstree{
-      \Tr{\Ovalbox{\shortstack{state:\\\textbf{\textit{unmodified}}}}}
-    }{
-      \pstree{
-        \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{independent}}}}}
-      }{
-      
-        \pstree{
-          \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{2others}}}}}
-        }{
-              
-         \pstree{
-            \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{sources}}}}}
-          }{
-            \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
-              $\Rightarrow$ OSUC-05S\\
-              \textit{(see p.\ \pageref{OSUC-05S-DEF})}\end{minipage} } 
-           } 
-           
-          \pstree{
-            \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{binaries}}}}}
-          }{
-            \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
-              $\Rightarrow$ OSUC-05B\\
-              \textit{(see p.\ \pageref{OSUC-05B-DEF})}\end{minipage} } 
-           }   
-   
-         }
-      }
-      \pstree{
-        \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{embedded}}}}}
-      }{
-      
-        \pstree{
-          \Tr{
-            \Ovalbox{\shortstack{recipient:\\\textbf{\textit{4yourself}}}}
-           }
-        }{
-        
-          \Tr[edge=none]{\begin{minipage}[b][2em][c]{9em}
-              $\Rightarrow$ OSUC-06:
-              \textit{p.\ \pageref{OSUC-06-DEF}}\end{minipage} }
+      child { node [choice] {\cmodified}
+        child { node [choice] {\cindependent}
+          child { node[choice] {\cyourself} 
+            \osucchild{\osuctxtshort{03}}
           }
-        
-        
-        \pstree{
-          \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{2others}}}}}
-        }{
-
-          \pstree{
-            \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{sources}}}}}
-          }{
-            \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
-              $\Rightarrow$ OSUC-07S\\
-              \textit{(see p.\ \pageref{OSUC-07S-DEF})}\end{minipage} } 
-           } 
-           
-          \pstree{
-            \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{binaries}}}}}
-          }{
-            \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
-              $\Rightarrow$ OSUC-07B\\
-              \textit{(see p.\ \pageref{OSUC-07B-DEF})}\end{minipage} } 
-           } 
-
-         }
+          child { node[choice] {\cothers} 
+            child { node[choice] {\csources} 
+              \osucchild{\osuctxtbreak{04S}}
+            }
+            child { node[choice] {\cbinaries} 
+              \osucchild{\osuctxtbreak{04B}}
+            }
+          }
+        }
       }
     }
-    \pstree{
-      \Tr{\Ovalbox{\shortstack{state:\\\textbf{\textit{modified}}}}}
-    }{
-      \pstree{
-        \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{independent}}}}}
-      }{
-        \pstree{
-          \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{2others}}}}}
-        }{
-                      
-          \pstree{
-            \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{sources}}}}}
-          }{
-            \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
-              $\Rightarrow$ OSUC-08S\\
-              \textit{(see p.\ \pageref{OSUC-08S-DEF})}\end{minipage} } 
-           } 
-           
-          \pstree{
-            \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{binaries}}}}}
-          }{
-            \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
-              $\Rightarrow$ OSUC-08B\\
-              \textit{(see p.\ \pageref{OSUC-08B-DEF})}\end{minipage} } 
-           }              
-
-          }        
+    child { node [choice] { \choicetext{type}{snimoli} }
+      child { node [choice] {\cunmodified}
+        child { node [choice] {\cindependent} 
+          child { node[choice] {\cothers} 
+            child { node[choice] {\csources} 
+              \osucchild{\osuctxtbreak{05S}}
+            }
+            child { node[choice] {\cbinaries} 
+              \osucchild{\osuctxtbreak{05B}}
+            }
+          }
+        }
+        child { node [choice] {\cembedded} 
+          child { node[choice] {\cyourself} 
+            \osucchild{\osuctxtshort{06}}
+          }
+          child { node[choice] {\cothers} 
+            child { node[choice] {\csources} 
+              \osucchild{\osuctxtbreak{07S}}
+            }
+            child { node[choice] {\cbinaries} 
+              \osucchild{\osuctxtbreak{07B}}
+            }
+          }
+        }
       }
-      \pstree{
-        \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{embedded}}}}}
-      }{
-        \pstree{
-          \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{4yourself}}}}}
-        }{
-           \Tr[edge=none]{\begin{minipage}[b][2em][c]{9em} 
-              $\Rightarrow$ OSUC-09:
-              \textit{p.\ \pageref{OSUC-09-DEF}}\end{minipage} } 
-          } 
-        
-        \pstree{
-          \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{2others}}}}}
-        }{
-
-          \pstree{
-            \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{sources}}}}}
-          }{
-            \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
-              $\Rightarrow$ OSUC-10S\\
-              \textit{(see p.\ \pageref{OSUC-10S-DEF})}\end{minipage} } 
-           } 
-           
-          \pstree{
-            \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{binaries}}}}}
-          }{
-            \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
-              $\Rightarrow$ OSUC-10B\\
-              \textit{(see p.\ \pageref{OSUC-10B-DEF})}\end{minipage} } 
-           } 
-           
-         }
-
+      child { node [choice] {\cmodified}
+        child { node [choice] {\cindependent} 
+          child { node[choice] {\cothers} 
+            child { node[choice] {\csources} 
+              \osucchild{\osuctxtbreak{08S}}
+            }
+            child { node[choice] {\cbinaries} 
+              \osucchild{\osuctxtbreak{08B}}
+            }
+          }
+        }
+        child { node [choice] {\cembedded} 
+          child { node[choice] {\cyourself} 
+            \osucchild{\osuctxtshort{09}}
+          }
+          child { node[choice] {\cothers} 
+            child { node[choice] {\csources} 
+              \osucchild{\osuctxtbreak{10S}}
+            }
+            child { node[choice] {\cbinaries} 
+              \osucchild{\osuctxtbreak{10B}}
+            }
+          }
+        }
       }
-    }
-  }
-}
-\end{footnotesize}
+    };
+\end{tikzpicture}
 \label{OSLiCUseCaseFinder}
+}
+
+%% RPD obsolete PSTricks diagram
+%% \begin{footnotesize}
+%% \pstree[treemode=R,levelsep=*0.2,treesep=0.2]{\Toval{OSS}}{
+%%   \pstree{
+%%     \Tr{\Ovalbox{\shortstack{type:\\\textbf{\textit{proapse}}\\
+%%       \tiny (= Program,\\\tiny Application,\\\tiny Server)      
+%%       }   
+%%     }}
+    
+%%   }{
+%%     \pstree{
+%%       \Tr{\Ovalbox{\shortstack{state:\\\textbf{\textit{unmodified}}}}}
+%%     }{
+%%       \pstree{
+%%         \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{independent}}}}}
+%%       }{
+        
+%%         \pstree{
+%%           \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{4yourself}}}}}
+%%         }{
+%%           \Tr[edge=none]{\begin{minipage}[b][2em][c]{9em} 
+%%               $\Rightarrow$ OSUC-01: \textit{p.\ \pageref{OSUC-01-DEF}}\end{minipage} } 
+%%           }
+        
+%%         \pstree{
+%%           \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{2others}}}}}
+%%         }{
+          
+%%          \pstree{
+%%             \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{sources}}}}}
+%%           }{
+%%             \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
+%%               $\Rightarrow$ OSUC-02S\\
+%%               \textit{(see p.\ \pageref{OSUC-02S-DEF})}\end{minipage} } 
+%%            } 
+           
+%%           \pstree{
+%%             \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{binaries}}}}}
+%%           }{
+%%             \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
+%%               $\Rightarrow$ OSUC-02B\\
+%%               \textit{(see p.\ \pageref{OSUC-02B-DEF})}\end{minipage} } 
+%%            }
+           
+%%          }       
+%%       }
+%%     }
+%%     \pstree{
+%%       \Tr{\Ovalbox{\shortstack{state:\\\textbf{\textit{modified}}}}}
+%%     }{
+%%       \pstree{
+%%         \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{independent}}}}}
+%%       }{
+%%         \pstree{
+%%           \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{4yourself}}}}}
+%%         }{
+%%           \Tr[edge=none]{\begin{minipage}[b][2em][c]{9em} 
+%%               $\Rightarrow$ OSUC-03: 
+%%               \textit{p.\ \pageref{OSUC-03-DEF}}\end{minipage} } 
+%%           }
+        
+%%         \pstree{
+%%           \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{2others}}}}}
+%%         }{
+        
+%%          \pstree{
+%%             \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{sources}}}}}
+%%           }{
+%%             \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
+%%               $\Rightarrow$ OSUC-04S\\
+%%               \textit{(see p.\ \pageref{OSUC-04S-DEF})}\end{minipage} } 
+%%            } 
+           
+%%           \pstree{
+%%             \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{binaries}}}}}
+%%           }{
+%%             \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
+%%               $\Rightarrow$ OSUC-04B\\
+%%               \textit{(see p.\ \pageref{OSUC-04B-DEF})}\end{minipage} } 
+%%            }
+%%          }        
+%%       }
+%%     }
+%%   }
+%%   \pstree{
+%%     \Tr{\Ovalbox{
+%%       \shortstack{type:\\\textbf{\textit{snimoli}}\\
+%%       \tiny (= Snippet,\\\tiny Module,\\\tiny Plugin,\\\tiny Library)            
+%%       }
+%%     }}
+%%   }{
+%%     \pstree{
+%%       \Tr{\Ovalbox{\shortstack{state:\\\textbf{\textit{unmodified}}}}}
+%%     }{
+%%       \pstree{
+%%         \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{independent}}}}}
+%%       }{
+      
+%%         \pstree{
+%%           \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{2others}}}}}
+%%         }{
+              
+%%          \pstree{
+%%             \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{sources}}}}}
+%%           }{
+%%             \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
+%%               $\Rightarrow$ OSUC-05S\\
+%%               \textit{(see p.\ \pageref{OSUC-05S-DEF})}\end{minipage} } 
+%%            } 
+           
+%%           \pstree{
+%%             \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{binaries}}}}}
+%%           }{
+%%             \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
+%%               $\Rightarrow$ OSUC-05B\\
+%%               \textit{(see p.\ \pageref{OSUC-05B-DEF})}\end{minipage} } 
+%%            }   
+   
+%%          }
+%%       }
+%%       \pstree{
+%%         \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{embedded}}}}}
+%%       }{
+      
+%%         \pstree{
+%%           \Tr{
+%%             \Ovalbox{\shortstack{recipient:\\\textbf{\textit{4yourself}}}}
+%%            }
+%%         }{
+        
+%%           \Tr[edge=none]{\begin{minipage}[b][2em][c]{9em}
+%%               $\Rightarrow$ OSUC-06:
+%%               \textit{p.\ \pageref{OSUC-06-DEF}}\end{minipage} }
+%%           }
+        
+        
+%%         \pstree{
+%%           \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{2others}}}}}
+%%         }{
+
+%%           \pstree{
+%%             \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{sources}}}}}
+%%           }{
+%%             \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
+%%               $\Rightarrow$ OSUC-07S\\
+%%               \textit{(see p.\ \pageref{OSUC-07S-DEF})}\end{minipage} } 
+%%            } 
+           
+%%           \pstree{
+%%             \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{binaries}}}}}
+%%           }{
+%%             \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
+%%               $\Rightarrow$ OSUC-07B\\
+%%               \textit{(see p.\ \pageref{OSUC-07B-DEF})}\end{minipage} } 
+%%            } 
+
+%%          }
+%%       }
+%%     }
+%%     \pstree{
+%%       \Tr{\Ovalbox{\shortstack{state:\\\textbf{\textit{modified}}}}}
+%%     }{
+%%       \pstree{
+%%         \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{independent}}}}}
+%%       }{
+%%         \pstree{
+%%           \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{2others}}}}}
+%%         }{
+                      
+%%           \pstree{
+%%             \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{sources}}}}}
+%%           }{
+%%             \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
+%%               $\Rightarrow$ OSUC-08S\\
+%%               \textit{(see p.\ \pageref{OSUC-08S-DEF})}\end{minipage} } 
+%%            } 
+           
+%%           \pstree{
+%%             \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{binaries}}}}}
+%%           }{
+%%             \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
+%%               $\Rightarrow$ OSUC-08B\\
+%%               \textit{(see p.\ \pageref{OSUC-08B-DEF})}\end{minipage} } 
+%%            }              
+
+%%           }        
+%%       }
+%%       \pstree{
+%%         \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{embedded}}}}}
+%%       }{
+%%         \pstree{
+%%           \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{4yourself}}}}}
+%%         }{
+%%            \Tr[edge=none]{\begin{minipage}[b][2em][c]{9em} 
+%%               $\Rightarrow$ OSUC-09:
+%%               \textit{p.\ \pageref{OSUC-09-DEF}}\end{minipage} } 
+%%           } 
+        
+%%         \pstree{
+%%           \Tr{\Ovalbox{\shortstack{recipient:\\\textbf{\textit{2others}}}}}
+%%         }{
+
+%%           \pstree{
+%%             \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{sources}}}}}
+%%           }{
+%%             \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
+%%               $\Rightarrow$ OSUC-10S\\
+%%               \textit{(see p.\ \pageref{OSUC-10S-DEF})}\end{minipage} } 
+%%            } 
+           
+%%           \pstree{
+%%             \Tr{\Ovalbox{\shortstack{form:\\\textbf{\textit{binaries}}}}}
+%%           }{
+%%             \Tr[edge=none]{\begin{minipage}[b][2em][c]{6.5em} 
+%%               $\Rightarrow$ OSUC-10B\\
+%%               \textit{(see p.\ \pageref{OSUC-10B-DEF})}\end{minipage} } 
+%%            } 
+           
+%%          }
+
+%%       }
+%%     }
+%%   }
+%% }
+%% \end{footnotesize}
+%% \label{OSLiCUseCaseFinder}
 
 \section{The open source use cases and its to-do list references}
 
@@ -399,7 +519,7 @@ the circumstances of the described \textbf{O}pen \textbf{S}ource \textbf{U}se
 \label{OSUCList}
 \item[OSUC-01:]\label{OSUC-01-DEF}
 Only for yourself, you are going to use an unmodified open source program,
-application, or server -- just as you received it. But you do not combine it
+application, or server---just as you received it. But you do not combine it
 with other components in the sense of software development (= \textit{proapse,
 unmodified, independent, 4yourself}).
 To see the \textit{specific, license fulfilling to-do lists} jump to the
@@ -433,8 +553,8 @@ following pages:
   \end{itemize}
 
 \item[OSUC-02S:]\label{OSUC-02S-DEF} Just as you received it, you are going to
-distribute an unmodified open source program, application, or server to 3rd
-parties -- in the form of sources. In this act of distribution, you do not
+distribute an unmodified open source program, application, or server to third
+parties---in the form of sources. In this act of distribution, you do not
 combine this program, application, or server with other software components in
 the sense of software development (= \textit{proapse, unmodified, independent,
 2others, sources}) To see the \textit{specific, license fulfilling to-do lists}
@@ -468,8 +588,8 @@ jump to the following pages:
   \end{itemize}
 
 \item[OSUC-02B:]\label{OSUC-02B-DEF} Just as you received it, you are going to
-distribute an unmodified open source program, application, or server to 3rd
-parties -- in the form of binaries. In this act of distribution, you do not
+distribute an unmodified open source program, application, or server to third
+parties---in the form of binaries. In this act of distribution, you do not
 combine this program, application, or server with other software components in
 the sense of software development (= \textit{proapse, unmodified, independent,
 2others, binaries}). To see the \textit{specific, license fulfilling to-do
@@ -502,8 +622,8 @@ lists} jump to the following pages:
     \item p.\ \pageref{OSUC-02B-PHP} for the \textbf{PHP} License 
   \end{itemize}
   
-\item[OSUC-03:]\label{OSUC-03-DEF} Only for yourself, you are going to modify a
-received open source program, application, or server, before you will use it.
+\item[OSUC-03:]\label{OSUC-03-DEF} Only for yourself, you are going to modify an
+open source program, application, or server before you will use it.
 But you do not combine it with other components in the sense of software
 development (= \textit{proapse, modified, independent, 4yourself}).
 To see the \textit{specific, license fulfilling to-do lists} jump to the
@@ -537,8 +657,8 @@ following pages:
   \end{itemize}
 
 \item[OSUC-04S:]\label{OSUC-04S-DEF} You are going to modify a received open
-source program, application, or server, before you will distribute it to 3rd
-parties -- in the form of sources. But you do not combine this modified program,
+source program, application, or server, before you will distribute it to third
+parties---in the form of sources. But you do not combine this modified program,
 application, or server with other software components in the sense of software
 development (= \textit{proapse, modified, independent, 2others, sources}).
 To see the \textit{specific, license fulfilling to-do lists} jump to the
@@ -572,8 +692,8 @@ following pages:
   \end{itemize}
   
 \item[OSUC-04B:]\label{OSUC-04B-DEF} You are going to modify a received open
-source program, application, or server, before you will distribute it to 3rd
-parties -- in the form of binaries. But you do not combine this modified
+source program, application, or server before you will distribute it to third
+parties---in the form of binaries. But you do not combine this modified
 program, application, or server with other software components in the sense of
 software development (= \textit{proapse, modified, independent, 2others,
 binaries}). To see the \textit{specific, license fulfilling to-do lists} jump to
@@ -609,7 +729,7 @@ the following pages:
 
 \item[OSUC-05S:]\label{OSUC-05S-DEF} Just as you received it, you are going to
 distribute an unmodified open source library, code snippet, module, or plugin to
-3rd parties  -- in the form of sources. In this act of distribution, you do not
+third parties---in the form of sources. In this act of distribution, you do not
 combine this library, code snippet, module, or plugin with other software
 components in the sense of software development (= \textit{snimoli, unmodified,
 independent, 2others, sources}). To see the \textit{specific, license fulfilling
@@ -644,7 +764,7 @@ to-do lists} jump to the following pages:
 
 \item[OSUC-05B:]\label{OSUC-05B-DEF} Just as you received it, you are going to
 distribute an unmodified open source library, code snippet, module, or plugin to
-3rd parties -- in the form of binaries. In this act of distribution, you do not
+third parties---in the form of binaries. In this act of distribution, you do not
 combine this library, code snippet, module, or plugin with other software
 components in the sense of software development (= \textit{snimoli, unmodified,
 independent, 2others, binaries}). To see the \textit{specific, license
@@ -713,8 +833,8 @@ following pages:
   \end{itemize}
 
 \item[OSUC-07S:]\label{OSUC-07S-DEF} Just as you received it and before you will
-distribute it to 3rd parties -- in the form of sources and together with the
-larger software unit --, you are going to combine and embed an unmodified open
+distribute it to third parties---in the form of sources and together with the
+larger software unit---, you are going to combine and embed an unmodified open
 source library, code snippet, module, or plugin into a larger software unit in
 the sense of software development (= \textit{snimoli, unmodified, embedded,
 2others, sources}). To see the \textit{specific, license fulfilling to-do lists}
@@ -748,8 +868,8 @@ jump to the following pages:
   \end{itemize}
 
 \item[OSUC-07B:]\label{OSUC-07B-DEF} Just as you received it and before you will
-distribute it to 3rd parties -- in the form of binaries and together with the
-larger software unit --, you are going to combine and embed an unmodified open
+distribute it to third parties---in the form of binaries and together with the
+larger software unit---, you are going to combine and embed an unmodified open
 source library, code snippet, module, or plugin into a larger software unit in
 the sense of software development (= \textit{snimoli, unmodified, embedded,
 2others, binaries}). To see the \textit{specific, license fulfilling to-do
@@ -782,7 +902,7 @@ lists} jump to the following pages:
     \item p.\ \pageref{OSUC-07B-PHP} for the \textbf{PHP} License 
   \end{itemize}
 
-\item[OSUC-08S:]\label{OSUC-08S-DEF} Before you will distribute it to 3rd
+\item[OSUC-08S:]\label{OSUC-08S-DEF} Before you will distribute it to third
 parties in the form of sources, you are going to modify an open source library,
 code snippet, module, or plugin. But you do not combine it with other software
 components in the sense of software development (= \textit{snimoli, modified,
@@ -816,7 +936,7 @@ to-do lists} jump to the following pages:
     \item p.\ \pageref{OSUC-08S-PHP} for the \textbf{PHP} License 
   \end{itemize}
 
-\item[OSUC-08B:]\label{OSUC-08B-DEF} Before you will distribute it to 3rd
+\item[OSUC-08B:]\label{OSUC-08B-DEF} Before you will distribute it to third
 parties in the form of binaries, you are going to modify an open source library,
 code snippet, module, or plugin. But you do not combine it with other software
 components in the sense of software development (= \textit{snimoli, modified,
@@ -851,8 +971,8 @@ lists} jump to the following pages:
   \end{itemize}
 
 \item[OSUC-09:]\label{OSUC-09-DEF} Only for yourself, you are going to modify an
-open source library, code snippet, module, or plugin, and you will combine it
--- in the sense of software development -- into a larger software unit as one of
+open source library, code snippet, module, or plugin, and you will combine it---in 
+the sense of software development---into a larger software unit as one of
 its parts. (= \textit{snimoli, modified, embedded, 4yourself}). 
 To see the \textit{specific, license fulfilling to-do lists} jump to the
 following pages:
@@ -885,7 +1005,7 @@ following pages:
   \end{itemize}
 
 
-\item[OSUC-10S:]\label{OSUC-10S-DEF} Before you will distribute it to 3rd parties
+\item[OSUC-10S:]\label{OSUC-10S-DEF} Before you will distribute it to third parties
 in the form of sources, you are going to modify an open source library, code
 snippet, module, or plugin, which you combine with other software components in
 the sense of software development (= \textit{snimoli, modified, independent,
@@ -919,7 +1039,7 @@ jump to the following pages:
     \item p.\ \pageref{OSUC-10S-PHP} for the \textbf{PHP} License 
   \end{itemize}
 
-\item[OSUC-10B:]\label{OSUC-10B-DEF} Before you will distribute it to 3rd parties
+\item[OSUC-10B:]\label{OSUC-10B-DEF} Before you will distribute it to third parties
 in the form of binaries, you are going to modify an open source library, code
 snippet, module, or plugin, which you combine with other software components in
 the sense of software development (= \textit{snimoli, modified, independent,
