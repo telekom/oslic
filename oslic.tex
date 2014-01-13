@@ -28,17 +28,18 @@
 \usepackage[english]{babel}
 \selectlanguage{english}
 
+% package for improving the grey value and the line feed handling
 \usepackage{microtype}
 
 %language specific quoting signs
-%default for language emglish is american style of quotes
+%default for language english is american style of quotes
 %\usepackage[english=british]{csquotes}
 \usepackage[english=american]{csquotes}
 
 % jurabib configuration
 \usepackage[see]{jurabib}
 \bibliographystyle{jurabib}
-\input{btexmat/oscJbibCfgPureInc} %no annotations
+\input{btexmat/oscJbibCfgEnIncNoAnno} %no annotations
 
 % language specific hyphenation
 \input{btexmat/oscHyphenationEnInc}
@@ -79,11 +80,14 @@
 % \renewcommand\footnotemargin{1.5em}
 
 % formatting the footnote with koma script tools
+
+% variant a)
 % \deffootnote[1em]{1.5em}{1em}{\textsuperscript{\thefootnotemark}}
+% variant b)
 \deffootnote[1.5em]{1.5em}{1.5em}{\textsuperscript{\thefootnotemark)\ }}
-
-
+% variant c)
 %\deffootnote[0em]{1.5em}{1em}{\textsuperscript{\thefootnotemark}}
+
 %- end(footnote-configuration)
 
 % %- start(endnote-configuration) uncomment to activate
@@ -124,8 +128,6 @@
 
 %RPD%%%\usepackage{blindtext}
 \usepackage{caption}
-
-\usetikzlibrary{matrix}
 
 \usepackage{amsmath}
 \usepackage{amsfonts}
@@ -187,8 +189,9 @@
 \nocite{*}
 
 %%-- start(titlepage)
-\titlehead{Version \input{rel-number} % -- \input{rel-date}
+\titlehead{Version \input{rel-number} % -- \input{rel-date} 
 }
+
 \subject{\small \itshape A Practical Guide for Developers, Managers, OS Experts, 
 and Companies} 
 
@@ -196,11 +199,13 @@ and Companies}
 
 \subtitle{How to Achieve Open Source License Compliance\input{btexmat/oscLicenseFootnoteInc}}
 \author{
-Karsten Reincke\thanks{Deutsche Telekom AG, Products \& Innovation, 
+Karsten Reincke\thanks{Deutsche Telekom AG:: Products \& Innovation, 
 T-Online-Allee 1, 64295 Darmstadt}
 \and
-Greg Sharpe\thanks{Deutsche Telekom AG, Telekom Deutschland GmbH, 
-Landgrabenweg, Bonn}}
+Greg Sharpe\thanks{Deutsche Telekom AG :: Telekom Deutschland GmbH, 
+Landgrabenweg, Bonn}
+\and
+Ronald Dauster\thanks{GIDO GmbH, Ringstr. 9a, 665623 Hahnstätten}}
 
 \maketitle
 %%-- end(titlepage)
@@ -214,15 +219,14 @@ arbritarily selected experts. We are proud to have its support. Gladly we thank
 (in alphabetical order):
 }
 
-\parbox{80mm}{
+\parbox{100mm}{
 \tiny
 \begin{flushright}
 Eitan Adler,\\
 Stefan Altmeyer (Deutsche Telekom AG),\\
-Ronald Dauster,\\
 John Dobson, \\
 Steffen Härtlein, \\
-Ta'Id Holmes (Deutsche Telekom AG), \\
+Ta'id Holmes (Deutsche Telekom AG), \\
 Michael Kern (Deutsche Telekom AG),\\
 Michael Machado (Deutsche Telekom AG),\\
 Thorsten Müller (Deutsche Telekom AG),\\
@@ -234,8 +238,10 @@ Michael Schierl,\\
 Helene Tamer (T-Systems Internationl AG),\\
 Bernhard Tsai (Deutsche Telekom AG),\\
 Thomas Weißschuh (Amadeus Germany GmbH),\\
-\ldots additionally all the feedback giving participants of the 
-European Legal \& Licensing Workshop 2013 in Amstardam\\
+\ldots additionally all the feedback giving participants of the \\
+a) European Legal \& Licensing Workshop 2013 in Amsterdam, Netherlands\\
+b) Linux Days 2013 in Berlin, Germany\\
+b) FOSSCon 2013 in Seoul, Korea\\
 and all the others\ldots
 \end{flushright}
 }
