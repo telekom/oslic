@@ -515,564 +515,148 @@ items together offer a processable way for acting according to the license under
 the circumstances of the described \textbf{O}pen \textbf{S}ource \textbf{U}se
 \textbf{C}ase.
 
-\begin{description}
-\label{OSUCList}
-\item[OSUC-01:]\label{OSUC-01-DEF}
-Only for yourself, you are going to use an unmodified open source program,
-application, or server---just as you received it. But you do not combine it
-with other components in the sense of software development (= \textit{proapse,
-unmodified, independent, 4yourself}).
-To see the \textit{specific, license fulfilling to-do lists} jump to the
-following pages:
+
+\begin{osucdefinitions}
+\bgroup
+\newcommand{\osuclinktable}[1]{%
+  To see the \textit{specific, license fulfilling to-do lists}
+  jump to the following pages:
   \begin{itemize}
-    \item p.\ \pageref{OSUC-01-AGPL} for the \textbf{AGPL}
+    \item p.\ \pageref{OSUC-#1-AGPL} for the \textbf{AGPL}
       \textit{(= GNU Affero General Public License)} 
-    \item p.\ \pageref{OSUC-01-Apache20} for the \textbf{ApL}
+    \item p.\ \pageref{OSUC-#1-APL} for the \textbf{ApL}
       \textit{(= Apache License)}
-    \item p.\ \pageref{OSUC-01-BSD} for the \textbf{BSD} License
+    \item p.\ \pageref{OSUC-#1-BSD} for the \textbf{BSD} License
       \textit{(= Berkeley Software Distribution)}
-    \item p.\ \pageref{OSUC-01-CDDL} for the \textbf{CDDL}
+    \item p.\ \pageref{OSUC-#1-CDDL} for the \textbf{CDDL}
       \textit{(= Common Develop and Distribution License)}  
-    \item p.\ \pageref{OSUC-01-EPL} for the \textbf{EPL}
+    \item p.\ \pageref{OSUC-#1-EPL} for the \textbf{EPL}
       \textit{(= Eclipse Public License)}     
     \item p.\ \pageref{OSUC-01-EUPL} for the \textbf{EUPL}
       \textit{(= European Union Public License)} 
-    \item p.\ \pageref{OSUC-01-GPL} for the \textbf{GPL}
+    \item p.\ \pageref{OSUC-#1-GPL} for the \textbf{GPL}
        \textit{(= GNU General Public License)} 
-    \item p.\ \pageref{OSUC-01-LGPL} for the \textbf{LGPL}
+    \item p.\ \pageref{OSUC-#1-LGPL} for the \textbf{LGPL}
       \textit{(= GNU Lesser General Public License)}           
-    \item p.\ \pageref{OSUC-01-MIT} for the \textbf{MIT} License
+    \item p.\ \pageref{OSUC-#1-MIT} for the \textbf{MIT} License
        \textit{(= Massachusetts Institute of Technology)} 
-    \item p.\ \pageref{OSUC-01-MPL} for the \textbf{MPL}
+    \item p.\ \pageref{OSUC-#1-MPL} for the \textbf{MPL}
       \textit{(= Mozilla Public License)}     
-    \item p.\ \pageref{OSUC-01-MS-PL} for the \textbf{MS-PL}
+    \item p.\ \pageref{OSUC-#1-MSPL} for the \textbf{MS-PL}
       \textit{(= Microsoft Public License)} 
-    \item p.\ \pageref{OSUC-01-PGL} for the \textbf{PGL}
+    \item p.\ \pageref{OSUC-#1-PGL} for the \textbf{PGL}
       \textit{(= Postgres License)} 
-    \item p.\ \pageref{OSUC-01-PHP} for the \textbf{PHP} License 
-  \end{itemize}
+    \item p.\ \pageref{OSUC-#1-PHP} for the \textbf{PHP} License 
+  \end{itemize}}
 
-\item[OSUC-02S:]\label{OSUC-02S-DEF} Just as you received it, you are going to
-distribute an unmodified open source program, application, or server to third
-parties---in the form of sources. In this act of distribution, you do not
-combine this program, application, or server with other software components in
-the sense of software development (= \textit{proapse, unmodified, independent,
-2others, sources}) To see the \textit{specific, license fulfilling to-do lists}
-jump to the following pages:
-   \begin{itemize}
-    \item p.\ \pageref{OSUC-02S-AGPL} for the \textbf{AGPL}
-      \textit{(= GNU Affero General Public License)} 
-    \item p.\ \pageref{OSUC-02S-Apache20} for the \textbf{ApL}
-      \textit{(= Apache License)}
-    \item p.\ \pageref{OSUC-02S-BSD} for the \textbf{BSD} License
-      \textit{(= Berkeley Software Distribution)}
-    \item p.\ \pageref{OSUC-02S-CDDL} for the \textbf{CDDL}
-      \textit{(= Common Develop and Distribution License)}  
-    \item p.\ \pageref{OSUC-02S-EPL} for the \textbf{EPL}
-      \textit{(= Eclipse Public License)}     
-    \item p.\ \pageref{OSUC-02S-EUPL} for the \textbf{EUPL}
-      \textit{(= European Union Public License)} 
-    \item p.\ \pageref{OSUC-02S-GPL} for the \textbf{GPL}
-       \textit{(= GNU General Public License)} 
-    \item p.\ \pageref{OSUC-02S-LGPL} for the \textbf{LGPL}
-      \textit{(= GNU Lesser General Public License)}           
-    \item p.\ \pageref{OSUC-02S-MIT} for the \textbf{MIT} License
-       \textit{(= Massachusetts Institute of Technology)} 
-    \item p.\ \pageref{OSUC-02S-MPL} for the \textbf{MPL}
-      \textit{(= Mozilla Public License)}     
-    \item p.\ \pageref{OSUC-02S-MS-PL} for the \textbf{MS-PL}
-      \textit{(= Microsoft Public License)} 
-    \item p.\ \pageref{OSUC-02S-PGL} for the \textbf{PGL}
-      \textit{(= Postgres License)} 
-    \item p.\ \pageref{OSUC-02S-PHP} for the \textbf{PHP} License 
-  \end{itemize}
+\newcommand{\osucitem}[3]{%
+  \osucdef{#1}{#2}{#3}
+  \osuclinktable{#1}}
 
-\item[OSUC-02B:]\label{OSUC-02B-DEF} Just as you received it, you are going to
-distribute an unmodified open source program, application, or server to third
-parties---in the form of binaries. In this act of distribution, you do not
-combine this program, application, or server with other software components in
-the sense of software development (= \textit{proapse, unmodified, independent,
-2others, binaries}). To see the \textit{specific, license fulfilling to-do
-lists} jump to the following pages:
-   \begin{itemize}
-    \item p.\ \pageref{OSUC-02B-AGPL} for the \textbf{AGPL}
-      \textit{(= GNU Affero General Public License)} 
-    \item p.\ \pageref{OSUC-02B-Apache20} for the \textbf{ApL}
-      \textit{(= Apache License)}
-    \item p.\ \pageref{OSUC-02B-BSD} for the \textbf{BSD} License
-      \textit{(= Berkeley Software Distribution)}
-    \item p.\ \pageref{OSUC-02B-CDDL} for the \textbf{CDDL}
-      \textit{(= Common Develop and Distribution License)}  
-    \item p.\ \pageref{OSUC-02B-EPL} for the \textbf{EPL}
-      \textit{(= Eclipse Public License)}     
-    \item p.\ \pageref{OSUC-02B-EUPL} for the \textbf{EUPL}
-      \textit{(= European Union Public License)} 
-    \item p.\ \pageref{OSUC-02B-GPL} for the \textbf{GPL}
-       \textit{(= GNU General Public License)} 
-    \item p.\ \pageref{OSUC-02B-LGPL} for the \textbf{LGPL}
-      \textit{(= GNU Lesser General Public License)}           
-    \item p.\ \pageref{OSUC-02B-MIT} for the \textbf{MIT} License
-       \textit{(= Massachusetts Institute of Technology)} 
-    \item p.\ \pageref{OSUC-02B-MPL} for the \textbf{MPL}
-      \textit{(= Mozilla Public License)}     
-    \item p.\ \pageref{OSUC-02B-MS-PL} for the \textbf{MS-PL}
-      \textit{(= Microsoft Public License)} 
-    \item p.\ \pageref{OSUC-02B-PGL} for the \textbf{PGL}
-      \textit{(= Postgres License)} 
-    \item p.\ \pageref{OSUC-02B-PHP} for the \textbf{PHP} License 
-  \end{itemize}
+\begin{description}
+\label{OSUCList}
+\osucitem{01}{proapse, unmodified, independent, 4yourself}{%
+Only for yourself, you are going to use an unmodified open source program,
+application, or server just as you received it. But you do not combine it
+with other components in the sense of software development}
+
+\osucitem{02S}{proapse, unmodified, independent, 2others, sources}{%
+Just as you received it, you are going to distribute an unmodified
+open source program, application, or server to third parties in the
+form of sources. In this act of distribution, you do not combine this
+program, application, or server with other software components in the
+sense of software development} 
+
+\osucitem{02B}{proapse, unmodified, independent, 2others, binaries}{%
+Just as you received it, you are going to distribute an unmodified
+open source program, application, or server to third parties in the
+form of binaries. In this act of distribution, you do not combine this
+program, application, or server with other software components in the
+sense of software development} 
   
-\item[OSUC-03:]\label{OSUC-03-DEF} Only for yourself, you are going to modify an
-open source program, application, or server before you will use it.
-But you do not combine it with other components in the sense of software
-development (= \textit{proapse, modified, independent, 4yourself}).
-To see the \textit{specific, license fulfilling to-do lists} jump to the
-following pages:
-   \begin{itemize}
-    \item p.\ \pageref{OSUC-03-AGPL} for the \textbf{AGPL}
-      \textit{(= GNU Affero General Public License)} 
-    \item p.\ \pageref{OSUC-03-Apache20} for the \textbf{ApL}
-      \textit{(= Apache License)}
-    \item p.\ \pageref{OSUC-03-BSD} for the \textbf{BSD} License
-      \textit{(= Berkeley Software Distribution)}
-    \item p.\ \pageref{OSUC-03-CDDL} for the \textbf{CDDL}
-      \textit{(= Common Develop and Distribution License)}  
-    \item p.\ \pageref{OSUC-03-EPL} for the \textbf{EPL}
-      \textit{(= Eclipse Public License)}     
-    \item p.\ \pageref{OSUC-03-EUPL} for the \textbf{EUPL}
-      \textit{(= European Union Public License)} 
-    \item p.\ \pageref{OSUC-03-GPL} for the \textbf{GPL}
-       \textit{(= GNU General Public License)} 
-    \item p.\ \pageref{OSUC-03-LGPL} for the \textbf{LGPL}
-      \textit{(= GNU Lesser General Public License)}           
-    \item p.\ \pageref{OSUC-03-MIT} for the \textbf{MIT} License
-       \textit{(= Massachusetts Institute of Technology)} 
-    \item p.\ \pageref{OSUC-03-MPL} for the \textbf{MPL}
-      \textit{(= Mozilla Public License)}     
-    \item p.\ \pageref{OSUC-03-MS-PL} for the \textbf{MS-PL}
-      \textit{(= Microsoft Public License)} 
-    \item p.\ \pageref{OSUC-03-PGL} for the \textbf{PGL}
-      \textit{(= Postgres License)} 
-    \item p.\ \pageref{OSUC-03-PHP} for the \textbf{PHP} License 
-  \end{itemize}
+\osucitem{03}{proapse, modified, independent, 4yourself}{%
+Only for yourself, you are going to modify an open source program,
+application, or server before you will use it. But you do not combine
+it with other components in the sense of software development}
 
-\item[OSUC-04S:]\label{OSUC-04S-DEF} You are going to modify a received open
-source program, application, or server, before you will distribute it to third
-parties---in the form of sources. But you do not combine this modified program,
-application, or server with other software components in the sense of software
-development (= \textit{proapse, modified, independent, 2others, sources}).
-To see the \textit{specific, license fulfilling to-do lists} jump to the
-following pages:
-  \begin{itemize}
-    \item p.\ \pageref{OSUC-04S-AGPL} for the \textbf{AGPL}
-      \textit{(= GNU Affero General Public License)} 
-    \item p.\ \pageref{OSUC-04S-Apache20} for the \textbf{ApL}
-      \textit{(= Apache License)}
-    \item p.\ \pageref{OSUC-04S-BSD} for the \textbf{BSD} License
-      \textit{(= Berkeley Software Distribution)}
-    \item p.\ \pageref{OSUC-04S-CDDL} for the \textbf{CDDL}
-      \textit{(= Common Develop and Distribution License)}  
-    \item p.\ \pageref{OSUC-04S-EPL} for the \textbf{EPL}
-      \textit{(= Eclipse Public License)}     
-    \item p.\ \pageref{OSUC-04S-EUPL} for the \textbf{EUPL}
-      \textit{(= European Union Public License)} 
-    \item p.\ \pageref{OSUC-04S-GPL} for the \textbf{GPL}
-       \textit{(= GNU General Public License)} 
-    \item p.\ \pageref{OSUC-04S-LGPL} for the \textbf{LGPL}
-      \textit{(= GNU Lesser General Public License)}           
-    \item p.\ \pageref{OSUC-04S-MIT} for the \textbf{MIT} License
-       \textit{(= Massachusetts Institute of Technology)} 
-    \item p.\ \pageref{OSUC-04S-MPL} for the \textbf{MPL}
-      \textit{(= Mozilla Public License)}     
-    \item p.\ \pageref{OSUC-04S-MS-PL} for the \textbf{MS-PL}
-      \textit{(= Microsoft Public License)} 
-    \item p.\ \pageref{OSUC-04S-PGL} for the \textbf{PGL}
-      \textit{(= Postgres License)} 
-    \item p.\ \pageref{OSUC-04S-PHP} for the \textbf{PHP} License 
-  \end{itemize}
+\osucitem{04S}{proapse, modified, independent, 2others, sources}{%
+You are going to modify an open source program, application, or server
+after you received it and  before you will distribute it to third
+parties in the form of sources. But you do not combine this modified
+program, application, or server with other software components in the
+sense of software development}
   
-\item[OSUC-04B:]\label{OSUC-04B-DEF} You are going to modify a received open
-source program, application, or server before you will distribute it to third
-parties---in the form of binaries. But you do not combine this modified
-program, application, or server with other software components in the sense of
-software development (= \textit{proapse, modified, independent, 2others,
-binaries}). To see the \textit{specific, license fulfilling to-do lists} jump to
-the following pages:
-  \begin{itemize}
-    \item p.\ \pageref{OSUC-04B-AGPL} for the \textbf{AGPL}
-      \textit{(= GNU Affero General Public License)} 
-    \item p.\ \pageref{OSUC-04B-Apache20} for the \textbf{ApL}
-      \textit{(= Apache License)}
-    \item p.\ \pageref{OSUC-04B-BSD} for the \textbf{BSD} License
-      \textit{(= Berkeley Software Distribution)}
-    \item p.\ \pageref{OSUC-04B-CDDL} for the \textbf{CDDL}
-      \textit{(= Common Develop and Distribution License)}  
-    \item p.\ \pageref{OSUC-04B-EPL} for the \textbf{EPL}
-      \textit{(= Eclipse Public License)}     
-    \item p.\ \pageref{OSUC-04B-EUPL} for the \textbf{EUPL}
-      \textit{(= European Union Public License)} 
-    \item p.\ \pageref{OSUC-04B-GPL} for the \textbf{GPL}
-       \textit{(= GNU General Public License)} 
-    \item p.\ \pageref{OSUC-04B-LGPL} for the \textbf{LGPL}
-      \textit{(= GNU Lesser General Public License)}           
-    \item p.\ \pageref{OSUC-04B-MIT} for the \textbf{MIT} License
-       \textit{(= Massachusetts Institute of Technology)} 
-    \item p.\ \pageref{OSUC-04B-MPL} for the \textbf{MPL}
-      \textit{(= Mozilla Public License)}     
-    \item p.\ \pageref{OSUC-04B-MS-PL} for the \textbf{MS-PL}
-      \textit{(= Microsoft Public License)} 
-    \item p.\ \pageref{OSUC-04B-PGL} for the \textbf{PGL}
-      \textit{(= Postgres License)} 
-    \item p.\ \pageref{OSUC-04B-PHP} for the \textbf{PHP} License 
-  \end{itemize}
+\osucitem{04B}{proapse, modified, independent, 2others, binaries}{%
+You are going to modify an open source program, application, or server
+after you received it and before you will distribute it to third
+parties in the form of binaries. But you do not combine this modified
+program, application, or server with other software components in the
+sense of software development}
 
+\osucitem{05S}{}{snimoli, unmodified, independent, 2others, sources}{%
+Just as you received it, you are going to distribute an unmodified
+open source library, code snippet, module, or plugin to third parties
+in the form of sources. In this act of distribution, you do not
+combine this library, code snippet, module, or plugin with other
+software components in the sense of software development}
 
-\item[OSUC-05S:]\label{OSUC-05S-DEF} Just as you received it, you are going to
-distribute an unmodified open source library, code snippet, module, or plugin to
-third parties---in the form of sources. In this act of distribution, you do not
-combine this library, code snippet, module, or plugin with other software
-components in the sense of software development (= \textit{snimoli, unmodified,
-independent, 2others, sources}). To see the \textit{specific, license fulfilling
-to-do lists} jump to the following pages:
-  \begin{itemize}
-    \item p.\ \pageref{OSUC-05S-AGPL} for the \textbf{AGPL}
-      \textit{(= GNU Affero General Public License)} 
-    \item p.\ \pageref{OSUC-05S-Apache20} for the \textbf{ApL}
-      \textit{(= Apache License)}
-    \item p.\ \pageref{OSUC-05S-BSD} for the \textbf{BSD} License
-      \textit{(= Berkeley Software Distribution)}
-    \item p.\ \pageref{OSUC-05S-CDDL} for the \textbf{CDDL}
-      \textit{(= Common Develop and Distribution License)}  
-    \item p.\ \pageref{OSUC-05S-EPL} for the \textbf{EPL}
-      \textit{(= Eclipse Public License)}     
-    \item p.\ \pageref{OSUC-05S-EUPL} for the \textbf{EUPL}
-      \textit{(= European Union Public License)} 
-    \item p.\ \pageref{OSUC-05S-GPL} for the \textbf{GPL}
-       \textit{(= GNU General Public License)} 
-    \item p.\ \pageref{OSUC-05S-LGPL} for the \textbf{LGPL}
-      \textit{(= GNU Lesser General Public License)}           
-    \item p.\ \pageref{OSUC-05S-MIT} for the \textbf{MIT} License
-       \textit{(= Massachusetts Institute of Technology)} 
-    \item p.\ \pageref{OSUC-05S-MPL} for the \textbf{MPL}
-      \textit{(= Mozilla Public License)}     
-    \item p.\ \pageref{OSUC-05S-MS-PL} for the \textbf{MS-PL}
-      \textit{(= Microsoft Public License)} 
-    \item p.\ \pageref{OSUC-05S-PGL} for the \textbf{PGL}
-      \textit{(= Postgres License)} 
-    \item p.\ \pageref{OSUC-05S-PHP} for the \textbf{PHP} License 
-  \end{itemize}
+\osucitem{05B}{snimoli, unmodified,independent, 2others, binaries}{%
+Just as you received it, you are going to distribute an unmodified
+open source library, code snippet, module, or plugin to third parties
+in the form of binaries. In this act of distribution, you do not
+combine this library, code snippet, module, or plugin with other
+software components in the sense of software development}
 
-\item[OSUC-05B:]\label{OSUC-05B-DEF} Just as you received it, you are going to
-distribute an unmodified open source library, code snippet, module, or plugin to
-third parties---in the form of binaries. In this act of distribution, you do not
-combine this library, code snippet, module, or plugin with other software
-components in the sense of software development (= \textit{snimoli, unmodified,
-independent, 2others, binaries}). To see the \textit{specific, license
-fulfilling to-do lists} jump to the following pages:
-  \begin{itemize}
-    \item p.\ \pageref{OSUC-05B-AGPL} for the \textbf{AGPL}
-      \textit{(= GNU Affero General Public License)} 
-    \item p.\ \pageref{OSUC-05B-Apache20} for the \textbf{ApL}
-      \textit{(= Apache License)}
-    \item p.\ \pageref{OSUC-05B-BSD} for the \textbf{BSD} License
-      \textit{(= Berkeley Software Distribution)}
-    \item p.\ \pageref{OSUC-05B-CDDL} for the \textbf{CDDL}
-      \textit{(= Common Develop and Distribution License)}  
-    \item p.\ \pageref{OSUC-05B-EPL} for the \textbf{EPL}
-      \textit{(= Eclipse Public License)}     
-    \item p.\ \pageref{OSUC-05B-EUPL} for the \textbf{EUPL}
-      \textit{(= European Union Public License)} 
-    \item p.\ \pageref{OSUC-05B-GPL} for the \textbf{GPL}
-       \textit{(= GNU General Public License)} 
-    \item p.\ \pageref{OSUC-05B-LGPL} for the \textbf{LGPL}
-      \textit{(= GNU Lesser General Public License)}           
-    \item p.\ \pageref{OSUC-05B-MIT} for the \textbf{MIT} License
-       \textit{(= Massachusetts Institute of Technology)} 
-    \item p.\ \pageref{OSUC-05B-MPL} for the \textbf{MPL}
-      \textit{(= Mozilla Public License)}     
-    \item p.\ \pageref{OSUC-05B-MS-PL} for the \textbf{MS-PL}
-      \textit{(= Microsoft Public License)} 
-    \item p.\ \pageref{OSUC-05B-PGL} for the \textbf{PGL}
-      \textit{(= Postgres License)} 
-    \item p.\ \pageref{OSUC-05B-PHP} for the \textbf{PHP} License 
-  \end{itemize}
+\osucitem{06}{snimoli, unmodified, embedded, 4yourself}{%
+Only for yourself and just as you received it, you are going to
+combine an unmodified open source library, code snippet, module, or
+plugin into a larger software unit as one of its parts} 
 
+\osucitem{07S}{snimoli, unmodified, embedded, 2others, sources}{%
+Just as you received it and before you will distribute it to third
+parties in the form of sources and together with a larger software
+unit, you are going to combine and embed an unmodified open source
+library, code snippet, module, or plugin into that larger software
+unit in the sense of software development}
 
-\item[OSUC-06:]\label{OSUC-06-DEF} Only for yourself and just as you received
-it, you are going to combine an unmodified open source library, code snippet,
-module, or plugin into a larger software unit as one of its parts. (=
-\textit{snimoli, unmodified, embedded, 4yourself}).
-To see the \textit{specific, license fulfilling to-do lists} jump to the
-following pages:
-   \begin{itemize}
-    \item p.\ \pageref{OSUC-06-AGPL} for the \textbf{AGPL}
-      \textit{(= GNU Affero General Public License)} 
-    \item p.\ \pageref{OSUC-06-Apache20} for the \textbf{ApL}
-      \textit{(= Apache License)}
-    \item p.\ \pageref{OSUC-06-BSD} for the \textbf{BSD} License
-      \textit{(= Berkeley Software Distribution)}
-    \item p.\ \pageref{OSUC-06-CDDL} for the \textbf{CDDL}
-      \textit{(= Common Develop and Distribution License)}  
-    \item p.\ \pageref{OSUC-06-EPL} for the \textbf{EPL}
-      \textit{(= Eclipse Public License)}     
-    \item p.\ \pageref{OSUC-06-EUPL} for the \textbf{EUPL}
-      \textit{(= European Union Public License)} 
-    \item p.\ \pageref{OSUC-06-GPL} for the \textbf{GPL}
-       \textit{(= GNU General Public License)} 
-    \item p.\ \pageref{OSUC-06-LGPL} for the \textbf{LGPL}
-      \textit{(= GNU Lesser General Public License)}           
-    \item p.\ \pageref{OSUC-06-MIT} for the \textbf{MIT} License
-       \textit{(= Massachusetts Institute of Technology)} 
-    \item p.\ \pageref{OSUC-06-MPL} for the \textbf{MPL}
-      \textit{(= Mozilla Public License)}     
-    \item p.\ \pageref{OSUC-06-MS-PL} for the \textbf{MS-PL}
-      \textit{(= Microsoft Public License)} 
-    \item p.\ \pageref{OSUC-06-PGL} for the \textbf{PGL}
-      \textit{(= Postgres License)} 
-    \item p.\ \pageref{OSUC-06-PHP} for the \textbf{PHP} License 
-  \end{itemize}
+\osucitem{07B}{snimoli, unmodified, embedded, 2others, binaries}{%
+Just as you received it and before you will distribute it to third
+parties in the form of binaries and together with a larger software
+unit, you are going to combine and embed an unmodified open source
+library, code snippet, module, or plugin into that larger software
+unit in the sense of software development}
 
-\item[OSUC-07S:]\label{OSUC-07S-DEF} Just as you received it and before you will
-distribute it to third parties---in the form of sources and together with the
-larger software unit---, you are going to combine and embed an unmodified open
-source library, code snippet, module, or plugin into a larger software unit in
-the sense of software development (= \textit{snimoli, unmodified, embedded,
-2others, sources}). To see the \textit{specific, license fulfilling to-do lists}
-jump to the following pages:
-   \begin{itemize}
-    \item p.\ \pageref{OSUC-07S-AGPL} for the \textbf{AGPL}
-      \textit{(= GNU Affero General Public License)} 
-    \item p.\ \pageref{OSUC-07S-Apache20} for the \textbf{ApL}
-      \textit{(= Apache License)}
-    \item p.\ \pageref{OSUC-07S-BSD} for the \textbf{BSD} License
-      \textit{(= Berkeley Software Distribution)}
-    \item p.\ \pageref{OSUC-07S-CDDL} for the \textbf{CDDL}
-      \textit{(= Common Develop and Distribution License)}  
-    \item p.\ \pageref{OSUC-07S-EPL} for the \textbf{EPL}
-      \textit{(= Eclipse Public License)}     
-    \item p.\ \pageref{OSUC-07S-EUPL} for the \textbf{EUPL}
-      \textit{(= European Union Public License)} 
-    \item p.\ \pageref{OSUC-07S-GPL} for the \textbf{GPL}
-       \textit{(= GNU General Public License)} 
-    \item p.\ \pageref{OSUC-07S-LGPL} for the \textbf{LGPL}
-      \textit{(= GNU Lesser General Public License)}           
-    \item p.\ \pageref{OSUC-07S-MIT} for the \textbf{MIT} License
-       \textit{(= Massachusetts Institute of Technology)} 
-    \item p.\ \pageref{OSUC-07S-MPL} for the \textbf{MPL}
-      \textit{(= Mozilla Public License)}     
-    \item p.\ \pageref{OSUC-07S-MS-PL} for the \textbf{MS-PL}
-      \textit{(= Microsoft Public License)} 
-    \item p.\ \pageref{OSUC-07S-PGL} for the \textbf{PGL}
-      \textit{(= Postgres License)} 
-    \item p.\ \pageref{OSUC-07S-PHP} for the \textbf{PHP} License 
-  \end{itemize}
+\osucitem{08S}{snimoli, modified, independent, 2others, sources}{%
+Before you will distribute it to third parties in the form of sources,
+you are going to modify an open source library, code snippet, module,
+or plugin. But you do not combine it with other software components in
+the sense of software development} 
 
-\item[OSUC-07B:]\label{OSUC-07B-DEF} Just as you received it and before you will
-distribute it to third parties---in the form of binaries and together with the
-larger software unit---, you are going to combine and embed an unmodified open
-source library, code snippet, module, or plugin into a larger software unit in
-the sense of software development (= \textit{snimoli, unmodified, embedded,
-2others, binaries}). To see the \textit{specific, license fulfilling to-do
-lists} jump to the following pages:
-   \begin{itemize}
-    \item p.\ \pageref{OSUC-07B-AGPL} for the \textbf{AGPL}
-      \textit{(= GNU Affero General Public License)} 
-    \item p.\ \pageref{OSUC-07B-Apache20} for the \textbf{ApL}
-      \textit{(= Apache License)}
-    \item p.\ \pageref{OSUC-07B-BSD} for the \textbf{BSD} License
-      \textit{(= Berkeley Software Distribution)}
-    \item p.\ \pageref{OSUC-07B-CDDL} for the \textbf{CDDL}
-      \textit{(= Common Develop and Distribution License)}  
-    \item p.\ \pageref{OSUC-07B-EPL} for the \textbf{EPL}
-      \textit{(= Eclipse Public License)}     
-    \item p.\ \pageref{OSUC-07B-EUPL} for the \textbf{EUPL}
-      \textit{(= European Union Public License)} 
-    \item p.\ \pageref{OSUC-07B-GPL} for the \textbf{GPL}
-       \textit{(= GNU General Public License)} 
-    \item p.\ \pageref{OSUC-07B-LGPL} for the \textbf{LGPL}
-      \textit{(= GNU Lesser General Public License)}           
-    \item p.\ \pageref{OSUC-07B-MIT} for the \textbf{MIT} License
-       \textit{(= Massachusetts Institute of Technology)} 
-    \item p.\ \pageref{OSUC-07B-MPL} for the \textbf{MPL}
-      \textit{(= Mozilla Public License)}     
-    \item p.\ \pageref{OSUC-07B-MS-PL} for the \textbf{MS-PL}
-      \textit{(= Microsoft Public License)} 
-    \item p.\ \pageref{OSUC-07B-PGL} for the \textbf{PGL}
-      \textit{(= Postgres License)} 
-    \item p.\ \pageref{OSUC-07B-PHP} for the \textbf{PHP} License 
-  \end{itemize}
+\osucitem{08B}{snimoli, modified, independent, 2others, binaries}{%
+Before you will distribute it to third parties in the form of
+binaries, you are going to modify an open source library, code
+snippet, module, or plugin. But you do not combine it with other
+software components in the sense of software development}
 
-\item[OSUC-08S:]\label{OSUC-08S-DEF} Before you will distribute it to third
-parties in the form of sources, you are going to modify an open source library,
-code snippet, module, or plugin. But you do not combine it with other software
-components in the sense of software development (= \textit{snimoli, modified,
-independent, 2others, sources}). To see the \textit{specific, license fulfilling
-to-do lists} jump to the following pages:
-  \begin{itemize}
-    \item p.\ \pageref{OSUC-08S-AGPL} for the \textbf{AGPL}
-      \textit{(= GNU Affero General Public License)} 
-    \item p.\ \pageref{OSUC-08S-Apache20} for the \textbf{ApL}
-      \textit{(= Apache License)}
-    \item p.\ \pageref{OSUC-08S-BSD} for the \textbf{BSD} License
-      \textit{(= Berkeley Software Distribution)}
-    \item p.\ \pageref{OSUC-08S-CDDL} for the \textbf{CDDL}
-      \textit{(= Common Develop and Distribution License)}  
-    \item p.\ \pageref{OSUC-08S-EPL} for the \textbf{EPL}
-      \textit{(= Eclipse Public License)}     
-    \item p.\ \pageref{OSUC-08S-EUPL} for the \textbf{EUPL}
-      \textit{(= European Union Public License)} 
-    \item p.\ \pageref{OSUC-08S-GPL} for the \textbf{GPL}
-       \textit{(= GNU General Public License)} 
-    \item p.\ \pageref{OSUC-08S-LGPL} for the \textbf{LGPL}
-      \textit{(= GNU Lesser General Public License)}           
-    \item p.\ \pageref{OSUC-08S-MIT} for the \textbf{MIT} License
-       \textit{(= Massachusetts Institute of Technology)} 
-    \item p.\ \pageref{OSUC-08S-MPL} for the \textbf{MPL}
-      \textit{(= Mozilla Public License)}     
-    \item p.\ \pageref{OSUC-08S-MS-PL} for the \textbf{MS-PL}
-      \textit{(= Microsoft Public License)} 
-    \item p.\ \pageref{OSUC-08S-PGL} for the \textbf{PGL}
-      \textit{(= Postgres License)} 
-    \item p.\ \pageref{OSUC-08S-PHP} for the \textbf{PHP} License 
-  \end{itemize}
+\osucitem{09}{snimoli, modified, embedded, 4yourself}{%
+Only for yourself, you are going to modify an open source library,
+code snippet, module, or plugin, and you will combine it in the sense
+of software development into a larger software unit as one of its
+parts} 
 
-\item[OSUC-08B:]\label{OSUC-08B-DEF} Before you will distribute it to third
-parties in the form of binaries, you are going to modify an open source library,
-code snippet, module, or plugin. But you do not combine it with other software
-components in the sense of software development (= \textit{snimoli, modified,
-independent, 2others}). To see the \textit{specific, license fulfilling to-do
-lists} jump to the following pages:
-  \begin{itemize}
-    \item p.\ \pageref{OSUC-08B-AGPL} for the \textbf{AGPL}
-      \textit{(= GNU Affero General Public License)} 
-    \item p.\ \pageref{OSUC-08B-Apache20} for the \textbf{ApL}
-      \textit{(= Apache License)}
-    \item p.\ \pageref{OSUC-08B-BSD} for the \textbf{BSD} License
-      \textit{(= Berkeley Software Distribution)}
-    \item p.\ \pageref{OSUC-08B-CDDL} for the \textbf{CDDL}
-      \textit{(= Common Develop and Distribution License)}  
-    \item p.\ \pageref{OSUC-08B-EPL} for the \textbf{EPL}
-      \textit{(= Eclipse Public License)}     
-    \item p.\ \pageref{OSUC-08B-EUPL} for the \textbf{EUPL}
-      \textit{(= European Union Public License)} 
-    \item p.\ \pageref{OSUC-08B-GPL} for the \textbf{GPL}
-       \textit{(= GNU General Public License)} 
-    \item p.\ \pageref{OSUC-08B-LGPL} for the \textbf{LGPL}
-      \textit{(= GNU Lesser General Public License)}           
-    \item p.\ \pageref{OSUC-08B-MIT} for the \textbf{MIT} License
-       \textit{(= Massachusetts Institute of Technology)} 
-    \item p.\ \pageref{OSUC-08B-MPL} for the \textbf{MPL}
-      \textit{(= Mozilla Public License)}     
-    \item p.\ \pageref{OSUC-08B-MS-PL} for the \textbf{MS-PL}
-      \textit{(= Microsoft Public License)} 
-    \item p.\ \pageref{OSUC-08B-PGL} for the \textbf{PGL}
-      \textit{(= Postgres License)} 
-    \item p.\ \pageref{OSUC-08B-PHP} for the \textbf{PHP} License 
-  \end{itemize}
+\osucitem{10S}{snimoli, modified, independent, 2others, sources}{%
+Before you will distribute it to third parties in the form of sources,
+you are going to modify an open source library, code snippet, module,
+or plugin, which you combine with other software components in the
+sense of software development} 
 
-\item[OSUC-09:]\label{OSUC-09-DEF} Only for yourself, you are going to modify an
-open source library, code snippet, module, or plugin, and you will combine it---in 
-the sense of software development---into a larger software unit as one of
-its parts. (= \textit{snimoli, modified, embedded, 4yourself}). 
-To see the \textit{specific, license fulfilling to-do lists} jump to the
-following pages:
-  \begin{itemize}
-    \item p.\ \pageref{OSUC-09-AGPL} for the \textbf{AGPL}
-      \textit{(= GNU Affero General Public License)} 
-    \item p.\ \pageref{OSUC-09-Apache20} for the \textbf{ApL}
-      \textit{(= Apache License)}
-    \item p.\ \pageref{OSUC-09-BSD} for the \textbf{BSD} License
-      \textit{(= Berkeley Software Distribution)}
-    \item p.\ \pageref{OSUC-09-CDDL} for the \textbf{CDDL}
-      \textit{(= Common Develop and Distribution License)}  
-    \item p.\ \pageref{OSUC-09-EPL} for the \textbf{EPL}
-      \textit{(= Eclipse Public License)}     
-    \item p.\ \pageref{OSUC-09-EUPL} for the \textbf{EUPL}
-      \textit{(= European Union Public License)} 
-    \item p.\ \pageref{OSUC-09-GPL} for the \textbf{GPL}
-       \textit{(= GNU General Public License)} 
-    \item p.\ \pageref{OSUC-09-LGPL} for the \textbf{LGPL}
-      \textit{(= GNU Lesser General Public License)}           
-    \item p.\ \pageref{OSUC-09-MIT} for the \textbf{MIT} License
-       \textit{(= Massachusetts Institute of Technology)} 
-    \item p.\ \pageref{OSUC-09-MPL} for the \textbf{MPL}
-      \textit{(= Mozilla Public License)}     
-    \item p.\ \pageref{OSUC-09-MS-PL} for the \textbf{MS-PL}
-      \textit{(= Microsoft Public License)} 
-    \item p.\ \pageref{OSUC-09-PGL} for the \textbf{PGL}
-      \textit{(= Postgres License)} 
-    \item p.\ \pageref{OSUC-09-PHP} for the \textbf{PHP} License 
-  \end{itemize}
-
-
-\item[OSUC-10S:]\label{OSUC-10S-DEF} Before you will distribute it to third parties
-in the form of sources, you are going to modify an open source library, code
-snippet, module, or plugin, which you combine with other software components in
-the sense of software development (= \textit{snimoli, modified, independent,
-2others, sources}). To see the \textit{specific, license fulfilling to-do lists}
-jump to the following pages:
-  \begin{itemize}
-    \item p.\ \pageref{OSUC-10S-AGPL} for the \textbf{AGPL}
-      \textit{(= GNU Affero General Public License)} 
-    \item p.\ \pageref{OSUC-10S-Apache20} for the \textbf{ApL}
-      \textit{(= Apache License)}
-    \item p.\ \pageref{OSUC-10S-BSD} for the \textbf{BSD} License
-      \textit{(= Berkeley Software Distribution)}
-    \item p.\ \pageref{OSUC-10S-CDDL} for the \textbf{CDDL}
-      \textit{(= Common Develop and Distribution License)}  
-    \item p.\ \pageref{OSUC-10S-EPL} for the \textbf{EPL}
-      \textit{(= Eclipse Public License)}     
-    \item p.\ \pageref{OSUC-10S-EUPL} for the \textbf{EUPL}
-      \textit{(= European Union Public License)} 
-    \item p.\ \pageref{OSUC-10S-GPL} for the \textbf{GPL}
-       \textit{(= GNU General Public License)} 
-    \item p.\ \pageref{OSUC-10S-LGPL} for the \textbf{LGPL}
-      \textit{(= GNU Lesser General Public License)}           
-    \item p.\ \pageref{OSUC-10S-MIT} for the \textbf{MIT} License
-       \textit{(= Massachusetts Institute of Technology)} 
-    \item p.\ \pageref{OSUC-10S-MPL} for the \textbf{MPL}
-      \textit{(= Mozilla Public License)}     
-    \item p.\ \pageref{OSUC-10S-MS-PL} for the \textbf{MS-PL}
-      \textit{(= Microsoft Public License)} 
-    \item p.\ \pageref{OSUC-10S-PGL} for the \textbf{PGL}
-      \textit{(= Postgres License)} 
-    \item p.\ \pageref{OSUC-10S-PHP} for the \textbf{PHP} License 
-  \end{itemize}
-
-\item[OSUC-10B:]\label{OSUC-10B-DEF} Before you will distribute it to third parties
-in the form of binaries, you are going to modify an open source library, code
-snippet, module, or plugin, which you combine with other software components in
-the sense of software development (= \textit{snimoli, modified, independent,
-2others, binaries}). To see the \textit{specific, license fulfilling to-do
-lists} jump to the following pages:
-  \begin{itemize}
-    \item p.\ \pageref{OSUC-10B-AGPL} for the \textbf{AGPL}
-      \textit{(= GNU Affero General Public License)} 
-    \item p.\ \pageref{OSUC-10B-Apache20} for the \textbf{ApL}
-      \textit{(= Apache License)}
-    \item p.\ \pageref{OSUC-10B-BSD} for the \textbf{BSD} License
-      \textit{(= Berkeley Software Distribution)}
-    \item p.\ \pageref{OSUC-10B-CDDL} for the \textbf{CDDL}
-      \textit{(= Common Develop and Distribution License)}  
-    \item p.\ \pageref{OSUC-10B-EPL} for the \textbf{EPL}
-      \textit{(= Eclipse Public License)}     
-    \item p.\ \pageref{OSUC-10B-EUPL} for the \textbf{EUPL}
-      \textit{(= European Union Public License)} 
-    \item p.\ \pageref{OSUC-10B-GPL} for the \textbf{GPL}
-       \textit{(= GNU General Public License)} 
-    \item p.\ \pageref{OSUC-10B-LGPL} for the \textbf{LGPL}
-      \textit{(= GNU Lesser General Public License)}           
-    \item p.\ \pageref{OSUC-10B-MIT} for the \textbf{MIT} License
-       \textit{(= Massachusetts Institute of Technology)} 
-    \item p.\ \pageref{OSUC-10B-MPL} for the \textbf{MPL}
-      \textit{(= Mozilla Public License)}     
-    \item p.\ \pageref{OSUC-10B-MS-PL} for the \textbf{MS-PL}
-      \textit{(= Microsoft Public License)} 
-    \item p.\ \pageref{OSUC-10B-PGL} for the \textbf{PGL}
-      \textit{(= Postgres License)} 
-    \item p.\ \pageref{OSUC-10B-PHP} for the \textbf{PHP} License 
-  \end{itemize}
-
+\osucitem{10B}{snimoli, modified, independent, 2others, binaries}{%
+Before you will distribute it to third parties in the form of
+binaries, you are going to modify an open source library, code
+snippet, module, or plugin, which you combine with other software
+components in the sense of software development}
 \end{description}
+\egroup
+\end{osucdefinitions}
 
 %\bibliography{../../../bibfiles/oscResourcesEn}

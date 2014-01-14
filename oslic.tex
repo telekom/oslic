@@ -32,6 +32,8 @@
 % package for improving the grey value and the line feed handling
 \usepackage{microtype}
 
+\usepackage{to_oscad/oscad}
+
 %language specific quoting signs
 %default for language english is american style of quotes
 %\usepackage[english=british]{csquotes}
@@ -184,6 +186,7 @@
 \newcommand*{\citePGL}[2][cf.]{\footcite[#1][\nopage wp #2]{PglOsiLicense2013a}}
 \newcommand*{\citePHP}[2][cf.]{\footcite[#1][\nopage wp #2]{Php30OsiLicense2013a}}
 %%%%%%%%%%%%%%
+
 \begin{document}
 
 %% use all entries of the bliography
@@ -331,6 +334,5 @@ and all the others\ldots
 \printnomenclature
 
 \bibliography{bibfiles/oscResourcesEn,bibfiles/oscCopiedButNotRead,bibfiles/oscNextActions}
-
 
 \end{document}

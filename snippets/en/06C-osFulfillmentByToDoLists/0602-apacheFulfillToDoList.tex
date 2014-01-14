@@ -25,10 +25,16 @@
 
 \section{Apache licensed software}
 
+\begin{license}{APL} % ends at end of file
+\licensename{ApLv2.0}
+\licensespec{Apache License 2.0}
+\licenseversion{2.0}
+\licenseabbrev{ApL}
+
 Today, the current release of the Apache open source license is version 2.0,
-elder versions are deprecated\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{sec:ProtectPowerOfApL}}. Because it focusses primarily on the
-\enquote{redistribution}\footcite[cf.][\nopage wp.\ §4]{Apl20OsiLicense2004a},
+older versions are deprecated.\footnote{For details $\rightarrow$ OSLiC, pp.\
+\protectionpageref{APL}} Because it focusses primarily on the
+\enquote{redistribution,}\footcite[cf.][\nopage wp.\ §4]{Apl20OsiLicense2004a}
 the following simplified Apache specific open source use case
 finder\footnote{For details of the general OSUC finder $\rightarrow$ OSLiC, pp.\
 \pageref{OsucTokens} and \pageref{OsucDefinitionTree}} can be used:
@@ -130,477 +136,425 @@ library as embedded binaries}};
 \end{tikzpicture}
 
 
+%%
+%% Common building blocks
+%%
+
+% Common footnote, used with every 'give license' task
+\newcommand{\passingFiles}{%
+  \footnote{For implementing the handover of files correctly $\rightarrow$
+    OSLiC, p. \pageref{DistributingFilesHint}}}
+
+% ------------------------------------------------------------------------------
+% Give a copy of the license
+\newcommand{\auxGiveLicenseFor}[1]{%
+  Give the recipient a copy of the Apache 2.0 license. If it is not already part
+  of the #1 package, add it.} 
+\newcommand{\copyLicenseWithBinary}{\auxGiveLicenseFor{binary}}
+\newcommand{\copyLicenseWithSource}{\auxGiveLicenseFor{software}}
+
+% ------------------------------------------------------------------------------
+% Keep licensing elements intact
+\newcommand{\keepLicenseElements}{
+  Ensure that the licensing elements (especially the specific copyright notice
+  of the original author(s)) are retained in your package in the form you have
+  received them.} 
+\newcommand{\keepLicenseElementsBinary}{%
+  \keepLicenseElements{}
+  If you compile the binary from the sources, ensure that all the licensing
+  elements are also incorporated into the package.} 
+
+% ------------------------------------------------------------------------------
+% Keep notice file intact
+\newcommand{\auxCreateAndAddToNoticeFile}{%
+  Create a \emph{notice text file}, if it still does not exist. \emph{Add} a
+  description of your modifications into the \emph{notice text file.}}
+
+\newcommand{\auxKeepNoticeFile}[1]{%
+  Ensure that the \emph{notice text file} is #1 in your package in the form you
+  have initially received it.}  
+\newcommand{\keepNoticeFile}{\auxKeepNoticeFile{retained}}
+\newcommand{\includeNoticeFile}{\auxKeepNoticeFile{retained or integrated}}
+
+\newcommand{\keepAllNotices}{%
+  Ensure that the \emph{notice text file} contains at least all the information
+  of that \emph{notice text file} you have received.} 
+\newcommand{\expandNotices}{%
+  \keepAllNotices{} 
+  \auxCreateAndAddToNoticeFile{}}
+
+% ------------------------------------------------------------------------------
+% Display the notice file
+\newcommand{\auxDisplayNotice}{%
+  Ensure that the \emph{notice text file} is also reproduced if and whereever
+  such third-party notices normally appear.}
+
+\newcommand{\displayNotice}{%
+  \auxDisplayNotice{}
+  If the program already displays a copyright dialog, update it in an
+  appropriate manner.} 
+
+\newcommand{\displayNoticeOfEmbeddedLibrary}{%
+  \auxDisplayNotice{}
+  If the software that embeds this library displays its own copyright dialog,
+  insert this information there.}
+
+% ------------------------------------------------------------------------------
+% Mark your modifications
+\newcommand{\auxMarkModifiedSource}[1]{%
+  Inside of the #1 source code, mark all your modifications thoroughly. 
+  \auxCreateAndAddToNoticeFile{}}
+\newcommand{\markModifiedSource}{\auxMarkModifiedSource{}}
+\newcommand{\markModifiedLibrarySource}{\auxMarkModifiedSource{library}}
+
+\newcommand{\auxMarkUndistributedChanges}[1]{%
+  Even if you do not want to distribute your modified source code, mark all your
+  modifications #1 thoroughly.} 
+\newcommand{\markUndistributedChanges}{%
+  \auxMarkUndistributedChanges{}}
+\newcommand{\markUndistributedLibraryChanges}{%
+  \auxMarkUndistributedChanges{of the embedded libary}}
+
+% ------------------------------------------------------------------------------
+% Add info to documentation
+\newcommand{\auxDocumentation}{%
+  Let the documentation of your distribution and/or your additional material
+  also reproduce the content of the \emph{notice text file}, a hint to the
+  software name, a link to its homepage, and a link to the Apache 2.0 license}
+
+\newcommand{\documentation}{%
+  \auxDocumentation.} 
+\newcommand{\documentationBinary}{%
+  \auxDocumentation, especially as subsection of your own copyright notice.} 
+
+% ------------------------------------------------------------------------------
+% Forbid promoting services using trademarks, etc.
+\newcommand{\noTrademarks}{%
+  to promote any of your services based on the this software by trademarks,
+  service marks, or product names linked to the software except as required for
+  unpartially describing the used software file.}
+\newcommand{\noTrademarksExceptNotice}{%
+  to promote any of your services or products based on the this software by
+  trademarks, service marks, or product names linked to this Apache software,
+  except as required for unpartially describing the used software and for
+  reproducing the notice text file.} 
+%% \newcommand{\noTrademarksExceptNotice}{%
+%%   to use any trademark, service mark, or product name linked to the Apache
+%%   software to promote your products and services based on the this software,
+%%   except as required for unambiguously denoting the software and for reproducing
+%%   the notice text file.}  
+
+% ------------------------------------------------------------------------------
+% Forbid patent litigation
+\newcommand{\noPatentLitigation}{%
+  to institute any patent litigation against anyone alleging that the software
+  constitutes patent infringement.} 
+
+% ------------------------------------------------------------------------------
+
 \subsection{ApL-C1: Using the software only for yourself}
-\label{OSUC-01-Apache20} \label{OSUC-03-Apache20} 
-\label{OSUC-06-Apache20} \label{OSUC-09-Apache20}
+\begin{lsuc}{APL-C1}
+  \linkosuc{01}
+  \linkosuc{03} 
+  \linkosuc{06}
+  \linkosuc{09}
 
-\begin{description}
+  \lsucmeans{that you are going to use a received Apache licensed software only
+    for yourself and that you do not hand it over to any 3rd party in any sense.}
 
-\item[means] that you are going to use a received Apache licensed software only
-for yourself and that you do not hand it over to any 3rd party in any sense.
+  \lsuccovers{OSUC-01, OSUC-03, OSUC-06, and OSUC-09\footnote{For details 
+      $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-01-DEF} - \pageref{OSUC-09-DEF}}}
 
-\item[covers] OSUC-01, OSUC-03, OSUC-06, and OSUC-09\footnote{For details 
-$\rightarrow$ OSLiC, pp.\ \pageref{OSUC-01-DEF} - \pageref{OSUC-09-DEF}}
-
-\item[requires] no tasks in order to fulfill the conditions of the Apache 2.0
-license with respect to this use case:
-  \begin{itemize}
-    \item You are allowed to use any kind of Apache software in any sense and in
-    any context without being obliged to do anything as long as you do not
-    give the software to 3rd parties.
-  \end{itemize}
+  \begin{lsucrequiresnothing}
+    \item You are allowed to use any kind of Apache
+    software in any sense and in any context without being obliged to
+    do anything as long as you do not give the software to 3rd parties.
+  \end{lsucrequiresnothing}
   
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services – based on the this software – by
-  trademarks, service marks, or product names linked to the software except as
-  required for unpartially describing the used software file.
-  \item to institute any patent litigation against anyone alleging that the
-  software constitutes patent infringement.
-\end{itemize}
-
-\end{description}
+  \begin{lsucprohibits}
+    \lsucitem{\noTrademarks}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
 
 \subsection{ApL-C2: Passing the unmodified software as source code}
-\label{OSUC-02S-Apache20} \label{OSUC-05S-Apache20} \label{OSUC-07S-Apache20} 
+\begin{lsuc}{APL-C2}
+  \linkosuc{02S}
+  \linkosuc{05S}
+  \linkosuc{07S}
 
-\begin{description}
+  \lsucmeans{that you are going to distribute an unmodified version of the
+    received Apache software to 3rd parties in the form of source code files or
+    as a source code package. In this case it is not discriminating 
+    to distribute a program, an application, a server, a snippet, a module, a
+    library, or a plugin as an independent or as an embedded unit.}
 
-\item[means] that you are going to distribute an unmodified version of the
-received Apache software to 3rd parties -- in the form of source code files or
-as a source code package. In this case it is not discriminating 
-to distribute a program, an application, a server, a snippet, a module, a
-library, or a plugin as an independent or as an embedded unit.
+  \lsuccovers{OSUC-02S, OSUC-05S, OSUC-07S\footnote{For details $\rightarrow$
+      OSLiC, pp.\ \pageref{OSUC-02S-DEF} - \pageref{OSUC-07S-DEF}}}
 
-\item[covers] OSUC-02S, OSUC-05S, OSUC-07S\footnote{For details $\rightarrow$
-OSLiC, pp.\ \pageref{OSUC-02S-DEF} - \pageref{OSUC-07S-DEF}}
+  \begin{lsucrequires}
+    \lsucmandatory{\copyLicenseWithSource}\passingFiles
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\keepNoticeFile}%
+    \footnote{The Apache license seems purposely to be a bit ambiguous: it
+      uses the term \enquote{\enquote{Notice} text file}. In its strict sense,
+      the term refers to a file named
+      `NOTICE.[txt\textbar{}pdf\textbar{}\ldots]'. In a weaker sense, it may 
+      denote any (text) file containing (licensing) notices. To be sure to act
+      according to this requirement you should also read this term in the
+      broader sense if there is no text file named `NOTICE'}
+      
+    \lsucoptional{\documentation}
+  \end{lsucrequires}
 
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
-  \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
-  license. If it is not already part of the software package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
-  specific copyright notice of the original author(s) -- are retained in your
-  package in the form you have received them.
-  \item \textbf{[mandatory:]} Ensure that a \emph{notice text file}\footnote{
-  The Apache license seems purposely to be a bit ambiguous: it uses the term
-  \enquote{``Notice'' text file}. In its strict sense, the term refers to a file
-  named 'NOTICE.[txt\textbar{}pdf\textbar{}\ldots]'. In a weaker sense, it may
-  denote any (text) file containing (licensing) notices. For being sure to act
-  according to this requirement you should also read this term in the broader
-  sense if there is no text file named 'NOTICE'} is retained in your package in
-  the form you have received it.
-  
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also reproduce the content of the \emph{notice text
-  file}, a hint to the software name, a link to its homepage, and a link to the
-  Apache 2.0 license.
-\end{itemize}
-
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products – based on the this software
-  – by trademarks, service marks, or product names linked to this Apache
-  software, except as required for unpartially describing the used software and
-  for reproducing the notice text file.
-  \item to institute any patent litigation against anyone alleging that the
-  software constitutes patent infringement.
-\end{itemize}
-
-\end{description}
+  \begin{lsucprohibits}
+    \lsucitem{\noTrademarks}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
 
 
-\subsection{ApL-C3: Passing the unmodified software as binaries} 
-\label{OSUC-02B-Apache20} \label{OSUC-05B-Apache20} \label{OSUC-07B-Apache20}
+\subsection{ApL-C3: Passing the unmodified software as binaries}
+\begin{lsuc}{APL-C3}
+  \linkosuc{02B} 
+  \linkosuc{04B} 
+  \linkosuc{07B} 
 
-\begin{description}
-\item[means] that you are going to distribute an unmodified version of the
-received Apache software to 3rd parties -- in the form of binary files or as a
-bi\-na\-ry package. In this case it is not discriminating to distribute a
-program, an application, a server, a snippet, a module, a library,
-or a plugin as an independent or an embedded unit.
+  \lsucmeans{that you are going to distribute an unmodified version of the
+    received Apache software to 3rd parties in the form of binary files or as
+    a binary package. In this case it is not discriminating to distribute a
+    program, an application, a server, a snippet, a module, a library, or a
+    plugin as an independent or an embedded unit.}
 
-\item[covers] OSUC-02B, OSUC-05B, OSUC-07B\footnote{For details $\rightarrow$
-OSLiC, pp.\ \pageref{OSUC-02B-DEF} - \pageref{OSUC-07B-DEF}}
+  \lsuccovers{OSUC-02B, OSUC-05B, OSUC-07B\footnote{For details $\rightarrow$
+      OSLiC, pp.\ \pageref{OSUC-02B-DEF} - \pageref{OSUC-07B-DEF}}}
 
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
-  \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
-  license. If it is not already part of the binary package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
-  
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
-  specific copyright notice of the original author(s) -- are retained in your
-  package in the form you have received them. If you compile the binary from the
-  sources, ensure that all the licensing elements are also incorporated into the
-  package.
-  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} is
-  retained or integrated into your binary package in the form you have initially
-  received
-  it.
-  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} is also
-  reproduced if and whereever such third-party notices normally appear --
-  especially, if you are distributing an unmodified Apache licensed library as
-  embedded component of your own work which displays its own copyright notice.
-  
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also reproduce the content of the \emph{notice text
-  file}, a hint to the software name, a link to its homepage, and a link to the
-  Apache 2.0 license -- especially as subsection of your own copyright notice.
-\end{itemize}
+  \begin{lsucrequires}
+    \lsucmandatory{\copyLicenseWithBinary}\passingFiles
+    \lsucmandatory{\keepLicenseElementsBinary}
+    \lsucmandatory{\includeNoticeFile}
 
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products – based on the this software
-  – by trademarks, service marks, or product names linked to this Apache
-  software, except as required for unpartially describing the used software and
-  for reproducing the notice text file.
-  \item to institute any patent litigation against anyone alleging that the
-  software constitutes patent infringement.
-\end{itemize}
+    \lsucmandatory{Ensure that the \emph{notice text file} is also reproduced if
+      and whereever such third-party notices normally appear (especially, if you
+      are distributing an unmodified Apache licensed library as embedded
+      component of your own work which displays its own copyright notice.)} 
+    
+    \lsucoptional{\documentationBinary}
+  \end{lsucrequires}
 
-\end{description}
+  \begin{lsucprohibits}
+    \lsucitem{\noTrademarks}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+
+\end{lsuc}
 
 \subsection{ApL-C4: Passing a modified program as source code}
-\label{OSUC-04S-Apache20} 
-
-\begin{description}
-\item[means] that you are going to distribute a modified version of the received
-Apache licensed program, application, or server (proapse) to 3rd parties -- in
-the form of source code files or as a source code package.
-\item[covers] OSUC-04S\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-04S-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions:
-\begin{itemize}
+\begin{lsuc}{APL-C4}
+  \linkosuc{04S} 
   
-  \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
-  license. If it is not already part of the software package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
-
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
-  specific copyright notice of the original author(s) -- are retained in your
-  package in the form you have received them.
-  
-  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} contains
-  at least all the information of that \emph{notice text file} you have
-  received.
-
-  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} is also
-  reproduced if and whereever such third-party notices normally appear. If the
-  program already displays a copyright dialog, update it in an appropriate
-  manner.
-  
-  \item \textbf{[mandatory:]} Inside of the source code, mark all your
-  modifications thoroughly. Generate a \emph{notice text file}, if it still does
-  not exist. \emph{Add} a description of your modifications into the
-  \emph{notice text file}.
-   
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also reproduce the content of the \emph{notice text
-  file}, a hint to the software name, a link to its homepage, and a link to the
-  Apache 2.0 license.
-  
- \end{itemize}
+  \lsucmeans{that you are going to distribute a modified version of the received 
+    Apache licensed program, application, or server (proapse) to 3rd parties in
+    the form of source code files or as a source code package.}
  
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products – based on the this software
-  – by trademarks, service marks, or product names linked to this Apache
-  software, except as required for unpartially describing the used software and
-  for reproducing the notice text file.
-  \item to institute any patent litigation against anyone alleging that the
-  software constitutes patent infringement.
-\end{itemize}
+  \lsuccovers{OSUC-04S\footnote{For details $\rightarrow$ OSLiC, pp.\
+      \pageref{OSUC-04S-DEF}}}
 
-\end{description}
+  \begin{lsucrequires}
+    \lsucmandatory{\copyLicenseWithSource}\passingFiles
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\keepAllNotices}
+    \lsucmandatory{\displayNotice}
+  
+    \lsucmandatory{Inside of the source code, mark all your modifications
+      thoroughly. Generate a \emph{notice text file}, if it still does not
+      exist. \emph{Add} a description of your modifications into the
+      \emph{notice text file.}}
+
+    \lsucoptional{\documentationBinary}
+  \end{lsucrequires}
+ 
+  \begin{lsucprohibits}
+    \lsucitem{\noTrademarks}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
 
 \subsection{ApL-C5: Passing a modified program as binary}
-\label{OSUC-04B-Apache20}
-\begin{description}
-\item[means] that you are going to distribute a modified version of the received
-Apache licensed pro\-gram, application, or server (proapse) to 3rd parties -- in
-the form of binary files or as a binary package.
-\item[covers] OSUC-04B\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-04B-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions:
-\begin{itemize}
+\begin{lsuc}{APL-C5}
+  \linkosuc{04B}
 
- \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
-  license. If it is not already part of the binary package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
-  
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
-  specific copyright notice of the original author(s) -- are retained in your
-  package in the form you have received them. If you compile the binary from the
-  sources, ensure that all the licensing elements are also incorporated into the
-  package.
-  
-  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} contains
-  at least all the information of that \emph{notice text file} you have
-  received. If it still does not exist, create it. \emph{Expand} the
-  \emph{notice text file} by a description of your modifications.
-  
-  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} is also
-  reproduced if and whereever such third-party notices normally appear. If the
-  program already displays a copyright dialog, update it in an appropriate
-  manner.
+  \lsucmeans{that you are going to distribute a modified version of the received
+    Apache licensed pro\-gram, application, or server (proapse) to 3rd parties
+    in the form of binary files or as a binary package.}
+
+  \lsuccovers{OSUC-04B\footnote{For details $\rightarrow$ OSLiC,
+      pp.\ \pageref{OSUC-04B-DEF}}}
+
+  \begin{lsucrequires}
+    \lsucmandatory{\copyLicenseWithBinary}\passingFiles
+    \lsucmandatory{\keepLicenseElementsBinary}
+    \lsucmandatory{\expandNotices}
+    \lsucmandatory{\displayNotice}
  
-  \item \textbf{[voluntary:]} Even if you do not want to distribute your
-  modified source code, mark all your modifications thoroughly.
- 
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also reproduce the content of the \emph{notice text
-  file}, a hint to the software name, a link to its homepage, and a link to the
-  Apache 2.0 license -- especially as a subsection of your own copyright notice.
+    \lsucoptional{Even if you do not want to distribute your modified source
+      code, mark all your modifications thoroughly.} 
 
-\end{itemize}
+    \lsucoptional{\documentationBinary}
+  \end{lsucrequires}
 
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products – based on the this software
-  – by trademarks, service marks, or product names linked to this Apache
-  software, except as required for unpartially describing the used software and
-  for reproducing the notice text file.
-  \item to institute any patent litigation against anyone alleging that the
-  software constitutes patent infringement.
-\end{itemize}
-
-\end{description}
+  \begin{lsucprohibits}
+    \lsucitem{\noTrademarks}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
 
 \subsection{ApL-C6: Passing a modified library as independent source code}
-\label{OSUC-08S-Apache20}
+\begin{lsuc}{APL-C6}
+  \linkosuc{08S}
 
-\begin{description}
-\item[means] that you are going to distribute a modified version of the received
-Apache licensed code snippet, module, library, or plugin (snimoli) to 3rd
-parties -- in the form of source code files or as a source code package, but
-without embedding it into another larger software unit.
-\item[covers] OSUC-08S\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-08S-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions:
-\begin{itemize}
-  
-  \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
-  license. If it is not already part of the software package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
+  \lsucmeans{that you are going to distribute a modified version of the received
+    Apache licensed code snippet, module, library, or plugin (snimoli) to 3rd
+    parties in the form of source code files or as a source code package, but
+    without embedding it into another larger software unit.}
 
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
-  specific copyright notice of the original author(s) -- are retained in your
-  package in the form you have received them.
-  
-  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} contains
-  at least all the information of that \emph{notice text file} you have
-  received.
+  \lsuccovers{OSUC-08S\footnote{For details $\rightarrow$ OSLiC,
+      pp.\ \pageref{OSUC-08S-DEF}}}
+
+  \begin{lsucrequires}
+    \lsucmandatory{\copyLicenseWithSource}\passingFiles
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\keepAllNotices}
  
-  \item \textbf{[voluntary:]} Inside of the source code, mark all your
-  modifications thoroughly. Generate a \emph{notice text file}, if it still does
-  not exist. \emph{Expand} the \emph{notice text file} by a description of your
-  modifications.
-   
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also reproduce the content of the \emph{notice text
-  file}, a hint to the software name, a link to its homepage, and a link to the
-  Apache 2.0 license.
+    \lsucmandatory{Inside of the source code, mark all your modifications
+      thoroughly. Generate a \emph{notice text file}, if it still does not
+      exist. \emph{Expand} the \emph{notice text file} by a description of your
+      modifications.}
 
-\end{itemize}
+    \lsucoptional{\documentation}
+  \end{lsucrequires}
 
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products – based on the this software
-  – by trademarks, service marks, or product names linked to this Apache
-  software, except as required for unpartially describing the used software and
-  for reproducing the notice text file.
-  \item to institute any patent litigation against anyone alleging that the
-  software constitutes patent infringement.
-\end{itemize}
+  \begin{lsucprohibits}
+    \lsucitem{\noTrademarks}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
 
-\end{description}
+\end{lsuc}
 
 
 \subsection{ApL-C7: Passing a modified library as independent binary}
-\label{OSUC-08B-Apache20}
-\begin{description}
-\item[means] that you are going to distribute a modified version of the received
-Apache licensed code snippet, module, library, or plugin (snimoli) to 3rd
-parties -- in the form of binary files or as a binary package but without
-embedding it into another larger software unit.
-\item[covers] OSUC-08B\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-08B-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions:
-\begin{itemize}
-  
- \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
-  license. If it is not already part of the binary package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
-  
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
-  specific copyright notice of the original author(s) -- are retained in your
-  package in the form you have received them. If you compile the binary from the
-  sources, ensure that all the licensing elements are also incorporated into the
-  package.
-  
-  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} contains
-  at least all the information of that \emph{notice text file} you have
-  received. If it still does not exist, create it. \emph{Expand} the
-  \emph{notice text file} by a description of your modifications.
+\begin{lsuc}{APL-C7}
+  \linkosuc{08B}
+
+  \lsucmeans{that you are going to distribute a modified version of the received
+    Apache licensed code snippet, module, library, or plugin (snimoli) to 3rd
+    parties in the form of binary files or as a binary package but without
+    embedding it into another larger software unit.}
+
+  \lsuccovers{OSUC-08B\footnote{For details $\rightarrow$ OSLiC,
+      pp.\ \pageref{OSUC-08B-DEF}} }
+
+  \begin{lsucrequires}
+    \lsucmandatory{\copyLicenseWithBinary}\passingFiles
+    \lsucmandatory{\keepLicenseElementsBinary}
+    \lsucmandatory{\expandNotices}
    
-  \item \textbf{[voluntary:]} Even if you do not want to distribute your
-  modified source code, mark all your modifications thoroughly.
- 
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also reproduce the content of the \emph{notice text
-  file}, a hint to the software name, a link to its homepage, and a link to the
-  Apache 2.0 license -- especially as a subsection of your own copyright notice.
-  
-\end{itemize}
+    \lsucoptional{Even if you do not want to distribute your modified source
+      code, mark all your modifications thoroughly.} 
 
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products – based on the this software
-  – by trademarks, service marks, or product names linked to this Apache
-  software, except as required for unpartially describing the used software and
-  for reproducing the notice text file.
-  \item to institute any patent litigation against anyone alleging that the
-  software constitutes patent infringement.
-\end{itemize}
+    \lsucoptional{\documentationBinary}
+  \end{lsucrequires}
 
-\end{description}
+  \begin{lsucprohibits}
+    \lsucitem{\noTrademarks}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
 
 \subsection{ApL-C8: Passing a modified library as embedded source code}
-\label{OSUC-10S-Apache20}
+\begin{lsuc}{APL-C8}
+  \linkosuc{10S}
 
-\begin{description}
-\item[means] that you are going to distribute a modified version of the received
-Apache licensed code snippet, module, library, or plugin (snimoli) to 3rd
-parties -- in the form of source code files or as a source code package together
-with another larger software unit which contains this code snippet, module,
-library, or plugin as an embedded component.
-\item[covers] OSUC-10S\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-10S-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions:
-\begin{itemize}
-  
-  \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
-  license. If it is not already part of the software package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
+  \lsucmeans{that you are going to distribute a modified version of the received
+    Apache licensed code snippet, module, library, or plugin (snimoli) to 3rd
+    parties in the form of source code files or as a source code package
+    together with another larger software unit which contains this code snippet,
+    module, library, or plugin as an embedded component.}
 
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
-  specific copyright notice of the original author(s) -- are retained in your
-  package in the form you have received them.
-  
-  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} contains at least
-  all the information of that \emph{notice text file} you have received.
+  \lsuccovers{OSUC-10S\footnote{For details $\rightarrow$ OSLiC,
+      pp.\ \pageref{OSUC-10S-DEF}}} 
+
+  \begin{lsucrequires}
+    \lsucmandatory{\copyLicenseWithSource}\passingFiles
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\keepAllNotices}
  
-  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} is also
-  reproduced if and whereever such third-party notices normally appear. If your
-  overarching program displays its own copyright dialog, insert this information
-  there.
+    \lsucmandatory{\displayNoticeOfEmbeddedLibrary}
  
-  \item \textbf{[mandatory:]} Inside of the library\footnote{or snippet, or
-  module, or plugin} source code, mark all your modifications thoroughly.
-  Generate a \emph{notice text file}, if it still does not exist. \emph{Expand}
-  the \emph{notice text file} by a description of your modifications.
-  
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also reproduce the content of the \emph{notice text
-  file}, a hint to the software name, a link to its homepage, and a link to the
-  Apache 2.0 license.
+    \lsucmandatory{Inside of the library source code, mark all your
+      modifications thoroughly. Generate a \emph{notice text file}, if it still
+      does not exist. \emph{Expand} the \emph{notice text file} by a description
+      of your modifications.}%
+    \footnote{The term library also includes snippet, module, and plugin.} 
 
-  \item \textbf{[voluntary:]} Arrange your source code distribution so that the
-  integrated Apache license and the \emph{notice text file} clearly refer only
-  to the embedded library and do not disturb the licensing of your own
-  overarching work. It's a good tradition to keep the embedded components like
-  libraries, modules, snippets, or plugins in specific directory which contains
-  also all additional licensing elements.
- 
-\end{itemize}
+    \lsucoptional{\documentation}
 
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products – based on the this software
-  – by trademarks, service marks, or product names linked to this Apache
-  software, except as required for unpartially describing the used software and
-  for reproducing the notice text file.
-  \item to institute any patent litigation against anyone alleging that the
-  software constitutes patent infringement.
-\end{itemize}
+    \lsucoptional{Arrange your source code distribution so that the integrated
+      Apache license and the \emph{notice text file} clearly refer only to the
+      embedded library and do not disturb the licensing of your own overarching
+      work. It's a good tradition to keep the embedded components like
+      libraries, modules, snippets, or plugins in specific directory which
+      contains also all additional licensing elements.}
+  \end{lsucrequires}
 
-\end{description}
+  \begin{lsucprohibits}
+    \lsucitem{\noTrademarks}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
 
 
 \subsection{ApL-C9: Passing a modified library as embedded binary}
-\label{OSUC-10B-Apache20}
-\begin{description}
-\item[means] that you are going to distribute a modified version of the received
-Apache licensed code snippet, module, library, or plugin to 3rd parties -- in
-the form of binary files or as a binary package together with another larger
-software unit which contains this code snippet, module, library, or plugin as an
-embedded component.
-\item[covers] OSUC-10B\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-10B-DEF}}
-\item[requires] the tasks in order to fulfill the license conditions:
-\begin{itemize}
-  
-  \item \textbf{[mandatory:]} Give the recipient a copy of the Apache 2.0
-  license. If it is not already part of the binary package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
-  
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
-  specific copyright notice of the original author(s) -- are retained in your
-  package in the form you have received them. If you compile the binary from the
-  sources, ensure that all the licensing elements are also incorporated into the
-  package.
-  
-  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} contains
-  at least all the information of that \emph{notice text file} you have
-  received.  If it still does not exist, create it. \emph{Expand} the
-  \emph{notice text file} by a description of your modifications.
+\begin{lsuc}{APL-C9}
+  \linkosuc{10B}
+
+  \lsucmeans{that you are going to distribute a modified version of the received
+    Apache licensed code snippet, module, library, or plugin to 3rd parties in
+    the form of binary files or as a binary package together with another larger
+    software unit which contains this code snippet, module, library, or plugin
+    as an embedded component.}
+
+  \lsuccovers{OSUC-10B\footnote{For details $\rightarrow$ OSLiC,
+      pp.\ \pageref{OSUC-10B-DEF}}} 
+
+  \begin{lsucrequires}
+    \lsucmandatory{\copyLicenseWithBinary}\passingFiles
+    \lsucmandatory{\keepLicenseElementsBinary}
+    \lsucmandatory{\expandNotices}
  
-  \item \textbf{[mandatory:]} Ensure that the \emph{notice text file} is also
-  reproduced if and whereever such third-party notices normally appear. If your
-  overarching program displays its own copyright dialog, insert this information
-  there.
+    \lsucmandatory{\displayNoticeOfEmbeddedLibrary}
      
-  \item \textbf{[voluntary:]} Even if you do not want to distribute your
-  modified source code, mark all your modifications of the embedded
-  libary\footnote{or snippet, or module, or plugin} thoroughly.
- 
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also reproduce the content of the \emph{notice text
-  file}, a hint to the software name, a link to its homepage, and a link to the
-  Apache 2.0 license -- especially as subsection of your own copyright notice.
-  
- \item \textbf{[voluntary:]} Arrange your binary distribution so that the
-  integrated Apache license and the \emph{notice text file} clearly refer only
-  to the embedded library and do not disturb the licensing of your own
-  overarching work. It's a good tradition to keep the libraries, modules,
-  snippet, or plugins in specific directories which contain also all licensing
-  elements.
-  
-\end{itemize}
+    \lsucoptional{Even if you do not want to distribute your modified source
+      code, mark all your modifications of the embedded libary thoroughly.}
+    \footnote{library or snippet, or module, or plugin} 
 
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products – based on the this software
-  – by trademarks, service marks, or product names linked to this Apache
-  software, except as required for unpartially describing the used software and
-  for reproducing the notice text file.
-  \item to institute any patent litigation against anyone alleging that the
-  software constitutes patent infringement.
-\end{itemize}
+    \lsucoptional{\documentationBinary}
+  
+    \lsucoptional{Arrange your binary distribution so that the integrated Apache
+      license and the \emph{notice text file} clearly refer only to the embedded
+      library and do not disturb the licensing of your own overarching
+      work. It's a good tradition to keep the libraries, modules, snippet, or
+      plugins in specific directories which contain also all licensing elements.}
+  \end{lsucrequires}
 
-\end{description}
+  \begin{lsucprohibits}
+    \lsucitem{\noTrademarks}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
 
 \subsection{Discussions and Explanations}
+\label{APLDiscuss}
 \begin{itemize}
   \item On the one hand, the Apache 2.0 license does not permit
   \enquote{[\ldots] to use the trade names, trademarks, service marks, or
@@ -634,7 +588,7 @@ embedded component.
   form of binaries you must fulfill this condition. Moreover, you must also hand
   the license over to your receipient. But, nevertheless, you are not obliged to
   publish the modified source code, too. ($\rightarrow$ OSLiC, p.
-  \pageref{sec:ProtectPowerOfApL})}.
+  \protectionpageref{APL})}.
   
   \item Finally, the ApL requires that the received “NOTICE text file” must be
   integrated as readable copy to each package distributed in the form of source
@@ -649,7 +603,7 @@ embedded component.
   contain such copyright dialogs (ApL-C7)
 \end{itemize}
 
-
+\end{license}
 
 
 

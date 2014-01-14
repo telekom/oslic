@@ -1,0 +1,136 @@
+%%
+%% This is file 'oscad.sty'
+%% 
+%% Currently, this is the source code of the oscad package. 
+%% This file is NOT generated from a dtx file (although one day it might be).
+%%
+%%
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{oscad}[2014/01/10 v0.1 OSCAd markup]
+\RequirePackage{newfile}
+
+\AtBeginDocument{%
+  \newoutputstream{oscad}
+  \openoutputfile{oscad.xml}{oscad}
+  \addtostream{oscad}{<oscad>}}
+
+\AtEndDocument{%
+  \addtostream{oscad}{</oscad>}
+  \closeoutputstream{oscad}}
+
+\newcommand{\@oscad}[1]{%
+  \addtostream{oscad}{#1}}
+
+\newcommand{\oscad@key}{}
+\newcommand{\oscad@lsuc}{}
+\newcommand{\oscad@licensename}{}
+\newcommand{\oscad@licensespec}{}
+\newcommand{\oscad@licenseabbrev}{}
+\newcommand{\oscad@licenseversion}{}
+
+\newcommand{\osuc@item}[3]{%
+  \item[OSUC-#1:]\label{OSUC-#1-DEF} #3 (= \textit{#2}).}
+
+% These commands must be used for the labels in chapter 2 for the
+% sections describing what the individual licenses try to protect.
+% The argument MUST be the official abbreviation for the license.
+\newcommand{\protectionlabel}[1]{\label{ProtectingPowerOf#1}}
+\newcommand{\protectionref}[1]{ProtectingPowerOf#1}
+\newcommand{\protectionpageref}[1]{\pageref{ProtectingPowerOf#1}}
+
+% These commands must be used for the labels in chapter 3.1 for the
+% sections describing the patent clauses of the individual licenses.
+% The argument MUST be the official abbreviation for the license.
+\newcommand{\patentlabel}[1]{\label{#1PatentClause}}
+\newcommand{\patentref}[1]{#1PatentClause}
+\newcommand{\patentpageref}[1]{\pageref{#1PatentClause}}
+
+\newenvironment{osucdefinitions}{\@oscad{<osucs>}}{\@oscad{</osucs>}}
+
+\newcommand{\osucdef}[3]{%
+  \@oscad{<osuc name="#1"><![CDATA[#3]]></osuc>}%
+  \osuc@item{#1}{#2}{#3}}
+
+\newenvironment{license}[1]{%
+  \renewcommand{\oscad@key}{#1}%
+  \@oscad{<license id="#1">} 
+  \@oscad{<protection>\protectionref{#1}</protection>}
+  \@oscad{<patent>\patentref{#1}</patent>}
+  \@oscad{<discussion>#1Discussion</discussion>}
+  \@oscad{<chapter>\the\value{chapter}.\the\value{section}</chapter>}%
+}{%
+  \@oscad{</license>}%
+}
+
+\newcommand{\licensename}[1]{%
+  \@oscad{<name>#1</name>}%
+  \renewcommand{\oscad@licensename}{#1}}
+
+\newcommand{\licensespec}[1]{%
+  \@oscad{<title>#1</title>}%
+  \renewcommand{\oscad@licensespec}{#1}}
+
+\newcommand{\licenseabbrev}[1]{%
+  \@oscad{<abbreviation>#1</abbreviation>}%
+  \renewcommand{\oscad@licenseabbrev}}
+
+\newcommand{\licenseversion}[1]{%
+  \@oscad{<version>#1</version>}%
+  \renewcommand{\oscad@licenseversion}{#1}}
+
+\newenvironment{lsuc}[1]{%
+  \renewcommand{\oscad@lsuc}{#1}%
+  \@oscad{<lsuc id="#1">}%
+  \@oscad{<chapter>\the\value{chapter}.\the\value{section}.\the\value{subsection}</chapter>}%
+  \begin{description}%
+}{%
+  \end{description}%
+  \@oscad{</lsuc>}%
+}
+
+\newcommand{\linkosuc}[1]{%
+  \label{OSUC-#1-\oscad@key}
+  \@oscad{<mapsto>OSUC-#1</mapsto>}}
+
+\newcommand{\lsucname}[1]{\@oscad{<name>#1</name>}}
+
+\newcommand{\lsucmeans}[1]{\@oscad{<means><![CDATA[#1]]></means>}\item[means] #1}
+\newcommand{\lsuccovers}[1]{\item[covers] #1}
+
+\newenvironment{lsucrequiresnothing}{
+  \item[requires] no tasks in order to fulfill the conditions of the 
+    \oscad@licensespec{} with respect to this use case:
+  \itemize}{\enditemize}
+
+\newenvironment{lsucrequires}{%
+  \@oscad{<requires>}%
+  \item[requires] the following tasks in order to fulfill the license conditions:
+  \begin{itemize}
+}{%
+  \@oscad{</requires>}%
+  \end{itemize}%
+}
+
+\newenvironment{lsucprohibitsnothing}{\item[prohibits] nothing explicitely.}{}
+\newenvironment{lsucprohibits}{%
+  \@oscad{<prohibits>}%
+  \item[prohibits] \ldots%
+  \begin{itemize}%
+}{%
+  \@oscad{</prohibits>}%
+  \end{itemize}%
+}
+
+\newcommand{\lsucitem}[1]{%
+  \@oscad{<item><![CDATA[#1]]></item>}%
+  \item #1}
+
+\newcommand{\lsucmandatory}[1]{%
+  \@oscad{<item type="mandatory"><![CDATA[#1]]></item>}%
+  \item \textbf{[mandatory:]} #1}
+
+\newcommand{\lsucoptional}[1]{%
+  \@oscad{<item type="optional"><![CDATA[#1]]></item>}%
+  \item \textbf{[voluntary:]} #1}
+
+\endinput

@@ -12,3 +12,5 @@
 .project
 .texlipse
 /tmp
+000-branch-*
+oscad.xml
