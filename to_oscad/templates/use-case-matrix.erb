@@ -1,0 +1,65 @@
+<?php
+
+/*  This file is part of OSCAd, the Open Source Compliance Advisor
+ *
+ *  Copyright (C) 2013 Karsten Reincke, Deutsche Telekom AG
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU Affero General Public License as
+ *  published by the Free Software Foundation, either version 3 of the
+ *  License, or (at your option) any later version.
+
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU Affero General Public License for more details.
+
+ *  You should have received a copy of the GNU Affero General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>
+ */
+
+/*
+ * Matrix of known equivalences between use-cases
+ * and each license specific case.
+ */
+
+$gCoveringUseCaseMatrixArray = array(
+
+<%  license_list = [
+#       ["AGPL",  "AGPLv3.0"],
+        ["APL",   "ApLv2.0"],
+        ["BSDa",  "BSDv2CL"],
+        ["BSDb",  "BSDv3CL"],
+#       ["CDDL",  "CDDLv1.0"],
+        ["EPL",   "EPLv1.0"],
+        ["EUPL",  "EUPLv1.1"],
+        ["GPLa",  "GPLv2.0"],
+        ["GPLb",  "GPLv3.0"],
+        ["LGPLa", "LGPLv2.1"],
+        ["LGPLb", "LGPLv3.0"],
+        ["MIT",   "MIT"],
+        ["MPL",   "MPLv2.0"],
+        ["MSPL",  "MS-PL"],
+        ["PGL",   "PGL"],
+        ["PHP",   "PHPv3.0"]
+    ]
+    
+    use_case_list = [ 
+        "01", "02S", "02B", "03", "04S", "04B", "05S", "05B",
+        "06", "07S", "07B", "08S", "08B", "09", "10S", "10B"
+    ] %>
+<%  first = true %>
+<%  license_list.each do | license | %>
+<%      if (uc_table = matrix[license[0]]) %>
+<%          unless first then first = false %>,<% end %>
+    '<%= license[1] %>' => array(
+<%              use_case_list.each do |osuc_nr| %>
+<%                  osuc = "OSUC-#{osuc_nr}" %>
+        '<%= osuc %>' => '<%= uc_table[osuc] %>'<% if osuc_nr != use_case_list.last %>,<% end %>
+<%              end %>
+    )
+<%      end %>
+<%  end %>
+);
+
+?>

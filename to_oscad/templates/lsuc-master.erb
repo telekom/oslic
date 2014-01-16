@@ -1,0 +1,74 @@
+<?php
+
+/*  This file is part of OSCAd, the Open Source Compliance Advisor
+ *
+ *  Copyright (C) 2013 Karsten Reincke, Deutsche Telekom AG
+ *
+ *  This program is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU Affero General Public License as
+ *  published by the Free Software Foundation, either version 3 of the
+ *  License, or (at your option) any later version.
+
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU Affero General Public License for more details.
+
+ *  You should have received a copy of the GNU Affero General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>
+ */
+
+$gFbLicenseName="<%= license.name %>";
+$gFbLicenseSpecification="<%= license.title %>";
+$gFbLicenseAbbr="<%= license.abbrev %>";
+$gFbLicenseRelease="<%= license.version %>";
+
+$gOsLicProtectionChapter="<%= license.protection_chapter %>";
+$gOsLicPatentChapter="<%= license.patent_chapter %>";
+$gOsLicTodoListChapter="<%= license.chapter %>";
+$gOsLicLsucChapter="<%= lsuc.chapter %>";
+$gOsLicTlExplanationChapter="<%= license.discussion_chapter %>";
+
+$gFbLiSpUcName="<%= lsuc.name %>";
+
+$gFbLiSpUcDesc="<%= lsuc.description %>";
+
+$gFbLiSpUcRequiresPrefix=
+<% if (lsuc.required.empty?) and (lsuc.recommended.empty?) %>
+    "no tasks in order to fulfill the conditions
+     of the <%= license.title %> with respect to this use case:";
+<% else %>
+    "the following tasks in order to fulfill the license conditions:"
+<% end %>
+
+$gFbLiSpUcNoTasks=
+    "You are allowed to the software in any sense
+     and in any context without being obliged to do anything as long
+     as you do not give the software to 3rd parties.";
+
+$gFbLiSpUcReqManArr=array(
+<% lsuc.required.each do |clause| %>
+    "<%= clause %>"<% if clause != lsuc.required.last %>,<% end %>    
+<% end %>
+);
+
+$gFbLiSpUcReqVolArr=array(
+<% lsuc.recommended.each do |clause| %>
+    "<%= clause %>"<% if clause != lsuc.recommended.last %>,<% end %>    
+<% end %>
+);
+
+$gFbLiSpUcForbidsPrefix=
+<% if lsuc.prohibited.empty? %>
+    "nothing explicitely with respect to this use case"
+<% else %>
+    "";
+<% end %>
+
+$gFbLiSpUcForbidsArr=array(
+<% lsuc.prohibited.each do |clause| %>
+    "<%= clause %>"<% if clause != lsuc.prohibited.last %>,<% end %>    
+<% end %>
+);
+
+?>
