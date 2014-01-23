@@ -151,6 +151,13 @@
   \@oscad{<item type="optional"><![CDATA[#1]]></item>}%
   \item \textbf{[voluntary:]} #1}
 
+\newcommand{\lsucsourcedist}[1]{%
+  \@oscad{<source-use-case>#1</source-use-case>}%
+  \item \textbf{[mandatory:]} Execute the to-do list of use case #1 for the
+    source code that you publish.%
+    \footnote{Making the code accessible via a repository means distributing the
+      software in the form of source code. Hence, you must also fulfill all
+      tasks of the corresponding use case.}}
 \endinput
 %% -----------------------------------------------------------------------------
 %% Local Variables:
