@@ -171,14 +171,14 @@ library as embedded binaries}};
   description of your modifications into the \emph{notice text file.}}
 
 \newcommand{\auxKeepNoticeFile}[1]{%
-  Ensure that the \emph{notice text file} is #1 in your package in the form you
+  Ensure that the \emph{notice text file} is #1 your package in the form you
   have initially received it.}  
-\newcommand{\keepNoticeFile}{\auxKeepNoticeFile{retained}}
-\newcommand{\includeNoticeFile}{\auxKeepNoticeFile{retained or integrated}}
+\newcommand{\keepNoticeFile}{\auxKeepNoticeFile{retained in}}
+\newcommand{\includeNoticeFile}{\auxKeepNoticeFile{retained in or integrated into}}
 
 \newcommand{\keepAllNotices}{%
   Ensure that the \emph{notice text file} contains at least all the information
-  of that \emph{notice text file} you have received.} 
+  in the \emph{notice text file} that you have received.} 
 \newcommand{\expandNotices}{%
   \keepAllNotices{} 
   \auxCreateAndAddToNoticeFile{}}
@@ -232,22 +232,17 @@ library as embedded binaries}};
 \newcommand{\noTrademarks}{%
   to promote any of your services based on the this software by trademarks,
   service marks, or product names linked to the software except as required for
-  unpartially describing the used software file.}
+  unambiguously denoting the software.}
 \newcommand{\noTrademarksExceptNotice}{%
-  to promote any of your services or products based on the this software by
-  trademarks, service marks, or product names linked to this Apache software,
-  except as required for unpartially describing the used software and for
-  reproducing the notice text file.} 
-%% \newcommand{\noTrademarksExceptNotice}{%
-%%   to use any trademark, service mark, or product name linked to the Apache
-%%   software to promote your products and services based on the this software,
-%%   except as required for unambiguously denoting the software and for reproducing
-%%   the notice text file.}  
+  to use any trademark, service mark, or product name linked to the Apache
+  software to promote your products and services based on the this software,
+  except as required for unambiguously denoting the software and for reproducing
+  the notice text file.}  
 
 % ------------------------------------------------------------------------------
 % Forbid patent litigation
 \newcommand{\noPatentLitigation}{%
-  to institute any patent litigation against anyone alleging that the software
+  to institute a patent litigation against anyone alleging that the software
   constitutes patent infringement.} 
 
 % ------------------------------------------------------------------------------
@@ -259,16 +254,16 @@ library as embedded binaries}};
   \linkosuc{06}
   \linkosuc{09}
 
-  \lsucmeans{that you are going to use a received Apache licensed software only
+  \lsucmeans{that you will use a Apache licensed software that you received only
     for yourself and that you do not hand it over to any 3rd party in any sense.}
 
   \lsuccovers{OSUC-01, OSUC-03, OSUC-06, and OSUC-09\footnote{For details 
       $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-01-DEF} - \pageref{OSUC-09-DEF}}}
 
   \begin{lsucrequiresnothing}
-    \item You are allowed to use any kind of Apache
-    software in any sense and in any context without being obliged to
-    do anything as long as you do not give the software to 3rd parties.
+    \item You are allowed to use any kind of Apache software in any sense and in
+      any context without being obliged to do anything as long as you do not
+      give the software to third parties. 
   \end{lsucrequiresnothing}
   
   \begin{lsucprohibits}
@@ -284,9 +279,9 @@ library as embedded binaries}};
   \linkosuc{07S}
 
   \lsucmeans{that you are going to distribute an unmodified version of the
-    received Apache software to 3rd parties in the form of source code files or
-    as a source code package. In this case it is not discriminating 
-    to distribute a program, an application, a server, a snippet, a module, a
+    Apache software that you received to third parties in the form of source
+    code files or as a source code package. In this case it makes no difference 
+    if you distribute a program, an application, a server, a snippet, a module, a
     library, or a plugin as an independent or as an embedded unit.}
 
   \lsuccovers{OSUC-02S, OSUC-05S, OSUC-07S\footnote{For details $\rightarrow$
@@ -321,10 +316,10 @@ library as embedded binaries}};
   \linkosuc{07B} 
 
   \lsucmeans{that you are going to distribute an unmodified version of the
-    received Apache software to 3rd parties in the form of binary files or as
-    a binary package. In this case it is not discriminating to distribute a
-    program, an application, a server, a snippet, a module, a library, or a
-    plugin as an independent or an embedded unit.}
+    Apache software that you received to third parties in the form of binary
+    files or as a binary package. In this case it does not matter if you
+    distribute a program, an application, a server, a snippet, a module, a
+    library, or a plugin as an independent or an embedded unit.}
 
   \lsuccovers{OSUC-02B, OSUC-05B, OSUC-07B\footnote{For details $\rightarrow$
       OSLiC, pp.\ \pageref{OSUC-02B-DEF} - \pageref{OSUC-07B-DEF}}}
@@ -353,9 +348,9 @@ library as embedded binaries}};
 \begin{lsuc}{APL-C4}
   \linkosuc{04S} 
   
-  \lsucmeans{that you are going to distribute a modified version of the received 
-    Apache licensed program, application, or server (proapse) to 3rd parties in
-    the form of source code files or as a source code package.}
+  \lsucmeans{that you are going to distribute a modified version of the Apache
+    licensed program, application, or server (proapse) that you received to
+    third parties in the form of source code files or as a source code package.}
  
   \lsuccovers{OSUC-04S\footnote{For details $\rightarrow$ OSLiC, pp.\
       \pageref{OSUC-04S-DEF}}}
@@ -384,9 +379,9 @@ library as embedded binaries}};
 \begin{lsuc}{APL-C5}
   \linkosuc{04B}
 
-  \lsucmeans{that you are going to distribute a modified version of the received
-    Apache licensed pro\-gram, application, or server (proapse) to 3rd parties
-    in the form of binary files or as a binary package.}
+  \lsucmeans{that you are going to distribute a modified version of the Apache
+    licensed program, application, or server (proapse) that you received to
+    third parties in the form of binary files or as a binary package.}
 
   \lsuccovers{OSUC-04B\footnote{For details $\rightarrow$ OSLiC,
       pp.\ \pageref{OSUC-04B-DEF}}}
@@ -413,10 +408,10 @@ library as embedded binaries}};
 \begin{lsuc}{APL-C6}
   \linkosuc{08S}
 
-  \lsucmeans{that you are going to distribute a modified version of the received
-    Apache licensed code snippet, module, library, or plugin (snimoli) to 3rd
-    parties in the form of source code files or as a source code package, but
-    without embedding it into another larger software unit.}
+  \lsucmeans{that you are going to distribute a modified version of the Apache
+    licensed code snippet, module, library, or plugin (snimoli) that you
+    received to third parties in the form of source code files or as a source
+    code package, but without embedding it into another larger software unit.}
 
   \lsuccovers{OSUC-08S\footnote{For details $\rightarrow$ OSLiC,
       pp.\ \pageref{OSUC-08S-DEF}}}
@@ -446,10 +441,10 @@ library as embedded binaries}};
 \begin{lsuc}{APL-C7}
   \linkosuc{08B}
 
-  \lsucmeans{that you are going to distribute a modified version of the received
-    Apache licensed code snippet, module, library, or plugin (snimoli) to 3rd
-    parties in the form of binary files or as a binary package but without
-    embedding it into another larger software unit.}
+  \lsucmeans{that you are going to distribute a modified version of the Apache
+    licensed code snippet, module, library, or plugin (snimoli) that you
+    received to third parties in the form of binary files or as a binary package
+    but without embedding it into another larger software unit.}
 
   \lsuccovers{OSUC-08B\footnote{For details $\rightarrow$ OSLiC,
       pp.\ \pageref{OSUC-08B-DEF}} }
@@ -475,11 +470,11 @@ library as embedded binaries}};
 \begin{lsuc}{APL-C8}
   \linkosuc{10S}
 
-  \lsucmeans{that you are going to distribute a modified version of the received
-    Apache licensed code snippet, module, library, or plugin (snimoli) to 3rd
-    parties in the form of source code files or as a source code package
-    together with another larger software unit which contains this code snippet,
-    module, library, or plugin as an embedded component.}
+  \lsucmeans{that you are going to distribute a modified version of the Apache
+    licensed code snippet, module, library, or plugin (snimoli) thath you
+    received to third parties in the form of source code files or as a source
+    code package together with another larger software unit which contains this
+    code snippet, module, library, or plugin as an embedded component.}
 
   \lsuccovers{OSUC-10S\footnote{For details $\rightarrow$ OSLiC,
       pp.\ \pageref{OSUC-10S-DEF}}} 
@@ -518,11 +513,11 @@ library as embedded binaries}};
 \begin{lsuc}{APL-C9}
   \linkosuc{10B}
 
-  \lsucmeans{that you are going to distribute a modified version of the received
-    Apache licensed code snippet, module, library, or plugin to 3rd parties in
-    the form of binary files or as a binary package together with another larger
-    software unit which contains this code snippet, module, library, or plugin
-    as an embedded component.}
+  \lsucmeans{that you are going to distribute a modified version of the Apache
+    licensed code snippet, module, library, or plugin that you received to third
+    parties in the form of binary files or as a binary package together with
+    another larger software unit which contains this code snippet, module,
+    library, or plugin as an embedded component.}
 
   \lsuccovers{OSUC-10B\footnote{For details $\rightarrow$ OSLiC,
       pp.\ \pageref{OSUC-10B-DEF}}} 
@@ -561,8 +556,8 @@ library as embedded binaries}};
   product names of the Licensor, except as required for reasonable and customary
   use in describing the origin of the Work and reproducing the content of the
   NOTICE file}\footcite[cf.][\nopage wp.\ §6]{Apl20OsiLicense2004a}. On the other
-  hand, this license alerts that all the patent licenses – granted to those who
-  \enquote{[\ldots] institute a patent litigation} – will terminate
+  hand, this license alerts that all the patent licenses granted to those who
+  \enquote{[\ldots] institute a patent litigation} will terminate
   automatically\footcite[cf.][\nopage wp.\ §3]{Apl20OsiLicense2004a}. Hence, the
   OSLiC generally (ApL-C1 - ApL-C9) interdicts to promote products or services by
   these elements and to legally fight against patents linked to the software.
@@ -576,7 +571,7 @@ library as embedded binaries}};
   marked\footcite[cf.][\nopage wp.\ §4.2]{Apl20OsiLicense2004a}. Thus, in all
   cases of passing the modified software in the form of source code the OSLiC
   requires to mark the modifications and to integrate a hint into the notice
-  file – while in all the cases of passing the modified software in the form of
+  file---while in all the cases of passing the modified software in the form of
   binaries it inserts only a voluntary condition (ApL-C4 - ApL-C9).
   
   \item Furthermore, the ApL requires that one must \enquote{[\ldots] retain, in
@@ -590,9 +585,9 @@ library as embedded binaries}};
   publish the modified source code, too. ($\rightarrow$ OSLiC, p.
   \protectionpageref{APL})}.
   
-  \item Finally, the ApL requires that the received “NOTICE text file” must be
+  \item Finally, the ApL requires that the received ``NOTICE text file'' must be
   integrated as readable copy to each package distributed in the form of source
-  code, or – in case of binary distibutions – must be displayed
+  code, or---in case of binary distibutions---must be displayed
   \enquote{[\ldots] if and wherever such third-party notices normally
   appear}\footcite[cf.][\nopage wp.\ §4.4]{Apl20OsiLicense2004a}. Thus, the OSLiC
   requires mandatorily that all source code distributions must include the
