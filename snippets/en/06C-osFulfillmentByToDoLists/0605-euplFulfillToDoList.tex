@@ -24,41 +24,44 @@
 %\nocite{*}
 
 \section{EUPL licensed software}
+\begin{license}{EUPL} % ends at end of file
+\licensename{EUPL-1.1}
+\licensespec{European Union Public License 1.1}
+\licenseversion{1.1}
+\licenseabbrev{EUPL}
 
-The European Union Public License explicitly distinguishes the distribution
-of the source code from that of the binaries: In the chapter
-\enquote{Communication of the Source Code}, it allows to \enquote{provide the
-Work either in its Source Code form, or as Executable
-Code}\footcite[cf.][\nopage wp.\ §3]{EuplLicense2007en}. But if a piece of EUPL
-licensed software is distributed as binary package, then the license
-additionally requires that the distributor either \enquote{[\ldots] provides a
+The European Union Public License explicitly distinguishes the distribution of
+the source code from that of the binaries: In the chapter \enquote{Communication
+of the Source Code,} it allows to \enquote{provide the Work either in its Source
+Code form, or as Executable Code.}\citeEUPL{§3} But if a piece of EUPL licensed
+software is distributed as binary package, then the license additionally
+requires that the distributor either \enquote{[\ldots] provides a
 machine-readable copy of the Source Code [\ldots]} directly together with the
-binaries\footcite[cf.][\nopage wp.\ §5]{EuplLicense2007en} or that he
-\enquote{[\ldots] indicates [\ldots] a repository where the Source Code is
-easily and freely accessible for as long as the Licensor continues to distribute
-[\ldots] the Work}\footnote{\cite[cf.][\nopage wp.\ §3.]{EuplLicense2007en}}. For
-respecting this conditions it is irrelevant whether the software has been
-modified or not; and all the other \enquote{obligations of the licensee} refer
-to both forms\footcite[cf.][\nopage wp.\ §5]{EuplLicense2007en}. 
+binaries\citeEUPL{§5} or that he \enquote{[\ldots] indicates [\ldots] a
+repository where the Source Code is easily and freely accessible for as long as
+the Licensor continues to distribute [\ldots] the Work.}\citeEUPL{§3} For
+respecting this conditions it is irrelevant whether the software has been 
+modified or not and all the other \enquote{obligations of the licensee} refer
+to both forms.\citeEUPL{§5}
 
 But there is a specific aspect which has to be considered for acting in
-accordance to the EUPL: In the proper meaning of the words, the EUPL is a
-license with a weak copy left, no doubt. But this character is only evoked by
-the fact that the EUPL allows the licensee to relicense the software by
-following the conditions of a specific clause and an licenses listed in an
-appendix which also lists some licenses with a weak copy
-left.\footnote{($\rightarrow$ OSLiC, p.\ \protectionpageref{EUPL})}.
+accordance to the EUPL: Taken literally, the EUPL is a license with a weak
+copyleft, no doubt. But this happens only a result of the fact that the EUPL
+allows the licensee to relicense the software by following the conditions of a
+specific clause and an licenses listed in an appendix, which also includes some
+licenses with a weak copyleft.%
+  \footnote{($\rightarrow$ OSLiC, p.\ \protectionpageref{EUPL})} 
 Thus, with respect to question how to fulfill the license best, it is safer to
-treat the EUPL as a license with a default strong copy left. Concerning the use
+treat the EUPL as a license with a default strong copyleft. Concerning the use
 of an unmodified or a modified library as an embedded component, a license with
-a strong copy left evokes that also the application which is using the
-(un)modified library has to be licensed under the same conditions as the library
+a strong copy left implies that also the application which is using the
+(un)modified library has to be licensed under the same conditions as the library 
 itself. Thus, for finding the simply processable task lists, the following EUPL
-specific and a little more sophisticated open source use case
-structure\footnote{For details of the general OSUC finder $\rightarrow$ OSLiC,
-pp.\ \pageref{OsucTokens} and \pageref{OsucDefinitionTree}} can be used:
- 
- 
+specific and a little more sophisticated open source use case structure%
+  \footnote{For details of the general OSUC finder $\rightarrow$ OSLiC,
+    pp.\ \pageref{OsucTokens} and \pageref{OsucDefinitionTree}} 
+can be used:
+
  
 \tikzstyle{nodv} = [font=\scriptsize, ellipse, draw, fill=gray!10, 
     text width=2cm, text centered, minimum height=2em]
@@ -187,716 +190,668 @@ library as embedded binaries}};
 
 \end{tikzpicture}
 
+%%
+%% Common Building Blocks
+%%
+
+% ------------------------------------------------------------------------------
+% Don't use trademarks, etc for advertising
+\newcommand{\noTrademarksRPD}{to promote any of your services or products based on
+  the this software by trade names, trademarks, service marks, or names linked
+  to this EUPL software, except as required to unambiguously describe the
+  software and to reproduce the copyright notice.}
+\newcommand{\noTrademarks}{to promote any of your services or products based on
+  the this software by trade names, trademarks, service marks, or names linked
+  to this EUPL software, except as required for reasonable and customary use in
+  describing the origin of the software and reproducing the copyright notice.}
 
 \subsection{EUPL-C1: Using the software only for yourself}
-\label{OSUC-01-EUPL} \label{OSUC-03-EUPL} 
-\label{OSUC-06-EUPL} \label{OSUC-09-EUPL}
+\begin{lsuc}{EUPL-C1}
+  \linkosuc{01}
+  \linkosuc{03}
+  \linkosuc{06}
+  \linkosuc{09}
 
-\begin{description}
+  \lsucmeans{that you are going to use a EUPL licensed software that you
+    recevied only for yourself and that you do not hand it over to any third
+    party in any sense.}
 
-\item[means] that you are going to use a received EUPL licensed software only
-for yourself and that you do not hand it over to any 3rd party in any sense.
+  \lsuccovers{OSUC-01, OSUC-03, OSUC-06, and OSUC-09\footnote{For details
+      $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-01-DEF} - \pageref{OSUC-09-DEF}}} 
 
-\item[covers] OSUC-01, OSUC-03, OSUC-06, and OSUC-09\footnote{For details 
-$\rightarrow$ OSLiC, pp.\ \pageref{OSUC-01-DEF} - \pageref{OSUC-09-DEF}}
-
-\item[requires] no tasks in order to fulfill the conditions of the EUPL 1.1
-license with respect to this use case:
-  \begin{itemize}
+  \begin{lsucrequiresnothing}
     \item You are allowed to use any kind of EUPL software in any sense and in
     any context without being obliged to do anything as long as you do not
-    give the software to 3rd parties.
-  \end{itemize}
+    give the software to third parties.
+  \end{lsucrequiresnothing}
   
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products -- based on the this software
-  -- by trade names, trademarks, service marks, or names linked to this EUPL
-  software, except as required for reasonable and customary use in describing the origin
-  of the software and reproducing the copyright notice.
-\end{itemize}
-
-\end{description}
+  \begin{lsucprohibits}
+    \lsucitem{\noTrademarks}
+  \end{lsucprohibits}
+\end{lsuc}
 
 \subsection{EUPL-C2: Passing the unmodified software as independent sources}
-\label{OSUC-02S-EUPL} \label{OSUC-05S-EUPL}
+\begin{lsuc}{EUPL-C2}
+  \linkosuc{02S}
+  \linkosuc{05S}
 
-\begin{description}
+  \lsucmeans{that you are going to distribute an unmodified version of the EUPL
+    software that you received to third parties as an independent unit and in
+    the form of source code files or as a source code package. In this case, it
+    makes no difference if you distribute a program, an application, a server, a
+    snippet, a module, a library, or a plugin.}
 
-\item[means] that you are going to distribute an unmodified version of the
-received EUPL software to 3rd parties -- as an independent unit and in the form
-of source code files or as a source code package. In this case, it is not
-discriminating to distribute a program, an application, a server, a
-snippet, a module, a library, or a plugin.
+  \lsuccovers{OSUC-02S, OSUC-05S\footnote{For details $\rightarrow$ OSLiC,
+      pp.\ \pageref{OSUC-02S-DEF} - \pageref{OSUC-05S-DEF}}} 
 
-\item[covers] OSUC-02S, OSUC-05S\footnote{For details $\rightarrow$
-OSLiC, pp.\ \pageref{OSUC-02S-DEF} - \pageref{OSUC-05S-DEF}}
-
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
+  \begin{lsucrequires}
+    \lsucmandatory{Ensure that the licensing elements -- esp.\ the
+      copyright, patent or trademarks notices and all notices that refer to the
+      license and to the disclaimer of warranties -- are retained in your package in
+      the form you have received them.}
   
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
-  copyright, patent or trademarks notices and all notices that refer to the
-  license and to the disclaimer of warranties -- are retained in your package in
-  the form you have received them.
+    \lsucmandatory{Give the recipient a copy of the EUPL 1.1
+      license. If it is not already part of the software package, add it.}%
+    \footnote{For implementing the handover of files correctly $\rightarrow$
+      OSLiC, p. \pageref{DistributingFilesHint}}.
   
-  \item \textbf{[mandatory:]} Give the recipient a copy of the EUPL 1.1
-  license. If it is not already part of the software package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
-  
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also reproduce the content of the existing
-  \emph{copyright notice text files}, a hint to the software name, a link to its
-  homepage, and a link to the EUPL 1.1 license.
-\end{itemize}
+    \lsucoptional{Let the documentation of your distribution and/or
+      your additional material also reproduce the content of the existing
+      \emph{copyright notice text files}, a hint to the software name, a link to its
+      homepage, and a link to the EUPL 1.1 license.}
+  \end{lsucrequires}
 
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products -- based on the this software
-  -- by trade names, trademarks, service marks, or names linked to this EUPL
-  software, except as required for reasonable and customary use in describing the origin
-  of the software and reproducing the copyright notice.
-\end{itemize}
+  \begin{lsucprohibits}
+    \lsucitem{\noTrademarks}
+  \end{lsucprohibits}
 
-\end{description}
+\end{lsuc}
 
 
 \subsection{EUPL-C3: Passing the unmodified software as independent binaries} 
-\label{OSUC-02B-EUPL} \label{OSUC-05B-EUPL}
+\begin{lsuc}{EUPL-C3}
+  \label{02B}
+  \label{05B}
 
-\begin{description}
+  \lsucmeans{that you are going to distribute an unmodified version of the EUPL
+    software that you received to third parties as an independent unit and in
+    the form of binary files or as a binary package. In this case, it makes no
+    difference if you distribute a program, an application, a server, a snippet,
+    a module, a library, or a plugin.}
 
-\item[means] that you are going to distribute an unmodified version of the
-received EUPL software to 3rd parties -- as an independent unit and in the form
-of binary files or as a binary package. In this case, it is not discriminating
-to distribute a program, an application, a server, a snippet, a module, a
-library, or a plugin.
+  \lsuccovers{OSUC-02B, OSUC-05B\footnote{For details $\rightarrow$ OSLiC,
+      pp.\ \pageref{OSUC-02B-DEF} - \pageref{OSUC-05B-DEF}}} 
 
-\item[covers] OSUC-02B, OSUC-05B\footnote{For details $\rightarrow$
-OSLiC, pp.\ \pageref{OSUC-02B-DEF} - \pageref{OSUC-05B-DEF}}
-
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
+  \begin{lsucrequires}
+    \lsucmandatory{Ensure that the licensing elements -- esp.\ the
+      copyright, patent or trademarks notices and all notices that refer to the
+      license and to the disclaimer of warranties -- are retained in your package in
+      the form you have received them. If you compile the binary from the sources,
+      ensure that all the licensing elements are also incorporated into the package.}
   
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
-  copyright, patent or trademarks notices and all notices that refer to the
-  license and to the disclaimer of warranties -- are retained in your package in
-  the form you have received them. If you compile the binary from the sources,
-  ensure that all the licensing elements are also incorporated into the package.
-  
-  \item \textbf{[mandatory:]} Give the recipient a copy of the EUPL 1.1
-  license. If it is not already part of the binary package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
+    \lsucmandatory{Give the recipient a copy of the EUPL 1.1
+      license. If it is not already part of the binary package, add it.}%
+    \footnote{For implementing the handover of files correctly $\rightarrow$
+      OSLiC, p. \pageref{DistributingFilesHint}}.
 
-  \item \textbf{[mandatory:]} Make the source code of the distributed software
-  accessible via a repository under your own control (even if you do not
-  modified it): Push the source code package into a repository, make it
-  downloadable via the internet, and integrate an easily to find description
-  into the distribution package which explains how the code can be received from
-  where. Ensure, that this repository is online for as long as you continue to
-  distribute the software.
+    \lsucmandatory{Make the source code of the distributed software
+      accessible via a repository under your own control (even if you do not
+      modified it): Push the source code package into a repository, make it
+      downloadable via the internet, and integrate an easily to find description
+      into the distribution package which explains how the code can be received from
+      where. Ensure, that this repository is online for as long as you continue to
+      distribute the software.}
   
- \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
-  into your distribution and/or your additional material.
+    \lsucmandatory{Insert a prominent hint to the download repository
+      into your distribution and/or your additional material.}
   
-  \item \textbf{[mandatory:]} Execute the to-do list of use case EUPL-C2\footnote{
-  Making the code accessible via a repository means distributing the software in
-  the form of source code. Hence, you must also fulfill all tasks of the
-  corresponding use case.}.
+    \lsucmandatory{Execute the to-do list of use case EUPL-C2.}%
+    \footnote{Making the code accessible via a repository means distributing the
+      software in the form of source code. Hence, you must also fulfill all
+      tasks of the corresponding use case.}
  
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also reproduce the content of the existing
-  \emph{copyright notice text files}, a hint to the software name, a link to its
-  homepage, and a link to the EUPL 1.1 license.
-\end{itemize}
+    \lsucoptional{Let the documentation of your distribution and/or
+      your additional material also reproduce the content of the existing
+      \emph{copyright notice text files}, a hint to the software name, a link to its
+      homepage, and a link to the EUPL 1.1 license.}
+  \end{lsucrequires}
 
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products -- based on the this software
-  -- by trade names, trademarks, service marks, or names linked to this EUPL
-  software, except as required for reasonable and customary use in describing the origin
-  of the software and reproducing the  copyright notice.
-\end{itemize}
+  \begin{lsucprohibits}
+    \lsucitem{\noTrademarks}
+  \end{lsucprohibits}
 
-\end{description}
+\end{lsuc}
+
 
 \subsection{EUPL-C4: Passing the unmodified library as embedded sources}
-\label{OSUC-07S-EUPL}
+\begin{lsuc}{EUPL-C4}
+  \label{07S}
 
-\begin{description}
+  \lsucmeans{that you are going to distribute an unmodified version of the EUPL
+    licensed snippet, module or library that you received to third parties as
+    embedded component of a larger unit and in the form of source code files or
+    as a source code package.}
 
-\item[means] that you are going to distribute an unmodified version of the
-received EUPL licensed snippet, module or library to 3rd parties -- as embedded
-component of a larger unit and in the form of source code files or as a source
-code package.
+  \lsuccovers{OSUC-07S\footnote{For details $\rightarrow$ OSLiC,
+      pp.\ \pageref{OSUC-07S-DEF}}} 
 
-\item[covers] OSUC-07S\footnote{For details $\rightarrow$
-OSLiC, pp.\ \pageref{OSUC-07S-DEF}}
-
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
+  \begin{lsucrequires}
+    \lsucmandatory{Ensure that the licensing elements -- esp.\ the
+      copyright, patent or trademarks notices and all notices that refer to the
+      license and to the disclaimer of warranties -- are retained in your package in
+      the form you have received them.}
   
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
-  copyright, patent or trademarks notices and all notices that refer to the
-  license and to the disclaimer of warranties -- are retained in your package in
-  the form you have received them.
+    \lsucmandatory{Give the recipient a copy of the EUPL 1.1
+      license. If it is not already part of the software package, add it}.%
+    \footnote{For implementing the handover of files correctly $\rightarrow$
+      OSLiC, p. \pageref{DistributingFilesHint}}.
   
-  \item \textbf{[mandatory:]} Give the recipient a copy of the EUPL 1.1
-  license. If it is not already part of the software package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
+    \lsucmandatory{License your overarching program also under the
+      EUPL 1.1; Organize the sources of the on-top development in a way that they
+      are also covered by the EUPL-1.1 licensing statements.}
+
+    \lsucoptional{Let the copyright dialog of the on-top development
+      clearly say, that it uses the EUPL-1.1 licensed library and that it is itself
+      licensed under the EUPL-1.1 too.}
   
-  \item \textbf{[mandatory:]} License your overarching program also under the
-  EUPL 1.1; Organize the sources of the on-top development in a way that they
-  are also covered by the EUPL-1.1 licensing statements.
+    \lsucoptional{Let the documentation of your distribution and/or
+      your additional material also reproduce the content of the existing
+      \emph{copyright notice text files}, a hint to the software name, a link to its
+      homepage, and a link to the EUPL 1.1 license.}
+  \end{lsucrequires}
 
-  \item \textbf{[voluntary:]} Let the copyright dialog of the on-top development
-  clearly say, that it uses the EUPL-1.1 licensed library and that it is itself
-  licensed under the EUPL-1.1 too.
-  
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also reproduce the content of the existing
-  \emph{copyright notice text files}, a hint to the software name, a link to its
-  homepage, and a link to the EUPL 1.1 license.
-\end{itemize}
+  \begin{lsucprohibits}
+    \lsucitem{\noTrademarks}
+  \end{lsucprohibits}
 
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products -- based on the this software
-  -- by trade names, trademarks, service marks, or names linked to this EUPL
-  software, except as required for reasonable and customary use in describing the origin
-  of the software and reproducing the  copyright notice.
-\end{itemize}
-
-\end{description}
-
+\end{lsuc}
 
 \subsection{EUPL-C5: Passing the unmodified library as embedded binaries} 
-\label{OSUC-07B-EUPL}
+\begin{lsuc}{EUPL-C5}
+  \linkosuc{07B}
 
-\begin{description}
-\item[means] that you are going to distribute an unmodified version of the
-received EUPL licensed snippet, module or library to 3rd parties -- as embedded
-component of a larger unit and in the form of binary files or as a bi\-na\-ry
-package.
+  \lsucmeans{that you are going to distribute an unmodified version of the EUPL
+    licensed snippet, module or library that you received to third parties as
+    embedded component of a larger unit and in the form of binary files or as a
+    binary package.}
 
-\item[covers] OSUC-07B\footnote{For details $\rightarrow$
-OSLiC, pp.\ \pageref{OSUC-07B-DEF}}
+  \lsuccovers{OSUC-07B\footnote{For details $\rightarrow$ OSLiC,
+      pp.\ \pageref{OSUC-07B-DEF}}} 
 
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
+  \begin{lsucrequires}
+    \lsucmandatory{Ensure that the licensing elements -- esp.\ the
+      copyright, patent or trademarks notices and all notices that refer to the
+      license and to the disclaimer of warranties -- are retained in your package in
+      the form you have received them. If you compile the binary from the sources,
+      ensure that all the licensing elements are also incorporated into the package.}
   
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
-  copyright, patent or trademarks notices and all notices that refer to the
-  license and to the disclaimer of warranties -- are retained in your package in
-  the form you have received them. If you compile the binary from the sources,
-  ensure that all the licensing elements are also incorporated into the package.
-  
-  \item \textbf{[mandatory:]} Give the recipient a copy of the EUPL 1.1
-  license. If it is not already part of the binary package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
+    \lsucmandatory{Give the recipient a copy of the EUPL 1.1
+      license. If it is not already part of the binary package, add it.}%
+    \footnote{For implementing the handover of files correctly $\rightarrow$
+      OSLiC, p. \pageref{DistributingFilesHint}}.
 
-  \item \textbf{[mandatory:]} Make the source code of the embedded library
-  \textbf{\emph{and}} the source code of your overarching program accessible via
-  a repository under your own control (even if you do not modified it): Push the
-  source code package into a repository, make it downloadable via the internet,
-  and integrate an easily to find description into the distribution package
-  which explains how the code can be received from where. Ensure, that this
-  repository is online for as long as you continue to distribute the software.
+    \lsucmandatory{Make the source code of the embedded library
+      \textbf{\emph{and}} the source code of your overarching program accessible via
+      a repository under your own control (even if you do not modified it): Push the
+      source code package into a repository, make it downloadable via the internet,
+      and integrate an easily to find description into the distribution package
+      which explains how the code can be received from where. Ensure, that this
+      repository is online for as long as you continue to distribute the software.}
   
-  \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
-  into your distribution and/or your additional material.
+    \lsucmandatory{Insert a prominent hint to the download repository
+      into your distribution and/or your additional material.}
   
-  \item \textbf{[mandatory:]} License your overarching program also under the
-  EUPL 1.1: Organize the binaries of the on-top development in a way that they
-  are also covered by the EUPL-1.1 licensing statements.
+    \lsucmandatory{License your overarching program also under the
+      EUPL 1.1: Organize the binaries of the on-top development in a way that they
+      are also covered by the EUPL-1.1 licensing statements.}
   
-  \item \textbf{[mandatory:]} Execute the to-do list of use case EUPL-C4\footnote{
-  Making the code accessible via a repository means distributing the software in
-  the form of source code. Hence, you must also fulfill all tasks of the
-  corresponding use case.}.
+    \lsucmandatory{Execute the to-do list of use case EUPL-C4.}%
+    \footnote{Making the code accessible via a repository means distributing the
+      software in the form of source code. Hence, you must also fulfill all
+      tasks of the corresponding use case.}
   
- \item \textbf{[voluntary:]} Let the copyright dialog of the on-top development
-  clearly say, that it uses the EUPL-1.1 licensed library and that it is itself
-  licensed under the EUPL-1.1 too.
+    \lsucoptional{Let the copyright dialog of the on-top development
+      clearly say, that it uses the EUPL-1.1 licensed library and that it is itself
+      licensed under the EUPL-1.1 too.}
  
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also reproduce the content of the existing
-  \emph{copyright notice text files}, a hint to the software name, a link to its
-  homepage, and a link to the EUPL 1.1 license.
-\end{itemize}
+    \lsucoptional{Let the documentation of your distribution and/or
+      your additional material also reproduce the content of the existing
+      \emph{copyright notice text files}, a hint to the software name, a link to its
+      homepage, and a link to the EUPL 1.1 license.}
+  \end{lsucrequires}
 
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products -- based on the this software
-  -- by trade names, trademarks, service marks, or names linked to this EUPL
-  software, except as required for reasonable and customary use in describing the origin
-  of the software and reproducing the  copyright notice.
-\end{itemize}
+  \begin{lsucprohibits}
+    \lsucitem{\noTrademarks}
+  \end{lsucprohibits}
 
-\end{description}
+\end{lsuc}
+
 
 \subsection{EUPL-C6: Passing a modified program as source code}
-\label{OSUC-04S-EUPL} 
+\begin{lsuc}{EUPL-C6}
+  \label{04S} 
 
-\begin{description}
-\item[means] that you are going to distribute a modified version of the received
-EUPL licensed program, application, or server (proapse) to 3rd parties -- in the
-form of source code files or as a source code package.
-\item[covers] OSUC-04S\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-04S-DEF}}
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
-  
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
-  copyright, patent or trademarks notices and all notices that refer to the
-  license and to the disclaimer of warranties -- are retained in your package in
-  the form you have received them.
-  
-  \item \textbf{[mandatory:]} Give the recipient a copy of the EUPL 1.1
-  license. If it is not already part of the software package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
+  \lsucmeans{that you are going to distribute a modified version of the EUPL
+    licensed program, application, or server (proapse) that you received to
+    third parties in the form of source code files or as a source code package.} 
 
-  \item \textbf{[mandatory:]} Create a \emph{modification text file}, if such a
-  notice file still does not exist. \emph{Expand} the \emph{modification text
-  file} by a description of your modifications.
+  \lsuccovers{OSUC-04S\footnote{For details $\rightarrow$ OSLiC,
+      pp.\ \pageref{OSUC-04S-DEF}}} 
+
+  \begin{lsucrequires}
+    \lsucmandatory{Ensure that the licensing elements -- esp.\ the
+      copyright, patent or trademarks notices and all notices that refer to the
+      license and to the disclaimer of warranties -- are retained in your package in
+      the form you have received them.}
+  
+    \lsucmandatory{Give the recipient a copy of the EUPL 1.1
+      license. If it is not already part of the software package, add it.}%
+    \footnote{For implementing the handover of files correctly $\rightarrow$
+      OSLiC, p. \pageref{DistributingFilesHint}}.
+
+    \lsucmandatory{Create a \emph{modification text file}, if such a
+      notice file still does not exist. \emph{Expand} the \emph{modification text
+        file} by a description of your modifications.}
     
-  \item \textbf{[mandatory:]} Mark all modifications of source code of the
-  program (proapse) thoroughly -- namely within the source code and including
-  the date of the modification.
+    \lsucmandatory{Mark all modifications of source code of the
+      program (proapse) thoroughly -- namely within the source code and including
+      the date of the modification.}
    
-  \item \textbf{[mandatory:]} Organize your modifications in a way that they are
-  covered by the existing EUPL licensing statements. If you add new source code
-  files, insert a header containing your copyright line and an EUPL adequate
-  licensing the statement.
+    \lsucmandatory{Organize your modifications in a way that they are
+      covered by the existing EUPL licensing statements. If you add new source code
+      files, insert a header containing your copyright line and an EUPL adequate
+      licensing the statement.}
    
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also reproduce the content of the existing
-  \emph{copyright notice text files}, a hint to the software name, a link to its
-  homepage, and a link to the EUPL 1.1 license.
-  
- \end{itemize}
+    \lsucoptional{Let the documentation of your distribution and/or
+      your additional material also reproduce the content of the existing
+      \emph{copyright notice text files}, a hint to the software name, a link to its
+      homepage, and a link to the EUPL 1.1 license.}
+  \end{lsucrequires}
  
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products -- based on the this software
-  -- by trade names, trademarks, service marks, or names linked to this EUPL
-  software, except as required for reasonable and customary use in describing the origin
-  of the software and reproducing the  copyright notice.
-\end{itemize}
+  \begin{lsucprohibits}
+    \lsucitem{\noTrademarks}
+  \end{lsucprohibits}
 
-\end{description}
+\end{lsuc}
 
 \subsection{EUPL-C7: Passing a modified program as binary}
-\label{OSUC-04B-EUPL}
+\begin{lsuc}{EUPL-C7}
+  \linkosuc{04B}
 
-\begin{description}
-\item[means] that you are going to distribute a modified version of the received
-EUPL licensed pro\-gram, application, or server (proapse) to 3rd parties -- in
-the form of binary files or as a binary package.
-\item[covers] OSUC-04B\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-04B-DEF}}
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
+  \lsucmeans{that you are going to distribute a modified version of the EUPL
+    licensed program, application, or server (proapse) that you received to
+    third parties in the form of binary files or as a binary package.}
 
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
-  copyright, patent or trademarks notices and all notices that refer to the
-  license and to the disclaimer of warranties -- are retained in your package in
-  the form you have received them. If you compile the binary from the sources,
-  ensure that all the licensing elements are also incorporated into the package.
+  \lsuccovers{OSUC-04B\footnote{For details $\rightarrow$ OSLiC,
+      pp.\ \pageref{OSUC-04B-DEF}}} 
 
- \item \textbf{[mandatory:]} Give the recipient a copy of the EUPL 1.1
-  license. If it is not already part of the binary package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
+  \begin{lsucrequires}
+    \lsucmandatory{Ensure that the licensing elements -- esp.\ the
+      copyright, patent or trademarks notices and all notices that refer to the
+      license and to the disclaimer of warranties -- are retained in your package in
+      the form you have received them. If you compile the binary from the sources,
+      ensure that all the licensing elements are also incorporated into the package.}
+
+    \lsucmandatory{Give the recipient a copy of the EUPL 1.1
+      license. If it is not already part of the binary package, add it}.%
+    \footnote{For implementing the handover of files correctly $\rightarrow$
+      OSLiC, p. \pageref{DistributingFilesHint}}.
   
-  \item \textbf{[mandatory:]} Create a \emph{modification text file}, if such a
-  notice file still does not exist. \emph{Expand} the \emph{modification text
-  file} by a description of your modifications.
+    \lsucmandatory{Create a \emph{modification text file}, if such a
+      notice file still does not exist. \emph{Expand} the \emph{modification text
+        file} by a description of your modifications.}
 
-  \item \textbf{[mandatory:]} Organize your modifications in a way that they are
-  covered by the existing EUPL licensing statements.
+    \lsucmandatory{Organize your modifications in a way that they are
+      covered by the existing EUPL licensing statements.}
   
-  \item \textbf{[mandatory:]} Make the source code of the distributed software
-  accessible via a repository under your own control: Push the source code
-  package into a repository, make it downloadable via the internet, and
-  integrate an easily to find description into the distribution package which
-  explains how the code can be received from where. Ensure, that this repository
-  is online for as long as you continue to distribute the software.
+    \lsucmandatory{Make the source code of the distributed software
+      accessible via a repository under your own control: Push the source code
+      package into a repository, make it downloadable via the internet, and
+      integrate an easily to find description into the distribution package which
+      explains how the code can be received from where. Ensure, that this repository
+      is online for as long as you continue to distribute the software.}
   
-  \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
-  into your distribution and/or your additional material.
+    \lsucmandatory{Insert a prominent hint to the download repository
+      into your distribution and/or your additional material.}
     
-  \item \textbf{[mandatory:]} Execute the to-do list of use case EUPL-C6\footnote{
-  Making the code accessible via a repository means distributing the software in
-  the form of source code. Hence, you must also fulfill all tasks of the
-  corresponding use case.}.
+    \lsucmandatory{Execute the to-do list of use case EUPL-C6.}%
+    \footnote{Making the code accessible via a repository means distributing the
+      software in the form of source code. Hence, you must also fulfill all
+      tasks of the corresponding use case.}
   
-  \item \textbf{[voluntary:]} Mark all modifications of source code of the
-  program (proapse) thoroughly -- namely within the
-  source code and including the date of the modification.
- 
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material  also reproduce the content of the existing
-  \emph{copyright notice text files}, a hint to the software name, a link to its
-  homepage, and a link to the EUPL 1.1 license -- especially as a subsection of
-  your own copyright notice.
+    \lsucoptional{Mark all modifications of source code of the
+      program (proapse) thoroughly -- namely within the
+      source code and including the date of the modification.}
+    
+    \lsucoptional{Let the documentation of your distribution and/or
+      your additional material  also reproduce the content of the existing
+      \emph{copyright notice text files}, a hint to the software name, a link to its
+      homepage, and a link to the EUPL 1.1 license -- especially as a subsection of
+      your own copyright notice.}
+  \end{lsucrequires}
 
+  \begin{lsucprohibits}
+    \lsucitem{\noTrademarks}
+  \end{lsucprohibits}
 
-\end{itemize}
-
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products -- based on the this software
-  -- by trade names, trademarks, service marks, or names linked to this EUPL
-  software, except as required for reasonable and customary use in describing the origin
-  of the software and reproducing the  copyright notice.
-\end{itemize}
-
-\end{description}
+\end{lsuc}
 
 \subsection{EUPL-C8: Passing a modified library as independent source code}
-\label{OSUC-08S-EUPL}
+\begin{lsuc}{EUPL-C8}
+  \linkosuc{08S}
 
-\begin{description}
-\item[means] that you are going to distribute a modified version of the received
-EUPL licensed code snippet, module, library, or plugin (snimoli) to 3rd parties
--- in the form of source code files or as a source code package, but without
-embedding it into another larger software unit.
-\item[covers] OSUC-08S\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-08S-DEF}}
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
-  
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
-  copyright, patent or trademarks notices and all notices that refer to the
-  license and to the disclaimer of warranties -- are retained in your package in
-  the form you have received them.
-  
-  \item \textbf{[mandatory:]} Give the recipient a copy of the EUPL 1.1
-  license. If it is not already part of the software package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
+  \lsucmeans{that you are going to distribute a modified version of the EUPL
+    licensed code snippet, module, library, or plugin (snimoli) that you
+    received to third parties in the form of source code files or as a source
+    code package, but without embedding it into another larger software unit.}
 
-  \item \textbf{[mandatory:]} Create a \emph{modification text file}, if such a
-  notice file still does not exist. \emph{Expand} the \emph{modification text
-  file} by a description of your modifications.
+  \lsuccovers{OSUC-08S\footnote{For details $\rightarrow$ OSLiC,
+      pp.\ \pageref{OSUC-08S-DEF}}} 
+
+  \begin{lsucrequires}
+    \lsucmandatory{Ensure that the licensing elements -- esp.\ the
+      copyright, patent or trademarks notices and all notices that refer to the
+      license and to the disclaimer of warranties -- are retained in your package in
+      the form you have received them.}
   
-  \item \textbf{[mandatory:]} Mark all modifications of source code of the
-  library (snimoli) thoroughly -- namely within the source code and including
-  the date of the modification.
+    \lsucmandatory{Give the recipient a copy of the EUPL 1.1
+      license. If it is not already part of the software package, add it.}%
+    \footnote{For implementing the handover of files correctly $\rightarrow$
+      OSLiC, p. \pageref{DistributingFilesHint}}.
+
+    \lsucmandatory{Create a \emph{modification text file}, if such a
+      notice file still does not exist. \emph{Expand} the \emph{modification text
+        file} by a description of your modifications.}
+  
+    \lsucmandatory{Mark all modifications of source code of the
+      library (snimoli) thoroughly -- namely within the source code and including
+      the date of the modification.}
    
-  \item \textbf{[mandatory:]} Organize your modifications in a way that they are
-  covered by the existing EUPL licensing statements. If you add new source code
-  files, insert a header containing your copyright line and an EUPL adequate
-  licensing the statement.
+    \lsucmandatory{Organize your modifications in a way that they are
+      covered by the existing EUPL licensing statements. If you add new source code
+      files, insert a header containing your copyright line and an EUPL adequate
+      licensing the statement.}
   
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material  also reproduce the content of the existing
-  \emph{copyright notice text files}, a hint to the software name, a link to its
-  homepage, and a link to the EUPL 1.1 license.
+    \lsucoptional{Let the documentation of your distribution and/or
+      your additional material  also reproduce the content of the existing
+      \emph{copyright notice text files}, a hint to the software name, a link to its
+      homepage, and a link to the EUPL 1.1 license.}
+  \end{lsucrequires}
 
-\end{itemize}
+  \begin{lsucprohibits}
+    \lsucitem{\noTrademarks}
+  \end{lsucprohibits}
 
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products -- based on the this software
-  -- by trade names, trademarks, service marks, or names linked to this EUPL
-  software, except as required for reasonable and customary use in describing the origin
-  of the software and reproducing the  copyright notice.
-\end{itemize}
-
-\end{description}
-
+\end{lsuc}
 
 \subsection{EUPL-C9: Passing a modified library as independent binary}
-\label{OSUC-08B-EUPL}
+\begin{lsuc}{EUPL-C9}
+  \linkosuc{08B}
 
-\begin{description}
-\item[means] that you are going to distribute a modified version of the received
-EUPL licensed code snippet, module, library, or plugin (snimoli) to 3rd parties
--- in the form of binary files or as a binary package but without embedding it
-into another larger software unit.
-\item[covers] OSUC-08B\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-08B-DEF}}
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
+  \lsucmeans{that you are going to distribute a modified version of the EUPL
+    licensed code snippet, module, library, or plugin (snimoli) that you
+    received to third parties in the form of binary files or as a binary package
+    but without embedding it into another larger software unit.}
 
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
-  copyright, patent or trademarks notices and all notices that refer to the
-  license and to the disclaimer of warranties -- are retained in your package in
-  the form you have received them. If you compile the binary from the sources,
-  ensure that all the licensing elements are also incorporated into the package.
+  \lsuccovers{OSUC-08B\footnote{For details $\rightarrow$ OSLiC,
+      pp.\ \pageref{OSUC-08B-DEF}}} 
+
+  \begin{lsucrequires}
+    \lsucmandatory{Ensure that the licensing elements -- esp.\ the
+      copyright, patent or trademarks notices and all notices that refer to the
+      license and to the disclaimer of warranties -- are retained in your package in
+      the form you have received them. If you compile the binary from the sources,
+      ensure that all the licensing elements are also incorporated into the package.}
   
- \item \textbf{[mandatory:]} Give the recipient a copy of the EUPL 1.1
-  license. If it is not already part of the binary package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
+    \lsucmandatory{Give the recipient a copy of the EUPL 1.1
+      license. If it is not already part of the binary package, add it.}%
+    \footnote{For implementing the handover of files correctly $\rightarrow$
+      OSLiC, p. \pageref{DistributingFilesHint}}.
 
-  \item \textbf{[mandatory:]} Create a \emph{modification text file}, if such a
-  notice file still does not exist. \emph{Expand} the \emph{modification text
-  file} by a description of your modifications.
+    \lsucmandatory{Create a \emph{modification text file}, if such a
+      notice file still does not exist. \emph{Expand} the \emph{modification text
+        file} by a description of your modifications.}
 
-  \item \textbf{[mandatory:]} Organize your modifications in a way that they are
-  covered by the existing EUPL licensing statements.
+    \lsucmandatory{Organize your modifications in a way that they are
+      covered by the existing EUPL licensing statements.}
   
-  \item \textbf{[mandatory:]} Make the source code of the distributed software
-  accessible via a repository under your own control: Push the source code
-  package into a repository, make it downloadable via the internet, and
-  integrate an easily to find description into the distribution package which
-  explains how the code can be received from where. Ensure, that this repository
-  is online for as long as you continue to distribute the software.
+    \lsucmandatory{Make the source code of the distributed software
+      accessible via a repository under your own control: Push the source code
+      package into a repository, make it downloadable via the internet, and
+      integrate an easily to find description into the distribution package which
+      explains how the code can be received from where. Ensure, that this repository
+      is online for as long as you continue to distribute the software.}
   
-  \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
-  into your distribution and/or your additional material.
+    \lsucmandatory{Insert a prominent hint to the download repository
+      into your distribution and/or your additional material.}
 
-  \item \textbf{[mandatory:]} Execute the to-do list of use case EUPL-C8\footnote{
-  Making the code accessible via a repository means distributing the software in
-  the form of source code. Hence, you must also fulfill all tasks of the
-  corresponding use case.}.
+    \lsucmandatory{Execute the to-do list of use case EUPL-C8.}%
+    \footnote{Making the code accessible via a repository means distributing the
+      software in the form of source code. Hence, you must also fulfill all
+      tasks of the corresponding use case.}
     
-  \item \textbf{[voluntary:]} Mark all modifications of source code of the
-  library (snimoli) thoroughly -- namely within the source code and including
-  the date of the modification.
+    \lsucoptional{Mark all modifications of source code of the
+      library (snimoli) thoroughly -- namely within the source code and including
+      the date of the modification.}
   
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material  also reproduce the content of the existing
-  \emph{copyright notice text files}, a hint to the software name, a link to its
-  homepage, and a link to the EUPL 1.1 license -- especially as a subsection of
-  your own copyright notice.
-  
-\end{itemize}
+    \lsucoptional{Let the documentation of your distribution and/or
+      your additional material  also reproduce the content of the existing
+      \emph{copyright notice text files}, a hint to the software name, a link to its
+      homepage, and a link to the EUPL 1.1 license -- especially as a subsection of
+      your own copyright notice.}
+  \end{lsucrequires}
 
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products -- based on the this software
-  -- by trade names, trademarks, service marks, or names linked to this EUPL
-  software, except as required for reasonable and customary use in describing the origin
-  of the software and reproducing the  copyright notice.
-\end{itemize}
+  \begin{lsucprohibits}
+    \lsucitem{\noTrademarks}
+  \end{lsucprohibits}
 
-\end{description}
+\end{lsuc}
 
 \subsection{EUPL-CA: Passing a modified library as embedded source code}
-\label{OSUC-10S-EUPL}
+\begin{lsuc}{EUPL-CA}
+  \label{10S}
 
-\begin{description}
-\item[means] that you are going to distribute a modified version of the received
-EUPL licensed code snippet, module, library, or plugin (snimoli) to 3rd parties
--- in the form of source code files or as a source code package together with
-another larger software unit which contains this code snippet, module, library,
-or plugin as an embedded component.
-\item[covers] OSUC-10S\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-10S-DEF}}
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
+  \lsucmeans{that you are going to distribute a modified version of the EUPL
+    licensed code snippet, module, library, or plugin (snimoli) that you
+    received to third parties in the form of source code files or as a source
+    code package together with another larger software unit which contains this
+    code snippet, module, library, or plugin as an embedded component.}
 
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
-  copyright, patent or trademarks notices and all notices that refer to the
-  license and to the disclaimer of warranties -- are retained in your package in
-  the form you have received them.
+  \lsuccovers{OSUC-10S\footnote{For details $\rightarrow$ OSLiC,
+      pp.\ \pageref{OSUC-10S-DEF}}} 
 
-  \item \textbf{[mandatory:]} Give the recipient a copy of the EUPL 1.1
-  license. If it is not already part of the software package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
+  \begin{lsucrequires}
+    \lsucmandatory{Ensure that the licensing elements -- esp.\ the
+      copyright, patent or trademarks notices and all notices that refer to the
+      license and to the disclaimer of warranties -- are retained in your package in
+      the form you have received them.}
 
-  \item \textbf{[mandatory:]} Create a \emph{modification text file}, if such a
-  notice file still does not exist. \emph{Expand} the \emph{modification text
-  file} by a description of your modifications.
+    \lsucmandatory{Give the recipient a copy of the EUPL 1.1
+      license. If it is not already part of the software package, add it.}%
+    \footnote{For implementing the handover of files correctly $\rightarrow$
+      OSLiC, p. \pageref{DistributingFilesHint}}.
+
+    \lsucmandatory{Create a \emph{modification text file}, if such a
+      notice file still does not exist. \emph{Expand} the \emph{modification text
+        file} by a description of your modifications.}
   
-  \item \textbf{[mandatory:]} Organize your modifications of the embedded
-  library in a way that they are covered by the existing EUPL licensing
-  statements. If you add new source code files into the scope of the library,
-  insert a header containing your copyright line and an EUPL adequate licensing
-  the statement.
+    \lsucmandatory{Organize your modifications of the embedded
+      library in a way that they are covered by the existing EUPL licensing
+      statements. If you add new source code files into the scope of the library,
+      insert a header containing your copyright line and an EUPL adequate licensing
+      the statement.}
   
-  \item \textbf{[mandatory:]} License your overarching program also under the
-  EUPL 1.1.
+    \lsucmandatory{License your overarching program also under the EUPL 1.1.}
   
-  \item \textbf{[mandatory:]} Mark all modifications of source code of the
-  embedded library (snimoli) thoroughly -- namely within the source code and
-  including the date of the modification.
+    \lsucmandatory{Mark all modifications of source code of the
+      embedded library (snimoli) thoroughly -- namely within the source code and
+      including the date of the modification.}
   
-  \item \textbf{[voluntary:]} Let the copyright dialog of the on-top development
-  clearly say, that it uses the EUPL-1.1 licensed library and that it is itself
-  licensed under the EUPL-1.1 too.
+    \lsucoptional{Let the copyright dialog of the on-top development
+      clearly say, that it uses the EUPL-1.1 licensed library and that it is itself
+      licensed under the EUPL-1.1 too.}
   
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material  also reproduce the content of the existing
-  \emph{copyright notice text files}, a hint to the name of the used EUPL
-  licensed component, a link to its homepage, and a link to the EUPL 1.1 license
-  -- especially as subsection of your own copyright notice.
- 
-\end{itemize}
+    \lsucoptional{Let the documentation of your distribution and/or
+      your additional material  also reproduce the content of the existing
+      \emph{copyright notice text files}, a hint to the name of the used EUPL
+      licensed component, a link to its homepage, and a link to the EUPL 1.1 license
+      -- especially as subsection of your own copyright notice.}
+  \end{lsucrequires}
 
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products -- based on the this software
-  -- by trade names, trademarks, service marks, or names linked to this EUPL
-  software, except as required for reasonable and customary use in describing the origin
-  of the software and reproducing the  copyright notice.
-\end{itemize}
+  \begin{lsucprohibits}
+    \lsucitem{\noTrademarks}
+  \end{lsucprohibits}
 
-\end{description}
+\end{lsuc}
 
 
 \subsection{EUPL-CB: Passing a modified library as embedded binary}
-\label{OSUC-10B-EUPL}
+\begin{lsuc}{EUPL-CB}
+  \linkosuc{10B}
 
-\begin{description}
-\item[means] that you are going to distribute a modified version of the received
-EUPL licensed code snippet, module, library, or plugin to 3rd parties -- in the
-form of binary files or as a binary package together with another larger
-software unit which contains this code snippet, module, library, or plugin as an
-embedded component.
-\item[covers] OSUC-10B\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-10B-DEF}}
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
+  \lsucmeans{that you are going to distribute a modified version of the EUPL
+    licensed code snippet, module, library, or plugin that you received to third 
+    parties in the form of binary files or as a binary package together with
+    another larger software unit which contains this code snippet, module,
+    library, or plugin as an embedded component.}
+
+  \lsuccovers{OSUC-10B\footnote{For details $\rightarrow$ OSLiC,
+      pp.\ \pageref{OSUC-10B-DEF}}} 
+
+  \begin{lsucrequires}
+    \lsucmandatory{Ensure that the licensing elements -- esp.\ the
+      copyright, patent or trademarks notices and all notices that refer to the
+      license and to the disclaimer of warranties -- are retained in your package in
+      the form you have received them. If you compile the binary from the sources,
+      ensure that all the licensing elements are also incorporated into the package.}
   
-  
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ the
-  copyright, patent or trademarks notices and all notices that refer to the
-  license and to the disclaimer of warranties -- are retained in your package in
-  the form you have received them. If you compile the binary from the sources,
-  ensure that all the licensing elements are also incorporated into the package.
-  
-  \item \textbf{[mandatory:]} Give the recipient a copy of the EUPL 1.1
-  license. If it is not already part of the binary package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
+    \lsucmandatory{Give the recipient a copy of the EUPL 1.1
+      license. If it is not already part of the binary package, add it.}%
+    \footnote{For implementing the handover of files correctly $\rightarrow$
+      OSLiC, p. \pageref{DistributingFilesHint}}.
  
-  \item \textbf{[mandatory:]} Create a \emph{modification text file}, if such a
-  notice file still does not exist. \emph{Expand} the \emph{modification text
-  file} by a description of your modifications.
+    \lsucmandatory{Create a \emph{modification text file}, if such a
+      notice file still does not exist. \emph{Expand} the \emph{modification text
+        file} by a description of your modifications.}
   
-  \item \textbf{[mandatory:]} Make the source code of the embedded library and
-  the source code of your overarching program accessible via a repository under
-  your own control \footnote{Formally, the EUPL-1.1 is only a license with weak
-  copyleft. But this is only a result of the allowance to relicense the software
-  ($\rightarrow$ OSLiC, p.\ \protectionpageref{EUPL}). So, as long as
-  you do not relicense the embedded library with respect to the list of
-  \enquote{compatible licenses accodring to article 5 EUPL} (\cite[cf.][\nopage
-  wp §5 and Appendix]{EuplLicense2007en}), you also have to publish the code of
-  your overarching work.}: Push the source code package into a repository and
-  make it downloadable via the internet. Integrate an easily to find description
-  into the distribution package which explains how the code can be received from
-  where. Ensure, that this repository is online for as long as you continue to
-  distribute the software.
+    \lsucmandatory{Make the source code of the embedded library and
+      the source code of your overarching program accessible via a repository under
+      your own control: Push the source code package into a repository and
+      make it downloadable via the internet. Integrate an easily to find description
+      into the distribution package which explains how the code can be received from
+      where. Ensure, that this repository is online for as long as you continue to
+      distribute the software.}%
+    \footnote{Formally, the EUPL-1.1 is only a license with weak
+      copyleft. But this is only a result of the allowance to relicense the software
+      ($\rightarrow$ OSLiC, p.\ \protectionpageref{EUPL}). So, as long as
+      you do not relicense the embedded library with respect to the list of
+      \enquote{compatible licenses accodring to article 5 EUPL} (\cite[cf.][\nopage
+        wp §5 and Appendix]{EuplLicense2007en}), you also have to publish the code of
+      your overarching work.}
   
-  \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
-  into your distribution and/or your additional material.
-  
-  \item \textbf{[mandatory:]} Execute the to-do list of use case EUPL-CA\footnote{
-  Making the code accessible via a repository means distributing the software in
-  the form of source code. Hence, you must also fulfill all tasks of the
-  corresponding use case.}.
-  
-  \item \textbf{[mandatory:]} Organize your modifications of the embedded
-  library in a way that they are covered by the existing EUPL licensing
-  statements. 
-  
-  \item \textbf{[mandatory:]} License your overarching program also under the
-  EUPL 1.1.
-  
-  \item \textbf{[voluntary:]} Mark all modifications of source code of the
-  embedded library (snimoli) thoroughly -- namely within the source code and
-  including the date of the modification.
+    \lsucmandatory{Insert a prominent hint to the download repository
+      into your distribution and/or your additional material.}
+    
+    \lsucmandatory{Execute the to-do list of use case EUPL-CA.}
+    \footnote{Making the code accessible via a repository means distributing the
+      software in the form of source code. Hence, you must also fulfill all tasks
+      of the corresponding use case.}
+    
+    \lsucmandatory{Organize your modifications of the embedded
+      library in a way that they are covered by the existing EUPL licensing
+      statements. }
+    
+    \lsucmandatory{License your overarching program also under the EUPL 1.1.}
+    
+    \lsucoptional{Mark all modifications of source code of the
+      embedded library (snimoli) thoroughly -- namely within the source code and
+      including the date of the modification.}
+    
+    \lsucoptional{Let the documentation of your distribution and/or
+      your additional material  also reproduce the content of the existing
+      \emph{copyright notice text files}, a hint to the name of the used EUPL
+      licensed component, a link to its homepage, and a link to the EUPL 1.1 license
+      -- especially as subsection of your own copyright notice.}
+  \end{lsucrequires}
 
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material  also reproduce the content of the existing
-  \emph{copyright notice text files}, a hint to the name of the used EUPL
-  licensed component, a link to its homepage, and a link to the EUPL 1.1 license
-  -- especially as subsection of your own copyright notice.
-  
-\end{itemize}
+  \begin{lsucprohibits}
+    \lsucitem{\noTrademarks}
+  \end{lsucprohibits}
 
-\item[prohibits] \ldots
-\begin{itemize}
-  \item to promote any of your services or products -- based on the this software
-  -- by trade names, trademarks, service marks, or names linked to this EUPL
-  software, except as required for reasonable and customary use in describing the origin
-  of the software and reproducing the  copyright notice.
-\end{itemize}
-
-\end{description}
+\end{lsuc}
 
 \subsection{Discussions and Explanations}
 \begin{itemize}
   
-  \item The EUPL generally \enquote{[\ldots] does not grant permission to use
+\item The EUPL generally \enquote{[\ldots] does not grant permission to use
   the trade names, trademarks, service marks, or names of the Licensor, except
   as required for reasonable and customary use in describing the origin of the
-  Work and reproducing the content of the copyright
-  notice}\footcite[cf.][\nopage wp.\ §5]{EuplLicense2007en}. Therefore, the OSLiC
-  genreally interdicts (EUPL-C1 - EUPL-CB) to promote any service or product --
-  based on this software -- by such elements.
+  Work and reproducing the content of the copyright notice.}\citeEUPL{§5} 
+  Therefore, the OSLiC genreally interdicts (EUPL-C1 -- EUPL-CB) to promote any
+  service or product based on this software by such elements. 
 
-  \item The EUPL generally requires that \enquote{[\ldots] the Licensee shall
+\item The EUPL generally requires that \enquote{[\ldots] the Licensee shall
   keep intact all copyright, patent or trademarks notices and all notices that
-  refer to the Licence and to the disclaimer of
-  warranties}\footcite[cf.][\nopage wp.\ §5]{EuplLicense2007en}. In a very strict
-  reading, the EUPL does not limit this requirement to the distribution of the
-  software. But practically, it will be impossible to control the compliant use
-  of the software in those cases (\emph{4yourself}) without 'switching' into the
-  use case 'distribution'. Therefore the OSLiC only inserts this requirement as
-  a mandatory clause for the \emph{2others} use cases (EUPL-C2 - EUPL-CB).
+  refer to the Licence and to the disclaimer of warranties.}\citeEUPL{§5} 
+  In a very strict reading, the EUPL does not limit this requirement to the
+  distribution of the software. But in practise, it will be impossible to
+  control the compliant use of the software in those cases (\emph{4yourself})
+  without `switching' into the use case `distribution.' Therefore the OSLiC only
+  inserts this requirement as a mandatory clause for the \emph{2others} use
+  cases (EUPL-C2 -- EUPL-CB). 
   
-  \item The EUPL also requires to \enquote{[\ldots] include [\ldots] a copy of
-  the (EUPL) Licence with every (distributed) copy of the Work
-  [\ldots]}\footcite[cf.][\nopage wp.\ §5]{EuplLicense2007en}. Therefore, all
-  \emph{2others} use cases contain the respective mandatory condition (EUPL-C2 -
-  EUPL-CB).
+\item The EUPL also requires to \enquote{[\ldots] include [\ldots] a copy of
+  the (EUPL) Licence with every (distributed) copy of the Work}.\citeEUPL{§5}
+  Therefore, all \emph{2others} use cases contain the respective mandatory
+  condition (EUPL-C2 -- EUPL-CB).
   
-  \item Additionally, the EUPL requires that the \enquote{licensee} who
-  distributes a modified work \enquote{[\ldots] must cause any Derivative Work
+\item Additionally, the EUPL requires that the \enquote{licensee} who
+  distributes a modified work \enquote{[\ldots] must cause any Derivative Work 
   to carry prominent notices stating that the Work has been modified and the
-  date of modification}\footcite[cf.][\nopage wp.\ §5]{EuplLicense2007en}. Thus,
-  the OSLiC integrates the mandatory requirement to generate (update) a
-  respective notice file into all 'modification use cases and recommends to mark
-  all modifications in the source code (EUPL-C6 - EUPL-CB)
+  date of modification.}\citeEUPL{§5} 
+  Thus, the OSLiC integrates the mandatory requirement to generate (update) a
+  respective notice file into all `modification' use cases and recommends to mark
+  all modifications in the source code (EUPL-C6 -- EUPL-CB).
   
-  \item Furthermore, the EUPL requires that any distributor of the software
+\item Furthermore, the EUPL requires that any distributor of the software
   \enquote{[\ldots] provide a machine-readable copy of the Source Code [\ldots]}
   by \enquote{[\ldots] (indicating) a repository where this Source will be
   easily and freely available for as long as the Licensee continues to
-  distribute [\ldots] the Work}\footnote{\cite[cf.][\nopage wp.\
-  §5]{EuplLicense2007en}. To be precise, the EUPL also allows to directly
-  distribute the source code together with the binary packages
-  (\cite[cf.][\nopage wp.\ §3]{EuplLicense2007en}). With respect to the OSLiC
-  principle to offer only one reliable way, the OSLiC simplifies this option:
-  It 'only' asks for the repository solution.}. Therefore the OSLiC inserts a
-  respective requirement into the task list of all cases concerning a binary
-  distribution  (EUPL-C3, EUPL-C7, EUPL-C9, EUPL-CB)
+  distribute [\ldots] the Work.}%
+  \footnote{\cite[cf.][\nopage wp.\ §5]{EuplLicense2007en}. To be precise, the
+    EUPL also allows to directly distribute the source code together with the
+    binary packages (\cite[cf.][\nopage wp.\ §3]{EuplLicense2007en}). With
+    respect to the OSLiC principle to offer only one reliable way, the OSLiC
+    simplifies this option: It `only' asks for the repository solution.} 
+  Therefore the OSLiC inserts a respective requirement into the task list of all
+  cases concerning a binary distribution (EUPL-C3, EUPL-C7, EUPL-C9, and EUPL-CB)
   
-  \item Finally, the EUPL contains a \enquote{copyleft clause} stating that if a
+\item Finally, the EUPL contains a \enquote{copyleft clause} stating that if a
   \enquote{[\ldots] Licensee distributes [\ldots] copies of the Original Works
   or Derivative Works based upon the Original Work, this Distribution [...] will
   be done under the terms of this (EUPL) Licence [\ldots]}. In all the use cases
-  which do not concern the use of an embedded component (EUPL-C2 - EUPL-C9) this
+  which do not concern the use of an embedded component (EUPL-C2 -- EUPL-C9) this
   copyleft clause is already fulfilled by either distributing the modified
-  sources themselves of by making them accessible via a repository. In those
-  cases where the licensee distributes an overarching program which uses an EUPL
-  licensed component (EUPL-CA - EUPL-CB) normally also the code of the overarching
-  work must be distributed. Thus, with respect to the use case (EUPL-CA) this is
-  already fulfilled by definition. So, the OSLiC only mentions this default view
-  in the case EUPL-CB and therefore implicitly evokes a strong copyleft effect of
-  the EUPL\footnote{Formally, the EUPL-1.1 is a license with weak copyleft. But
-  this is only a result of the allowance to relicense the software
-  ($\rightarrow$ OSLiC, p.\ \protectionpageref{EUPL}). So, as long as
-  you do not relicense the embedded library with respect to the list of
-  \enquote{compatible licenses according to article 5 EUPL}, you also have to
-  publish the code of your overarching work. Therefore, you can only avoid this
-  consequence by relicensing the embedded component by one of the compatible
-  licenses with a weak copyleft listed in the EUPL appendix (\cite[cf.][\nopage
-  wp §5 and Appendix]{EuplLicense2007en})}.
-  
+  sources themselves or by making them accessible via a repository. In those
+  cases where the licensee distributes an program that uses an embedded EUPL
+  licensed component (EUPL-CA -- EUPL-CB), in general, the code of the embedding
+  program must also be distributed. Thus, with respect to the use case (EUPL-CA)
+  this is already fulfilled by definition. So, the OSLiC only mentions this
+  default view in the case EUPL-CB and therefore implicitly evokes a strong
+  copyleft effect of the EUPL.%
+  \footnote{Formally, the EUPL-1.1 is a license with weak copyleft. But this is
+    only a result of the allowance to relicense the software ($\rightarrow$
+    OSLiC, p.\ \protectionpageref{EUPL}). So, as long as you do not relicense
+    the embedded library with respect to the list of 
+    \enquote{compatible licenses according to article 5 EUPL}, you also have to
+    publish the code of your overarching work. Therefore, you can only avoid
+    this consequence by relicensing the embedded component by one of the
+    compatible licenses with a weak copyleft listed in the EUPL appendix
+    (\cite[cf.][\nopage wp §5 and Appendix]{EuplLicense2007en})} 
 
 \end{itemize}
+
+\end{license}
 
 %\bibliography{../../../bibfiles/oscResourcesEn}
 

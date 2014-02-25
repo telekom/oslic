@@ -25,30 +25,37 @@
 
 \section{BSD licensed software}
 
-As an approved open source license, the BSD license exists in two
-versions\footcite[Following the OSI, there is another 'ancient' 
-BSD license -- containing a fourth clause known as advertising clause -- which
-\enquote{(\ldots) officially was rescinded by the Director of the Office of
-Technology Licensing of the University of California on July 22nd, 1999}.
- Cf.][\nopage wp.\ Because of that cancellation you can simply act according the
- \textit{BSD 3-Clause license} if you have to fulfill the eldest BSD
- license]{BsdLicense3Clause}. The latest release is the \textit{BSD 2-Clause
- license}\footcite[cf.][\nopage wp]{BsdLicense2Clause}, the elder release is the
- \textit{BSD 3-Clause license}\footcite[cf.][\nopage wp]{BsdLicense3Clause}.
- The very little differences between the two versions have to be respected
- exactly. Nevertheless, we could integrate the requirements into one to-do list
- per use case.
+\begin{license}{BSD} % ends at end of file
+\licensename{ApLv2.0}
+\licensespec{Apache License 2.0}
+\licenseversion{2.0}
+\licenseabbrev{ApL}
 
-Explicitly, all BSD open source licenses 'only' focus on the (re-)distribution
-\textit{open source use cases} which we have specified by our token
+As an approved open source license, the BSD license exists in two
+versions%
+  \footnote{Following the OSI, there is another `ancient' BSD
+    license---containing a fourth clause known as advertising clause---which
+    \enquote{(\ldots) officially was rescinded by the Director of the Office of
+      Technology Licensing of the University of California on July 22nd, 1999}. 
+    Because of that cancellation you can simply act according the  
+    \cite[cf.][\nopage wp.]{BsdLicense3Clause} 
+    if you have to fulfill the oldest of the BSD licenses.}  
+The latest release is the \textit{BSD 2-Clause license,}\citeBSDsimple{} the older
+release is the \textit{BSD 3-Clause license.}\citeBSDnew{} The very little
+differences between the two versions have to be respected exactly. Nevertheless,
+we could integrate the requirements into one to-do list per use case.
+
+All BSD open source licenses focus explicitely on the (re-)distribution
+\textit{open source use cases,} which we have specified by our token
 \textit{2others}. Conditions for the other use cases specified by the token
-\textit{4yourself} can be derived\footnote{For details of the \textit{open
-source use case tokens} see p.\ \pageref{OsucTokens}. For details of the
-\textit{open source use cases} based on these token see p.
-\pageref{OsucDefinitionTree} }. Additionally the BSD licenses consider the form
-of the distribution, esp.\ whether the work is distributed as a (set of) source
-code file(s) or as a (set of) the binary file(s). Use the following tree to find
-the BSD license fulfilling to-do lists.
+\textit{4yourself} can be derived.%
+  \footnote{For details of the \textit{open source use case tokens} see
+    p.\ \pageref{OsucTokens}. For details of the \textit{open source use cases}
+    based on these token see p. \pageref{OsucDefinitionTree}} 
+Additionally the BSD licenses consider the form of the distribution,
+esp.\ whether the work is distributed as a (set of) source code file(s) or as a
+set of binary file(s). Use the following tree to find the BSD license fulfilling
+to-do lists. 
 
 \tikzstyle{nodv} = [font=\small, ellipse, draw, fill=gray!10, 
     text width=2cm, text centered, minimum height=2em]
@@ -565,6 +572,8 @@ missing. Therefore we added a third voluntary license tradition fulfilling
 task for all relevant open source use cases.
 
 \end{itemize}
+
+\end{license}
 
 %\bibliography{../../../bibfiles/oscResourcesEn}
 
