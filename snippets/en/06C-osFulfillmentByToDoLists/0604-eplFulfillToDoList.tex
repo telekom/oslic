@@ -153,6 +153,13 @@ library as embedded binaries}};
 % Forbid to change copyright notices
 \newcommand{\dontChangeCopyrightNotices}{to remove or to alter any copyright
   notices that were contained in the software package when you received it.} 
+  
+% ------------------------------------------------------------------------------
+% Forbid patent litigation
+\newcommand{\noPatentLitigation}{%
+  to institute a patent litigation against anyone alleging that the software
+  constitutes patent infringement.}
+  
 
 % ------------------------------------------------------------------------------
 % Require to keep licensing elements
@@ -272,6 +279,7 @@ library as embedded binaries}};
 
   \begin{lsucprohibits}
     \lsucitem{\dontChangeCopyrightNotices}
+    \lsucitem{\noPatentLitigation}
   \end{lsucprohibits}
 
 \end{lsuc}
@@ -304,6 +312,7 @@ library as embedded binaries}};
 
   \begin{lsucprohibits}
     \lsucitem{\dontChangeCopyrightNotices}
+    \lsucitem{\noPatentLitigation}
   \end{lsucprohibits}
 
 \end{lsuc}
@@ -339,6 +348,7 @@ library as embedded binaries}};
 
   \begin{lsucprohibits}
     \lsucitem{\dontChangeCopyrightNotices}
+    \lsucitem{\noPatentLitigation}
   \end{lsucprohibits}
 
 \end{lsuc}
@@ -369,6 +379,7 @@ library as embedded binaries}};
  
   \begin{lsucprohibits}
     \lsucitem{\dontChangeCopyrightNotices}
+    \lsucitem{\noPatentLitigation}
   \end{lsucprohibits}
 
 \end{lsuc}
@@ -401,6 +412,7 @@ library as embedded binaries}};
 
   \begin{lsucprohibits}
     \lsucitem{\dontChangeCopyrightNotices}
+    \lsucitem{\noPatentLitigation}
   \end{lsucprohibits}
 
 \end{lsuc}
@@ -432,6 +444,7 @@ library as embedded binaries}};
 
   \begin{lsucprohibits}
     \lsucitem{\dontChangeCopyrightNotices}
+    \lsucitem{\noPatentLitigation}
   \end{lsucprohibits}
 
 \end{lsuc}
@@ -465,6 +478,7 @@ library as embedded binaries}};
 
   \begin{lsucprohibits}
     \lsucitem{\dontChangeCopyrightNotices}
+    \lsucitem{\noPatentLitigation}
   \end{lsucprohibits}
 
 \end{lsuc}
@@ -498,6 +512,7 @@ library as embedded binaries}};
 
   \begin{lsucprohibits}
     \lsucitem{\dontChangeCopyrightNotices}
+    \lsucitem{\noPatentLitigation}
   \end{lsucprohibits}
 
 \end{lsuc}
@@ -533,6 +548,7 @@ library as embedded binaries}};
 
   \begin{lsucprohibits}
     \lsucitem{\dontChangeCopyrightNotices}
+    \lsucitem{\noPatentLitigation}
   \end{lsucprohibits}
 
 \end{lsuc}
@@ -567,7 +583,7 @@ With respect to this structure, we can discover the following tasks:
     as a mandatory positive assertion for the \emph{2others} use cases (EPL-C2 --
     EPL-C9). This should emphasize the \emph{activity} to retain the copyright
     notes in exact the form one has received them. On the other hand, the OSLiC
-    inserts the interdictios into the `prohibits' section of the
+    inserts the corresponding interdiction into the `prohibits' section of the
     \emph{4yourself} use cases (EPL-C1 -- EPL-C9).
   
   \item Furthermore, the EPL requires that \enquote{each Contributor must
@@ -626,12 +642,18 @@ With respect to this structure, we can discover the following tasks:
     follows the respective requirement introduced by the EPL (EPL-C3, EPL-C5,
     EPL-C7, EPL-C9).  
   
-  \item Finally, one has clearly to state that the previous rule implies a real
+  \item Moreover, one has clearly to state that the previous rule implies a real
     source code distribution which therefore must follow the rules of
     distributing the software. Thus, the OSLiC requires in all cases of a binary 
     distribution to execute also the task-lists of the respective source code
     use cases. 
  
+ 	\item Finally, the EPL-1.0 contains a patent clause stating that \enquote{if
+ 	any recipient institutes patent litigation against any entity [\ldots]
+ 	alleging that the Program itself [\ldots] infringes such Recipient's
+ 	patent(s), then such Recipient's rights granted [\ldots by the EPL] shall
+ 	terminate [\ldots]}\citeEPL{§7}. Based on this fact, the OSLiC generally
+ 	(EPL-C1 -- EPL-C9) interdicts to legally fight against patents linked to the software.
 \end{itemize}
 \end{license}
 
