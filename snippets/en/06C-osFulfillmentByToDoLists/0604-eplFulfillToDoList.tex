@@ -23,7 +23,7 @@
 %% use all entries of the bibliography
 %\nocite{*}
 
-\section{EPL licensed software}
+\section{EPL-1.0 licensed software}
 \begin{license}{EPL}
 \licensename{EPL}
 \licensespec{Eclipse Public License}
@@ -35,12 +35,12 @@ source code from that in the form of binaries: First, it allows to
 object code}.\citeEPL{§3} Then it specifies under which conditions one may
 distribute the program as a set of binaries.\citeEPL{§3 top area} One of
 these conditions is---roughly speaking---that the distributor makes the sources
-available too.\citeEPL{§3 mid area} More precisely, the EPL has to be taken as a
+available too.\citeEPL{§3 mid area} More precisely, the EPL-1.0 has to be taken as a
 license with weak copyleft ($\rightarrow$ OSLiC, p.\ \protectionpageref{EPL}).
 The other conditions refer to the distribution in general---no matter what form
-or state is used.\citeEPL{§3 bottom area} So, taken as whole, the EPL mainly
+or state is used.\citeEPL{§3 bottom area} So, taken as whole, the EPL-1.0 mainly
 focusses on the distribution of software.  Thus, for finding the relevant, easy
-to process task lists, the following EPL specific open source use case 
+to process task lists, the following EPL-1.0 specific open source use case 
 structure%
   \footnote{For details of the general OSUC finder $\rightarrow$ OSLiC,
     pp.\ \pageref{OsucTokens} and \pageref{OsucDefinitionTree}}
@@ -62,7 +62,7 @@ can be used:
 
 \begin{tikzpicture}[]
 
-\node[nodv] (l71) at (4,10) {EPL};
+\node[nodv] (l71) at (4,10) {EPL-1.0};
 
 \node[nodb] (l61) at (0,8.6) {\textit{recipient:} \\ \textbf{4yourself}};
 \node[nodb] (l62) at (6.5,8.6) {\textit{recipient:} \\ \textbf{2others}};
@@ -86,31 +86,31 @@ can be used:
 \node[nods] (l23) at (12.6,2.2) {\textit{form:} \textbf{source}};
 \node[nods] (l24) at (14.4,2.2) {\textit{form:} \textbf{binary}};
 
-\node[leaf] (l11) at (0,0) {\textbf{EPL-C1} \textit{using software only
+\node[leaf] (l11) at (0,0) {\textbf{EPL-1.0-C1} \textit{using software only
 for yourself}};
 
-\node[leaf] (l12) at (1.8,0) { \textbf{EPL-C2} \textit{ distributing unmodified
+\node[leaf] (l12) at (1.8,0) { \textbf{EPL-1.0-C2} \textit{ distributing unmodified
 software as sources}};
 
-\node[leaf] (l13) at (3.6,0) { \textbf{EPL-C3}  \textit{ distributing unmodified
+\node[leaf] (l13) at (3.6,0) { \textbf{EPL-1.0-C3}  \textit{ distributing unmodified
 software as binaries}};
 
-\node[leaf] (l14) at (5.4,0) { \textbf{EPL-C4}  \textit{ distributing modified
+\node[leaf] (l14) at (5.4,0) { \textbf{EPL-1.0-C4}  \textit{ distributing modified
 program as sources}};
 
-\node[leaf] (l15) at (7.2,0) { \textbf{EPL-C5}  \textit{ distributing modified
+\node[leaf] (l15) at (7.2,0) { \textbf{EPL-1.0-C5}  \textit{ distributing modified
 program as binaries}};
 
-\node[leaf] (l16) at (9,0) { \textbf{EPL-C6}  \textit{ distributing modified
+\node[leaf] (l16) at (9,0) { \textbf{EPL-1.0-C6}  \textit{ distributing modified
 library as independent sources}};
 
-\node[leaf] (l17) at (10.8,0) { \textbf{EPL-C7} \textit{distributing modified
+\node[leaf] (l17) at (10.8,0) { \textbf{EPL-1.0-C7} \textit{distributing modified
 library as independent binaries}};
 
-\node[leaf] (l18) at (12.6,0) { \textbf{EPL-C8}  \textit{distributing
+\node[leaf] (l18) at (12.6,0) { \textbf{EPL-1.0-C8}  \textit{distributing
 modified library as embedded sources}};
 
-\node[leaf] (l19) at (14.4,0) { \textbf{EPL-C9}  \textit{ distributing modified
+\node[leaf] (l19) at (14.4,0) { \textbf{EPL-1.0-C9}  \textit{ distributing modified
 library as embedded binaries}};
 
 
@@ -173,11 +173,11 @@ library as embedded binaries}};
 
 % ------------------------------------------------------------------------------
 % Give recipient a copy of the license
-\newcommand{\giveLicenseFile}{Give the recipient a copy of the EPL 1.0 license.
+\newcommand{\giveLicenseFile}{Give the recipient a copy of the EPL-1.0 license.
   If it is not already part of the software package, add it. If the licensing
   statement in the licensing file of the package does still not clearly state
-  that the package is licensed under the EPL, additionally insert your own
-  correct EPL licensing file.}
+  that the package is licensed under the EPL-1.0, additionally insert your own
+  correct EPL-1.0 licensing file.}
 
 % ------------------------------------------------------------------------------
 % No warranty
@@ -185,7 +185,7 @@ library as embedded binaries}};
   prominently placed `No warranty' statement into the distributed #1 package.
   Let this statement clearly say that all (other) contributors to the software
   do not accept any responsibility for the quality of the software. Then, copy
-  the no-warranty clause and the disclaimer of liability from the EPL itself
+  the no-warranty clause and the disclaimer of liability from the EPL-1.0 itself
   into that file.} 
 
 \newcommand{\includeInCopyrightScreen}{Let the copyright screen of your own
@@ -200,7 +200,7 @@ library as embedded binaries}};
 \newcommand{\auxAddToDoc}[1]{%
   Let the documentation of your distribution or your additional material
   reproduce the content of an existing \emph{copyright notice text files}, a
-  hint to the software name, a link to its homepage, and a link to the EPL 1.0
+  hint to the software name, a link to its homepage, and a link to the EPL-1.0
   license#1.}   
 
 \newcommand{\addToDocumentation}{\auxAddToDoc{}}
@@ -235,20 +235,20 @@ library as embedded binaries}};
 % ------------------------------------------------------------------------------
 % mark all modifications in the source
 \newcommand{\markAllModifications}{Mark all modifications of the source code of
-  the program thoroughly; namely within the modfied source code.}
+  the program thoroughly; namely within the modified source code.}
 
 % ------------------------------------------------------------------------------
 % Organize your sources
 \newcommand{\organizeYourModifications}{Organize your modifications in a way
-  that they are covered by the existing EPL licensing statements.}
+  that they are covered by the existing EPL-1.0 licensing statements.}
 \newcommand{\addHeaderToNewFiles}{If you add new source code files, insert a
-  header containing your copyright line and an EPL adequate licensing the
+  header containing your copyright line and an EPL-1.0 adequate licensing the
   statement.} 
 
 % ------------------------------------------------------------------------------
 % Use separate directories
 \newcommand{\useSeparateDirectory}[1]{Arrange your #1 distribution so that the
-  integrated EPL and the \emph{licensing files} clearly refer only to the
+  integrated EPL-1.0 and the \emph{licensing files} clearly refer only to the
   embedded library and do not disturb the licensing of your own overarching
   work. It's a good tradition to keep the embedded components like libraries,
   modules, snippets, or plugins in separate directories which also contains all 
@@ -257,22 +257,22 @@ library as embedded binaries}};
 % ------------------------------------------------------------------------------
 % EPL-C1
 % ------------------------------------------------------------------------------
-\subsection{EPL-C1: Using the software only for yourself}
+\subsection{EPL-1.0-C1: Using the software only for yourself}
 \begin{lsuc}{EPL-C1}
   \linkosuc{01} 
   \linkosuc{03} 
   \linkosuc{06} 
   \linkosuc{09}
 
-  \lsucmeans{that you are going to use the EPL licensed software you received
-    only for yourself and that you do not hand it over to any third party in any
-    sense.} 
+  \lsucmeans{that you received EPL-1.0 licensed software, that you will use it
+  only for yourself, and that you do not hand it over to any 3rd party in any
+  sense.} 
 
   \lsuccovers{OSUC-01, OSUC-03, OSUC-06, and OSUC-09\footnote{For details
       $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-01-DEF} - \pageref{OSUC-09-DEF}}}
 
   \begin{lsucrequiresnothing}
-    \item You are allowed to use any kind of EPL software in any sense and in
+    \item You are allowed to use any kind of EPL-1.0 software in any sense and in
     any context without being obliged to do anything as long as you do not
     give the software to third parties.
   \end{lsucrequiresnothing}
@@ -287,18 +287,17 @@ library as embedded binaries}};
 % ------------------------------------------------------------------------------
 % EPL-C2
 % ------------------------------------------------------------------------------
-\subsection{EPL-C2: Passing the unmodified software as source code}
+\subsection{EPL-1.0-C2: Passing the unmodified software as source code}
 \begin{lsuc}{EPL-C2}
   \linkosuc{02S} 
   \linkosuc{05S}
   \linkosuc{07S} 
 
-  \lsucmeans{that you are going to distribute an unmodified version of the
-    EPL software that you received to third parties in the form of source code
-    files or as a source code package. In this case it makes no difference if
-    you distribute a program, an application, a server, a snippet, a module, a
-    library, or a plugin and, in the latter cases, if it is distributed as an
-    independent or an embedded unit.} 
+  \lsucmeans{that you received EPL-1.0 licensed software which you are now
+  going to distribute to third parties in the form of unmodified source code
+  files or as unmodified source code package. In this case it makes no
+  difference if you distribute a program, an application, a server, a snippet, a
+  module, a library, or a plugin as an independent or as an embedded unit.} 
 
   \lsuccovers{OSUC-02S, OSUC-05S, OSUC-07S\footnote{For details $\rightarrow$
       OSLiC, pp.\ \pageref{OSUC-02S-DEF} - \pageref{OSUC-07S-DEF}}}
@@ -320,18 +319,17 @@ library as embedded binaries}};
 % ------------------------------------------------------------------------------
 % EPL-C3
 % ------------------------------------------------------------------------------
-\subsection{EPL-C3: Passing the unmodified software as binaries} 
+\subsection{EPL-1.0-C3: Passing the unmodified software as binaries} 
 \begin{lsuc}{EPL-C3}
   \linkosuc{02B} 
   \linkosuc{05B} 
   \linkosuc{07B} 
 
-  \lsucmeans{that you are going to distribute an unmodified version of the
-    EPL software that you received to third parties in the form of binary files
-    or as a binary package.  In this case it makes no difference if you
-    distribute a program, an application, a server, a snippet, a module, a
-    library, or a plugin and, in the latter cases, if it is distributed as an
-    independent or an embedded unit.}
+  \lsucmeans{that you received EPL-1.0 licensed software which you are now
+  going to distribute to third parties in the form of unmodified binary files or
+  as unmodified binary package. In this case it does not matter if you distribute
+  a program, an application, a server, a snippet, a module, a library, or a
+  plugin as an independent or an embedded unit.}
 
   \lsuccovers{OSUC-02B, OSUC-05B, OSUC-07B\footnote{For details $\rightarrow$
       OSLiC, pp.\ \pageref{OSUC-02B-DEF} - \pageref{OSUC-07B-DEF}}}
@@ -356,13 +354,14 @@ library as embedded binaries}};
 % ------------------------------------------------------------------------------
 % EPL-C4
 % ------------------------------------------------------------------------------
-\subsection{EPL-C4: Passing a modified program as source code}
+\subsection{EPL-1.0-C4: Passing a modified program as source code}
 \begin{lsuc}{EPL-C4}
   \linkosuc{04S} 
 
-  \lsucmeans{that you are going to distribute a modified version of the EPL
-    licensed program, application, or server (proapse) that you received to
-    third parties in the form of source code files or as a source code package.}
+  \lsucmeans{that you received an EPL-1.0 licensed program, application, or
+  server (proapse), that you modified it, and that you are now going to
+  distribute this modified version to third parties in the form of source code files or as
+  a source code package.}
 
   \lsuccovers{OSUC-04S\footnote{For details $\rightarrow$ OSLiC,
       pp.\ \pageref{OSUC-04S-DEF}}}
@@ -387,13 +386,14 @@ library as embedded binaries}};
 % ------------------------------------------------------------------------------
 % EPL-C5
 % ------------------------------------------------------------------------------
-\subsection{EPL-C5: Passing a modified program as binary}
+\subsection{EPL-1.0-C5: Passing a modified program as binary}
 \begin{lsuc}{EPL-C5}
   \linkosuc{04B}
 
-  \lsucmeans{that you are going to distribute a modified version of the EPL
-    licensed program, application, or server (proapse) that you received to
-    third parties in the form of binary files or as a binary package.}
+  \lsucmeans{that you received an EPL-1.0 licensed program, application, or
+  server (proapse), that you modified it, and that you are now going to
+  distribute this modified version to third parties in the form of binary files or as a
+  binary package.}
 
   \lsuccovers{OSUC-04B\footnote{For details $\rightarrow$ OSLiC,
       pp.\ \pageref{OSUC-04B-DEF}}}
@@ -420,14 +420,15 @@ library as embedded binaries}};
 % ------------------------------------------------------------------------------
 % EPL-C6
 % ------------------------------------------------------------------------------
-\subsection{EPL-C6: Passing a modified library as independent source code}
+\subsection{EPL-1.0-C6: Passing a modified library as independent source code}
 \begin{lsuc}{EPL-C6}
   \linkosuc{08S}
 
-  \lsucmeans{that you are going to distribute a modified version of the EPL
-    licensed code snippet module, library, or, plugin (snimoli) that you
-    received to third parties in the form of source code files or as a source
-    code package, but without embedding it into another larger software unit.}
+  \lsucmeans{that you received an EPL-1.0 licensed code snippet, module, library,
+  or plugin (snimoli), that you modified it, and that you are now going to
+  distribute this modified version to third parties in the form of source code
+  files or as a source code package, but without embedding it into another
+  larger software unit.}
 
   \lsuccovers{OSUC-08S\footnote{For details $\rightarrow$ OSLiC,
       pp.\ \pageref{OSUC-08S-DEF}}}
@@ -452,14 +453,15 @@ library as embedded binaries}};
 % ------------------------------------------------------------------------------
 % EPL-C7
 % ------------------------------------------------------------------------------
-\subsection{EPL-C7: Passing a modified library as independent binary}
+\subsection{EPL-1.0-C7: Passing a modified library as independent binary}
 \begin{lsuc}{EPL-C7}
   \linkosuc{08B}
 
-  \lsucmeans{that you are going to distribute a modified version of the EPL
-    licensed code snippet, module, library, or plugin (snimoli) that you
-    received to third parties in the form of binary files or as a binary package
-    but without embedding it into another larger software unit.}
+  \lsucmeans{that you received an EPL-1.0 licensed code snippet, module, library,
+  or plugin (snimoli), that you modified it, and that you are now going to
+  distribute this modified version to third parties in the form of binary files
+  or as a binary package but without embedding it into another larger software
+  unit.}
 
   \lsuccovers{OSUC-08B\footnote{For details $\rightarrow$ OSLiC,
       pp.\ \pageref{OSUC-08B-DEF}}}
@@ -486,15 +488,16 @@ library as embedded binaries}};
 % ------------------------------------------------------------------------------
 % EPL-C8
 % ------------------------------------------------------------------------------
-\subsection{EPL-C8: Passing a modified library as embedded source code}
+\subsection{EPL-1.0-C8: Passing a modified library as embedded source code}
 \begin{lsuc}{EPL-C8}
   \linkosuc{10S}
 
-  \lsucmeans{that you are going to distribute a modified version of the EPL
-    licensed code snippet module, library, or, plugin (snimoli) that you
-    received to third parties in the form of source code files or as a source
-    code package together with another larger software unit which contains this
-    code snippet, module, library, or plugin as an embedded component.}
+  \lsucmeans{that you received an EPL-1.0 licensed code snippet, module, library,
+  or plugin (snimoli), that you modified it, and that you are now going to
+  distribute this modified version to third parties in the form of source code
+  files or as a source code package together with another larger software unit
+  which contains this code snippet, module, library, or plugin as an embedded
+  component.}
 
   \lsuccovers{OSUC-10S\footnote{For details $\rightarrow$ OSLiC,
       pp.\ \pageref{OSUC-10S-DEF}}}
@@ -520,15 +523,15 @@ library as embedded binaries}};
 % ------------------------------------------------------------------------------
 % EPL-C9
 % ------------------------------------------------------------------------------
-\subsection{EPL-C9: Passing a modified library as embedded binary}
+\subsection{EPL-1.0-C9: Passing a modified library as embedded binary}
 \begin{lsuc}{EPL-C9}
   \linkosuc{10B}
 
-  \lsucmeans{that you are going to distribute a modified version of the EPL
-    licensed code snippet, module, library, or plugin that you received to third
-    parties in the form of binary files or as a binary package together with
-    another larger software unit which contains this code snippet, module,
-    library, or plugin as an embedded component.}
+  \lsucmeans{that you received an EPL-1.0 licensed code snippet, module, library,
+  or plugin (snimoli), that you modified it, and that you are now going to
+  distribute this modified version to third parties in the form of binary files
+  or as a binary package together with another larger software unit which
+  contains this code snippet, module, library, or plugin as an embedded component.}
 
   \lsuccovers{OSUC-10B\footnote{For details $\rightarrow$ OSLiC,
       pp.\ \pageref{OSUC-10B-DEF}}}
@@ -557,7 +560,7 @@ library as embedded binaries}};
 \subsection{Discussions and Explanations}
 \label{EPLDiscussion}
 
-The EPL contains a succinct section \enquote{Requirements}\citeEPL{§3}
+The EPL-1.0 contains a succinct section \enquote{Requirements}\citeEPL{§3}
 complemented by some definitions concerning a \enquote{Commercial
 Distribution}\citeEPL{§4}: First, it describes what a distributor must do for
 correctly distributing an Eclipse licensed program as a set of binaries. Then,
@@ -568,25 +571,25 @@ With respect to this structure, we can discover the following tasks:
 
 \begin{itemize}
 
-  \item The EPL generally requires that \enquote{Contributors may not remove or
+  \item The EPL-1.0 generally requires that \enquote{Contributors may not remove or
     alter any copyright notices contained within the Program}\citeEPL{§3} where
     the word `Contributor' has to be read as \enquote{any person or entity that
     distributes the Program}, and the word `Program' denotes the
     \enquote{initial contribution} and all its modifications.\citeEPL{§1} 
-    Similar to the EUPL and at least in a very strict reading, the EPL does not
+    Similar to the EUPL and at least in a very strict reading, the EPL-1.0 does not
     limit these requirements to the distribution of the software
     (\emph{2others}). But in practice it will be difficult to control the
     compliant use of the software in those cases where one uses the software
-    only for oneself. But opposite to, for example, the EUPL, the EPL clearly
+    only for oneself. But opposite to, for example, the EUPL, the EPL-1.0 clearly
     contains this interdiction. The OSLiC solves this practical inconsistence
     duplicating the message: On the one hand, it rewrites the negative condition
-    as a mandatory positive assertion for the \emph{2others} use cases (EPL-C2 --
-    EPL-C9). This should emphasize the \emph{activity} to retain the copyright
+    as a mandatory positive assertion for the \emph{2others} use cases (EPL-1.0-C2 --
+    EPL-1.0-C9). This should emphasize the \emph{activity} to retain the copyright
     notes in exact the form one has received them. On the other hand, the OSLiC
     inserts the corresponding interdiction into the `prohibits' section of the
-    \emph{4yourself} use cases (EPL-C1 -- EPL-C9).
+    \emph{4yourself} use cases (EPL-1.0-C1 -- EPL-1.0-C9).
   
-  \item Furthermore, the EPL requires that \enquote{each Contributor must
+  \item Furthermore, the EPL-1.0 requires that \enquote{each Contributor must
     identify itself as the originator of its Contributions [\ldots] in a manner
     that reasonably allows subsequent Recipients to identify the originator of
     the Contribution},\citeEPL{§3} In this case, `Contribution' has to be read
@@ -597,40 +600,40 @@ With respect to this structure, we can discover the following tasks:
     modifications on the more general level of software features in a file
     sometimes called CHANGES. At a first glance, the requirement to document the
     source code modifications within the source code seems to be restricted to
-    the use cases which concern the distribution of a modified EPL software in
-    the form of source code. But the EPL allows the distribution in the form of
+    the use cases which concern the distribution of a modified EPL-1.0 software in
+    the form of source code. But the EPL-1.0 allows the distribution in the form of
     binaries only if the distributor also states where one can obtain the
     correspoding code.\citeEPL{§3} So, distributing the binaries implies the
     distribution of the source code.  Therefore the OSLiC inserts the two
     requirements as mandatory clauses into all the use cases concerning the
-    distribution of a modified EPL software (EPL-C4 -- EPL-C9).
+    distribution of a modified EPL-1.0 software (EPL-1.0-C4 -- EPL-1.0-C9).
   
-  \item For all distributions in the form of source code the EPL requires that
+  \item For all distributions in the form of source code the EPL-1.0 requires that
     the software \enquote{[\ldots] must be made available under this (Eclipse
     Public License 1.0) Agreement} and that \enquote{[\ldots] a copy of this
     Agreement must be included with each copy of the Program.}\citeEPL{§3} 
     Thus, the OSLiC inserts a respective mandatory clause into the use cases
-    (EPL-C4, EPL-C6, EPL-C8). But the EPL is a license with a weak copyleft%
+    (EPL-1.0-C4, EPL-1.0-C6, EPL-1.0-C8). But the EPL-1.0 is a license with a weak copyleft%
     \footnote{($\rightarrow$ OSLiC, p.\ \protectionpageref{EPL})}. 
     Therefore, this conditions does not cover the overarching program which uses
-    the embedded library (EPL-C8).
+    the embedded library (EPL-1.0-C8).
     
-  \item Additionally, the EPL allows to distribute the software in the form
+  \item Additionally, the EPL-1.0 allows to distribute the software in the form
     of binaries if the distributor \enquote{[\ldots] effectively disclaims on
     behalf of all Contributors all warranties and conditions [\ldots] (and)
     effectively excludes on behalf of all Contributors all liability for
     damages [\ldots]} in the broadest sense.\citeEPL{§3} This limitation of
-    liability is very important to the EPL. Thus, it further specifies and
+    liability is very important to the EPL-1.0. Thus, it further specifies and
     explains this aspect once more in another section titled \enquote{Commercial
     Distribution}. There, this aspect is no longer focussed only on a
     distribution in the form of binaries.\citeEPL{§4} So the OSLiC inserts a
     mandatory clause into all use cases concerning the distribution that the
     paragraph of \enquote{No Warranty}\citeEPL{§5} and the \enquote{Disclaimer
-    of Liability}\citeEPL{§6} of the EPL must explicitly be present in the
+    of Liability}\citeEPL{§6} of the EPL-1.0 must explicitly be present in the
     documentation of distribution package and---if technically possible---%
     presented by the copyright screen.   
   
-  \item Aside from that, the EPL allows the distribution of the software in the
+  \item Aside from that, the EPL-1.0 allows the distribution of the software in the
     form of binaries only if the distributor clearly \enquote{[\ldots] states that
     the source code for the program is available from such Contributor
     (distributor) [\ldots]} and if he additionally \enquote{[\ldots] informs
@@ -639,8 +642,8 @@ With respect to this structure, we can discover the following tasks:
     offers the source code via a repository. It is not sufficient to point to
     any external download repository in the world wide web. Thus,---for all use
     cases concerning the distribution in the form of binaries---the OSLiC
-    follows the respective requirement introduced by the EPL (EPL-C3, EPL-C5,
-    EPL-C7, EPL-C9).  
+    follows the respective requirement introduced by the EPL-1.0 (EPL-1.0-C3, EPL-1.0-C5,
+    EPL-1.0-C7, EPL-1.0-C9).  
   
   \item Moreover, one has clearly to state that the previous rule implies a real
     source code distribution which therefore must follow the rules of
@@ -651,9 +654,9 @@ With respect to this structure, we can discover the following tasks:
  	\item Finally, the EPL-1.0 contains a patent clause stating that \enquote{if
  	any recipient institutes patent litigation against any entity [\ldots]
  	alleging that the Program itself [\ldots] infringes such Recipient's
- 	patent(s), then such Recipient's rights granted [\ldots by the EPL] shall
+ 	patent(s), then such Recipient's rights granted [\ldots by the EPL-1.0] shall
  	terminate [\ldots]}\citeEPL{§7}. Based on this fact, the OSLiC generally
- 	(EPL-C1 -- EPL-C9) interdicts to legally fight against patents linked to the software.
+ 	(EPL-1.0-C1 -- EPL-1.0-C9) interdicts to legally fight against patents linked to the software.
 \end{itemize}
 \end{license}
 
