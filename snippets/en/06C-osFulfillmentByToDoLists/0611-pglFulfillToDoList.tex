@@ -23,10 +23,14 @@
 %% use all entries of the bibliography
 %\nocite{*}
 
-\section{Postgres Licensed Software}
+\section{PostgreSQL License}
+\begin{license}{PGL} % ends at end of file
+\licensename{PostgreSQL}
+\licensespec{PostgreSQL license}
+\licenseabbrev{PGL}
 
 Like the MIT License Postgres License is a very permissive licenses. Thus, the
-PGL specific finder can be simplified:
+PostgreSQL specific finder can be simplified:
 
 \tikzstyle{nodv} = [font=\small, ellipse, draw, fill=gray!10, 
     text width=2cm, text centered, minimum height=2em]
@@ -41,13 +45,13 @@ PGL specific finder can be simplified:
     text width=2.4cm, text centered, rounded corners, minimum height=3em]
     
 \tikzstyle{leaf} = [font=\tiny, rectangle, draw, fill=gray!30, 
-    text width=1.2cm, text centered, minimum height=6em]
+    text width=2cm, text centered, minimum height=4em]
 
 \tikzstyle{edge} = [draw, -latex']
 
 \begin{tikzpicture}[]
 
-\node[nodv] (l61) at ( 2.4, 9.2) {PgL};
+\node[nodv] (l61) at ( 2.4, 9.2) {PostgreSQL};
 
 \node[nodb] (l51) at ( 0.0, 7.8) {\textit{recipient:} \\ \textbf{4yourself}};
 \node[nodb] (l52) at ( 4.8, 7.8) {\textit{recipient:} \\ \textbf{2others}};
@@ -61,11 +65,11 @@ PGL specific finder can be simplified:
 \node[nodx] (l21) at ( 7.5, 2.8) {\textit{context:} \\ \textbf{independent}};
 \node[nodx] (l22) at (10.5, 2.8) {\textit{context:} \\ \textbf{embedded}};
 
-\node[leaf] (l11) at ( 0.0, 0.0) {\textbf{PGL-C1} \textit{using software only for yourself}};
-\node[leaf] (l12) at ( 2.5, 0.0) {\textbf{PGL-C2} \textit{distributing unmodified package}};
-\node[leaf] (l13) at ( 5.0, 0.0) {\textbf{PGL-C3} \textit{distributing modified program}};
-\node[leaf] (l14) at ( 7.5, 0.0) {\textbf{PGL-C4} \textit{distributing modified library as independent package}};
-\node[leaf] (l15) at (10.5, 0.0) {\textbf{PGL-C5} \textit{distributing modified library as embedded package}};
+\node[leaf] (l11) at ( 0.0, 0.0) {\textbf{PostgreSQL-C1} \textit{using software only for yourself}};
+\node[leaf] (l12) at ( 2.5, 0.0) {\textbf{PostgreSQL-C2} \textit{distributing unmodified package}};
+\node[leaf] (l13) at ( 5.0, 0.0) {\textbf{PostgreSQL-C3} \textit{distributing modified program}};
+\node[leaf] (l14) at ( 7.5, 0.0) {\textbf{PostgreSQL-C4} \textit{distributing modified library as independent package}};
+\node[leaf] (l15) at (10.5, 0.0) {\textbf{PostgreSQL-C5} \textit{distributing modified library as embedded package}};
 
 
 \path [edge] (l61) -- (l51);
@@ -84,250 +88,221 @@ PGL specific finder can be simplified:
 
 \end{tikzpicture}
 
-%% RPD obsolete PSTricks
-%% \begin{center}
-%% \begin{footnotesize}
-%% \pstree[levelsep=*1,treesep=0.2]{\Toval{PgL}}{
-%%   \pstree{
-%%     \Tr{\Ovalbox{\shortstack{recipient: \textit{4yourself}\\
-%%     \textbf{\textit{used by yourself}}}}} 
-%%   }{
-%%     \Tr{\doublebox{\shortstack{\tiny{\textbf{PGL-C1}:}\\
-%%     \tiny{\textit{using the}}\\\tiny{\textit{software}}\\
-%%     \tiny{\textit{only for}}\\\tiny{\textit{yourself}} }}} 
-%%   }
-%%   \pstree[levelsep=*0.2,treesep=0.2]{
-%%     \Tr{\Ovalbox{\shortstack{recipient: \textit{2others}\\
-%%       \textbf{\textit{distributed to 3rd parties}}}}} 
-%%   }{ 
-%%     \pstree[levelsep=*0.2,treesep=0.2]{
-%%       \Tr{\Ovalbox{\shortstack{state:\\\textbf{\textit{unmodified}}}}}
-%%     }{
-%%         \Tr{\doublebox{\shortstack{\tiny{\textbf{PGL-C2}:}\\
-%%         \tiny{\textit{distributing an}}\\
-%%         \tiny{\textit{unmodified pkg}} }}}
+%% =============================================================================
+%% Common Building Blocks
+%%
 
-%%     }
+% ------------------------------------------------------------------------------
+% Include license in package
 
-%%     \pstree[levelsep=*0.2,treesep=0.2]{
-%%       \Tr{\Ovalbox{\shortstack{state:\\\textbf{\textit{modified}}}}}
-%%     }{ 
-%%       \pstree{
-%%         \Tr{\Ovalbox{\shortstack{type:\\\textbf{\textit{proapse}}}}}
-%%       }{
-%%           \Tr{\doublebox{\shortstack{\tiny{\textbf{PGL-C3}:}\\
-%%           \tiny{\textit{distributing}}\\\tiny{\textit{a modified}}\\
-%%           \tiny{\textit{program}} }}} 
-           
-%%       }
-%%       \pstree{
-%%         \Tr{\Ovalbox{\shortstack{type:\\\textbf{\textit{snimoli}}}}}
-%%       }{
-%%         \pstree{
-%%           \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{independent}}}}}
-%%         }{        
-%%             \Tr{\doublebox{\shortstack{\tiny{\textbf{PGL-C4}:}\\
-%%             \tiny{\textit{distributing}}\\\tiny{\textit{a modified}}\\
-%%             \tiny{\textit{library as}}\\\tiny{\textit{independent}}
-%%             \tiny{\textit{pkg}} }}} 
-           
-%%         }
-%%         \pstree{
-%%           \Tr{\Ovalbox{\shortstack{context:\\\textbf{\textit{embedded}}}}}
-%%         }{        
-%%             \Tr{\doublebox{\shortstack{\tiny{\textbf{PGL-C5}:}\\
-%%             \tiny{\textit{distributing}}\\\tiny{\textit{a modified}}\\
-%%             \tiny{\textit{library as}}\\\tiny{\textit{embedded}}
-%%             \tiny{\textit{pkg}} }}}     
-%%         }
-%%       }
-%%     }
-%%    }   
-%% }
-%% \end{footnotesize}
-%% \end{center}
+\newcommand{\giveLicense}{Ensure that the complete PostgreSQL license including
+  the copyright notice, the permission notices, and the PostgreSQL disclaimer
+  are retained in your package in the form you have received them.}
 
-\subsection{PGL-C1: Using the software only for yourself}
-\label{OSUC-01-PGL} 
-\label{OSUC-03-PGL} 
-\label{OSUC-06-PGL}
-\label{OSUC-09-PGL}
-  
-\begin{description}
+% ------------------------------------------------------------------------------
+% Add a link to the project's home page to the documentation
 
-\item[means] that you are going to use a received PGL software only for yourself
-and that you do not hand it over to any 3rd party in any sense.
+\newcommand{\linkToHomepage}{It's a good tradition to let the documentation of
+  your distribution or your additional material also contain a link to the
+  original software (project) and its homepage.}
 
-\item[covers] OSUC-01, OSUC-03, OSUC-06, and OSUC-09\footnote{For details
-$\rightarrow$ OSLiC, pp.\ \pageref{OSUC-01-DEF} - \pageref{OSUC-09-DEF}}
+% ------------------------------------------------------------------------------
+% mark your modifications
 
-\item[requires] no tasks in order to fulfill the conditions of the PGL with
-respect to this use case:
-  \begin{itemize}
-    \item You are allowed to use any kind of PGL licensed software in any sense
-    and in any context without any other obligations if you do not handover the
-    software to 3rd parties and if you do not modify the existing copyright
-    notes and the existing permission notice.
-  \end{itemize}
+\newcommand{\markModifications}{Mark your modifications in the source code,
+  regardless whether you want to distribute the code or not.}
 
-\item[prohibits] nothing explicitly.
+% ------------------------------------------------------------------------------
+% add name and link to copyright dialog
 
-\end{description}
+\newcommand{\addToCopyrightDialog}{It is a good practice of the open source
+  community to let the copyright notice, which is shown by the running program,
+  also state that the program uses a component being licensed under the
+  PostgreSQL license.  And it is a good tradition to insert links to the
+  homepage or download page of this embedded component.}
 
-\subsection{PGL-C2: Passing the unmodified software}
-\label{OSUC-02S-PGL} \label{OSUC-05S-PGL} \label{OSUC-07S-PGL} 
-\label{OSUC-02B-PGL} \label{OSUC-05B-PGL} \label{OSUC-07B-PGL} 
+% ------------------------------------------------------------------------------
+% separate the components but keep component and license together
 
-\begin{description}
-
-\item[means] that you are going to distribute an unmodified version of the
-received PGL software to 3rd parties -- regardless whether you distribute it in
-the form of binaries or as source code files. In this case it is not
-discriminating to distribute a program, an application, a server, a snippet, a
-module, a library, or a plugin as an independent package.
-
-\item[covers] OSUC-02S,  OSUC-02B, OSUC-05S, OSUC-05B, OSUC-07S,
-OSUC-07B\footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-02S-DEF} -
-\pageref{OSUC-07B-DEF}}
-
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
-  \item \textbf{[mandatory:]} Ensure that the complete Postgres License
-  including the copyright notice, the permission notices, and the PGL disclaimer
-  -- are retained in your package in the form you have received them.
-  \item \textbf{[voluntary:]} It's a good tradition to let the documentation of
-  your distribution and/or your additional material also contain a link to the
-  original software (project) and its homepage.
-\end{itemize}
-
-\item[prohibits] nothing explicitly.
-
-\end{description}
-
-\subsection{PGL-C3: Passing a modified program}
-\label{OSUC-04S-PGL} \label{OSUC-04B-PGL}
-
-\begin{description}
-
-\item[means] that you are going to distribute a modified version of the received
-PGL program, application, or server (proapse) to 3rd parties -- regardless
-whether you distribute it in the form of binaries or as source code files.
-\item[covers] OSUC-04S, OSUC-04B,\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-04S-DEF}} 
-
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
-  \item \textbf{[mandatory:]} Ensure that the complete Postgres License
-  including the copyright notice, the permission notices, and the PGL disclaimer
-  -- are retained in your package in the form you have received them.
-  \item \textbf{[voluntary:]} Mark your modifications in the source code,
-  regardless whether you want to distribute the code or not.
-  \item \textbf{[voluntary:]} It's a good tradition to let the documentation of
-  your distribution and/or your additional material also contain a link to the
-  original software (project) and its homepage.
-  \item \textbf{[voluntary:]} You can expand an existing copyright notice
-  presented by the program with information about your own work or
-  modifications.
-  \item \textbf{[voluntary:]} It is a good practice of the open source
-  community, to let the copyright notice which is shown by the program also
-  state that it is based on a version originally licensed under the PGL license.
-  Because you are already modifying the program, you can also add such a hint,
-  if the presented original copyright notice lacks such a statement.
-\end{itemize}
-
-\item[prohibits] nothing explicitly.
-
-\end{description}
-
-\subsection{PGL-C4: Passing a modified library independently}
-\label{OSUC-08S-PGL}\label{OSUC-08B-PGL}
-\begin{description}
-
-\item[means] that you are going to distribute a modified version of the received
-PGL code snippet, module, library, or plugin (snimoli) to 3rd parties without
-embedding it into another larger software unit -- regardless whether you
-distribute it in the form of binaries or as source code files.
-
-\item[covers] OSUC-08S, OSUC-08B\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-08B-DEF}}
-
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
-  \item \textbf{[mandatory:]} Ensure that the complete Postgres License
-  including the copyright notice, the permission notices, and the PGL disclaimer
-  -- are retained in your package in the form you have received them.
-  \item \textbf{[voluntary:]} Mark your modifications in the source code,
-  regardless whether you want to distribute the code or not.
-  \item \textbf{[voluntary:]} It's a good tradition to let the documentation of
-  your distribution and/or your additional material also contain a link to the
-  original software (project) and its homepage.
-\end{itemize}
-
-\item[prohibits] nothing explicitly.
-
-\end{description}
-
-
-\subsection{PGL-C5: Passing a modified library as embedded component}
-\label{OSUC-10S-PGL} \label{OSUC-10B-PGL}
-
-\begin{description}
-
-\item[means] that you are going to distribute a modified version of the received
-PGL code snippet, module, library, or plugin (snimoli) to 3rd parties together
-with another larger software unit which contains this code snippet, module,
-library, or plugin as an embedded component -- regardless whether you distribute
-it in the form of binaries or as source code files.
-
-\item[covers] OSUC-10S, OSUC-10B\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-10S-DEF}}
-
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
-  \item \textbf{[mandatory:]} Ensure that the complete Postgres License
-  including the copyright notice, the permission notices, and the PGL disclaimer
-  -- are retained in your package in the form you have received them.
-
-  \item \textbf{[voluntary:]} Mark your modifications in the source code,
-  regardless whether you want to distribute the code or not.
-  
-  \item \textbf{[voluntary:]} It is a good practice of the open source
-  community, to let the copyright notice which is shown by the running program
-  also state that the program uses a component being licensed under the PGL
-  license. And it is a good tradition to insert links to the homepage / download
-  page of this used component.
-
-  \item \textbf{[voluntary:]} It's also a good tradition to let the
-  documentation of your program and/or your additional material also mention
-  that you have used this component added by a link to the original software
-  component and its homepage.
-  
-  \item \textbf{[voluntary:]} Arrange your distribution so that the original
-  licensing elements -- esp.\ the PGL license text containing the specific
+\newcommand{\separateComponents}{Arrange your distribution so that the original
+  licensing elements (in particular the PostgreSQL license text containing the
   copyright notices of the original author(s), the permission notices and the
-  PGL disclaimer --  clearly refer only to the embedded library and do not
-  disturb the licensing of your own overarching work. It's a good tradition to
-  keep the libraries, modules, snippet, or plugins in specific directories which
-  contain also all licensing elements.
+  PostgrSGL disclaimer) clearly refer only to the embedded library and do not
+  affect the licensing of your own overarching work. Consider keeping embedded
+  libraries, modules, snippets, or plugins in separate directories which also
+  contain all their licensing elements.}
+
+% ------------------------------------------------------------------------------
+% add your own copyright notice to the copyright dialog
+
+\newcommand{\addYourOwnCopyright}{You can add information about your own work or
+  modifications to an existing copyright notice presented by the program.}
+
+% ------------------------------------------------------------------------------
+% acknowledge the original work in the copyright notice
+
+\newcommand{\acknowledgeOriginalWork}{It is a good practice of the open source
+  community to let the copyright notice, which is shown by the program, also
+  state that it is based on a version originally licensed under the PostgreSQL
+  license. Because you are already modifying the program, you may want to add
+  such a hint, if the original copyright notice lacks such a statement.}
+
+%% =============================================================================
+%% Use Cases
+%%
+
+\subsection{PostgreSQL-C1: Using the software only for yourself}
+\begin{lsuc}{PGL-C1}
+  \linkosuc{01} 
+  \linkosuc{03} 
+  \linkosuc{06}
+  \linkosuc{09}
   
-\end{itemize}
+  \lsucmeans{that you received PostgreSQL licensed software, that you will use it
+  only for yourself, and that you do not hand it over to any 3rd party in any
+  sense.} 
 
-\item[prohibits] nothing explicitly.
+  \lsuccovers{OSUC-01, OSUC-03, OSUC-06, and OSUC-09\footnote{For details
+      $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-01-DEF} - \pageref{OSUC-09-DEF}}} 
 
-\end{description}
+  \begin{lsucrequiresnothing}
+    \lsucitem{You are allowed to use any kind of PostgreSQL licensed software in any
+      sense and in any context without any other obligations if you do not give
+      the software to third parties and if you do not modify the existing
+      copyright notices or the existing permission notice.}
+  \end{lsucrequiresnothing}
+
+  \lsucprohibitsnothing 
+
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{PostgreSQL-C2: Passing the unmodified software}
+\begin{lsuc}{PGL-C2}
+  \linkosuc{02S} 
+  \linkosuc{05S} 
+  \linkosuc{07S} 
+  \linkosuc{02B} 
+  \linkosuc{05B} 
+  \linkosuc{07B} 
+
+  \lsucmeans{that you received PostgreSQL licensed software which you are now going to
+  distribute to third parties in the form of unmodified binaries or as unmodifed
+  source code files. In this case it makes no difference if you distribute a
+  program, an application, a server, a snippet, a module, a library, or a plugin
+  as an independent package.} 
+
+  \lsuccovers{OSUC-02S,  OSUC-02B, OSUC-05S, OSUC-05B, OSUC-07S, OSUC-07B%
+    \footnote{For details $\rightarrow$ OSLiC, 
+      pp.\ \pageref{OSUC-02S-DEF} -- \pageref{OSUC-07B-DEF}}}
+
+  \begin{lsucrequires}
+    \lsucmandatory{\giveLicense}
+    \lsucoptional{\linkToHomepage}
+  \end{lsucrequires}
+
+  \lsucprohibitsnothing
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{PostgreSQL-C3: Passing a modified program}
+\begin{lsuc}{PGL-C3}
+  \linkosuc{04S} 
+  \linkosuc{04B}
+
+  \lsucmeans{that you received a PostgreSQL licensed program, application, or
+  server (proapse), that you modified it, and that you are now going to distribute this
+  modified version to third parties in the form binaries or as source code
+  files.}
+ 
+  \lsuccovers{OSUC-04S, OSUC-04B%
+    \footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-04S-DEF}}}
+
+  \begin{lsucrequires}
+    \lsucmandatory{\giveLicense}
+    \lsucoptional{\markModifications}
+    \lsucoptional{\linkToHomepage}
+    \lsucoptional{\addYourOwnCopyright}
+    \lsucoptional{\acknowledgeOriginalWork}
+  \end{lsucrequires}
+
+  \lsucprohibitsnothing
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{PostgreSQL-C4: Passing a modified library independently}
+\begin{lsuc}{PGL-C4}
+  \linkosuc{08S}
+  \linkosuc{08B}
+
+  \lsucmeans{that you received a PostgreSQL licensed code snippet, module, library, or
+  plugin (snimoli), that you modified it, and that you are now going to
+  distribute this modified version to third parties in the form of binaries or
+  as source code files together with another larger software unit which contains
+  this code snippet, module, library, or plugin as an embedded component,
+  regardless whether you distribute it in the form of binaries or as source code
+  files.}
+
+  \lsuccovers{OSUC-08S, OSUC-08B%
+    \footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-08B-DEF}}}
+
+  \begin{lsucrequires}
+    \lsucmandatory{\giveLicense}
+    \lsucoptional{\markModifications}
+    \lsucoptional{\linkToHomepage}
+  \end{lsucrequires}
+
+  \lsucprohibitsnothing
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{PostgreSQL-C5: Passing a modified library as embedded component}
+\begin{lsuc}{PGL-C5}
+  \linkosuc{10S} 
+  \linkosuc{10B}
+
+  \lsucmeans{that you received a PostgreSQL licensed code snippet, module, library, or
+  plugin (snimoli), that you modified it, and that you are now going to
+  distribute this modified version to third parties in the form of binaries or
+  as source code files together with another larger software unit which contains
+  this code snippet, module, library, or plugin as an embedded component,
+  regardless whether you distribute it in the form of binaries or as source code
+  files.}
+
+  \lsuccovers{OSUC-10S, OSUC-10B%
+    \footnote{For details $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-10S-DEF}}}
+
+  \begin{lsucrequires}
+    \lsucmandatory{\giveLicense}
+    \lsucoptional{\markModifications}
+    \lsucoptional{\addToCopyrightDialog} 
+    \lsucoptional{\linkToHomepage}
+    \lsucoptional{\separateComponents}
+  \end{lsucrequires}
+
+  \lsucprohibitsnothing
+\end{lsuc}
+
+%% =============================================================================
+%% Discussion
+%%
 
 \subsection{Discussions and Explanations}
 
-The PGL-License follows the structure of the MIT license: it also contains (1) a
-copyright notice, (2) a paragraph saying that you are allowed to do almost
-anything you want, followed (3) by the condition that the copyright notice, the
-permission notes, and the disclaimer \enquote{[\ldots] apperar in all copies},
-and (4) the well known disclaimer\footcite[cf.][\nopage wp]{PglOsiLicense2013a}.
-Moreover, as the MIT license, the PGL doesn't talk about the difference of
-source code and object code. So, you can transfer the MIT
-analysis\footnote{$\rightarrow$ OSLiC, p. \pageref{MITDiscussion}} to the
-PGL analogically.
+The PostgreSQL-License follows the structure of the MIT license: it, too, contains 
+(1) a copyright notice, 
+(2) a paragraph saying that you are allowed to do almost anything you want,
+    followed 
+(3) by the condition that the copyright notice, the permission notes, and the
+    disclaimer \enquote{[\ldots] apperar in all copies}, and 
+(4) the well known disclaimer.\citePGL{}
+Moreover, like the MIT license, the PGL does not talk about the difference
+between source code and object code. So, you can apply the analysis of the MIT
+license%
+  \footnote{$\rightarrow$ OSLiC, p. \pageref{MITDiscussion}} 
+also to the PGL.
 
+\end{license}
 %\bibliography{../../../bibfiles/oscResourcesEn}
 
 % Local Variables:
