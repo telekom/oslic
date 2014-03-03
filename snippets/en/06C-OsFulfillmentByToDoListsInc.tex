@@ -74,6 +74,27 @@ will start with these general remarks and refer to them throughout the chapter.
 
 \label{OSUCToDoLists}
 
+% ==============================================================================
+% Some commands common to all to-do lists
+
+% Common footnote, used in many task lists
+\newcommand{\passingFilesCorrectly}{%
+  \footnote{For implementing the handover of files correctly $\rightarrow$
+    OSLiC, p. \pageref{DistributingFilesHint}}}
+
+% A LSUC that covers many OSUCs
+% #1 -> List of covered OSUCS, e. g., ``OSUC-01, OSUC-07S, and OSUC-10S''
+% #2 -> number of first OSUC covered, e. g., '07B'
+% #3 -> number of last OSUC covered
+\newcommand{\coversOsucs}[3]{\lsuccovers{#1}%
+  \footnote{For details $\rightarrow$ OSLiC, pp.\ \osucpageref{#2} -- \osucpageref{#3}}}
+
+% A LSUC that maps to exactly one OSUC
+% # -> number of the OSUC, e. g., '07B'
+\newcommand{\mapsToOsuc}[1]{\lsuccovers{OSUC-#1}%
+  \footnote{For details $\rightarrow$ OSLiC, pp.\ \osucpageref{#1}}}
+
+
 % Local Variables:
 % mode: latex
 % fill-column: 80

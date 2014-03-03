@@ -136,14 +136,9 @@ modified library as embedded binaries}};
 \end{tikzpicture}
 
 
-%%
+%% ==============================================================================
 %% Common building blocks
 %%
-
-% Common footnote, used with every 'give license' task
-\newcommand{\passingFiles}{%
-  \footnote{For implementing the handover of files correctly $\rightarrow$
-    OSLiC, p. \pageref{DistributingFilesHint}}}
 
 % ------------------------------------------------------------------------------
 % Give a copy of the license
@@ -260,8 +255,7 @@ modified library as embedded binaries}};
   only for yourself, and that you do not hand it over to any 3rd party in any
   sense.}
 
-  \lsuccovers{OSUC-01, OSUC-03, OSUC-06, and OSUC-09\footnote{For details 
-      $\rightarrow$ OSLiC, pp.\ \pageref{OSUC-01-DEF} - \pageref{OSUC-09-DEF}}}
+  \coversOsucs{OSUC-01, OSUC-03, OSUC-06, and OSUC-09}{01}{09}
 
   \begin{lsucrequiresnothing}
     \item You are allowed to use any kind of Apache software in any sense and in
@@ -287,11 +281,10 @@ modified library as embedded binaries}};
   difference if you distribute a program, an application, a server, a snippet, a
   module, a library, or a plugin as an independent or as an embedded unit.}
 
-  \lsuccovers{OSUC-02S, OSUC-05S, OSUC-07S\footnote{For details $\rightarrow$
-      OSLiC, pp.\ \pageref{OSUC-02S-DEF} - \pageref{OSUC-07S-DEF}}}
+  \coversOsucs{OSUC-02S, OSUC-05S, OSUC-07S}{02S}{07S}
 
   \begin{lsucrequires}
-    \lsucmandatory{\copyLicenseWithSource}\passingFiles
+    \lsucmandatory{\copyLicenseWithSource}\passingFilesCorrectly
     \lsucmandatory{\keepLicenseElements}
     \lsucmandatory{\keepNoticeFile}%
     \footnote{The Apache license seems purposely to be a bit ambiguous: it
@@ -324,11 +317,10 @@ modified library as embedded binaries}};
   a program, an application, a server, a snippet, a module, a library, or a
   plugin as an independent or an embedded unit.}
 
-  \lsuccovers{OSUC-02B, OSUC-05B, OSUC-07B\footnote{For details $\rightarrow$
-      OSLiC, pp.\ \pageref{OSUC-02B-DEF} - \pageref{OSUC-07B-DEF}}}
+  \coversOsucs{OSUC-02B, OSUC-05B, OSUC-07B}{02B}{07B}
 
   \begin{lsucrequires}
-    \lsucmandatory{\copyLicenseWithBinary}\passingFiles
+    \lsucmandatory{\copyLicenseWithBinary}\passingFilesCorrectly
     \lsucmandatory{\keepLicenseElementsBinary}
     \lsucmandatory{\includeNoticeFile}
 
@@ -356,11 +348,10 @@ modified library as embedded binaries}};
   distribute this modified version to third parties in the form of source code files or as
   a source code package.}
  
-  \lsuccovers{OSUC-04S\footnote{For details $\rightarrow$ OSLiC, pp.\
-      \pageref{OSUC-04S-DEF}}}
+  \mapsToOsuc{04S}
 
   \begin{lsucrequires}
-    \lsucmandatory{\copyLicenseWithSource}\passingFiles
+    \lsucmandatory{\copyLicenseWithSource}\passingFilesCorrectly
     \lsucmandatory{\keepLicenseElements}
     \lsucmandatory{\keepAllNotices}
     \lsucmandatory{\displayNotice}
@@ -388,11 +379,10 @@ modified library as embedded binaries}};
   distribute this modified version to third parties in the form of binary files or as a
   binary package.}
 
-  \lsuccovers{OSUC-04B\footnote{For details $\rightarrow$ OSLiC,
-      pp.\ \pageref{OSUC-04B-DEF}}}
+  \mapsToOsuc{04B}
 
   \begin{lsucrequires}
-    \lsucmandatory{\copyLicenseWithBinary}\passingFiles
+    \lsucmandatory{\copyLicenseWithBinary}\passingFilesCorrectly
     \lsucmandatory{\keepLicenseElementsBinary}
     \lsucmandatory{\expandNotices}
     \lsucmandatory{\displayNotice}
@@ -419,11 +409,10 @@ modified library as embedded binaries}};
   files or as a source code package, but without embedding it into another
   larger software unit.}
 
-  \lsuccovers{OSUC-08S\footnote{For details $\rightarrow$ OSLiC,
-      pp.\ \pageref{OSUC-08S-DEF}}}
+  \mapsToOsuc{08S}
 
   \begin{lsucrequires}
-    \lsucmandatory{\copyLicenseWithSource}\passingFiles
+    \lsucmandatory{\copyLicenseWithSource}\passingFilesCorrectly
     \lsucmandatory{\keepLicenseElements}
     \lsucmandatory{\keepAllNotices}
  
@@ -453,11 +442,10 @@ modified library as embedded binaries}};
   or as a binary package but without embedding it into another larger software
   unit.}
 
-  \lsuccovers{OSUC-08B\footnote{For details $\rightarrow$ OSLiC,
-      pp.\ \pageref{OSUC-08B-DEF}} }
+  \mapsToOsuc{08B}
 
   \begin{lsucrequires}
-    \lsucmandatory{\copyLicenseWithBinary}\passingFiles
+    \lsucmandatory{\copyLicenseWithBinary}\passingFilesCorrectly
     \lsucmandatory{\keepLicenseElementsBinary}
     \lsucmandatory{\expandNotices}
    
@@ -484,11 +472,10 @@ modified library as embedded binaries}};
   which contains this code snippet, module, library, or plugin as an embedded
   component.}
 
-  \lsuccovers{OSUC-10S\footnote{For details $\rightarrow$ OSLiC,
-      pp.\ \pageref{OSUC-10S-DEF}}} 
+  \mapsToOsuc{10S}
 
   \begin{lsucrequires}
-    \lsucmandatory{\copyLicenseWithSource}\passingFiles
+    \lsucmandatory{\copyLicenseWithSource}\passingFilesCorrectly
     \lsucmandatory{\keepLicenseElements}
     \lsucmandatory{\keepAllNotices}
  
@@ -527,11 +514,10 @@ modified library as embedded binaries}};
   or as a binary package together with another larger software unit which
   contains this code snippet, module, library, or plugin as an embedded component.}
 
-  \lsuccovers{OSUC-10B\footnote{For details $\rightarrow$ OSLiC,
-      pp.\ \pageref{OSUC-10B-DEF}}} 
+  \mapsToOsuc{10B}
 
   \begin{lsucrequires}
-    \lsucmandatory{\copyLicenseWithBinary}\passingFiles
+    \lsucmandatory{\copyLicenseWithBinary}\passingFilesCorrectly
     \lsucmandatory{\keepLicenseElementsBinary}
     \lsucmandatory{\expandNotices}
  
