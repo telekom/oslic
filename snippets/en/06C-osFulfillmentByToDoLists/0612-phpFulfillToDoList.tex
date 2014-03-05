@@ -25,13 +25,17 @@
 
 \section{PHP-3.0 licensed software}
 
-The PHP-3.0 license contains a shade more conditions than the MIT license and
+\begin{license}{PHP} % ends at end of file
+\licensename{PHP-3.0}
+\licensespec{PHP 3.0 License}
+\licenseabbrev{PHP}
+
+The PHP-3.0 license contains a few more conditions than the MIT license and
 additionally distinguishes the \enquote{redistribution of source
-code}\footcite[cf.][wp. §1]{Php30OsiLicense2013a} from the
-\enquote{redistribution in binary form}\footcite[cf.][wp.
-§2]{Php30OsiLicense2013a} . Nevertheless, the PHP-3.0 license focusses only on the
-redistribution or -- as we are going to say in the OSLiC -- \emph{the 2others use
-cases}. Thus, the PHP-3.0 specific finder can be simplified:
+code}\citePHP{} from the \enquote{redistribution in binary form}.\citePHP{}
+Nevertheless, the PHP-3.0 license focusses only on the redistribution or---as we
+call it in the \oslic---\emph{the 2others use
+cases.} Thus, the PHP-3.0 specific finder can be simplified:
 
 \tikzstyle{nodv} = [font=\small, ellipse, draw, fill=gray!10, 
     text width=2cm, text centered, minimum height=2em]
@@ -129,403 +133,358 @@ library as embedded binaries}};
 
 \end{tikzpicture}
 
+%% =============================================================================
+%% Common building blocks
+%%
+
+% ------------------------------------------------------------------------------
+% Preserve the license elements
+
+\newcommand{\keepPHPLicense}{Ensure that the complete PHP-3.0 license
+  (especially the copyright notice, the PHP-3.0 conditions, and the PHP-3.0
+  disclaimer) are retained in your package in the form you have received them.}
+
+% ------------------------------------------------------------------------------
+% Reproduce the license elements
+\newcommand{\reproducePHPLicense}{Ensure that the complete PHP-3.0 license
+  (especially the copyright notice, the PHP-3.0 conditions, and the PHP-3.0
+  disclaimer) are \emph{reproduced} by your package in the form you have
+  received them. If you compile the binary file from the source code package and
+  if this process does not also generate and integrate the licensing files then
+  create the copyright notice, the PHP-3.0 conditions, and the PHP-3.0
+  disclaimer in the form present in the source code package and insert these
+  files into your distribution manually.}
+
+% ------------------------------------------------------------------------------
+% Mark modifications in the source
+
+\newcommand{\markModifications}{Mark your modifications in the source code.}
+\newcommand{\markUndistributedModifications}{Mark your modifications in the
+  source code, even if you do not want to distribute the code.}
+
+% ------------------------------------------------------------------------------
+% Acknowledge PHP in documentation and link to homepage
+
+\newcommand{\acknowledgePHPInDocumentation}{Let the documentation of your
+  distribution or your additional material also contain a line of acknowledgment
+  in the form:
+  \enquote{This product includes PHP, freely available from http://www.php.net/}}
+
+% ------------------------------------------------------------------------------
+% Add license to documentation
+
+\newcommand{\addLicenseToDocumentation}{Let the documentation of your
+  distribution and/or your additional material also contain the original
+  copyright notice, the PHP-3.0 conditions, and the PHP-3.0 disclaimer.}
+
+% ------------------------------------------------------------------------------
+% Create a copyright dialog or add elements to it
+
+\newcommand{\auxCDIntro}[1]{It is a good practice of the open source community
+  to let the copyright notice, which is shown by the running program, also state
+  that the program #1 under the PHP-3.0 license.}
+\newcommand{\auxCDElements}{\emph{reproduce} the complete PHP-3.0 license
+  including the copyright notice, the PHP-3.0 conditions, and the PHP-3.0
+  disclaimer (as it is required for binary distributions.)} 
+
+\newcommand{\createCopyrightDialog}{%
+  \auxCDIntro{is licensed}.
+  Because you are already modifying the program you can also add such a hint if
+  the original copyright notice lacks such a statement. If such a notice is
+  missing in the copyright screen, consider, if it is possible to let it
+  \auxCDElements} 
+
+\newcommand{\listEmbeddedLibraryInCopyrightDialog}{%
+  \auxCDIntro{uses a component licensed}
+  So, let the copyright screen of the enclosing program \auxCDElements}
+
+% ------------------------------------------------------------------------------
+% Separate embedded library from enclosing program
+
+\newcommand{\auxKeepSeparate}[1]{Arrange your #1 distribution so that the
+  licensing elements (especially the PHP-3.0 license text, the specific
+  copyright notice of the original author(s), and the PHP-3.0 disclaimer)
+  clearly refer only to the embedded library and do not affect the licensing of
+  your own overarching work. It's a good tradition to keep embedded components
+  like libraries, modules, snippets, or plugins in separate directories which
+  contain also all additional licensing elements.}
+
+\newcommand{\keepSourceSeparate}{\auxKeepSeparate{source code}}
+\newcommand{\keepBinarySeparate}{\auxKeepSeparate{binary}}
+
+% ------------------------------------------------------------------------------
+% Forbid to use the name PHP
+
+\newcommand{\toUseTheNamePHPForServices}{to endorse or promote any service you
+  establish based on this software by the name `PHP.'}
+\newcommand{\toUseTheNamePHP}{to endorse or promote your product by mentioning
+  PHP, especially not by making the string `PHP' part of its name.}
+
+%% =============================================================================
+%% Use Cases
+
 \subsection{PHP-3.0-C1: Using the software only for yourself}
-\label{OSUC-01-PHP} 
-\label{OSUC-03-PHP} 
-\label{OSUC-06-PHP}
-\label{OSUC-09-PHP}
+\begin{lsuc}{PHP-C1}
+  \linkosuc{01} 
+  \linkosuc{03} 
+  \linkosuc{06}
+  \linkosuc{09}
   
-\begin{description}
+  \lsucmeans{that you received PHP-3.0 licensed software, that you will use it
+    only for yourself, and that you do not hand it over to any third party in
+    any sense.}
 
-\item[means] that you received PHP-3.0 licensed software, that you will use it
-  only for yourself, and that you do not hand it over to any 3rd party in any
-  sense.
-
-\item[covers] OSUC-01, OSUC-03, OSUC-06, and OSUC-09\footnote{For details $\rightarrow$ OSLiC, pp.\
-  \pageref{OSUC-01-DEF} - \pageref{OSUC-09-DEF}}
+  \coversOsucs{OSUC-01, OSUC-03, OSUC-06, and OSUC-09}{01}{09}
   
-\item[requires] no tasks in order to fulfill the conditions of the PHP-3.0 license
-with respect to this use case:
+  \begin{lsucrequiresnothing}
+    \lsucitem{You are allowed to use any kind of PHP-3.0 software in any sense
+      and in any context without any obligations as long as you do not give the
+      software to third parties.}
+  \end{lsucrequiresnothing}
+
+  \begin{lsucprohibits}
+    \lsucitem{\toUseTheNamePHP}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{PHP-3.0-C2: Passing the unmodified software as source code}
+\begin{lsuc}{PHP-C2}
+  \linkosuc{02S}
+  \linkosuc{05S} 
+  \linkosuc{07S} 
+
+  \lsucmeans{that you received PHP-3.0 licensed software which you are now going
+    to distribute to third parties in the form of unmodified source code files
+    or as unmodified source code package. In this case it makes no difference if
+    you distribute a program, an application, a server, a snippet, a module, a
+    library, or a plugin as an independent or as an embedded unit.}
+
+  \coversOsucs{OSUC-02S, OSUC-05S, OSUC-07S}{02S}{07S}
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepPHPLicense}
+    \lsucmandatory{\acknowledgePHPInDocumentation}
+    \lsucoptional{\addLicenseToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\toUseTheNamePHP}
+  \end{lsucprohibits} 
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{PHP-3.0-C3: Passing the unmodified software as binary}
+\begin{lsuc}{PHP-C3}
+  \linkosuc{02B} 
+  \linkosuc{05B} 
+  \linkosuc{07B} 
+
+  \lsucmeans{that you received PHP-3.0 licensed software which you are now going
+    to distribute to third parties in the form of unmodified binary files or as
+    unmodified binary package. In this case it does not matter if you distribute
+    a program, an application, a server, a snippet, a module, a library, or a
+    plugin as an independent or an embedded unit.}
+
+  \coversOsucs{OSUC-02B, OSUC-05B, OSUC-07B}{02B}{07B}
+
+  \begin{lsucrequires}
+    \lsucmandatory{\reproducePHPLicense}%
+    \footnote{Because you are distributing an unmodified binary, you could
+      assume that the copright screens of the application do already what they
+      have to do.}%
+    \passingFilesCorrectly
+    \lsucmandatory{\acknowledgePHPInDocumentation}
+    \lsucoptional{\addLicenseToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\toUseTheNamePHP}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{PHP-3.0-C4: Passing a modified program as source code}
+\begin{lsuc}{PHP-C4}
+  \linkosuc{04S}
+
+  \lsucmeans{that you received a PHP-3.0 licensed program, application, or
+    server (proapse), that you modified it, and that you are now going to
+    distribute this modified version to third parties in the form of source code
+    files or as a source code package.}
+
+  \mapsToOsuc{04S}
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepPHPLicense}
+    \lsucmandatory{\acknowledgePHPInDocumentation}
+    \lsucoptional{\addLicenseToDocumentation}
+    \lsucoptional{\createCopyrightDialog}% 
+    \footnote{Following distributors of compiled versions will appreciate your
+      prepatory work.} 
+    \lsucoptional{\markModifications}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\toUseTheNamePHP}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{PHP-3.0-C5: Passing a modified program as binary}
+\begin{lsuc}{PHP-C5}
+  \linkosuc{04B}
+
+  \lsucmeans{that you received a PHP-3.0 licensed program, application, or
+    server (proapse), that you modified it, and that you are now going to
+    distribute this modified version to third parties in the form of binary
+    files or as a binary package.}
+
+  \mapsToOsuc{04B}
+
+  \begin{lsucrequires}
+    \lsucmandatory{\acknowledgePHPInDocumentation}
+    \lsucmandatory{\addLicenseToDocumentation}
+    \lsucoptional{\reproducePHPLicense}
+    \lsucoptional{\markUndistributedModifications}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\toUseTheNamePHP}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{PHP-3.0-C6: Passing a modified library as independent source code}
+\begin{lsuc}{PHP-C6}
+  \linkosuc{08S}
+
+  \lsucmeans{that you received a PHP-3.0 licensed code snippet, module, library,
+    or plugin (snimoli), that you modified it, and that you are now going to
+    distribute this modified version to third parties in the form of source code
+    files or as a source code package, but without embedding it into another
+    larger software unit.}
+
+  \mapsToOsuc{08S}
+
   \begin{itemize}
-    \item You are allowed to use any kind of PHP-3.0 software in any sense and in
-    any context without any obligations as long as you do not give the software
-    to 3rd parties.
+    \lsucmandatory{\keepPHPLicense}
+    \lsucmandatory{\acknowledgePHPInDocumentation}
+    \lsucoptional{\addLicenseToDocumentation}
+    \lsucoptional{\markModifications}
   \end{itemize}
 
-\item[prohibits] to endorse or promote any service you establish on the base of
-this privately used software by the name 'PHP'.
+  \begin{lsucprohibits}
+    \lsucitem{\toUseTheNamePHP}
+  \end{lsucprohibits}
+\end{lsuc}
 
-\end{description}
-
-
-\subsection{PHP-3.0-C2: Passing the unmodified software as source code}
-\label{OSUC-02S-PHP} \label{OSUC-05S-PHP} \label{OSUC-07S-PHP} 
-
-\begin{description}
-\item[means] that you received PHP-3.0 licensed software which you are now
-  going to distribute to third parties in the form of unmodified source code
-  files or as unmodified source code package. In this case it makes no
-  difference if you distribute a program, an application, a server, a snippet, a
-  module, a library, or a plugin as an independent or as an embedded unit.
-
-\item[covers] OSUC-02S, OSUC-05S, OSUC-07S\footnote{For details $\rightarrow$
-OSLiC, pp.\ \pageref{OSUC-02S-DEF} - \pageref{OSUC-07S-DEF}}
-
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
-  
-  \item \textbf{[mandatory:]} Ensure that the complete PHP-3.0 license -- esp.\
-  the copyright notice, the PHP-3.0 conditions, and the PHP-3.0 disclaimer -- are
-  retained in your package in the form you have received them.
-  
-  \item \textbf{[mandatory:]} Let the documentation of your distribution and/or
-  your additional material also contain a line of acknowledgment in the form
-  \begin{footnotesize}"This product includes PHP, freely available from
-  $\langle$http://www.php.net/$\rangle$"\end{footnotesize}.
-  
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also contain the original copyright notice, the PHP-3.0
-  conditions, and the PHP-3.0 disclaimer.
-  
-\end{itemize}
-
-\item[prohibits] to endorse or promote your product by mentioning PHP, esp. not
-by making the string 'PHP' part of its name.
-
-\end{description}
-
-\subsection{PHP-3.0-C3: Passing the unmodified software as binary}
-\label{OSUC-02B-PHP} \label{OSUC-05B-PHP} \label{OSUC-07B-PHP} 
-
-\begin{description}
-
-\item[means] that you received PHP-3.0 licensed software which you are now
-  going to distribute to third parties in the form of unmodified binary files or
-  as unmodified binary package. In this case it does not matter if you distribute
-  a program, an application, a server, a snippet, a module, a library, or a
-  plugin as an independent or an embedded unit.
-
-\item[covers] OSUC-02B, OSUC-05B, OSUC-07B\footnote{For details $\rightarrow$
-OSLiC, pp.\ \pageref{OSUC-02B-DEF} - \pageref{OSUC-07B-DEF}}
-
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
-
-  \item \textbf{[mandatory:]} Ensure that the complete PHP-3.0 license -- esp.\ the
-  copyright notice, the PHP-3.0 conditions, and the PHP-3.0 disclaimer -- are
-  \textbf{reproduced} by your package in the form you have received
-  them\footnote{Because you are distributing an unmodified binary, you could
-  assume that the copright screens of the application do already what they have
-  to do}. If you compile the binary file on the base of the source code package
-  and if this compilation does not also generate and integrate the licensing
-  files then create the copyright notice, the PHP-3.0 conditions, and the PHP-3.0
-  disclaimer according to the form of the source code package and insert these
-  files into your distribution manually\footnote{For implementing the handover
-  of files correctly $\rightarrow$ OSLiC, p.\ \pageref{DistributingFilesHint}}.
-  
-  \item \textbf{[mandatory:]} Let the documentation of your distribution and/or
-  your additional material also contain a line of acknowledgment in the form
-   \begin{footnotesize}"This product includes PHP, freely available from
-  $\langle$http://www.php.net/$\rangle$"\end{footnotesize}.
-    
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also contain the original copyright notice, the PHP-3.0
-  conditions, and the PHP-3.0 disclaimer.
-
-\end{itemize}
-
-\item[prohibits] to endorse or promote your product by mentioning PHP, esp. not
-by making the string 'PHP' part of its name.
-
-\end{description}
-
-\subsection{PHP-3.0-C4: Passing a modified program as source code}
-\label{OSUC-04S-PHP}
-
-\begin{description}
-\item[means] that you received a PHP-3.0 licensed program, application, or
-  server (proapse), that you modified it, and that you are now going to
-  distribute this modified version to third parties in the form of source code files or as
-  a source code package.
-
-\item[covers] OSUC-04S\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-04S-DEF}}
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
-
-  \item \textbf{[mandatory:]} Ensure that the complete PHP-3.0 license -- esp.\
-  the copyright notice, the PHP-3.0 conditions, and the PHP-3.0 disclaimer -- are
-  retained in your package in the form you have received them.
-  
-  \item \textbf{[mandatory:]} Let the documentation of your distribution and/or
-  your additional material also contain a line of acknowledgment in the form
-  \begin{footnotesize}"This product includes PHP, freely available from
-  $\langle$http://www.php.net/$\rangle$"\end{footnotesize}.
-    
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also contain the original copyright notice, the PHP-3.0
-  conditions, and the PHP-3.0 disclaimer.
-     
-  \item \textbf{[voluntary:]} It is a good practice of the open source
-  community, to let the copyright notice which is shown by the running program
-  also state that the program is licensed under the PHP-3.0 license. Because you are
-  already modifying the program you can also add such a hint if the presented
-  original copyright notice lacks such a statement. If such a notice is missed
-  in the copyright screen, consider, whether it is possible, to let it
-  \emph{reproduce} the complete PHP-3.0 license including the copyright notice, the
-  PHP-3.0 conditions, and the PHP-3.0 disclaimer -- as it is required for binary
-  distributions\footnote{Following distributors of compiled versions will
-  appreciate your prepatory work.}
-  
-  \item \textbf{[voluntary:]} Mark your modifications in the source code.
-  
-  
-\end{itemize}
-
-\item[prohibits] to endorse or promote your product by mentioning PHP, esp. not
-by making the string 'PHP' part of its name.
-
-\end{description}
-
-\subsection{PHP-3.0-C5: Passing a modified program as binary}
-\label{OSUC-04B-PHP}
-
-\begin{description}
-\item[means] that you received a PHP-3.0 licensed program, application, or
-  server (proapse), that you modified it, and that you are now going to
-  distribute this modified version to third parties in the form of binary files or as a
-  binary package.
-
-\item[covers] OSUC-04B\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-04B-DEF}}
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
-  
-  \item \textbf{[mandatory:]} Let the documentation of your distribution and/or
-  your additional material also contain a line of acknowledgment in the form
-  \begin{footnotesize}"This product includes PHP, freely available from
-  $\langle$http://www.php.net/$\rangle$"\end{footnotesize}.
-    
-  \item \textbf{[mandatory:]} Let the documentation of your distribution and/or
-  your additional material also contain the original copyright notice, the PHP-3.0
-  conditions, and the PHP-3.0 disclaimer.
-
-  \item \textbf{[voluntary:]} Ensure that the complete PHP-3.0 license -- esp.\ the
-  copyright notice, the PHP-3.0 conditions, and the PHP-3.0 disclaimer -- are
-  \textbf{reproduced} by your package. If such a notice is missed in the
-  copyright screen, modify the screen so  that it \emph{reproduces} the complete
-  PHP-3.0 license including the copyright notice, the PHP-3.0 conditions, and the PHP-3.0
-  disclaimer.
-  
-  \item \textbf{[voluntary:]} Mark your modifications in the source code,
-  even if you do not want to distribute the code.
-
-\end{itemize}
-
-\item[prohibits] to endorse or promote your product by mentioning PHP, esp. not
-by making the string 'PHP' part of its name.
-
-\end{description}
-
-\subsection{PHP-3.0-C6: Passing a modified library as independent source code}
-\label{OSUC-08S-PHP}
-\begin{description}
-\item[means] that you received a PHP-3.0 licensed code snippet, module, library,
-  or plugin (snimoli), that you modified it, and that you are now going to
-  distribute this modified version to third parties in the form of source code
-  files or as a source code package, but without embedding it into another
-  larger software unit.
-
-\item[covers] OSUC-08S\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-08S-DEF}}
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
-  
-  \item \textbf{[mandatory:]} Ensure that the complete PHP-3.0 license -- esp.\
-  the copyright notice, the PHP-3.0 conditions, and the PHP-3.0 disclaimer -- are
-  retained in your package in the form you have received them.
-  
-  \item \textbf{[mandatory:]} Let the documentation of your distribution and/or
-  your additional material also contain a line of acknowledgment in the form
-  \begin{footnotesize}"This product includes PHP, freely available from
-  $\langle$http://www.php.net/$\rangle$"\end{footnotesize}.
-    
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also contain the original copyright notice, the PHP-3.0
-  conditions, and the PHP-3.0 disclaimer.
-     
-  \item \textbf{[voluntary:]} Mark your modifications in the source code.
-  
-\end{itemize}
-
-\item[prohibits] to endorse or promote your product by mentioning PHP, esp. not
-by making the string 'PHP' part of its name.
-
-\end{description}
-
-
+% ------------------------------------------------------------------------------
 \subsection{PHP-3.0-C7: Passing a modified library as independent binary}
-\label{OSUC-08B-PHP}
+\begin{lsuc}{PHP-C7}
+  \linkosuc{08B}
 
-\begin{description}
+  \lsucmeans{that you received a PHP-3.0 licensed code snippet, module, library,
+    or plugin (snimoli), that you modified it, and that you are now going to
+    distribute this modified version to third parties in the form of binary files
+    or as a binary package but without embedding it into another larger software
+    unit.}
 
-\item[means] that you received a PHP-3.0 licensed code snippet, module, library,
-  or plugin (snimoli), that you modified it, and that you are now going to
-  distribute this modified version to third parties in the form of binary files
-  or as a binary package but without embedding it into another larger software
-  unit.
+  \mapsToOsuc{08B}
 
-\item[covers] OSUC-08B\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-08B-DEF}}
+  \begin{lsucrequires}
+    \lsucmandatory{\acknowledgePHPInDocumentation}
+    \lsucmandatory{\addLicenseToDocumentation}
+    \lsucoptional{\reproducePHPLicense}
+    \lsucoptional{\markUndistributedModifications}
+  \end{lsucrequires}
 
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
-  
-  \item \textbf{[mandatory:]} Let the documentation of your distribution and/or
-  your additional material also contain a line of acknowledgment in the form
-  \begin{footnotesize}"This product includes PHP, freely available from
-  $\langle$http://www.php.net/$\rangle$"\end{footnotesize}.
-    
-  \item \textbf{[mandatory:]} Let the documentation of your distribution and/or
-  your additional material also contain the original copyright notice, the PHP-3.0
-  conditions, and the PHP-3.0 disclaimer.
+  \begin{lsucprohibits}
+    \lsucitem{\toUseTheNamePHP}
+  \end{lsucprohibits}
+\end{lsuc}
 
-  \item \textbf{[voluntary:]} Ensure that the complete PHP-3.0 license -- esp.\ the
-  copyright notice, the PHP-3.0 conditions, and the PHP-3.0 disclaimer -- are
-  \textbf{reproduced} by your package -- as far as this can be done by the
-  library itself.
-  
-  \item \textbf{[voluntary:]} Mark your modifications in the source code,
-  even if you do want to distribute the code.
-
-\end{itemize}
-
-\item[prohibits] to endorse or promote your product by mentioning PHP, esp. not
-by making the string 'PHP' part of its name.
-
-\end{description}
-
+% ------------------------------------------------------------------------------
 \subsection{PHP-3.0-C8: Passing a modified library as embedded source code}
-\label{OSUC-10S-PHP}
-\begin{description}
-\item[means] that you received a PHP-3.0 licensed code snippet, module, library,
-  or plugin (snimoli), that you modified it, and that you are now going to
-  distribute this modified version to third parties in the form of source code
-  files or as a source code package together with another larger software unit
-  which contains this code snippet, module, library, or plugin as an embedded
-  component.
+\begin{lsuc}{PHP-C8}
+  \linkosuc{10S}
 
-\item[covers] OSUC-10S\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-10S-DEF}}
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
-  
-  \item \textbf{[mandatory:]} Ensure that the complete PHP-3.0 license -- esp.\
-  the copyright notice, the PHP-3.0 conditions, and the PHP-3.0 disclaimer -- are
-  retained in your package in the form you have received them.
-  
-  \item \textbf{[mandatory:]} Let the documentation of your distribution and/or
-  your additional material also contain a line of acknowledgment in the form
-   \begin{footnotesize}"This product includes PHP, freely available from
-  $\langle$http://www.php.net/$\rangle$"\end{footnotesize}.
-    
-  \item \textbf{[mandatory:]} Let the documentation of your distribution and/or
-  your additional material also contain the original copyright notice, the PHP-3.0
-  conditions, and the PHP-3.0 disclaimer.
+  \lsucmeans{that you received a PHP-3.0 licensed code snippet, module, library,
+    or plugin (snimoli), that you modified it, and that you are now going to
+    distribute this modified version to third parties in the form of source code
+    files or as a source code package together with another larger software unit
+    which contains this code snippet, module, library, or plugin as an embedded
+    component.}
 
-  \item \textbf{[voluntary:]} It is a good practice of the open source
-  community, to let the copyright notice which is shown by the running program
-  also state that the program uses a copmponent licensed under the PHP-3.0 license.
-  So, let the copyright screen of the overarching program \emph{reproduce} the
-  complete PHP-3.0 license including the copyright notice, the PHP-3.0 conditions, and
-  the PHP-3.0 disclaimer -- as it is required for binary
-  distributions\footnote{Following distributors of compiled versions will
-  appreciate your prepatory work.}
-  
-  \item \textbf{[voluntary:]} Mark your modifications in the source code.
-  
-  \item \textbf{[voluntary:]} Arrange your source code distribution so that the
-  licensing elements -- esp.\ the PHP-3.0 license text, the specific copyright
-  notice of the original author(s), and the PHP-3.0 disclaimer -- clearly refer
-  only to the embedded library and do not disturb the licensing of your own
-  overarching work. It's a good tradition to keep the embedded components like
-  libraries, modules, snippets, or plugins in specific directory which contains
-  also all additional licensing elements.
-  
-\end{itemize}
+  \mapsToOsuc{10S}
 
-\item[prohibits] to endorse or promote your product by mentioning PHP, esp. not
-by making the string 'PHP' part of its name.
+  \begin{lsucrequires}
+    \lsucmandatory{\keepPHPLicense}
+    \lsucmandatory{\acknowledgePHPInDocumentation}
+    \lsucmandatory{\addLicenseToDocumentation}
+    \lsucoptional{\listEmbeddedLibraryInCopyrightDialog}%
+    \footnote{Following distributors of compiled versions will appreciate your
+      prepatory work.} 
+    \lsucoptional{\markModifications}
+    \lsucoptional{\keepSourceSeparate}
+  \end{lsucrequires}
 
-\end{description}
+  \begin{lsucprohibits}
+    \lsucitem{\toUseTheNamePHP}
+  \end{lsucprohibits}
+\end{lsuc}
 
-
+% ------------------------------------------------------------------------------
 \subsection{PHP-3.0-C9: Passing a modified library as embedded binary}
-\label{OSUC-10B-PHP}
+\begin{lsuc}{PHP-C9}
+  \linkosuc{10B}
 
-\begin{description}
-\item[means] that you received a PHP-3.0 licensed code snippet, module, library,
-  or plugin (snimoli), that you modified it, and that you are now going to
-  distribute this modified version to third parties in the form of binary files
-  or as a binary package together with another larger software unit which
-  contains this code snippet, module, library, or plugin as an embedded component.
+  \lsucmeans{that you received a PHP-3.0 licensed code snippet, module, library,
+    or plugin (snimoli), that you modified it, and that you are now going to
+    distribute this modified version to third parties in the form of binary
+    files or as a binary package together with another larger software unit
+    which contains this code snippet, module, library, or plugin as an embedded
+    component.}
 
-\item[covers] OSUC-10B\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-10B-DEF}}
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
+  \mapsToOsuc{10B}
 
-  \item \textbf{[mandatory:]} Let the documentation of your distribution and/or
-  your additional material also contain a line of acknowledgment in the form
-  \begin{footnotesize}"This product includes PHP-3.0, freely available from
-  $\langle$http://www.php.net/$\rangle$"\end{footnotesize}.
-    
-  \item \textbf{[mandatory:]} Let the documentation of your distribution and/or
-  your additional material also contain the original copyright notice, the PHP-3.0
-  conditions, and the PHP-3.0 disclaimer.
+  \begin{lsucrequires}
+    \lsucmandatory{\acknowledgePHPInDocumentation}
+    \lsucmandatory{\addLicenseToDocumentation}
+    \lsucoptional{\reproducePHPLicense}
+    \lsucoptional{\markUndistributedModifications}
+    \lsucoptional{\keepBinarySeparate}
+  \end{lsucrequires}
 
-  \item \textbf{[voluntary:]} Ensure that the complete PHP-3.0 license -- esp.\ the
-  copyright notice, the PHP-3.0 conditions, and the PHP-3.0 disclaimer -- are
-  \textbf{reproduced} by your package, esp. by the copyright screen of your
-  overaching program which uses the library.
-    
-  \item \textbf{[voluntary:]} Mark your modifications in the source code,
-  even if you do not you want to distribute the code.
-  
-  \item \textbf{[voluntary:]} Arrange your binary distribution so that the
-  licensing elements -- esp.\ the PHP-3.0 license text, the specific copyright
-  notice of the original author(s), and the PHP-3.0 disclaimer -- clearly refer
-  only to the embedded library and do not disturb the licensing of your own
-  overarching work. It's a good tradition to keep the libraries, modules,
-  snippet, or plugins in specific directories which contain also all licensing
-  elements.
-\end{itemize}
+  \begin{lsucprohibits}
+    \lsucitem{\toUseTheNamePHP}
+  \end{lsucprohibits}
+\end{lsuc}
 
-\item[prohibits] to endorse or promote your product by mentioning PHP, esp. not
-by making the string 'PHP' part of its name.
-
-\end{description}
-
+% ------------------------------------------------------------------------------
 \subsection{Discussions and Explanations}
-
 \label{sec:PhpDiscussions}
 
-First of all, it might surprise some readers that the OSLiC also describes the
-open source use cases which concern the distribution of binary files although it
-deals with the PHP-3.0 license. PHP is a script language. Thus, delivering the
-source code seems to be a must. But one has to consider that the PHP-3.0 license
-could also be applied to works which are based on other languages constituted on
-the compiler paradigm. Or there might a PHP compiler be used.
+First of all, it might surprise some readers that the \oslic{} also describes
+the open source use cases which concern the distribution of binary files
+although it deals with the PHP-3.0 license. PHP is a script language. Thus,
+delivering the source code seems to be a must. But one has to consider that the
+PHP-3.0 license could also be applied to works which are based on other
+languages constituted on the compiler paradigm. Or there might a PHP compiler be
+used. 
 
 It might also surprise some readers that in case of the binary distribution of
 modifications the condition to repoduce the php license in the documentation is
-a \emph{must}, while its reproduction in a copyright screen of the program is a
-\emph{should}. This is directly evoked by the binary-condition of the php license
+a \emph{must,} while its reproduction in a copyright screen of the program is a
+\emph{should.} This is directly caused by the binary-condition of the php license
 which expressly requires that \enquote{Redistributions in binary form must
 reproduce the above copyright notice, this list of conditions and the following
 disclaimer in the documentation and/or other materials provided with the
-distribution}\footcite[cf.][wp. §2]{Php30OsiLicense2013a}. But of course, to
-implement the \emph{must} and the \emph{should} is the best.
+distribution.}\citePHP{} But of course, implementing the \emph{must} and the
+\emph{should} is best. 
+
+% ------------------------------------------------------------------------------
+\end{license}
 
 %\bibliography{../../../bibfiles/oscResourcesEn}
 
