@@ -7,7 +7,7 @@ require 'find'
 VERSION_NUMBER = IO.read("rel-number.tex").chomp
 
 PROTECTED_DIRS=%w{license presentations}
-AUX_EXTS=%w{url bbl blg aux dvi toc log lof nlo nls ilg ils ent}
+AUX_EXTS=%w{url bbl blg aux dvi toc log lof nlo nls ilg ils ent out}
 RES_EXTS=%w{ps pdf rtf} + AUX_EXTS
 
 DIR_REGEX=%r{^(\./)?#{PROTECTED_DIRS.join('|')}}
@@ -45,7 +45,7 @@ end
 def fast_build(filename)
   basename = no_ext(filename)
   latex filename
-  mv "#{basename}.pdf", "#{basename}-#{VERSION_NUMBER}.pdf"
+  cp "#{basename}.pdf", "#{basename}-#{VERSION_NUMBER}.pdf"
 end
 
 # filename - name of the LaTeX file, w/ or w/o extension
@@ -75,13 +75,14 @@ end
 
 task :distclean do
   remove_files { |file| not(file=~ DIR_REGEX) && RES_REGEX =~ file }
+  rm "oslic.pdf"
 end
 
 task :build do 
   full_build "oslic"
 end
 
-task "oslic-#{VERSION_NUMBER}.pdf" do 
+task "oslic.pdf" do 
   fast_build "oslic"
 end
 

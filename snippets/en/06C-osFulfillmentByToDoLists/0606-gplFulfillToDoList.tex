@@ -27,39 +27,43 @@
 
 Both versions of the GNU General Public License explicitly distinguish the
 distribution of the source code from that of the binaries: On the one hand, the
-GPL-V2 mainly talks about copying and distributing the source
-code\footcite[cf.][\nopage wp.\ §1, §2]{Gpl20OsiLicense1991a}, but also mentions
-the specific conditions for \enquote{[\ldots] (copying) and (distributing) the
-Program [\ldots] in object code or executable form
-[\ldots]}\footcite[cf.][\nopage wp.\ §3]{Gpl20OsiLicense1991a}. On the other
-hand, the GPL-V3 describes the \enquote{Basic Permissions} and the conditions
-for \enquote{Conveying Verbatim Copies} or for \enquote{Conveying Modified
-Source Versions}\footcite[cf.][\nopage wp.\ §2, §4, §5]{Gpl30OsiLicense2007a}
-before it explains the rules for \enquote{Conveying
-Non-Source-Forms}\footcite[cf.][\nopage wp.\ §2, §4, §5]{Gpl30OsiLicense2007a}.
-Additionally, GPL-V2 and GPL-V3 mainly talk about copying \emph{and}
-distributing the software; the private use is nearly complete
-unspecified\footnote{The GPL-V2 lists its 'restrictions' only with respect to
-the act of copying \emph{and} distributing \enquote{copies of the program}
-(\cite[cf.][\nopage wp.\ §1, §2, §4 et passim; emphasizings by
-KR]{Gpl20OsiLicense1991a}) while the GPL-V3 explicitly specifies that one
-\enquote{[\ldots] may make, run and propagate covered works that (one does) not
-convey, without conditions so long as (the) license otherwise remains in force}
-(\cite[cf.][\nopage wp.\ §2]{Gpl30OsiLicense2007a}).}. Finally, the GPL-V2 and
-the GPL-V3 are aiming for the same results and the same spirit by requiring
-nearly the same license fulfilling tasks. Last but not least, with respect to
-the use of an unmodified or a modified library as an embedded component, a
-license with a strong copyleft evokes that also the application which is using
-the (un)modified library has to be licensed under the same conditions as the
-library itself. Therefore it is appropriate to cover both versions by the same
-chapter and to offer the same more sophisticated GPL specific open source use
-case structure\footnote{For details of the general OSUC finder $\rightarrow$
-OSLiC, pp.\ \pageref{OsucTokens} and \pageref{OsucDefinitionTree}} for finding
-the easily processable corresponding task lists:
+GPL-2.0 mainly talks about copying and distributing the source
+code,\citeGPLtwo{§1, §2} but also mentions the specific conditions for
+\enquote{[\ldots] (copying) and (distributing) the Program [\ldots] in object
+code or executable form [\ldots]}\citeGPLtwo{§3} On the other hand, the GPL-3.0
+describes the \enquote{Basic Permissions} and the conditions for
+\enquote{Conveying Verbatim Copies} or for \enquote{Conveying Modified Source
+Versions}\citeGPLtwo{§2, §4, §5} before it explains the rules for
+\enquote{Conveying Non-Source-Forms}.\citeGPLtwo{§2, §4, §5}  
+
+GPL-2.0 and GPL-3.0 mainly talk about copying \emph{and} distributing the
+software; private use is nearly completely unspecified: The GPL-2.0 lists its
+`restrictions' only with respect to the act of copying \emph{and} distributing
+\enquote{copies of the program}\citeGPLtwo{§1, §2, §4 et passim; emphasize by
+KR} while the GPL-3.0 explicitly specifies that one \enquote{[\ldots] may
+make, run and propagate covered works that (one does) not convey, without
+conditions so long as (the) license otherwise remains in
+force.}\citeGPLthree{§2} 
+
+As licenses with a strong copyleft, they require that any application that
+contains a GPL-licensed library must itself be licensed under the same
+conditions as the library.
  
+Finally, the GPL-2.0 and the GPL-3.0 aim for the same results and share the
+same spirit by requiring nearly the same task to be performed for fulfilling the
+license conditions.  Therefore it is appropriate to cover both versions in the
+same chapter and to offer a common specialized GPL open source use case
+structure for quickly finding the appropriate task list.%
+  \footnote{For details of the general OSUC finder $\rightarrow$ \oslic,
+    pp.\ \pageref{OsucTokens} and \pageref{OsucDefinitionTree}}
+However, the task lists themselves will be kept separate.
+
+In the following diagram, GPL-*-C1 (GPL-*-C2, \ldots, GPL-*-CB) is either
+GPL-2.0-C1 (and so forth), if you are looking for the GPL-2.0 use case, or
+GPL-3.0-C1, \ldots for the GPL-3.0 use case.
+
 \tikzstyle{nodv} = [font=\scriptsize, ellipse, draw, fill=gray!10, 
     text width=2cm, text centered, minimum height=2em]
-
 
 \tikzstyle{nods} = [font=\tiny, rectangle, draw, fill=gray!20, 
     text width=1cm, text centered, rounded corners, minimum height=3em]
@@ -80,8 +84,8 @@ the easily processable corresponding task lists:
 
 \node[nodv] (l801) at (4,11.8) {GPL};
 
-\node[nodv] (l701) at (0,10.2) {version 2.0};
-\node[nodv] (l702) at (7.5,10.2) {version 3.0};
+\node[nodv] (l701) at (0,10.2) {2.0};
+\node[nodv] (l702) at (7.5,10.2) {3.0};
 
 
 \node[nodb] (l601) at (0,8.6) {\textit{recipient:} \\ \textbf{4yourself}};
@@ -113,38 +117,49 @@ the easily processable corresponding task lists:
 \node[nods] (l209) at (13.4,2.2) {\textit{form:} \textbf{source}};
 \node[nods] (l210) at (15.0,2.2) {\textit{form:} \textbf{binary}};
 
-\node[slimleaf] (l101) at (0,0) {\textbf{GPL-C1} \textit{using software only
-for yourself}};
+\node[slimleaf] (l101) at (0,0) {
+  \textbf{GPL-*-C1} 
+  \textit{using software only for yourself}};
 
-\node[leaf] (l102) at (1.45,0) { \textbf{GPL-C2} \textit{ distributing unmodified
-software as independent sources}};
+\node[leaf] (l102) at (1.45,0) { 
+  \textbf{GPL-*-C2} 
+  \textit{distributing unmodified software as independent sources}};
 
-\node[leaf] (l103) at (3.0,0) { \textbf{GPL-C3}  \textit{ distributing unmodified
-software as independent binaries}};
+\node[leaf] (l103) at (3.0,0) { 
+  \textbf{GPL-*-C3}  
+  \textit{distributing unmodified software as independent binaries}};
 
-\node[leaf] (l104) at (4.6,0) { \textbf{GPL-C4} \textit{ distributing unmodified
-library as embedded sources}};
+\node[leaf] (l104) at (4.6,0) { 
+  \textbf{GPL-*-C4} 
+  \textit{distributing unmodified library as embedded sources}};
 
-\node[leaf] (l105) at (6.2,0) { \textbf{GPL-C5}  \textit{ distributing unmodified
-library as embedded binaries}};
+\node[leaf] (l105) at (6.2,0) { 
+  \textbf{GPL-*-C5}  
+  \textit{distributing unmodified library as embedded binaries}};
 
-\node[slimleaf] (l106) at (7.7,0) { \textbf{GPL-C6}  \textit{ distributing modified
-program as sources}};
+\node[slimleaf] (l106) at (7.7,0) { 
+  \textbf{GPL-*-C6}  
+  \textit{distributing modified program as sources}};
 
-\node[slimleaf] (l107) at (9.1,0) { \textbf{GPL-C7}  \textit{ distributing modified
-program as binaries}};
+\node[slimleaf] (l107) at (9.1,0) { 
+  \textbf{GPL-*-C7}  
+  \textit{distributing modified program as binaries}};
 
-\node[slimleaf] (l108) at (10.5,0) { \textbf{GPL-C8}  \textit{ distributing modified
-library as independent sources}};
+\node[slimleaf] (l108) at (10.5,0) { 
+  \textbf{GPL-*-C8}  
+  \textit{distributing modified library as independent sources}};
 
-\node[slimleaf] (l109) at (11.9,0) { \textbf{GPL-C9} \textit{distributing modified
-library as independent binaries}};
+\node[slimleaf] (l109) at (11.9,0) { 
+  \textbf{GPL-*-C9}
+  \textit{distributing modified library as independent binaries}};
 
-\node[leaf] (l110) at (13.4,0) { \textbf{GPL-CA}  \textit{distributing
-modified library as embedded sources}};
+\node[leaf] (l110) at (13.4,0) { 
+  \textbf{GPL-*-CA}  
+  \textit{distributing modified library as embedded sources}};
 
-\node[leaf] (l111) at (15,0) { \textbf{GPL-CB}  \textit{ distributing modified
-library as embedded binaries}};
+\node[leaf] (l111) at (15,0) { 
+  \textbf{GPL-*-CB}  
+  \textit{ distributing modified library as embedded binaries}};
 
 \path [edge] (l801) -- (l701);
 \path [edge] (l801) -- (l702);
@@ -192,870 +207,957 @@ library as embedded binaries}};
 
 \end{tikzpicture}
 
+%% ============================================================================= 
+%% Common Building Blocks
+
+% ------------------------------------------------------------------------------
+% Common description of license specific use cases
+
+\newcommand{\useCaseOne}[1]{\lsucmeans{that you received GPL-#1 licensed
+    software that you will use it only for yourself and that you do not hand 
+    over to any third party in any sense.}}
+
+\newcommand{\useCaseTwo}[1]{\lsucmeans{that you received GPL-#1 licensed
+    software that you are now going to distribute to third parties as an
+    independent unit and in the form of unmodified source code files or as an
+    unmodified source code package. In this case it makes no difference if you
+    distribute a program, an application, a server, a snippet, a module, a
+    library, or a plugin.}}
+
+\newcommand{\useCaseThree}[1]{\lsucmeans{that you received GPL-#1 licensed
+    software that you are now going to distribute to third parties as an
+    independent unit and in the form of unmodified binary files or as an
+    unmodified binary package. In this case it does not matter if you distribute
+    a program, an application, a server, a snippet, a module, a library, or a
+    plugin.}}
+
+\newcommand{\useCaseFour}[1]{\lsucmeans{that you received a GPL-#1 licensed
+    snippet, module or library that you are now going to distribute to third
+    parties as an embedded component of a larger unit and in the form of
+    unmodified source code files or as an unmodified source code package.}}
+
+\newcommand{\useCaseFive}[1]{\lsucmeans{that you received a GPL-#1 licensed
+    snippet, module or library that you are now going to distribute to third
+    parties as an embedded component of a larger unit and in the form of
+    unmodified binary files or as unmodified binary package.}}
+
+\newcommand{\useCaseSix}[1]{\lsucmeans{that you received a GPL-#1 licensed
+    program, application, or server (proapse), that you modified it, and that
+    you are now going to distribute this modified version to third parties in
+    the form of source code files or as a source code package.}}
+
+\newcommand{\useCaseSeven}[1]{\lsucmeans{that you received a GPL-#1 licensed
+    program, application, or server (proapse), that you modified it, and that
+    you are now going todistribute this modified version to third parties in the
+    form of binary files or as a binary package.}}
+
+\newcommand{\useCaseEight}[1]{\lsucmeans{that you received a GPL-#1 licensed
+    code snippet, module, library, or plugin (snimoli), that you modified it,
+    and that you are now going to distribute this modified version to third
+    parties in the form of source code files or as a source code package, but
+    without embedding it into another larger software unit.}}
+
+\newcommand{\useCaseNine}[1]{\lsucmeans{that you received a GPL-#10 licensed
+    code snippet, module, library, or plugin (snimoli), that you modified it,
+    and that you are now going to distribute this modified version to third
+    parties in the form of binary files or as a binary package but without
+    embedding it into another larger software unit.} }
+
+\newcommand{\useCaseA}[1]{\lsucmeans{that you received a GPL-#1 licensed code
+    snippet, module, library, or plugin (snimoli), that you modified it, and
+    that you are now going to distribute this modified version to third parties
+    in the form of source code files or as a source code package together with
+    another larger software unit which contains this code snippet, module,
+    library, or plugin as an embedded component.}}
+
+\newcommand{\useCaseB}[1]{\lsucmeans{that you received a GPL-#1 licensed code
+    snippet, module, library, or plugin (snimoli), that you modified it, and
+    that you are now going to distribute this modified version to third
+    partiesin the form of binary files or as a binary package together with
+    another larger software unit which contains this code snippet, module,
+    library, or plugin as an embedded component.}}
+
+\newcommand{\coversOne}{\coversOsucs{OSUC-01, OSUC-03, OSUC-06, and OSUC-09}{01}{09}}
+\newcommand{\coversTwo}{\coversOsucs{OSUC-02S, OSUC-05S}{02S}{05S}}
+\newcommand{\coversThree}{\coversOsucs{OSUC-02B, OSUC-05B}{02B}{05B}}
+\newcommand{\coversFour}{\mapsToOsuc{07S}}
+\newcommand{\coversFive}{\mapsToOsuc{07B}}
+\newcommand{\coversSix}{\mapsToOsuc{04S}}
+\newcommand{\coversSeven}{\mapsToOsuc{04B}}
+\newcommand{\coversEight}{\mapsToOsuc{08S}}
+\newcommand{\coversNine}{\mapsToOsuc{08B}}
+\newcommand{\coversA}{\mapsToOsuc{10S}}
+\newcommand{\coversB}{\mapsToOsuc{10B}}
+
+% ------------------------------------------------------------------------------
+% Keep license elements 
+
+\newcommand{\keepLicenseElements}{Ensure that the licensing elements (especially
+  all notices that refer to the GPL-\ver{} and to the absence of any warranty) are
+  retained in your package in the form you have received them.}
+
+% ------------------------------------------------------------------------------
+% Make sure that the copyright notice and disclaimer of warranty are present
+
+% GPL-3.0
+\newcommand{\auxThreeEnsureCopyrightNotice}[1]{Ensure that the
+  distributed #1 package contains a conspicuous, easy to find copyright notice.
+  If this element is missing, add a new file containing the main copyright
+  notice.} 
+
+% GPL-2.0
+\newcommand{\auxTwoEnsureCopyrightNotice}[1]{Ensure that the distributed
+  #1 package contains a conspicuous, easy to find copyright notice and
+  disclaimer of warranty. If these elements are missing, add a new file
+  containing the main copyright notice and the disclaimer of warranty in the
+  form which is textually defined by the GPL-2.0 license itself. (Yes, repeat
+  the disclaimer although it is also part of the license itself and although you
+  are required to hand the license itself over to the receiver.)}
 
-\subsection{GPL-C1: Using the software only for yourself}
-\label{OSUC-01-GPL} \label{OSUC-03-GPL}
-\label{OSUC-06-GPL} \label{OSUC-09-GPL}
+\newcommand{\gpltwoEnsureCopyrightNoticeSource}{%
+  \auxTwoEnsureCopyrightNotice{source code}}
 
-\begin{description}
-
-\item[means] that you are going to use a received GPL-V2 or GPL-V3 licensed
-software only for yourself and that you do not hand it over to any 3rd party in
-any sense.
-
-\item[covers] OSUC-01, OSUC-03, OSUC-06, and OSUC-09\footnote{For details
-$\rightarrow$ OSLiC, pp.\ \pageref{OSUC-01-DEF} - \pageref{OSUC-09-DEF}}
-
-\item[requires] no tasks in order to fulfill the conditions of the GPL-V2 or
-the GPL-V3 with respect to this use case:
-  \begin{itemize}
-    \item You are allowed to use any kind of GPL software in any sense and in
-    any context without being obliged to do anything as long as you do not
-    give the software to 3rd parties.
-  \end{itemize}
-
-\item[prohibits] nothing explictly with respect to this use case.
-\end{description}
-
-
-\subsection{GPL-C2: Passing the unmodified software as independent sources}
-\label{OSUC-02S-GPL} \label{OSUC-05S-GPL}
-
-\begin{description}
-
-\item[means] that you are going to distribute an unmodified version of the
-received GPL-V2 or GPL-V3 licensed software to 3rd parties -- as an independent
-unit and in the form of source code files or as a source code package. In this
-case, it is not discriminating to distribute a program, an application, a
-server, a snippet, a module, a library, or a plugin.
-
-\item[covers] OSUC-02S, OSUC-05S\footnote{For details $\rightarrow$
-OSLiC, pp.\ \pageref{OSUC-02S-DEF} - \pageref{OSUC-05S-DEF}}
-
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
- 
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
-  notices that refer to the GPL-V2 or GPL-V3 and to the absence of any
-  warranty -- are retained in your package in the form you have received them.
-
-  \item \textbf{[mandatory:]} Ensure that the distributed source code package
-  contains a conspicuously and appropriately designed, easily to find copyright
-  notice and a disclaimer of warranty. If these elements are missed, add a new
-  file containing the main copyright notice and the disclaimer of warranty in the
-  form which is textually defined by the license GPL-V2 itself resp. by the
-  GPL-V3 itself. (Yes, repeat the disclaimer although it is also part of the
-  license itself and although you are required to hand the license itself over
-  to the receiver.)
-  
-  \item \textbf{[mandatory:]} Give the recipient a copy of the GPL-V2 resp.
-  GPL-V3 license. If it is not already part of the software package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
-
-  \item \textbf{[mandatory:]} Retain all existing copyright notices.
-    
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also reproduce the content of the existing
-  copyright notices, a hint to the software name, a link to its homepage,
-  the respective disclaimer of warranty, and a link to the GPL-V2 resp.
-  GPL-V3.
-
-\end{itemize}
-
-\item[prohibits] nothing explictly with respect to this use case.
-
-\end{description}
-
-
-\subsection{GPL-C3: Passing the unmodified software as independent binaries} 
-\label{OSUC-02B-GPL} \label{OSUC-05B-GPL}
-
-\begin{description}
-
-
-\item[means] that you are going to distribute an unmodified version of the
-received GPL-V2 or GPL-V3 licensed software to 3rd parties -- as an independent
-unit and in the form of binary files or as a binary package. In this case, it is
-not discriminating to distribute a program, an application, a server, a snippet,
-a module, a library, or a plugin.
-
-
-\item[covers] OSUC-02B, OSUC-05B\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-02B-DEF} - \pageref{OSUC-05B-DEF}}
-
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
-  
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
-  notices that refer to the GPL-V2 or GPL-V3 and to the absence of any
-  warranty -- are retained in your package in the form you have received them.
-
-  \item \textbf{[mandatory:]} Ensure that the distributed software binary
-  package contains a conspicuously and appropriately designed, easily to find
-  copyright notice and a disclaimer of warranty. If these elements are missed,
-  add a new file containing the main copyright notice and the disclaimer of
-  warranty in the form which is textually defined by the license GPL-V2 itself
-  resp. by the GPL-V3 itself. (Yes, repeat the disclaimer although it is also
-  part of the license itself and although you are required to hand the license
-  itself over to the receiver.)
-  
-  \item \textbf{[mandatory:]} Give the recipient a copy of the GPL-V2 resp.
-  GPL-V3 license. If it is not already part of the software package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
-  
-  \item \textbf{[mandatory:]} Make the source code of the distributed software
-  accessible via a repository under your own control (even if you do not
-  modified it): Push the source code package into a repository, make it
-  downloadable via the internet, and integrate an easily to find description
-  into the distribution package which explains how the code can be received from
-  where. Ensure, that this repository is online for at least 3 years after
-  having distributed the last instance of your software package.
-  
-  \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
-  into your distribution and/or your additional material.
-
-  \item \textbf{[mandatory:]} Retain all existing copyright notices.
-    
-  \item \textbf{[mandatory:]} Execute the to-do list of use case GPL-C2\footnote{
-  Making the code accessible via a repository means distributing the software in
-  the form of source code. Hence, you must also fulfill all tasks of the
-  corresponding use case.}.
-
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also reproduce the content of the existing
-  copyright notices, a hint to the software name, a link to its homepage,
-  the respective disclaimer of warranty, and a link to the GPL-V2 resp.
-  GPL-V3.
-
-\end{itemize}
-
-\item[prohibits] nothing explictly with respect to this use case.
-
-\end{description}
-
-\subsection{GPL-C4: Passing the unmodified library as embedded sources}
-\label{OSUC-07S-GPL} 
-
-\begin{description}
-
-\item[means] that you are going to distribute an unmodified version of the
-received GPL-V2 or GPL-V3 licensed snippet, module or library to 3rd
-parties -- as embedded component of a larger unit and in the form of source code
-files or as a source code package.
-
-\item[covers] OSUC-07S\footnote{For details $\rightarrow$
-OSLiC, pp.\ \pageref{OSUC-07S-DEF}}
-
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
- 
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
-  notices that refer to the GPL-V2 or GPL-V3 and to the absence of any
-  warranty -- are retained in your package in the form you have received them.
-
-  \item \textbf{[mandatory:]} Ensure that the distributed source code package
-  contains a conspicuously and appropriately designed, easily to find copyright
-  notice and a disclaimer of warranty. If these elements are missed, add a new
-  file containing the main copyright notice and the disclaimer of warranty in the
-  form which is textually defined by the license GPL-V2 itself resp. by the
-  GPL-V3 itself. (Yes, repeat the disclaimer although it is also part of the
-  license itself and although you are required to hand the license itself over
-  to the receiver.)
-  
-  \item \textbf{[mandatory:]} Give the recipient a copy of the GPL-V2 resp.
-  GPL-V3 license. If it is not already part of the software package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
-
-  \item \textbf{[mandatory:]} Retain all existing copyright notices.
-    
-  \item \textbf{[mandatory:]} Let the copyright dialog of the on-top development
-  clearly say, that it uses the GPL licensed library and that it is itself
-  licensed under the GPL-V2 resp. GPL-V3 too. Let it reproduce the content of
-  the existing copyright notices, a hint to the software name, a link to its
-  homepage, the respective disclaimer of warranty, and a link to the GPL-V2
-  resp. GPL-V3.    
-    
- \item \textbf{[mandatory:]} Organize the sources of the on-top development in
-  a way that they are also covered by the GPL-V2 resp. GPL-V3 licensing
-  statements. 
-
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also reproduce the content of the existing
-  copyright notices, a hint to the software name, a link to its homepage,
-  the respective disclaimer of warranty, and a link to the GPL-V2 resp.
-  GPL-V3.
-
-\end{itemize}
-
-\item[prohibits] nothing explictly with respect to this use case.
-
-\end{description}
-
-
-\subsection{GPL-C5: Passing the unmodified library as embedded binaries} 
-\label{OSUC-07B-GPL} 
-
-\begin{description}
-\item[means] that you are going to distribute an unmodified version of the
-received GPL-V2 or GPL-V3 licensed snippet, module or library to 3rd
-parties -- as embedded component of a larger unit and in the form of binary
-files or as a bi\-na\-ry package.
-
-
-\item[covers] OSUC-07B\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-07B-DEF}}
-
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
-  
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
-  notices that refer to the GPL-V2 or GPL-V3 and to the absence of any
-  warranty -- are retained in your package in the form you have received them.
-
-  \item \textbf{[mandatory:]} Ensure that the distributed software binary
-  package contains a conspicuously and appropriately designed, easily to find
-  copyright notice and a disclaimer of warranty. If these elements are missed,
-  add a new file containing the main copyright notice and the disclaimer of
-  warranty in the form which is textually defined by the license GPL-V2 itself
-  resp. by the GPL-V3 itself. (Yes, repeat the disclaimer although it is also
-  part of the license itself and although you are required to hand the license
-  itself over to the receiver.)
-  
-  \item \textbf{[mandatory:]} Give the recipient a copy of the GPL-V2 resp.
-  GPL-V3 license. If it is not already part of the software package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
-  
-  \item \textbf{[mandatory:]} Make the source code of the embedded library
-  \textbf{\emph{and}} the source code of your overarching program accessible via
-  a repository under your own control: Push the source code package into a
-  repository and make it downloadable via the internet. Integrate an easily to
-  find description into the distribution package which explains how the code can
-  be received from where. Ensure, that this repository is online for at
-  least 3 years after having distributed the last instance of your software
-  package.
-  
-  \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
-  into your distribution and/or your additional material.
-
-
-  \item \textbf{[mandatory:]} Let the copyright dialog of the on-top development
-  clearly say, that it uses the GPL licensed library and that it is itself
-  licensed under the GPL-V2 resp. GPL-V3 too. Let it reproduce the content of
-  the existing copyright notices, a hint to the software name, a link to its
-  homepage, the respective disclaimer of warranty, and a link to the GPL-V2
-  resp. GPL-V3.
-  
-  \item \textbf{[mandatory:]} Organize the binaries of the on-top development in
-  a way that they are also covered by the GPL-V2 resp. GPL-V3 licensing
-  statements.
-  
-  \item \textbf{[mandatory:]} Retain all existing copyright notices.
-    
-  \item \textbf{[mandatory:]} Execute the to-do list of use case GPL-C4\footnote{
-  Making the code accessible via a repository means distributing the software in
-  the form of source code. Hence, you must also fulfill all tasks of the
-  corresponding use case.}.
-
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also reproduce the content of the existing
-  copyright notices, a hint to the used software name, a link to its homepage,
-  the respective disclaimer of warranty, and a link to the GPL-V2 resp.
-  GPL-V3.
-
-\end{itemize}
-
-\item[prohibits] nothing explictly with respect to this use case.
-
-\end{description}
-
-
-\subsection{GPL-C6: Passing a modified program as source code}
-\label{OSUC-04S-GPL} 
-
-\begin{description}
-\item[means] that you are going to distribute a modified version of the received
-GPL-V2 or GPL-V3 licensed program, application, or server (proapse) to 3rd
-parties -- in the form of source code files or as a source code package.
-\item[covers] OSUC-04S\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-04S-DEF}}
-
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
-  
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
-  notices that refer to the GPL-V2 resp. GPL-V3 and to the absence of any
-  warranty -- are retained in your package in the form you have received them.
-
-  \item \textbf{[mandatory:]} Ensure that the distributed source code package
-  contains a conspicuously and appropriately designed, easily to find copyright
-  notice and a disclaimer of warranty. If these elements are missed, add a new
-  file containing the main copyright notice and the disclaimer of warranty in
-  the form which is textually defined by the license GPL-V2 or GPL-V3 itself.
-  (Yes, repeat the disclaimer although it is also part of the license itself and
-  although you are required to hand the license itself over to the receiver.)
-  
-  \item \textbf{[mandatory:]} Give the recipient a copy of the GPL-V2 resp.
-  GPL-V3 license.
-  
-  \item \textbf{[mandatory:]} Retain all existing copyright notices.
-  
-  \item \textbf{[mandatory:]} Let the copyright dialog of the program clearly
-  say that it is a GPL licensed program. Let it reproduce the content of the
-  existing copyright notices, a hint to the software name, a link to its
-  homepage, the respective disclaimer of warranty, and a link to the GPL-V2
-  resp. GPL-V3. If these conditions are not already fulfilled, add the missed
-  elements.
-
-  \item \textbf{[mandatory:]} Mark all modifications of source code of the
-  program (proapse) thoroughly -- namely within the source code and including
-  the date of the modification.
-  
-  \item \textbf{[mandatory:]} Organize your modifications in a way that they are
-  covered by the existing GPL licensing statements. If you add new source code
-  files, insert a header containing your copyright line and a licensing the
-  statement in the form required by the GNU project\footnote{For details see
-  section 'How to Apply These Terms to Your New Programs' in the GPL-v2 resp.
-  GPL-v3 license.}.
-   
-  \item \textbf{[voluntary:]} Create a \emph{modification text file}, if such a
-  notice file still does not exist. \emph{Expand} the \emph{modification text
-  file} by a description of your modifications on a more functional level.
-    
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also reproduce the content of the existing copyright
-  notices, a hint to the software name, a link to its homepage, the respective
-  disclaimer of warranty, and a link to the GPL-V3 resp. to the GPL-V3.
-  
- \end{itemize}
- 
-\item[prohibits] nothing explictly with respect to this use case.
-
-\end{description}
-
-\subsection{GPL-C7: Passing a modified program as binary}
-\label{OSUC-04B-GPL}
-
-\begin{description}
-\item[means] that you are going to distribute a modified version of the received
-GPL-V2 or GPL-V3 licensed pro\-gram, application, or server (proapse)
-to 3rd parties -- in the form of binary files or as a binary package.
-\item[covers] OSUC-04B\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-04B-DEF}}
-
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
-
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
-  notices that refer to the GPL-V2resp. the GPL-V3 and to the absence of any
-  warranty -- are retained in your package in the form you have received them.
-
-  \item \textbf{[mandatory:]} Ensure that the distributed software binary
-  package contains a conspicuously and appropriately designed, easily to find
-  copyright notice and a disclaimer of warranty. If these elements are missed,
-  add a new file containing the main copyright notice and the disclaimer of
-  warranty in the form which is textually defined by the license GPL-V2 resp.
-  GPL-V3 itself. (Yes, repeat the disclaimer although it is also part of the
-  license itself and although you are required to hand the license itself over
-  to the receiver.)
-  
-  \item \textbf{[mandatory:]} Give the recipient a copy of the GPL-V2 resp.
-  GPL-V3 license. If it is not already part of the software package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
-  
-  \item \textbf{[mandatory:]} Retain all existing copyright notices.
-  
-  \item \textbf{[mandatory:]} Mark all modifications of source code of the
-  program (proapse) thoroughly namely within the source code and including
-  the date of the modification.
-
-  \item \textbf{[mandatory:]} Let the copyright dialog of the program clearly
-  say that it is a GPL licensed program. Let it reproduce the content of the
-  existing copyright notices, a hint to the software name, a link to its
-  homepage, the respective disclaimer of warranty, and a link to the GPL-V2
-  resp. GPL-V3. If these conditions are not already fulfilled, add the missed
-  elements.
-  
-  \item \textbf{[mandatory:]} Organize your modifications in a way that they are
-  covered by the existing GPL licensing statements.
-  
-  \item \textbf{[mandatory:]} Make the source code of the distributed software
-  accessible via a via a repository under your own control: Push the source code
-  package into a repository, make it downloadable via the internet, and
-  integrate an easily to find description into the distribution package which
-  explains how the code can be received from where. Ensure, that this repository
-  is online for at least 3 years after having distributed the last instance
-  of your software package.
-  
-  \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
-  into your distribution and/or your additional material.
-  
-  \item \textbf{[mandatory:]} Execute the to-do list of use case GPL-C6\footnote{
-  Making the code accessible via a repository means distributing the software in
-  the form of source code. Hence, you must also fulfill all tasks of the
-  corresponding use case.}.
-
-  
-  \item \textbf{[voluntary:]} Create a \emph{modification text file}, if such a
-  notice file still does not exist. \emph{Expand} the \emph{modification text
-  file} by a description of your modifications on a more functional level.
-      
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also reproduce the content of the existing copyright
-  notices, a hint to the software name, a link to its homepage, the respective
-  disclaimer of warranty, and a link to the GPL-V2 resp. to the GPL-V3.
-
-
-\end{itemize}
-
-\item[prohibits] nothing explictly with respect to this use case.
-
-\end{description}
-
-\subsection{GPL-C8: Passing a modified library as independent source code}
-\label{OSUC-08S-GPL}
-
-\begin{description}
-\item[means] that you are going to distribute a modified version of the received
-GPL-V2 or GPL-V3 licensed code snippet, module, library, or plugin (snimoli) to
-3rd parties -- in the form of source code files or as a source code package, but
-without embedding it into another larger software unit.
-\item[covers] OSUC-08S\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-08S-DEF}}
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
- 
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
-  notices that refer to the GPL-V2 or GPL-V3 and to the absence of any
-  warranty -- are retained in your package in the form you have received them.
-
-  \item \textbf{[mandatory:]} Ensure that the distributed source code package
-  contains a conspicuously and appropriately designed, easily to find copyright
-  notice and a disclaimer of warranty. If these elements are missed, add a new
-  file containing the main copyright notice and the disclaimer of warranty in the
-  form which is textually defined by the license GPL-V2 itself resp. by the
-  GPL-V3 itself. (Yes, repeat the disclaimer although it is also part of the
-  license itself and although you are required to hand the license itself over
-  to the receiver.)
-  
-  \item \textbf{[mandatory:]} Give the recipient a copy of the GPL-V2 resp.
-  GPL-V3 license. If it is not already part of the software package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
-  
-  \item \textbf{[mandatory:]} Retain all existing copyright notices.
-  
-  \item \textbf{[mandatory:]} Mark all modifications of source code of the
-  library (snimoli) thoroughly -- namely within the source code and including
-  the date of the modification.
-  
-  \item \textbf{[mandatory:]} Organize your modifications in a way that they are
-  covered by the existing GPL licensing statements. If you add new source code
-  files, insert a header containing your copyright line and a licensing the
-  statement in the form required by the GNU project\footnote{For details see
-  section 'How to Apply These Terms to Your New Programs' in the GPL-v2 resp.
-  GPL-v3 license.}.
-    
-  \item \textbf{[voluntary:]} Create a \emph{modification text file}, if such a
-  notice file still does not exist. \emph{Expand} the \emph{modification text
-  file} by a description of your modifications.
-  
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also reproduce the content of the existing
-  copyright notices, a hint to the software name, a link to its homepage,
-  the respective disclaimer of warranty, and a link to the GPL-V2 resp.
-  GPL-V3.
-
-\end{itemize}
-
-\item[prohibits] nothing with respect to this use case.
-
-\end{description}
-
-
-\subsection{GPL-C9: Passing a modified library as independent binary}
-\label{OSUC-08B-GPL}
-
-\begin{description}
-\item[means] that you are going to distribute a modified version of the received
-GPL-V2 or GPL-V3 licensed code snippet, module, library, or plugin (snimoli) to
-3rd parties -- in the form of binary files or as a binary package but without
-embedding it into another larger software unit.
-\item[covers] OSUC-08B\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-08B-DEF}}
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
-
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
-  notices that refer to the GPL-V2 or GPL-V3 and to the absence of any
-  warranty -- are retained in your package in the form you have received them.
-
-  \item \textbf{[mandatory:]} Ensure that the distributed software binary
-  package contains a conspicuously and appropriately designed, easily to find
-  copyright notice and a disclaimer of warranty. If these elements are missed,
-  add a new file containing the main copyright notice and the disclaimer of
-  warranty in the form which is textually defined by the license GPL-V2 itself
-  resp. by the GPL-V3 itself. (Yes, repeat the disclaimer although it is also
-  part of the license itself and although you are required to hand the license
-  itself over to the receiver.)
-  
-  \item \textbf{[mandatory:]} Give the recipient a copy of the GPL-V2 resp.
-  GPL-V3 license. If it is not already part of the software package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
-  
-  \item \textbf{[mandatory:]} Retain all existing copyright notices.
-
-  \item \textbf{[mandatory:]} Make the source code of the distributed software
-  accessible via a repository under your own control: Push the source code
-  package into a repository, make it downloadable via the internet, and
-  integrate an easily to find description into the distribution package which
-  explains how the code can be received from where. Ensure, that this repository
-  is online for at least 3 years after having distributed the last instance
-  of your software package.
-  
-  \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
-  into your distribution and/or your additional material.
-  
-  \item \textbf{[mandatory:]} Execute the to-do list of use case GPL-C8\footnote{
-  Making the code accessible via a repository means distributing the software in
-  the form of source code. Hence, you must also fulfill all tasks of the
-  corresponding use case.}.
-
-  \item \textbf{[mandatory:]} Mark all modifications of source code of the
-  library (snimoli) thoroughly -- namely within the source code and including
-  the date of the modification.
-
-  \item \textbf{[mandatory:]} Organize your modifications in a way that they are
-  covered by the existing GPL licensing statements.
-    
-  \item \textbf{[voluntary:]} Create a \emph{modification text file}, if such a
-  notice file still does not exist. \emph{Expand} the \emph{modification text
-  file} by a description of your modifications.
-
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also reproduce the content of the existing
-  copyright notices, a hint to the software name, a link to its homepage,
-  the respective disclaimer of warranty, and a link to the GPL-V2 resp.
-  GPL-V3.
-  
-\end{itemize}
-
-\item[prohibits] nothing with respect to this use case.
-\end{description}
-
-\subsection{GPL-CA: Passing a modified library as embedded source code}
-\label{OSUC-10S-GPL}
-
-\begin{description}
-\item[means] that you are going to distribute a modified version of the received
-GPL-V2 or GPL-V3 licensed code snippet, module, library, or plugin (snimoli) to
-3rd parties -- in the form of source code files or as a source code package
-together with another larger software unit which contains this code snippet,
-module, library, or plugin as an embedded component.
-\item[covers] OSUC-10S\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-10S-DEF}}
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
-
-
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
-  notices that refer to the GPL-V2 or GPL-V3 and to the absence of any
-  warranty -- are retained in your package in the form you have received them.
-
-  \item \textbf{[mandatory:]} Ensure that the distributed source code package
-  contains a conspicuously and appropriately designed, easily to find copyright
-  notice and a disclaimer of warranty. If these elements are missed, add a new
-  file containing the main copyright notice and the disclaimer of warranty in
-  the form which is textually defined by the license GPL-V2 itself resp. by the
-  GPL-V3 itself. (Yes, repeat the disclaimer although it is also part of the
-  license itself and although you are required to hand the license itself over
-  to the receiver.)
-  
-  \item \textbf{[mandatory:]} Give the recipient a copy of the GPL-V2 resp.
-  GPL-V3 license. If it is not already part of the software package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
-  
-  \item \textbf{[mandatory:]} Retain all existing copyright notices.
-  
-  \item \textbf{[mandatory:]} Let the copyright dialog of the on-top development
-  clearly say, that it uses the GPL licensed library and that it is itself
-  licensed under the GPL-V2 resp. GPL-V3 too. Let it reproduce the content of
-  the existing copyright notices, a hint to the software name, a link to its
-  homepage, the respective disclaimer of warranty, and a link to the GPL-V2
-  resp. GPL-V3.
-    
-  \item \textbf{[mandatory:]} Mark all modifications of source code of the
-  embedded library (snimoli) thoroughly -- namely within the source code and
-  including the date of the modification.
-  
-  \item \textbf{[mandatory:]} Organize your modifications of the embedded
-  library in a way that they are covered by the existing GPL licensing
-  statements. If you add new source code files to library itself, insert a
-  header containing your copyright line and a licensing the statement in the
-  form required by the GNU project\footnote{For details see section 'How to
-  Apply These Terms to Your New Programs' in the GPL-v2 resp. GPL-v3 license.}.
-  
-  \item \textbf{[mandatory:]} Organize the sources of the on-top development in
-  a way that they are also covered by the GPL-V2 resp. GPL-V3 licensing
-  statements.
-     
-  \item \textbf{[voluntary:]} Create a \emph{modification text file}, if such a
-  notice file still does not exist. \emph{Expand} the \emph{modification text
-  file} by a description of your modifications.
-  
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also reproduce the content of the existing
-  copyright notices, a hint to the software name, a link to its homepage,
-  the respective disclaimer of warranty, and a link to the GPL-V2 resp.
-  GPL-V3.
-  
-\end{itemize}
-
-\item[prohibits] nothing with respect to this use case.
-
-\end{description}
-
-\subsection{GPL-CB: Passing a modified library as embedded binary}
-\label{OSUC-10B-GPL}
-
-\begin{description}
-\item[means] that you are going to distribute a modified version of the received
-GPL-V2 or GPL-V3 licensed code snippet, module, library, or plugin to 3rd
-parties -- in the form of binary files or as a binary package together with
-another larger software unit which contains this code snippet, module, library,
-or plugin as an embedded component.
-\item[covers] OSUC-10B\footnote{For details $\rightarrow$ OSLiC, pp.\
-\pageref{OSUC-10B-DEF}}
-\item[requires] the following tasks in order to fulfill the license conditions:
-\begin{itemize}
-
-  \item \textbf{[mandatory:]} Ensure that the licensing elements -- esp.\ all
-  notices that refer to the GPL-V2 or GPL-V3 and to the absence of any
-  warranty -- are retained in your package in the form you have received them.
-
-  \item \textbf{[mandatory:]} Ensure that the distributed software binary
-  package contains a conspicuously and appropriately designed, easily to find
-  copyright notice and a disclaimer of warranty. If these elements are missed,
-  add a new file containing the main copyright notice and the disclaimer of
-  warranty in the form which is textually defined by the license GPL-V2 itself
-  resp. by the GPL-V3 itself. (Yes, repeat the disclaimer although it is also
-  part of the license itself and although you are required to hand the license
-  itself over to the receiver.)
-  
-  \item \textbf{[mandatory:]} Give the recipient a copy of the GPL-V2 resp.
-  GPL-V3 license. If it is not already part of the software package, add
-  it\footnote{For implementing the handover of files correctly $\rightarrow$
-  OSLiC, p. \pageref{DistributingFilesHint}}.
-  
-  \item \textbf{[mandatory:]} Retain all existing copyright notices.
-
-  \item \textbf{[mandatory:]} Make the source code of the embedded library and
-  the source code of your overarching program accessible via a repository under
-  your own control: Push the source code package into a repository and make it
-  downloadable via the internet. Integrate an easily to find description into
-  the distribution package which explains how the code can be received from
-  where. Ensure, that this repository is online for at least 3 years after
-  having distributed the last instance of your software package.
-
-  \item \textbf{[mandatory:]} Insert a prominent hint to the download repository
-  into your distribution and/or your additional material.
-    
-  \item \textbf{[mandatory:]} Execute the to-do list of use case GPL-CA\footnote{
-  Making the code accessible via a repository means distributing the software in
-  the form of source code. Hence, you must also fulfill all tasks of the
-  corresponding use case.}.
-
-  \item \textbf{[mandatory:]} Let the copyright dialog of the on-top development
-  clearly say, that it uses the GPL licensed library and that it is itself
-  licensed under the GPL-V2 resp. GPL-V3 too. Let it reproduce the content of
-  the existing copyright notices, a hint to the software name, a link to its
-  homepage, the respective disclaimer of warranty, and a link to the GPL-V2
-  resp. GPL-V3.
-  
-  \item \textbf{[mandatory:]} Mark all modifications of source code of the
-  embedded library (snimoli) thoroughly -- namely within the source code and
-  including the date of the modification.
-  
-  \item \textbf{[mandatory:]} Organize your modifications of the embedded
-  library in a way that they are covered by the existing GPL licensing
-  statements. 
-  
-  \item \textbf{[mandatory:]} Organize the binaries of the on-top development in
-  a way that they are also covered by the GPL-V2 resp. GPL-V3 licensing
-  statements.
-       
-  \item \textbf{[voluntary:]} Create a \emph{modification text file}, if such a
-  notice file still does not exist. \emph{Expand} the \emph{modification text
-  file} by a description of your modifications.
-    
-  \item \textbf{[voluntary:]} Let the documentation of your distribution and/or
-  your additional material also reproduce the content of the existing copyright
-  notices, a hint to the software name, a link to its homepage, the respective
-  disclaimer of warranty, and a link to the GPL-V2 resp.
-  GPL-V3.
-  
-\end{itemize}
-
-\item[prohibits] nothing with respect to this use case.
-
-\end{description}
+\newcommand{\gpltwoEnsureCopyrightNoticeBinary}{%
+  \auxTwoEnsureCopyrightNotice{binary}}
+
+\newcommand{\gplthreeEnsureCopyrightNoticeSource}{%
+  \auxThreeEnsureCopyrightNotice{source code}}
+
+\newcommand{\gplthreeEnsureCopyrightNoticeBinary}{%
+  \auxThreeEnsureCopyrightNotice{binary}}
+
+% ------------------------------------------------------------------------------
+% Give a copy of the license to the recipient of the software
+
+\newcommand{\giveLicense}{Give the recipient a copy of the GPL-\ver{} license.
+  If it is not already part of the software package, add it.}
+
+% ------------------------------------------------------------------------------
+% Keep all copyright notices intact
+
+\newcommand{\retainCopyrightNotices}{Retain all existing copyright notices.}
+
+% ------------------------------------------------------------------------------
+%
+
+\newcommand{\addToDocumentation}{Let the documentation of your distribution
+  and/or your additional material also reproduce the content of the existing
+  copyright notices, a hint to the software name, a link to its homepage, the
+  respective disclaimer of warranty, and a link to the GPL-\ver.}
+
+% ------------------------------------------------------------------------------
+% Publish the source code
+
+\newcommand{\auxSourceRepository}{Push the source code package into a
+  repository under your control and make it downloadable via the internet.
+  Ensure, that this repository is online for at least 3 years after you ceased
+  distributing the software package.}
+
+\newcommand{\makeUnmodifiedSourceAvailable}{Make the source code of the
+  distributed software publicly available (even though you did not modify it):
+  \auxSourceRepository} 
+
+\newcommand{\makeModifiedSourceAvailable}{Make the source code of the
+  distributed software publicly available: \auxSourceRepository} 
+
+\newcommand{\makeAllSourcesAvailable}{Make the complete source code of the
+  program embedding the library publicly available (and, therefore, also the
+  source code of the library itself): \auxSourceRepository}
+
+% ------------------------------------------------------------------------------
+% Explain where to find the sources
+
+\newcommand{\describeHowToGetSource}{Insert a easy to find description into the
+  distribution package that explains how and where the code can be retrieved.}
+
+% ------------------------------------------------------------------------------
+% Create and update the modification text file
+
+\newcommand{\createChangelog}{Create a \emph{modification text file,} if such a
+  file does not yet exist. \emph{Add} a description of your modifications on a
+  functional level to the \emph{modification text file.}}
+
+% ------------------------------------------------------------------------------
+%
+
+\newcommand{\auxCopyrightDialogContent}{Let it reproduce the content of the
+  existing copyright notices, the software name, a link to its homepage, the
+  respective disclaimer of warranty, and a link to the GPL-\ver.}
+
+\newcommand{\addToCopyrightDialogLib}{Let the copyright dialog of the on-top
+  development clearly say, that it uses the GPL licensed library and that it is
+  itself licensed under the GPL-\ver, too. \auxCopyrightDialogContent}
+
+\newcommand{\addToCopyrightDialogApp}{Let the copyright dialog of the program
+  clearly say that it is a GPL licensed program. 
+  \auxCopyrightDialogContent\ 
+  If these conditions are not already met, add the missing elements.}
+
+% ------------------------------------------------------------------------------
+% Make sure, licensing statements apply to enclosing program
+
+\newcommand{\auxArrange}[1]{Arrange the #1 of the on-top development in a way
+  that they are covered by the GPL-\ver{} licensing statements.} 
+
+\newcommand{\arrangeEnclosingBinaries}{%
+  \auxArrange{the binaries of the on-top development}}
+
+\newcommand{\arrangeEnclosingSources}{%
+  \auxArrange{the sources of the on-top development}}
+
+% ------------------------------------------------------------------------------
+% make sure licensing statements apply to your modifications
+
+\newcommand{\auxArrangeChanges}[1]{Arrange your modifications of #1 in a way
+  that they are covered by existing GPL licensing statements. If you add new
+  source code files to the #1, insert a header containing your copyright line
+  and a licensing statement in the form recommended by the GPL.}
+
+\newcommand{\arrangeProgramChanges}{\auxArrangeChanges{program}}
+\newcommand{\arrangeLibraryChanges}{\auxArrangeChanges{library}}
+\newcommand{\arrangeEmbeddedChanges}{\auxArrangeChanges{embedded library}}
+
+\newcommand{\howToApplyTheseTerms}{%
+  \footnote{For details see section `How to Apply These Terms to Your New
+    Programs' in the GPL-\ver{} license.}} 
+
+
+% ------------------------------------------------------------------------------
+%
+
+\newcommand{\auxMarkChanges}[1]{Mark all modifications of the source code #1
+  thoroughly within the source code and include the date of the modification.}
+
+\newcommand{\markEmbeddedModifications}{%
+  \auxMarkChanges{of the embedded library (snimoli)}}
+
+\newcommand{\markLibraryModifications}{%
+  \auxMarkChanges{of the library (snimoli)}}
+
+\newcommand{\markProgramModifications}{
+  \auxMarkChanges{the program (proapse)}}
+
+% ------------------------------------------------------------------------------
+% Forbid patent litigation
+
+\newcommand{\noPatentLitigation}{%
+  to institute a patent litigation against anyone alleging that the software
+  constitutes patent infringement.} 
+
+%% ============================================================================= 
+%% GPL-2.0 Use Cases
+
+\newcommand{\ver}{2.0}
+
+\begin{license}{GPL2} 
+\licensename{GPL-2.0}
+\licensespec{General Public License Version 2}
+\licenseabbrev{GPL}
+%\licenseversion{2.0}
+
+% ------------------------------------------------------------------------------
+\subsection{GPL-\ver-C1: Using the software only for yourself}
+\begin{lsuc}{GPL-\ver-C1}
+  \linkosuc{01} 
+  \linkosuc{03}
+  \linkosuc{06} 
+  \linkosuc{09}
+
+  \useCaseOne{\ver}
+  \coversOne
+
+  \begin{lsucrequiresnothing}
+    \lsucitem{You are allowed to use any kind of GPL software in any sense and in
+      any context without being obliged to do anything as long as you do not
+      give the software to third parties.}
+  \end{lsucrequiresnothing}
+
+  \lsucprohibitsnothing
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{GPL-\ver-C2: Passing the unmodified software as independent sources}
+\begin{lsuc}{GPL-\ver-C2}
+  \linkosuc{02S}
+  \linkosuc{05S}
+
+  \useCaseTwo{\ver}
+  \coversTwo
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gpltwoEnsureCopyrightNoticeSource}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \lsucprohibitsnothing
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{GPL-\ver-C3: Passing the unmodified software as independent binaries} 
+\begin{lsuc}{GPL-\ver-C3}
+  \linkosuc{02B} 
+  \linkosuc{05B}
+
+  \useCaseThree{\ver}
+  \coversThree
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gpltwoEnsureCopyrightNoticeBinary}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly  
+    \lsucmandatory{\makeUnmodifiedSourceAvailable}
+    \lsucmandatory{\describeHowToGetSource}
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucsourcedist{GPL-\ver-C2}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \lsucprohibitsnothing
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{GPL-\ver-C4: Passing the unmodified library as embedded sources}
+\begin{lsuc}{GPL-\ver-C4}
+  \linkosuc{07S} 
+
+  \useCaseFour{\ver}
+  \coversFour
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gpltwoEnsureCopyrightNoticeSource}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\addToCopyrightDialogLib}
+    \lsucmandatory{\arrangeEnclosingSources}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \lsucprohibitsnothing
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{GPL-\ver-C5: Passing the unmodified library as embedded binaries} 
+\begin{lsuc}{GPL-\ver-C5}
+  \linkosuc{07B} 
+
+  \useCaseFive{\ver}
+  \coversFive
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gpltwoEnsureCopyrightNoticeBinary}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\makeAllSourcesAvailable}
+    \lsucmandatory{\describeHowToGetSource}
+    \lsucmandatory{\addToCopyrightDialogLib}
+    \lsucmandatory{\arrangeEnclosingBinaries}
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucsourcedist{GPL-\ver-C4}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \lsucprohibitsnothing
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{GPL-\ver-C6: Passing a modified program as source code}
+\begin{lsuc}{GPL-\ver-C6}
+  \linkosuc{04S} 
+
+  \useCaseSix{\ver}
+  \coversSix
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gpltwoEnsureCopyrightNoticeSource}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\addToCopyrightDialogApp}
+    \lsucmandatory{\markProgramModifications}
+    \lsucmandatory{\arrangeProgramChanges}\howToApplyTheseTerms
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \lsucprohibitsnothing
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{GPL-\ver-C7: Passing a modified program as binary}
+\begin{lsuc}{GPL-\ver-C7}
+  \linkosuc{04B}
+
+  \useCaseSeven{\ver}
+  \coversSeven
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gpltwoEnsureCopyrightNoticeBinary}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\markProgramModifications}
+    \lsucmandatory{\addToCopyrightDialogApp}
+    \lsucmandatory{\arrangeProgramChanges}\howToApplyTheseTerms
+    \lsucmandatory{\makeModifiedSourceAvailable}
+    \lsucmandatory{\describeHowToGetSource}
+    \lsucsourcedist{GPL-\ver-C6}
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \lsucprohibitsnothing
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{GPL-\ver-C8: Passing a modified library as independent source code}
+\begin{lsuc}{GPL-\ver-C8}
+  \linkosuc{08S}
+
+  \useCaseEight{\ver}
+  \coversEight
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gpltwoEnsureCopyrightNoticeSource}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\markLibraryModifications}
+    \lsucmandatory{\arrangeLibraryChanges}\howToApplyTheseTerms
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \lsucprohibitsnothing
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{GPL-\ver-C9: Passing a modified library as independent binary}
+\begin{lsuc}{GPL-\ver-C9}
+  \linkosuc{08B}
+
+  \useCaseNine{\ver}
+  \coversNine
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gpltwoEnsureCopyrightNoticeSource}  
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\makeModifiedSourceAvailable}
+    \lsucmandatory{\describeHowToGetSource}
+    \lsucsourcedist{GPL-\ver-C8}
+    \lsucmandatory{\markLibraryModifications}
+    \lsucmandatory{\arrangeLibraryChanges}\howToApplyTheseTerms
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \lsucprohibitsnothing
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{GPL-\ver-CA: Passing a modified library as embedded source code}
+\begin{lsuc}{GPL-\ver-CA}
+  \linkosuc{10S}
+
+  \useCaseA{\ver}
+  \coversA
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gpltwoEnsureCopyrightNoticeSource}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\addToCopyrightDialogLib}
+    \lsucmandatory{\markEmbeddedModifications}
+    \lsucmandatory{\arrangeEmbeddedChanges}\howToApplyTheseTerms
+    \lsucmandatory{\arrangeEnclosingSources}
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \lsucprohibitsnothing
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{GPL-\ver-CB: Passing a modified library as embedded binary}
+\begin{lsuc}{GPL-\ver-CB}
+  \linkosuc{10B}
+
+  \useCaseB{\ver}
+  \coversB
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gpltwoEnsureCopyrightNoticeBinary}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\makeAllSourcesAvailable}
+    \lsucmandatory{\describeHowToGetSource}
+    \lsucsourcedist{GPL-\ver-CA}
+    \lsucmandatory{\addToCopyrightDialogLib}
+    \lsucmandatory{\markEmbeddedModifications}
+    \lsucmandatory{\arrangeEmbeddedChanges}\howToApplyTheseTerms
+    \lsucmandatory{\arrangeEnclosingBinaries}
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \lsucprohibitsnothing
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\end{license}
+
+%% =============================================================================
+%% GPL-3.0 Use Cases
+
+\renewcommand{\ver}{3.0}
+
+\begin{license}{GPL3} 
+\licensename{GPL-3.0}
+\licensespec{General Public License Version 3}
+\licenseabbrev{GPL}
+%\licenseversion{3.0}
+
+% ------------------------------------------------------------------------------
+\subsection{GPL-\ver-C1: Using the software only for yourself}
+\begin{lsuc}{GPL-\ver-C1}
+  \linkosuc{01} 
+  \linkosuc{03}
+  \linkosuc{06} 
+  \linkosuc{09}
+
+  \useCaseOne{\ver}
+  \coversOne
+
+  \begin{lsucrequiresnothing}
+    \lsucitem{You are allowed to use any kind of GPL software in any sense and in
+      any context without being obliged to do anything as long as you do not
+      give the software to third parties.}
+  \end{lsucrequiresnothing}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{GPL-\ver-C2: Passing the unmodified software as independent sources}
+\begin{lsuc}{GPL-\ver-C2}
+  \linkosuc{02S}
+  \linkosuc{05S}
+
+  \useCaseTwo{\ver}
+  \coversTwo
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeSource}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{GPL-\ver-C3: Passing the unmodified software as independent binaries} 
+\begin{lsuc}{GPL-\ver-C3}
+  \linkosuc{02B} 
+  \linkosuc{05B}
+
+  \useCaseThree{\ver}
+  \coversThree
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeBinary}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly  
+    \lsucmandatory{\makeUnmodifiedSourceAvailable}
+    \lsucmandatory{\describeHowToGetSource}
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucsourcedist{GPL-\ver-C2}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{GPL-\ver-C4: Passing the unmodified library as embedded sources}
+\begin{lsuc}{GPL-\ver-C4}
+  \linkosuc{07S} 
+
+  \useCaseFour{\ver}
+  \coversFour
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeSource}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\addToCopyrightDialogLib}
+    \lsucmandatory{\arrangeEnclosingSources}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{GPL-\ver-C5: Passing the unmodified library as embedded binaries} 
+\begin{lsuc}{GPL-\ver-C5}
+  \linkosuc{07B} 
+
+  \useCaseFive{\ver}
+  \coversFive
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeBinary}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\makeAllSourcesAvailable}
+    \lsucmandatory{\describeHowToGetSource}
+    \lsucmandatory{\addToCopyrightDialogLib}
+    \lsucmandatory{\arrangeEnclosingBinaries}
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucsourcedist{GPL-\ver-C4}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{GPL-\ver-C6: Passing a modified program as source code}
+\begin{lsuc}{GPL-\ver-C6}
+  \linkosuc{04S} 
+
+  \useCaseSix{\ver}
+  \coversSix
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeSource}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\addToCopyrightDialogApp}
+    \lsucmandatory{\markProgramModifications}
+    \lsucmandatory{\arrangeProgramChanges}\howToApplyTheseTerms
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{GPL-\ver-C7: Passing a modified program as binary}
+\begin{lsuc}{GPL-\ver-C7}
+  \linkosuc{04B}
+
+  \useCaseSeven{\ver}
+  \coversSeven
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeBinary}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\markProgramModifications}
+    \lsucmandatory{\addToCopyrightDialogApp}
+    \lsucmandatory{\arrangeProgramChanges}\howToApplyTheseTerms
+    \lsucmandatory{\makeModifiedSourceAvailable}
+    \lsucmandatory{\describeHowToGetSource}
+    \lsucsourcedist{GPL-\ver-C6}
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{GPL-\ver-C8: Passing a modified library as independent source code}
+\begin{lsuc}{GPL-\ver-C8}
+  \linkosuc{08S}
+
+  \useCaseEight{\ver}
+  \coversEight
+
+  \begin{lsucrequires}
+     \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeSource}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\markLibraryModifications}
+    \lsucmandatory{\arrangeLibraryChanges}\howToApplyTheseTerms
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{GPL-\ver-C9: Passing a modified library as independent binary}
+\begin{lsuc}{GPL-\ver-C9}
+  \linkosuc{08B}
+
+  \useCaseNine{\ver}
+  \coversNine
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeSource}  
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\makeModifiedSourceAvailable}
+    \lsucmandatory{\describeHowToGetSource}
+    \lsucsourcedist{GPL-\ver-C8}
+    \lsucmandatory{\markLibraryModifications}
+    \lsucmandatory{\arrangeLibraryChanges}\howToApplyTheseTerms
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{GPL-\ver-CA: Passing a modified library as embedded source code}
+\begin{lsuc}{GPL-\ver-CA}
+  \linkosuc{10S}
+
+  \useCaseA{\ver}
+  \coversA
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeSource}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\addToCopyrightDialogLib}
+    \lsucmandatory{\markEmbeddedModifications}
+    \lsucmandatory{\arrangeEmbeddedChanges}\howToApplyTheseTerms
+    \lsucmandatory{\arrangeEnclosingSources}
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{GPL-\ver-CB: Passing a modified library as embedded binary}
+\begin{lsuc}{GPL-\ver-CB}
+  \linkosuc{10B}
+
+  \useCaseB{\ver}
+  \coversB
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeBinary}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\makeAllSourcesAvailable}
+    \lsucmandatory{\describeHowToGetSource}
+    \lsucsourcedist{GPL-\ver-CA}
+    \lsucmandatory{\addToCopyrightDialogLib}
+    \lsucmandatory{\markEmbeddedModifications}
+    \lsucmandatory{\arrangeEmbeddedChanges}\howToApplyTheseTerms
+    \lsucmandatory{\arrangeEnclosingBinaries}
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\end{license}
+
+%% =============================================================================
+%% Discussion
 
 \subsection{Discussions and Explanations}
 
+\newcommand{\gplTwoAndThree}[2]{\footnote{%
+    For GPL-2.0 see \cite[cf.][\nopage wp.\ #1]{Gpl20OsiLicense1991a}.\par\noindent 
+    For GPL-3.0 see \cite[cf.][\nopage wp.\ #2]{Gpl30OsiLicense2007a}.}} 
+
+The GPL-2.0 allows to \enquote{[\ldots] copy and (to) distribute verbatim copies
+of the Program's complete source code as you receive it [...] provided that
+you [a] conspicuously and appropriately publish on each copy an appropriate
+copyright notice and disclaimer of warranty; [b] keep intact all the notices
+that refer to this License and to the absence of any warranty; and [c]
+distribute a copy of this License along with the Program.}\citeGPLtwo{§1} The
+GPL-2.0 also allows to \enquote{[\ldots] copy and distribute [\ldots]
+modifications (of the Program or any portion of it) [\ldots] under the terms
+of Section~1}\citeGPLtwo{§2} while it allows to distribute binaries
+\enquote{under the terms of Sections 1 and~2}.\citeGPLtwo{§4} But the GPL-2.0
+does not require any tasks if you are using the work only for yourself. Thus,
+the quoted conditions of \enquote{Section~1} are mandatory for all use cases
+concerning the distribution of an GPL-2.0 licensed work (GPL-2.0-C2 --
+GPL-2.0-CB)
+  
+\label{Gpl3ConditionsDistri}
+The GPL-3.0 uses a similar structure to establish the same requirements: In §4
+it allows to \enquote{[\ldots] convey verbatim copies of the Program's source
+code as you receive it [\ldots] provided that you conspicuously and
+appropriately publish on each copy an appropriate copyright notice; keep
+intact all notices stating that this License and any non-permissive terms
+added in accord with section 7 apply to the code; keep intact all notices of
+the absence of any warranty; and give all recipients a copy of this License
+along with the Program}. §5 also allows to \enquote{[\ldots] convey [\ldots]
+modifications [\ldots] under the terms of section 4 [\ldots]} and §6 gives
+permission to \enquote{[\ldots] convey a covered work in object form under the
+terms of sections of 4 and 5}.\citeGPLthree{§4, §5, §6} In contrast to the
+GPL-2.0, the GPL-3.0 explicitly states that one \enquote{[\ldots] may make, run
+and propagate covered works that (one) (does) not convey [distribute], without
+conditions so long as (the GPL-3.0) license otherwise remains in
+force.}\citeGPLthree{§2}
+% TODO: rephrase, including hosting the software, and name the conditions:
+% exclusively for 'you' and under 'your' direction and control, and no copies
+% of your own copyrighted material
+Moreover, giving a package to a third party for getting a modified version back
+has not to be taken as a case of distribution if the modification has only been
+executed on behalf and only for the purpose of the purchaser and if the modified
+version is not distributed to any third party.\citeGPLthree{§2} If one collects
+all these GPL-3.0 statements together, than one may conclude that the tasks
+which fulfill the corresponding GPL-2.0 requirements together also fit the
+GPL-3.0 conditions.
+  
+The GPL-2.0 allows to \enquote{[\ldots] copy and (to) distribute the Program (or
+a work based on it [\ldots]) in object code or executable form [\ldots] provided
+that you accompany it with the complete corresponding machine-readable source
+code [\ldots] on a medium customarily used for software
+interchange}.\citeGPLtwo{§3, §3a} As a substitution for this basic condition,
+the GPL-2.0 allows to \enquote{accompany} the binary distribution package
+\enquote{[\ldots] with a written offer, valid for at least three years, to give
+any third party, for a charge no more than your cost of physically performing
+source distribution, a complete machine-readable copy of the corresponding
+source code [\ldots] on a medium customarily used for software
+interchange}.\citeGPLtwo{§3b} The \oslic{} construes the common technique to
+download files from the internet as a distribution \emph{on a medium [being
+today] customarily used for software interchange}. Therefore, the \oslic{} requires
+for all open source use cases that refer to the distribution of binaries
+(GPL-2.0-C3, GPL-2.0-C7, GPL-2.0-C9, GPL-2.0-CB) to make the corresponding
+source code of the library itself accessible via an internet repository under
+your own control. 
+  
+\label{Gpl3CondCopyleft}
+The GPL-3.0 also explicitly requires to make the source code accessible in case
+of distributing binaries. But opposite to the GPL-2.0, the GPL-3.0 explicitly
+offers the option of giving \enquote{[\ldots] access to copy the Corresponding
+Source from a network server at no charge} as a means to fulfill the
+conditions.\citeGPLthree{§6 and §6b} So again, the tasks which ensure to act in
+accordance to the GPL-2.0 license in case of distributing binaries, also fulfill
+the conditions of the GPL-3.0.
+
+The weakness that in this case \enquote{third parties [which have received the
+binaries] are not compelled to copy the source code [\ldots]} is a concession
+made by the GPL-2.0.\citeGPLtwo{§3, at the end} But the necessity to offer the
+source code via a repository controlled by yourself may generally not be
+circumvented: The GPL-2.0 allows to redistribute a link to an external source
+code repository only in case of \enquote{noncommercial
+distributions}.\citeGPLtwo{§3c} 
+  
+Both, the GPL-2.0 and the GPL-3.0 allow you to \enquote{[\ldots] modify your
+copy or copies of the Program or any portion of it [\ldots] and (to) copy and
+distribute such modifications [\ldots]} only under very similar restrictions and
+conditions:\citeGPLtwo{§2} 
 \begin{itemize}
-  
-  \item The GPL-V2 allows to \enquote{[\ldots] copy \emph{and} (to)
-  distribute verbatim copies of the Program's complete source code as you
-  receive it [...] provided that you [a] conspicuously and appropriately publish
-  on each copy an appropriate copyright notice and disclaimer of warranty; [b]
-  keep intact all the notices that refer to this License and to the absence of
-  any warranty; and [c] distribute a copy of this License along with the
-  Program}\footcite[cf.][\nopage wp.\ §1, emphasizes by
-  KR]{Gpl20OsiLicense1991a}. Additionally, the GPL-V2 allows to
-  \enquote{[\ldots] copy and distribute [\ldots] modifications (of the Program
-  or any portion of it) [\ldots] under the terms of Section
-  1}\footcite[cf.][\nopage wp.\ §2]{Gpl20OsiLicense1991a} while it allows to
-  distribute binaries \enquote{under the terms of Sections 1 and
-  2}\footcite[cf.][\nopage wp.\ §4]{Gpl20OsiLicense1991a}. But the GPL does not
-  require any tasks if you are using the work only for yourself. Thus, the
-  quoted conditions of \enquote{Section 1} are mandatory for all use cases
-  concerning the distribution of an GPL licensed work (GPL-C2 - GPL-CB)\footnote{
-  \label{Gpl3ConditionsDistri}
-  The GPL-V3 uses a similar structure to establish the same requirements:
-  In §4 it allows to \enquote{[\ldots] convey verbatim copies of the Program's
-  source code as you receive it [\ldots] provided that you conspicuously and
-  appropriately publish on each copy an appropriate copyright notice; keep
-  intact all notices stating that this License and any non-permissive terms
-  added in accord with section 7 apply to the code; keep intact all notices of
-  the absence of any warranty; and give all recipients a copy of this License
-  along with the Program}. Additionally in §5 it also allows to
-  \enquote{[\ldots] convey [\ldots] modifications [\ldots] under the terms of
-  section 4 [\ldots]} and in §6 it allows to \enquote{[\ldots] convey a covered
-  work in object form under the terms of sections of 4 and 5}
-  (\cite[cf.][\nopage wp.\ §4, §5, §6]{Gpl30OsiLicense2007a}). In opposite to
-  the GPL-V2, the GPL-V3 explicitly states that one \enquote{[\ldots] may
-  make, run and propagate covered works that (one) (does) not convey
-  [distribute], without conditions so long as (the GPL-V3) license otherwise
-  remains in force} (\cite[cf.][\nopage wp.\ §2]{Gpl30OsiLicense2007a}).
-  Moreover, giving a package to a third party for getting a modified version
-  back has not to be taken as a case of distribution if the modification has
-  only been executed on behalf and only for the purpose of the purchaser and if
-  the modified version is not distributed to any third party (\cite[cf.][\nopage
-  wp.\ §2]{Gpl30OsiLicense2007a}). If one collects all these GPL-V3 statements
-  together, than one may conclude that the tasks which fulfill the corresponding
-  GPL-V2 requirements together also fit the GPL-V3 conditions.}.
-  
-  \item The GPL-V2 allows to \enquote{[\ldots] copy and (to) distribute the
-  Program (or a work based on it [\ldots]) in object code or executable form
-  [\ldots] provided that you accompany it with the complete corresponding
-  machine-readable source code [\ldots] on a medium customarily used for
-  software interchange}\footcite[cf.][\nopage wp.\ §3,
-  §3a]{Gpl20OsiLicense1991a}. As a substitution for this basic condition, the
-  GPL-V2 allows to \enquote{accompany} the binary distribution package
-  \enquote{[\ldots] with a written offer, valid for at least three years, to
-  give any third party, for a charge no more than your cost of physically
-  performing source distribution, a complete machine-readable copy of the
-  corryponding source code [\ldots] on a medium customarily used for software
-  interchange}\footcite[cf.][\nopage wp.\ §3b]{Gpl20OsiLicense1991a}. The OSLiC
-  construes the common technique to download files from the internet as a
-  distribution \emph{on a medium [being today] customarily used for software
-  interchange}. Therefore, the OSLiC requires for all open source use cases
-  which refer to the distribution of binaries (GPL-C3, GPL-C7, GPL-C9, GPL-CB) to
-  make the corresonding source code of the library itself accessible via an
-  internet repository under your own control\footnote{\label{Gpl3CondCopyleft}
-  Also the GPL-V3 explicitly requires to make the source code accessible in
-  case of distributing binaries. But in opposite to the GPL-V2, the GPL-V3
-  explicitly offers the option that giving the \enquote{[\ldots] access to copy
-  the Corresponding Source from a network server at no charge} would fulfill the
-  conditions (\cite[cf.][\nopage wp.\ §6 and §6b]{Gpl30OsiLicense2007a}). So
-  again, the tasks which ensure to act in accordance to the GPL-V2 license in
-  case of distributing binaries, also fulfill the conditions of the GPL-V3}.
-  The weakness that in this case \enquote{third parties [which have received the
-  binaries] are not compelled to copy the source code [\ldots]} is mediately
-  accepted by the GPL\footcite[cf.][\nopage wp.\ §3, at the
-  end]{Gpl20OsiLicense1991a}. But the necessity to offer the source code via a
-  repository being controled by yourself (mostly) may not be circumvented: The
-  GPL-V2 allows to redistribute a link to an external source code repository
-  only in case of \enquote{noncommercial distributions}\footcite[cf.][\nopage
-  wp.\ §3c]{Gpl20OsiLicense1991a}.
-  
-  \item Both, the GPL-V2 and the GPL-V3 allow to \enquote{[\ldots] modify your
-  copy or copies of the Program or any portion of it [\ldots] and (to) copy and
-  distribute such modifications [\ldots]} only under very similar restrictions
-  and conditions\footcite[cf.][\nopage wp.\ §2]{Gpl20OsiLicense1991a}:
+\item First, modified files must be marked as modifications and the date of the
+  modification.\gplTwoAndThree{§2}{§5} These conditions must be respected by all
+  open source use cases concerning the distribution of the modified work
+  [GPL-2.0-C6/GPL-3.0C6 -- GPL-2.0-C9/GPL-3.0-C9], because even if one primarily
+  intends to distribute binaries, one has also to deliver the source code. The
+  \oslic{} captures this requirement in the mandatory condition to mark each
+  modified file and the voluntary condition to update / generate a general
+  changelog.
+    
+\item Second, both versions of the GPL require that all copies of the modified
+  software which are using an interactive interface or a method to display
+  messages must \enquote{[\ldots] print or display an announcement including an
+  appropriate copyright notice and a notice that there is no warranty [\ldots]
+  and that users may redistribute the program under these conditions, and
+  telling the user how to view a copy of this License.}\gplTwoAndThree{§2c}{§5d}
+  The \oslic{} rewrites this condition in the form that the work shall let its
+  copyright dialog clearly reproduce the content of the existing copyright
+  notices, the software name, a link to its homepage, the respective disclaimer
+  of warranty, and a link to the GPL-2.0-file (or GPL-3.0-file, resp.), which
+  has to be delivered together with the software.
+  % TODO: actually, the task does not refer to the _file_
+  These conditions have to be respected if one redistributes the received and
+  then modified programs (GPL-2.0-C6, GPL-2.0-C7, GPL-3.0-C6, GPL-3.0-C7) or if
+  one distributes one's own programs which are using (modified) libraries as
+  embedded components (GPL-2.0-CA, GPL-2.0-CB, GPL-3.0-CA, GPL-3.0-CB). For
+  those open source use cases that concern the redistribution of received and
+  modified libraries, etc., the \oslic{} does not mention these requirements
+  because libraries, plugins, or snippets normally do not have their own
+  copyright dialogs.  
+    
+\item Third, the GPL requires to \enquote{ [\ldots] cause any work (being
+  distributed or published), that in whole or in part contains or is derived
+  from the Program or any part thereof, to be licensed as a whole at no charge
+  to all third parties under the terms of this (GPL.)}\gplTwoAndThree{§2b}{§5c}
+  This requirement does not depend of the form in which the software is
+  distributed. The \oslic{} adopts this statement in the following way:
   \begin{itemize}
-    \item First, modified files must be marked as modifications and marked by
-    the date of the modification\footnote{For GPL-V2 see \cite[cf.][\nopage wp.\
-    §2]{Gpl20OsiLicense1991a}. For GPL-V3 see \cite[cf.][\nopage wp.\
-    §5]{Gpl30OsiLicense2007a}}. These conditions must be respected by all open
-    source use cases concerning the distribution of the modified work [GPL-C6 -
-    GPL -9], because even if one primarily intends to distribute binaries, one
-    has lateron also to deliver the source code. The OSLiC rewrites this
-    requirement by the mandatory condition to mark each modified file and by the
-    voluntary condition to update / generate a general changing file.
-    
-    \item Second, the GPL requires that all copies of the modified software
-    which are using an interactive interface or a method to display messages
-    must \enquote{[\ldots] print or display an announcement including an
-    appropriate copyright notice and a notice that there is no warranty [\ldots]
-    and that users may redistribute the program under these conditions, and
-    telling the user how to view a copy of this License}\footnote{For GPL-V2
-    see \cite[cf.][\nopage wp.\ §2c]{Gpl20OsiLicense1991a}. For GPL-V3 see
-    \cite[cf.][\nopage wp.\ §5d]{Gpl30OsiLicense2007a}}. The OSLiC rewrites this
-    condition in the form that the work shall let its copyright dialog clearly
-    reproduce the content of the existing copyright notices, a hint to the
-    software name, a link to its homepage, the respective disclaimer of
-    warranty, and a link to the GPL-V2-file resp. the GPL-V3-file which has to
-    be delivered together with the software. These conditions have to be
-    respected if one redistributes the received and then modified programs
-    (GPL-C6, GPL-C7) or if one distributes own programs which are using (modified)
-    libraries as embedded components (GPL-CA, GPL-CB). For those open source use
-    cases which concern the redistribution of  received and modified libraries
-    etc., the OSLiC does not mention these requirements because libraries,
-    plugins, or snippets normally do not offer their own copyright dialogs.
-    
-    \item Third, the GPL requires to \enquote{ [\ldots] cause any work (being
-    distributed or published), that in whole or in part contains or is derived
-    from the Program or any part thereof, to be licensed as a whole at no charge
-    to all third parties under the terms of this (GPL)}\footnote{For GPL-V2 see
-    cite[cf.][\nopage wp.\ §2b]{Gpl20OsiLicense1991a}. For GPL-V3 see
-    cite[cf.][\nopage wp.\ §5c]{Gpl30OsiLicense2007a}}. This requirement does
-    not depend of the form in which the software is distributed. The OSLiC
-    adopts this statement in the following way:
-    \begin{itemize}
-      \item For all open source use cases which concern the distribution (GPL-C2
-      \ldots GPL-CB), the OSLiC rewrites this condition as the mandatory
-      requirement to retain all existing licensing elements.
+  \item For all open source use cases which concern the distribution (GPL-2.0-C2
+    \ldots GPL-2.0-CB, GPL-3.0-C2 \ldots GPL-3.0-CB), the \oslic{} rewrites this
+    condition as the mandatory requirement to retain all existing licensing
+    elements.
       
-      \item For all use cases which deal with the distribution of a modified
-      version of the software (GPL-C6 \ldots GPL-CB), the OSliC adds the
-      requirement to organize the modifications in a way that they are covered
-      by the respective GPL-V2 oder GPL-V3 licensing statements.
+  \item For all use cases which deal with the distribution of a modified version
+    of the software (GPL-2.0-C6 \ldots GPL-2.0-CB, GPL-3.0-C6 \ldots
+    GPL-3.0-CB), the OSliC adds the requirement to organize the modifications in
+    a way that they are covered by the respective GPL-2.0 or GPL-3.0 licensing
+    statements.
       
-      \item For the use case which deal with the distribution of an embedded
-      library (GPL-C4,GPL-C5,GPL-CA,GPL-CB) the OSLiC requires also to license
-      the on-top development under the terms of the respective GPL-V2 or GPL-V3
-      license.
+  \item For the use case which deal with the distribution of an embedded library
+    (GPL-2.0-C4, GPL-2.0-C5, GPL-2.0-CA, GPL-2.0-CB, GPL-3.0-C4, GPL-3.0-C5,
+    GPL-3.0-CA, GPL-3.0-CB) the \oslic{} requires also to license the on-top
+    development under the terms of the respective GPL-2.0 or GPL-3.0 license.
     \end{itemize}
    
-    \item Finally, as parts of those task lists which concern the distribution
-    in the form of binaries, the OSLiC reminds the reader also to execute the
-    corresponding source code use cases because distributing the binaries
-    without making the corresponding sources accessible is not allowed by the
-    GPL.
-  \end{itemize}
-  
-
+\item Finally, as parts of those task lists which concern the distribution in
+  the form of binaries, the \oslic{} reminds the reader also to execute the
+  corresponding source code use cases because distributing the binaries without
+  making the corresponding sources accessible is not allowed by the GPL.
 \end{itemize}
-
-
-
-
-
+  
 %\bibliography{../../../bibfiles/oscResourcesEn}
+
+% Local Variables:
+% mode: latex
+% fill-column: 80
+% End:

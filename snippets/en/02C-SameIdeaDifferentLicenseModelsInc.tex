@@ -278,7 +278,7 @@ AFL and if an AFL is not an OSL and if the OSI approves only OSLs, then the BSD
 license can not be an approved open source license. But in fact, it still is 
 (\cite[cf.][\nopage wp]{OSI2012b}).}
 
-A natural consequence of the clustering into \emph{academic licenses} and 
+Similiar in nature to the clustering into \emph{academic licenses} and 
 \emph{reciprocal licenses} is the grouping into \emph{permissive licenses}, 
 \emph{weak copyleft licenses}, and \emph{strong copyleft licenses}: 
 Even Wikipedia uses the term \enquote{permissive free software licence} in the
@@ -598,7 +598,18 @@ specific protecting power. Thus, we are going to describe and deduce the
 protecting power of each of the open source licenses on the following pages.
 Table \ref{tab:powerOfLicenses} summarizes the results as a quick
 reference.\footnote{$\rightarrow$ table \ref{tab:powerOfLicenses} on p.\
-\pageref{tab:powerOfLicenses}}
+\pageref{tab:powerOfLicenses}. In February 2014, the Black Duck list of the
+\enquote{Top 20 Open Source Licenses} additionally mentions the Artistic License
+(AL), the Code Open Project License, the Common Public License, the zlib/png
+License, the Academic Free License (AFL), the Microsoft Reciprocal License
+(MS-RL) and the Open Software License (OSL) (\cite[cf.][\nopage
+wp.]{wpBlackDuck2014a}). The Code Open Project License and Common Public License
+are still not OSI approved open source licenses. (\cite[cf.][\nopage
+wp.]{OSI2012b}). Thus, finally the OSLiC should additionally analyze not only
+the AGPL and the CDDL, but also the AL, the AFL, the MS-RL, the OSL and the
+zlib/png License for being able to justiufiably say, that the OSLiC covers the
+most important open source licenses.
+}
 
 \begin{table}
 \begin{minipage}{\textwidth}
@@ -635,7 +646,7 @@ reference.\footnote{$\rightarrow$ table \ref{tab:powerOfLicenses} on p.\
   \multicolumn{2}{|c|}{} &
   \multicolumn{4}{c|}{\scriptsize{\textit{who have already got}}} &
   \multicolumn{3}{c|}{\scriptsize{\textit{who spread open}}} & 
-  distri- &
+  dis- &
   \multicolumn{2}{c|}{unmodified} &
   \multicolumn{2}{c|}{modified} 
   & \\
@@ -643,7 +654,7 @@ reference.\footnote{$\rightarrow$ table \ref{tab:powerOfLicenses} on p.\
   \multicolumn{2}{|c|}{} &
   \multicolumn{4}{c|}{\scriptsize{\textit{sources or binaries}}} &
   \multicolumn{3}{c|}{\scriptsize{\textit{source software}}} & 
-  buted & 
+  \parbox[t]{1cm}{tri\-bu\-ted} & 
  \rotatebox{270}{\footnotesize{sources\ }} &
  \rotatebox{270}{\footnotesize{binaries\ }} &
  \rotatebox{270}{\footnotesize{sources\ }} &
@@ -753,8 +764,13 @@ reference.\footnote{$\rightarrow$ table \ref{tab:powerOfLicenses} on p.\
 \end{minipage}
 \end{table}
 
+\section{\texorpdfstring{The protecting power of the}{The} GNU Affero General Public License (AGPL)}
+\protectionlabel{AGPL}
+
+[TODO...]
+
 \section{\texorpdfstring{The protecting power of the}{The} Apache License (ApL)}
-\label{sec:ProtectPowerOfApL}
+\protectionlabel{APL}
 
 As an approved \emph{open source license,}\footcite[cf.][\nopage wp]{OSI2012b}
 the Apache License%
@@ -774,7 +790,7 @@ protects the user against the loss of the
 right to use, to modify and/or to distribute the received copy of the source
 code or the binaries.\footcite[cf.][\nopage wp. §2]{Apl20OsiLicense2004a}
 Furthermore, based on its patent clause,\footnote{$\rightarrow$ \oslic{} pp.\
-\pageref{subsec:ApLPatentClause}} the ApL protects the users against patent
+\patentpageref{APL}} the ApL protects the users against patent
 disputes.\footcite[cf.][\nopage wp. §3]{Apl20OsiLicense2004a} Because of this
 patent clause and the \enquote{disclaimer of warranty} together with the
 \enquote{limitation of liability,} the Apache license also protects the
@@ -802,7 +818,7 @@ on-top developments against privatization.
 
 
 \section{\texorpdfstring{The protecting power of the}{The} BSD licenses}
-\label{sec:ProtectingPowerOfBsd}
+\protectionlabel{BSD}
 
 As approved \emph{open source licenses,}\footcite[cf.][\nopage wp]{OSI2012b} the
 BSD Licenses%
@@ -819,7 +835,7 @@ finally they protect the distributed sources against a change of the license
 which closes the sources, because each modification and \enquote{redistributions
 of [the] source code must retain the [\ldots] copyright notice, this list of
 conditions and the [\ldots] disclaimer}:\footcite[cf.][\nopage
-wp]{BsdLicense2Clause} Therefore it is incorrect to distribute a BSD licensed
+wp]{BsdLicense2Clause} Therefore it is incorrect to distribute BSD licensed
 code under another license---regardless of whether it closes the sources or
 not.%
   \footnote{In common sense based discussions you may have heard that BSD
@@ -848,7 +864,7 @@ wp]{BsdLicense3Clause})} Finally, the BSD licenses do not protect the on-top
 developments against privatization.
 
 \section{\texorpdfstring{The protecting power of the}{The} CDDL [tbd]}
-\label{sec:ProtectPowerOfCDDL}
+\protectionlabel{CDDL}
 
 As an approved \emph{open source license,}\footcite[cf.][\nopage wp]{OSI2012b}
 the Common Develop and Distribution License protects the user
@@ -859,7 +875,7 @@ received copy of the source code or the binaries\footcite[cf.][\nopage wp.
 [\ldots]
 
 \section{\texorpdfstring{The protecting power of the}{The} Eclipse Public License (EPL)}
-\label{sec:ProtectingPowerOfEpl}
+\protectionlabel{EPL}
 
 As an approved \emph{open source license,}\footcite[cf.][\nopage wp]{OSI2012b}
 the Eclipse Public License%
@@ -870,7 +886,7 @@ the Eclipse Public License%
 protects the user against the loss of the right to use, to modify and/or to
 distribute the received copy of the source code or the binaries\citeEPL{§2a}. 
 Furthermore, based on its patent clause,\footnote{$\rightarrow$ \oslic{} 
-pp.\ \pageref{subsec:EpLPatentClause}} the EPL protects the users also against
+pp.\ \patentpageref{EPL}} the EPL protects the users also against
 patent disputes.\citeEPL{§2b \& §2c} Besides this patent clause, the EPL contains the
 sections \enquote{no warranty} and \enquote{disclaimer of
 liability.}\citeEPL{§5 \& §6} These three elements together protect the
@@ -925,7 +941,7 @@ EPL does not use the strong copyleft effect in the meaning of---for example --
 the GPL.
  
 \section{\texorpdfstring{The protecting power of the}{The} European Union Public License (EUPL)}
-\label{sec:ProtectingPowerOfEupl}
+\protectionlabel{EUPL}
 
 As an approved \emph{open source license,}\footcite[cf.][\nopage wp]{OSI2012b}
 the European Union Public License%
@@ -940,7 +956,7 @@ the European Union Public License%
 protects the user against the loss of the right to use, to modify and/or to
 distribute the received copy of the source code or the binaries.\citeEUPL{§2}
 Furthermore, based on its patent clause\footnote{$\rightarrow$ \oslic{}
-pp.\ \pageref{subsec:EupLPatentClause}}, the EUPL protects the users against
+pp.\ \patentpageref{EUPL}}, the EUPL protects the users against
 patent disputes.\citeEUPL{§2, at its end} Besides this patent clause, the EUPL
 additionally contains a \enquote{Disclaimer of Warranty} and a
 \enquote{Disclaimer of Liability.}\citeEUPL{§7 \& §8} These three elements
@@ -996,7 +1012,7 @@ which uses a library licensed under the EUPL. As second step, you add this `EUPL
 library' which you now may also distribute under the EPL instead of retaining
 the EUPL licensing. So, finally you obtain the same work under the Eclipse
 Public License which is a weak copyleft license\footnote{$\rightarrow$ \oslic,
-p.\ \pageref{sec:ProtectingPowerOfEpl}}. Hence the protection of the EUPL-1.1 is
+p.\ \protectionpageref{EPL}}. Hence the protection of the EUPL-1.1 is
 not as comprehensive as one might assume on the basis of the license text
 itself,%
   \footnote{This kind of specifiying the protective power of the EUPL is
@@ -1012,7 +1028,7 @@ license. Howsoever, the EUPL license does not protect the on-top developments
 against a privatization. 
 
 \section{\texorpdfstring{The protecting power of the}{The} GNU General Public License (GPL)}
-\label{sec:ProtectingPowerOfGpl}
+\protectionlabel{GPL}
 
 The GNU General Public License---also known as GPL---is maintained and offered
 by the Free Software Foundation and hosted as part of the well known
@@ -1031,7 +1047,8 @@ Although both versions of the GPL aim for the same results and the same spirit,
 they differ with respect to textual and arguing structure. Therefore, it is
 helpful to treat these two licenses separately.  
 
-\subsection {GPL-2.0} \label{subsec:ProtectingPowerOfGpl20}
+\subsection{GPL-2.0}
+\protectionlabel{GPLa}
 
 The protecting power of the GPL-2.0 can easily be determined: First, the license
 allows the users of a received software to \enquote{copy and distribute}
@@ -1061,20 +1078,21 @@ software against re-privatization, but also possible on-top developments against
 privatization. 
 
 But the GPL-2.0 does not protect against patent disputes\footnote{$\rightarrow$
-\oslic, p. \pageref{subsec:Gpl20PatentClause}}---neither the users, nor the
+\oslic, p. \patentpageref{GPLa}}---neither the users, nor the
 contributors or distributors---and it does not protect the (modified) software
 which is not distributed against (re-)privatization.%
   \footnote{This is a `lack' in the GPL which the AGPL wants to close: you are
-  indeed allowed to modify and install a GPL-2.0 licensed server software own
+  indeed allowed to modify and install a GPL-2.0 licensed server software on
   your own machine for offering a service based on this modified software
   without being obliged to give your improvements back to the
   community. But---at least in Germany---this viewpoint seems to have to respect
   rigorous limits. Sometimes, it is said that even distributing software over
-  the parts of a holding is already a distribution which---in the case of a
+  the parts of a holding is already a distribution which---in the case of 
   GPL-2.0 licensed software---would evoke the obligation to distribute the
   source code, too. [IMPORTANT: citation still needed!]}
 
-\subsection {GPL-3.0}\label{subsec:ProtectingPowerOfGpl30}
+\subsection{GPL-3.0}
+\protectionlabel{GPLb}
 
 An important modification of the GPL-3.0 is evoked by the use of the new wording
 to \enquote{propagate} or to \enquote{convey} a \enquote{covered work}: On the
@@ -1129,7 +1147,7 @@ against the loss of the right to use, to modify and/or to distribute the
 received copy of the source code or the binaries.\citeGPLthree{§3, §4, §5, and~§6} 
 Furthermore, based on its patent clauses, the GPL-3.0 protects the users and the
 contributors of a software against patent disputes.%
-  \footnote{$\rightarrow$ \oslic, p.\ \pageref{subsec:Gpl30PatentClause}}
+  \footnote{$\rightarrow$ \oslic, p.\ \patentpageref{GPLb}}
 Additionally, the GPL-3.0 tries to protect the contributors or distributors
 against warranty claims by its well known \enquote{Disclaimer of
 Warranty}\citeGPLthree{§15} and \enquote{Limitation of
@@ -1155,12 +1173,8 @@ only for yourself.%
   them make modifications exclusively for you [\ldots]} 
   (\cite[cf.][\nopage wp. §2]{Gpl30OsiLicense2007a}).}
 
-\section{\texorpdfstring{The protecting power of the}{The} GNU Affero General Public License (AGPL)}
-RPD
-
-
 \section{\texorpdfstring{The protecting power of the}{The} GNU Lesser General Public License (LGPL)}
-\label{sec:ProtectingPowerOfLgpl}
+\protectionlabel{LGPL}
 
 The LGPL is maintained and offered by the Free Software Foundation and hosted as
 part of the well known \enquote{GNU operating system
@@ -1184,7 +1198,8 @@ General Public License, supplemented by the additional permissions listed
 below.}\footcite[cf.][\nopage wp]{Lgpl30FsfLicense2007a} Based on these
 differences, it seems to be suitable to treat the different LGPLs separately.
 
-\subsection{LGPL-2.1}\label{subsec:ProtectingPowerOfLgpl21}
+\subsection{LGPL-2.1}
+\protectionlabel{LGPLa}
 
 Like the other versions of the GPL or LPGL, the LGPL-2.1 also explicitly
 describes its purpose as the task to \enquote{protect} the \enquote{rights} of
@@ -1196,7 +1211,7 @@ protects the user against the loss of the right to use, to modify and/or to
 distribute the received copy of the source code or the binaries.\citeLGPLtwo{§1, §2, §4} 
 But the LGPL-2.1 does not offer any sentences to infer that it grants any patent
 rights to the software user.\footnote{$\rightarrow$ \oslic,
-p.\ \pageref{subsec:Lgpl21PatentClause}} So, it does not protect anyone against
+p.\ \patentpageref{LGPLa}} So, it does not protect anyone against
 patent disputes, neither the users, nor the
 contributors\,/\,distributors. Instead of this, the LGPL-2.1 contains a special 
 section \enquote{No Warranty} offering two paragraphs which together establish
@@ -1254,7 +1269,8 @@ on-top developments against a privatization. And of course, that is the reason w
 it is called the \emph{GNU \emph{Lesser} General Public License}.
 
 
-\subsection {LGPL-3.0}\label{subsec:ProtectingPowerOfLgpl30}
+\subsection{LGPL-3.0}
+\protectionlabel{LGPLb}
 
 The LGPL-3.0 wants to be read as an extension of the GPL-3.0. For that purpose,
 it explicitly \enquote{[\ldots] incorporates the terms and conditions of
@@ -1280,7 +1296,7 @@ publish the source code of these on-top developments, too%
 embedded libraries themselves. 
 
 Based on the already described protecting power of the GPL-3.0%
-\footnote{$\rightarrow$ \oslic, p.\ \pageref{subsec:ProtectingPowerOfGpl30}}  
+\footnote{$\rightarrow$ \oslic, p.\ \protectionpageref{GPLb}}  
 and on these additional specifications of the LGPL-3.0, one can summarize the
 protecting power of the LGPL-3.0 this way:
 
@@ -1295,7 +1311,7 @@ But the LGPL-3.0 does not protect the undistributed source code and does not
 protect the on-top developments against privatization.
 
 \section{\texorpdfstring{The protecting power of the}{The} MIT license}
-\label{sec:ProtectingPowerOfMit}
+\protectionlabel{MIT}
 
 As an approved \emph{open source license,}\footcite[cf.][\nopage wp]{OSI2012b}
 the MIT License%
@@ -1333,7 +1349,7 @@ code.\footcite[cf.][\nopage wp]{MitLicense2012a} Finally, the MIT license does
 not protect the on-top developments against a privatization.
 
 \section{\texorpdfstring{The protecting power of the}{The} Mozilla Public License (MPL)}
-\label{sec:ProtectingPowerOfMpl}
+\protectionlabel{MPL}
  
 As an approved \emph{open source license,}\footcite[cf.][\nopage wp]{OSI2012b}
 the Mozilla Public License%
@@ -1358,7 +1374,7 @@ the Mozilla Public License%
 protects the user against the loss of the right to use, to modify and/or to
 distribute the received copy of the source code or the
 binaries.\citeMPL{§2.1.a}  Furthermore, based on its split and distributed patent
-clause,\footnote{$\rightarrow$ \oslic{} pp.\ \pageref{subsec:MplPatentClause}} the
+clause,\footnote{$\rightarrow$ \oslic{} pp.\ \patentpageref{MPL}} the
 MPL protects the users against patent disputes.\citeMPL{§2.1.b, §2.3, §5.2}
 Besides this patent sections, the MPL additionally contains a
 \enquote{Disclaimer of Warranty} and a \enquote{Limitation of
@@ -1369,7 +1385,7 @@ re-closing\,/\,re-privatization and the contributors against the loss of
 feedback: The MPL clearly says that, on the one hand, \enquote{all distribution
 of Covered Software in Source Code Form, including any Modifications [\ldots]
 must be under the terms of this License}\citeMPL{§3.1} and that, on the other
-hand, an MPL licensed software \enquote{[\ldots] (distributed) in Executable
+hand, MPL licensed software \enquote{[\ldots] (distributed) in Executable
 Form [\ldots] must also be made available in Source Code Form
 [\ldots]}\citeMPL{§3.2} So, it must be inferred that the MPL is a copyleft
 license. 
@@ -1431,13 +1447,13 @@ Hence, the MPL is license with a weak copyleft effect and does not protect the
 on-top developments against privatization.
 
 \section{\texorpdfstring{The protecting power of the}{The} Microsoft Public License (MS-PL)}
-\label{sec:ProtectingPowerOfMspl}
+\protectionlabel{MSPL}
 
 As an approved \emph{open source license,}\footcite[cf.][\nopage wp]{OSI2012b}
 the Microsoft Public License protects the user against the loss of the right to
 use, to modify and/or to distribute the received copy of the source code or the
 binaries.\citeMSPL{§2} Furthermore, based on its patent
-clause,\footnote{$\rightarrow$ \oslic{} pp.\ \pageref{subsec:MsplPatentClause}} the
+clause,\footnote{$\rightarrow$ \oslic{} pp.\ \patentpageref{MSPL}} the
 MS-PL protects the users against patent disputes.\citeMSPL{§2.B and §3.B}
 Because of this patent clause and of its 
 concise \emph{disclaimer of warranty}, the MS-PL also protects the
@@ -1478,7 +1494,7 @@ does not protect the on-top developments against a privatization.
 
 
 \section{\texorpdfstring{The protecting power of the}{The} Postgres License (PgL)}
-\label{sec:ProtectingPowerOfPgl}
+\protectionlabel{PGL}
 
 As an approved \emph{open source license,}\footcite[cf.][\nopage wp]{OSI2012b}
 the PostgreSQL License protects the user against the loss of the right to use,
@@ -1503,7 +1519,7 @@ against a privatization.
 
 
 \section{\texorpdfstring{The protecting power of the}{The} PHP License}
-\label{sec:ProtectingPowerOfPhp}
+\protectionlabel{PHP}
 
 As an approved \emph{open source license,}\footcite[cf.][\nopage wp]{OSI2012b}
 the PHP-3.0 License protects the user against the loss of the right to use, to

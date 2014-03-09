@@ -50,7 +50,7 @@ will start with these general remarks and refer to them throughout the chapter.
   touch, feel or see is like not giving him the object ;-)}. Thus, on
   systems which offer a file browser and a suitable reader, it is sufficient, to
   put these file onto the files system. On the other systems, you \emph{must}
-  present the content of the files  through the UI of your application -- for
+  present the content of the files  through the UI of your application---for
   example in a specific copyright screen\footnote{Additionally, in the open
   source community, it is a good tradition, to present these reference data
   voluntarily.}. The \oslic{} does not want to refine the taxonomies down to the
@@ -60,8 +60,8 @@ will start with these general remarks and refer to them throughout the chapter.
   \item Sometimes a product which uses and distributes open source software
   tries to fulfill the requirement 'to give the recipients the license etc.' by
   presenting links to general versions of these licensing files hosted somewhere
-  on the internet. But be aware: Although it is a good tradition -- especially
-  if you link to the homepages of the projects for being totally transparent --
+  on the internet. But be aware: Although it is a good tradition---especially
+  if you link to the homepages of the projects for being totally transparent---
   it is not sufficient to offer only the links. If you are required by the open
   source licenses to handover something to your users, \emph{you} must do it. It
   is not safe to delegate the task to anyone hoping that they will offer the
@@ -73,3 +73,29 @@ will start with these general remarks and refer to them throughout the chapter.
 \end{itemize}
 
 \label{OSUCToDoLists}
+
+% ==============================================================================
+% Some commands common to all to-do lists
+
+% Common footnote, used in many task lists
+\newcommand{\passingFilesCorrectly}{%
+  \footnote{For implementing the handover of files correctly $\rightarrow$
+    OSLiC, p. \pageref{DistributingFilesHint}}}
+
+% A LSUC that covers many OSUCs
+% #1 -> List of covered OSUCS, e. g., ``OSUC-01, OSUC-07S, and OSUC-10S''
+% #2 -> number of first OSUC covered, e. g., '07B'
+% #3 -> number of last OSUC covered
+\newcommand{\coversOsucs}[3]{\lsuccovers{#1}%
+  \footnote{For details $\rightarrow$ \oslic, pp.\ \osucpageref{#2} -- \osucpageref{#3}}}
+
+% A LSUC that maps to exactly one OSUC
+% # -> number of the OSUC, e. g., '07B'
+\newcommand{\mapsToOsuc}[1]{\lsuccovers{OSUC-#1}%
+  \footnote{For details $\rightarrow$ \oslic, pp.\ \osucpageref{#1}}}
+
+
+% Local Variables:
+% mode: latex
+% fill-column: 80
+% End:

@@ -31,6 +31,8 @@
 
 \usepackage{microtype}
 
+\usepackage{to_oscad/oscad}
+
 %language specific quoting signs
 %default for language emglish is american style of quotes
 %\usepackage[english=british]{csquotes}
@@ -170,6 +172,8 @@
 % second argument is location, like "§2"; must be "wp" if no paragraph is given 
 \newcommand*{\citeAGPL}[2][cf.]{\footcite[#1][\nopage wp #2]{Agpl30OsiLicense2007a}}
 \newcommand*{\citeAPL}[2][cf.]{\footcite[#1][\nopage wp #2]{Apl20OsiLicense2004a}}
+\newcommand*{\citeBSDnew}[2][cf.]{\footcite[#1][\nopage wp #2]{BsdLicense3Clause}}
+\newcommand*{\citeBSDsimple}[2][cf.]{\footcite[#1][\nopage wp #2]{BsdLicense2Clause}}
 \newcommand*{\citeCDDL}[2][cf.]{\footcite[#1][\nopage wp #2]{Cddl10OsiLicense2004a}}
 \newcommand*{\citeEPL}[2][cf.]{\footcite[#1][\nopage wp #2]{Epl10OsiLicense2005a}}
 \newcommand*{\citeEUPL}[2][cf.]{\footcite[#1][\nopage wp #2]{Eupl11OsiLicense2007a}}
@@ -177,19 +181,21 @@
 \newcommand*{\citeGPLtwo}[2][cf.]{\footcite[#1][\nopage wp #2]{Gpl20OsiLicense1991a}}
 \newcommand*{\citeLGPLthree}[2][cf.]{\footcite[#1][\nopage wp #2]{Lgpl30OsiLicense2007a}}
 \newcommand*{\citeLGPLtwo}[2][cf.]{\footcite[#1][\nopage wp #2]{Lgpl21OsiLicense1999a}}
+\newcommand*{\citeMIT}[2][cf.]{\footcite[#1][\nopage wp #2]{MitLicense2012a}}
 \newcommand*{\citeMPL}[2][cf.]{\footcite[#1][\nopage wp #2]{Mpl20OsiLicense2013a}}
 \newcommand*{\citeMSPL}[2][cf.]{\footcite[#1][\nopage wp #2]{MsplOsiLicense2013a}}
 \newcommand*{\citePGL}[2][cf.]{\footcite[#1][\nopage wp #2]{PglOsiLicense2013a}}
 \newcommand*{\citePHP}[2][cf.]{\footcite[#1][\nopage wp #2]{Php30OsiLicense2013a}}
 %%%%%%%%%%%%%%
+
 \begin{document}
 
 %% use all entries of the bliography
 \nocite{*}
 
 %%-- start(titlepage)
-\titlehead{Version \input{rel-number} % -- \input{rel-date}
-}
+\titlehead{Version \input{rel-number}}
+
 \subject{\small \itshape A Practical Guide for Developers, Managers, OS Experts, 
 and Companies} 
 
@@ -284,19 +290,19 @@ and all the others\ldots
 %%%%%%%%%%%%%%%
   
 \input{snippets/en/06C-OsFulfillmentByToDoListsInc}
-\input{snippets/en/06C-osFulfillmentByToDoLists/0601-agplFulfillToDoList}
-\input{snippets/en/06C-osFulfillmentByToDoLists/0602-apacheFulfillToDoList}
-\input{snippets/en/06C-osFulfillmentByToDoLists/0603-bsdFulfillToDoList}
-\input{snippets/en/06C-osFulfillmentByToDoLists/0613-cddlFulfillToDoList}
-\input{snippets/en/06C-osFulfillmentByToDoLists/0604-eplFulfillToDoList}
-\input{snippets/en/06C-osFulfillmentByToDoLists/0605-euplFulfillToDoList}
-\input{snippets/en/06C-osFulfillmentByToDoLists/0606-gplFulfillToDoList}
-\input{snippets/en/06C-osFulfillmentByToDoLists/0607-lgplFulfillToDoList}
-\input{snippets/en/06C-osFulfillmentByToDoLists/0608-mitFulfillToDoList}
-\input{snippets/en/06C-osFulfillmentByToDoLists/0609-mplFulfillToDoList}
-\input{snippets/en/06C-osFulfillmentByToDoLists/0610-msplFulfillToDoList}
-\input{snippets/en/06C-osFulfillmentByToDoLists/0611-pglFulfillToDoList}
-\input{snippets/en/06C-osFulfillmentByToDoLists/0612-phpFulfillToDoList}
+{\input{snippets/en/06C-osFulfillmentByToDoLists/0601-agplFulfillToDoList}}
+{\input{snippets/en/06C-osFulfillmentByToDoLists/0602-apacheFulfillToDoList}}
+{\input{snippets/en/06C-osFulfillmentByToDoLists/0603-bsdFulfillToDoList}}
+{\input{snippets/en/06C-osFulfillmentByToDoLists/0613-cddlFulfillToDoList}}
+{\input{snippets/en/06C-osFulfillmentByToDoLists/0604-eplFulfillToDoList}}
+{\input{snippets/en/06C-osFulfillmentByToDoLists/0605-euplFulfillToDoList}}
+{\input{snippets/en/06C-osFulfillmentByToDoLists/0606-gplFulfillToDoList}}
+{\input{snippets/en/06C-osFulfillmentByToDoLists/0607-lgplFulfillToDoList}}
+{\input{snippets/en/06C-osFulfillmentByToDoLists/0608-mitFulfillToDoList}}
+{\input{snippets/en/06C-osFulfillmentByToDoLists/0609-mplFulfillToDoList}}
+{\input{snippets/en/06C-osFulfillmentByToDoLists/0610-msplFulfillToDoList}}
+{\input{snippets/en/06C-osFulfillmentByToDoLists/0611-pglFulfillToDoList}}
+{\input{snippets/en/06C-osFulfillmentByToDoLists/0612-phpFulfillToDoList}}
 
 
 %%%%%%%%%%%%%%%
@@ -326,5 +332,9 @@ and all the others\ldots
 
 \bibliography{bibfiles/oscResourcesEn,bibfiles/oscCopiedButNotRead,bibfiles/oscNextActions}
 
-
 \end{document}
+
+% Local Variables:
+% mode: latex
+% fill-column: 80
+% End:
