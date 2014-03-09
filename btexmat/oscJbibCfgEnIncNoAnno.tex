@@ -1,0 +1,125 @@
+% Telekom osCompendium English Jurabib Configuration Include Module 
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
+% the first time cite with all data, later with shorttitle
+\jurabibsetup{citefull=first}
+
+%%% (1) author / editor list configuration
+%\jurabibsetup{authorformat=and} % uses 'und' instead of 'u.'
+% therefore define your own abbreviated conjunction: 
+% an 'and before last author explicetly written conjunction
+
+% for authors in citations
+\renewcommand*{\jbbtasep}{ a.\ } % bta = between two authors sep
+\renewcommand*{\jbbfsasep}{, } % bfsa = between first and second author sep
+\renewcommand*{\jbbstasep}{, a.\ }% bsta = between second and third author sep
+% for editors in citations
+\renewcommand*{\jbbtesep}{ a.\ } % bta = between two authors sep
+\renewcommand*{\jbbfsesep}{, } % bfsa = between first and second author sep
+\renewcommand*{\jbbstesep}{, a.\ }% bsta = between second and third author sep
+
+% for authors in literature list
+\renewcommand*{\bibbtasep}{ a.\ } % bta = between two authors sep
+\renewcommand*{\bibbfsasep}{, } % bfsa = between first and second author sep
+\renewcommand*{\bibbstasep}{, a.\ }% bsta = between second and third author sep
+% for editors  in literature list
+\renewcommand*{\bibbtesep}{ a.\ } % bte = between two editors sep
+\renewcommand*{\bibbfsesep}{, } % bfse = between first and second editor sep
+\renewcommand*{\bibbstesep}{, a.\ }% bste = between second and third editor sep
+
+% use: name, forname, forname lastname u. forname lastname
+\jurabibsetup{authorformat=firstnotreversed}
+\jurabibsetup{authorformat=italic}
+
+%%% (2) title configuration
+% in every case print the title, let it be seperated from the 
+% author by a colon and use the slanted font
+\jurabibsetup{titleformat={all,colonsep}}
+%\renewcommand*{\jbtitlefont}{\textit}
+
+%%% (3) seperators in bib data
+% separate bibliographical hints and page hints by a comma
+\jurabibsetup{commabeforerest}
+
+%%% (4) specific configuration of bibdata in quotes / footnote
+% use a.a.O if possible
+\jurabibsetup{ibidem=strict}
+% replace ugly a.a.O. by translation of ders., a.a.O.
+\AddTo\bibsgerman{
+  \renewcommand*{\ibidemname}{Id., l.c.}
+  \renewcommand*{\ibidemmidname}{id., l.c.}
+}
+\renewcommand*{\samepageibidemname}{Id., ibid.}
+\renewcommand*{\samepageibidemmidname}{id., ibid.}
+
+
+%%% (5) specific configuration of bibdata in bibliography
+% ever an in: before journal and collection/book-tiltes 
+\renewcommand*{\bibbtsep}{in: }
+\renewcommand*{\bibjtsep}{in: }
+% ever a colon after author names 
+\renewcommand*{\bibansep}{: }
+% ever a semi colon after the title
+% \AddTo\bibsgerman{\renewcommand*{\urldatecomment}{Referenzdownload: }}
+\renewcommand*{\bibatsep}{; }
+% ever a comma before date/year
+\renewcommand*{\bibbdsep}{, }
+
+% let jurabib insert the S. and p. information
+% no S. necessary in bib-files and in cites/footcites
+\jurabibsetup{pages=format}
+
+% use a compressed literature-list using a small line indent
+\jurabibsetup{bibformat=compress}
+\setlength{\jbbibhang}{1em}
+
+% which follows the design of the cites and offers comments
+\jurabibsetup{biblikecite}
+
+% configuruation for not commenting the literature
+% print annotations into bibliography
+% \jurabibsetup{annote}
+% \renewcommand*{\jbannoteformat}[1]{{ \itshape #1 }}
+
+%refine the prefix of url download
+\AddTo\bibsgerman{\renewcommand*{\urldatecomment}{reference download: }}
+
+% we want to have the year of articles in brackets
+\renewcommand*{\bibaldelim}{(}
+\renewcommand*{\bibardelim}{)}
+
+% in english version Nr. must be replaced by No.
+\renewcommand*{\artnumberformat}[1]{\unskip,\space No.~#1}
+\renewcommand*{\pernumberformat}[1]{\unskip\space No.~#1}%
+\renewcommand*{\revnumberformat}[1]{\unskip\space No.~#1}%
+
+
+%Reformatierung Seriestitels and Seriesnumber
+\DeclareRobustCommand{\numberandseries}[2]{%
+\unskip\unskip%,
+\space\bibsnfont{(=~#2}%
+\ifthenelse{\equal{#1}{}}{)}{, [Vol./No.]~#1)}%
+}%
+
+
+% Local Variables:
+% mode: latex
+% fill-column: 80
+% End:
