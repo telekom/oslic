@@ -357,18 +357,18 @@ we can develop the following picture:
               text={|\itshape| permissive licenses}},
               postaction={decorate}] (0.9,7.4) arc (180:0:1.8cm);
 
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0101) at (2,8)
-{  \footnotesize \bfseries \textit{ApL}};
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0102) at (3.5,8)
-{  \footnotesize \bfseries \textit{BSD}};
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0103) at (2,6.5)
-{  \footnotesize \bfseries \textit{MIT}};
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0104) at (3.5,6.5)
+\node[rectangle,draw,text width=1.1cm, text height=0.35cm, fill=gray!40, text
+centered] (l0101) at (2,8) {  \scriptsize \bfseries \textit{Apache-2.0}};
+\node[rectangle,draw,text width=1.1cm, text height=0.35cm, fill=gray!40, text
+centered] (l0102) at (3.5,8) { \scriptsize \bfseries \textit{BSD-X-Clause}};
+\node[rectangle,draw,text width=1.1cm, text height=0.35cm, fill=gray!40, text
+centered] (l0103) at (2,6.5) {  \footnotesize \bfseries \textit{MIT}};
+\node[rectangle,draw,text width=1cm, fill=gray!40, text centered] (l0104) at (3.5,6.5)
 {  \scriptsize \bfseries \textit{MS-PL}};
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0105) at (2,5)
-{  \footnotesize \bfseries \textit{PgL}};
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0106) at (3.5,5)
-{  \footnotesize \bfseries \textit{PHP}};
+\node[rectangle,draw,text width=1cm, fill=gray!40, text centered] (l0105) at (2,5)
+{  \scriptsize \bfseries \textit{Post-greSQL}};
+\node[rectangle,draw,text width=1cm, fill=gray!40, text centered] (l0106) at (3.5,5)
+{  \footnotesize \bfseries \textit{PHP-3.x}};
 
 \node[ellipse,minimum height=6cm,minimum width=8.5cm,draw,fill=gray!20] (l0200) at (9.2,6.5)
 {  };
@@ -689,7 +689,7 @@ most important open source licenses.
   & \\
 \hline
 \hline
-  ApL & 2.0 & \checkmark  & \checkmark  & \checkmark  &
+  Apache & 2.0 & \checkmark  & \checkmark  & \checkmark  &
   \checkmark & $\neg$ & \checkmark & \checkmark & $\neg$ &
    \checkmark  & $\neg$ & \checkmark & $\neg$ & $\neg$ \\
 \hline
@@ -769,7 +769,8 @@ most important open source licenses.
 
 [TODO...]
 
-\section{\texorpdfstring{The protecting power of the}{The} Apache License (ApL)}
+\section{\texorpdfstring{The protecting power of the}{The} Apache License
+(Apache-2.0)}
 \protectionlabel{APL}
 
 As an approved \emph{open source license,}\footcite[cf.][\nopage wp]{OSI2012b}
@@ -790,13 +791,13 @@ protects the user against the loss of the
 right to use, to modify and/or to distribute the received copy of the source
 code or the binaries.\footcite[cf.][\nopage wp. §2]{Apl20OsiLicense2004a}
 Furthermore, based on its patent clause,\footnote{$\rightarrow$ \oslic{} pp.\
-\patentpageref{APL}} the ApL protects the users against patent
+\patentpageref{APL}} the Apache-2.0 protects the users against patent
 disputes.\footcite[cf.][\nopage wp. §3]{Apl20OsiLicense2004a} Because of this
 patent clause and the \enquote{disclaimer of warranty} together with the
 \enquote{limitation of liability,} the Apache license also protects the
 contributors and distributors against patent disputes and warranty
 claims.\footcite[cf.][\nopage wp. §3, §7, §8]{Apl20OsiLicense2004a} Finally, the
-ApL protects the distributed sources themselves \emph{against} a change of the
+Apache-2.0 protects the distributed sources themselves \emph{against} a change of the
 license which would \emph{convert} the work \emph{to closed software}, because,
 first, one \enquote{[\ldots] must give any other recipients of the Work or
 Derivative Works a copy of (the Apache) license,} second, \enquote{in the Source
@@ -809,11 +810,11 @@ received.\footcite[cf.][\nopage wp. §4]{Apl20OsiLicense2004a}
 But the Apache License does not protect the contributors against the loss of
 feedback because it does not `copyleft' the software: the Apache license does
 not contain any sentence requiring that one has also to publish the source code.
-In the same spirit, the ApL does not protect the undistributed software or the
+In the same spirit, the Apache-2.0 does not protect the undistributed software or the
 distributed binaries against re-closing (neither in unmodified nor in
 modified form) because the Apache License allows to (re)distribute the
 binaries without also supplying the sources---even if the binaries rest upon
-sources modified by the distributor. Finally, the ApL does not protect the
+sources modified by the distributor. Finally, the Apache-2.0 does not protect the
 on-top developments against privatization.
 
 
