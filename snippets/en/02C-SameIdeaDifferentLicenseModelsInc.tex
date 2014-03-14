@@ -38,20 +38,30 @@ can indeed summarize all Open Source Licenses in a comparable way.
 \end{quote}
 \normalsize{}
 
-Grouping open source licenses is commonly done. Even the set of the \emph{open
-source li\-cen\-ses}\footcite[cf.][\nopage wp]{OSI2012b} itself is already a
-cluster being established by a set of grouping criteria: The
-\enquote{distribution terms} of each software license that intends to become an
-open source license \enquote{[\ldots] must comply with the [\ldots] criteria}
-of the \emph{Open Source De\-fi\-ni\-tion,}\footcite[cf.][\nopage wp]{OSI2012a}
-maintained by the \emph{Open Source Initiative}\footcite[cf.][\nopage
-wp]{OSI2012c} and often abbreviated as \emph{OSD}. So, this \emph{OSD}
-demarcates `the group of [potential] open source licenses' against `the group of
-not open sources licenses.'\footnote{More precisely: meeting the
-OSD is only a necessary condition for becoming an \emph{open source license}. The
-sufficient condition for becoming an \emph{open source license} is the approval
-by the OSI, which offers a process for the official approval of \emph{open
-source license} (\cite[cf.][\nopage wp]{OSI2012d}).}
+Grouping open source licenses\footnote{Talking about licenses is sometimes a bit
+tricky: Normally, they have a longer official name and a well known, often
+abbreviating inofficial nickname. But that's not enough for talking about a
+specific license adequately: one has additionally to refer to the version of the
+license itself. The Linux Foundation offers a set of normalized names and
+identifiers, to minimize the confusion how to denote a license correctly
+(\cite[cf.][\nopage wp]{LinuxFounSpdxList2014a}). The OSLiC tries to use these
+SPDX identifiers as far as possible. But sometimes the OSLiC wants to group
+specific licenses by their authors without discriminating the release numbers.
+Then, the OSLiC uses prefixes of the SPDX.} is commonly done.
+Even the set of the \emph{open source li\-cen\-ses}\footcite[cf.][\nopage
+wp]{OSI2012b} itself is already a cluster being established by a set of grouping
+criteria: The \enquote{distribution terms} of each software license that intends
+to become an open source license \enquote{[\ldots] must comply with the [\ldots]
+criteria} of the \emph{Open Source De\-fi\-ni\-tion,}\footcite[cf.][\nopage
+wp]{OSI2012a} maintained by the \emph{Open Source
+Initiative}\footcite[cf.][\nopage wp]{OSI2012c} and often abbreviated as
+\emph{OSD}. So, this \emph{OSD} demarcates `the group of [potential] open source
+licenses' against `the group of not open sources licenses.'\footnote{More
+precisely: meeting the OSD is only a necessary condition for becoming an
+\emph{open source license}. The sufficient condition for becoming an \emph{open
+source license} is the approval by the OSI, which offers a process for the
+official approval of \emph{open source license} (\cite[cf.][\nopage
+wp]{OSI2012d}).}
 
 Another way to cluster the \emph{Free Software Licenses} is specified by the
 \enquote{Free Software Definition.} This \emph{FSD} contains four conditions
@@ -357,18 +367,18 @@ we can develop the following picture:
               text={|\itshape| permissive licenses}},
               postaction={decorate}] (0.9,7.4) arc (180:0:1.8cm);
 
-\node[rectangle,draw,text width=1.1cm, text height=0.35cm, fill=gray!40, text
-centered] (l0101) at (2,8) {  \scriptsize \bfseries \textit{Apache-2.0}};
-\node[rectangle,draw,text width=1.1cm, text height=0.35cm, fill=gray!40, text
-centered] (l0102) at (3.5,8) { \scriptsize \bfseries \textit{BSD-X-Clause}};
-\node[rectangle,draw,text width=1.1cm, text height=0.35cm, fill=gray!40, text
-centered] (l0103) at (2,6.5) {  \footnotesize \bfseries \textit{MIT}};
-\node[rectangle,draw,text width=1cm, fill=gray!40, text centered] (l0104) at (3.5,6.5)
-{  \scriptsize \bfseries \textit{MS-PL}};
-\node[rectangle,draw,text width=1cm, fill=gray!40, text centered] (l0105) at (2,5)
-{  \scriptsize \bfseries \textit{Post-greSQL}};
-\node[rectangle,draw,text width=1cm, fill=gray!40, text centered] (l0106) at (3.5,5)
-{  \footnotesize \bfseries \textit{PHP-3.x}};
+\node[rectangle,draw,text width=1.3cm, text height=0.36cm, fill=gray!40, text
+centered] (l0101) at (1.9,7.7) { \footnotesize  \textit{Apache-2.0}};
+\node[rectangle,draw,text width=1.3cm, text height=0.36cm, fill=gray!40, text
+centered] (l0102) at (3.6,7.7) { \footnotesize  \textit{BSD-X-Clause}};
+\node[rectangle,draw,text width=1.3cm, text height=0.36cm, fill=gray!40, text
+centered] (l0103) at (1.9,6.7) {  \footnotesize  \textit{MIT}};
+\node[rectangle,draw,text width=1.3cm, text height=0.36cm, fill=gray!40, text
+centered] (l0104) at (3.6,6.7) {  \footnotesize  \textit{MS-PL}};
+\node[rectangle,draw,text width=1.3cm, text height=0.36cm, fill=gray!40, text
+centered] (l0105) at (1.9,5.7) {  \footnotesize  \textit{Post-greSQL}};
+\node[rectangle,draw,text width=1.3cm, text height=0.36cm, fill=gray!40, text
+centered] (l0106) at (3.6,5.7) {  \footnotesize  \textit{PHP-3.X}};
 
 \node[ellipse,minimum height=6cm,minimum width=8.5cm,draw,fill=gray!20] (l0200) at (9.2,6.5)
 {  };
@@ -389,14 +399,14 @@ centered] (l0103) at (2,6.5) {  \footnotesize \bfseries \textit{MIT}};
               text={|\itshape| weak copyleft licenses}},
               postaction={decorate}] (5.4,6.2) arc (180:0:2cm);
 
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0211) at (6.7,7)
-{  \footnotesize \bfseries \textit{EPL}};
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0212) at (8.2,7)
-{  \footnotesize \bfseries \textit{EUPL}};
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0213) at (6.7,5.5)
-{  \footnotesize \bfseries \textit{LGPL}};
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0214) at (8.2,5.5)
-{  \footnotesize \bfseries \textit{MPL}};
+\node[rectangle,draw,text width=1.2cm, text height=0.36cm, fill=gray!40, text
+centered] (l0211) at (6.7,6.9) {  \footnotesize  \textit{EPL-1.X}};
+\node[rectangle,draw,text width=1.2cm, text height=0.36cm, fill=gray!40, text
+centered] (l0212) at (8.2,6.9) {  \footnotesize  \textit{EUPL-1.X}};
+\node[rectangle,draw,text width=1.2cm, text height=0.36cm, fill=gray!40, text
+centered] (l0213) at (6.7,5.7) {  \footnotesize  \textit{LGPL-Y.Y}};
+\node[rectangle,draw,text width=1.2cm, text height=0.36cm, fill=gray!40, text
+centered] (l0214) at (8.2,5.7) {  \footnotesize  \textit{MPL-X.Y}};
 
 \node[ellipse,minimum height=4.5cm,minimum width=3cm,draw,fill=gray!30] (l0220) at (11.4,6.5)
 {  };
@@ -414,10 +424,10 @@ centered] (l0103) at (2,6.5) {  \footnotesize \bfseries \textit{MIT}};
               text={|\itshape| licenses}},
               postaction={decorate}] (10.4,5.4) arc (180:360:1cm);        
 
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0221) at (11.4,7)
-{  \footnotesize \bfseries \textit{GPL}};
-\node[circle,draw,text width=1cm, fill=gray!40, text centered] (l0222) at (11.4,5.5)
-{  \footnotesize \bfseries \textit{AGPL}};
+\node[rectangle,draw,text width=1.2cm, text height=0.36cm, fill=gray!40, text
+centered] (l0221) at (11.4,6.8) {  \footnotesize  \textit{GPL-X.Y}};
+\node[rectangle,draw,text width=1.2cm, text height=0.36cm, fill=gray!40, text
+centered] (l0222) at (11.4,5.6) {  \footnotesize \textit{AGPL-3.X}};
 
 
 \end{tikzpicture}
@@ -709,7 +719,7 @@ most important open source licenses.
   \checkmark & $\neg$ & \checkmark & \checkmark & $\neg$ &
    \checkmark  & $\neg$ & \checkmark & $\neg$ & $\neg$ \\
 \hline
-  PgL & ~ & \checkmark  & \checkmark  & \checkmark  &
+  PostgreSQL & ~ & \checkmark  & \checkmark  & \checkmark  &
   $\neg$ & $\neg$ & \checkmark & $\neg$ & $\neg$ &
    \checkmark  & $\neg$ & \checkmark & $\neg$ & $\neg$ \\
 \hline
@@ -718,7 +728,7 @@ most important open source licenses.
    \checkmark  & $\neg$ & \checkmark & $\neg$ & $\neg$ \\
 \hline
 \hline
-  CDDL & 1.0 & \checkmark & \checkmark & \checkmark &
+  \textit{CDDL} & 1.0 & \checkmark & \checkmark & \checkmark &
   -- & -- & -- & -- & -- & -- & -- & -- & -- & -- \\
 \hline
   EPL & 1.0 & \checkmark  & \checkmark  & \checkmark  &
@@ -737,7 +747,15 @@ most important open source licenses.
    \checkmark & \checkmark  & \checkmark & \checkmark & $\neg$ &
    \checkmark  & \checkmark & \checkmark & \checkmark & $\neg$ \\
 \hline
-   MPL & 2.0 & \checkmark  & \checkmark  & \checkmark  &
+  \multirow{3}{*}{MPL} & 1.0 & --  & --  & --  &
+   -- & --  & -- & -- & -- &
+   --  & -- & -- & -- & -- \\
+\cline{2-15}
+   & 1.1 & --  & --  & --  &
+   -- & --  & -- & -- & -- &
+   --  & -- & -- & -- & -- \\
+\cline{2-15}
+   & 2.0 & \checkmark  & \checkmark  & \checkmark  &
   \checkmark  & \checkmark  & \checkmark & \checkmark & $\neg$ &
    \checkmark  & \checkmark & \checkmark & \checkmark & $\neg$ \\
 \hline
@@ -784,9 +802,9 @@ the Apache License%
   license}(\cite[cf.][\nopage wp]{OSI2013b}). In the same spirit, the Apache
   Software Foundation itself classifies the releases 1.0 and 1.1 as
   \enquote{historic} (\cite[cf.][\nopage wp]{AsfLicenses2013a}). Thus, the \oslic{}
-  only focuses on the most recent APL-2.0 version. For those who have to fulfill
-  these earlier Apache licenses it could be helpful to read them as siblings of
-  the BSD-2CL and BSD-3CL licenses.}
+  only focuses on the most recent license Apache-2.0 version. For those who have
+  to fulfill these earlier Apache licenses it could be helpful to read them as siblings of
+  the BSD-2-Clause and BSD-3-Clause licenses.}
 protects the user against the loss of the
 right to use, to modify and/or to distribute the received copy of the source
 code or the binaries.\footcite[cf.][\nopage wp. §2]{Apl20OsiLicense2004a}
@@ -859,8 +877,8 @@ feedback (because they do not `copyleft' the software). Moreover, they do not
 protect the undistributed software or the distributed binaries against
 re-closing---neither in unmodified nor in modified form---because they
 allow to redistribute only the binaries without also supplying the source
-code.\footnote{see both, the BSD-2CL License (\cite[cf.][\nopage
-wp]{BsdLicense2Clause}), and the BSD-3CL License (\cite[cf.][\nopage
+code.\footnote{see both, the BSD-2-Clause License (\cite[cf.][\nopage
+wp]{BsdLicense2Clause}), and the BSD-3Clause License (\cite[cf.][\nopage
 wp]{BsdLicense3Clause})} Finally, the BSD licenses do not protect the on-top
 developments against privatization.
 
@@ -1202,7 +1220,7 @@ differences, it seems to be suitable to treat the different LGPLs separately.
 \subsection{LGPL-2.1}
 \protectionlabel{LGPLa}
 
-Like the other versions of the GPL or LPGL, the LGPL-2.1 also explicitly
+Like the other versions of the GPL or LGPL, the LGPL-2.1 also explicitly
 describes its purpose as the task to \enquote{protect} the \enquote{rights} of
 the software users: it states that generally all \enquote{[\ldots] the GNU
 General Public Licenses are intended to guarantee your freedom to share and
@@ -1494,16 +1512,17 @@ binaries rest upon sources modified by the distributor. Finally, also the MS-PL
 does not protect the on-top developments against a privatization.
 
 
-\section{\texorpdfstring{The protecting power of the}{The} Postgres License (PgL)}
+\section{\texorpdfstring{The protecting power of the}{The} Postgres License
+(PostgreSQL)}
 \protectionlabel{PGL}
 
 As an approved \emph{open source license,}\footcite[cf.][\nopage wp]{OSI2012b}
 the PostgreSQL License protects the user against the loss of the right to use,
 to modify and/or to distribute the received copy of the source code or the
 binaries.\citePGL{}
-Because of its \emph{disclaimer of warranty}, the PgL also protects the
+Because of its \emph{disclaimer of warranty}, the PostgreSQL also protects the
 contributors\,/\,distributors against warranty claims.\citePGL{} Finally, the
-PgL protects the distributed sources themselves \emph{against} a change of the
+PostgreSQL protects the distributed sources themselves \emph{against} a change of the
 license which would \emph{reset} the work \emph{as closed software}, because the
 \enquote{copyright notice} and the whole license must \enquote{[\ldots] appear
 in all copies.}\citePGL{}
@@ -1511,11 +1530,11 @@ in all copies.}\citePGL{}
 But the PostgreSQL License does not protect the contributors against the loss of
 feedback because it does not `copyleft' the software: The license does not
 contain any sentence which requires that one has to publish the sources, too. 
-In the same spirit, the PgL does not protect the undistributed software or the
+In the same spirit, the PostgreSQL does not protect the undistributed software or the
 distributed binaries against re-closings---neither in unmodified nor in
-modified form---because the PgL allows to (re)distribute the binaries without
+modified form---because the PostgreSQL allows to (re)distribute the binaries without
 also supplying the sources---even if the binaries rest upon sources modified by
-the distributor. Finally, the PgL does not protect the on-top developments
+the distributor. Finally, the PostgreSQL does not protect the on-top developments
 against a privatization.
 
 
@@ -1587,14 +1606,15 @@ considered individually.
 { \textit{MIT License} }; 
   
 \node[rectangle,draw,text width=1.4cm] (l0300) at (12,5.5)
-{ \textit{\textbf{Ap}ache \textbf{L}icense}};
+{ \textit{\textbf{Apache} License}};
 \node[text width=0.4cm] (l0301) at (12,4.5) {\scriptsize{2.0}};
 
 \node[rectangle,draw,text width=1.4cm] (l0400) at (13,6.8)
-{ \scriptsize{\textit{\textbf{M}icro\textbf{s}oft} \textbf{P}ublic \textbf{L}icense} };
+{ \scriptsize{\textit{\textbf{M}icro\textbf{S}oft} \textbf{P}ublic
+\textbf{L}icense} };
   
-\node[rectangle,draw,text width=1.4cm] (l0500) at (13,8)
-{\textit{\textbf{P}ost\textbf{g}res \textbf{L}icense}};
+\node[rectangle,draw,text width=2.0cm] (l0500) at (13,8)
+{\textit{\textbf{PostgreS[Q]} \textbf{L}icense}};
   
 \node[rectangle,draw,text width=1.4cm] (l0600) at (13,9)
 {\textit{\textbf{PHP} License}};
