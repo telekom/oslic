@@ -28,8 +28,8 @@
 \begin{license}{MPL} % ends at end of file
 \licensename{MPL-2.0}
 \licensespec{Mozilla Public License 2.0}
-\licenseabbrev{MPL}
 \licenseversion{2.0}
+\licenseabbrev{MPL}
 
 The Mozilla Public License clearly distinguishes the distribution of source code
 from the distribution of binaries: First, it allows the \enquote{Distribution of
@@ -187,7 +187,7 @@ library as embedded binaries}};
 
 \newcommand{\auxMakeSourceAvailable}[1]{Make the source code of #1 accessible
   via a repository under your own control: Push the source code package into the
-  repository and make it downloadable via the internet. Do no charge any fees
+  repository and make it downloadable via the Internet. Do no charge any fees
   from the user for downloading the source. Ensure, that this repository is
   online for a reasonable period of time after you ceased distributing the
   software.} 
@@ -198,7 +198,7 @@ library as embedded binaries}};
 \newcommand{\makeEmbeddedSourceAvailable}{\auxMakeSourceAvailable{%
     the embedded library}}
 
-\newcommand{\describeHowToGetSource}{Insert a easy to find description into the
+\newcommand{\describeHowToGetSource}{Insert an easy to find description into the 
   distribution package that explains how and where the code can be retrieved.}
 
 % ------------------------------------------------------------------------------
@@ -258,7 +258,7 @@ library as embedded binaries}};
 
 \newcommand{\dontAlterLicenseElement}{to remove or to alter any license elements
   (including copyright notices, patent notices, disclaimers of warranty, or
-  limitations of liablility) contained within the software package you have
+  limitations of liability) contained within the software package you have
   received.}
 
 % ------------------------------------------------------------------------------
@@ -346,7 +346,7 @@ library as embedded binaries}};
     \lsucmandatory{\describeHowToGetSource}
   
     \lsucsourcedist{MPL-2.0-C2}
-    \lsucoptional{\giveLicenseText}
+    \lsucoptional{\giveLicenseText}\passingFilesCorrectly
     \lsucoptional{\acknowledgeMPLSoftware}
   \end{lsucrequires}
 
@@ -370,7 +370,7 @@ library as embedded binaries}};
 
   \begin{lsucrequires}
     \lsucmandatory{\keepLicenseElements}
-    \lsucmandatory{\giveLicenseText}
+    \lsucmandatory{\giveLicenseText}\passingFilesCorrectly
     \lsucmandatory{\placeSourceModificationsUnderMPL}
     \lsucoptional{\createChangeLog}
     \lsucoptional{\markAllModifications}
@@ -403,7 +403,7 @@ library as embedded binaries}};
     \lsucsourcedist{MPL-2.0-C4}
     \lsucmandatory{\placeBinaryModificationsUnderMPL}
     \lsucoptional{\createChangeLog}
-    \lsucoptional{\giveLicenseText}
+    \lsucoptional{\giveLicenseText}\passingFilesCorrectly
     \lsucoptional{\acknowledgeMPLSoftware}
   \end{lsucrequires}
 
@@ -429,7 +429,7 @@ library as embedded binaries}};
 
   \begin{lsucrequires}
     \lsucmandatory{\keepLicenseElements}
-    \lsucmandatory{\giveLicenseText}
+    \lsucmandatory{\giveLicenseText}\passingFilesCorrectly
     \lsucmandatory{\placeSourceModificationsUnderMPL}
     \lsucoptional{\createChangeLog}
     \lsucoptional{\markAllModifications}
@@ -462,7 +462,7 @@ library as embedded binaries}};
     \lsucsourcedist{MPL-2.0-C6}
     \lsucmandatory{\placeBinaryModificationsUnderMPL}
     \lsucoptional{\createChangeLog}
-    \lsucoptional{\giveLicenseText}
+    \lsucoptional{\giveLicenseText}\passingFilesCorrectly
     \lsucoptional{\acknowledgeMPLSoftware}
   \end{lsucrequires}
 
@@ -489,7 +489,7 @@ library as embedded binaries}};
   \begin{lsucrequires}
 
     \lsucmandatory{\keepLicenseElements}
-    \lsucmandatory{\giveLicenseText}
+    \lsucmandatory{\giveLicenseText}\passingFilesCorrectly
     \lsucmandatory{\placeEmbeddedSourceUnderMPL}
     \lsucoptional{\keepSourceSeparate}
     \lsucoptional{\createChangeLog}
@@ -524,7 +524,7 @@ library as embedded binaries}};
     \lsucsourcedist{MPL-2.0-C8}
     \lsucmandatory{\placeEmbeddedBinaryUnderMPL}
     \lsucoptional{\createChangeLog}
-    \lsucoptional{\giveLicenseText}
+    \lsucoptional{\giveLicenseText}\passingFilesCorrectly
     \lsucoptional{\keepBinarySeparate}
     \lsucoptional{\acknowlegdeEmbeddedLibrary}
   \end{lsucrequires}
