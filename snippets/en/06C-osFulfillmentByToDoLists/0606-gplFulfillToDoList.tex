@@ -9,7 +9,7 @@
 % license to this one' and if you respect how 'you must attribute the work in
 % the manner specified by the author ...':
 %
-% In an internet based reuse please link the reused parts to www.telekom.com and
+% In an Internet based reuse please link the reused parts to www.telekom.com and
 % mention the original authors and Deutsche Telekom AG in a suitable manner. In
 % a paper-like reuse please insert a short hint to www.telekom.com and to the
 % original authors and Deutsche Telekom AG into your preface. For normal
@@ -290,92 +290,29 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
 \newcommand{\coversB}{\mapsToOsuc{10B}}
 
 % ------------------------------------------------------------------------------
-% Keep license elements 
+% Common Text Blocks from 0600-commomn-text-blocks.tex
 
-\newcommand{\keepLicenseElements}{Ensure that the licensing elements (especially
-  all notices that refer to the GPL-\ver{} and to the absence of any warranty) are
-  retained in your package in the form you have received them.}
-
-% ------------------------------------------------------------------------------
-% Make sure that the copyright notice and disclaimer of warranty are present
-
-% GPL-3.0
-\newcommand{\auxThreeEnsureCopyrightNotice}[1]{Ensure that the
-  distributed #1 package contains a conspicuous, easy to find copyright notice.
-  If this element is missing, add a new file containing the main copyright
-  notice.} 
-
-% GPL-2.0
-\newcommand{\auxTwoEnsureCopyrightNotice}[1]{Ensure that the distributed
-  #1 package contains a conspicuous, easy to find copyright notice and
-  disclaimer of warranty. If these elements are missing, add a new file
-  containing the main copyright notice and the disclaimer of warranty in the
-  form which is textually defined by the GPL-2.0 license itself. (Yes, repeat
-  the disclaimer although it is also part of the license itself and although you
-  are required to hand the license itself over to the receiver.)}
-
-\newcommand{\gpltwoEnsureCopyrightNoticeSource}{%
-  \auxTwoEnsureCopyrightNotice{source code}}
-
-\newcommand{\gpltwoEnsureCopyrightNoticeBinary}{%
-  \auxTwoEnsureCopyrightNotice{binary}}
-
-\newcommand{\gplthreeEnsureCopyrightNoticeSource}{%
-  \auxThreeEnsureCopyrightNotice{source code}}
-
-\newcommand{\gplthreeEnsureCopyrightNoticeBinary}{%
-  \auxThreeEnsureCopyrightNotice{binary}}
-
-% ------------------------------------------------------------------------------
-% Give a copy of the license to the recipient of the software
-
-\newcommand{\giveLicense}{Give the recipient a copy of the GPL-\ver{} license.
-  If it is not already part of the software package, add it.}
-
-% ------------------------------------------------------------------------------
-% Keep all copyright notices intact
-
-\newcommand{\retainCopyrightNotices}{Retain all existing copyright notices.}
-
-% ------------------------------------------------------------------------------
-%
-
-\newcommand{\addToDocumentation}{Let the documentation of your distribution
-  and/or your additional material also reproduce the content of the existing
-  copyright notices, a hint to the software name, a link to its homepage, the
-  respective disclaimer of warranty, and a link to the GPL-\ver.}
-
-% ------------------------------------------------------------------------------
-% Publish the source code
-
-\newcommand{\auxSourceRepository}{Push the source code package into a
-  repository under your control and make it downloadable via the Internet.
-  Ensure, that this repository is online for at least 3 years after you ceased
-  distributing the software package.}
-
-\newcommand{\makeUnmodifiedSourceAvailable}{Make the source code of the
-  distributed software publicly available (even though you did not modify it):
-  \auxSourceRepository} 
-
-\newcommand{\makeModifiedSourceAvailable}{Make the source code of the
-  distributed software publicly available: \auxSourceRepository} 
-
-\newcommand{\makeAllSourcesAvailable}{Make the complete source code of the
-  program embedding the library publicly available (and, therefore, also the
-  source code of the library itself): \auxSourceRepository}
-
-% ------------------------------------------------------------------------------
-% Explain where to find the sources
-
-\newcommand{\describeHowToGetSource}{Insert an easy to find description into the
-  distribution package that explains how and where the code can be retrieved.}
-
-% ------------------------------------------------------------------------------
-% Create and update the modification text file
-
-\newcommand{\createChangelog}{Create a \emph{modification text file,} if such a
-  file does not yet exist. \emph{Add} a description of your modifications on a
-  functional level to the \emph{modification text file.}}
+\newcommand{\keepLicenseElements}{\gtbKeepLicenseElements{GPL-\ver}}
+\newcommand{\addToDocumentation}{\gtbAddToDocumentation{GPL-\ver}}
+\newcommand{\giveLicense}{\gtbGiveLicense{GPL-\ver}}
+\newcommand{\retainCopyrightNotices}{\gtbKeepCopyrightNotices{GPL-\ver}}
+\newcommand{\describeHowToGetSource}{\gtbDescribeHowToGetSource{GPL-\ver}}
+\newcommand{\createChangelog}{\gtbCreateChangelog{GPL-\ver}}
+\newcommand{\markEmbeddedModifications}{\gtbMarkEmbeddedModifications{GPL-\ver}}
+\newcommand{\markLibraryModifications}{\gtbMarkLibraryModifications{GPL-\ver}}
+\newcommand{\markProgramModifications}{\gtbMarkProgramModifications{GPL-\ver}}
+\newcommand{\gpltwoEnsureCopyrightNoticeSource}{\gtbVTwoCopyrightNotice{GPL-2.0}{source code}}
+\newcommand{\gpltwoEnsureCopyrightNoticeBinary}{\gtbVTwoCopyrightNotice{GPL-2.0}{binary}}
+\newcommand{\gplthreeEnsureCopyrightNoticeSource}{\gtbVThreeCopyrightNotice{GPL-3.0}{source code}}
+\newcommand{\gplthreeEnsureCopyrightNoticeBinary}{\gtbVThreeCopyrightNotice{GPL-3.0}{binary}}
+\newcommand{\makeUnmodifiedSourceAvailable}{\gtbMakeUnmodifiedSourceAvailable{GPL-\ver}} 
+\newcommand{\makeModifiedSourceAvailable}{\gtbMakeModifiedSourceAvailable{GPL-\ver}} 
+\newcommand{\makeAllSourcesAvailable}{\gtbMakeAllSourcesAvailable{GPL-\ver}}
+\newcommand{\arrangeProgramChanges}{\gtbArrangeProgramChanges{GPL-\ver}}
+\newcommand{\arrangeLibraryChanges}{\gtbArrangeLibraryChanges{GPL-\ver}}
+\newcommand{\arrangeEmbeddedChanges}{\gtbArrangeEmbeddedChanges{GPL-\ver}}
+\newcommand{\howToApplyTheseTerms}{\gtbHowToApplyTheseTerms{GPL-\ver}}
+\newcommand{\noPatentLitigation}{\gtbNoPatentLitigation{GPL-\ver}}
 
 % ------------------------------------------------------------------------------
 %
@@ -404,45 +341,6 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
 
 \newcommand{\arrangeEnclosingSources}{%
   \auxArrange{the sources of the on-top development}}
-
-% ------------------------------------------------------------------------------
-% make sure licensing statements apply to your modifications
-
-\newcommand{\auxArrangeChanges}[1]{Arrange your modifications of #1 in a way
-  that they are covered by existing GPL licensing statements. If you add new
-  source code files to the #1, insert a header containing your copyright line
-  and a licensing statement in the form recommended by the GPL.}
-
-\newcommand{\arrangeProgramChanges}{\auxArrangeChanges{program}}
-\newcommand{\arrangeLibraryChanges}{\auxArrangeChanges{library}}
-\newcommand{\arrangeEmbeddedChanges}{\auxArrangeChanges{embedded library}}
-
-\newcommand{\howToApplyTheseTerms}{%
-  \footnote{For details see section `How to Apply These Terms to Your New
-    Programs' in the GPL-\ver{} license.}} 
-
-
-% ------------------------------------------------------------------------------
-%
-
-\newcommand{\auxMarkChanges}[1]{Mark all modifications of the source code #1
-  thoroughly within the source code and include the date of the modification.}
-
-\newcommand{\markEmbeddedModifications}{%
-  \auxMarkChanges{of the embedded library (snimoli)}}
-
-\newcommand{\markLibraryModifications}{%
-  \auxMarkChanges{of the library (snimoli)}}
-
-\newcommand{\markProgramModifications}{
-  \auxMarkChanges{the program (proapse)}}
-
-% ------------------------------------------------------------------------------
-% Forbid patent litigation
-
-\newcommand{\noPatentLitigation}{%
-  to institute a patent litigation against anyone alleging that the software
-  constitutes patent infringement.} 
 
 %% ============================================================================= 
 %% GPL-2.0 Use Cases

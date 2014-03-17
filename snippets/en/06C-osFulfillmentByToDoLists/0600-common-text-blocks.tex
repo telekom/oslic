@@ -1,0 +1,172 @@
+% Telekom osCompendium 'for being included' snippet template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, and Ronald Dauster, GIDO GmbH
+%     Darmstadt 2014
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an Internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ Framework derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke 2012 CC BY 3.0  http://mycsrf.fodina.de/ ]
+%
+
+% Common parametrized text blocks for GPL, LGPL, and AGPL
+%
+% All commands take (at least) one parameter: the name of the license, for
+% example, 'GPL-2.0'.  This parameter is always present, even if it isn't used
+% and it is always the first parameter.
+
+% ------------------------------------------------------------------------------
+% Keep license elements 
+% #1 -> the license name
+
+\newcommand{\gtbKeepLicenseElements}[1]{Ensure that the licensing elements
+  (especially all notices that refer to the #1 and to the absence of any
+  warranty) are retained in your package in the form in which you have received
+  them.} 
+
+% ------------------------------------------------------------------------------
+% Give a copy of the license to the recipient of the software
+% #1 -> the license name
+
+\newcommand{\gtbGiveLicense}[1]{Give the recipient a copy of the #1 license.
+  If it is not already part of the software package, add it.}
+
+% ------------------------------------------------------------------------------
+% Add license elements and acknowledgement to the documemtation
+% #1 -> the license name
+
+\newcommand{\gtbAddToDocumentation}[1]{Let the documentation of your
+  distribution and/or your additional material also reproduce the content of the
+  existing copyright notices, a hint to the software name, a link to its
+  homepage, the respective disclaimer of warranty, and a link to the #1.}
+
+% ------------------------------------------------------------------------------
+% Keep all copyright notices intact
+% #1 -> the license name
+
+\newcommand{\gtbKeepCopyrightNotices}[1]{Retain all existing copyright notices.}
+
+% ------------------------------------------------------------------------------
+% Publish the source code
+% #1 -> the license name
+
+\newcommand{\gtbSourceRepository}[1]{Push the source code package into a
+  repository under your control and make it downloadable via the Internet.
+  Ensure, that this repository is online for at least 3 years after you ceased
+  distributing the software package.}
+
+% program or independent library, unmodified
+\newcommand{\gtbMakeUnmodifiedSourceAvailable}[1]{Make the source code of the
+  distributed software publicly available (even though you did not modify it):
+  \gtbSourceRepository{#1}}
+
+% program or independent library, modified
+\newcommand{\gtbMakeModifiedSourceAvailable}[1]{Make the source code of the
+  distributed software publicly available: \gtbSourceRepository{#1}} 
+
+% embedded library, modified or unmodified, GPL and AGPL
+\newcommand{\gtbMakeAllSourcesAvailable}[1]{Make the \emph{complete} source code
+  of the program embedding the library publicly available (and, therefore, also
+  the source code of the library itself): \gtbSourceRepository{#1}}
+
+% embedded library, modified or unmodified, LGPL 
+\newcommand{\gtbMakeEmbeddedSourcesAvailable}[1]{Make the source code of the 
+  embedded library publicly available: \gtbSourceRepository{#1}}
+
+% ------------------------------------------------------------------------------
+% Explain where to find the sources
+% #1 -> the license name
+
+\newcommand{\gtbDescribeHowToGetSource}[1]{Insert an easy to find description
+  into the distribution package that explains how and where the code can be
+  retrieved.}
+
+% ------------------------------------------------------------------------------
+% Create and update the modification text file
+% #1 -> the license name
+
+\newcommand{\gtbCreateChangelog}[1]{Create a \emph{modification text file,} if
+  such a file does not yet exist. \emph{Add} a description of your modifications
+  on a functional level to the \emph{modification text file.}}
+
+% ------------------------------------------------------------------------------
+% Mark all modifications in the source files themselves
+% #1 -> the license name
+
+\newcommand{\gtbauxMarkChanges}[1]{Mark all modifications of the source code #1
+  thoroughly within the source code and include the date of the modification.}
+
+\newcommand{\gtbMarkEmbeddedModifications}[1]{%
+  \gtbauxMarkChanges{of the embedded library (snimoli)}}
+
+\newcommand{\gtbMarkLibraryModifications}[1]{%
+  \gtbauxMarkChanges{of the library (snimoli)}}
+
+\newcommand{\gtbMarkProgramModifications}[1]{%
+  \gtbauxMarkChanges{the program (proapse)}}
+
+% ------------------------------------------------------------------------------
+% Ensure the copyright notice and the disclaimer (V2.x only) are present
+% #1 -> the license name
+% #2 -> type of distribution (binary or source code)
+
+% GPL-3.0/LGPL-3.0/AGPL-3.0
+\newcommand{\gtbVThreeCopyrightNotice}[2]{Ensure that the
+  distributed #2 package contains a conspicuous, easy to find copyright notice.
+  If this element is missing, add a new file containing the main copyright
+  notice.} 
+
+% GPL-2.0/LGPL-2.1
+\newcommand{\gtbVTwoCopyrightNotice}[2]{Ensure that the distributed
+  #2 package contains a conspicuous, easy to find copyright notice and
+  disclaimer of warranty. If these elements are missing, add a new file
+  containing the main copyright notice and the disclaimer of warranty in the
+  form which is textually defined by the #1 license itself. (Yes, repeat
+  the disclaimer although it is also part of the license itself and although you
+  are required to hand the license itself over to the receiver.)}
+
+% ------------------------------------------------------------------------------
+% Make sure licensing statements apply to your modifications
+% #1 -> the license name
+
+\newcommand{\gtbauxArrangeChanges}[2]{Arrange your modifications of #2 in a way
+  that they are covered by existing #1 licensing statements. If you add new
+  source code files to the #2, insert a header containing your copyright line
+  and a licensing statement in the form recommended by the #1.}
+
+\newcommand{\gtbArrangeProgramChanges}[1]{%
+  \gtbauxArrangeChanges{#1}{program}}
+
+\newcommand{\gtbArrangeLibraryChanges}[1]{%
+  \gtbauxArrangeChanges{#1}{library}}
+
+\newcommand{\gtbArrangeEmbeddedChanges}[1]{%
+  \gtbauxArrangeChanges{#1}{embedded library}}
+
+\newcommand{\gtbHowToApplyTheseTerms}[1]{%
+  \footnote{For details see section `How to Apply These Terms to Your New
+    Programs' in the #1 license.}} 
+
+% ------------------------------------------------------------------------------
+% Forbid patent litigation
+% #1 -> license name
+
+\newcommand{\gtbNoPatentLitigation}[1]{%
+  to institute a patent litigation against anyone alleging that the software
+  constitutes patent infringement.} 
+
+% Local Variables:
+% mode: latex
+% fill-column: 80
+% End:

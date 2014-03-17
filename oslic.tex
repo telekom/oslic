@@ -294,8 +294,13 @@ and all the others\ldots
 
 
 %%%%%%%%%%%%%%%
-  
+
+% Enclose 060x files in braces, because they define local commands that should
+% not interfere with each other.  Do NOT enclose 0600-common-text-blocks in an
+% extra pair of braces, because it defines commands used by the other sections. 
+
 \input{snippets/en/06C-OsFulfillmentByToDoListsInc}
+\input{snippets/en/06C-osFulfillmentByToDoLists/0600-common-text-blocks}
 {\input{snippets/en/06C-osFulfillmentByToDoLists/0601-agplFulfillToDoList}}
 {\input{snippets/en/06C-osFulfillmentByToDoLists/0602-apacheFulfillToDoList}}
 {\input{snippets/en/06C-osFulfillmentByToDoLists/0603-bsdFulfillToDoList}}
