@@ -54,6 +54,7 @@ def full_build(filename)
   latex filename
   make_bib_and_index filename
   latex filename
+  latex filename
   fast_build filename
 end
 
