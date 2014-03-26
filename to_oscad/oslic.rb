@@ -47,6 +47,7 @@ module Oslic
   # placing the string in double quotes.
   class MarkdownRenderer < Renderer
     def emph(str) "_#{str}_" end
+    def textbf(str) "*#{str}*" end
     def enquote(str) "\"#{str}\"" end
   end
   
@@ -54,6 +55,7 @@ module Oslic
   # translated as +<em>+ and +:enquote+ as double quotes, +&quot;+,
   class HTMLRenderer < Renderer
     def emph(str) "<em>#{as_html(str)}</em>" end
+    def textbf(str) "<b>#{as_html(str)}</b>" end
     def enquote(str) "&quot;#{as_html(str)}&quot;" end
     def unknown_format(str) as_html(str) end
   private
@@ -99,7 +101,7 @@ module Oslic
   # format :plain, whereas the argument of a markup command is represented by
   # a formatted string with the name of the command as the format.
   #
-  # NOTE: Nested markup is not supported and raise an exception!
+  # NOTE: Nested markup is not supported and raises an exception!
   class RichText
 
     COMMAND_REGEX = /\\(?<command>[[:lower:][:upper:]]+)\s*{(?<content>[^}]*)}/
@@ -141,8 +143,8 @@ module Oslic
   # locations, both page and section number. 
   class CrossReference
 
-    # Create a new section passing it the path, full or relative, of the LaTeX
-    # aux-file. 
+    # Create a new CrossReference passing it the path, full or relative, 
+    # of the LaTeX aux-file. 
     def initialize(filename)
       @sections = Hash.new("unknown")
       @pages = Hash.new("unknown")
