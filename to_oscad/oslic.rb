@@ -219,7 +219,7 @@ module Oslic
     # not really a chapter in LaTeX terminology).
     attr_reader :chapter
 
-    # An array of OSUCs that map to this LSUC.  EAch OSUC is specified in the
+    # An array of OSUCs that map to this LSUC.  Each OSUC is specified in the
     # form "OSUC-XXY", where XX is a two-digit number and Y is either empty
     # (if the OSUC does not distinguish between binary and source
     # distribution) or either "S" or "B" for "source" and "binary",
@@ -396,6 +396,25 @@ module Oslic
       @licenses.each { |l| l.pp }
     end
   end
+
+  # Look for the a file with the given name in +directory+ and all parent
+  # directories of +directory+.  +directory+ defaults to the current directory. 
+  def Oslic.find_file(filename, directory=".")
+    abs_directory = File.absolute_path(directory)
+    file_path = File.join(abs_directory, filename)
+    parent_dir = File.dirname(abs_directory)
+    case
+    when File.exists?(file_path) 
+      return file_path
+    when ((parent_dir == nil) or (parent_dir == abs_directory))
+      # on Unix-like systems, File.dirname("/") == "/"
+      raise "#{filename} not found!"
+    else
+      return find_file(filename, parent_dir)
+    end
+  end
+  
+
 end
 
 # ------------------------------------------------------------------------------
