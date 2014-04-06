@@ -111,19 +111,12 @@ module Oslic
     # very basic markup is supported: All markup must be in the form of
     # commands with a single argument in braces, e. g., "\emph{the license}". 
     def initialize(str)
-      @fragments = []
-      input = str.strip.gsub(/\{\}/, "") # remove empty TeX groups
-      while (match = COMMAND_REGEX.match(input)) do
-        content = match["content"]
-        if NESTED_COMMAND_REGEX =~ content
-          raise "Nested markup not supported: #{input}" 
-        end
-        
-        add_fragment(match.pre_match)
-        add_fragment(content, match["command"].to_sym) 
-        input = match.post_match
-      end
-      add_fragment(input)
+      @fragments = parse(str)
+    end
+
+    # Append the LaTeX source +str+ to the contents of this RichText
+    def append(str)
+      @fragments.insert(-1, *parse(str))
     end
 
     # Uses the FormattedString's default renderer to render the sequence of
@@ -134,8 +127,25 @@ module Oslic
     
   private
     # add a FormattedString to the list unless +str+ is empty
-    def add_fragment(str, format=:plain)
-      @fragments << FormattedString.new(str, format) unless str.empty?
+    def add_fragment(arr, str, format=:plain)
+      arr << FormattedString.new(str, format) unless str.empty?
+    end
+
+    def parse(str)
+      result = []
+      input = str.strip.gsub(/\{\}/, "") # remove empty TeX groups
+      while (match = COMMAND_REGEX.match(input)) do
+        content = match["content"]
+        if NESTED_COMMAND_REGEX =~ content
+          raise "Nested markup not supported: #{input}" 
+        end
+        
+        add_fragment(result, match.pre_match)
+        add_fragment(result, content, match["command"].to_sym) 
+        input = match.post_match
+      end
+      add_fragment(result, input)
+      return result
     end
   end
 
@@ -202,6 +212,14 @@ module Oslic
               @recommended << RichText.new(grandchild.text)
             end
           end
+        when "requiresnothing" 
+          child.elements.each("item") do |grandchild|
+            if defined?(@no_task_message) then
+              @no_task_message.append(grandchild.text)
+            else
+              @no_task_message = RichText.new(grandchild.text)
+            end
+          end
         when "prohibits"
           child.elements.each("item") do |grandchild|
             @prohibited << RichText.new(grandchild.text)
@@ -241,7 +259,10 @@ module Oslic
     # An array of RichText descriptions of the things you should do if you use
     # the software according to this use case. The array can be empty.
     attr_reader :recommended
-    
+
+    # A RichText description if there are no tasks to be performed
+    attr_reader :no_task_message
+
     # The abbreviation for this use case that should be displayed to the
     # user. Use this in preference to #id
     def name
