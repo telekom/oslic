@@ -29,7 +29,11 @@ module PHPBackend
       @data.licenses.each { | license | render_license(license) }
       render_matrix
     end
-    
+
+    def dump
+      @data.pp
+    end
+
   private
     def render_osuc(osuc, description)
       render_template("osuc-master", "osuc-#{osuc.downcase}-inc-master.php",
@@ -82,6 +86,7 @@ OUTPUT_DIRECTORY = "master-files"
 
 Oslic::FormattedString::renderer(Oslic::HTMLRenderer.new)
 PHPBackend::Generator.new(DATA_FILE, AUX_FILE, OUTPUT_DIRECTORY).generate
+#PHPBackend::Generator.new(DATA_FILE, AUX_FILE, OUTPUT_DIRECTORY).dump
 
 # ------------------------------------------------------------------------------
 # Local Variables:

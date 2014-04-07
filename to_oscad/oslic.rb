@@ -205,26 +205,52 @@ module Oslic
         when "mapsto"
           @osucs << child.text
         when "requires"
-          child.elements.each("item") do |grandchild|
-            if grandchild.attributes["type"] == "mandatory" then
-              @required << RichText.new(grandchild.text)
-            else
-              @recommended << RichText.new(grandchild.text)
-            end
-          end
+          parse_requires(child)
         when "requiresnothing" 
-          child.elements.each("item") do |grandchild|
-            if defined?(@no_task_message) then
-              @no_task_message.append(grandchild.text)
-            else
-              @no_task_message = RichText.new(grandchild.text)
-            end
-          end
+          parse_requires_nothing(child)
         when "prohibits"
-          child.elements.each("item") do |grandchild|
-            @prohibited << RichText.new(grandchild.text)
-          end
+          parse_prohibits(child)
         end
+      end
+      
+      have_requirements = ! (@required.empty? and @recommended.empty?)
+      unless have_requirements or defined?(@no_task_message)
+        raise "#{@id}: Must have either <requires> or <requiresnothing>" 
+      end
+      if have_requirements and defined?(@no_task_message)
+        raise "#{@id}: Cannot have both <requires> and <requiresnothing>" 
+      end
+    end
+
+    # parse the contents of a <requires> element
+    def parse_requires(requires_elem)
+      requires_elem.elements.each do |child|
+        case child.name
+        when "item" then
+          if child.attributes["type"] == "mandatory" then
+            @required << RichText.new(child.text)
+          else
+            @recommended << RichText.new(child.text)
+          end
+        when "source-use-case" then
+          @source_use_case = child.text
+        end
+      end 
+    end
+
+    # parse the contents of a <requiresnothing> clause
+    # raises an exception if the element contains more than one <item>
+    def parse_requires_nothing(requires_nothing_elem)
+      requires_nothing_elem.elements.each("item") do |child|
+        raise "#{@id}: Duplicate <item> in <requiresnothing>" if defined?(@no_task_message)
+        @no_task_message = RichText.new(child.text)
+      end
+    end
+
+    # parse the contents of a <prohibits> element
+    def parse_prohibits(prohibits_elem)
+      prohibits_elem.elements.each("item") do |child|
+        @prohibited << RichText.new(child.text)
       end
     end
 
@@ -263,6 +289,12 @@ module Oslic
     # A RichText description if there are no tasks to be performed
     attr_reader :no_task_message
 
+    # The name of the use case that applies to a source distribution of this
+    # binary use case.  This is nil, unless 
+    # a) this use case is about binary distribution to third party and
+    # b) the license requires the distribution of the source code for these binaries
+    attr_reader :source_use_case
+
     # The abbreviation for this use case that should be displayed to the
     # user. Use this in preference to #id
     def name
@@ -272,16 +304,23 @@ module Oslic
     # Print the contents of this UseCase for development and testing
     # purposes. This method is intended to be called by License#pp
     def pp
+      has_tasks = (@required.length > 0) || (@recommended.length > 0)
+
       puts "    Use case: #{id} (#{name})"
       puts "        maps to #{osucs}"
       puts "        chapter #{chapter}"
       puts "        means: #{description}"
-      puts "        requires:"
-      @required.each { |c| puts "            mandatory: #{c}" }
-      @recommended.each { |c| puts "            voluntary: #{c}" }
+      puts "        source use case: #{source_use_case}"
+      puts "        requires nothing:"                             unless has_tasks
+      puts "            #{@nothing_required}"                      unless has_tasks
+      puts "        requires:"                                     if has_tasks
+      @required.each    { |c| puts "            mandatory: #{c}" } if has_tasks
+      @recommended.each { |c| puts "            voluntary: #{c}" } if has_tasks
       puts "        prohibits:"
       @prohibited.each { |c| puts "            #{c}" }
     end
+
+    private :parse_requires, :parse_prohibits
   end
   
   # Represents all the information about a particular license extracted from
@@ -338,7 +377,7 @@ module Oslic
     # #id.  Neccessary for compatibility with the PHP backend. 
     # *This property should not be used for new code, either #id or #name
     # should be used instead* 
-    attr_reader :abbrev
+    attr_reader :abbrev 
 
     # An array containing all the license specific use cases.  Each element is
     # an instance of UseCase.  Technically, this array can be empty, although

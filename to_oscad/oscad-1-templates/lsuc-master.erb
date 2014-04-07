@@ -41,20 +41,20 @@ $gFbLiSpUcRequiresPrefix=
     "the following tasks in order to fulfill the license conditions:"
 <% end %>
 
-$gFbLiSpUcNoTasks=
-    "You are allowed to the software in any sense
-     and in any context without being obliged to do anything as long
-     as you do not give the software to 3rd parties.";
+$gFbLiSpUcNoTasks="<% lsuc.no_task_message %>";
 
 $gFbLiSpUcReqManArr=array(
 <% lsuc.required.each do |clause| %>
-    "<%= clause %>"<% if clause != lsuc.required.last %>,<% end %>    
+    "<%= clause %>",
+<% end %>
+<% if lsuc.source_use_case %>
+    "Execute the to-do list of use case <%= lsuc.source_use_case %> for the source code that you publish"
 <% end %>
 );
 
 $gFbLiSpUcReqVolArr=array(
 <% lsuc.recommended.each do |clause| %>
-    "<%= clause %>"<% if clause != lsuc.recommended.last %>,<% end %>    
+    "<%= clause %>",
 <% end %>
 );
 
@@ -67,7 +67,7 @@ $gFbLiSpUcForbidsPrefix=
 
 $gFbLiSpUcForbidsArr=array(
 <% lsuc.prohibited.each do |clause| %>
-    "<%= clause %>"<% if clause != lsuc.prohibited.last %>,<% end %>    
+    "<%= clause %>",
 <% end %>
 );
 
