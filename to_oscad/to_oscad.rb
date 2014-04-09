@@ -29,7 +29,11 @@ module PHPBackend
       @data.licenses.each { | license | render_license(license) }
       render_matrix
     end
-    
+
+    def dump
+      @data.pp
+    end
+
   private
     def render_osuc(osuc, description)
       render_template("osuc-master", "osuc-#{osuc.downcase}-inc-master.php",
@@ -74,31 +78,15 @@ module PHPBackend
       return matrix
     end
   end
-  
-  # Look for the a file with the given name in +directory+ and all parent
-  # directories of +directory+.  +directory+ defaults to the current directory. 
-  def PHPBackend.find_file(filename, directory=".")
-    abs_directory = File.absolute_path(directory)
-    file_path = File.join(abs_directory, filename)
-    parent_dir = File.dirname(abs_directory)
-    case
-    when File.exists?(file_path) 
-      return file_path
-    when ((parent_dir == nil) or (parent_dir == abs_directory))
-      # on Unix-like systems, File.dirname("/") == "/"
-      raise "#{filename} not found!"
-    else
-      return find_file(filename, parent_dir)
-    end
-  end
 end
 
-DATA_FILE = PHPBackend::find_file("oscad.xml")
-AUX_FILE = PHPBackend::find_file("oslic.aux")
+DATA_FILE = Oslic::find_file("oscad.xml")
+AUX_FILE = Oslic::find_file("oslic.aux")
 OUTPUT_DIRECTORY = "master-files"
 
 Oslic::FormattedString::renderer(Oslic::HTMLRenderer.new)
 PHPBackend::Generator.new(DATA_FILE, AUX_FILE, OUTPUT_DIRECTORY).generate
+#PHPBackend::Generator.new(DATA_FILE, AUX_FILE, OUTPUT_DIRECTORY).dump
 
 # ------------------------------------------------------------------------------
 # Local Variables:
