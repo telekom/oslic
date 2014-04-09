@@ -147,6 +147,13 @@ module YAMLBackend
       use_case.required.each do |task|
         new_folded_scalar(task.to_s, tasks)
       end
+      if use_case.source_use_case then
+        puts "Found #{use_case.source_use_case}"
+        new_folded_scalar("Execute the to-do list of use-case " + 
+                          use_case.source_use_case + 
+                          " for the source code that you publish.", 
+                          tasks)
+      end
 
       new_scalar("vol", mapping)
       tasks = new_sequence(mapping)
