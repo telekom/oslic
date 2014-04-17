@@ -4,15 +4,23 @@
 
 require 'find'
 
+require_relative 'to_oscad/oslic'
+require_relative 'to_oscad/yaml_backend'
+
 VERSION_NUMBER = IO.read("rel-number.tex").chomp
 
 PROTECTED_DIRS=%w{license presentations}
-AUX_EXTS=%w{url bbl blg aux dvi toc log lof nlo nls ilg ils ent out}
-RES_EXTS=%w{ps pdf rtf} + AUX_EXTS
+AUX_EXTS   = %w{url bbl blg aux dvi toc log lof nlo nls ilg ils ent out}
+RES_EXTS   = %w{ps pdf rtf} + AUX_EXTS
 
-DIR_REGEX=%r{^(\./)?#{PROTECTED_DIRS.join('|')}}
-AUX_REGEX=%r{\.(#{AUX_EXTS.join('|')})$}
-RES_REGEX=%r{\.(#{RES_EXTS.join('|')})$}
+DIR_REGEX  = %r{^(\./)?#{PROTECTED_DIRS.join('|')}}
+AUX_REGEX  = %r{\.(#{AUX_EXTS.join('|')})$}
+RES_REGEX  = %r{\.(#{RES_EXTS.join('|')})$}
+
+# configuratioin parameters for the OSLiC -> YAML export
+DATA_FILE  = "oscad.xml"
+AUX_FILE   = "oslic.aux"
+EXPORT_DIR = "to_oscad/oscad_data"
 
 # ------------------------------------------------------------------------------
 # Utilities for manipulating file names
@@ -85,6 +93,11 @@ end
 
 task "oslic.pdf" do 
   fast_build "oslic"
+end
+
+task :export_yaml do
+  Oslic::FormattedString::renderer(Oslic::HTMLRenderer.new)
+  YAMLBackend::Generator.new(DATA_FILE, AUX_FILE, EXPORT_DIR).generate
 end
 
 # ------------------------------------------------------------------------------
