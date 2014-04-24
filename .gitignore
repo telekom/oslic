@@ -11,6 +11,8 @@
 .DS_Store
 .project
 .texlipse
+\#*#
+.#*
 /tmp
 /000-branch-*
 /oscad.xml
@@ -19,3 +21,4 @@
 /oslic.out
 /oslic.pdf
 /oslic-*.pdf
+/to_oscad/oscad_data

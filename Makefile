@@ -3,13 +3,44 @@
 
 LATEX=pdflatex
 
-AUX_EXTS=url bbl blg aux dvi toc log lof nlo nls ilg ils ent out
-RES_EXTS=ps pdf 
+AUX_EXTS=url bbl blg aux dvi toc log lof nlo nls ilg ils ent
+RES_EXTS=ps pdf bak rtf
 SUB_DIRS=bibfiles btexmat extracts snippets templates
 OSLICDIR=oslic
 
-all:
-	make oslic.pdf
+all:	advi
+
+ifneq ($(LATEX),pdflatex)
+advi: clear
+	find . -maxdepth 1 -name "*.tex" -type f ! -name "rel*.tex"|\
+	while read file; do \
+	  make "`basename $$file .tex`.dvi";\
+	done
+
+aps: clear
+	find . -maxdepth 1 -name "*.tex" -type f ! -name "rel*.tex"|\
+	while read file; do \
+		make "`basename $$file .tex`.ps";\
+	done
+endif
+
+apdf: clear
+	find . -maxdepth 1 -name "*.tex" -type f ! -name "rel*.tex"|\
+	while read file; do \
+		make "`basename $$file .tex`.pdf";\
+	done
+
+ifneq ($(LATEX),pdflatex)
+ddvi: advi
+	$(foreach DIR, ${SUB_DIRS}, cd ${DIR} && make advi && cd ..; done)
+
+dps: aps
+	$(foreach DIR, ${SUB_DIRS}, cd ${DIR} && make aps && cd ..; done)
+endif
+
+dpdf: apdf
+	$(foreach DIR, ${SUB_DIRS}, cd ${DIR} && make apdf && cd ..; done)
+
 
 .SUFFIXES: .tex .dvi .ps .pdf .rtf
 
@@ -40,10 +71,27 @@ endif
 	@ latex $< 
 	@ latex $< 
 
+.tex.rtf:
+	@ echo "### `date +'%Y%m%dT%H%M%S'`" 
+	@ echo "### converting $< to $@"
+	@ latex $< 
+	@ bibtex `basename $< .tex`
+	@ makeindex `basename $< .tex`.nlo -s btexmat/nomencl.ist -o `basename $< .tex`.nls
+	@ latex $< 
+	@ latex $< 
+	@ latex $< 
+	@ latex2rtf -o `basename $@ .rtf`-`cat re-number.tex`.rtf  $< 
+
 .dvi.ps:
 	@ echo "### `date +'%Y%m%dT%H%M%S'`" 
 	@ echo "### converting $< to $@"
 	@ dvips $<
+
+.ps.pdf:
+	@ echo "### `date +'%Y%m%dT%H%M%S'`" 
+	@ echo "### converting $< to $@"
+	@ ps2pdf $<
+	@ mv $@ `basename $@ .pdf`-`cat rel-number.tex`.pdf
 
 dist:
 	tar -czvf ../${OSLICDIR}-`cat rel-number.tex`.tar.gz --exclude=${OSLICDIR}/ecopies/* ../${OSLICDIR}
