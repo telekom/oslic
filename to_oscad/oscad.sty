@@ -117,28 +117,33 @@
 \newcommand{\lsucmeans}[1]{\@oscad{<means><![CDATA[#1]]></means>}\item[means] #1}
 \newcommand{\lsuccovers}[1]{\item[covers] #1}
 
-\newenvironment{lsucrequiresnothing}{
+\newenvironment{lsucrequiresnothing}{%
+  \@oscad{<requiresnothing>}%
   \item[requires] no tasks in order to fulfill the conditions of the 
     \oscad@licensespec{} with respect to this use case:
-  \itemize}{\enditemize}
+  \itemize%
+}{%
+  \@oscad{</requiresnothing>}%
+  \enditemize%
+}
 
 \newenvironment{lsucrequires}{%
   \@oscad{<requires>}%
   \item[requires] the following tasks in order to fulfill the license conditions:
-  \begin{itemize}
+  \itemize%
 }{%
   \@oscad{</requires>}%
-  \end{itemize}%
+  \enditemize%
 }
 
 \newcommand{\lsucprohibitsnothing}{\item[prohibits] nothing explicitely.}
 \newenvironment{lsucprohibits}{%
   \@oscad{<prohibits>}%
   \item[prohibits] \ldots%
-  \begin{itemize}%
+  \itemize%
 }{%
   \@oscad{</prohibits>}%
-  \end{itemize}%
+  \enditemize%
 }
 
 \newcommand{\lsucitem}[1]{%

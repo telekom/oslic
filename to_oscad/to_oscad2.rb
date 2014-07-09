@@ -5,14 +5,14 @@
 # ------------------------------------------------------------------------------
 
 require_relative "oslic"
-require_relative "php_backend"
+require_relative "yaml_backend"
 
 DATA_FILE = Oslic::find_file("oscad.xml")
 AUX_FILE = Oslic::find_file("oslic.aux")
-OUTPUT_DIRECTORY = "master-files"
+OUTPUT_DIRECTORY = "oscad_data"
 
 Oslic::FormattedString::renderer(Oslic::HTMLRenderer.new)
-PHPBackend::Generator.new(DATA_FILE, AUX_FILE, OUTPUT_DIRECTORY).generate
+YAMLBackend::Generator.new(DATA_FILE, AUX_FILE, OUTPUT_DIRECTORY).generate
 
 # ------------------------------------------------------------------------------
 # Local Variables:

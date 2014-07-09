@@ -9,7 +9,7 @@
 % license to this one' and if you respect how 'you must attribute the work in
 % the manner specified by the author ...':
 %
-% In an internet based reuse please link the reused parts to www.telekom.com and
+% In an Internet based reuse please link the reused parts to www.telekom.com and
 % mention the original authors and Deutsche Telekom AG in a suitable manner. In
 % a paper-like reuse please insert a short hint to www.telekom.com and to the
 % original authors and Deutsche Telekom AG into your preface. For normal
@@ -62,336 +62,84 @@ In the following diagram, GPL-*-C1 (GPL-*-C2, \ldots, GPL-*-CB) is either
 GPL-2.0-C1 (and so forth), if you are looking for the GPL-2.0 use case, or
 GPL-3.0-C1, \ldots for the GPL-3.0 use case.
 
-\tikzstyle{nodv} = [font=\scriptsize, ellipse, draw, fill=gray!10, 
-    text width=2cm, text centered, minimum height=2em]
+%% ============================================================================= 
+%% Use-Case Finder
 
-\tikzstyle{nods} = [font=\tiny, rectangle, draw, fill=gray!20, 
-    text width=1cm, text centered, rounded corners, minimum height=3em]
-
-\tikzstyle{nodb} = [font=\tiny, rectangle, draw, fill=gray!20, 
-    text width=1.5cm, text centered, rounded corners, minimum height=3em]
-    
-\tikzstyle{leaf} = [font=\tiny, rectangle, draw, fill=gray!30, 
-    text width=1.2cm, text centered, minimum height=6em]
-
-\tikzstyle{slimleaf} = [font=\tiny, rectangle, draw, fill=gray!30, 
-    text width=1cm, text centered, minimum height=6em]
-
-
-\tikzstyle{edge} = [draw, -latex']
-
-\begin{tikzpicture}[]
-
-\node[nodv] (l801) at (4,11.8) {GPL};
-
-\node[nodv] (l701) at (0,10.2) {2.0};
-\node[nodv] (l702) at (7.5,10.2) {3.0};
-
-
-\node[nodb] (l601) at (0,8.6) {\textit{recipient:} \\ \textbf{4yourself}};
-\node[nodb] (l602) at (7.5,8.6) {\textit{recipient:} \\ \textbf{2others}};
-
-\node[nodb] (l501) at (4,7) {\textit{state:} \\ \textbf{unmodified}};
-\node[nodb] (l502) at (11,7) {\textit{state:} \\ \textbf{modified}};
-
-\node[nodb] (l401) at (2.25,5.4) {\textit{type:} \\ \textbf{proapse or snimoli}};
-\node[nodb] (l402) at (5.4,5.4) {\textit{type:} \\ \textbf{snimoli}};
-\node[nodb] (l403) at (8.4,5.4) {\textit{type:} \\ \textbf{proapse}};
-\node[nodb] (l404) at (12.8,5.4) {\textit{type:} \\ \textbf{snimoli}};
-
-
-\node[nodb] (l301) at (2.25,3.8) {\textit{context:} \\ \textbf{independent}};
-\node[nodb] (l302) at (5.4,3.8) {\textit{context:} \\ \textbf{embedded}};
-\node[nodb] (l303) at (8.4,3.8) {\textit{context:} \\ \textbf{independent}};
-\node[nodb] (l304) at (11.3,3.8) {\textit{context:} \\ \textbf{independent}};
-\node[nodb] (l305) at (14.3,3.8) {\textit{context:} \\ \textbf{embedded}};
-
-\node[nods] (l201) at (1.45,2.2) {\textit{form:} \textbf{source}};
-\node[nods] (l202) at (3.0,2.2) {\textit{form:} \textbf{binary}};
-\node[nods] (l203) at (4.6,2.2) {\textit{form:} \textbf{source}};
-\node[nods] (l204) at (6.2,2.2) {\textit{form:} \textbf{binary}};
-\node[nods] (l205) at (7.7,2.2) {\textit{form:} \textbf{source}};
-\node[nods] (l206) at (9.1,2.2) {\textit{form:} \textbf{binary}};
-\node[nods] (l207) at (10.5,2.2) {\textit{form:} \textbf{source}};
-\node[nods] (l208) at (11.9,2.2) {\textit{form:} \textbf{binary}};
-\node[nods] (l209) at (13.4,2.2) {\textit{form:} \textbf{source}};
-\node[nods] (l210) at (15.0,2.2) {\textit{form:} \textbf{binary}};
-
-\node[slimleaf] (l101) at (0,0) {
-  \textbf{GPL-*-C1} 
-  \textit{using software only for yourself}};
-
-\node[leaf] (l102) at (1.45,0) { 
-  \textbf{GPL-*-C2} 
-  \textit{distributing unmodified software as independent sources}};
-
-\node[leaf] (l103) at (3.0,0) { 
-  \textbf{GPL-*-C3}  
-  \textit{distributing unmodified software as independent binaries}};
-
-\node[leaf] (l104) at (4.6,0) { 
-  \textbf{GPL-*-C4} 
-  \textit{distributing unmodified library as embedded sources}};
-
-\node[leaf] (l105) at (6.2,0) { 
-  \textbf{GPL-*-C5}  
-  \textit{distributing unmodified library as embedded binaries}};
-
-\node[slimleaf] (l106) at (7.7,0) { 
-  \textbf{GPL-*-C6}  
-  \textit{distributing modified program as sources}};
-
-\node[slimleaf] (l107) at (9.1,0) { 
-  \textbf{GPL-*-C7}  
-  \textit{distributing modified program as binaries}};
-
-\node[slimleaf] (l108) at (10.5,0) { 
-  \textbf{GPL-*-C8}  
-  \textit{distributing modified library as independent sources}};
-
-\node[slimleaf] (l109) at (11.9,0) { 
-  \textbf{GPL-*-C9}
-  \textit{distributing modified library as independent binaries}};
-
-\node[leaf] (l110) at (13.4,0) { 
-  \textbf{GPL-*-CA}  
-  \textit{distributing modified library as embedded sources}};
-
-\node[leaf] (l111) at (15,0) { 
-  \textbf{GPL-*-CB}  
-  \textit{ distributing modified library as embedded binaries}};
-
-\path [edge] (l801) -- (l701);
-\path [edge] (l801) -- (l702);
-\path [edge] (l701) -- (l601);
-\path [edge] (l701) -- (l602);
-\path [edge] (l702) -- (l601);
-\path [edge] (l702) -- (l602);
-
-\path [edge] (l602) -- (l501);
-\path [edge] (l602) -- (l502);
-
-\path [edge] (l501) -- (l401);
-\path [edge] (l501) -- (l402);
-\path [edge] (l502) -- (l403);
-\path [edge] (l502) -- (l404);
-
-\path [edge] (l401) -- (l301);
-\path [edge] (l402) -- (l302);
-\path [edge] (l403) -- (l303);
-\path [edge] (l404) -- (l304);
-\path [edge] (l404) -- (l305);
-
-\path [edge] (l301) -- (l201);
-\path [edge] (l301) -- (l202);
-\path [edge] (l302) -- (l203);
-\path [edge] (l302) -- (l204);
-\path [edge] (l303) -- (l205);
-\path [edge] (l303) -- (l206);
-\path [edge] (l304) -- (l207);
-\path [edge] (l304) -- (l208);
-\path [edge] (l305) -- (l209);
-\path [edge] (l305) -- (l210);
-
-\path [edge] (l601) -- (l101);
-\path [edge] (l201) -- (l102);
-\path [edge] (l202) -- (l103);
-\path [edge] (l203) -- (l104);
-\path [edge] (l204) -- (l105);
-\path [edge] (l205) -- (l106);
-\path [edge] (l206) -- (l107);
-\path [edge] (l207) -- (l108);
-\path [edge] (l208) -- (l109);
-\path [edge] (l209) -- (l110);
-\path [edge] (l210) -- (l111);
-
-\end{tikzpicture}
+\gplUseCaseFinder{GPL}{2.0}{3.0}
 
 %% ============================================================================= 
 %% Common Building Blocks
 
-% ------------------------------------------------------------------------------
-% Common description of license specific use cases
+\newcommand{\useCaseOne}{%
+  \gtbUseCaseOne{GPL-\ver}
+  \gtbCoversOne{GPL-\ver}}
 
-\newcommand{\useCaseOne}[1]{\lsucmeans{that you received GPL-#1 licensed
-    software that you will use it only for yourself and that you do not hand 
-    over to any third party in any sense.}}
+\newcommand{\useCaseTwo}{%
+  \gtbUseCaseTwo{GPL-\ver}
+  \gtbCoversTwo{GPL-\ver}}
 
-\newcommand{\useCaseTwo}[1]{\lsucmeans{that you received GPL-#1 licensed
-    software that you are now going to distribute to third parties as an
-    independent unit and in the form of unmodified source code files or as an
-    unmodified source code package. In this case it makes no difference if you
-    distribute a program, an application, a server, a snippet, a module, a
-    library, or a plugin.}}
+\newcommand{\useCaseThree}{%
+  \gtbUseCaseThree{GPL-\ver}
+  \gtbCoversThree{GPL-\ver}}
 
-\newcommand{\useCaseThree}[1]{\lsucmeans{that you received GPL-#1 licensed
-    software that you are now going to distribute to third parties as an
-    independent unit and in the form of unmodified binary files or as an
-    unmodified binary package. In this case it does not matter if you distribute
-    a program, an application, a server, a snippet, a module, a library, or a
-    plugin.}}
+\newcommand{\useCaseFour}{%
+  \gtbUseCaseFour{GPL-\ver}
+  \gtbCoversFour{GPL-\ver}}
 
-\newcommand{\useCaseFour}[1]{\lsucmeans{that you received a GPL-#1 licensed
-    snippet, module or library that you are now going to distribute to third
-    parties as an embedded component of a larger unit and in the form of
-    unmodified source code files or as an unmodified source code package.}}
+\newcommand{\useCaseFive}{%
+  \gtbUseCaseFive{GPL-\ver}
+  \gtbCoversFive{GPL-\ver}}
 
-\newcommand{\useCaseFive}[1]{\lsucmeans{that you received a GPL-#1 licensed
-    snippet, module or library that you are now going to distribute to third
-    parties as an embedded component of a larger unit and in the form of
-    unmodified binary files or as unmodified binary package.}}
+\newcommand{\useCaseSix}{%
+  \gtbUseCaseSix{GPL-\ver}
+  \gtbCoversSix{GPL-\ver}}
 
-\newcommand{\useCaseSix}[1]{\lsucmeans{that you received a GPL-#1 licensed
-    program, application, or server (proapse), that you modified it, and that
-    you are now going to distribute this modified version to third parties in
-    the form of source code files or as a source code package.}}
+\newcommand{\useCaseSeven}{%
+  \gtbUseCaseSeven{GPL-\ver}
+  \gtbCoversSeven{GPL-\ver}}
 
-\newcommand{\useCaseSeven}[1]{\lsucmeans{that you received a GPL-#1 licensed
-    program, application, or server (proapse), that you modified it, and that
-    you are now going todistribute this modified version to third parties in the
-    form of binary files or as a binary package.}}
+\newcommand{\useCaseEight}{%
+  \gtbUseCaseEight{GPL-\ver}
+  \gtbCoversEight{GPL-\ver}}
 
-\newcommand{\useCaseEight}[1]{\lsucmeans{that you received a GPL-#1 licensed
-    code snippet, module, library, or plugin (snimoli), that you modified it,
-    and that you are now going to distribute this modified version to third
-    parties in the form of source code files or as a source code package, but
-    without embedding it into another larger software unit.}}
+\newcommand{\useCaseNine}{%
+  \gtbUseCaseNine{GPL-\ver}
+  \gtbCoversNine{GPL-\ver}}
 
-\newcommand{\useCaseNine}[1]{\lsucmeans{that you received a GPL-#10 licensed
-    code snippet, module, library, or plugin (snimoli), that you modified it,
-    and that you are now going to distribute this modified version to third
-    parties in the form of binary files or as a binary package but without
-    embedding it into another larger software unit.} }
+\newcommand{\useCaseA}{%
+  \gtbUseCaseA{GPL-\ver}
+  \gtbCoversA{GPL-\ver}}
 
-\newcommand{\useCaseA}[1]{\lsucmeans{that you received a GPL-#1 licensed code
-    snippet, module, library, or plugin (snimoli), that you modified it, and
-    that you are now going to distribute this modified version to third parties
-    in the form of source code files or as a source code package together with
-    another larger software unit which contains this code snippet, module,
-    library, or plugin as an embedded component.}}
-
-\newcommand{\useCaseB}[1]{\lsucmeans{that you received a GPL-#1 licensed code
-    snippet, module, library, or plugin (snimoli), that you modified it, and
-    that you are now going to distribute this modified version to third
-    partiesin the form of binary files or as a binary package together with
-    another larger software unit which contains this code snippet, module,
-    library, or plugin as an embedded component.}}
-
-\newcommand{\coversOne}{\coversOsucs{OSUC-01, OSUC-03, OSUC-06, and OSUC-09}{01}{09}}
-\newcommand{\coversTwo}{\coversOsucs{OSUC-02S, OSUC-05S}{02S}{05S}}
-\newcommand{\coversThree}{\coversOsucs{OSUC-02B, OSUC-05B}{02B}{05B}}
-\newcommand{\coversFour}{\mapsToOsuc{07S}}
-\newcommand{\coversFive}{\mapsToOsuc{07B}}
-\newcommand{\coversSix}{\mapsToOsuc{04S}}
-\newcommand{\coversSeven}{\mapsToOsuc{04B}}
-\newcommand{\coversEight}{\mapsToOsuc{08S}}
-\newcommand{\coversNine}{\mapsToOsuc{08B}}
-\newcommand{\coversA}{\mapsToOsuc{10S}}
-\newcommand{\coversB}{\mapsToOsuc{10B}}
+\newcommand{\useCaseB}{%
+  \gtbUseCaseB{GPL-\ver}
+  \gtbCoversB{GPL-\ver}}
 
 % ------------------------------------------------------------------------------
-% Keep license elements 
+% Common Text Blocks from 0600-commomn-text-blocks.tex
 
-\newcommand{\keepLicenseElements}{Ensure that the licensing elements (especially
-  all notices that refer to the GPL-\ver{} and to the absence of any warranty) are
-  retained in your package in the form you have received them.}
-
-% ------------------------------------------------------------------------------
-% Make sure that the copyright notice and disclaimer of warranty are present
-
-% GPL-3.0
-\newcommand{\auxThreeEnsureCopyrightNotice}[1]{Ensure that the
-  distributed #1 package contains a conspicuous, easy to find copyright notice.
-  If this element is missing, add a new file containing the main copyright
-  notice.} 
-
-% GPL-2.0
-\newcommand{\auxTwoEnsureCopyrightNotice}[1]{Ensure that the distributed
-  #1 package contains a conspicuous, easy to find copyright notice and
-  disclaimer of warranty. If these elements are missing, add a new file
-  containing the main copyright notice and the disclaimer of warranty in the
-  form which is textually defined by the GPL-2.0 license itself. (Yes, repeat
-  the disclaimer although it is also part of the license itself and although you
-  are required to hand the license itself over to the receiver.)}
-
-\newcommand{\gpltwoEnsureCopyrightNoticeSource}{%
-  \auxTwoEnsureCopyrightNotice{source code}}
-
-\newcommand{\gpltwoEnsureCopyrightNoticeBinary}{%
-  \auxTwoEnsureCopyrightNotice{binary}}
-
-\newcommand{\gplthreeEnsureCopyrightNoticeSource}{%
-  \auxThreeEnsureCopyrightNotice{source code}}
-
-\newcommand{\gplthreeEnsureCopyrightNoticeBinary}{%
-  \auxThreeEnsureCopyrightNotice{binary}}
-
-% ------------------------------------------------------------------------------
-% Give a copy of the license to the recipient of the software
-
-\newcommand{\giveLicense}{Give the recipient a copy of the GPL-\ver{} license.
-  If it is not already part of the software package, add it.}
-
-% ------------------------------------------------------------------------------
-% Keep all copyright notices intact
-
-\newcommand{\retainCopyrightNotices}{Retain all existing copyright notices.}
-
-% ------------------------------------------------------------------------------
-%
-
-\newcommand{\addToDocumentation}{Let the documentation of your distribution
-  and/or your additional material also reproduce the content of the existing
-  copyright notices, a hint to the software name, a link to its homepage, the
-  respective disclaimer of warranty, and a link to the GPL-\ver.}
-
-% ------------------------------------------------------------------------------
-% Publish the source code
-
-\newcommand{\auxSourceRepository}{Push the source code package into a
-  repository under your control and make it downloadable via the Internet.
-  Ensure, that this repository is online for at least 3 years after you ceased
-  distributing the software package.}
-
-\newcommand{\makeUnmodifiedSourceAvailable}{Make the source code of the
-  distributed software publicly available (even though you did not modify it):
-  \auxSourceRepository} 
-
-\newcommand{\makeModifiedSourceAvailable}{Make the source code of the
-  distributed software publicly available: \auxSourceRepository} 
-
-\newcommand{\makeAllSourcesAvailable}{Make the complete source code of the
-  program embedding the library publicly available (and, therefore, also the
-  source code of the library itself): \auxSourceRepository}
-
-% ------------------------------------------------------------------------------
-% Explain where to find the sources
-
-\newcommand{\describeHowToGetSource}{Insert an easy to find description into the
-  distribution package that explains how and where the code can be retrieved.}
-
-% ------------------------------------------------------------------------------
-% Create and update the modification text file
-
-\newcommand{\createChangelog}{Create a \emph{modification text file,} if such a
-  file does not yet exist. \emph{Add} a description of your modifications on a
-  functional level to the \emph{modification text file.}}
-
-% ------------------------------------------------------------------------------
-%
-
-\newcommand{\auxCopyrightDialogContent}{Let it reproduce the content of the
-  existing copyright notices, the software name, a link to its homepage, the
-  respective disclaimer of warranty, and a link to the GPL-\ver.}
-
-\newcommand{\addToCopyrightDialogLib}{Let the copyright dialog of the on-top
-  development clearly say, that it uses the GPL licensed library and that it is
-  itself licensed under the GPL-\ver, too. \auxCopyrightDialogContent}
-
-\newcommand{\addToCopyrightDialogApp}{Let the copyright dialog of the program
-  clearly say that it is a GPL licensed program. 
-  \auxCopyrightDialogContent\ 
-  If these conditions are not already met, add the missing elements.}
+\newcommand{\keepLicenseElements}{\gtbKeepLicenseElements{GPL-\ver}}
+\newcommand{\addToDocumentation}{\gtbAddToDocumentation{GPL-\ver}}
+\newcommand{\giveLicense}{\gtbGiveLicense{GPL-\ver}}
+\newcommand{\retainCopyrightNotices}{\gtbKeepCopyrightNotices{GPL-\ver}}
+\newcommand{\describeHowToGetSource}{\gtbDescribeHowToGetSource{GPL-\ver}}
+\newcommand{\createChangelog}{\gtbCreateChangelog{GPL-\ver}}
+\newcommand{\markEmbeddedModifications}{\gtbMarkEmbeddedModifications{GPL-\ver}}
+\newcommand{\markLibraryModifications}{\gtbMarkLibraryModifications{GPL-\ver}}
+\newcommand{\markProgramModifications}{\gtbMarkProgramModifications{GPL-\ver}}
+\newcommand{\gpltwoEnsureCopyrightNoticeSource}{\gtbVTwoCopyrightNotice{GPL-2.0}{source code}}
+\newcommand{\gpltwoEnsureCopyrightNoticeBinary}{\gtbVTwoCopyrightNotice{GPL-2.0}{binary}}
+\newcommand{\gplthreeEnsureCopyrightNoticeSource}{\gtbVThreeCopyrightNotice{GPL-3.0}{source code}}
+\newcommand{\gplthreeEnsureCopyrightNoticeBinary}{\gtbVThreeCopyrightNotice{GPL-3.0}{binary}}
+\newcommand{\makeUnmodifiedSourceAvailable}{\gtbMakeUnmodifiedSourceAvailable{GPL-\ver}} 
+\newcommand{\makeModifiedSourceAvailable}{\gtbMakeModifiedSourceAvailable{GPL-\ver}} 
+\newcommand{\makeAllSourcesAvailable}{\gtbMakeAllSourcesAvailable{GPL-\ver}}
+\newcommand{\arrangeProgramChanges}{\gtbArrangeProgramChanges{GPL-\ver}}
+\newcommand{\arrangeLibraryChanges}{\gtbArrangeLibraryChanges{GPL-\ver}}
+\newcommand{\arrangeEmbeddedChanges}{\gtbArrangeEmbeddedChanges{GPL-\ver}}
+\newcommand{\howToApplyTheseTerms}{\gtbHowToApplyTheseTerms{GPL-\ver}}
+\newcommand{\noPatentLitigation}{\gtbNoPatentLitigation{GPL-\ver}}
+\newcommand{\addToCopyrightDialogLib}{\gtbAddToCopyrightDialogStrongCopyleft{GPL-\ver}}
+\newcommand{\addToCopyrightDialogApp}{\gtbAddToCopyrightDialogApp{GPL-\ver}}
 
 % ------------------------------------------------------------------------------
 % Make sure, licensing statements apply to enclosing program
@@ -404,45 +152,6 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
 
 \newcommand{\arrangeEnclosingSources}{%
   \auxArrange{the sources of the on-top development}}
-
-% ------------------------------------------------------------------------------
-% make sure licensing statements apply to your modifications
-
-\newcommand{\auxArrangeChanges}[1]{Arrange your modifications of #1 in a way
-  that they are covered by existing GPL licensing statements. If you add new
-  source code files to the #1, insert a header containing your copyright line
-  and a licensing statement in the form recommended by the GPL.}
-
-\newcommand{\arrangeProgramChanges}{\auxArrangeChanges{program}}
-\newcommand{\arrangeLibraryChanges}{\auxArrangeChanges{library}}
-\newcommand{\arrangeEmbeddedChanges}{\auxArrangeChanges{embedded library}}
-
-\newcommand{\howToApplyTheseTerms}{%
-  \footnote{For details see section `How to Apply These Terms to Your New
-    Programs' in the GPL-\ver{} license.}} 
-
-
-% ------------------------------------------------------------------------------
-%
-
-\newcommand{\auxMarkChanges}[1]{Mark all modifications of the source code #1
-  thoroughly within the source code and include the date of the modification.}
-
-\newcommand{\markEmbeddedModifications}{%
-  \auxMarkChanges{of the embedded library (snimoli)}}
-
-\newcommand{\markLibraryModifications}{%
-  \auxMarkChanges{of the library (snimoli)}}
-
-\newcommand{\markProgramModifications}{
-  \auxMarkChanges{the program (proapse)}}
-
-% ------------------------------------------------------------------------------
-% Forbid patent litigation
-
-\newcommand{\noPatentLitigation}{%
-  to institute a patent litigation against anyone alleging that the software
-  constitutes patent infringement.} 
 
 %% ============================================================================= 
 %% GPL-2.0 Use Cases
@@ -463,13 +172,12 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
   \linkosuc{06} 
   \linkosuc{09}
 
-  \useCaseOne{\ver}
-  \coversOne
+  \useCaseOne
 
   \begin{lsucrequiresnothing}
-    \lsucitem{You are allowed to use any kind of GPL software in any sense and in
-      any context without being obliged to do anything as long as you do not
-      give the software to third parties.}
+    \lsucitem{You are allowed to use any kind of GPL-\ver software in any sense
+      and in any context without being obliged to do anything as long as you do
+      not give the software to third parties.}
   \end{lsucrequiresnothing}
 
   \lsucprohibitsnothing
@@ -481,8 +189,7 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
   \linkosuc{02S}
   \linkosuc{05S}
 
-  \useCaseTwo{\ver}
-  \coversTwo
+  \useCaseTwo
 
   \begin{lsucrequires}
     \lsucmandatory{\keepLicenseElements}
@@ -501,8 +208,7 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
   \linkosuc{02B} 
   \linkosuc{05B}
 
-  \useCaseThree{\ver}
-  \coversThree
+  \useCaseThree
 
   \begin{lsucrequires}
     \lsucmandatory{\keepLicenseElements}
@@ -523,8 +229,7 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
 \begin{lsuc}{GPL-\ver-C4}
   \linkosuc{07S} 
 
-  \useCaseFour{\ver}
-  \coversFour
+  \useCaseFour
 
   \begin{lsucrequires}
     \lsucmandatory{\keepLicenseElements}
@@ -544,8 +249,7 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
 \begin{lsuc}{GPL-\ver-C5}
   \linkosuc{07B} 
 
-  \useCaseFive{\ver}
-  \coversFive
+  \useCaseFive
 
   \begin{lsucrequires}
     \lsucmandatory{\keepLicenseElements}
@@ -568,8 +272,7 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
 \begin{lsuc}{GPL-\ver-C6}
   \linkosuc{04S} 
 
-  \useCaseSix{\ver}
-  \coversSix
+  \useCaseSix
 
   \begin{lsucrequires}
     \lsucmandatory{\keepLicenseElements}
@@ -591,8 +294,7 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
 \begin{lsuc}{GPL-\ver-C7}
   \linkosuc{04B}
 
-  \useCaseSeven{\ver}
-  \coversSeven
+  \useCaseSeven
 
   \begin{lsucrequires}
     \lsucmandatory{\keepLicenseElements}
@@ -617,8 +319,7 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
 \begin{lsuc}{GPL-\ver-C8}
   \linkosuc{08S}
 
-  \useCaseEight{\ver}
-  \coversEight
+  \useCaseEight
 
   \begin{lsucrequires}
     \lsucmandatory{\keepLicenseElements}
@@ -639,8 +340,7 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
 \begin{lsuc}{GPL-\ver-C9}
   \linkosuc{08B}
 
-  \useCaseNine{\ver}
-  \coversNine
+  \useCaseNine
 
   \begin{lsucrequires}
     \lsucmandatory{\keepLicenseElements}
@@ -664,8 +364,7 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
 \begin{lsuc}{GPL-\ver-CA}
   \linkosuc{10S}
 
-  \useCaseA{\ver}
-  \coversA
+  \useCaseA
 
   \begin{lsucrequires}
     \lsucmandatory{\keepLicenseElements}
@@ -688,8 +387,7 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
 \begin{lsuc}{GPL-\ver-CB}
   \linkosuc{10B}
 
-  \useCaseB{\ver}
-  \coversB
+  \useCaseB
 
   \begin{lsucrequires}
     \lsucmandatory{\keepLicenseElements}
@@ -732,8 +430,7 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
   \linkosuc{06} 
   \linkosuc{09}
 
-  \useCaseOne{\ver}
-  \coversOne
+  \useCaseOne
 
   \begin{lsucrequiresnothing}
     \lsucitem{You are allowed to use any kind of GPL software in any sense and in
@@ -752,8 +449,7 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
   \linkosuc{02S}
   \linkosuc{05S}
 
-  \useCaseTwo{\ver}
-  \coversTwo
+  \useCaseTwo
 
   \begin{lsucrequires}
     \lsucmandatory{\keepLicenseElements}
@@ -774,8 +470,7 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
   \linkosuc{02B} 
   \linkosuc{05B}
 
-  \useCaseThree{\ver}
-  \coversThree
+  \useCaseThree
 
   \begin{lsucrequires}
     \lsucmandatory{\keepLicenseElements}
@@ -798,8 +493,7 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
 \begin{lsuc}{GPL-\ver-C4}
   \linkosuc{07S} 
 
-  \useCaseFour{\ver}
-  \coversFour
+  \useCaseFour
 
   \begin{lsucrequires}
     \lsucmandatory{\keepLicenseElements}
@@ -821,8 +515,7 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
 \begin{lsuc}{GPL-\ver-C5}
   \linkosuc{07B} 
 
-  \useCaseFive{\ver}
-  \coversFive
+  \useCaseFive
 
   \begin{lsucrequires}
     \lsucmandatory{\keepLicenseElements}
@@ -847,8 +540,7 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
 \begin{lsuc}{GPL-\ver-C6}
   \linkosuc{04S} 
 
-  \useCaseSix{\ver}
-  \coversSix
+  \useCaseSix
 
   \begin{lsucrequires}
     \lsucmandatory{\keepLicenseElements}
@@ -872,8 +564,7 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
 \begin{lsuc}{GPL-\ver-C7}
   \linkosuc{04B}
 
-  \useCaseSeven{\ver}
-  \coversSeven
+  \useCaseSeven
 
   \begin{lsucrequires}
     \lsucmandatory{\keepLicenseElements}
@@ -900,8 +591,7 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
 \begin{lsuc}{GPL-\ver-C8}
   \linkosuc{08S}
 
-  \useCaseEight{\ver}
-  \coversEight
+  \useCaseEight
 
   \begin{lsucrequires}
      \lsucmandatory{\keepLicenseElements}
@@ -924,8 +614,7 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
 \begin{lsuc}{GPL-\ver-C9}
   \linkosuc{08B}
 
-  \useCaseNine{\ver}
-  \coversNine
+  \useCaseNine
 
   \begin{lsucrequires}
     \lsucmandatory{\keepLicenseElements}
@@ -951,8 +640,7 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
 \begin{lsuc}{GPL-\ver-CA}
   \linkosuc{10S}
 
-  \useCaseA{\ver}
-  \coversA
+  \useCaseA
 
   \begin{lsucrequires}
     \lsucmandatory{\keepLicenseElements}
@@ -977,8 +665,7 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
 \begin{lsuc}{GPL-\ver-CB}
   \linkosuc{10B}
 
-  \useCaseB{\ver}
-  \coversB
+  \useCaseB
 
   \begin{lsucrequires}
     \lsucmandatory{\keepLicenseElements}
@@ -1008,6 +695,8 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
 %% Discussion
 
 \subsection{Discussions and Explanations}
+\label{GPL2Discussion}%
+\label{GPL3Discussion}
 
 \newcommand{\gplTwoAndThree}[2]{\footnote{%
     For GPL-2.0 see \cite[cf.][\nopage wp.\ #1]{Gpl20OsiLicense1991a}.\par\noindent 

@@ -1,0 +1,434 @@
+% Telekom osCompendium 'for being included' snippet template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, and Ronald Dauster, GIDO GmbH
+%     Darmstadt 2014
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an Internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ Framework derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke 2012 CC BY 3.0  http://mycsrf.fodina.de/ ]
+%
+
+%% =============================================================================
+%% All commands take (at least) one parameter: the name of the license, for
+%% example, 'GPL-2.0'.  This parameter is always present, even if it isn't used
+%% and it is always the first parameter.
+%%
+%% Commands with the prefix gtb (GPL Text Block) are common parametrized text
+%% blocks for GPL, LGPL, and AGPL 
+
+% ------------------------------------------------------------------------------
+% Common description of license specific use cases
+
+\newcommand{\gtbUseCaseOne}[1]{\lsucmeans{that you received #1 licensed
+    software, that you will use it only for yourself, and that you do not hand
+    over to any third party in any sense.}}
+
+\newcommand{\gtbUseCaseTwo}[1]{\lsucmeans{that you received #1 licensed software 
+    that you are now going to distribute to third parties as an independent unit
+    and in the form of unmodified source code files or as an unmodified source
+    code package. In this case it makes no difference if you distribute a
+    program, an application, a server, a snippet, a module, a library, or a
+    plugin.}}
+
+\newcommand{\gtbUseCaseThree}[1]{\lsucmeans{that you received #1 licensed
+    software, which you are now going to distribute to third parties as an
+    independent unit and in the form of unmodified binary files or as an
+    unmodified binary package. In this case it does not matter if you distribute
+    a program, an application, a server, a snippet, a module, a library, or a
+    plugin.}}
+
+\newcommand{\gtbUseCaseFour}[1]{\lsucmeans{that you received a #1 licensed
+    snippet, module or library that you are now going to distribute to third
+    parties as an embedded component of a larger unit and in the form of
+    unmodified source code files or as an unmodified source code package.}}
+
+\newcommand{\gtbUseCaseFive}[1]{\lsucmeans{that you received a #1 licensed
+    snippet, module or library that you are now going to distribute to third
+    parties as an embedded component of a larger unit and in the form of
+    unmodified binary files or as unmodified binary package.}}
+
+\newcommand{\gtbUseCaseSix}[1]{\lsucmeans{that you received a #1 licensed
+    program, application, or server (proapse), that you modified it, and that
+    you are now going to distribute this modified version to third parties in
+    the form of source code files or as a source code package.}}
+
+\newcommand{\gtbUseCaseSeven}[1]{\lsucmeans{that you received a #1 licensed
+    program, application, or server (proapse), that you modified it, and that
+    you are now going todistribute this modified version to third parties in the
+    form of binary files or as a binary package.}}
+
+\newcommand{\gtbUseCaseEight}[1]{\lsucmeans{that you received a #1 licensed code
+    snippet, module, library, or plugin (snimoli), that you modified it, and
+    that you are now going to distribute this modified version to third parties
+    in the form of source code files or as a source code package, but without
+    embedding it into another larger software unit.}}
+
+\newcommand{\gtbUseCaseNine}[1]{\lsucmeans{that you received a #1 licensed code
+    snippet, module, library, or plugin (snimoli), that you modified it, and
+    that you are now going to distribute this modified version to third parties
+    in the form of binary files or as a binary package but without embedding it
+    into another larger software unit.} }
+
+\newcommand{\gtbUseCaseA}[1]{\lsucmeans{that you received a #1 licensed code
+    snippet, module, library, or plugin (snimoli), that you modified it, and
+    that you are now going to distribute this modified version to third parties
+    in the form of source code files or as a source code package together with
+    another larger software unit which contains this code snippet, module,
+    library, or plugin as an embedded component.}}
+
+\newcommand{\gtbUseCaseB}[1]{\lsucmeans{that you received a #1 licensed code
+    snippet, module, library, or plugin (snimoli), that you modified it, and
+    that you are now going to distribute this modified version to third
+    partiesin the form of binary files or as a binary package together with
+    another larger software unit which contains this code snippet, module,
+    library, or plugin as an embedded component.}}
+
+% ------------------------------------------------------------------------------
+
+\newcommand{\gtbCoversOne}[1]{\coversOsucs{OSUC-01, OSUC-03, OSUC-06, and OSUC-09}{01}{09}}
+\newcommand{\gtbCoversTwo}[1]{\coversOsucs{OSUC-02S, OSUC-05S}{02S}{05S}}
+\newcommand{\gtbCoversThree}[1]{\coversOsucs{OSUC-02B, OSUC-05B}{02B}{05B}}
+\newcommand{\gtbCoversFour}[1]{\mapsToOsuc{07S}}
+\newcommand{\gtbCoversFive}[1]{\mapsToOsuc{07B}}
+\newcommand{\gtbCoversSix}[1]{\mapsToOsuc{04S}}
+\newcommand{\gtbCoversSeven}[1]{\mapsToOsuc{04B}}
+\newcommand{\gtbCoversEight}[1]{\mapsToOsuc{08S}}
+\newcommand{\gtbCoversNine}[1]{\mapsToOsuc{08B}}
+\newcommand{\gtbCoversA}[1]{\mapsToOsuc{10S}}
+\newcommand{\gtbCoversB}[1]{\mapsToOsuc{10B}}
+
+% ------------------------------------------------------------------------------
+% Keep license elements 
+% #1 -> the license name
+
+\newcommand{\gtbKeepLicenseElements}[1]{Ensure that the licensing elements
+  (especially all notices that refer to the #1 and to the absence of any
+  warranty) are retained in your package in the form in which you have received
+  them.} 
+
+% ------------------------------------------------------------------------------
+% Give a copy of the license to the recipient of the software
+% #1 -> the license name
+
+\newcommand{\gtbGiveLicense}[1]{Give the recipient a copy of the #1 license.
+  If it is not already part of the software package, add it.}
+
+% ------------------------------------------------------------------------------
+% Add license elements and acknowledgement to the documemtation
+% #1 -> the license name
+
+\newcommand{\gtbAddToDocumentation}[1]{Let the documentation of your
+  distribution and/or your additional material also reproduce the content of the
+  existing copyright notices, a hint to the software name, a link to its
+  homepage, the respective disclaimer of warranty, and a link to the #1.}
+
+% ------------------------------------------------------------------------------
+% Keep all copyright notices intact
+% #1 -> the license name
+
+\newcommand{\gtbKeepCopyrightNotices}[1]{Retain all existing copyright notices.}
+
+% ------------------------------------------------------------------------------
+% Publish the source code
+% #1 -> the license name
+
+\newcommand{\gtbSourceRepository}[1]{Push the source code package into a
+  repository under your control and make it downloadable via the Internet.
+  Ensure, that this repository is online for at least 3 years after you ceased
+  distributing the software package.}
+
+% program or independent library, unmodified
+\newcommand{\gtbMakeUnmodifiedSourceAvailable}[1]{Make the source code of the
+  distributed software publicly available (even though you did not modify it):
+  \gtbSourceRepository{#1}}
+
+% program or independent library, modified
+\newcommand{\gtbMakeModifiedSourceAvailable}[1]{Make the source code of the
+  distributed software publicly available: \gtbSourceRepository{#1}} 
+
+% embedded library, modified or unmodified, GPL and AGPL
+\newcommand{\gtbMakeAllSourcesAvailable}[1]{Make the \emph{complete} source code
+  of the program embedding the library publicly available (and, therefore, also
+  the source code of the library itself): \gtbSourceRepository{#1}}
+
+% embedded library, modified or unmodified, LGPL 
+\newcommand{\gtbMakeEmbeddedSourcesAvailable}[1]{Make the source code of the 
+  embedded library publicly available: \gtbSourceRepository{#1}}
+
+% ------------------------------------------------------------------------------
+% Explain where to find the sources
+% #1 -> the license name
+
+\newcommand{\gtbDescribeHowToGetSource}[1]{Insert an easy to find description
+  into the distribution package that explains how and where the code can be
+  retrieved.}
+
+% ------------------------------------------------------------------------------
+% Create and update the modification text file
+% #1 -> the license name
+
+\newcommand{\gtbCreateChangelog}[1]{Create a \emph{modification text file,} if
+  such a file does not yet exist. \emph{Add} a description of your modifications
+  on a functional level to the \emph{modification text file.}}
+
+% ------------------------------------------------------------------------------
+% Mark all modifications in the source files themselves
+% #1 -> the license name
+
+\newcommand{\gtbauxMarkChanges}[1]{Mark all modifications of the source code #1
+  thoroughly within the source code and include the date of the modification.}
+
+\newcommand{\gtbMarkEmbeddedModifications}[1]{%
+  \gtbauxMarkChanges{of the embedded library (snimoli)}}
+
+\newcommand{\gtbMarkLibraryModifications}[1]{%
+  \gtbauxMarkChanges{of the library (snimoli)}}
+
+\newcommand{\gtbMarkProgramModifications}[1]{%
+  \gtbauxMarkChanges{the program (proapse)}}
+
+% ------------------------------------------------------------------------------
+% Ensure the copyright notice and the disclaimer (V2.x only) are present
+% #1 -> the license name
+% #2 -> type of distribution (binary or source code)
+
+% GPL-3.0/LGPL-3.0/AGPL-3.0
+\newcommand{\gtbVThreeCopyrightNotice}[2]{Ensure that the
+  distributed #2 package contains a conspicuous, easy to find copyright notice.
+  If this element is missing, add a new file containing the main copyright
+  notice.} 
+
+% GPL-2.0/LGPL-2.1
+\newcommand{\gtbVTwoCopyrightNotice}[2]{Ensure that the distributed
+  #2 package contains a conspicuous, easy to find copyright notice and
+  disclaimer of warranty. If these elements are missing, add a new file
+  containing the main copyright notice and the disclaimer of warranty in the
+  form which is textually defined by the #1 license itself. (Yes, repeat
+  the disclaimer although it is also part of the license itself and although you
+  are required to hand the license itself over to the receiver.)}
+
+% ------------------------------------------------------------------------------
+% Make sure licensing statements apply to your modifications
+% #1 -> the license name
+
+\newcommand{\gtbauxArrangeChanges}[2]{Arrange your modifications of #2 in a way
+  that they are covered by existing #1 licensing statements. If you add new
+  source code files to the #2, insert a header containing your copyright line
+  and a licensing statement in the form recommended by the #1.}
+
+\newcommand{\gtbArrangeProgramChanges}[1]{%
+  \gtbauxArrangeChanges{#1}{program}}
+
+\newcommand{\gtbArrangeLibraryChanges}[1]{%
+  \gtbauxArrangeChanges{#1}{library}}
+
+\newcommand{\gtbArrangeEmbeddedChanges}[1]{%
+  \gtbauxArrangeChanges{#1}{embedded library}}
+
+\newcommand{\gtbHowToApplyTheseTerms}[1]{%
+  \footnote{For details see section `How to Apply These Terms to Your New
+    Programs' in the #1 license.}} 
+
+% ------------------------------------------------------------------------------
+% Forbid patent litigation
+% #1 -> license name
+
+\newcommand{\gtbNoPatentLitigation}[1]{%
+  to institute a patent litigation against anyone alleging that the software
+  constitutes patent infringement.} 
+
+% ------------------------------------------------------------------------------
+% Copyright dialog
+% #1 -> license name
+
+\newcommand{\gtbauxCopyrightDialogContent}[1]{Let it reproduce the content of
+  the existing copyright notices, the software name, a link to its homepage, the 
+  respective disclaimer of warranty, and a link to the #1.}
+
+\newcommand{\gtbAddToCopyrightDialogWeakCopyleft}[1]{Let the copyright dialog of 
+  the on-top development clearly say that it uses the #1 licensed library. 
+  \gtbauxCopyrightDialogContent{#1}}
+
+\newcommand{\gtbAddToCopyrightDialogStrongCopyleft}[1]{Let the copyright dialog
+  of the on-top development clearly say that it uses the #1 licensed library and 
+  that it is itself licensed under the #1, too. 
+  \gtbauxCopyrightDialogContent{#1}}
+
+\newcommand{\gtbAddToCopyrightDialogApp}[1]{Let the copyright dialog of the
+  program clearly say that it is a #1 licensed program. 
+  \gtbauxCopyrightDialogContent{#1}\ 
+  If these conditions are not already met, add the missing elements.}
+
+
+%% =============================================================================
+%% Use Case Finder
+
+% ------------------------------------------------------------------------------
+% Common license specific use case finder for GPL, LGPL
+% (does not apply to AGPL because there is no version 2.x of the AGPL)
+
+\newcommand{\gplUseCaseFinder}[3]{
+\tikzstyle{nodv} = [font=\scriptsize, ellipse, draw, fill=gray!10, 
+    text width=2cm, text centered, minimum height=2em]
+
+\tikzstyle{nods} = [font=\tiny, rectangle, draw, fill=gray!20, 
+    text width=1cm, text centered, rounded corners, minimum height=3em]
+
+\tikzstyle{nodb} = [font=\tiny, rectangle, draw, fill=gray!20, 
+    text width=1.5cm, text centered, rounded corners, minimum height=3em]
+    
+\tikzstyle{leaf} = [font=\tiny, rectangle, draw, fill=gray!30, 
+    text width=1.2cm, text centered, minimum height=6em]
+
+\tikzstyle{slimleaf} = [font=\tiny, rectangle, draw, fill=gray!30, 
+    text width=1cm, text centered, minimum height=6em]
+
+
+\tikzstyle{edge} = [draw, -latex']
+
+\begin{tikzpicture}[]
+
+  \node[nodv] (l801) at (4,11.8)   {#1};
+
+  \node[nodv] (l701) at (0,10.2)   {#2};
+  \node[nodv] (l702) at (7.5,10.2) {#3};
+  
+
+  \node[nodb] (l601) at (0,8.6) {\textit{recipient:} \\ \textbf{4yourself}};
+  \node[nodb] (l602) at (7.5,8.6) {\textit{recipient:} \\ \textbf{2others}};
+  
+  \node[nodb] (l501) at (4,7) {\textit{state:} \\ \textbf{unmodified}};
+  \node[nodb] (l502) at (11,7) {\textit{state:} \\ \textbf{modified}};
+  
+  \node[nodb] (l401) at (2.25,5.4) {\textit{type:} \\ \textbf{proapse or snimoli}};
+  \node[nodb] (l402) at (5.4,5.4) {\textit{type:} \\ \textbf{snimoli}};
+  \node[nodb] (l403) at (8.4,5.4) {\textit{type:} \\ \textbf{proapse}};
+  \node[nodb] (l404) at (12.8,5.4) {\textit{type:} \\ \textbf{snimoli}};
+  
+  
+  \node[nodb] (l301) at (2.25,3.8) {\textit{context:} \\ \textbf{independent}};
+  \node[nodb] (l302) at (5.4,3.8) {\textit{context:} \\ \textbf{embedded}};
+  \node[nodb] (l303) at (8.4,3.8) {\textit{context:} \\ \textbf{independent}};
+  \node[nodb] (l304) at (11.3,3.8) {\textit{context:} \\ \textbf{independent}};
+  \node[nodb] (l305) at (14.3,3.8) {\textit{context:} \\ \textbf{embedded}};
+  
+  \node[nods] (l201) at (1.45,2.2) {\textit{form:} \textbf{source}};
+  \node[nods] (l202) at (3.0,2.2) {\textit{form:} \textbf{binary}};
+  \node[nods] (l203) at (4.6,2.2) {\textit{form:} \textbf{source}};
+  \node[nods] (l204) at (6.2,2.2) {\textit{form:} \textbf{binary}};
+  \node[nods] (l205) at (7.7,2.2) {\textit{form:} \textbf{source}};
+  \node[nods] (l206) at (9.1,2.2) {\textit{form:} \textbf{binary}};
+  \node[nods] (l207) at (10.5,2.2) {\textit{form:} \textbf{source}};
+  \node[nods] (l208) at (11.9,2.2) {\textit{form:} \textbf{binary}};
+  \node[nods] (l209) at (13.4,2.2) {\textit{form:} \textbf{source}};
+  \node[nods] (l210) at (15.0,2.2) {\textit{form:} \textbf{binary}};
+  
+  \node[slimleaf] (l101) at (0,0) {
+    \textbf{#1-*-C1} 
+    \textit{using software only for yourself}};
+  
+  \node[leaf] (l102) at (1.45,0) { 
+    \textbf{#1-*-C2} 
+    \textit{distributing unmodified software as independent sources}};
+  
+  \node[leaf] (l103) at (3.0,0) { 
+    \textbf{#1-*-C3}  
+    \textit{distributing unmodified software as independent binaries}};
+  
+  \node[leaf] (l104) at (4.6,0) { 
+    \textbf{#1-*-C4} 
+    \textit{distributing unmodified library as embedded sources}};
+  
+  \node[leaf] (l105) at (6.2,0) { 
+    \textbf{#1-*-C5}  
+    \textit{distributing unmodified library as embedded binaries}};
+  
+  \node[slimleaf] (l106) at (7.7,0) { 
+    \textbf{#1-*-C6}  
+    \textit{distributing modified program as sources}};
+  
+  \node[slimleaf] (l107) at (9.1,0) { 
+    \textbf{#1-*-C7}  
+    \textit{distributing modified program as binaries}};
+  
+  \node[slimleaf] (l108) at (10.5,0) { 
+    \textbf{#1-*-C8}  
+    \textit{distributing modified library as independent sources}};
+  
+  \node[slimleaf] (l109) at (11.9,0) { 
+    \textbf{#1-*-C9}
+    \textit{distributing modified library as independent binaries}};
+  
+  \node[leaf] (l110) at (13.4,0) { 
+    \textbf{#1-*-CA}  
+    \textit{distributing modified library as embedded sources}};
+  
+  \node[leaf] (l111) at (15,0) { 
+    \textbf{#1-*-CB}  
+    \textit{ distributing modified library as embedded binaries}};
+  
+  \path [edge] (l801) -- (l701);
+  \path [edge] (l801) -- (l702);
+  \path [edge] (l701) -- (l601);
+  \path [edge] (l701) -- (l602);
+  \path [edge] (l702) -- (l601);
+  \path [edge] (l702) -- (l602);
+  
+  \path [edge] (l602) -- (l501);
+  \path [edge] (l602) -- (l502);
+  
+  \path [edge] (l501) -- (l401);
+  \path [edge] (l501) -- (l402);
+  \path [edge] (l502) -- (l403);
+  \path [edge] (l502) -- (l404);
+  
+  \path [edge] (l401) -- (l301);
+  \path [edge] (l402) -- (l302);
+  \path [edge] (l403) -- (l303);
+  \path [edge] (l404) -- (l304);
+  \path [edge] (l404) -- (l305);
+  
+  \path [edge] (l301) -- (l201);
+  \path [edge] (l301) -- (l202);
+  \path [edge] (l302) -- (l203);
+  \path [edge] (l302) -- (l204);
+  \path [edge] (l303) -- (l205);
+  \path [edge] (l303) -- (l206);
+  \path [edge] (l304) -- (l207);
+  \path [edge] (l304) -- (l208);
+  \path [edge] (l305) -- (l209);
+  \path [edge] (l305) -- (l210);
+  
+  \path [edge] (l601) -- (l101);
+  \path [edge] (l201) -- (l102);
+  \path [edge] (l202) -- (l103);
+  \path [edge] (l203) -- (l104);
+  \path [edge] (l204) -- (l105);
+  \path [edge] (l205) -- (l106);
+  \path [edge] (l206) -- (l107);
+  \path [edge] (l207) -- (l108);
+  \path [edge] (l208) -- (l109);
+  \path [edge] (l209) -- (l110);
+  \path [edge] (l210) -- (l111);
+  
+\end{tikzpicture}
+} % end of gplUseCaseFinder
+
+% ------------------------------------------------------------------------------
+% Local Variables:
+% mode: latex
+% fill-column: 80
+% End:
+% ------------------------------------------------------------------------------

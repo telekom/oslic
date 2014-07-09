@@ -47,6 +47,7 @@ module Oslic
   # placing the string in double quotes.
   class MarkdownRenderer < Renderer
     def emph(str) "_#{str}_" end
+    def textbf(str) "*#{str}*" end
     def enquote(str) "\"#{str}\"" end
   end
   
@@ -54,6 +55,7 @@ module Oslic
   # translated as +<em>+ and +:enquote+ as double quotes, +&quot;+,
   class HTMLRenderer < Renderer
     def emph(str) "<em>#{as_html(str)}</em>" end
+    def textbf(str) "<b>#{as_html(str)}</b>" end
     def enquote(str) "&quot;#{as_html(str)}&quot;" end
     def unknown_format(str) as_html(str) end
   private
@@ -99,7 +101,7 @@ module Oslic
   # format :plain, whereas the argument of a markup command is represented by
   # a formatted string with the name of the command as the format.
   #
-  # NOTE: Nested markup is not supported and raise an exception!
+  # NOTE: Nested markup is not supported and raises an exception!
   class RichText
 
     COMMAND_REGEX = /\\(?<command>[[:lower:][:upper:]]+)\s*{(?<content>[^}]*)}/
@@ -109,19 +111,12 @@ module Oslic
     # very basic markup is supported: All markup must be in the form of
     # commands with a single argument in braces, e. g., "\emph{the license}". 
     def initialize(str)
-      @fragments = []
-      input = str.strip.gsub(/\{\}/, "") # remove empty TeX groups
-      while (match = COMMAND_REGEX.match(input)) do
-        content = match["content"]
-        if NESTED_COMMAND_REGEX =~ content
-          raise "Nested markup not supported: #{input}" 
-        end
-        
-        add_fragment(match.pre_match)
-        add_fragment(content, match["command"].to_sym) 
-        input = match.post_match
-      end
-      add_fragment(input)
+      @fragments = parse(str)
+    end
+
+    # Append the LaTeX source +str+ to the contents of this RichText
+    def append(str)
+      @fragments.insert(-1, *parse(str))
     end
 
     # Uses the FormattedString's default renderer to render the sequence of
@@ -132,8 +127,25 @@ module Oslic
     
   private
     # add a FormattedString to the list unless +str+ is empty
-    def add_fragment(str, format=:plain)
-      @fragments << FormattedString.new(str, format) unless str.empty?
+    def add_fragment(arr, str, format=:plain)
+      arr << FormattedString.new(str, format) unless str.empty?
+    end
+
+    def parse(str)
+      result = []
+      input = str.strip.gsub(/\{\}/, "") # remove empty TeX groups
+      while (match = COMMAND_REGEX.match(input)) do
+        content = match["content"]
+        if NESTED_COMMAND_REGEX =~ content
+          raise "Nested markup not supported: #{input}" 
+        end
+        
+        add_fragment(result, match.pre_match)
+        add_fragment(result, content, match["command"].to_sym) 
+        input = match.post_match
+      end
+      add_fragment(result, input)
+      return result
     end
   end
 
@@ -141,8 +153,8 @@ module Oslic
   # locations, both page and section number. 
   class CrossReference
 
-    # Create a new section passing it the path, full or relative, of the LaTeX
-    # aux-file. 
+    # Create a new CrossReference passing it the path, full or relative, 
+    # of the LaTeX aux-file. 
     def initialize(filename)
       @sections = Hash.new("unknown")
       @pages = Hash.new("unknown")
@@ -193,18 +205,52 @@ module Oslic
         when "mapsto"
           @osucs << child.text
         when "requires"
-          child.elements.each("item") do |grandchild|
-            if grandchild.attributes["type"] == "mandatory" then
-              @required << RichText.new(grandchild.text)
-            else
-              @recommended << RichText.new(grandchild.text)
-            end
-          end
+          parse_requires(child)
+        when "requiresnothing" 
+          parse_requires_nothing(child)
         when "prohibits"
-          child.elements.each("item") do |grandchild|
-            @prohibited << RichText.new(grandchild.text)
-          end
+          parse_prohibits(child)
         end
+      end
+      
+      have_requirements = ! (@required.empty? and @recommended.empty?)
+      unless have_requirements or defined?(@no_task_message)
+        raise "#{@id}: Must have either <requires> or <requiresnothing>" 
+      end
+      if have_requirements and defined?(@no_task_message)
+        raise "#{@id}: Cannot have both <requires> and <requiresnothing>" 
+      end
+    end
+
+    # parse the contents of a <requires> element
+    def parse_requires(requires_elem)
+      requires_elem.elements.each do |child|
+        case child.name
+        when "item" then
+          if child.attributes["type"] == "mandatory" then
+            @required << RichText.new(child.text)
+          else
+            @recommended << RichText.new(child.text)
+          end
+        when "source-use-case" then
+          @source_use_case = child.text
+        end
+      end 
+    end
+
+    # parse the contents of a <requiresnothing> clause
+    # raises an exception if the element contains more than one <item>
+    def parse_requires_nothing(requires_nothing_elem)
+      requires_nothing_elem.elements.each("item") do |child|
+        raise "#{@id}: Duplicate <item> in <requiresnothing>" if defined?(@no_task_message)
+        @no_task_message = RichText.new(child.text)
+      end
+    end
+
+    # parse the contents of a <prohibits> element
+    def parse_prohibits(prohibits_elem)
+      prohibits_elem.elements.each("item") do |child|
+        @prohibited << RichText.new(child.text)
       end
     end
 
@@ -217,7 +263,7 @@ module Oslic
     # not really a chapter in LaTeX terminology).
     attr_reader :chapter
 
-    # An array of OSUCs that map to this LSUC.  EAch OSUC is specified in the
+    # An array of OSUCs that map to this LSUC.  Each OSUC is specified in the
     # form "OSUC-XXY", where XX is a two-digit number and Y is either empty
     # (if the OSUC does not distinguish between binary and source
     # distribution) or either "S" or "B" for "source" and "binary",
@@ -239,7 +285,16 @@ module Oslic
     # An array of RichText descriptions of the things you should do if you use
     # the software according to this use case. The array can be empty.
     attr_reader :recommended
-    
+
+    # A RichText description if there are no tasks to be performed
+    attr_reader :no_task_message
+
+    # The name of the use case that applies to a source distribution of this
+    # binary use case.  This is nil, unless 
+    # a) this use case is about binary distribution to third party and
+    # b) the license requires the distribution of the source code for these binaries
+    attr_reader :source_use_case
+
     # The abbreviation for this use case that should be displayed to the
     # user. Use this in preference to #id
     def name
@@ -249,16 +304,23 @@ module Oslic
     # Print the contents of this UseCase for development and testing
     # purposes. This method is intended to be called by License#pp
     def pp
+      has_tasks = (@required.length > 0) || (@recommended.length > 0)
+
       puts "    Use case: #{id} (#{name})"
       puts "        maps to #{osucs}"
       puts "        chapter #{chapter}"
       puts "        means: #{description}"
-      puts "        requires:"
-      @required.each { |c| puts "            mandatory: #{c}" }
-      @recommended.each { |c| puts "            voluntary: #{c}" }
+      puts "        source use case: #{source_use_case}"
+      puts "        requires nothing:"                             unless has_tasks
+      puts "            #{@nothing_required}"                      unless has_tasks
+      puts "        requires:"                                     if has_tasks
+      @required.each    { |c| puts "            mandatory: #{c}" } if has_tasks
+      @recommended.each { |c| puts "            voluntary: #{c}" } if has_tasks
       puts "        prohibits:"
       @prohibited.each { |c| puts "            #{c}" }
     end
+
+    private :parse_requires, :parse_prohibits
   end
   
   # Represents all the information about a particular license extracted from
@@ -315,7 +377,7 @@ module Oslic
     # #id.  Neccessary for compatibility with the PHP backend. 
     # *This property should not be used for new code, either #id or #name
     # should be used instead* 
-    attr_reader :abbrev
+    attr_reader :abbrev 
 
     # An array containing all the license specific use cases.  Each element is
     # an instance of UseCase.  Technically, this array can be empty, although
@@ -394,6 +456,25 @@ module Oslic
       @licenses.each { |l| l.pp }
     end
   end
+
+  # Look for the a file with the given name in +directory+ and all parent
+  # directories of +directory+.  +directory+ defaults to the current directory. 
+  def Oslic.find_file(filename, directory=".")
+    abs_directory = File.absolute_path(directory)
+    file_path = File.join(abs_directory, filename)
+    parent_dir = File.dirname(abs_directory)
+    case
+    when File.exists?(file_path) 
+      return file_path
+    when ((parent_dir == nil) or (parent_dir == abs_directory))
+      # on Unix-like systems, File.dirname("/") == "/"
+      raise "#{filename} not found!"
+    else
+      return find_file(filename, parent_dir)
+    end
+  end
+  
+
 end
 
 # ------------------------------------------------------------------------------

@@ -65,9 +65,9 @@ as instances of permissive licenses.
 Additionally, the \oslic{} treats 
 the EPL,\citeEPL{} 
 the EUPL,\citeEUPL{} 
-the LGPL,
+the LGPL,%
   \footnote{For LGPL-2.1 see \cite[cf.][\nopage wp]{Lgpl21OsiLicense1999a}. 
-  For LGPL-3.0 see \cite [cf.][\nopage wp]{Lgpl30OsiLicense2007a} } 
+  For LGPL-3.0 see \cite [cf.][\nopage wp]{Lgpl30OsiLicense2007a}.} 
 and the MPL\citeMPL{}
 as licenses with weak copyleft. Finally, the \oslic{} thoroughly discusses 
 the GPL%
@@ -79,9 +79,13 @@ as licenses with strong copyleft.%
     \oslic{} directory `licenses.' They have been downloaded from the
     OSI pages. All of the following statements refer to these files.}
 
+% Backslash in typewriter type for OT1/T2; 
+% \textbackslash will substitute a non-tt backslash
+\newcommand{\ttbs}{\symbol{'134}}
+
 Only three of these licenses mention the word \emph{linking} (or variants of
 it): Using the command \texttt{grep -i link * | grep -v
-"<link\textbackslash{}|links\textbackslash{}|skip-link"} in a shell---executed
+"<link\ttbs|links\ttbs|skip-link"} in a shell---executed
 as an operation on a set of html formatted license files---directly shows that
 only the AGPL-3.0, the Apache-2.0, the GPL-2.0, the GPL-3.0, the LGPL-2.1 and
 the LGPL-3.0 are using mutations of the word \emph{linking}. Additionally, the
