@@ -25,11 +25,48 @@
 
 \section{Excursion: Reverse Engineering and Open Source}
 
-Reverse engineering is a special challenge. If one gets a program in form
-of a binary its license must allow to decompile this binary. Otherwise it is
-forbidden. The right to decompile the program is a right like the other rights
-which must escpecially be licensed -- like the right to use it, to study it, to
-modify it, or to distribute it.
+There exist some voices of important open source experts indicating that using
+LGPL licensed libraries as part of an on-top development requires to allow the
+receiver of that on-top-development its reverse engineering\footnote{So, one of
+these very trustworhty German experts says that the LGPL-2.1 generally requires
+that a distributor of a program which accesses a LGPL-2.1 licensed library, must
+grant his customer also the right to modify the accessing program and hence to
+execute a reverse engineerin. Originally the German text says:
+\enquote{Ziffer 6 LGPLv2.1 knüpft die Erlaubnis, das zugreifende Programm unter
+beliebigen Lizenzbestimmungen verbreiten zu drüfen, an eine Reihe von
+Verpflichtungen, die in der Praxis oft übersehen werden: Zunächst muss dem
+Kunden, dem die Software geliefert wird, die Veränderung des zugreifenden
+Programms gestattet werden und zu diesem Zweck auch ein Reverse Engineering zur
+Fehlerbehebung. Dies dürfte alle Formen des Debugging und das Dekompilieren des
+zugreifenden Programms umfassen.}\cite[cf.][81]{JaeMet2011a}.}. Sometimes -- as
+part of the simplification in a whisper down the lane -- this statement is
+reduced to message, that in general distributing any open source software as an
+embedded component is linked to permission of reverse engineering - not only of
+the component itself, but of the whole unit.
+
+We want to show here that nearly all open source licenses discussed in the OSLiC
+do not require the permission to engineer the whole software complex reversely.
+Moreover, we want to show that the LGPL only requires for statically linked
+software programs containing an LGPL licensed component that to allow the
+reverse engineering of that program.
+
+Being sure that there does not exist any implicitly given admission to reversely
+engineer a program is important for those companies and developers who want to
+keep their own work closed although it uses open source software as components.
+To do so is no fault. The permissive open source licenses and the licenses with
+weak copy left are designed to enable this kind of use. So it is worth to
+investigate the facts of open source licenses and reverse enginerring.
+
+First of all, reverse engineering of software as a concept is not as clear as
+one whishes it would be. But one can turn it the other way round: if one gets a
+binary piece of software combined with the right to use it, to study and to
+modify it, then one has also the right to engineer it reversely by decompiling
+-- simply because one gets not only the binary, but the necessary rights to investigate it
+sucessfully - in every meaning of \emph{reverse engineering}.
+
+Hence, open source licenses must either grant the right to use the software, to
+study it and to modify it or they must explicitly grant the right of reverse
+engineering or decompiling.
 
 Generally, closed software is forwarded with the intention not to give the
 recipients access to the source code. Therefore closed software is mostly
@@ -73,18 +110,7 @@ debugging such modifications, if you also do each of the following
 Based on these predications one can find the statement that those developers who
 compliantly integrate an LGPL licensed library as component into an
 'overarching' program, must also grant to all recipients of this program the
-right to decompile the overarching program. At least one German publication
-explicitly says that the LGPL-2.1 generally requires that a distributor of a
-program which accesses the LGPL-2.1 licensed library, must grant his customer
-also the right to modify the accessing program and hence to execute a reverse
-engineering\footnote{Originally the German text says: \enquote{Ziffer 6 LGPLv2.1
-knüpft die Erlaubnis, das zugreifende Programm unter beliebigen
-Lizenzbestimmungen verbreiten zu drüfen, an eine Reihe von Verpflichtungen, die
-in der Praxis oft übersehen werden: Zunächst muss dem Kunden, dem die Software
-geliefert wird, die Veränderung des zugreifenden Programms gestattet werden und
-zu diesem Zweck auch ein Reverse Engineering zur Fehlerbehebung. Dies dürfte
-alle Formen des Debugging und das Dekompilieren des zugreifenden Programms
-umfassen.}\cite[cf.][81]{JaeMet2011a} }. In other words: it is sometimes argued
+right to decompile the overarching program.  In other words: it is sometimes argued
 that the LGPL allows the reverse engineering of all works that use the
 library\footnote{In general, the situation seems to be not as clear as possible.
 For example, an important American author states, that the sections 5 and 6 of
