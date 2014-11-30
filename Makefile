@@ -1,4 +1,4 @@
-# (c) Karsten Reincke, Frankfurt am Main, 2011
+
 # compile one/all tex-files 
 
 LATEX=pdflatex
@@ -41,6 +41,15 @@ endif
 dpdf: apdf
 	$(foreach DIR, ${SUB_DIRS}, cd ${DIR} && make apdf && cd ..; done)
 
+ascii:
+	mkdir -p asc && rm asc/*
+	find snippets -name "*.tex" | grep -v "\/osc" |\
+	while read f; do \
+		n=`basename $$f`; detex $$f > asc/$$n.txt;\
+		echo "$$f-> $$n.txt";\
+	done
+	detex oslic.tex > asc/000-oslic.tex.txt
+	cat `ls asc/* | sort` | grep -v "^$$" > oslic-extract.txt
 
 .SUFFIXES: .tex .dvi .ps .pdf .rtf
 

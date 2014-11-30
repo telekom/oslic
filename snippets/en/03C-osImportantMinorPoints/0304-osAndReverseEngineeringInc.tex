@@ -1,0 +1,245 @@
+% Telekom osCompendium 'for being included' snippet template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ Framework derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke 2012 CC BY 3.0  http://mycsrf.fodina.de/ ]
+%
+
+
+%% use all entries of the bibliography
+%\nocite{*}
+
+\section{Excursion: Reverse Engineering and Open Source}
+
+Reverse engineering is a special challenge. If one gets a program in form
+of a binary its license must allow to decompile this binary. Otherwise it is
+forbidden. The right to decompile the program is a right like the other rights
+which must escpecially be licensed -- like the right to use it, to study it, to
+modify it, or to distribute it.
+
+Generally, closed software is forwarded with the intention not to give the
+recipients access to the source code. Therefore closed software is mostly
+delivered in form of binaries. Hence, in case of closed software it is mostly
+not allowed to decompile the distributed binaries.
+
+As opposed to this, normally open source software is not affected by the problem
+of reverse engineering - at least if the source code of the software is also
+accessible: Licenses with strong or weak copyleft require that a distributed
+binary must be accompanied either by the corresponding source code itself or by
+an offer to get it. Permissive licenses allow also to distribute the software
+only in form of binaries. If one wants to decompile a program licensed under
+such a permissive license this license must explictly or imlicitly also grant
+the right to decompile the binary.
+
+If one scans the texts of the licenses analysed by the OSLiC one has
+surprisingly to consider that (a) none of the licenses is talking about
+decompiling and that (b) only the LGPL-2.1 and the LGPL-3.0 deal with the
+terminus 'reverse engineering'. In the LGPL-2.1, one can read
+
+\begin{quote}\emph{
+\enquote{As an exception to the Sections above, you may also combine or
+link a \enquote{work that uses the Library} with the Library to produce a work
+containing portions of the Library, and distribute that work under terms of your
+choice, \emph{provided that the terms permit} modification of the work for the
+customer's own use and \emph{reverse engineering} for debugging such
+modifications.}\footcite[cf.][\nopage wp]{Lgpl21OsiLicense1999a}}
+\end{quote}
+
+
+And in the LGPL-3.0, one can find the sentence
+
+\begin{quote}\emph{
+\enquote{You may convey a Combined Work under terms of your choice that,
+taken together, effectively \emph{do not restrict} modification of the portions
+of the Library contained in the Combined Work and \emph{reverse engineering} for
+debugging such modifications, if you also do each of the following
+[\ldots]}\footcite[cf.][\nopage wp]{Lgpl30OsiLicense2007a}}
+\end{quote}
+
+Based on these predications one can find the statement that those developers who
+compliantly integrate an LGPL licensed library as component into an
+'overarching' program, must also grant to all recipients of this program the
+right to decompile the overarching program. At least one German publication
+explicitly says that the LGPL-2.1 generally requires that a distributor of a
+program which accesses the LGPL-2.1 licensed library, must grant his customer
+also the right to modify the accessing program and hence to execute a reverse
+engineering\footnote{Originally the German text says: \enquote{Ziffer 6 LGPLv2.1
+knüpft die Erlaubnis, das zugreifende Programm unter beliebigen
+Lizenzbestimmungen verbreiten zu drüfen, an eine Reihe von Verpflichtungen, die
+in der Praxis oft übersehen werden: Zunächst muss dem Kunden, dem die Software
+geliefert wird, die Veränderung des zugreifenden Programms gestattet werden und
+zu diesem Zweck auch ein Reverse Engineering zur Fehlerbehebung. Dies dürfte
+alle Formen des Debugging und das Dekompilieren des zugreifenden Programms
+umfassen.}\cite[cf.][81]{JaeMet2011a} }. In other words: it is sometimes argued
+that the LGPL allows the reverse engineering of all works that use the
+library\footnote{In general, the situation seems to be not as clear as possible.
+For example, an important American author states, that the sections 5 and 6 of
+the LGPL \enquote{[\ldots] are an impenetrable maze of technological babble} and
+that they \enquote{[\ldots] should not be in a general-purpose software
+license}\cite[cf.][124]{Rosen2005a}. And he does not discuss the granting of
+the LGPL to execute a reverse engineering.}.
+
+Despite of these substantial expressions and despite of the reputation of all
+these witnesses, the OSLiC wants to show, that the LGPL actually requires to
+allow a reverse engineering only in case of distributing a statically linked
+program. For accepting this conclusion, one has to follow the sentences of the
+LGPL-2.1 license very strictly:
+
+First of all, the LGPL-2.1 distinguishes between a \enquote{work based the
+Library} and a \enquote{work that uses the Library}. And a \enquote{Library} is
+defined as \enquote{a collection of software functions and/or data prepared so
+as to be conveniently linked with application programs (which use some of those
+functions and data) to form executables}\footcite[cf.][\nopage
+wp §0]{Lgpl21OsiLicense1999a}. This definition already contains an important
+stipulation: neither the library itself (which delivers functions etc.) nor the
+program (which wants to use the delivered elements) is an executable.
+Executables are formed by linking the library and the program. Based on this
+viewpoint, the LGPL-2.1 additionally determines that 
+
+\begin{quote}\emph{\enquote{
+A \enquote{work based on the Library} means either the Library or any derivative
+work under copyright law: that is to say, a work containing the Library or a portion
+of it, either verbatim or with modifications and/or translated straightforwardly
+into another language.}\footcite[cf.][\nopage wp §0]{Lgpl21OsiLicense1999a} }
+\end{quote}
+
+Hence, in the wording of the LGPL-2.1, you have created a \enquote{derivative
+work} of the library whenever you have expanded or reduced \enquote{the
+collection of software functions and/or data}, whenever you have
+\enquote{modified} some of its \enquote{functions and/or data}, and whenever you
+have copied \enquote{portions} of the library into another work. And this
+process of generating a derivative work does not depend on the format, neither
+on that of the library nor on that of the other work.\footcite[cf.][\nopage wp
+§0]{Lgpl21OsiLicense1999a}.
+
+But the LGPL-2.1 knows that there nevertheless might exist software which - in
+this sense - is not a derivative work of the Library. If such \enquote{a
+program contains no derivative of any portion of the Library, but is
+designed to work with the Library by being compiled or linked with it, [then
+it] is called a \enquote{work that uses the Library}}\footcite[cf.][\nopage wp
+§5]{Lgpl21OsiLicense1999a}.
+
+Based on this distinction, the LGPL-2.1 can clearly assert, that \enquote{such
+a work, in isolation, is not a derivative work of the Library, and therefore
+falls outside the scope of this License}\footcite[cf.][\nopage wp
+§5]{Lgpl21OsiLicense1999a}: if the isolated work is designed to work with the
+library but still does not contain any derivative of any portion of the library,
+it is not derived from the library.
+
+From the view of a programmer -- especially from the view of a
+C-programmer\footnote{When the GPL and the LGPL were designed, the programming
+language C was the paradigm to generate executable software} -- this definition
+causes a problem. Designing a program to use a library means including the
+header files of the library. Such header files, which are developed and
+delivered by the developer of the Library, may not contain declarations of
+functions and data types, but also generally usable variants and inline
+functions. Using these declarations is the common way to design a program to
+work with a library. So lately such a designed program contains elements of the
+library. So, a C-programmer might argue that designing a program to work with
+the library let the program become a work based on the Library.
+
+Thankfully, the LGPL-2.1 addresses this problem and generates a solution:
+
+The LGPL-2.1 clearly states that the compiled version of a work that uses the
+library -- in opposite to its source code version -- can indeed become a
+derivative work of the library: 
+
+\begin{quote}\emph{\enquote{ When a \enquote{work that uses the Library} uses
+material from a header file that is part of the Library, the object code for the
+work may be a derivative work of the Library even though the source code is
+not.}\footcite[cf.][\nopage wp §5]{Lgpl21OsiLicense1999a} }
+\end{quote}
+
+From a viewpoint of a (C-) programmer this statement is adequate and clearly
+comprehensible: the source code of the \enquote{work that uses the Library}
+itself normally containes only pure include directives which refer to the names
+of header files of the library. The act of compiling this source code can indeed 
+enrich the work that uses the library by parts of the library: the preprocessor
+will expand inline functions and data types (and therefore copy code of the
+library into the \emph{work that therefore no longer only uses the Library}, the
+compilation will add variables and references to variables into the object file,
+and so on and so on. But if the include files only contain
+fucntions declartions, then compiled onject code of the \enquote{work that uses
+the Library} still does not contain elements of the library.
+
+And finally, when both parts will be linked, the LGPL-2.1 regards the
+result of the linking process indeed as a derivative work:
+\begin{quote}\enquote{linking a \enquote{work that uses the Library} with the
+Library creates an executable that is a derivative of the Library (because it
+contains portions of the Library), rather than a \enquote{work that uses the
+library}}\footcite[cf.][\nopage wp §5]{Lgpl21OsiLicense1999a}.
+\end{quote}
+
+So, the concrete status of the compiled version of the \enquote{work that uses
+the Library} which still has not been linked to the library is vague. To give
+clearness back to all users the LGPL defines that if the compiled but still
+unlinked version of \enquote{work that uses the Library} indeed already contains
+elements of the library, then is a derivative work of the libary. But if these
+adopted elements are normal elements which are offered to design a work to work
+with the library, then being a derivative work shall not have any effect. Or in
+the words of the LGPL-2.1
+
+\begin{quote}\enquote{ If such an object file [the compilation of the
+\enquote{work that uses the Library}] uses only numerical parameters, data structure
+layouts and accessors, and small macros and small inline functions (ten lines or
+less in length), then the use of the object file is unrestricted, regardless of
+whether it is legally a derivative work }\footcite[cf.][\nopage wp
+§5]{Lgpl21OsiLicense1999a}.
+\end{quote}
+
+Hence, generally the LGPL-2.1 regards the \enquote{work that uses the Library}
+as an independ unit which is not covered by the rules of the LGPL-2.1 license --
+as long as both parts have not become an integrated entity as for example the
+process of linking generates.
+
+Based on these specifications one can clearly show that the LGPL-2.1 only
+requires the permisson of reverse engineering in case of distributing a
+statically linked integrated entity containing the \enquote{work that uses the
+Library} and the library:
+
+\begin{itemize}
+\item First, anyone is allowed to distribute the LGPL-2.1 licensed library to
+any third party. This follows from the freedom of free software.
+
+\item Second, the copyright owners are allowed to distribute their \enquote{work
+that uses the Library} to any third party, too. This follows from being the copyright
+owner.
+
+\item Third, if the copyright owner distribute their \enquote{work that
+uses the Library} as object file which is not linked to the LGPL-Library, then
+the LGPL does not oblige them to do anything. This follows from specicifation of
+the LGPL under which conditions the use of the object file is unrestricted.
+
+\item Hence, the recipient of the isolatedly distributed \enquote{work
+that uses the Library} and the library can link these parts on his own machine
+and under his own responsibility. [Follows from 1-3]
+\end{itemize}
+
+Now, we meet the question, whether the third party user which links the
+seperatedly received parts on his own machine and on its behalf gets the right
+to decompile the object file of the enquote{work that uses the Library} because it
+is linked with the LGLP license library.
+
+The answer is: No, he does not get the right to do so. The LGPL-2.1 clearly says
+the right of reverse engineering is only given to third party, if 
+
+%\bibliography{../../../bibfiles/oscResourcesEn}
+
+% Local Variables:
+% mode: latex
+% fill-column: 80
+% End:
