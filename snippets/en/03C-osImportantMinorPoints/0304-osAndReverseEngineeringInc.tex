@@ -26,29 +26,309 @@
 \section{Excursion: Reverse Engineering and Open Source}
 
 There exist some voices of important open source experts indicating that using
-LGPL licensed libraries as part of an on-top development requires to allow the
-receiver of that on-top-development its reverse engineering\footnote{So, one of
-these very trustworhty German experts says that the LGPL-2.1 generally requires
-that a distributor of a program which accesses a LGPL-2.1 licensed library, must
-grant his customer also the right to modify the accessing program and hence to
-execute a reverse engineerin. Originally the German text says:
-\enquote{Ziffer 6 LGPLv2.1 knüpft die Erlaubnis, das zugreifende Programm unter
-beliebigen Lizenzbestimmungen verbreiten zu drüfen, an eine Reihe von
-Verpflichtungen, die in der Praxis oft übersehen werden: Zunächst muss dem
-Kunden, dem die Software geliefert wird, die Veränderung des zugreifenden
-Programms gestattet werden und zu diesem Zweck auch ein Reverse Engineering zur
-Fehlerbehebung. Dies dürfte alle Formen des Debugging und das Dekompilieren des
-zugreifenden Programms umfassen.}\cite[cf.][81]{JaeMet2011a}.}. Sometimes -- as
-part of the simplification in a whisper down the lane -- this statement is
-reduced to message, that in general distributing any open source software as an
-embedded component is linked to permission of reverse engineering - not only of
-the component itself, but of the whole unit.
+LGPL licensed libraries as part of a distributed 'on-top development' requires
+to grant the right of reverse engineering to the receiver to that 'on-top
+develoment'\footnote{So, one of these very trustworhty German experts says that
+the LGPL-2.1 generally requires that a distributor of a program which accesses a
+LGPL-2.1 licensed library, must grant his customer also the right to modify the
+accessing program and hence also the right to execute a reverse engineering.
+Originally the German text says: \enquote{Ziffer 6 LGPLv2.1 knüpft die
+Erlaubnis, das zugreifende Programm unter beliebigen Lizenzbestimmungen
+verbreiten zu drüfen, an eine Reihe von Verpflichtungen, die in der Praxis oft
+übersehen werden: Zunächst muss dem Kunden, dem die Software geliefert wird, die
+Veränderung des zugreifenden Programms gestattet werden und zu diesem Zweck auch
+ein Reverse Engineering zur Fehlerbehebung. Dies dürfte alle Formen des
+Debugging und das Dekompilieren des zugreifenden Programms
+umfassen.}\cite[cf.][81]{JaeMet2011a}.}. Sometimes -- as part of the
+simplification in a whisper down the lane -- this statement is reduced to
+message, that we generally have the right of reverse engineering whenever we get
+a programm containing any open source software component.
 
-We want to show here that nearly all open source licenses discussed in the OSLiC
-do not require the permission to engineer the whole software complex reversely.
-Moreover, we want to show that the LGPL only requires for statically linked
-software programs containing an LGPL licensed component that to allow the
-reverse engineering of that program.
+On the contrary, we are going to prove that none of the open source
+licenses\footnote{being discussed in the OSLiC} generally requires to allow the
+reverse engineering of a piece of software containing an open source component
+which is licensed under that open source license. Particularly, we will to
+prove, that even the LGPL does not claim this permission generally: we are going
+to show, that the LGPL requires to permit the reverse engineering if and only if 
+the LGPL licensed component is embedded into a statically linked and
+distributed piece of software.
+
+Let us prove our position 'bottom up'. Let us firstly show that it is true for
+the LGPL-v2. Then let us show, that it is also true for the LGPL-v3. And finally
+let us show that it is true for all other licenses, analysed by the OSLiC.
+
+\subsection{Reverse Engineering in the LGPL-v2}
+The LGPL-v2.1 contains only one paragraph which refers to the \emph{reverse
+enigeering}:
+
+\begin{quote}\noindent\emph{\enquote{[\ldots] you may [\ldots] combine or link a
+\enquote{work that uses the Library} with the Library to produce a work
+containing portions of the Library, and distribute that work under terms of your
+choice, provided that the terms permit modification of the work for the
+customer's own use and \emph{reverse engineering} for debugging such
+modifications.}\footcite[cf.][\nopage wp]{Lgpl21OsiLicense1999a}}
+\end{quote}
+
+Following the general spirit of the OSLiC, we want to read the license text very
+strictly. We want to derive 'understandings' by matching the interpretations
+explictly and strictly back to the lincense text itself. For that purpose, let
+us firstly only hightlight the syntactical conjunctions in the just quoted
+sentence. This little graphical 'modification' simplifies the understanding:
+
+\begin{quote}\noindent\emph{\enquote{[\ldots] you may [\ldots] combine
+\textbf{or} link a \enquote{work that uses the Library} with the Library to
+produce a work containing portions of the Library \textbf{and} distribute that
+work under terms of your choice, \textbf{provided that} the terms permit
+modification of the work for the customer's own use \textbf{and} \emph{reverse
+engineering} for debugging such modifications.}\footcite[cf.][\nopage wp. herv.
+KR.]{Lgpl21OsiLicense1999a}}
+\end{quote}
+
+It is evident that the conjunction \emph{'provided that'} is splitting the
+sentence into two parts: you are allowed to do something \emph{provided that} a
+precondition is fulfilled. Additionally, one has to state, that both parts --
+the one before the conjunction \emph{'provided that'} and the part after it --
+are syntactically condensed English sentences: they contain subordinated 
+conjunctions and elliptical constructions\footnote{cf.
+http://en.wikipedia.org/wiki/Ellipsis\_\%28linguistics\%29, wp.
+}. Therefore, we must disband these syntactical interconnections:
+
+Let us start with dissolving part after the conjunction \emph{'provided that'}:
+It should be clear, that saying
+
+\begin{quote}\noindent\textbf{provided that} \emph{the terms permit modification
+of the work for the customer's own use \emph{\textbf{and}} reverse engineering
+for debugging such modifications}\end{quote}
+
+is totally equivalent to say that 
+
+\begin{quote}\noindent[\ldots] \textbf{provided that} \emph{\textbf{((}the terms
+permit modification of the work for the customer's own use\textbf{)}
+\emph{\textbf{and}} \textbf{(}the terms permit reverse engineering for debugging
+such modifications\textbf{))}}.
+\end{quote}
+
+We belief that there is no other possibility to understand this sentence with
+respect to the English language rules. Nevertheless, formally this is the first
+point where an OSLiC reader may disagree withn us. But if he wants to object our
+dissolution, he must deliver another interpreation of scope of the
+conjunction \emph{and} or he must deliver another denouement of the liguistic
+ellipsis. We belief, that one can not reasonably argue for such alternatives.
+
+Now, let us dissolve the syntactical compression positioned before the
+conjunction \emph{'provided that'}. It is established by using the two other
+conjunctions \emph{and} and \emph{or} and introduced by the subordinating phrase
+\emph{you may [\ldots]}. Unfortunately from a formal point of view one can read
+the phrase \emph{you may (X or Y and Z)} as two different groupings: either as
+\emph{you may ((X or Y) and Z)} or as \emph{you may (X or (Y and Z))}. 
+
+But fortunately we know from the semantic point of view that speaking about
+\emph{\enquote{[\ldots] combining \textbf{or} linking [\ldots something] to
+produce a work containing portions of the Library}} denotes two different
+methods \emph{to join} the components \emph{\enquote{[\ldots] to produce a work
+containing portions of the Library}}. So, let us for a moment simply replace the
+string \emph{\enquote{combine or link}} by the sting
+\emph{\enquote{*join}}\footnote{When the LGPL and the GPL were initially
+defined, the C programming language was the predominant model of software
+development. Knowing this method eases the understanding of these licenses. So,
+it is not totally wrong to take this token *join also as a curtsey to the C
+programming language}. This reduces the syntactical structure of the sentence
+back to the simple phrase \emph{you may (W and Z)} in which \emph{W} stands
+for \emph{(X or Y)}.
+
+Additionally we know that the phrase \emph{you may (W and Z)} itself is a
+condensed version of the explicit phrase \emph{ (you may W) and (you may Z)}.
+
+Finally we have to note, that the phrase of the discussed LGPL sentence being
+positioned before the conjunction \emph{'provided that'} contains
+also an linguistic ellipsis\footnote{cf.
+http://en.wikipedia.org/wiki/Ellipsis\_\%28linguistics\%29, wp.
+}: It literally says that you may *join the components \enquote{to produce a
+work containing portions of the Library \textbf{and} distribute that work under
+terms of your choice}. But it means that the second term \emph{that work} refers
+back to the previously introduced specification of \emph{a work containing
+portions of the Library}.
+
+Based on these explifications we are allowed understand the phrase before the
+conjunction \emph{'provided that'} as \emph{(you may W) and (you may Z')}:
+
+\begin{quote}\noindent\emph{\textbf{((}you may [\ldots] \emph{*join} a
+\enquote{work that uses the Library} with the Library to produce a work
+containing portions of the Library\textbf{) and (}you may [\ldots] distribute
+that work containing portions of the Library under terms of your
+choice\textbf{))}} \textbf{provided that} [\ldots]\end{quote}
+
+Also this dissolution of the LGPL, §6 phrase could theoretically be rejected by
+a reader of the OSLiC. But if he wants to deny our understanding he has to
+deliver other resolutions of the lingustic elliptical subphrases in it or he has
+to deliver another dissolvation of the logical conjunctions. It seems to be
+evident that such attempts would violate the English language and its grammar.
+
+Finally, there is another deeply embedded ellipis, which has to be resolved: In
+the part before the splitting conjunction \emph{'provided that'} we had to
+expand the abridging \emph{'that work'} by its intended explicated version
+\emph{'that work containing portions of the Library}. In the phrase after the
+splitting conjunction \emph{'provided that'} there is also mentioned the term
+\emph{'the work'}. This term can either refer to \emph{'the work that uses the
+library'} as one of the components which are joined, or it can refer to
+\emph{'the work containing portions of the Library'} as the result of joining
+the components. We decide to dissolve the elliptic abridgement by the phrase
+\emph{'the work containing portions of the Library'} which is stronger than the
+other.
+
+So -- overall -- we are allowed to rewrite the first sentence of the LGPL-v2, §6
+in the following form, namely without having changed its' meaning:
+
+\begin{verbatim}
+
+( ( you may *join a work that uses the Library with the Library
+            to produce a work containing portions of the Library )
+  AND 
+  ( you may distribute that work containing portions of the Library
+            under terms of your choice 
+) )
+PROVIDED THAT
+( ( the terms permit modification of the work for containing 
+                     portions of the Library the customer's own use )
+  AND
+  ( the terms permit reverse engineering for debugging such
+                     modifications     
+) )
+\end{verbatim}
+
+At this point we want to recommend the readers to verify that this 'structured
+presentation' does exactly mean the same as the initially quoted first sentence
+of the LGPL-v2, §6. But, if one of our reader wants to deny the equivalence, we
+must also ask him to point out which of our rewritings is wrong, why it is wrong
+and which alternative has to be selected for solving the syntactical challenge
+which disposed us to select solution. We ourselves strongly believe that both
+versions are completely equivalent.
+
+Now, the heavy work is done and we can do some simple self evident steps: At
+first, we are going to replace the meaningful terminal phrases our form by
+logical variables:
+\begin{description}
+  \item[$\Gamma$] :- (you may *join a work that uses the Library with the
+  Library to produce a work containing portions of the Library)
+  \item[$\Delta$] :- (you may distribute that work containing portions of the
+  Library under terms of your choice)
+  \item[$\Phi$] :- (the terms permit modification of the work for containing
+  portions of the Library the customer's own use)
+  \item[$\Sigma$] :- (the terms permit reverse engineering for debugging such
+  modifications)
+\end{description}
+
+Based on these definitions, we can syntatically reduce our LGPL-sentence to this
+little formular
+
+\begin{quote}\noindent $(\Gamma \; and \; \Delta) \; provided \;
+that \; (\Phi \; and \; \Sigma)$
+\end{quote}
+
+Then, we want to reset the more stylish conjunction \emph{'$\Omega$ provided
+that $\Theta$'} back to its more known equivalent, the implication \emph{'if
+$\Theta$ then $\Omega$'}. So, we get another version of our LGPL sentence:
+
+\begin{quote}\noindent $if \; (\Phi \; and \; \Sigma) \; then \;
+(\Gamma \; and \; \Delta)$
+\end{quote}
+
+Now, we are free to take this formular either as token of a procedural
+programming language. In this context, it means that if condition $\Phi$ and
+condition $\Sigma$ are true then firstly the command $\Gamma$ is executed and
+secondly the command $\Delta$. Or we can take this formular as a logical
+expression indicating that whenever this formular as whole is true and $\Phi$
+and $\Sigma$ as single terms are, then the conjuction of '$\Gamma$ and $\Delta$'
+must also be true. The difference of these interpretations is very slight: it is
+the difference of \emph{something has \textbf{to become} true} versus
+\emph{something has \textbf{to be} true}. So, let us first start with the
+logical view and discuss (not) existing differences at the end. For that
+purpose, we can rewrite our LGPL-v2, §6 sentence like this:
+
+\begin{quote}\noindent
+$(\Phi \wedge \Sigma) \rightarrow (\Gamma \wedge \Delta)$
+\end{quote}
+
+Finally, we can formally derive that a knowledge base which contains only the
+rule $(\Phi \wedge \Sigma) \rightarrow (\Gamma \wedge \Delta)$ is equivalent to
+a knowledgebase containing the two rules $(\Phi \wedge \Sigma) \rightarrow
+\Gamma)$ and $(\Phi \wedge \Sigma) \rightarrow \Delta)$. The equivalence can be
+proved on the base of truth-tables\footnote{One has simply to show, that $(\Phi
+\wedge \Sigma) \rightarrow (\Gamma \wedge \Delta)$ has the same truth values as
+the conjunction of the isolated rules $(((\Phi \wedge \Sigma) \rightarrow
+\Gamma) \wedge ((\Phi \wedge \Sigma) \rightarrow \Delta))$
+
+ }:
+
+\begin{enumerate}
+\item $(\Phi \wedge \Sigma) \rightarrow \Gamma$
+\item $(\Phi \wedge \Sigma) \rightarrow \Delta$
+\end{enumerate}
+
+So, now we know, that we can logically focus on one rule after antoher without
+having to fear that we are violating the meaning of the LGPL-v2, §6 sentence.
+Let us start\footnote{surprise, surprise} with the second rule $(\Phi
+\wedge \Sigma) \rightarrow \Delta$ by replacing the placeholders by its
+meanings. So, this rule says:
+
+\begin{quote}\noindent\emph{ [ (the terms [of your license] permit
+modification of the work for containing portions of the Library the customer's
+own use) $\wedge$ (the terms permit reverse engineering for debugging such
+  modifications) ] $\rightarrow$ [ you may distribute that work containing
+  portions of the Library under terms of your choice ]
+}
+\end{quote}
+
+
+
+\subsection{Reverse Engineering in the LGPL-v3}
+Also the LGPL-v3.0 contains a paragraph explictly referring the \emph{reverse
+enigeering}:
+
+
+\begin{quote}\emph{
+\enquote{You may convey a Combined Work under terms of your choice that,
+taken together, effectively \emph{do not restrict} modification of the portions
+of the Library contained in the Combined Work and \emph{reverse engineering} for
+debugging such modifications, if you also do each of the following
+[\ldots]}\footcite[cf.][\nopage wp]{Lgpl30OsiLicense2007a}}
+\end{quote}
+
+
+\subsection{Reverse Engineering in the GPL}
+
+\subsection{Reverse Engineering in the other Licenses}
+
+
+
+
+
+\subsection{Reverse Engineeringing as Right}
+
+Unfortunately, the meaning of \emph{reverse engineering} of software is not as
+clear as one whishes it should be\footnote{quotings}. But fortunately we can
+limit ourselves to the consensus, that \emph{reverse [software] engineering} is
+the opposite of \emph{normal [software] engineering}: Normal software
+engineering is done on the base of human readable and understandable software
+sources\footnote{The GPL uses 'the normal' \ldots}. So we can conclude on the
+one side, that there must exist another form of software which can not directly be
+understood and easily be modified. One instance of this form is the machine
+specific object code generated by compling the sources. Another instance might
+be the JAVA compilation code. Let us -- as it is often done -- simply call this
+other form of software the 'binary'. On the other side, we can conclude that
+\emph{reverse engineering} is the process to understand and modify an application on the base of these other forms by using other methods than the normal software development
+methods. One of these other methods is decompilation. Another might be using a
+hex editor.
+
+With respect to the open source concept, one has also to conclude that primarily
+\emph{reverse engineering} is right which must be granted by the copyright
+holders. There exist to ways to grant this right: Firstly, the license can grant
+this right explcitly. In this case it must contain the word \emph{reverse
+engineering} or -- for example -- decompilation. Secondly, the license can grant
+the right to analyze, to understand, and to modify the application generally, so
+that these rights also cover the work with
+
+\subsection{\ldots}
 
 Being sure that there does not exist any implicitly given admission to reversely
 engineer a program is important for those companies and developers who want to
@@ -57,12 +337,7 @@ To do so is no fault. The permissive open source licenses and the licenses with
 weak copy left are designed to enable this kind of use. So it is worth to
 investigate the facts of open source licenses and reverse enginerring.
 
-First of all, reverse engineering of software as a concept is not as clear as
-one whishes it would be. But one can turn it the other way round: if one gets a
-binary piece of software combined with the right to use it, to study and to
-modify it, then one has also the right to engineer it reversely by decompiling
--- simply because one gets not only the binary, but the necessary rights to investigate it
-sucessfully - in every meaning of \emph{reverse engineering}.
+
 
 Hence, open source licenses must either grant the right to use the software, to
 study it and to modify it or they must explicitly grant the right of reverse
@@ -82,30 +357,11 @@ only in form of binaries. If one wants to decompile a program licensed under
 such a permissive license this license must explictly or imlicitly also grant
 the right to decompile the binary.
 
-If one scans the texts of the licenses analysed by the OSLiC one has
-surprisingly to consider that (a) none of the licenses is talking about
-decompiling and that (b) only the LGPL-2.1 and the LGPL-3.0 deal with the
-terminus 'reverse engineering'. In the LGPL-2.1, one can read
 
-\begin{quote}\emph{
-\enquote{As an exception to the Sections above, you may also combine or
-link a \enquote{work that uses the Library} with the Library to produce a work
-containing portions of the Library, and distribute that work under terms of your
-choice, \emph{provided that the terms permit} modification of the work for the
-customer's own use and \emph{reverse engineering} for debugging such
-modifications.}\footcite[cf.][\nopage wp]{Lgpl21OsiLicense1999a}}
-\end{quote}
 
 
 And in the LGPL-3.0, one can find the sentence
 
-\begin{quote}\emph{
-\enquote{You may convey a Combined Work under terms of your choice that,
-taken together, effectively \emph{do not restrict} modification of the portions
-of the Library contained in the Combined Work and \emph{reverse engineering} for
-debugging such modifications, if you also do each of the following
-[\ldots]}\footcite[cf.][\nopage wp]{Lgpl30OsiLicense2007a}}
-\end{quote}
 
 Based on these predications one can find the statement that those developers who
 compliantly integrate an LGPL licensed library as component into an
