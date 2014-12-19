@@ -535,18 +535,55 @@ as logical implication \emph{$\rightarrow$}. So, we now get
         of the work containing portions of the Library   
 ) )
 \end{alltt}
+\end{description}
 
 \subsubsection{Empirical Clarification}
 
 Now, we can simplify this formula once more by regarding some empirical facts:
 
-If we are allowed to do $\Sigma$, in other words: to \emph{distribute that work
-containing portions of the Library under terms of your choice} and if we do so,
-then we must already have done $\Phi$, in other words: we must have
-\emph{*joined a work that uses the Library with the Library to produce a work
-containing portions of the Library} - whereby \emph{joining} means, that we have
-\emph{combined or linked a work that uses the Library with the Library to
-produce a work containing portions of the Library}.
+First, we should explicate an underlying empirically based understanding of
+$\Phi$ which enables us to link $\Phi$ and $\Sigma$ in better way:
+
+$\Phi$ explains that the \emph{work that uses the Library} and the used
+\emph{Library} itself together are joined and thereby tansformed into a
+\emph{work containing portions of the Library}. So, formally, one might ask,
+whether this newly generated \emph{work containing portions of the Library} also
+still \emph{uses the Library}?
+
+Unfortunately, it is empirically possible, that the process of combining the two
+components (a) copies all original portions of the library into a something like
+a 'dead end section' of the program where they are never excuted, and (b)
+replaces all original portions of the library by functionally equivalent
+portions of another library. Thus, the resulting \emph{work containing portions
+of the Library} indeed still contains portions of the Library, although it does
+not use it any longer. And hence, we are not allowed to say, that generally
+every work containing portions of a library also uses the
+library\footnote{\ldots even if we think that this is a really silly way to
+organize the joining process!}.
+
+But, fortunately, the normal computational process of \emph{combining and
+linking a work that uses the Library with the Library to produce a work
+containing portions of the Library} inherently preserves the utilization of the
+joined library: It is the general purpose of a software library to offer
+functions and data for really being used by applications. And vice versa,
+software developers want to use readily prepared libraries (or classes or
+anything else) for simplifying their own work. They chose a library because they
+know, that the standard compiling and linking process indeed guarantees, that
+indeed the chosen library is used (and not secretly substituted by a mysterious
+'equivalent'). Based on this empirical praxis we are nevertheless allowed to say
+that in general \emph{work containing portions of the Library} which has been
+built by the normal processes of combining, compiling, and linking source and
+object files indeed also uses the intended library.
+
+Based on this clarification we can indeed simplify the formula presented above:
+
+If we are allowed to do $\Sigma$, in other words: if we are allowed to
+\emph{distribute that work containing portions of the Library under terms of
+your choice} and if we really do so, then we must already have done $\Phi$, in
+other words: we must alraedy have \emph{*joined a work that uses the Library
+with the Library to produce a work containing portions of the Library} - whereby
+\emph{joining} means, that we have \emph{combined or linked a work that uses the
+Library with the Library to produce a work containing portions of the Library}.
 
 So, obviously, the $\Sigma$ empirically implies $\Phi$ (but not vice versa). But
 is this really correct? Let us check this statement by assuming the opposite:
@@ -559,37 +596,17 @@ the library in any sense, is indeed self-contradictory: based on the meaning of
 literally contains more or less parts of a library and at the same time is not
 combined with the library.
 
-But there is still one little empirical implication which also should become an
-explicated equitation: $\Phi$ explains that the \emph{work that uses the
-Library} and the used Library itself together are tansformed into a \emph{work
-containing portions of the Library}. So, formally, one might ask, whether this
-\emph{work containing portions of the Library} also still \emph{uses the
-Library}. Unfortunately, it is empirically possible, that the process of
-combining the two components (a) copies all original portions of the library
-into a something like a 'dead end section' of the program which is never
-excuted, and (b) replaces all original portions of the library by functionally
-equivalent portions of another library.
-
-
-The answer is of course 'Yes'. But let us nevertheless verify this
-result by a proof by contradiction: Let us assume that the \emph{work containing
-portions of the Library} does no longer use the Library although it has been
-built on the base of \emph{work that uses the Library} and the Library itself
-and although it indeed contains portions of the Library. This would be only
-possible, if (a) every element of the Library inside of the work had been moved
-to a 'dead code area' which will never be executed and if (b) at each place,
-where a piece of the Library has been extracted functionally replaced by a
-functional equivalent, but literally different foreign element
-
-So, we can indeed
-conclude that $\Sigma$ empirically implies $\Phi$; and we can reduce the
-LGPL-v2-§6-sentence to its' real core:
+And because we also have already determined that -- in the normal world of
+software development -- a \emph{work containing portions of the Library} also
+\emph{uses the Library}, we can now conclude that $\Sigma$ empirically implies
+$\Phi$ (in the normal world of software development). Thuis, we can reduce
+the LGPL-v2-§6-sentence to its' real core:
 
 \begin{quote}
 \begin{alltt}   
 (   [\(\Sigma\)] you may 
         distribute that work containing portions of the 
-        Library under terms of your choice 
+        Library\(\footnote{which uses the library}\) under terms of your choice 
 ) 
 \(\rightarrow\)
 ( ( [\(\Gamma\)] the terms of your choice permit 
@@ -601,143 +618,27 @@ LGPL-v2-§6-sentence to its' real core:
         of the work containing portions of the Library   
 ) )
 \end{alltt}
-
-This essence of the LGPL-v2-§6-sentence directly explain us under which
-conditions we have to allow reverse engineering for using LGPL licensed
-components compliantly. We have only to determine when a work 
-
- the outstanding rest can be analyzed straight
-forward:
-
 \end{quote}
 
+This is indeed the essence of the LGPL-v2-§6-sentence. It logically explain us
+that we have to \emph{allow reverse engineering} and modification of a
+\emph{work containing portions of the Library} if we distribute it (Modus
+Ponens) and that we are \emph{not allowed to distribute a work containing portions of
+the Library}, if we do \emph{not allow} its modification or \emph{reverse
+engineering} (Modus Tollens).
 
-\end{description}
+Thus, the only issue which ever has to be investigated for using LGPL licensed
+libraries compliantly is this: Does the distributed work contain portions of the
+library?
 
+\subsubsection{Final Conclusion}
 
-
-\subsection{Reverse Engineering in the LGPL-v3}
-Also the LGPL-v3.0 contains a paragraph explicitly referring the \emph{reverse
-enigeering}:
-
-
-\begin{quote}\emph{
-\enquote{You may convey a Combined Work under terms of your choice that,
-taken together, effectively \emph{do not restrict} modification of the portions
-of the Library contained in the Combined Work and \emph{reverse engineering} for
-debugging such modifications, if you also do each of the following
-[\ldots]}\footcite[cf.][\nopage wp]{Lgpl30OsiLicense2007a}}
-\end{quote}
-
-
-\subsection{Reverse Engineering in the GPL}
-
-\subsection{Reverse Engineering in the other Licenses}
-
-\subsection{Reverse Engineeringing as Right}
-
-Unfortunately, the meaning of \emph{reverse engineering} of software is not as
-clear as one whishes it should be\footnote{quotings}. But fortunately we can
-limit ourselves to the consensus, that \emph{reverse [software] engineering} is
-the opposite of \emph{normal [software] engineering}: Normal software
-engineering is done on the base of human readable and understandable software
-sources\footnote{The GPL uses 'the normal' \ldots}. So we can conclude on the
-one side, that there must exist another form of software which can not directly be
-understood and easily be modified. One instance of this form is the machine
-specific object code generated by compling the sources. Another instance might
-be the JAVA compilation code. Let us -- as it is often done -- simply call this
-other form of software the 'binary'. On the other side, we can conclude that
-\emph{reverse engineering} is the process to understand and modify an application on the base of these other forms by using other methods than the normal software development
-methods. One of these other methods is decompilation. Another might be using a
-hex editor.
-
-With respect to the open source concept, one has also to conclude that primarily
-\emph{reverse engineering} is right which must be granted by the copyright
-holders. There exist to ways to grant this right: Firstly, the license can grant
-this right explcitly. In this case it must contain the word \emph{reverse
-engineering} or -- for example -- decompilation. Secondly, the license can grant
-the right to analyze, to understand, and to modify the application generally, so
-that these rights also cover the work with
-
-\subsection{\ldots}
-
-Being sure that there does not exist any implicitly given admission to reverse 
-engineer a program is important for those companies and developers who want to
-keep their own work closed although it uses open source software as components.
-To do so is no fault. The permissive open source licenses and the licenses with
-weak copy left are designed to enable this kind of use. So it is worth to
-investigate the facts of open source licenses and reverse enginerring.
-
-
-
-Hence, open source licenses must either grant the right to use the software, to
-study it and to modify it or they must explicitly grant the right of reverse
-engineering or decompiling.
-
-Generally, closed software is forwarded with the intention not to give the
-recipients access to the source code. Therefore closed software is mostly
-delivered in form of binaries. Hence, in case of closed software it is mostly
-not allowed to decompile the distributed binaries.
-
-As opposed to this, normally open source software is not affected by the problem
-of reverse engineering - at least if the source code of the software is also
-accessible: Licenses with strong or weak copyleft require that a distributed
-binary must be accompanied either by the corresponding source code itself or by
-an offer to get it. Permissive licenses allow also to distribute the software
-only in form of binaries. If one wants to decompile a program licensed under
-such a permissive license this license must explicitly or imlicitly also grant
-the right to decompile the binary.
-
-
-
-
-And in the LGPL-3.0, one can find the sentence
-
-
-Based on these predications one can find the statement that those developers who
-compliantly integrate an LGPL licensed library as component into an
-'overarching' program, must also grant to all recipients of this program the
-right to decompile the overarching program.  In other words: it is sometimes argued
-that the LGPL allows reverse engineering of all works that use the
-library\footnote{In general, the situation seems to be not as clear as possible.
-For example, an important American author states, that the sections 5 and 6 of
-the LGPL \enquote{[\ldots] are an impenetrable maze of technological babble} and
-that they \enquote{[\ldots] should not be in a general-purpose software
-license}\cite[cf.][124]{Rosen2005a}. And he does not discuss the granting of
-the LGPL to execute a reverse engineering.}.
-
-Despite of these substantial expressions and despite of the reputation of all
-these witnesses, the OSLiC wants to show, that the LGPL actually requires to
-allow a reverse engineering only in case of distributing a statically linked
-program. For accepting this conclusion, one has to follow the sentences of the
-LGPL-2.1 license very strictly:
-
-First of all, the LGPL-2.1 distinguishes between a \enquote{work based the
-Library} and a \enquote{work that uses the Library}. And a \enquote{Library} is
-defined as \enquote{a collection of software functions and/or data prepared so
-as to be conveniently linked with application programs (which use some of those
-functions and data) to form executables}\footcite[cf.][\nopage
-wp §0]{Lgpl21OsiLicense1999a}. This definition already contains an important
-stipulation: neither the library itself (which delivers functions etc.) nor the
-program (which wants to use the delivered elements) is an executable.
-Executables are formed by linking the library and the program. Based on this
-viewpoint, the LGPL-2.1 additionally determines that 
-
-\begin{quote}\emph{\enquote{
-A \enquote{work based on the Library} means either the Library or any derivative
-work under copyright law: that is to say, a work containing the Library or a portion
-of it, either verbatim or with modifications and/or translated straightforwardly
-into another language.}\footcite[cf.][\nopage wp §0]{Lgpl21OsiLicense1999a} }
-\end{quote}
-
-Hence, in the wording of the LGPL-2.1, you have created a \enquote{derivative
-work} of the library whenever you have expanded or reduced \enquote{the
-collection of software functions and/or data}, whenever you have
-\enquote{modified} some of its \enquote{functions and/or data}, and whenever you
-have copied \enquote{portions} of the library into another work. And this
-process of generating a derivative work does not depend on the format, neither
-on that of the library nor on that of the other work.\footcite[cf.][\nopage wp
-§0]{Lgpl21OsiLicense1999a}.
+We will now show that -- from the viewpoint of LGPL-v2 -- only the
+integrated process of compiling \emph{works using the Library} to object files
+and statically linking these files to the already compiled Library generates
+\emph{works containing portions of the Library}. In other words: we will show
+that we have to allow reverse engineering if only if we distribute works
+statically linked to the Libary they use Library. 
 
 But the LGPL-2.1 knows that there nevertheless might exist software which - in
 this sense - is not a derivative work of the Library. If such \enquote{a
@@ -849,5 +750,50 @@ is linked with the LGLP license library.
 
 The answer is: No, he does not get the right to do so. The LGPL-2.1 clearly says
 the right of reverse engineering is only given to third party, if 
+
+\subsubsection{Final Securing}
+
+We have done a lot of work: At first we unfolded and dissolved stylisch
+condensed formulations used in the original LGPL-v2-§6 sentence back to their
+linguistically explicit form. At second we explicated the logical structure of
+the sentence. At third we empirically carved out the real meaning of the
+sentence. And finally we mapped the triggering part of that rule to a definitive
+fact. Indeed, a lot of work for only one sentence.
+
+So, it is a good step to verify that deduced result fits the spirit and the
+goals of the LGPL-v2 perfectly.
+
+
+\subsection{Reverse Engineering in the LGPL-v3}
+
+Now we can shorten the way to understand the meaning of the LGPL-v3 concerning
+\emph{reverse enigeering}. Also the LGPL-v3.0 contains only one paragraph
+explicitly referring the \emph{reverse enigeering}:
+
+
+\begin{quote}\emph{
+\enquote{You may convey a Combined Work under terms of your choice that,
+taken together, effectively \emph{do not restrict} modification of the portions
+of the Library contained in the Combined Work and \emph{reverse engineering} for
+debugging such modifications, if you also do each of the following
+[\ldots]}\footcite[cf.][\nopage wp]{Lgpl30OsiLicense2007a}}
+\end{quote}
+
+
+\subsection{Reverse Engineering in the GPL}
+
+\subsection{Reverse Engineering in the other Licenses}
+
+
+
+
+
+
+
+
+
+
+
+
 
 %\bibliography{../../../bibfiles/oscResourcesEn}
