@@ -41,7 +41,7 @@ the capitalized word \enquote{Library} for denoting a library which
 chapter(s) we follow this interpretation. } }
 \end{quote}
 
-There are three strategies for dealing with such provisions. One can try to
+There are three strategies for dealing with such provisions: one can try to
 fully honor its meaning, one can mitigate its meaning, or one can avoid to
 discuss this requirement altogether:
 
@@ -119,7 +119,7 @@ open source community itself. And -- as far as we know -- at least some of these
 companies preventively prohibit their developers to embed LGPL licensed
 components into programs which contain business relevant techniques.
 Unfortunately, this consequence does not only obstruct access to a large set of
-well written free software, but it scarcely possible to obey such an
+well written free software, but it is scarcely possible to obey such an
 interdiction consequently: The glibc, which enables the programms to talk with
 the kernel of the GNU/Linux system\footnote{cf.
 http://www.gnu.org/software/libc/}, is licensed under the LGPL\footnote{cf.
@@ -149,15 +149,15 @@ these programs become free software too\footcite[cf.][\nopage wp,
 
 So, if the LGPL had indeed determined that every program linked or combined to
 any LGPL library may be reverse engineered, then the LGPL would have an effect
-contrary to its own intention. It would have introduced something like security
-by obscurity: First, the LGPL allows to protect the internals of your own work
-against investigation because the code of the non-free programm using the
-library does not necessarily have to be published as well\footnote{The weak
-copyleft has been introduced for encouring the widest possible use of the
-library}. But in the end the user would also be allowed to reverse engineer the
+contrary to its own intention. It would have introduced something like
+\emph{'security by obscurity'}: First, the LGPL allows to protect the internals
+of your own work against investigation because the code of the non-free programm
+using the library does not necessarily have to be published as well\footnote{The
+weak copyleft has been introduced for encouring the widest possible use of the
+library.}. But in the end the user would also be allowed to reverse engineer the
 received binary -- and hence would nevertheless be able discover all
 internals\footnote{It would only cost a little more effort - as security by
-obscurity indicates.} By this means, the LGPL-v2 would have undermined its' own
+obscurity indicates.}. By this means, the LGPL-v2 would have undermined its' own
 raison d'$\grave{e}$tre introduced by its' inventors: under such circumstances
 there probably would have been less hope that any LGPL library could have become
 a defacto standard.
@@ -167,10 +167,13 @@ sophisticated experts. They never would have published such an inconsistent
 document. So, this dissent read in(to) the document is a strong indicator that
 there must be a better way to understand the license. And thus, it is up to us,
 the followers, to explicate a more adequate interpretation. Of course, such an
-interpretation must be grounded on the written text. We, the scholars, must read
-the license very strictly. We have to deduce 'understandings' only by matching
-the interpretations explicitly, strictly, and reasonably back to the license
-text itself.
+interpretation must be grounded on the written text. We, the scholars, are not
+allowed to add our own wishes. We must read the license very strictly. We have
+to deduce 'understandings' only by matching the interpretations explicitly,
+strictly, and reasonably back to the license text itself.
+
+
+NEU FORMULIEREN: start
 
 Encouraged by the indication that a better understanding of the license may
 exist and contrary to the other strategies, we are going to prove that, in
@@ -193,6 +196,8 @@ We hope that our analysis, grounded on the license text itself, will support
 companies and people to compliantly use open source software more often and with
 less scruples.
 
+NEU FORMULIEREN: ende
+
 Hence, let us prove our position 'bottom up'. Let us firstly show that it is
 true for the LGPL-v2 -- by explicating the license text lingually, then
 logically, and finally empirically, before we infer the correct understanding.
@@ -200,7 +205,7 @@ Then let us show that it is also true for the LGPL-v3. And in the end let us
 show that it is true for all other licenses, analysed by the OSLiC.
 
 \subsection{Reverse Engineering in the LGPL-v2}
-The LGPL-v2.1 contains one sentence which literally refers to the issues of 
+The LGPL-v2.1 contains one sentence which literally refers to the issues of
 \emph{reverse engineering}:
 
 \begin{quote}\noindent\emph{\enquote{[\ldots] you may [\ldots] combine or link a
@@ -208,8 +213,16 @@ The LGPL-v2.1 contains one sentence which literally refers to the issues of
 containing portions of the Library, and distribute that work under terms of your
 choice, provided that the terms permit modification of the work for the
 customer's own use and \emph{reverse engineering} for debugging such
-modifications.}\footcite[cf.][\nopage wp]{Lgpl21OsiLicense1999a}}
-\end{quote}
+modifications.}\footnote{\cite[cf.][\nopage wp. §6. ]{Lgpl21OsiLicense1999a}.
+The first ellipse in this citation -- notated by the string '[\ldots]' -- refers
+to the phrase \enquote{As an exception to the Sections above,}, the second to
+the phrase \enquote{also}. These words together want to indicate, that the LGPL
+offers its §6-way-of-distribution as an exception of its default way. The kind
+of way is not affected by this hint. Thus, we feel free to erase this contextual
+link.}}\end{quote}
+
+Hereinafter, we will sometimes denote these lines by
+the word \emph{LGPL2-RefEng-Sentence}.
 
 \subsubsection{Linguistical Clarification}
 
@@ -223,12 +236,7 @@ produce a work containing portions of the Library \textbf{and} distribute that
 work under terms of your choice, \textbf{provided that} the terms permit
 modification of the work for the customer's own use \textbf{and} \emph{reverse
 engineering} for debugging such modifications.}\footnote{\cite[cf.][\nopage wp.
-emphasis KR.]{Lgpl21OsiLicense1999a}. This first ellipse, notated by the string
-'[\ldots]' refers to the phrase \enquote{As an exception to the Sections
-above,}, the second to the phrase \enquote{also}. These words want to indicate,
-that the LGPL offers its §6-way-of-distribion as an exception of its default
-way. The kind of way is not affected by this hint. Thus, we feel free to
-erase this contextual link. } }
+emphasis KR.]{Lgpl21OsiLicense1999a}.}}
 \end{quote}
 
 It is evident that the conjunction \emph{'provided that'} is splitting the
@@ -289,16 +297,16 @@ that work containing portions of the Library under terms of your
 choice\textbf{))}} \textbf{provided that} [\ldots]\end{quote}
 
 Theoretically, a reader of the OSLiC could reject our first dissolution of the
-LGPL-v2-§6-sentence. But for reasonably denying our interpretation he has to
+LGPL2-RefEng-Sentence. But for reasonably denying our interpretation he has to
 deliver other resolutions of the lingustic elliptical subphrases or other
 dissolvations of the conjunctions. Fortunately, it seems to be evident that such
 attempts must violate the English grammar.
 
 Let us now dissolve the part after the conjunction \emph{'provided that'}:
-With respect to the \emph{'and'}, the subphrase \emph{the terms permit}
-syntactically refer to both, the \emph{modifcation} and the \emph{reverse
-engineering}: An embedded conjunction \emph{'and'} allows to use a more stylish
-grammatical compaction. So, it should be clear, that saying
+With respect to the subordinated conjunction \emph{'and'}, the subphrase
+\emph{the terms permit} syntactically refers to both, the \emph{modifcation} and
+the \emph{reverse engineering}: An embedded conjunction \emph{'and'} allows to
+use a more stylish grammatical compaction. So, it should be clear, that saying
 
 \begin{quote}\noindent\textbf{provided that} \emph{the terms permit modification
 of the work for the customer's own use \emph{\textbf{and}} reverse engineering
@@ -318,13 +326,13 @@ permit modification of the work for the customer's own use\textbf{)}
 such modifications\textbf{))}}.
 \end{quote}
 
-We believe that there is no other possibility to understand this sentence with
-respect to the rules of the English language. Nevertheless, this is the next
-point where an OSLiC reader may formally disagree with us. But if he really
-wants to object our dissolution, he must deliver another valid interpreation of
-the scope of the conjunction \emph{and} or he must deliver another resolutions
-of the linguistic ellipsis. But we reckon, that one can not reasonably argue for
-such alternatives.
+We believe that there is no other possibility to understand this part of the 
+LGPL2-RefEng-Sentence with respect to the rules of the English language.
+Nevertheless, this is the next point where an OSLiC reader may formally disagree
+with us. But if he really wants to object our dissolution, he must deliver
+another valid interpreation of the scope of the conjunction \emph{and} or he
+must deliver another resolutions of the linguistic ellipsis. But we reckon, that
+one can not reasonably argue for such alternatives.
 
 Finally, there are other deeply embedded ellipses, which need to be resolved
 as well:
@@ -382,15 +390,16 @@ PROVIDED THAT
 
 At this point we must recommend all our readers to verify that this 'structured
 explicated presentation' does exactly mean the same as the intially quoted
-LGPL-v2-§6-sentence. We are now going to discuss some of its' logical aspects by
-some formal transformations. For accepting our following operations and linking
-the results back to the original LGPL-v2-§6-sentence, it is very helpful to know
-that one already had to accept the equivalence of this explicated form and the
-more condensed original version. For reviewing the equivalence the reader should
-ask himself which of our rewritings are wrong, why they are wrong and which
-alternatives can reasonably be offered for solving the syntactical issues which
-disposed us to chose our solutions. Again, we ourselves -- of course -- are
-profoundly convinced that both versions are completely equivalent.
+LGPL2-RefEng-Sentence. We are now going to discuss some of its' logical aspects
+by some formal transformations. For accepting our following operations and
+linking the results back to the original LGPL2-RefEng-Sentence, it is very
+helpful to know that one already has accepted the equivalence of this
+explicated form and the more condensed original version. For reviewing the
+equivalence the reader should ask himself which of our rewritings are wrong, why
+they are wrong and which alternatives can reasonably be offered for solving the
+syntactical issues which disposed us to chose our solutions. Again, we ourselves
+-- of course -- are profoundly convinced that both versions are completely
+equivalent.
 
 \subsubsection{Logical Clarification}
 
@@ -410,9 +419,9 @@ phrases of our form by some logical variables:
   \item[$\Omega$] :- \emph{$\Phi$ and $\Sigma$}
 \end{description}
 
-Based on these definitions, we can syntactically reduce our LGPL-v2-§6-sentence
-to the formula \emph{$(\Gamma$ and $\Delta)$ provided that $(\Phi$ and
-$\Sigma)$} or -- even shorter -- to \emph{$(\Theta$ provided that
+Based on these definitions, we can syntactically reduce the
+LGPL2-RefEng-Sentence to the formula \emph{$(\Gamma$ and $\Delta)$ provided that
+$(\Phi$ and $\Sigma)$} or -- even shorter -- to \emph{$(\Theta$ provided that
 $\Omega)$}.
 
 Now, we have to clarify the meaning of the conjunction \emph{'provided that'}:
@@ -421,19 +430,14 @@ Obviously, \emph{provided that} means something like \emph{under the
 precondition that}. So, one might try to take this conjunction as another more
 stylish version of the more common \emph{if(\ldots)then(\ldots)}-formula, also
 known as logical implication\footnote{Actually the logical implication and the
-computational if-then-construct are not equivalent. Fortunately, we can later on
-show, that in the context of this discussion the difference can be ignored.} But
-there might also exist people who tend to say that -- beyond this traditional
-interpretation -- the conjunction \emph{provided that} has also a temporal
-dimension: \emph{$\Phi$ and $\Sigma$} must be realized, \textbf{before}
-\emph{$\Gamma$ and $\Delta$} can happen.
-
-Nevertheless, at first we have to consider the process of sequencing the
-linguistic form into a logical formula: if we take the conjunction
-\emph{provided that} as another form of the logical implication, it is not
-obviously clear, which part of the  linguistic sentence must become the premise,
-and which the conclusion. Does \emph{$\Theta$ provided that $\Omega$} mean
-\emph{if $\Theta$ then $\Omega$} or \emph{if $\Omega$ then $\Theta$}?
+computational if-then-construct are not equivalent. Fortunately, we later on can
+show, that in the context of this discussion the difference can be ignored.}.
+Thus, we have to consider the process of sequencing the linguistic form into a
+logical formula: if we take the conjunction \emph{provided that} as another form
+of the logical implication, it is not obviously clear, which part of the 
+linguistic sentence must become the premise, and which the conclusion. Does
+\emph{($\Theta$ provided that $\Omega$)} mean \emph{(if $\Theta$ then $\Omega$)}
+or \emph{(if $\Omega$ then $\Theta$)}?
 
 Obviously, \emph{provided that} wants to establish something like a
 precondition. So, one might conclude that \emph{$(\Theta$ provided that
@@ -444,8 +448,8 @@ intended purpose of the corresponding LGPL-v2-section: there, the LGPL wants to
 regulate the distribution of works containing portions of LGPL libraries.
 
 For facilitating the understanding of our argumentation, let us first check
-whether our interpretation fits the purpose of the LGPL. Thus let us unfold the
-slightly reduced version \emph{$(\Sigma$ $\rightarrow$ $\Delta))$} back to the
+whether our interpretation fits the purpose of the LGPL. Thus, let us unfold the
+slightly reduced version \emph{$(\Sigma$ $\rightarrow$ $\Delta)$} back to the
 corresponding verbal form:
 
 \begin{quote}\noindent\emph{\textbf{if (} [\ldots] the terms permit reverse
@@ -456,41 +460,42 @@ portions of the Library under the terms of your choice.\textbf{)}}\end{quote}
 Now we can better see the problem: An implication as a whole is false only if
 the premise is true and the conclusion is false. In all other cases it is true.
 Especially, it is true, if the premise is false: in this case the truth value of
-the conclusion does not matter in any sense. Thus, iIf we take this implication
+the conclusion does not matter in any sense. Thus, if we take this implication
 as a rule, which shall determine our behaviour, then this implication only
 supports us, if we already have decided to permit reverse engineering. In this
 case the rule tells us that we are allowed to distribute the work containing
-portions of the Library. But from the decision, that we will not permit reverse
-engineering follows nothing - because a false premise does not influence the
-truth value of the conclusion. Especially, it does not follow that we may not
-distribute the work containing portions of the Library. So, from the viewpoint
-of the formal logic this translation of the original conjunction \emph{'provided
-that'} says, that if the terms of your own license do not permit reverse
-engineering for debugging modifications of the work containing portions of the
-Library\footnote{The premise is false.} then you may or may not distribute that
-work containing portions of the Library under the terms of your
+portions of the Library. But from the converse decision, that we will not permit
+reverse engineering follows nothing - because a false premise does not influence
+the truth value of the conclusion. Especially, it does not follow that we may
+not distribute the work containing portions of the Library. So -- from the
+viewpoint of the formal logic -- this translation of the original conjunction 
+\emph{'provided that'} says, that if the terms of your own license do not permit
+reverse engineering for debugging modifications of the work containing portions
+of the Library\footnote{The premise is false.}, then you may or may not
+distribute that work containing portions of the Library under the terms of your
 choice\footnote{The truth value of the conlusion is undetermined by the rule.}.
 Hence, we must state that this interpretation does not fulfill the purpose of
 the LGPL-V2: if reverse engineering is not allowed, the distribution of the work
 containing portions of the Library is not regulated. We have to conclude, that
-this sequencing the LGPL-v2-§6-sentence as a logical implication is simply
+this sequencing the LGPL2-RefEng-Sentence as a logical implication is simply
 wrong.
 
 But we deduced this consequence from a slighty reduced form of our
-LGPL-v2-§6-sentence. Thus, we still have to ask, whether we have to derive this
-conclusion also on the base of the completely unfolded formula \emph{$((\Phi$
-$\wedge$ $\Sigma)$ $\rightarrow$ $(\Gamma$ $\wedge$ $\Delta))$}? The answer is
-yes: the premise \emph{$((\Phi$ $\wedge$ $\Sigma)$} contains a logical
-conjunction. So the truth value of the whole formula depends on the truth value
-of on the terminal statement $\Sigma$: If we decide not to permit reverse
-engineering, then the premise as whole is false, regardless we forbid or allow
-modifications. And hence the premise does not influence the truth value of the
-conclusion. So, there is no way, to conclude that have or do not have to allow
-reverse engineering. Hence we can transfer our result, deduced for the slightly
-reduced formula to the unfolded complete formula.
+LGPL2-RefEng-Sentence. Thus, we still have to ask, whether we have to derive
+this conclusion also on the base of the completely unfolded formula
+\emph{$((\Phi$ $\wedge$ $\Sigma)$ $\rightarrow$ $(\Gamma$ $\wedge$ $\Delta))$}?
+The answer is yes: the premise \emph{$((\Phi$ $\wedge$ $\Sigma)$} contains a
+logical conjunction. So the truth value of the whole premise depends on the
+truth value of each of its terminal statements, particularly on that of the
+statement $\Sigma$: If we decide not to permit reverse engineering, then the
+premise as whole is false, regardless we forbid or allow modifications. And
+hence the premise does not influence the truth value of the conclusion. So,
+there is no way, to conclude that we have to allow or that we do not have to
+allow reverse engineering. Hence we can transfer our result, deduced for the
+slightly reduced formula to the unfolded complete formula.
 
-Let us now test the other possibility. Let us ask, whether \emph{$\Theta$
-provided that $\Omega$} means \emph{if $\Theta$ then $\Omega$} or -- more
+Let us now test the other possibility. Let us ask, whether \emph{()$\Theta$
+provided that $\Omega$)} means \emph{(if $\Theta$ then $\Omega$)} or -- more
 logically notated -- \emph{$((\Gamma$ $\wedge$ $\Delta)$ $\rightarrow$ $(\Phi$
 $\wedge$ $\Sigma))$}. If we again for a moment focus on the reduced version
 \emph{$(\Delta$ $\rightarrow$ $\Sigma)$} and dissolve our replacements, then we
@@ -526,11 +531,12 @@ the conclusion. In our discussion, this aspect is totally covered by the Modus
 Ponens derivation of the logical interpretation. And the Modus Tollens
 derivation of the logical interpretation on the other side does not play any
 role in a procedural if-then-command. So, it was the right decision to
-understand the LGPL-v2-§6-sentence logically and not as procedual command.}, but
+understand the LGPL2-RefEng-Sentence logically and not as procedual command.}, but
 as logical implication \emph{$\rightarrow$}. So, we now get
 
 \begin{description}
-  \item[\#] $\Theta$ $\rightarrow$ $\Omega$
+  \item[\#]  $\Theta$ provided that $\Omega$
+  \item[$\equiv$] $\Theta$ $\rightarrow$ $\Omega$
   \item[$\equiv$] ($\Phi$ $\wedge$ $\Sigma$) $\rightarrow$ ($\Gamma$ $\wedge$
   $\Delta$)
   \item[$\equiv$]
@@ -557,16 +563,14 @@ as logical implication \emph{$\rightarrow$}. So, we now get
 
 \subsubsection{Empirical Clarification}
 
-Now, we can simplify this formula once more by regarding some empirical facts:
+Now, we can simplify this formula once more by regarding some empirical facts
+and explicating some underlying understandings:
 
-First, we should explicate an underlying empirically based understanding of
-$\Phi$ which enables us to link $\Phi$ and $\Sigma$ in better way:
-
-$\Phi$ explains that the \emph{work that uses the Library} and the used
-\emph{Library} itself together are joined and thereby tansformed into a
-\emph{work containing portions of the Library}. So, formally, one might ask,
-whether this newly generated \emph{work containing portions of the Library} also
-still \emph{uses the Library}?
+The first sentence $\Phi$ explains that the \emph{work that uses the Library}
+and the used \emph{Library} itself together are joined and thereby tansformed
+into a \emph{work containing portions of the Library}. So, formally, one might
+ask, whether this newly generated \emph{work containing portions of the Library}
+also still \emph{uses the Library}?
 
 Unfortunately, it is empirically possible, that a process for combining the two
 components (a) copies all original portions of the library into a something like
@@ -574,10 +578,9 @@ a 'dead end section' of the program where they are never excuted, and (b)
 replaces all original portions of the library by functionally equivalent
 portions of another library. Thus, the resulting \emph{work containing portions
 of the Library} indeed still contains portions of the Library, although it does
-not use it any longer. And hence, we are not allowed to say, that generally
-every work containing portions of a library also uses the
-library\footnote{\ldots even if we think that this is a really silly way to
-organize the joining process!}.
+not use it any longer. And hence, we are not allowed to say, that every work
+containing portions of a library also uses the library\footnote{\ldots even if
+we think that this is a really silly way to organize the joining process!}.
 
 But, fortunately, the normal computational process of \emph{combining and
 linking a work that uses the Library with the Library to produce a work
@@ -593,38 +596,51 @@ allowed to say that a \emph{work containing portions of the Library}
 which has been built by the normal processes of combining, compiling, and
 linking source and object files, indeed also uses the intended library.
 
-Based on this clarification we can now simplify the formula presented above:
+Now, we can consider another correlation between the first sentence $\Phi$
+and the second sentence $\Sigma$:
 
-If we are allowed to do $\Sigma$, in other words: if we are allowed to
-\emph{distribute that work containing portions of the Library under terms of
-your choice} and if we really do so, then we must already have done $\Phi$, in
-other words: we must already have \emph{*joined -- respectively: combined or
-linked -- a work that uses the Library with the Library to produce a work
-containing portions of the Library}.
+We could now suppose, that we must already have done $\Phi$, in other words:
+that we must already have \emph{*joined -- respectively: combined or linked -- a
+work that uses the Library with the Library to produce a work containing
+portions of the Library}, if we are going to compliantly \emph{distribute that
+work containing portions of the Library under terms of your choice}. Or briefly
+spoken: we could try to conclude that $\Sigma$ empirically implies
+$\Phi$\footnote{but not vice versa.}. 
 
-So, obviously, the $\Sigma$ empirically implies $\Phi$\footnote{but not vice
-versa.}. But is that correct? Let us check this statement by assuming the
-opposite: If the contrary is true, then there must exist a \emph{work containing
-portions of the Library} which has been gained from the library without that both
-components have been linked or combined. To talk about a \emph{work containing
-portions of the Library} and also to state, that this work is not combined with
-the library in any sense, is indeed self-contradictory: based on the meaning of
-\emph{being combined with} it seems empirically unpossible that a work literally
-contains more or less parts of a library and at the same time is not combined
-with the library.
+But is this inference indeed correct? Let us check this statement by assuming
+the opposite: If the contrary would be true, then there had to exist a
+\emph{work containing portions of the Library} which had been gained from the
+library without that both components were linked or combined. But from the
+conclusion above we already know that \emph{works containing portions of the
+Library}, which have been produced by the standard computational processes of
+\emph{combining and linking a work that uses the Library with the Library},
+indeed also \emph{use the Library}. Thus, it would be self-contradictory to talk
+about a \emph{work containing portions of the Library}, which was produced by
+the standard combining and linking processes, and similarily to state, that
+exactly this work is not combined with the library in any sense. And from a
+proof by contradiction we may conclude to the logical opposite:
 
-And because we also have already determined that -- in the normal world of
-software development -- a \emph{work containing portions of the Library} also
-\emph{uses the Library}, we can now conclude that $\Sigma$ empirically implies
-$\Phi$ (in the normal world of software development). Thus, we can reduce
-the LGPL-v2-§6-sentence to its' real core:
+Firstly, we may say with respect to the meaning of \emph{being standardly
+combined or linked with}, that it is necessarily true that a computional work,
+which is standardly produced on the base of \emph{a work that uses the Library}
+and \emph{the Library} and which therefore literally contains more or less
+\emph{portions of a library}, indeed uses the \emph{the Library} and \emph{is}
+therefore \emph{combined with the library}.
+
+Secondly, we may also conclude with respect to the meaning of \emph{being
+standardly combined or linked with} , that $\Sigma$ empirically implies $\Phi$
+(in the standardized world of software development), because $\Phi$ must ever
+have been executed when $\Sigma$ is going to be realized.
+
+Thus, we can now reduce the LGPL2-RefEng-Sentence to its' real core:
 
 \begin{quote}
 \begin{alltt}   
-(   [\(\Sigma\)] you may 
+(   [\(\Sigma\)] you may
         distribute that work containing portions of the 
-        Library\(\footnote{which uses the library}\) under terms of your choice 
-) 
+        Library\(\footnote{which previously has been prepared for being distributed by standardly combining and
+linking the work that uses the Library with the Library in a way that this prepared work indeed
+also uses the Library}\) under terms of your choice )   
 \(\rightarrow\)
 ( ( [\(\Gamma\)] the terms of your choice permit 
         modification of the work containing portions of 
@@ -637,91 +653,125 @@ the LGPL-v2-§6-sentence to its' real core:
 \end{alltt}
 \end{quote}
 
-This is indeed the essence of the LGPL-v2-§6-sentence. It logically explain us
-that we have to \emph{allow reverse engineering} and modification of a
+This is indeed the essence of the LGPL2-RefEng-Sentence. It logically explains
+us that we have to \emph{allow reverse engineering} and modification of a
 \emph{work containing portions of the Library} if we distribute it (Modus
-Ponens) and that we are \emph{not allowed to distribute a work containing portions of
-the Library}, if we do \emph{not allow} its modification or \emph{reverse
-engineering} (Modus Tollens).
+Ponens) and that we are \emph{not allowed to distribute a work containing
+portions of the Library}, if we do \emph{not allow} its modification or
+\emph{reverse engineering} (Modus Tollens).
 
-Thus, for applying this rule correctly, one only must know whether the work
-contains portions of the Library or not.
+Thus, for applying this rule correctly, we now only must know whether a work
+indeed contains portions of the Library or not.
 
 \subsubsection{Final Conclusion}
 
-Unfortunately, there are more than one environments for developing
-software, which all must be considered, if we want to answer this question in
-detail. We see three general types of developing computer software:
+Unfortunately, there are more than one environments for developing software,
+which must be considered for answering this question in detail. We see three
+general types of developing computer software:
 
-You can produce software by using script languages. Such a source file is
-directly executed by an interpreter. Or you can develop software by using
-languages which are designed for being compiled into a machine independent
-bytecode. Later on this independent bytecode is executed by a machine specific
-virtual machine. Or one can write traditional software files. Such source files
-can directly be compiled and linked down to machine specific binary code. Or
-they can previously be remastered by a preprocessor. Either these traditional
-sources or the output of the preprocessor finally is compiled and linked down to
-machine specific binary code. 'php' is an example for the first environment,
-'Java' an example for the second, and 'C/C++' an example for the third.
+\begin{enumerate}
+  \item You can produce software by using script languages. Such a source file is
+  directly executed by an interpreter.
+  \item Or you can develop software by using
+  languages which are designed for being compiled into a machine independent
+  bytecode. Later on this independent bytecode is executed by a machine specific
+  virtual machine.
+  \item  Or one can write traditional software files. Such source files
+  can directly be compiled and linked down to machine specific binary code. Or
+  they can previously be remastered by a preprocessor. Either these traditional
+  sources or the output of the preprocessor finally is compiled and linked down to
+  machine specific binary code.
+\end{enumerate}
+  
+You may take 'php' is an example for the first environment, 'Java' an example
+for the second, and 'C/C++' an example for the third.
 
-But fortunately, the nature of these environments simplifies to answer the
+Fortunately, the nature of these environments simplifies the answer of the
 question under which conditions the work using the Library contains portions of
 the Library:
 
-In all the three environments of software development we dscribed, the work
-which uses the Library is joined to the intended Library by an include
-statement, an input statement, an import statement, a package statement, or
-anything else. These *join-statements are inserted into the code of the work and
-directly or indirectly denote the file which serves the used functions, methods,
-classes, or data. But inserting such a *join-statement into the work using the
-library does not directly augments the code of the work by some code of the
-Library: the development processes are designed to offer an automatical
-expansion during the standard compilation or execution. Nevertheless, developers
-can circumvent these standard methods for using a Library. They can directly
-copy code of the Library into their own work. Together with the work, these
-manually evoked extensions of the code will later on directly be compiled or
-executed. Thus, it is clear, that in this case the work that uses the Library
-already contains portions of the Library, namely before the normal
-*join-processes of the environment have been executed. Fortunately, the LGPL-v2
-directly regulates this kind of using the Library. It says, that \enquote{you
-may modify your copy or copies of the Library or any portion of it [\ldots]
-provided that you also [\ldots] cause the whole of the work to be licensed
-[\ldots]] under the terms of this License}\footcite[cf.][\nopage wp.,§2,
-escpcially §2c]{Lgpl21OsiLicense1999a}.
-So, in case of literally copying code from the Library into the work using the
-Library there is no need to additionally permit its reverse engineering, because
-the code itself has also to be made accessible.
+\paragraph{Manually copied code evokes copyleft effect}
+
+Copying code from the sources of the Library into the the overarching work that
+uses the Library is not the standard way of combining both components, neither
+in the world pf script programming, nor in the world of byte code programming
+nor in the world of programming machine specific code:
+
+Normally, the work which uses the Library is joined to the intended Library by
+an include statement, an input statement, an import statement, a package
+statement, or anything else. These *join-statements are inserted into the code
+of the work. They directly or indirectly denote the file(s) which serve(s) the
+used functions, methods, classes, or data. It is an integrated feature of this
+development step that these insertions of such *join-statements do not directly
+augment the code of the work using the library by some code of the Library: all
+the development processes are designed for offering an automatical expansion
+during the standard compilation or execution. And this augmention occurs after a
+development loop is terminated.
+
+Nevertheless, developers can of course circumvent these standard methods for
+using a Library. Technically, they can directly copy code of the Library into
+their own work. These manually evoked extensions of the code will then later
+on directly be compiled or executed. Thus, it is clear, that in this case the
+work that uses the Library already contains portions of the Library, namely
+before the normal *join-processes of the environment are executed.
+
+Hence, if you are going to distribute files that contain literally copies of the
+Library source code or which have been compiled (but still not linked) on the
+base of such augmented files, then you have to allow reverse engineering.
+
+But you have also to know, that the LGPL-v2 directly regulates this kind of
+using the Library: It says, that \enquote{you may modify your copy or copies of
+the Library or any portion of it [\ldots] provided that you also [\ldots] cause
+the whole of the work to be licensed [\ldots]] under the terms of this
+License}\footcite[cf.][\nopage wp.,§2, escpcially §2c]{Lgpl21OsiLicense1999a}.
+Thus, in case of literally copying code from the Library into the work using the
+Library, also the LGPL causes the copyleft effect: The code of the work using
+the library has to be made accessible, too. 
+
+So, overall, we might say, that copying code from an LGPL-v2 Library into a work
+using that Library and distributing the result indeed requires to additionally
+permit its reverse engineering -- but probably this permission is not very
+important for the recipient, because he can directly get the code.
+
+\paragraph{Scripts do not need reverse engineering}
 
 Let us secondly consider the case of script programming. Computer programs
-written in a script language are distributed as they have been developed. They are not
-transformed into another kind of code\footnote{Java script is often offered as
-compressed code. Roughly spoken, this means that at first all white space signs
-have been replaced by blanks and then all rows of blanks have been reduced to at
-most one single blank. So, even then, the code itself is directly readable and
-understandable.}. The interpreter takes the script file itself and directly
-executes it. Thus, there is no special technique of reverse engineering for
-understanding these kind of software: you can directly read it if you know the
-script language. Hence, this type of software is also not covered by a rule
-which requires to permit reverse engineering.
+written in a script language are distributed as they have been developed. They
+are not transformed into another kind of code\footnote{Java script is often
+offered as compressed code. Roughly spoken, this means that at first all white
+space signs have been replaced by blanks and then all rows of blanks have been
+reduced to at most one single blank. So, even then, the code itself is directly
+readable and understandable.}. The interpreter takes the script file itself and
+directly executes it. Thus, there is no special technique of reverse engineering
+for understanding these kind of software: you can directly read it if you know
+the script language. 
 
-Now, let us analyse the case of languages which are compiled down to machine
-independent byte code. Let us discuss Java as the prototype of this way to
-generate software. In Java, each class is compiled to an own class file. These
-class files have to be stored somewhere in the classpath. A side from that,
-classes can be collected and distributed as packages which then can be used as
-Libraries. These packages must also be stored somewhere in the classpath. A
-single class is made known to the work that want to use it, by an import
-statement which contains the Class name. A whole Java library is made usable by
-integrating a package statement into the code. The code of the work using the
-Libarary which follows the import statement or the package declaration can then
-refer to the definitions offered by the classes by using the (qualified) names
-of its member variables or methods. So, from a strict viewpoint, the code of the
-work using the Libarary indeed contains portions of the library -- even if these
-portions are only identifying names. But during the java compilation
-process these referring elements are still not replaced by the denoted elements
-of the Library itself. Only just at the end, when the java virtual machine tries
-to execute the work using the Library, it collects all necessary commands of all
-'joined' classes.
+So, again, we might conclude, that a script using a script Library perhaps
+requires to permit its reverse engineering -- but probably this permission is
+not very important for the recipient, because he can directly read the code.
+
+\paragraph{Statically and dynamically combined byte code components}
+
+Now, let us analyse Java as the prototype for languages which are compiled down
+to machine independent byte code:
+
+In Java, each class is compiled to an own class file. These class files have to
+be stored somewhere in the classpath. A side from that, classes can also be
+collected and distributed in form of packages which then can be used like
+'traditional' Libraries. These packages must also be stored somewhere in the
+classpath. A single class is made known to the work that want to use it, by an
+import statement which contains the class name. A whole Java library is made
+usable by integrating a package statement into the code. 
+
+The code which follows these import- or package statements can then refer to the
+definitions offered by the classes by using the (qualified) names of its member
+variables or methods. So, from a very strict viewpoint, the code of the work
+using the Library indeed contains portions of the library -- even if these
+portions are only identifying names. The Java compilation process which
+generates the byte code, preserves these denoting names. It does not replace the
+referring names by the referred code. Only just at the end, when the java
+virtual machine itself tries to execute the work using the Library, it collects
+all necessary commands of all 'joined' classes.
 
 So, one might tend to argue that answering the question whether a distributed
 java byte code already contains portions of the used Library, depends on the
@@ -729,99 +779,140 @@ interpretation, whether a denoting identifier of a Library indeed is a portion
 of the Library. We will discuss this case together with the corresponding
 c/c++-Case. 
 
-But there is one specific Java case which has to be analysed separately. After
-having done all your development work, you may join your work that uses the
-Library (by having used all these denoting indentifiers) and the Library itself
-by building a new package which then contains your work using the Library and
-the used Library itself. One can say, that the package is quasi statically
-linked, because if you distribute it, then you are distributing both parts
-together. And if you distribute a work (package) containing portions of the
-Library, you have to permit reverse engineering.
+But there is still one specific Java case which has to be analysed separately.
+As already mentioned, in Java you can also join your work that uses the Library
+(by by using the denoting indentifiers) and the Library itself by building a new
+package which then contains your work using the Library and the used Library
+itself. One can say, that this package is quasi statically linked, because if
+you distribute it, then you are distributing both parts together. And if you
+distribute a work (package) containing portions of the Library, you have to
+permit reverse engineering.
 
-So, our interim conclusion is this: If you distribute your work using the
-Library and the Library itself as (statically linked) package, then you have to
-permit reverse engineering. But if you distribute your own work using the
-Library as a set of your own classes, then your obligation depends on the
-interpretation whether identifying names of a Library are indeed portions of it.
-We will decide this issue soon.
+So, preliminarily we conclude, that with respect to Java programming you (a)
+have to permit reverse engineering, if you distribute your work using the
+Library and the Library itself as (statically linked) package that (b) in all
+other cases your obligation to permit reverse engineering depends on the
+interpretation whether used identifying names of a Library are indeed portions
+of your own work using the Library.
 
-Now, let us analyse the case of languages which are compiled down to machine
-specific code. Let us discuss C/C++ as the prototype of this way to generate
-software. Similar to Java, in C/C++ code a Library is made be known to the using
-work by the include statements which denote the header files of the Library.
-These header files contain the declaration of those elements which the Library
-want to announce. Except some cases, the definitions of those elements (the code
-itself) are delivered by the Library file, not by its header files. Based on a
-make-file which knows all the places where the compiled files and
-libraries are stored, the process of c/c++-development finally compiles the work
-using the library down to an object file containing machine specific code. An it
-generates a link script by which the linker of the system is able to link the
-Library and the work using the Library as an executable program.
+Fortunately, we can reasonalby decide this issue soon.
 
-This additional link-command can be executed just during the normal development
-process --- before the work is distributed. In this case, the work using the
-Library and the Library itself are statically linked to one file containing all
-machine specific code. So, if you distribute a statically linked work, the it
-definitely contains portions of the library\footnote{Normally, a linker greps
-only those elements out of the Library which indeed are used by the work.}. Or
-the link command can be executed after having distributed the result, on a
-seperate machine. Mostly, this is done automatically and directly, before the
-work using the Library shall be executed. This kind of linking the interim
-objects files and libraries on the machine which executes the work is known as
-dynamic linking. It is dynamical because one can change the Library just before
-the execution even if the work using the Library has been developed against an
-earlier, better, other version of it.
+\paragraph{Statically and dynamically linked binary components}
 
-So, we \textbf{can} again \textbf{conclude} that you have to permit reverse
-engineering if you distribute a statically linked program. And we
-\textbf{could conclude} that your obligation to allow reverse engine depends on
-the interpretation whether identifying names of a Library are indeed portions of
-it if you distribute a dynamically linked program.
+But let us previously analyse C/C++ development as the prototype of those
+languages which are compiled down to machine specific code. 
 
-Unfortunately, there is a little complication based on the nature of the a C/C++
-development process. In contrary to the Java development environment, a C/C++
-development process inherently uses a preprocessor engine. This engine takes the
-header files delivered by the Library, verifies the syntactically correct use of
-the Library and can indeed replaces some tokens of the work using the Library by
-sourcecode from the Library. These snippets which replaces strings in the source
-code of the work using the library are known as inline functions. They have been
-invented for those cases where the expanding the stack of commands by a real
-function is more expensive than writing the comands of the function more than
-one time into the whole code. But -- of course -- there is no technical limit. A
-header file could also contain more than only some lines of the Library code.
-Nevertheless, in this case the work which uses the Library does not only
-contains names denoting the elements of the Library, but it also contain real
-portions of the Library. 
+Similar to Java, in C/C++ code a Library is made known to the work that want to
+use it, by include statements. These include statements denote the header files
+offered by and distributed with the Library. They contain the declarations of
+those elements which the Library want to announce. Except some cases, the
+corresponding definitions are delivered by the Library itself: the Library
+contains the code, the header files its declarations. But, of course, even the 
+declarations are elements of the Library. 
 
-So, we now have to expand our interim conclusion for the c/c++ Case: You have to
-permit reverse engineering if you distribute a statically linked program. And 
-if you distribute a dynamically linked programs your obligation to allow reverse
-engine depends (a) on the interpretation whether identifying names of a Library
-are indeed portions of it and (b) if the header files contain inline functions.
+The C/C++ code which follows these include statements can refer to the
+definitions offered by the Library by using the elements which are published by
+the header files. So, again, from a very strict viewpoint, the code of the work
+using the Library indeed contains portions of the library -- even if these
+portions are only identifying names offered by the header files.
 
-Altogether, just on this point, the rule of the LGPL-v2 which wants to regulate
-the distribution of a work which already contains portions of the used Library
-does not work as well as one wishes. But fortunately, the LGPL-v2 supports us
-for simplifying these constraints:
+Beyond that conceptual relation, the C/C++ development process finally compiles
+the work using the library down to an object file containing machine specific
+code. Just as the Java compilation, also this process preserves the denoting
+names. It does not replace the referring names by the referred code of the
+Library. This C/C++ compilation process is (mostly) managed by a make file,
+which is executed by the make command\footnote{Sometimes there additionally
+exist a complete meta environment which generates such make files. The GNU build
+system for example offers a complex set of configure scripts and make file
+templates (cf. http://en.wikipedia.org/wiki/GNU\_build\_system, wp.).}. This
+development system calls the compiler for each source file, makes known the
+directories which contain the compiled target object files, and finally calls
+the linker. The linker recursively scans the 'top' object file and its still
+embedded identifiers, which refer code snippets of other object files and
+libraries: So, only just at the end, the linker collects all necessary commands
+of all 'joined' object files and Libraries and produces the really executable
+work.
+
+But, nevertheless, the linker can either be called as integrated component of
+this process or it can seperatedly be called on another machine: In the first
+case, the process generates a \emph{statically linked executable} which can be
+distributed and indeed contains all necessary portions of all used Libraries. In
+the second case, the process generates a \emph{dynamically linkable program}
+which is distributed as set of still not executable object files and which are
+linked on the executing machine just in the moment when the program shall be
+executed\footnote{There is no difference whether you produces a statically
+linked or dynamically linkable program or library.}.
+
+Now, we have also to consider a little complication based on the nature of the a
+C/C++ development process. In contrary to the Java development environment, a
+C/C++ development process inherently uses a preprocessor engine.
+This engine takes the header files delivered by the Library, verifies the
+syntactically correct use of the Library and can indeed replaces some tokens of
+the work using the Library by sourcecode from the Library. These snippets which
+replaces strings in the source code of the work using the library are known as
+inline functions or macros. They have been invented for those cases where
+expanding the stack of commands by a real function is more expensive than
+writing the commands of the function more than one time into the whole code. But
+-- of course -- there is no technical limit. A header file could also contain
+more than only some lines of the Library code. However that may be, in the C/C++
+cevelopment process the compiled object files can indeed contain more than only
+the referring names which denote portions of the Library: they can contain real
+portions of the Library.
+ 
+Thus -- again and similar to Java compilation --, we may nevertheless conclude,
+that with respect to C/C++ programming you (a) have to permit reverse
+engineering, if you distribute your work using the Library together with the
+Library as a statically linked program and that (b) in all other cases your
+obligation to permit reverse engineering depends on the interpretation whether
+the used identifying names and inline functions being embedded into an object
+file are indeed portions of your own work using the Library. 
+
+So, it is time to answer the question wether indentifiers and inline-functions
+being embedded into a work that uses the Library indeed are protions of the
+Library and hence require, that we have to allow reverse engineering.
+
+\paragraph{Object files and the embedded portions of the Library}
+
+Of course, there is only one instance, that can definitely answer this question,
+the LGPL-v2 itself. And --- fortunately -- the LGPL supports us in a very clear
+way:
 
 The LGPL simply specifies that \enquote{linking a \enquote{work that uses the
 Library} with the Library creates an executable that is a derivative of the
 Library (because it contains portions of the Library) [\ldots]} and that
 \enquote{the executable is therefore covered by this
 License}\footcite[cf.][\nopage wp. §5]{Lgpl21OsiLicense199a}. But an
-\enquote{object file} -- for example of the \enquote{work using the Library} --
-which still is not linked with the Library and which \enquote{[\ldots] uses only
-numerical parameters, data structure layouts and accessors, and small macros and
-small inline functions (ten lines or less in length)} is pratically not covered
-by the license of the Library because \enquote{[\ldots] the use of the object
-file is unrestricted regardless of whether it is legally a derivative
-work}\footcite[cf.][\nopage wp. §5]{Lgpl21OsiLicense199a}.
+\enquote{object file} -- for example that of the \enquote{work using the
+Library} -- which still is not executable, because it is still not linked to the
+Library and which \enquote{[\ldots] uses only numerical parameters, data
+structure layouts and accessors, and small macros and small inline functions
+(ten lines or less in length)} is pratically not covered by the license of the
+Library because \enquote{[\ldots] the use of the object file is unrestricted
+regardless of whether it is legally a derivative work}\footcite[cf.][\nopage wp.
+§5]{Lgpl21OsiLicense199a}.
 
-Now, we reached our target: this interpretation can directly be applied to both
-open cases, to the case of distributing Java byte code which only contains
-referring identifiers and to the case of distribution C/C++ object code. And
-fortunately the limits given by the LGPL-v2-§5 totally covers the normal use of
-C/C++ and Java libraries.
+In other words: The answer of the LGPL to our question is this: (a) yes, such
+object files containing names and snippets offered by the used Library, contain
+indeed portions of the Library. But (b), these kind of 'little' portions being
+embedded into the object file by the standard compilation processes do not evoke
+any requirements, especially not the obligation to allow reverse engineering.
+
+
+From a theoretical point of view, it is clear, that one has to count the maximum
+of the lines which 
+
+ From a practical point of view, one now could reply that this rule does not
+work: for determining whether a compiled work that uses the Library contains
+more than the limits of \enquote{small macros or small inline functions (ten
+lines or less in length)} one has to study the header files. 
+
+
+
+Now, we reached our target:
+this interpretation can directly be applied to both open cases, to the case of
+distributing Java byte code which only contains referring identifiers and to the
+case of distribution C/C++ object code. And fortunately the limits given by the
+LGPL-v2-§5 totally covers the normal use of C/C++ and Java libraries.
 
 So we indeed finally may conclude that the LGPL-v2-§6 sentence
 
@@ -836,21 +927,30 @@ emphasis KR.]{Lgpl21OsiLicense1999a}}
 
 means 'nothing more' than
 
-\begin{quote}\noindent\emph{
+\emph{
 \begin{itemize}
-  \item You must allow reverse engineering of a work using a Library if you
-  distribute both parts together as a statically linked program or collected
-  package.
-  \item You are not required to allow reverse engineering if you distribute one
-  or both parts in a form that they are dynamically linked on the machine which
-  executes the work using the Library\footnote{This means also that it has been
-  compiled down by the normal development processes and it therefore contain
-  only the normal identifier}.
+  \item You are not required to allow reverse engineering if you compile the
+  work using the Library as a discret (set of) dynamically linkable file(s) by
+  using the standard compilation methods and if you distribute that produced
+  (set of) object or byte code files before they are linked as an executable
+  which indeed contains more than the tolerated size of portions of the Library.
   \item In all other cases, you are required to allow reverse engineering of a
-  work using a Library.
+  work using a Library:
+  \begin{itemize}
+    \item You must allow reverse engineering of a work using a Library if you
+    distribute the work using the Library and the Library together as a
+    statically linked program or as a collected package.
+    \item You must allow reverse engineering if you manually copy code from the
+    Library into the work using the Library and if you distribute the result.
+    But because of the LGPL copyleft effect, which is evoked under these
+    circumstances, you also have to distribute the source code of the work using
+    the Library. Hence, the permission of reverse engineering will not be very
+    relevant.
+    \item scripts \ldots
+    \item \ldots
+  \end{itemize}
 \end{itemize}
 }
-\end{quote}
 
 \subsubsection{Final Securing}
 
