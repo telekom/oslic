@@ -592,52 +592,56 @@ classes or anything else) for simplifying their own work. They chose a library
 because they know, that the standard compiling and linking process guarantees,
 that indeed the chosen library is used (and not secretly substituted by a
 mysterious 'equivalent'). Based on this empirical praxis we are therefore
-allowed to say that a \emph{work containing portions of the Library}
-which has been built by the normal processes of combining, compiling, and
-linking source and object files, indeed also uses the intended library.
+allowed to say that a \emph{work containing portions of the Library} which has
+been \textbf{built by the normal development processes} of combining, compiling,
+and linking source and object files, indeed also uses the intended library.
 
-Now, we can consider another correlation between the first sentence $\Phi$
-and the second sentence $\Sigma$:
+So, let us now consider a specific correlation between the first sentence
+$\Phi$ and the second sentence $\Sigma$:
 
-We could now suppose, that we must already have done $\Phi$, in other words:
+It seems to be evident, that we must already have done $\Phi$, in other words:
 that we must already have \emph{*joined -- respectively: combined or linked -- a
 work that uses the Library with the Library to produce a work containing
 portions of the Library}, if we are going to compliantly \emph{distribute that
 work containing portions of the Library under terms of your choice}. Or briefly
-spoken: we could try to conclude that $\Sigma$ empirically implies
-$\Phi$\footnote{but not vice versa.}. 
+spoken: It seems to be conclusive that $\Sigma$ \emph{\textbf{empirically}
+implies} $\Phi$\footnote{but not vice versa.}.
 
-But is this inference indeed correct? Let us check this statement by assuming
-the opposite: If the contrary would be true, then there had to exist a
-\emph{work containing portions of the Library} which had been gained from the
-library without that both components were linked or combined. But from the
-conclusion above we already know that \emph{works containing portions of the
-Library}, which have been produced by the standard computational processes of
-\emph{combining and linking a work that uses the Library with the Library},
-indeed also \emph{use the Library}. Thus, it would be self-contradictory to talk
-about a \emph{work containing portions of the Library}, which was produced by
-the standard combining and linking processes, and similarily to state, that
-exactly this work is not combined with the library in any sense. And from a
-proof by contradiction we may conclude to the logical opposite:
+But is this conclusion correct? Let us check this statement by assuming the
+opposite: If the contrary was true, then there had to exist a \emph{work
+containing portions of the Library} which had been gained without linking or
+combining the work and the Library in any sense. But from the inference above we
+already know that \emph{works containing portions of the Library}, which have
+been produced by the standard computational processes of \emph{combining and
+linking a work that uses the Library with the Library}, indeed also \emph{use
+the Library}. Thus, it would be self-contradictory to talk about a \emph{work
+containing portions of the Library}, which was produced by the standard
+combining and linking processes, and similarily to state, that exactly this work
+is not combined with the library in any sense. And from a proof by contradiction
+we may conclude to the logical opposite:
 
-Firstly, we may say with respect to the meaning of \emph{being standardly
-combined or linked with}, that it is necessarily true that a computional work,
-which is standardly produced on the base of \emph{a work that uses the Library}
-and \emph{the Library} and which therefore literally contains more or less
-\emph{portions of a library}, indeed uses the \emph{the Library} and \emph{is}
-therefore \emph{combined with the library}.
-
-Secondly, we may also conclude with respect to the meaning of \emph{being
-standardly combined or linked with} , that $\Sigma$ empirically implies $\Phi$
-(in the standardized world of software development), because $\Phi$ must ever
-have been executed when $\Sigma$ is going to be realized.
+With respect to the meaning of \emph{being standardly combined or linked with},
+we may say, that
+\begin{itemize}
+  \item it is necessarily true that a computional work, which is standardly
+  produced on the base of \emph{a work that uses the Library} and \emph{the
+  Library} and which therefore literally contains more or less
+  \emph{portions of a library}, indeed uses the \emph{the Library} and \emph{is}
+  therefore \emph{combined with the library}.
+  \item  $\Sigma$\footnote{distributing \emph{a work that uses the Library and
+  contains portions of a library}} empirically implies $\Phi$\footnote{A work
+  that uses the Library has been *joined with the Library to produce a work
+  containing portions of the Library} (in the standardized world of software
+  development), because $\Phi$ must ever have been executed when $\Sigma$ is
+  going to be realized.
+\end{itemize}
 
 Thus, we can now reduce the LGPL2-RefEng-Sentence to its' real core:
 
 \begin{quote}
 \begin{alltt}   
 (   [\(\Sigma\)] you may
-        distribute that work containing portions of the 
+        distribute (a) work containing portions of the 
         Library\(\footnote{which previously has been prepared for being distributed by standardly combining and
 linking the work that uses the Library with the Library in a way that this prepared work indeed
 also uses the Library}\) under terms of your choice )   
@@ -665,32 +669,33 @@ indeed contains portions of the Library or not.
 
 \subsubsection{Final Conclusion}
 
-Unfortunately, there are more than one environments for developing software,
-which must be considered for answering this question in detail. We see three
-general types of developing computer software:
+Unfortunately, there are more than one software developing scenarios, which must
+be considered for answering this question in detail. We see three general types
+of developing computer software:
 
 \begin{enumerate}
-  \item You can produce software by using script languages. Such a source file is
-  directly executed by an interpreter.
-  \item Or you can develop software by using
-  languages which are designed for being compiled into a machine independent
-  bytecode. Later on this independent bytecode is executed by a machine specific
-  virtual machine.
-  \item  Or one can write traditional software files. Such source files
-  can directly be compiled and linked down to machine specific binary code. Or
-  they can previously be remastered by a preprocessor. Either these traditional
-  sources or the output of the preprocessor finally is compiled and linked down to
-  machine specific binary code.
+  \item You can produce software by using script languages. Source file s
+  which contain script language commands are distributed and then directly
+  executed by an interpreter without being transformed into another 'more'
+  machine specific language.
+  \item Or you can develop software by using languages which are designed for
+  being compiled into a machine independent bytecode. Later on this independent
+  bytecode is executed by a machine specific virtual machine.
+  \item  Or you can write traditional software files. Sometimes, these files are
+  remastered by a preprocessor before the real process starts. The traditional
+  sources themselves or the output of the preprocessor is then compiled and
+  linked down to machine specific binary code.
 \end{enumerate}
   
 You may take 'php' is an example for the first environment, 'Java' an example
 for the second, and 'C/C++' an example for the third.
 
-Fortunately, the nature of these environments simplifies the answer of the
+Fortunately, the nature of these environments simplifies the answer to the
 question under which conditions the work using the Library contains portions of
 the Library:
 
-\paragraph{Manually copied code evokes copyleft effect}
+\paragraph{Manually copied code evokes copyleft effect:} 
+
 
 Copying code from the sources of the Library into the the overarching work that
 uses the Library is not the standard way of combining both components, neither
