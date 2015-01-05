@@ -636,7 +636,8 @@ we may say, that
   going to be realized.
 \end{itemize}
 
-Thus, we can now reduce the LGPL2-RefEng-Sentence to its' real core:
+Thus, we can now reduce the LGPL2-RefEng-Sentence to its' real core, the
+LGPL2-RefEng-Rule:
 
 \begin{quote}
 \begin{alltt}   
@@ -696,10 +697,9 @@ the Library:
 
 \paragraph{Manually copied code evokes copyleft effect:} 
 
-
 Copying code from the sources of the Library into the the overarching work that
 uses the Library is not the standard way of combining both components, neither
-in the world pf script programming, nor in the world of byte code programming
+in the world pf script programming, nor in the world of bytecode programming
 nor in the world of programming machine specific code:
 
 Normally, the work which uses the Library is joined to the intended Library by
@@ -708,122 +708,155 @@ statement, or anything else. These *join-statements are inserted into the code
 of the work. They directly or indirectly denote the file(s) which serve(s) the
 used functions, methods, classes, or data. It is an integrated feature of this
 development step that these insertions of such *join-statements do not directly
-augment the code of the work using the library by some code of the Library: all
-the development processes are designed for offering an automatical expansion
-during the standard compilation or execution. And this augmention occurs after a
+augment the work using the library by some code of the Library: all the
+development processes are designed for offering an automatical expansion during
+the standard compilation or execution. And this augmention occurs after a
 development loop is terminated.
 
 Nevertheless, developers can of course circumvent these standard methods for
 using a Library. Technically, they can directly copy code of the Library into
-their own work. These manually evoked extensions of the code will then later
-on directly be compiled or executed. Thus, it is clear, that in this case the
-work that uses the Library already contains portions of the Library, namely
-before the normal *join-processes of the environment are executed.
+their own work. Later on, these manually evoked extensions of the code will
+directly be compiled and/or executed together with the 'own' code of the work.
+Thus, it is clear, that in this case the work that uses the Library already
+contains portions of the Library, paticularly before the normal *join-processes
+of the environment are executed.
 
 Hence, if you are going to distribute files that contain literally copies of the
 Library source code or which have been compiled (but still not linked) on the
-base of such augmented files, then you have to allow reverse engineering.
+base of such augmented files, then you have to allow reverse
+engineering\footnote{This directly follows from the LGPL2-RefEng-Rule by
+applying the Modus Ponens. But nevertheless, one might reply here, that even the
+result of manually copying code from the Library to the work using the Library
+is covered by the limits of tolerance, intrioduced by the LGPL-v2-§5. Formally,
+this argument seems to be appropriate. And indeed, also we have to consider
+these limits of tolerance later one. But in this context of copying code from
+the LIbrary into ther work manually, a closer look reduces its impact. You
+have to discriminate three cases:
+\begin{enumerate}
+  \item Developers can manually \textbf{copy / transfer some or at most all
+  elements of the Library header files into the code of the work} which the
+  preporcessor itself would copy / transfer into that code automatically. But
+  developers will not do that, because a some simple include commands would have
+  the same effect. So it is reasonable to assume, that copying developers
+  transfer more than these elements and so it is reasonable to assume, that
+  their work is covered by the LGPL2-RefEng-Rule.
+  \item Developers can \textbf{manually copy / transfer more than the elements
+  of the Library header files from the Library sources into the code of the work
+  using the Library and they can nevertheless let the work being linked to the
+  Library}. But again developers will not do that, because -- again -- a some
+  simple include commands would have the same effect. So it is reasonable to
+  assume, that copying developers do other steps and so it is reasonable to
+  assume, that their work is covered by the LGPL2-RefEng-Rule.
+  \item Dvelopers can manually copy / transfer more than the elements of the
+  Library header files from the Library sources into the code of the work using
+  the Library without linking it to the Library. This is a reasonable step of
+  work, because one conserves the official use of the Library. But it is clear,
+  that in this case york contains more elements of the Library than LGPL-v2-§5
+  tolerates. So indeed, you have to allow reverse engineering.
+\end{enumerate}
+Thus -- overall -- from a practical point of view, we can indeed say, that
+manually copying code from the Library into the work using the Library
+rewuires to allow reverse engineering.}.
 
-But you have also to know, that the LGPL-v2 directly regulates this kind of
-using the Library: It says, that \enquote{you may modify your copy or copies of
-the Library or any portion of it [\ldots] provided that you also [\ldots] cause
-the whole of the work to be licensed [\ldots]] under the terms of this
+But, if we manually copy code from the Library to our work using the Library, we
+also have to consider, that the LGPL-v2 directly regulates this kind of using
+the Library: It says, that \enquote{you may modify your copy or copies of the
+Library or any portion of it [\ldots] provided that you also [\ldots] cause the
+whole of the work to be licensed [\ldots]] under the terms of this
 License}\footcite[cf.][\nopage wp.,§2, escpcially §2c]{Lgpl21OsiLicense1999a}.
-Thus, in case of literally copying code from the Library into the work using the
-Library, also the LGPL causes the copyleft effect: The code of the work using
-the library has to be made accessible, too. 
+Thus, there are strong arguments, that the LGPL causes the copyleft effect in
+case of literally copying code from the Library into the work using the Library:
+The code of the work using the library has to be made accessible, too.
 
 So, overall, we might say, that copying code from an LGPL-v2 Library into a work
 using that Library and distributing the result indeed requires to additionally
-permit its reverse engineering -- but probably this permission is not very
-important for the recipient, because he can directly get the code.
+permit its reverse engineering -- even if this permission is probably not very
+important for the recipient, because he probably must have a direct access to
+the code.
 
-\paragraph{Scripts do not need reverse engineering}
+\paragraph{Scripts do not need reverse engineering:}
 
-Let us secondly consider the case of script programming. Computer programs
-written in a script language are distributed as they have been developed. They
-are not transformed into another kind of code\footnote{Java script is often
-offered as compressed code. Roughly spoken, this means that at first all white
-space signs have been replaced by blanks and then all rows of blanks have been
-reduced to at most one single blank. So, even then, the code itself is directly
-readable and understandable.}. The interpreter takes the script file itself and
-directly executes it. Thus, there is no special technique of reverse engineering
-for understanding these kind of software: you can directly read it if you know
-the script language. 
+Computer programs written in a script language are distributed as they have been
+developed. They are not transformed into another kind of code\footnote{Java
+script is often offered as compressed code. Roughly spoken, this means that at
+first all white space signs have been replaced by blanks and then all rows of
+blanks have been reduced to at most one single blank. So, even then, the code
+itself is directly readable and comprehensible.}. The interpreter takes the
+script file as it is and directly executes it. Thus, there is no special
+technique of reverse engineering for understanding these kind of software: you
+can directly read it if you know the script language.
 
 So, again, we might conclude, that a script using a script Library perhaps
 requires to permit its reverse engineering -- but probably this permission is
 not very important for the recipient, because he can directly read the code.
 
-\paragraph{Statically and dynamically combined byte code components}
+\paragraph{Statically combined bytecode requires reverse engineering:}
 
-Now, let us analyse Java as the prototype for languages which are compiled down
-to machine independent byte code:
-
-In Java, each class is compiled to an own class file. These class files have to
-be stored somewhere in the classpath. A side from that, classes can also be
-collected and distributed in form of packages which then can be used like
-'traditional' Libraries. These packages must also be stored somewhere in the
-classpath. A single class is made known to the work that want to use it, by an
-import statement which contains the class name. A whole Java library is made
-usable by integrating a package statement into the code. 
+In Java -- the prototype for languages which are compiled to machine independent
+portable bytecode -- each class is compiled as a seperate class file. These
+class files have to be stored somewhere in the classpath. A side from that,
+classes can also be collected and distributed in form of packages which then can
+be used like 'traditional' Libraries. These packages must also be stored
+somewhere in the classpath. A single class is made known to the work, that want
+to use it, by an import statement which contains the class name. A whole Java
+library is made usable by integrating a package statement into the code.
 
 The code which follows these import- or package statements can then refer to the
 definitions offered by the classes by using the (qualified) names of its member
-variables or methods. So, from a very strict viewpoint, the code of the work
+variables or methods. Thus, -- from a strict viewpoint -- the code of the work
 using the Library indeed contains portions of the library -- even if these
-portions are only identifying names. The Java compilation process which
-generates the byte code, preserves these denoting names. It does not replace the
-referring names by the referred code. Only just at the end, when the java
-virtual machine itself tries to execute the work using the Library, it collects
-all necessary commands of all 'joined' classes.
+portions are only identifying names or data structures containing identifying
+names. The Java compilation process which generates the bytecode, preserves
+these denoting names. It does not replace the referring names by the referred
+code of methods and so on. Only just at the end, when the java virtual machine
+itself tries to execute the work using the Library, it collects all necessary
+commands of all 'joined' classes.
 
 So, one might tend to argue that answering the question whether a distributed
-java byte code already contains portions of the used Library, depends on the
+java bytecode already contains portions of the used Library, depends on the
 interpretation, whether a denoting identifier of a Library indeed is a portion
 of the Library. We will discuss this case together with the corresponding
 c/c++-Case. 
 
-But there is still one specific Java case which has to be analysed separately.
-As already mentioned, in Java you can also join your work that uses the Library
-(by by using the denoting indentifiers) and the Library itself by building a new
-package which then contains your work using the Library and the used Library
-itself. One can say, that this package is quasi statically linked, because if
-you distribute it, then you are distributing both parts together. And if you
-distribute a work (package) containing portions of the Library, you have to
-permit reverse engineering.
+But there is antoher Java specific aspects which also has to be considered. As
+already mentioned, in Java you can also join your work containing the denoting
+indentifiers and the denoted Library by building a new package, which then
+contains both, your work using the Library and the used Library. Hence, one can
+say, that this package is quasi statically linked, because if you distribute it,
+then you are distributing both parts together. So, if you distribute a complete
+package, in other words: a quasi statically linked work containing also
+(portions of) the Library, then you have to permit reverse
+engineering\footnote{This directly follows from the LGPL2-RefEng-Rule by Modus
+Ponens}.
 
 So, preliminarily we conclude, that with respect to Java programming you (a)
 have to permit reverse engineering, if you distribute your work using the
-Library and the Library itself as (statically linked) package that (b) in all
-other cases your obligation to permit reverse engineering depends on the
-interpretation whether used identifying names of a Library are indeed portions
-of your own work using the Library.
+Library and the Library itself as a (statically linked) integrated package and
+that (b) in all other cases your obligation to permit reverse engineering
+depends on the interpretation whether used identifying names of a Library are
+indeed portions of your own work using the Library.
 
-Fortunately, we can reasonalby decide this issue soon.
+Fortunately, we can reasonably decide the issue of case (b) soon.
 
-\paragraph{Statically and dynamically linked binary components}
+\paragraph{Statically combined binaries require reverse engineering:} 
 
-But let us previously analyse C/C++ development as the prototype of those
-languages which are compiled down to machine specific code. 
+Similar to Java, in C/C++ -- the prototype of those languages which are compiled
+as machine specific code -- a Library is also explicitly made known to the work
+that want to use it, namely by include statements. These include statements
+denote the header files offered by and distributed with the Library. They
+contain the declarations of those elements which the Library wants to announce.
+briefly worded, the Library contains the code, the header files its
+declarations.
 
-Similar to Java, in C/C++ code a Library is made known to the work that want to
-use it, by include statements. These include statements denote the header files
-offered by and distributed with the Library. They contain the declarations of
-those elements which the Library want to announce. Except some cases, the
-corresponding definitions are delivered by the Library itself: the Library
-contains the code, the header files its declarations. But, of course, even the 
-declarations are elements of the Library. 
-
-The C/C++ code which follows these include statements can refer to the
-definitions offered by the Library by using the elements which are published by
-the header files. So, again, from a very strict viewpoint, the code of the work
-using the Library indeed contains portions of the library -- even if these
-portions are only identifying names offered by the header files.
+The C/C++ code following the include statements can refer to the definitions
+offered by the Library by using the declarations published by the header files.
+So, again -- from a strict viewpoint --, the code of the work using the Library
+indeed contains portions of the library -- even if these portions are only
+identifying names or data structures offered by the header files.
 
 Beyond that conceptual relation, the C/C++ development process finally compiles
-the work using the library down to an object file containing machine specific
-code. Just as the Java compilation, also this process preserves the denoting
+the work using the library as an object file containing machine specific code.
+Just as the Java compilation, also this process still preserves the denoting
 names. It does not replace the referring names by the referred code of the
 Library. This C/C++ compilation process is (mostly) managed by a make file,
 which is executed by the make command\footnote{Sometimes there additionally
@@ -840,60 +873,66 @@ work.
 
 But, nevertheless, the linker can either be called as integrated component of
 this process or it can seperatedly be called on another machine: In the first
-case, the process generates a \emph{statically linked executable} which can be
-distributed and indeed contains all necessary portions of all used Libraries. In
-the second case, the process generates a \emph{dynamically linkable program}
-which is distributed as set of still not executable object files and which are
-linked on the executing machine just in the moment when the program shall be
-executed\footnote{There is no difference whether you produces a statically
-linked or dynamically linkable program or library.}.
+case, the process generates a \emph{statically linked executable} which already
+contains all necessary portions of all used Libraries. In the second case, the
+process generates a \emph{dynamically linkable program} which is nothing more
+than a (set of) object code file(s) which still must be linked. If you
+distribute a statically linked executable, it definitely contains 'portions' of
+the library; if you distribute a dynamically linkable program you have to decide
+whether used identifying names of a Library are indeed portions of your own work
+using the Library.
 
-Now, we have also to consider a little complication based on the nature of the a
-C/C++ development process. In contrary to the Java development environment, a
-C/C++ development process inherently uses a preprocessor engine.
-This engine takes the header files delivered by the Library, verifies the
-syntactically correct use of the Library and can indeed replaces some tokens of
-the work using the Library by sourcecode from the Library. These snippets which
-replaces strings in the source code of the work using the library are known as
-inline functions or macros. They have been invented for those cases where
-expanding the stack of commands by a real function is more expensive than
-writing the commands of the function more than one time into the whole code. But
--- of course -- there is no technical limit. A header file could also contain
-more than only some lines of the Library code. However that may be, in the C/C++
+Unfortunately, we have to consider a little complication based on the nature of
+the a C/C++ development process before we can generalize this statement. In
+contrary to the Java development environment, a C/C++ development process
+inherently uses a preprocessor engine. This engine takes the header files
+delivered by the Library, verifies the syntactically correct use of the Library
+and can indeed replace some tokens of the work using the Library by commands
+and/or lines from the Library. This technique is known as inline functions or
+macros. They have been invented for those cases where expanding the stack of
+commands during the compilation by a real function call is more expensive than
+writing the embedded commands of the function more than one time into the whole
+code. But -- of course -- there is no technical limit: A header file could also
+offer macros that replace the tokens of the work using the Library by more than
+only some lines of the Library code. However that may be, in the C/C++
 cevelopment process the compiled object files can indeed contain more than only
 the referring names which denote portions of the Library: they can contain real
-portions of the Library.
+functional important portions of the Library.
  
-Thus -- again and similar to Java compilation --, we may nevertheless conclude,
-that with respect to C/C++ programming you (a) have to permit reverse
-engineering, if you distribute your work using the Library together with the
-Library as a statically linked program and that (b) in all other cases your
-obligation to permit reverse engineering depends on the interpretation whether
-the used identifying names and inline functions being embedded into an object
-file are indeed portions of your own work using the Library. 
+So -- again and similar to Java compilation --, we may conclude, that with
+respect to C/C++ programming you (a) have to permit reverse engineering, if you
+distribute your work using the Library together with the Library as a statically
+linked program and that (b) in all other cases your obligation to permit reverse
+engineering depends on the interpretation whether the used identifying names and
+inline functions being embedded into an object file are indeed portions of the
+Library.
 
-So, it is time to answer the question wether indentifiers and inline-functions
-being embedded into a work that uses the Library indeed are protions of the
-Library and hence require, that we have to allow reverse engineering.
+So, it is time to answer the important question wether indentifiers and
+inline-functions being embedded into a work that uses the Library indeed are
+portions of the Library and hence require, that we have to allow reverse
+engineering.
 
-\paragraph{Object files and the embedded portions of the Library}
-
-Of course, there is only one instance, that can definitely answer this question,
-the LGPL-v2 itself. And --- fortunately -- the LGPL supports us in a very clear
-way:
+\paragraph{Dynamically combinable bytecode and linkable object code do note
+require reverse engineering:} Of course, there is only one instance, that can
+answer the question, whether indentifiers and inline-functions being standardly
+embedded into a work that uses the Library indeed are portions of the Library.
+This instance is the LGPL-v2 itself. And -- fortunately -- this license supports
+us in a very clear way to anser this question, even if not not its §6 which
+deals with the reverse engineering, but in its §5:
 
 The LGPL simply specifies that \enquote{linking a \enquote{work that uses the
 Library} with the Library creates an executable that is a derivative of the
 Library (because it contains portions of the Library) [\ldots]} and that
 \enquote{the executable is therefore covered by this
-License}\footcite[cf.][\nopage wp. §5]{Lgpl21OsiLicense199a}. But an
-\enquote{object file} -- for example that of the \enquote{work using the
-Library} -- which still is not executable, because it is still not linked to the
-Library and which \enquote{[\ldots] uses only numerical parameters, data
-structure layouts and accessors, and small macros and small inline functions
-(ten lines or less in length)} is pratically not covered by the license of the
-Library because \enquote{[\ldots] the use of the object file is unrestricted
-regardless of whether it is legally a derivative work}\footcite[cf.][\nopage wp.
+License}\footcite[cf.][\nopage wp. §5]{Lgpl21OsiLicense199a}. Additionally, it
+talks about \enquote{object files} which are not executable, because they are
+still not linked to the Library. Such an unexecutable \enquote{object file} --
+for example that of the \enquote{work using the Library} --, which
+\enquote{[\ldots] uses only numerical parameters, data structure layouts and
+accessors, and small macros and small inline functions (ten lines or less in
+length)} is practically not covered by the license of the Library because
+\enquote{[\ldots] the use of the object file is unrestricted regardless of
+whether it is legally a derivative work}\footcite[cf.][\nopage wp.
 §5]{Lgpl21OsiLicense199a}.
 
 In other words: The answer of the LGPL to our question is this: (a) yes, such
@@ -901,25 +940,45 @@ object files containing names and snippets offered by the used Library, contain
 indeed portions of the Library. But (b), these kind of 'little' portions being
 embedded into the object file by the standard compilation processes do not evoke
 any requirements, especially not the obligation to allow reverse engineering.
+And with respect to the LGPL-RevEng-Rule we might directly conclude, that
+distributing dynamically linkable or combinable bytecode or object code files
+which contain \enquote{only numerical parameters, data structure layouts and
+accessors, and small macros and small inline functions (ten lines or less in
+length} being delivery by a Library does not require to allow reverse
+engineering.
 
+Unfortunately, there might be a practical objection which seems to disturb our
+simple result: For applying this rule correctly, we have to determine whether a
+compiled work that uses the Library butstill is not *joined to it, indeed does
+not violate the limits of \enquote{small macros or small inline functions (ten
+lines or less in length)}. Thus, obviously we have to study all header files of
+all used Libraries in detail, if we want to compliantly distribute a work using
+a Library without the permission of reverse engineering.
 
-From a theoretical point of view, it is clear, that one has to count the maximum
-of the lines which 
+Fortunately, there is a simple solution, a rule of thumb based on the principle
+\enquote{trust the upstream}\footnote{On the ELLW 2013, we were told about this
+principle for the first time. We do not know, whether Armijn Hemel invented it.
+But we can affirm that he has persuasively explained its spirit and purpose.}:
+The Library developers publish the header files respectively the public members
+and functions of the classes as they want these elements to be used. They want
+their Library to be used as an LGPL library: improvenments of the Libraries
+themselves shall be made accessible; but works using the Library shall not
+necessarily also be published in form of source code\footnote{The meaning of the
+weak copyleft.}. If they had wished another kind of licensing, they had chosen
+another license. Thus, as long as we use the Library as it has been published by
+the authors, as long as we load down the Library from official repository, and
+as long as we use the Library without modifying its interfaces published by the
+header and class files, we may assume that we are using the Libraries as their
+copyright owners want them to be used. And thus, -- as long as we trust the
+upstream - we might assume that the header and class files of our Libraries fit
+the restrictions of the LGPL-v2.
 
- From a practical point of view, one now could reply that this rule does not
-work: for determining whether a compiled work that uses the Library contains
-more than the limits of \enquote{small macros or small inline functions (ten
-lines or less in length)} one has to study the header files. 
-
-
-
-Now, we reached our target:
-this interpretation can directly be applied to both open cases, to the case of
-distributing Java byte code which only contains referring identifiers and to the
-case of distribution C/C++ object code. And fortunately the limits given by the
-LGPL-v2-§5 totally covers the normal use of C/C++ and Java libraries.
-
-So we indeed finally may conclude that the LGPL-v2-§6 sentence
+And so, finally we reached our target: This interpretation can directly be
+applied to both open cases, to the case of distributing Java bytecode which only
+contains referring identifiers and to the case of distribution C/C++ object
+code. Limits given by the LGPL-v2-§5 totally cover the normal use of C/C++ and
+Java libraries as long as we use upstream approved Libraries. Thus, we indeed
+finally may conclude, that the LGPL-RevEng-Sentence
 
 \begin{quote}\noindent\emph{\enquote{[\ldots] you may [\ldots] combine
 \textbf{or} link a \enquote{work that uses the Library} with the Library to
@@ -935,10 +994,11 @@ means 'nothing more' than
 \emph{
 \begin{itemize}
   \item You are not required to allow reverse engineering if you compile the
-  work using the Library as a discret (set of) dynamically linkable file(s) by
+  work using the Library as a discret (set of) dynamically linkable or
+  combinable file(s) on the base of a standard version of the Library and by
   using the standard compilation methods and if you distribute that produced
-  (set of) object or byte code files before they are linked as an executable
-  which indeed contains more than the tolerated size of portions of the Library.
+  (set of) object code or bytecode file(s) before they are linked as an
+  executable.
   \item In all other cases, you are required to allow reverse engineering of a
   work using a Library:
   \begin{itemize}
