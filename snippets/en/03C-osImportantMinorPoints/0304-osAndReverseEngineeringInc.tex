@@ -95,7 +95,7 @@ embedded library.}.
 Finally, a third group of experts prefers not to discuss the problem of reverse
 engineering, although this technique is literally mentioned in the license and
 although they want explain how to use GPL/LGPL licensed software
-complaintly\footnote{An article of Terry J. Ilardi might be taken as a first
+compliantly\footnote{An article of Terry J. Ilardi might be taken as a first
 witness of this third strategy: he profoundly explains the essence of the LGPL,
 he especially discusses §6, and he delivers applicable rules like \enquote{DO
 NOT statically link to LGPL [\ldots] code if you wish to keep your program
@@ -451,7 +451,7 @@ intended purpose of the corresponding LGPL-v2-section, which wants to regulate
 the distribution of works containing portions of LGPL libraries.
 
 For facilitating the understanding of our argumentation, let us first check
-whether our interpretation fits the purpose of the LGPL, by unfolding the
+whether our interpretation fits the purpose of the LGPL -- by unfolding the
 slightly reduced version \emph{$(\Sigma$ $\rightarrow$ $\Delta)$} back to the
 corresponding verbal form:
 
@@ -480,8 +480,7 @@ choice\footnote{The truth value of the conlusion is undetermined by the rule.}.
 Hence, we must state that this interpretation does not fulfill the purpose of
 the LGPL-V2: if reverse engineering is not allowed, the distribution of the work
 containing portions of the Library is not regulated. We have to conclude, that
-this sequencing the LGPL2-RefEng-Sentence as a logical implication is simply
-wrong.
+this sequencing the LGPL2-RefEng-Sentence as a logical implication is wrong.
 
 But we deduced this consequence from a slighty reduced form of our
 LGPL2-RefEng-Sentence. Thus, we still have to ask, whether we have to derive
@@ -499,10 +498,10 @@ slightly reduced formula to the unfolded complete formula: assuming that
 \emph{$(\Theta$ provided that $\Omega)$} means \emph{(if $\Omega$ then
 $\Theta)$} is wrong.
 
-So, let us test the other way. Let us ask, whether \emph{($\Theta$ provided
-that $\Omega$)} means \emph{(if $\Theta$ then $\Omega$)} or -- more logically
-notated -- \emph{$((\Gamma$ $\wedge$ $\Delta)$ $\rightarrow$ $(\Phi$ $\wedge$
-$\Sigma))$}. If we again for a moment focus on the reduced version
+So, let us test the other combination. Let us ask, whether \emph{($\Theta$
+provided that $\Omega$)} indeed means \emph{(if $\Theta$ then $\Omega$)} or --
+more logically notated -- \emph{$((\Gamma$ $\wedge$ $\Delta)$ $\rightarrow$ $(\Phi$
+$\wedge$ $\Sigma))$}. If we again for a moment focus on the reduced version
 \emph{$(\Delta$ $\rightarrow$ $\Sigma)$} and dissolve our replacements, then we
 get back the rule:
 
@@ -525,7 +524,7 @@ libraries\footnote{The premise must be false, too!}. This follows from applying
 \emph{Modus Tollens} to the implication\footnote{A false conclusion evokes a
 false premise based on the given truth of the implication / rule itself.}
 
-But -- again -- we have to consider that we deduced this consequence from a
+But -- again -- we have to consider that we have deduced this consequence from a
 slighty reduced form of our LGPL2-RefEng-Sentence. Thus, we still have show that
 our result also holds for the completely unfolded formula \emph{$((\Gamma$
 $\wedge$ $\Delta)$ $\rightarrow$ $(\Phi$ $\wedge$ $\Sigma))$}: If we want to
@@ -537,7 +536,10 @@ And if we do not allow its modification \emph{or} reverse
 engineering\footnote{Conclusion is false.}, then we do not compliantly
 distribute works containing portions of the Library which have been produced by
 joining the Library and the work using the Library\footnote{Premise must become
-false by Modus Tollens.}
+false by Modus Tollens.} Thus, we may generally state, that the logical
+explication \emph{$((\Gamma$ $\wedge$ $\Delta)$ $\rightarrow$ $(\Phi$ $\wedge$
+$\Sigma))$} perfectly regulates the distribution of works containing portions of
+LGPL libraries.
 
 Based on this clarification, we can reasonably replace the more stylish
 conjunction \emph{'provided that'} by its more known equivalent
@@ -727,18 +729,18 @@ nor in the world of programming machine specific code:
 Normally, the work which uses the Library is joined to the intended Library by
 an include statement, an input statement, an import statement, a package
 statement, or anything else. These *join-statements are inserted into the code
-of the work. They directly or indirectly denote the file(s) which serve(s) the
-used functions, methods, classes, or data. It is an integrated feature of this
-development step that inserting such *join-statements does not directly augment
-the work using the library by some code of the Library: The development
-processes are designed to offer an automatical expansion during the standard
-compilation or execution. But such an immanent augmention occurs after the
-actual development loop has been terminated.
+of the work. They denote the file(s) which deliver(s) the used functions,
+methods, classes, or data. It is an integrated feature of this development step
+that inserting such *join-statements does not directly augment the work using
+the library by some code of the Library: The development processes are designed
+to offer an automatical expansion during the standard compilation or execution.
+But such an automatic augmention occurs after the actual development loop has
+been terminated.
 
 Nevertheless, developers can circumvent these standard methods for using a
 Library. Technically, they can directly copy code of the Library into their own
-work. Later on, these manually evoked extensions of the code will be compiled
-and/or executed together with the 'own' code of the work. Thus, it is clear,
+work. Consequently, these manually evoked extensions of the code will be
+compiled and/or executed together with the 'own' code of the work. Thus, it is clear,
 that in this case the work that uses the Library, already contains portions of
 the Library, paticularly before the normal *join-processes of the environment
 are executed.
@@ -764,23 +766,23 @@ cases:
   development process. Thus, it is reasonable to assume, that developers, who
   nevertheless copy portions from Library into their work, do not want to repeat
   the service of the preprocessor manually, but to transfer more than only these
-  elements. hence, it is reasonable to assume, that their work is covered by the
+  elements. Hence, it is reasonable to assume, that their work is covered by the
   LGPL2-RefEng-Rule.
-  \item Developers can \textbf{manually copy / transfer more than the elements
-  of the Library header files from the Library sources into the code of the work
-  using the Library and they can nevertheless let the work being linked to the
-  Library}. But again developers will not do that, because -- again -- some
-  simple include and linking commands would cause the same effect. So it is
+  \item Developers can \textbf{manually copy / transfer more than only the
+  elements of the Library header files from the Library sources into the code of
+  the work using the Library and they can nevertheless let the work being linked
+  to the Library}. But again developers will not do that, because -- again --
+  some simple include and linking commands would cause the same effect. So it is
   reasonable to start from the premise, that copying developers in fact do more
   than this. Thus, it is reasonable to assume, that their work is covered by the
   LGPL2-RefEng-Rule.
-  \item Developers can \textbf{manually copy / transfer more than the elements
-  of the Library header files from the Library sources into the code of the work
-  using the Library without linking it to the Library}. This is a reasonable
-  step of work, because it spares him to link his work to the Library. But -- by
-  definition -- such an augmented work contains more elements of the Library
-  than LGPL-v2-§5 tolerates. Thus it is -- again -- reasonable to assume, that
-  such a work is covered by the LGPL2-RefEng-Rule.
+  \item Developers can \textbf{manually copy / transfer more than only the
+  elements of the Library header files from the Library sources into the code of
+  the work using the Library without linking it to the Library}. This is a
+  reasonable step of work, because it spares the developers to link their work
+  to the Library. But -- by definition -- such an augmented work contains more elements
+  of the Library than LGPL-v2-§5 tolerates. Thus it is -- again -- reasonable to
+  assume, that such a work is covered by the LGPL2-RefEng-Rule.
 \end{enumerate}
 Hence -- overall and from a practical point of view -- we can indeed say, that
 manually copying code from the Library into the work using the Library
@@ -852,7 +854,7 @@ c/c++-Case.
 But there is another Java specific aspect, which has to be considered as well.
 As already mentioned, in Java you can also join your work containing the
 denoting indentifiers and the denoted Library by building a new package, which
-then contains both, your work using the Library and the used Library. Hence, one
+then contains both, the work using the Library and the used Library. Hence, one
 can say, that this package is quasi statically linked: if you distribute such an
 integrated package, then you are distributing both components together. Thus, if
 you distribute a complete package, in other words: a quasi statically linked
@@ -901,10 +903,10 @@ for example offers a complex set of configure scripts and make file templates
 system calls the compiler for each source file, makes known the directories
 which contain the compiled target object files, and finally calls the linker.
 The linker recursively scans the 'top' object file and replaces each embedded
-identifier by a jump command which causes that additionally that set of Library
-commands is executed, which is denoted by the indentifier. So, only just at the
-end, the linker collects all necessary commands of all 'joined' object files and
-Libraries and produces the really executable work.
+identifier by a truely executable jump command which causes that also exactly
+that set of Library commands is executed, which is denoted by the indentifier.
+So, only just at the end, the linker collects all necessary commands of all
+'joined' object files and Libraries and produces the really executable work.
 
 But -- notwithstanding the above -- the linker can either be called as
 integrated step of the developement process itself. Or the linker can
@@ -927,12 +929,10 @@ the work using the Library by commands and/or lines from the Library. This
 technique is known as \emph{inline functions} or \emph{macros}. They have been
 invented for those cases where expanding the stack of commands during the
 compilation by a real function call is more expensive than writing the embedded
-commands of the function more than one time into the whole code. But -- of
-course -- there is no technical limit: A header file could also offer macros
-which denote more than only some lines of the Library code. However that may be,
-in the C/C++ cevelopment process the compiled object files can indeed contain
-more than only the referring names which denote portions of the Library:
-they can also contain real, functionally relevant portions of the Library.
+commands of the function more than one time into the whole code. Hence, in the
+C/C++ cevelopment process the compiled object files can indeed contain more than
+only the referring names which denote portions of the Library: they can also
+contain real, functionally relevant portions of the Library.
  
 Thus, -- again and similar to Java compilation -- we may conclude, that with
 respect to C/C++ programming you (a) have to permit reverse engineering, if you
@@ -940,8 +940,9 @@ distribute your work using the Library together with the Library as a statically
 linked program\footnote{This follows from the LGPL2-RevEng-Rule by Modus
 Ponens.} and that (b) in all other cases your obligation to permit reverse
 engineering depends on the interpretation whether the used identifying names or
-dissolved inline functions and macros, which have been embedded into an object
-file, are indeed portions of the Library.
+dissolved inline functions and macros, which have automatically and standard
+conformably been embedded into an object file, are indeed portions of the
+Library.
 
 Obviously, it is time to answer this crucial question:
 
@@ -970,7 +971,7 @@ practically not be covered by the license of the Library, because
 whether it is legally a derivative work}\footcite[cf.][\nopage wp.
 §5]{Lgpl21OsiLicense1999a}.
 
-In other words: The answer of the LGPL to our question is this: (a) yes, such
+Obviously, the answer of the LGPL to our question is this: (a) yes, such
 object files containing names and snippets offered by the used Library, could
 contain portions of the Library. But it is not necessary to clarify the details,
 because (b) -- up to a specific limit of sizes -- these kind of 'little'
@@ -984,11 +985,11 @@ obligation to allow reverse engineering. From the viewpoint of the LGPL, they
 are \emph{pseudo portions} of the Library, because they do not restrict the
 containg object file in any respect.
 
-So, from the LGPL-RevEng-Rule we now might indirectly conclude, that
-distributing dynamically linkable or combinable bytecode or object code files
-which contain \enquote{only numerical parameters, data structure layouts and
-accessors, and small macros and small inline functions (ten lines or less in
-length} being delivered by a Library does not require to allow reverse
+So, from the LGPL-RevEng-Rule we can now indirectly conclude, that distributing
+dynamically linkable or combinable bytecode or object code files which contain
+\enquote{only numerical parameters, data structure layouts and accessors, and
+small macros and small inline functions (ten lines or less in length)} being
+delivered by a Library does not require to allow reverse
 engineering\footnote{From the decision not to allow reverse engineering follows
 by Modus Tollens applied to the LGPL2-RevEng-Rule, that the distribution of the
 work using the Library must not contain real portions of the Library. From
@@ -998,43 +999,42 @@ case is not covered by the LGPL2-RevEng-Rule and thus we are allowed, to
 distribute a work using the Library without allowing its reverse engineering.}.
 
 Unfortunately, there might be a practical objection which seems to disturb our
-simple result: For applying this rule correctly, we apparently have to determine
-whether a compiled work that uses the Library but still is not *joined to it,
-indeed does not violate the limits of \enquote{small macros or small inline
-functions (ten lines or less in length)}. Thus, seemingly, we have to study all
-header files of all used Libraries in detail, if we want to compliantly
-distribute a work using a Library without the permission of reverse engineering.
-This could be a lot of work -- up to a bulk which practically can not be
-managed.
+simple result: For applying this rule correctly, we apparently have to assure
+that a compiled work that uses the Library but is still not *joined to it,
+indeed does not violate the limits of injecting only \enquote{small macros or
+small inline functions (ten lines or less in length)} into the using work. Thus,
+seemingly, we have to study all header files of all used Libraries in detail, if
+we want to compliantly distribute a work using a Library without permitting
+reverse engineering. This could be a lot of work -- up to a bulk which
+practically can not be managed.
 
 Fortunately, there is a simple solution for this challenge, a rule of thumb,
 based on the principle \enquote{trust the upstream}\footnote{On the ELLW 2013,
 we were told about this principle for the first time. We do not know, whether
 Armijn Hemel invented it. But we can respectfully affirm that he has
-persuasively explained the spirit and purpose of the principle enquote{trust the
-upstream}.}:
+persuasively explained the spirit and purpose of the principle \enquote{trust
+the upstream}.}:
 
 The Library developers publish the header files or the public members and
 functions of the classes in that form they want these elements to be used.
 And they want their Library to be used as an LGPL library, otherwise they would
 have chosen another License. So, they want that improvements of the Libraries
-themselves shall be made accessible as well; but the works using the Library
-shall not necessarily be published in form of source code\footnote{The meaning
-of the weak copyleft.}. Thus, as long as we use the Library exactly in the form
-its authors have published it, as long as we load down the Library from the
-official repository, and as long as we do not modify the intended interfaces
-defined and published by the original header and class files, we may justifiably
-assume that we are using the Libraries just as their copyright owners want them
-to be used. And thus, -- as long as we trust the upstream -- we might assume
-that the header and class files of our Libraries fit the restrictions of the
-LGPL-v2.
+shall be made accessible as well, but that the works using the Library shall not
+necessarily be published in form of source code\footnote{The meaning of the weak
+copyleft.}. Thus, as long as we use a Library exactly in that form, the original
+authors have published, as long as we load down the Library from the official
+repository, and as long as we do not modify the intended interfaces defined and
+published by the original header and class files, we may justifiably assume that
+we are using the Libraries just as their copyright owners want them to be used.
+And thus, -- as long as we trust the upstream -- we might assume that the header
+and class files of our Libraries fit the restrictions of the LGPL-v2.
 
 Now, we have reached our target: This interpretation can directly be applied to
-both open cases: to the case of distributing Java bytecode which only contains
-referring identifiers and to the case of distribution C/C++ object code. We now
-know that the limits given by the LGPL-v2-§5 are respected by standardly using 
-\emph{'upstream approved'} C/C++ and Java libraries. Thus, we indeed finally
-may conclude, that the LGPL-RevEng-Sentence
+both open cases: to the case of distributing Java bytecode as well, as to the
+case of distribution C/C++ object code. We now know that the limits given by the
+LGPL-v2-§5 are respected by standardly using \emph{'upstream approved'} C/C++
+and Java libraries. Thus, we indeed finally may conclude, that the
+LGPL-RevEng-Sentence
 
 \begin{quote}\noindent\emph{\enquote{[\ldots] you may [\ldots] combine
 \textbf{or} link a \enquote{work that uses the Library} with the Library to
@@ -1059,15 +1059,14 @@ means 'nothing more' than
   work using a Library. Especially, you must allow reverse engineering of a work
   using a Library \ldots
   \begin{itemize}
-    \item  \ldots if you distribute the work using the Library and the Library
-    together as a statically linked program or as an integrated package
-    containing both parts, the work using the library and the Library
-    itself\footnote{This holds also if you distribute a script language based
-    program or package, notwithstanding the fact, that one does not need the
-    permission of reverse engineering to understand script language based
-    applications}.
-    \item \ldots if if you distribute a work containing manually copied portions
-    of the Library.
+    \item if you distribute the work using the Library and the Library together
+    as a statically linked program or as an integrated package containing both
+    parts, the work using the library and the Library itself\footnote{This holds
+    also if you distribute a script language based program or package,
+    notwithstanding the fact, that one does not need the permission of reverse
+    engineering to understand script language based applications}.
+    \item if you distribute a work containing manually copied portions of the
+    Library.
   \end{itemize}
 \end{itemize}
 }
@@ -1101,30 +1100,20 @@ if not, then we are allowed to trust in the consistence our analysis:
 
 If you receive a work using the Library in form of a discret (set of)
 dynamically linkable or combinable file(s) and if -- hence -- your provider
-assumed that it is linked on your target machine which serves the also necessary
-dynamically linkable Libraries, than you have the freedom to replace the
-dynamically linked Libraries by updated versions. And as long as the newer
-versions of the Libraries perserve their interfaces, you can do that
-successfully. Hence, the first part of our interpretation respects the spirit
-of the LGPL-v2.
+assumed that the delivered files are linked on your target machine which --
+therefore -- has also to deliver the necessary dynamically linkable Libraries,
+than you have the freedom to replace the dynamically linked Libraries by updated
+versions. And as long as the newer versions of the Libraries perserve thee
+interfaces, you can do that successfully. Hence, the first part of our
+interpretation respects the spirit of the LGPL-v2.
 
 In all other cases, you must have the premission of reverse engineering. So, you
-can use the corresponding tools and techniques to replaces the given version of
-the Library by a newer version; especially if you received statically linked
+can use the corresponding tools and techniques to replaces the embedded version 
+of the Library by a newer version; especially if you received statically linked
 packages. Hence, also the second part of our interpretation respects the spirit
 of the LGPL-v2.
 
-So, finally we can say: every thing is fine. And we can summarize our result
-with the slightly modified \enquote{rules of thumbs} of an open source expert
-who analyzed the problem of protecting your own work from an other viewport:
-
-\begin{itemize}
-  \item \enquote{DO NOT statically link to LGPL or GPL code if you wish to keep
-  your program proprietary [and if you want to protect it against reverse
-  engineering]}\footcite[cf.][6]{Ilardi2010a}.
-  \item \enquote{DO dynamically link to LGPL
-  code}\footcite[cf.][6]{Ilardi2010a}.
-\end{itemize}
+So, finally we can say: everything is fine -- with respect to the LGPL-v2. 
 
 \subsection{Reverse Engineering in the LGPL-v3}
 
@@ -1145,21 +1134,36 @@ of this sentence:
 
 \begin{quote}
 \begin{alltt}   
-(   ( You may convey a Combined Work under terms of your choice
-		 (   (that together effectively, do not restrict modification
+( ( You may convey a Combined Work under terms of your choice
+    (   (that together effectively, do not restrict modification
 		      of the portions of the Library contained in the 
 		      Combined Work)
- 	     and (that together effectively, do not restrict reverse 
+ 	and (that together effectively, do not restrict reverse 
  	          engineering for debugging modifications of the portions
- 	          of the Library contained in the Combined Work
- 	 )   )    )
-     if ( you also do each of the following \([\ldots]\))
+ 	          of the Library contained in the Combined Work)
+  )  )
+  if ( you also do each of the following \([\ldots]\))
 )
 \end{alltt}
 \end{quote}
 
 If we replace the phrase you may convey by the phrase you compiantly distribute,
 then we can directly understand this sentence as a logical implication
+
+\subsection{LGPL Reverse Engineering summaize}
+
+And we can summarize our result
+with the slightly modified \enquote{rules of thumbs} of an open source expert
+who analyzed the problem of protecting your own work from an other viewport:
+
+\begin{itemize}
+  \item \enquote{DO NOT statically link to LGPL or GPL code if you wish to keep
+  your program proprietary [and if you want to protect it against reverse
+  engineering]}\footcite[cf.][6]{Ilardi2010a}.
+  \item \enquote{DO dynamically link to LGPL
+  code}\footcite[cf.][6]{Ilardi2010a}.
+\end{itemize}
+
 
 
 \subsection{Reverse Engineering in the GPL}
