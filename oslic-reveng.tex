@@ -1,0 +1,232 @@
+% Telekom osCompendium cloak file English text
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
+%\documentclass[DIV=calc,BCOR=5mm,12pt,headings=small,oneside,toc=bib,draft]{scrbook}
+\documentclass[DIV=calc,BCOR=5mm,12pt,headings=small,oneside,toc=bib]{scrbook}
+
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4}
+\usepackage[english]{babel}
+\selectlanguage{english}
+
+\usepackage{microtype}
+
+\usepackage{to_oscad/oscad}
+
+%language specific quoting signs
+%default for language emglish is american style of quotes
+%\usepackage[english=british]{csquotes}
+\usepackage[english=american]{csquotes}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+% do not comment the litrature any longer
+\input{btexmat/oscJbibCfgEnIncNoAnno} %no annotations
+
+% language specific hyphenation
+\input{btexmat/oscHyphenationEnInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{headings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+\usepackage{alltt}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+% \usepackage[marginal,hang]{footmisc}
+% \renewcommand\footnotemargin{1.5em}
+
+% formatting the footnote with koma script tools
+% \deffootnote[1em]{1.5em}{1em}{\textsuperscript{\thefootnotemark}}
+\deffootnote[1.5em]{1.5em}{1.5em}{\textsuperscript{\thefootnotemark)\ }}
+
+
+%\deffootnote[0em]{1.5em}{1em}{\textsuperscript{\thefootnotemark}}
+%- end(footnote-configuration)
+
+% %- start(endnote-configuration) uncomment to activate
+% % Let all notes being marked with \endnote instead of \footnote
+% % become endnotes. This set of endnotes replaces the next 
+% % arising command \theendnotes - even if it is not located
+% % at the end of the text.
+% 
+% \usepackage{endnotes}
+% 
+% % Format endnotes as Block with indention - Solution 1
+% %\renewcommand\enoteformat{%
+% %   \noindent\theenmark.) \ \hangindent .7\parindent%
+% %}
+% 
+% % Format endnotes as Block with indention - Solution 2
+% \makeatletter
+% \def\enoteformat{\rightskip\z@ \leftskip0em \parindent=0em \parskip=0em
+% \leavevmode\llap{\hbox{\@theenmark.~}}}
+% \makeatother
+% 
+% \renewcommand\notesname{Annotations}
+% % additionally we shall active a special jurabib option
+% % if we want to get all jurabib footnotes as endnotes
+% \jurabibsetup{citetoend=true}
+% %- end(footnote-configuration)
+
+% - additional packages
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes,snakes}
+\usetikzlibrary{positioning}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{trees}
+
+\usepackage{multirow}
+
+%RPD%%%\usepackage{blindtext}
+\usepackage{caption}
+
+\usetikzlibrary{matrix}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{chngcntr}
+\usepackage{nameref}
+
+\counterwithout{footnote}{chapter}
+
+\usepackage[intoc]{nomencl}
+\let\abbr\nomenclature
+% Modify Section Title of nomenclature
+\renewcommand{\nomname}{Periodicals, Shortcuts, and Abbreviations}
+%\renewcommand{\nomname}{Periodika, ihre Kurzformen und generelle Abkürzungen}
+
+% insert point between abbrewviation and explanation
+\setlength{\nomlabelwidth}{.24\hsize}
+\renewcommand{\nomlabel}[1]{#1 \dotfill}
+% reduce the line distance
+\setlength{\nomitemsep}{-\parsep}
+\makenomenclature
+
+% depth of contents
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{bookmarks=true,breaklinks=true,colorlinks=true,citecolor=blue,draft=false}
+
+% Compatibility command if hyperref cannot be used
+%\newcommand{\texorpdfstring}[2]{#1}
+
+% Abbreviations
+\newcommand{\oslic}{OSLiC}
+
+% Often Cited Sources
+% --------------------
+% first (optional) argument is text at beginning, defaults to "cf."
+% second argument is location, like "§2"; must be "wp" if no paragraph is given 
+\newcommand*{\citeAGPL}[2][cf.]{\footcite[#1][\nopage wp #2]{Agpl30OsiLicense2007a}}
+\newcommand*{\citeAPL}[2][cf.]{\footcite[#1][\nopage wp #2]{Apl20OsiLicense2004a}}
+\newcommand*{\citeBSDnew}[2][cf.]{\footcite[#1][\nopage wp #2]{BsdLicense3Clause}}
+\newcommand*{\citeBSDsimple}[2][cf.]{\footcite[#1][\nopage wp #2]{BsdLicense2Clause}}
+\newcommand*{\citeCDDL}[2][cf.]{\footcite[#1][\nopage wp #2]{Cddl10OsiLicense2004a}}
+\newcommand*{\citeEPL}[2][cf.]{\footcite[#1][\nopage wp #2]{Epl10OsiLicense2005a}}
+\newcommand*{\citeEUPL}[2][cf.]{\footcite[#1][\nopage wp #2]{Eupl11OsiLicense2007a}}
+\newcommand*{\citeGPLthree}[2][cf.]{\footcite[#1][\nopage wp #2]{Gpl30OsiLicense2007a}}
+\newcommand*{\citeGPLtwo}[2][cf.]{\footcite[#1][\nopage wp #2]{Gpl20OsiLicense1991a}}
+\newcommand*{\citeLGPLthree}[2][cf.]{\footcite[#1][\nopage wp #2]{Lgpl30OsiLicense2007a}}
+\newcommand*{\citeLGPLtwo}[2][cf.]{\footcite[#1][\nopage wp #2]{Lgpl21OsiLicense1999a}}
+\newcommand*{\citeMIT}[2][cf.]{\footcite[#1][\nopage wp #2]{MitLicense2012a}}
+\newcommand*{\citeMPL}[2][cf.]{\footcite[#1][\nopage wp #2]{Mpl20OsiLicense2013a}}
+\newcommand*{\citeMSPL}[2][cf.]{\footcite[#1][\nopage wp #2]{MsplOsiLicense2013a}}
+\newcommand*{\citePGL}[2][cf.]{\footcite[#1][\nopage wp #2]{PglOsiLicense2013a}}
+\newcommand*{\citePHP}[2][cf.]{\footcite[#1][\nopage wp #2]{Php30OsiLicense2013a}}
+%%%%%%%%%%%%%%
+
+\begin{document}
+
+%% use all entries of the bliography
+\nocite{*}
+
+%%-- start(titlepage)
+\titlehead{Version 1.0}
+
+\subject{\small \itshape How to Achieve Open Source License Compliance} 
+
+\title{Open Source Software and Reverse Engineering}
+
+\subtitle{Extract of the OSLiC\input{btexmat/oscLicenseFootnoteInc}} \author{
+Karsten Reincke\thanks{Deutsche Telekom AG, Products \& Innovation, 
+T-Online-Allee 1, 64295 Darmstadt}
+}
+
+\maketitle
+%%-- end(titlepage)
+
+
+\normalsize
+
+\section*{Disclaimer}
+\input{snippets/en/20120222-DisclaimerInc}
+
+%%%%%%%%%%%%
+
+\input{snippets/en/03C-osImportantMinorPoints/0304-osAndReverseEngineeringInc.tex}
+
+
+\footnotesize
+\input{btexmat/oscNclAbbreviationsEnInc}
+\input{btexmat/oscNclJournalsInc}
+\printnomenclature
+
+\bibliography{bibfiles/oscResourcesEn,bibfiles/oscCopiedButNotRead,bibfiles/oscNextActions}
+
+\end{document}
+

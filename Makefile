@@ -3,7 +3,7 @@
 
 LATEX=pdflatex
 
-AUX_EXTS=url bbl blg aux dvi toc log lof nlo nls ilg ils ent
+AUX_EXTS=url bbl blg aux dvi toc log lof nlo nls ilg ils ent out
 RES_EXTS=ps pdf bak rtf
 SUB_DIRS=bibfiles btexmat extracts snippets templates
 OSLICDIR=oslic
