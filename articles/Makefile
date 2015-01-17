@@ -8,48 +8,6 @@ RES_EXTS=ps pdf bak rtf
 SUB_DIRS=articles bibfiles btexmat extracts snippets templates
 OSLICDIR=oslic
 
-all:	advi
-
-ifneq ($(LATEX),pdflatex)
-advi: clear
-	find . -maxdepth 1 -name "*.tex" -type f ! -name "rel*.tex"|\
-	while read file; do \
-	  make "`basename $$file .tex`.dvi";\
-	done
-
-aps: clear
-	find . -maxdepth 1 -name "*.tex" -type f ! -name "rel*.tex"|\
-	while read file; do \
-		make "`basename $$file .tex`.ps";\
-	done
-endif
-
-apdf: clear
-	find . -maxdepth 1 -name "*.tex" -type f ! -name "rel*.tex"|\
-	while read file; do \
-		make "`basename $$file .tex`.pdf";\
-	done
-
-ifneq ($(LATEX),pdflatex)
-ddvi: advi
-	$(foreach DIR, ${SUB_DIRS}, cd ${DIR} && make advi && cd ..; done)
-
-dps: aps
-	$(foreach DIR, ${SUB_DIRS}, cd ${DIR} && make aps && cd ..; done)
-endif
-
-dpdf: apdf
-	$(foreach DIR, ${SUB_DIRS}, cd ${DIR} && make apdf && cd ..; done)
-
-ascii:
-	mkdir -p asc && rm asc/*
-	find snippets -name "*.tex" | grep -v "\/osc" |\
-	while read f; do \
-		n=`basename $$f`; detex $$f > asc/$$n.txt;\
-		echo "$$f-> $$n.txt";\
-	done
-	detex oslic.tex > asc/000-oslic.tex.txt
-	cat `ls asc/* | sort` | grep -v "^$$" > oslic-extract.txt
 
 .SUFFIXES: .tex .dvi .ps .pdf .rtf
 
@@ -58,7 +16,7 @@ ascii:
 	@ echo "### converting $< to $@"
 	@ $(LATEX) $< 
 	@ bibtex `basename $< .tex`
-	@ makeindex `basename $< .tex`.nlo -s btexmat/nomencl.ist -o `basename $< .tex`.nls
+	@ makeindex `basename $< .tex`.nlo -s ../btexmat/nomencl.ist -o `basename $< .tex`.nls
 	@ $(LATEX) $< 
 	@ $(LATEX) $< 
 	@ $(LATEX) $< 
@@ -90,10 +48,6 @@ endif
 	@ echo "### converting $< to $@"
 	@ ps2pdf $<
 	@ mv $@ `basename $@ .pdf`-`cat rel-number.tex`.pdf
-
-dist:
-	tar -czvf ../${OSLICDIR}-`cat rel-number.tex`.tar.gz --exclude=${OSLICDIR}/ecopies/* ../${OSLICDIR}
-	zip -r ../${OSLICDIR}-`cat rel-number.tex`.zip --exclude=../${OSLICDIR}/ecopies/* ../${OSLICDIR}
 
 clearAuxFiles:
 	$(foreach EXT, ${AUX_EXTS}, if [ ! "x`ls *.${EXT} 2>/dev/null`" = "x" ]; then rm *.${EXT}; fi;)

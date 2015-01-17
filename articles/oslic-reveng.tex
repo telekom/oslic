@@ -19,7 +19,7 @@
 %   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
 
 %\documentclass[DIV=calc,BCOR=5mm,12pt,headings=small,oneside,toc=bib,draft]{scrbook}
-\documentclass[DIV=calc,BCOR=5mm,12pt,headings=small,oneside,toc=bib]{scrbook}
+\documentclass[DIV=calc,BCOR=5mm,12pt,headings=small,oneside,toc=bib]{scrartcl}
 
 %%% (1) general configurations %%%
 \usepackage[utf8]{inputenc}
@@ -28,10 +28,9 @@
 \usepackage[]{a4}
 \usepackage[english]{babel}
 \selectlanguage{english}
+\usepackage[automark]{scrpage2}
 
 \usepackage{microtype}
-
-\usepackage{to_oscad/oscad}
 
 %language specific quoting signs
 %default for language emglish is american style of quotes
@@ -42,17 +41,17 @@
 \usepackage[see]{jurabib}
 \bibliographystyle{jurabib}
 % do not comment the litrature any longer
-\input{btexmat/oscJbibCfgEnIncNoAnno} %no annotations
+\input{../btexmat/oscJbibCfgEnIncNoAnno} %no annotations
 
 % language specific hyphenation
-\input{btexmat/oscHyphenationEnInc}
+\input{../btexmat/oscHyphenationEnInc}
 
 %%% (3) layout page configuration %%%
 
 % select the visible parts of a page
 % S.31: { plain|empty|headings|myheadings }
 %\pagestyle{myheadings}
-\pagestyle{headings}
+\pagestyle{scrheadings}
 
 % select the wished style of page-numbering
 % S.32: { arabic,roman,Roman,alph,Alph }
@@ -87,34 +86,8 @@
 % \deffootnote[1em]{1.5em}{1em}{\textsuperscript{\thefootnotemark}}
 \deffootnote[1.5em]{1.5em}{1.5em}{\textsuperscript{\thefootnotemark)\ }}
 
-
 %\deffootnote[0em]{1.5em}{1em}{\textsuperscript{\thefootnotemark}}
 %- end(footnote-configuration)
-
-% %- start(endnote-configuration) uncomment to activate
-% % Let all notes being marked with \endnote instead of \footnote
-% % become endnotes. This set of endnotes replaces the next 
-% % arising command \theendnotes - even if it is not located
-% % at the end of the text.
-% 
-% \usepackage{endnotes}
-% 
-% % Format endnotes as Block with indention - Solution 1
-% %\renewcommand\enoteformat{%
-% %   \noindent\theenmark.) \ \hangindent .7\parindent%
-% %}
-% 
-% % Format endnotes as Block with indention - Solution 2
-% \makeatletter
-% \def\enoteformat{\rightskip\z@ \leftskip0em \parindent=0em \parskip=0em
-% \leavevmode\llap{\hbox{\@theenmark.~}}}
-% \makeatother
-% 
-% \renewcommand\notesname{Annotations}
-% % additionally we shall active a special jurabib option
-% % if we want to get all jurabib footnotes as endnotes
-% \jurabibsetup{citetoend=true}
-% %- end(footnote-configuration)
 
 % - additional packages
 
@@ -139,7 +112,7 @@
 \usepackage{chngcntr}
 \usepackage{nameref}
 
-\counterwithout{footnote}{chapter}
+%\counterwithout{footnote}{chapter}
 
 \usepackage[intoc]{nomencl}
 \let\abbr\nomenclature
@@ -168,41 +141,23 @@
 % Abbreviations
 \newcommand{\oslic}{OSLiC}
 
-% Often Cited Sources
-% --------------------
-% first (optional) argument is text at beginning, defaults to "cf."
-% second argument is location, like "§2"; must be "wp" if no paragraph is given 
-\newcommand*{\citeAGPL}[2][cf.]{\footcite[#1][\nopage wp #2]{Agpl30OsiLicense2007a}}
-\newcommand*{\citeAPL}[2][cf.]{\footcite[#1][\nopage wp #2]{Apl20OsiLicense2004a}}
-\newcommand*{\citeBSDnew}[2][cf.]{\footcite[#1][\nopage wp #2]{BsdLicense3Clause}}
-\newcommand*{\citeBSDsimple}[2][cf.]{\footcite[#1][\nopage wp #2]{BsdLicense2Clause}}
-\newcommand*{\citeCDDL}[2][cf.]{\footcite[#1][\nopage wp #2]{Cddl10OsiLicense2004a}}
-\newcommand*{\citeEPL}[2][cf.]{\footcite[#1][\nopage wp #2]{Epl10OsiLicense2005a}}
-\newcommand*{\citeEUPL}[2][cf.]{\footcite[#1][\nopage wp #2]{Eupl11OsiLicense2007a}}
-\newcommand*{\citeGPLthree}[2][cf.]{\footcite[#1][\nopage wp #2]{Gpl30OsiLicense2007a}}
-\newcommand*{\citeGPLtwo}[2][cf.]{\footcite[#1][\nopage wp #2]{Gpl20OsiLicense1991a}}
-\newcommand*{\citeLGPLthree}[2][cf.]{\footcite[#1][\nopage wp #2]{Lgpl30OsiLicense2007a}}
-\newcommand*{\citeLGPLtwo}[2][cf.]{\footcite[#1][\nopage wp #2]{Lgpl21OsiLicense1999a}}
-\newcommand*{\citeMIT}[2][cf.]{\footcite[#1][\nopage wp #2]{MitLicense2012a}}
-\newcommand*{\citeMPL}[2][cf.]{\footcite[#1][\nopage wp #2]{Mpl20OsiLicense2013a}}
-\newcommand*{\citeMSPL}[2][cf.]{\footcite[#1][\nopage wp #2]{MsplOsiLicense2013a}}
-\newcommand*{\citePGL}[2][cf.]{\footcite[#1][\nopage wp #2]{PglOsiLicense2013a}}
-\newcommand*{\citePHP}[2][cf.]{\footcite[#1][\nopage wp #2]{Php30OsiLicense2013a}}
-%%%%%%%%%%%%%%
-
 \begin{document}
 
 %% use all entries of the bliography
-\nocite{*}
+%\nocite{*}
 
 %%-- start(titlepage)
 \titlehead{Version 1.0}
 
 \subject{\small \itshape How to Achieve Open Source License Compliance} 
 
-\title{Open Source Software and Reverse Engineering}
+\title{Open Source Software and Reverse Engineering\footnote{This article is
+published under the terms of CC-BY-SA 3.0 ($\rightarrow$ p. \pageref{License})
+and under a specific proviso: ($\rightarrow$ p. \pageref{Disclaimer}). It is
+also published as a chapter of the \textbf{O}pen \textbf{S}ource
+\textbf{Li}cense \textbf{C}ompendium ($\rightarrow$ http://www.oslic.org/}}
 
-\subtitle{Extract of the OSLiC\input{btexmat/oscLicenseFootnoteInc}} \author{
+\author{
 Karsten Reincke\thanks{Deutsche Telekom AG, Products \& Innovation, 
 T-Online-Allee 1, 64295 Darmstadt}
 }
@@ -210,23 +165,53 @@ T-Online-Allee 1, 64295 Darmstadt}
 \maketitle
 %%-- end(titlepage)
 
-
 \normalsize
 
-\section*{Disclaimer}
-\input{snippets/en/20120222-DisclaimerInc}
+\begin{abstract}\noindent\emph{Dies ist die Zusammenfassung dieses Dokuments.
+Daher dieses Dokument nur zu Testzwecken dient, fällt die Zusammenfassung
+entsprechend kurz aus.}
+\end{abstract}
+
+\section{Preface}
+
+During the last two years I was often asked to discuss my opinion
+
+\footnotesize
+\tableofcontents
 
 %%%%%%%%%%%%
 
-\input{snippets/en/03C-osImportantMinorPoints/0304-osAndReverseEngineeringInc.tex}
+\section{Reverse Engineering and Open Source as Challenge}
+\input{../snippets/en/03C-osImportantMinorPoints/0304-revEng/0304a-reMotivationInc}
+\section{Reverse Engineering in the LGPL-v2}
+\input{../snippets/en/03C-osImportantMinorPoints/0304-revEng/0304b0-reLgpl2Inc}
+\subsection{Linguistical Clarification}
+\input{../snippets/en/03C-osImportantMinorPoints/0304-revEng/0304b1-reLgpl2LingClarInc}
+\subsection{Logical Clarification}
+\input{../snippets/en/03C-osImportantMinorPoints/0304-revEng/0304b2-reLgpl2LogiClarInc}
+\subsection{Empirical Clarification}
+\input{../snippets/en/03C-osImportantMinorPoints/0304-revEng/0304b3-reLgpl2EmpiClarInc}
+\subsection{Final Conclusion}
+\input{../snippets/en/03C-osImportantMinorPoints/0304-revEng/0304b4-reLgpl2FinaConcInc}
+\subsection{Final Securing}
+\input{../snippets/en/03C-osImportantMinorPoints/0304-revEng/0304b5-reLgpl2FinaSecuInc}
+\section{Reverse Engineering in the LGPL-v3}
+\input{../snippets/en/03C-osImportantMinorPoints/0304-revEng/0304c-reLgpl3Inc}
+\section{Reverse Engineering in the other Open Source Licenses}
+\input{../snippets/en/03C-osImportantMinorPoints/0304-revEng/0304d-reOtherLicensesInc}
+\section{Reverse Engineering in Open Source Licenses: Summary}
+\input{../snippets/en/03C-osImportantMinorPoints/0304-revEng/0304e-reSummaryInc}
 
+\label{Disclaimer}
+\section{Disclaimer}
+\input{../snippets/en/20150117-ExtractDisclaimerInc}
+
+\label{License}
+\section{License}
+\input{../btexmat/oscLicenseHintInc}
 
 \footnotesize
-\input{btexmat/oscNclAbbreviationsEnInc}
-\input{btexmat/oscNclJournalsInc}
-\printnomenclature
-
-\bibliography{bibfiles/oscResourcesEn,bibfiles/oscCopiedButNotRead,bibfiles/oscNextActions}
+\bibliography{../bibfiles/oscResourcesEn}
 
 \end{document}
 
