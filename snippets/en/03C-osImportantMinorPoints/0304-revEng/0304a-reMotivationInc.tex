@@ -1,0 +1,206 @@
+% Telekom osCompendium 'for being included' snippet template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ Framework derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke 2012 CC BY 3.0  http://mycsrf.fodina.de/ ]
+%
+
+
+%% use all entries of the bibliography
+%\nocite{*}
+
+Beyond any doubt, the LGPL mentions \enquote{reverse engineering}
+literally\footnote{For the LGPL-v2 \cite[cf.][\nopage wp., 
+§6]{Lgpl21OsiLicense1999a}; for the LGPL-v3 \cite[cf.][\nopage wp., 
+§4]{Lgpl30OsiLicense2007a} } for indicating that reverse engineering in any
+respect must be allowed to use and distribute LGPL software compliantly:
+
+\begin{quote}\noindent\emph{\enquote{[\ldots] you may [\ldots] distribute a work
+(containing portions of the Library) under terms of your choice, provided that
+the terms permit [\ldots] \emph{reverse engineering} [\ldots]}
+\footnote{\cite[cf.][\nopage wp, §6]{Lgpl21OsiLicense1999a}. The LGPL-v2 uses
+the capitalized word \enquote{Library} for denoting a library which
+\enquote{[\ldots] has been distributed under (the) terms} of the LGPL-v2.
+(\cite[cf.][\nopage wp, §0]{Lgpl21OsiLicense1999a}). Inside of our LGPL
+chapter(s) we follow this interpretation. } }
+\end{quote}
+
+There are three strategies for dealing with such provisions: one can try to
+fully honor its meaning, one can mitigate its meaning, or one can avoid to
+discuss this requirement altogether:
+
+A first group of well known open source experts take the sentence of the LGPL-v2
+as a strict rule which requires that one has to allow reverse engineering of the
+whole software product if one embeds any LGPL licensed component into that
+product\footnote{For example, a very trustworthy German expert states that the
+LGPL-2.1 generally requires that a distributor of a program which accesses a
+LGPL-2.1 licensed library, must grant his customer also the right to modify the
+accessing program and hence also the right to execute reverse engineering.
+Literally the German text says:
+\begin{quote}\enquote{Ziffer 6 LGPLv2.1 knüpft die Erlaubnis, das zugreifende
+Programm unter beliebigen Lizenzbestimmungen verbreiten zu drüfen, an eine Reihe
+von Verpflichtungen, die in der Praxis oft übersehen werden: Zunächst muss dem
+Kunden, dem die Software geliefert wird, die Veränderung des zugreifenden
+Programms gestattet werden und zu diesem Zweck auch ein Reverse Engineering zur
+Fehlerbehebung. \emph{Dies dürfte alle Formen des Debugging und das
+Dekompilieren des zugreifenden Programms umfassen}.} (\cite[cf.][81; emphasis
+KR]{JaeMet2011a}).\end{quote} At first glance, also \enquote{copyleft.org} --
+the \enquote{[...] collaborative project to create and disseminate useful
+information, tutorial material, and new policy ideas regarding all forms of
+copyleft licensing} (\cite[cf.][\nopage wp.]{CopyLeftOrg2014a}) -- could be
+taken as another witness for such an attitude of strict reading: Some of its
+contributors elucidate in a chapter dealing with \enquote{special topics in
+compliance} that \enquote{the license of the whole work must [sic!] permit
+\enquote{reverse engineering for debugging such modifications} to the library}
+and that one therefore \enquote{ should take care that the EULA used for the
+Application does not contradict this
+permission}(\cite[cf.][86]{KuhSebGin2014a}}.
+
+A second group of well known and knowledgeable open source experts signify that
+the LGPL-v2 indeed literally contains a strict rule, but that this rule actually
+is not meant as it sounds: For example, two of these experts explain that
+\enquote{these requirements on the licensed combination require that the license
+chosen not prohibit the customer’s modification and reverse engineering for
+debugging these modifications in the work as a whole}. But then they directly
+add the limitation, that \enquote{in practice, enforcement history suggests, it
+means that the license terms chosen may not prohibit modification and reverse
+engineering for debugging of modification in the LGPL’d code included in the
+combination}\footnote{\cite[cf.][\nopage wp., chapter LGPLv2.1, section
+6]{MogCho2014a}. Such a mitigation can also be found in the tutorial of
+copyleft.org: After they have summarized the LGPL-v2 sentence as a strict rule,
+they directly continue, that one \enquote{[\ldots] must refrain from license
+terms on works based on the licensed work that prohibit replacement of the
+licensed components of the larger non-LGPL'd work, or prohibit decompilation or
+reverse engineering in order to enhance or fix bugs in the LGPL'd components}
+(\cite[cf.][86]{KuhSebGin2014a}). This added specification indicates, that one
+only has to facilitate the modification of the library and that reverse
+engineering can be ignored as long as there are other ways to improve the
+embedded library.}.
+
+Finally, a third group of experts prefers not to discuss the problem of reverse
+engineering, although this technique is literally mentioned in the license and
+although they want explain how to use GPL/LGPL licensed software
+compliantly\footnote{An article of Terry J. Ilardi might be taken as a first
+witness of this third strategy: he profoundly explains the essence of the LGPL,
+he especially discusses §6, and he delivers applicable rules like \enquote{DO
+NOT statically link to LGPL [\ldots] code if you wish to keep your program
+proprietary}. But he does not discuss \emph{reverse engineering}
+(\cite[cf.][5f]{Ilardi2010a}). Similarily argues Rosen
+(\cite[cf.][121ff]{Rosen2005a}). And -- despite their comments on reverse
+engineering in the specific chapter \emph{special topics in compliance} -- the
+copyleft.org document can also be taken as an instance of this attitude:
+Although its' authors recommend to \enquote{study chapter 10 carefully} for
+establishing an adequate \enquote{compliance with LGPLv2.1}
+(\cite[cf.][86]{KuhSebGin2014a}), this chapter 10 -- dedicated to the meaning of
+the \enquote{Lesser GPL} -- does not deal with reverse engineering, although it
+discusses the §6 of the LGPLv2.1 in depth (\cite[cf.][56ff, esp.
+60f]{KuhSebGin2014a}).}.
+
+This situation must bother companies and people who want to use open source
+software compliantly and who therefore are looking for guidance. Particularly it
+disturbs those who want to protect their business relevant software. At the end,
+they might consider that this sentence is not consistently understood by the
+open source community itself. And -- as far as we know -- at least some of these
+companies preventively prohibit their developers to embed LGPL licensed
+components into programs which contain business relevant techniques.
+Unfortunately, this consequence does not only obstruct access to a large set of
+well written free software, but it is scarcely possible to obey such an
+interdiction consequently: The glibc, which enables the programms to talk with
+the kernel of the GNU/Linux system\footnote{cf.
+http://www.gnu.org/software/libc/}, is licensed under the LGPL\footnote{cf.
+http://en.wikipedia.org/wiki/GNU\_C\_Library}. And hence, this library is
+indirectly linked to or combined with any program running on the GNU/Linux
+system. So, if the LGPL-v2 indeed required, that reverse engineering of every
+program must be allowed, which contains portions of any LGPL Library, then every
+GNU/Linux user would be allowed to examine every program running on GNU/Linux by
+\emph{reverse engineering}, simply, because finally every 'GNU/Linux program' is
+linked to or combined with the glibc\footnote{This conclusion might surprise.
+But it is inferred with exactly the same arguments as the conclusion, that
+without a licence offering a weaker copyleft every program would have been
+licensed under the GPL. The copyleft.org document explains this argumentation in
+great detail (\cite[cf.][56f]{KuhSebGin2014a}).}. In other words: if the LGPL
+indeed required the permission of reverse engineering, then
+every program executed on GNU/Linux may be reverse engineered.
+
+But an exhaustive reading of the LGPL-v2 strongly indicates, that there must be
+another valid, more 'liquid' understanding of the LGPL: The preamble explains
+the reason for offering another weaker license beside the GPL. It says that
+\enquote{[\ldots] on rare occasions, there may be a special need to encourage
+the widest possible use of a certain library, so that it becomes a de-facto
+standard} and that therefore it could be strategicly necessary to \enquote{allow
+[\ldots] non-free programs [\ldots] to use the library} without enforcing that
+these programs become free software too\footcite[cf.][\nopage wp,
+§preamble]{Lgpl21OsiLicense1999a}.
+
+So, if the LGPL had indeed determined that every program linked to or combined
+with any LGPL library may be reverse engineered, then the LGPL would have an
+effect contrary to its own intention. It would have introduced something like
+\emph{'security by obscurity'}: First, the LGPL would allow to protect the
+internals of your own work against investigation because the code of the
+non-free programm using the library, does not necessarily have to be published
+as well\footnote{The weak copyleft has been introduced for encouring the widest
+possible use of the library.}. But then -- in the end -- the LGPL would also
+allow the user to reverse engineer the received binary and hence would enable
+him to nevertheless discover all internals\footnote{It would only cost a little
+more effort - as security by obscurity indicates.}. By this means, the LGPL-v2
+would undermine its' own raison d'$\grave{e}$tre introduced by its' inventors:
+under such circumstances there probably would be less hope that any LGPL library
+could have become a defacto standard.
+
+We know that the inventors of the GNU licenses and GNU software are very
+sophisticated experts. They never would have published such an inconsistent
+document. So, this dissent read in(to) the document is a strong indicator for
+the fact, that there must be a better way to understand the license. And thus,
+it is up to us, the followers, to explicate a more adequate interpretation. Of
+course, such an interpretation must be grounded on the written text. We, the
+scholars, are not allowed to add our own wishes. We must read the license very
+strictly. We have to deduce 'understandings' only by matching the
+interpretations explicitly, strictly, and reasonably back to the license text
+itself.
+
+
+NEU FORMULIEREN: start
+
+Encouraged by the indication that a better understanding of the license may
+exist and contrary to the other strategies, we are going to prove that, in
+fact, none of the open source licenses\footnote{being discussed in the OSLiC} in
+general require to allow reverse engineering of software containing a component
+licensed under that open source license. In particular, we will prove, that even
+the LGPL does not claim this permission generally: We want to explain, why the
+LGPL only requires to permit reverse engineering if and only if the LGPL
+licensed component is embedded into a statically linked and distributed piece of
+software. Moreover, we want to show that in all other cases the LGPL allows 
+to distribute packages without granting permission to reverse engineer the
+software which uses the LGPL licensed library\footnote{By the way, our analysis
+should also provide proof that the LGPL is not something like a 'poisoned'
+license containing \enquote{an imprenetrable maze of technology babble} which
+\enquote{[\ldots] should not be in a general-purpose software license}
+(\cite[cf.][124]{Rosen2005a}). The challenge of the today's descendants is to
+understand the former inventors of the GNU licenses and their way to think about
+computing - including all the hassle the computing language C might provoke.}.
+We hope that our analysis, grounded on the license text itself, will support
+companies and people to compliantly use open source software more often and with
+less scruples.
+
+NEU FORMULIEREN: ende
+
+Hence, let us prove our position 'bottom up'. Let us firstly show that it is
+true for the LGPL-v2 -- by explicating the license text lingually, then
+logically, and finally empirically, before we infer the correct understanding.
+Then let us show that it is also true for the LGPL-v3. And in the end let us
+show that it is true for all other licenses\footnote{analysed by the OSLiC.}.
+

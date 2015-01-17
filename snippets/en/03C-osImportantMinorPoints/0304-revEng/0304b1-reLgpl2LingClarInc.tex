@@ -1,0 +1,199 @@
+% Telekom osCompendium 'for being included' snippet template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ Framework derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke 2012 CC BY 3.0  http://mycsrf.fodina.de/ ]
+%
+
+For fulfilling our rule, to read the text strictly and deduce our
+interpretations reasonably, let us firstly only highlight the syntactical
+conjunctions for simplifying the understanding:
+
+\begin{quote}\noindent\emph{\enquote{[\ldots] you may [\ldots] combine
+\textbf{or} link a \enquote{work that uses the Library} with the Library to
+produce a work containing portions of the Library \textbf{and} distribute that
+work under terms of your choice, \textbf{provided that} the terms permit
+modification of the work for the customer's own use \textbf{and} \emph{reverse
+engineering} for debugging such modifications.}\footnote{\cite[cf.][\nopage wp.,
+§6, emphasis KR.]{Lgpl21OsiLicense1999a}.}}
+\end{quote}
+
+It is evident that the conjunction \emph{'provided that'} is splitting the
+sentence into two parts: you are allowed to do something \emph{provided that} a
+precondition is fulfilled. Additionally, both parts of the sentence --
+the one before the conjunction \emph{'provided that'} and the part after it --
+are syntactically condensed embedded phrases which also contain subordinated 
+conjunctions and elliptical constructions\footnote{cf.
+http://en.wikipedia.org/wiki/Ellipsis\_\%28linguistics\%29, wp.
+}. These syntactical interconnections must be disbanded:
+
+Let us firstly \textbf{dissolve the syntactical compression \underline{before}
+the conjunction \emph{'provided that'}}: It is established by using the two
+other conjunctions \emph{and} and \emph{or} and introduced by the subordinating
+phrase \emph{you may [\ldots]}. Unfortunately, from a formal point of view, one
+can read the phrase \emph{you may (X or Y and Z)} as two different groupings:
+either as \emph{you may ((X or Y) and Z)} or as \emph{you may (X or (Y and Z))}.
+
+But, fortunately, we know from the semantic point of view that speaking about
+\emph{\enquote{[\ldots] combining \textbf{or} linking [\ldots something] to
+produce a work containing portions of the Library}} denotes two different
+methods which both can \emph{join} the components \emph{\enquote{[\ldots] to
+produce a work containing portions of the Library}}. So, let us -- only for a
+moment\footnote{Later on we will re-insert th original phrase!} -- simply
+replace the string \emph{\enquote{combine or link}} by the string
+\emph{\enquote{*join}}\footnote{When the LGPL and the GPL were initially
+defined, the C programming language was the predominant model of software
+development. Knowing this method eases the understanding of these licenses.
+Thus, it is not totally wrong to take this token *join also as a curtsey to the
+C programming language.}. This reduces the syntactical structure of the sentence
+back to the simple phrase \emph{you may (W and Z)} in which \emph{W} stands for
+\emph{(X or Y)}.
+
+Now, we can directly state that the phrase \emph{you may (W and Z)} itself is a
+condensed version of the explicit phrase \emph{ (you may W) and (you may Z)}.
+
+Finally we have to note, that the phrase before the conjunction \emph{'provided
+that'} contains also a linguistic ellipsis\footnote{cf.
+http://en.wikipedia.org/wiki/Ellipsis\_\%28linguistics\%29, wp.
+}: It says that you may *join the components \enquote{to produce \textbf{a work
+containing portions of the Library} \textbf{and} distribute \textbf{that work}
+under terms of your choice}. With respect to the English grammar, we may
+conclude that the second term \emph{that work} refers back to the previously
+introduced specification of \emph{a work containing portions of the Library}: if
+a complete phrase has just been introduced explicitly, then the English language
+allows to reduce its' next occurence syntactically while its' complete meaning
+is retained. Hence, conversely, we are allowed to unfold the reduced form to
+restore the complete phrase.
+
+So -- overall -- we may understand the phrase before the conjunction
+\emph{'provided that'} as a phrase with the structure \emph{(you may W) and (you
+may Z')}:
+
+\begin{quote}\noindent\emph{\textbf{((}you may [\ldots] \emph{*join} a
+\enquote{work that uses the Library} with the Library to produce a work
+containing portions of the Library\textbf{) and (}you may [\ldots] distribute
+that work containing portions of the Library under terms of your
+choice\textbf{))}} \textbf{provided that} [\ldots]\end{quote}
+
+Theoretically, a reader could reject our first dissolution of the
+LGPL2-RefEng-Sentence. But for reasonably denying our interpretation he has to
+deliver other resolutions of the lingustic elliptical subphrases or other
+dissolvations of the conjunctions. Fortunately, it seems to be evident that such
+attempts must violate the English grammar.
+
+Let us secondly \textbf{dissolve the part \underline{after} the conjunction
+\emph{'provided that'}}: With respect to the subordinated conjunction
+\emph{'and'}, the subphrase \emph{the terms permit} syntactically refers to
+both, the \emph{modification} and the \emph{reverse engineering}: An embedded
+conjunction \emph{'and'} allows to use a more stylish grammatical compaction.
+So, it should be clear, that saying
+
+\begin{quote}\noindent\textbf{provided that} \emph{the terms permit modification
+of the work for the customer's own use \emph{\textbf{and}} reverse engineering
+for debugging such modifications}\end{quote}
+
+means
+
+\begin{quote}\noindent\textbf{provided that} \emph{the terms permit
+\textbf{(} modification of the work for the customer's own use \emph{\textbf{and}}
+reverse engineering for debugging such modifications\textbf{)}}\end{quote}
+
+and is totally equivalent to the sentence 
+
+\begin{quote}\noindent[\ldots] \textbf{provided that} \emph{\textbf{((}the terms
+permit modification of the work for the customer's own use\textbf{)}
+\emph{\textbf{and}} \textbf{(}the terms permit reverse engineering for debugging
+such modifications\textbf{))}}.
+\end{quote}
+
+We believe that there is no other possibility to understand this part of the
+LGPL2-RefEng-Sentence with respect to the rules of the English language.
+Nevertheless, here we reached a next point where our reader may formally
+disagree with us. But if he really wants to object our dissolution, he must
+deliver another valid interpreation of the scope of the conjunction \emph{and}
+or he must deliver another resolutions of the linguistic ellipsis. But we
+reckon, that one can not reasonably argue for such alternatives.
+
+Finally, there are other deeply embedded ellipses, which need to be resolved
+as well:
+
+\begin{enumerate}
+  \item  In the part before the splitting conjunction \emph{'provided that'} we
+  already had to expand the abridging \emph{'that work'} by its intended
+  explicated version \emph{'that work containing portions of the Library'}.  In
+  the part after the splitting conjunction the first subphrase also contains the
+  term \emph{'the work'}. Formally, this term can either refer to \emph{'the
+  work that uses the library'} as one of the components which are joined, or it
+  can refer to \emph{'the work containing portions of the Library'} as the
+  result of joining the components. We decide to constantly dissolve the
+  elliptic abridgement by the phrase \emph{'the work containing portions of the
+  Library'}.
+  \item The first clause of the part after the splitting conjunction
+  \emph{'provided that'} talks about the purpose of \enquote{permitting
+  modification of the work} which we just had to unfold to the phrase
+  \emph{'permitting modification of the work containing portions of the
+  Library'}. The second clause talks about the purpose of \enquote{permitting
+  reverse engineering}: it shall support the \enquote{debugging [of] such
+  modifications}. The pronoun \emph{'such'} indicates that the word
+  \emph{'modifications'} refers back to the just unfolded phrase
+  \emph{modification of the work containing portions of the Library}. So, even
+  the second sentence has to be expanded to that explicit phrase.
+  \item Finally and only for being complete, we also have to unfold the clause
+  \enquote{the terms} to the form which is predetermined by the first referred
+  instance \enquote{the terms of your choice}
+\end{enumerate}
+
+So -- overall -- we are allowed to rewrite the LGPL2-RevEng-Sentence 
+in the following form, namely without having changed its
+meaning\footnote{Recollect that '*join' still stands for 'combine or link'.}:
+
+\begin{verbatim}
+( ( you may 
+       *join a work that uses the Library with the Library
+        to produce a work containing portions of the Library )
+  AND 
+  ( you may 
+        distribute that work containing portions of the Library
+        under terms of your choice 
+) )
+PROVIDED THAT
+( ( the terms of your choice permit 
+        modification of the work containing portions of 
+        the Library for the customer's own use )
+  AND
+  ( the terms of your choice permit
+        reverse engineering for debugging modifications 
+        of the work containing portions of the Library   
+) )
+\end{verbatim}
+
+At this point we must recommend all our readers to verify that this
+'structurally explicated presentation' does exactly mean the same as the
+intially quoted LGPL2-RefEng-Sentence. We are now going to discuss some of its'
+logical aspects by some formal transformations. For accepting these operations
+and linking the results back to the original LGPL2-RefEng-Sentence, it is very
+helpful to know that one already has accepted the equivalence of this explicated
+form and the more condensed original version. For reviewing the equivalence the
+reader could -- for example -- ask himself which of our rewritings are wrong,
+why they are wrong and which alternatives can reasonably be offered for solving
+the syntactical issues which disposed us to chose our solutions. Again, we
+ourselves -- of course -- are profoundly convinced that both versions are
+completely equivalent.
+
+%% use all entries of the bibliography
+%\nocite{*}
+
