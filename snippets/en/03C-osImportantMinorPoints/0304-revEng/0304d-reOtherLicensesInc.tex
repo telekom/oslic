@@ -19,6 +19,69 @@
 %   mycsrf (c) K. Reincke 2012 CC BY 3.0  http://mycsrf.fodina.de/ ]
 %
 
+The rest of our way is simple: First, we can ascertain, that none of the other
+open source licenses we consider\footnote{Just as the OSLiC (), also this
+article only focuses on the most important open source licenses: the Apache
+license, the BSD licenses, the MIT license, the MS-PL, the PostgreSXQL, the PHP
+license, the CDDL, the EPL, the EUPL, the MPL, the LGPLs the MPL, the GPLs and
+the AGPL}, contain the phrase 'reverse engineering'. Moreover, they even do not
+contain one of the single words\footnote{This can be verified by (a) loading
+down all license texts from the osi page
+(http://opensource.org/licenses/alphabetical) and by executing the command $grep
+-i "engineering" *$ respectively $grep -i "reverse"$ in the directory into which
+the license texts have been loaded down: grep finds the word reverse and
+engineering only in the texts of the LGPLs.}. So, we may infer, that these most
+important other open source licenses could at most require the permission of
+reverse engineering indirectly. Second, we know already that distributing script
+code let the allowance to reverse engineer, become irrelevant: script code can
+directly be read and understood, if one knows the script language. Third, from
+the definition of strong copleft we may derive, that distributing software
+licensed under a strong copyleft license let the permission of reverse
+engineering become unimportant, because the source code of the work using the
+libraries must also be made accessible.
+
+So -- overally -- we may conclude, that we have only to consider those cases,
+where a piece of software is distributed in form of binaries oder byte code,
+which uses libraries licensed under permissive open source license or under a
+weak copyleft license.
+
+From the definition of being a permissive license or a weak copyleft license we
+know already that the used components do not directly influence the permission
+to use, to distribute, to investigate, or to modify the work using the
+components. 
+
+So, if we distribute such a work in form of dynamically linkable, but still not
+linked binaries or byte code, then there is no way to reasonably derive that the
+work using the compnents, may be reverse engineered: the open source licenses
+only cover the components themselves. But these components still are not
+part of still unlinked work\footnote{The only way to infer that the licenses of
+the components operates also on the using work, is to argue that the using work
+must at least contain elements (identifiers etc.) of the interfaces declared
+(but not defined) by the libraries and that therefore at least these elements
+may be investigated or modified. Fortunately, it is a feature of libraries to
+be used in accordance to an interface, the developers of the library have
+designed to make their library usable. So, if the licenses do not address the
+issue of the implicitly included portions of the library in case of
+still unlinked binaries or byte code files, then one might infer from the
+common sense of computing software, that the developers implictly allowed such
+integration without any requirements, simply, because their library would not
+be usable, if this was not so.}
+
+On the other side, if we distribute the work using the components as a
+statically linked binary or byte code file, which therefore already contains the
+complete used components (and not only the declared lements of the interfaces),
+then we have to add the open source license text of the component, we have to
+distribute the copyright line, and we are not allowed to modify one of the
+licensing assertions integrated into the source code of the components. This
+follows from all the open source licenses. So, the receiver of the statically
+linked work probably is allowed to modify the embedded open source components -
+even if he had to edit the binary or byte code files. Methods, to do so, are
+known as reverse engineering. Hence, if we distribute a statically linked work
+using open source licensed components, we at least have to fear that our
+receivers could indirectly have also got the permission to reverse engineer our
+complete product.
+
+
 
 %% use all entries of the bibliography
 %\nocite{*}

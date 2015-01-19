@@ -151,11 +151,7 @@
 
 \subject{\small \itshape How to Achieve Open Source License Compliance} 
 
-\title{Open Source Software and Reverse Engineering\footnote{This article is
-published under the terms of CC-BY-SA 3.0 ($\rightarrow$ p. \pageref{License})
-and under a specific proviso: ($\rightarrow$ p. \pageref{Disclaimer}). It is
-also published as a chapter of the \textbf{O}pen \textbf{S}ource
-\textbf{Li}cense \textbf{C}ompendium ($\rightarrow$ http://www.oslic.org/}}
+\title{Open Source Software and Reverse Engineering}
 
 \author{
 Karsten Reincke\thanks{Deutsche Telekom AG, Products \& Innovation, 
@@ -167,14 +163,61 @@ T-Online-Allee 1, 64295 Darmstadt}
 
 \normalsize
 
-\begin{abstract}\noindent\emph{Dies ist die Zusammenfassung dieses Dokuments.
-Daher dieses Dokument nur zu Testzwecken dient, fällt die Zusammenfassung
-entsprechend kurz aus.}
+\begin{abstract}\noindent\emph{Sometimes, it is stated that software using LGPL
+licensed components, may only be distributed by permitting reverse engineering
+of the software which uses the LGPL components. By reading the licenses very
+strictly, this article proves in detail that we are not obliged to permit
+reverse engineering as long as we distribute our work as dynamically linkable
+files. Particularly, the article shows, that we also can  compliantly distribute
+software using LGPL components if we distribute our work in form of compiled,
+but still not linked files.}
 \end{abstract}
 
 \section{Preface}
 
-During the last two years I was often asked to discuss my opinion
+Reverse Engineering is a challenging issue: Sometimes, developers must protect
+their business relevant work. Thus, they only incorporate open source components
+published under a permissive or a weak copyleft license: Of course, they want to
+use the open source software compliantly. But nevertheless, they want be able to
+distribute their own work as closed software for not making their secrets known.
+So, being obliged by the embedded components to permit reverse engineering of
+the work using the components, would subvert this strategie. Unfortunately, it
+is often said, that one of the most important weak copyleft license, the LGPL,
+requires to permit reverse engineering.
+
+During the last two years, I was repeatedly asked to explain and defend my
+viewpoint in respect of reverse engineering and open source software: I am
+profoundly convinced that there is no problem at all as long as you distribute
+dynamically linkable programs. This position had often astonished my dialog
+partners. Some of them were still looking for an exit from the inconsistent
+situation, while the other already had given up and could rather believe that
+there was such a simple solution. So, --- at the end of our discussions -- they
+encouraged me to prove my position in detail.
+
+For example, by my brave colleague Helene Tamer constantly insisted, that
+Deutsche Telekom AG could not give up its restrictions to use LGPL libraries
+until I had offered a reliable proof that the LGPL does not require reverse
+engineering generally. Or I could enthousiasticly discuss the permission of
+reverse engineering with the well informed German open source attorney Hendrik
+Schöttle\footnote{$\rightarrow$
+http://www.osborneclarke.com/lawyers/schottle-hendrik/} who boosted me to
+understand that I have to argue more subtler than I had done in my first
+answering eMail. And finally Karen Copenhaver\footnote{$\rightarrow$
+http://www.choate.com/people/karen-copenhaver} suggested me additional
+literature and emphatically asked me to share my thoughts with the community.
+
+So, I thankfully\footnote{Following the spirit of the open source movement, this
+article is published under the terms of CC-BY-SA 3.0 ($\rightarrow$ p.
+\pageref{License}). But as a document concerning legal issues, it must  be
+published under a specific proviso: ($\rightarrow$ p. \pageref{Disclaimer}). And
+finally, it is first and foremost developed as a chapter of the \textbf{O}pen
+\textbf{S}ource \textbf{Li}cense \textbf{C}ompendium ($\rightarrow$
+http://www.oslic.org/. But for offering version which can more simply be
+distributed, we also produced this extract.} can now offer a thoroughly
+elaborated proof for the assertion that there - in general - is a way to
+distribute open source software compliantly without permitting reverse
+engineering, and that this way -- in particular -- is also usable to compliantly
+distribute LGPL licensed software without allowing reverse engineering.
 
 \footnotesize
 \tableofcontents
