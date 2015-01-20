@@ -159,22 +159,23 @@ somewhere in the classpath. A single class is made known to the work, that want
 to use it, by an import statement which contains the class name; a whole Java
 library is made usable by integrating a package statement into the code.
 
-The code which follows these import- or package statements, can then refer to
-the definitions offered by the classes by using the (qualified) names of its
-public or protected member variables or methods. Thus, -- from a strict
-viewpoint -- the code of such a Java work using a Library indeed contains
-portions of that library, even if these portions are only identifying names or
-data structures containing identifying names. The Java compilation process which
-generates the bytecode, preserves these denoting names. It does not replace the
-referring names by the referred code of methods and so on. Only just at the end,
-when the java virtual machine itself tries to execute the work using the
-Library, it collects all necessary commands of all 'joined' classes.
+The code which follows such import- or package statements, can then use the
+definitions offered by the classes. It denotes the elements of the classes by
+the (qualified) names of its public or protected member variables or methods.
+Thus, -- from a strict viewpoint -- the code of such a Java work using a Library
+indeed contains portions of that library, even if these portions are only
+identifying names or data structures containing identifying names. The Java
+compilation process which generates the bytecode, preserves these denoting
+names. It does not replace the referring names by the referred code of the
+methods and so on. Only just at the end, when the java virtual machine itself
+tries to execute the work using the Library, it collects all necessary commands
+of all 'joined' classes.
 
 So, one might tend to argue that answering the question, whether a distributed
 java bytecode already contains portions of the used Library, depends on the
 interpretation, whether a denoting identifier of a Library indeed is a portion
 of the Library. We will discuss this case together with the corresponding
-c/c++-Case. 
+C/C++-Case. 
 
 But there is another Java specific aspect, which has to be considered as well.
 As already mentioned, in Java you can also join your work containing the
@@ -238,10 +239,10 @@ really executable work.
 
 But -- notwithstanding the above -- the linker can either be called as
 integrated step of the developement process itself. Or the linker can
-seperatedly be called on another machine: In the first case, the development
-process generates a \emph{statically linked executable} which already contains
-all necessary portions of all used Libraries. In the second case, the
-development process generates a \emph{dynamically linkable program} by
+seperatedly be called, especially on another machine: In the first case, the
+development process generates a \emph{statically linked executable} which
+already contains all necessary portions of all used Libraries. In the second
+case, the development process generates a \emph{dynamically linkable program} by
 collecting the (set of) still unlinked object code file(s) as a distributable
 package. Thus, if you distribute a statically linked executable, it definitely
 contains 'portions' of the library; if you distribute a dynamically linkable
@@ -298,7 +299,7 @@ macros and small inline functions (ten lines or less in length)} shall
 practically not be covered by the license of the Library, because
 \enquote{[\ldots] the use of the object file is unrestricted regardless of
 whether it is legally a derivative work}\footcite[cf.][\nopage wp.
-§5]{Lgpl21OsiLicense1999a}.
+§5]{Lgpl21OsiLicense1999a} - as long as it does not exceed the given limits.
 
 Obviously, the answer of the LGPL to our question is this: (a) yes, such
 object files containing names and snippets offered by the used Library, could
@@ -344,7 +345,7 @@ persuasively explained the spirit and purpose of the principle \enquote{trust
 the upstream}.}:
 
 The Library developers of course publish the header files or the public members
-and functions of the classes in exectly that form they want these elements to be
+and functions of the classes in exactly that form they want these elements to be
 used. And they want their Library to be used as an LGPL library, otherwise they
 would have chosen another License. So, they wish that improvements of the
 Libraries shall be made accessible as well, but that the works using the Library
@@ -384,15 +385,18 @@ emphasis KR.]{Lgpl21OsiLicense1999a}}
 means 'nothing else' than
 
 \begin{itemize}
-  \item \emph{You are not required to allow reverse engineering if you compile
-  the work using the Library as a discret (set of) dynamically linkable or    
-  combinable file(s) on the base of a standard version of the Library and by   
-  using the standard compilation methods which preserve the upstream approved
-  published interfaces\footnote{and which therefore do not to exceed the
-  LGPL-v2 limits} and if you distribute the produced unlinked object code or
-  bytecode files before they are linked as an executable.}
-  \item \emph{In all other cases, you are required to allow reverse engineering
-  of a work using a Library -- especially, \ldots}
+  \item \emph{With respect to a LGPL-v2 licensed Library, you are not required
+  to allow reverse engineering, if you [A] develop your work using the Library,
+  on the base of a standard version of the Library containing the interfaces as
+  the original developers have designed it, if you [B] compile your work using
+  this Library, as a discret (set of) dynamically linkable or combinable
+  file(s), if you [C] use only the standard compilation methods which preserve
+  the upstream approved interfaces\footnote{and which therefore do not to exceed
+  the LGPL-v2 limits!}, and if you [D] distribute the produced unlinked object
+  code or bytecode files before they are linked as an executable.}
+  \item \emph{In all other cases of distributing a work using such a Library,
+  you are required to allow reverse engineering of the work using this Library
+  -- especially, \ldots}
   \begin{itemize}
     \item \emph{if you distribute the work using the Library and the Library
     together as a statically linked program or as an integrated package
@@ -400,7 +404,7 @@ means 'nothing else' than
     itself\footnote{This holds also if you distribute a script language based
     program or package, notwithstanding the fact, that one does not need the
     permission of reverse engineering to understand script language based
-    applications}.}
+    applications.}.}
     \item \emph{if you distribute a work containing manually copied portions of
     the Library.}
   \end{itemize}

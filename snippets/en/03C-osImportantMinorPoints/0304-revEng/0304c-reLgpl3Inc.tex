@@ -19,11 +19,11 @@
 %   mycsrf (c) K. Reincke 2012 CC BY 3.0  http://mycsrf.fodina.de/ ]
 %
 
-Based on our experiences how to successfully carve out the meaning of a natural
-sentence, we can shorten the way to understand the one LGPL3-RevEng-Sentence
+Based on our experiences how to successfully carve out the meaning of license
+text, we can shorten the way to understand the one LGPL3-RevEng-Sentence
 referring to \emph{reverse engineering}:
 
-\begin{quote}\emph{ \enquote{You may convey a Combined Work under terms of your
+\begin{quote}\emph{\enquote{You may convey a Combined Work under terms of your
 choice that, taken together, effectively do not restrict modification of the
 portions of the Library contained in the Combined Work and reverse engineering
 for debugging such modifications, if you also do each of the following
@@ -53,7 +53,7 @@ LGPL3-RevEng-Sentence by the following text:
 )
 \end{alltt}
 
-But our next step, the logical serialization, let us running into a problem:
+But now, a simply executed logical serialization let us running into a problem:
 
 If we serialized \emph{($\Theta$ IF $\Omega$)} as \emph{($\Omega$ $\rightarrow$
 $\Theta$)}, then from not respecting $\Theta$ would follow by Modus Tollens,
@@ -106,13 +106,14 @@ distribute a Combined Work by telling us,
   Modus Ponens. Thus, in this case especially our terms \enquote{[\ldots]
   together effectively \textbf{[must] not restrict reverse engineering} for
   debugging modifications of the portions of the Library contained in the
-  Combined Work}}.
+  Combined Work}.}.
   \item that we do not distribute a Combined Work compliantly, if we do not
-  respect one of the requirements $\Gamma$, $\Delta$ or one single part of
-  $\Omega$\footnote{follows by Modus Tollens. Thus, especially we are not
+  respect one of the requirements $\Gamma$, $\Delta$ or one of the single parts
+  of $\Omega$\footnote{follows by Modus Tollens. Thus, especially we are not
   distributing a Combined Work compliantly, if our terms \enquote{[\ldots]
   together effectively \textbf{do restrict reverse engineering} for debugging
-  modifications of the portions of the Library contained in the Combined Work}}
+  modifications of the portions of the Library contained in the Combined
+  Work}.}.
 \end{itemize}
 
 Now, we can directly see, that the LGPLv3 does not enforce us, not to obstruct
@@ -183,12 +184,12 @@ material from a header file that is part of the Library. \textbf{You may convey}
 such object code under terms of your choice, \emph{provided that}, \textbf{[}
 \textbf{if} the incorporated material is \textbf{not} limited to numerical
 parameters, data structure layouts and accessors, or small macros, inline
-functions and templates (ten or fewer lines in length), \textbf{you do both} of
-the following: \textbf{a)} Give prominent notice with each copy of the object
-code that the Library is used in it and that the Library and its use are covered
-by this License. \textbf{b)} Accompany the object code with a copy of the GNU
-GPL and this license document\textbf{]}\footcite[cf.][\nopage wp., §3; emphasis
-and additional braces KR.]{Lgpl30OsiLicense2007a}.}
+functions and templates (ten or fewer lines in length) \textbf{]}, \textbf{you
+do both} of the following: \textbf{a)} Give prominent notice with each copy of
+the object code that the Library is used in it and that the Library and its use
+are covered by this License. \textbf{b)} Accompany the object code with a copy
+of the GNU GPL and this license document\textbf{]}\footcite[cf.][\nopage wp.,
+§3; emphasis and additional braces KR.]{Lgpl30OsiLicense2007a}.}
 \end{quote}
 
 The first sentence of this paragraph tells us that he is dedicated to object
@@ -237,10 +238,11 @@ We have two ways to respect the sub rule, and one way not to respect it:
   if the premise of this sub rule is false, the sub rule is as whole is true and
   hence respected.}
   \item But if the object code contains more and/or larger elements of the
-  Library than the limit specifies \textbf{and} if we do not do $\alpha$ and
-  $\beta$, then \textbf{we do not respect the sub rule}\footnote{follows from
-  definition of an implication: if the premise is true and the conclusion is
-  false, the the implication as whole is false, as well.}.
+  Library than the limit specifies \textbf{and} if we do not do $\alpha$
+  \emph{or} $\beta$, then \textbf{we do not respect the sub
+  rule}\footnote{follows from definition of an implication: if the premise is
+  true and the conclusion is false, the the implication as whole is false, as
+  well.}.
 \end{itemize}
 
 Thus, -- at the end and based on the additional object code specification and
@@ -249,16 +251,19 @@ the LGPL3-RevEng-Rule delivers the same result as the
 LGPL2-RevEng-Rule\footnote{$\rightarrow$
 \pageref{RevEngLgpl2ComplianceByRenverseEngine}}:
 
-\begin{itemize}
-  \item \emph{You are not required to allow reverse engineering if you compile
-  the application using the Library as a discret (set of) dynamically linkable
-  or combinable file(s) on the base of a standard version of the Library and by
-  using the standard compilation methods which preserve the upstream approved
-  published interfaces\footnote{and which therefore do not to exceed the LGPL-v2
-  limits} and if you distribute the produced unlinked object code or bytecode
-  files before they are linked as an executable.}
-  \item \emph{In all other cases, you are required to allow reverse engineering
-  of a work using a Library -- especially, \ldots}
+\begin{itemize}  
+  \item \emph{With respect to a LGPL-v3 licensed Library, you are not required
+  to allow reverse engineering, if you [A] develop your work using the Library,
+  on the base of a standard version of the Library containing the interfaces as
+  the original developers have designed it, if you [B] compile your work using
+  this Library, as a discret (set of) dynamically linkable or combinable
+  file(s), if you [C] use only the standard compilation methods which preserve
+  the upstream approved interfaces\footnote{and which therefore do not to exceed
+  the LGPL-v3 limits}, and if you [D] distribute the produced unlinked object
+  code or bytecode files before they are linked as an executable.}
+  \item \emph{In all other cases of distributing a work using such a Library,
+  you are required to allow reverse engineering of the work using this Library
+  -- especially, \ldots}
   \begin{itemize}
     \item \emph{if you distribute the work using the Library and the Library
     together as a statically linked program or as an integrated package

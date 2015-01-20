@@ -119,7 +119,7 @@ companies preventively prohibit their developers to embed LGPL licensed
 components into programs which contain business relevant techniques.
 Unfortunately, this consequence does not only obstruct access to a large set of
 well written free software, but it is scarcely possible to obey such an
-interdiction consequently: The glibc, which enables the programms to talk with
+interdiction consequently: The glibc, which enables the programs to talk with
 the kernel of the GNU/Linux system\footnote{cf.
 http://www.gnu.org/software/libc/}, is licensed under the LGPL\footnote{cf.
 http://en.wikipedia.org/wiki/GNU\_C\_Library}. And hence, this library is
@@ -151,56 +151,56 @@ with any LGPL library may be reverse engineered, then the LGPL would have an
 effect contrary to its own intention. It would have introduced something like
 \emph{'security by obscurity'}: First, the LGPL would allow to protect the
 internals of your own work against investigation because the code of the
-non-free programm using the library, does not necessarily have to be published
+non-free program using the library, does not necessarily have to be published
 as well\footnote{The weak copyleft has been introduced for encouring the widest
 possible use of the library.}. But then -- in the end -- the LGPL would also
 allow the user to reverse engineer the received binary and hence would enable
 him to nevertheless discover all internals\footnote{It would only cost a little
-more effort - as security by obscurity indicates.}. By this means, the LGPL-v2
+more effort - as security by obscurity indicates.}. Hence, finally the LGPL-v2
 would undermine its' own raison d'$\grave{e}$tre introduced by its' inventors:
-under such circumstances there probably would be less hope that any LGPL library
-could have become a defacto standard.
+under such circumstances there probably would have been less hope that any LGPL
+library could have become a defacto standard.
 
 We know that the inventors of the GNU licenses and GNU software are very
 sophisticated experts. They never would have published such an inconsistent
 document. So, this dissent read in(to) the document is a strong indicator for
 the fact, that there must be a better way to understand the license. And thus,
 it is up to us, the followers, to explicate a more adequate interpretation. Of
-course, such an interpretation must be grounded on the written text. We, the
-scholars, are not allowed to add our own wishes. We must read the license very
-strictly. We have to deduce 'understandings' only by matching the
-interpretations explicitly, strictly, and reasonably back to the license text
-itself.
+course, such an interpretation must be grounded on the written text. No doubt:
+we, the scholars, are not allowed to add our own wishes. We must read the
+license very strictly. We have to deduce 'understandings' only by matching the
+interpretations explicitly and reasonably back to the license text itself.
 
+Encouraged by the indication that a better understanding of the LGPL may exist
+and contrary to the other strategies, we are going to prove that there is a
+valid way to compliantly distribute any open source based software without
+permitting reverse engineering: We want to show that none of the open source
+licenses\footnote{at least those licenses discussed by the OSLiC: \$rightarrow$
+p. \pageref{RevEngOsiLicenses}} requires reverse engineering if the work using
+the open source Library is distributed in form of dynamically linkable files. In
+particular, we are going to prove that one even has not to allow reverse
+engineering of the work using an LGPL Library, if one distributes the work as
+dynamically linkable files. And we want to show that in all other cases one has
+at least to fear that one has implicitly allowed the reverse engineering of the
+work using the open source Library if one distribute that work. In particular,
+we want to prove that one has to fear this implicit permission even if one
+distributes a work using library licensed under a permissive license\footnote{By
+the way, our analysis should also provide proof that the LGPL is not something
+like a 'poisoned' license containing \enquote{an imprenetrable maze of
+technology babble} which \enquote{[\ldots] should not be in a general-purpose
+software license} (\cite[cf.][124]{Rosen2005a}). The challenge of the today's
+descendants is to understand the former inventors of the GNU licenses and their
+way to think about computing - including all the hassle the computing language C
+might provoke.}.
 
-NEU FORMULIEREN: start
-
-Encouraged by the indication that a better understanding of the license may
-exist and contrary to the other strategies, we are going to prove that, in
-fact, none of the open source licenses\footnote{being discussed in the OSLiC} in
-general require to allow reverse engineering of software containing a component
-licensed under that open source license. In particular, we will prove, that even
-the LGPL does not claim this permission generally: We want to explain, why the
-LGPL only requires to permit reverse engineering if and only if the LGPL
-licensed component is embedded into a statically linked and distributed piece of
-software. Moreover, we want to show that in all other cases the LGPL allows 
-to distribute packages without granting permission to reverse engineer the
-software which uses the LGPL licensed library\footnote{By the way, our analysis
-should also provide proof that the LGPL is not something like a 'poisoned'
-license containing \enquote{an imprenetrable maze of technology babble} which
-\enquote{[\ldots] should not be in a general-purpose software license}
-(\cite[cf.][124]{Rosen2005a}). The challenge of the today's descendants is to
-understand the former inventors of the GNU licenses and their way to think about
-computing - including all the hassle the computing language C might provoke.}.
-We hope that our analysis, grounded on the license text itself, will support
-companies and people to compliantly use open source software more often and with
-less scruples.
-
-NEU FORMULIEREN: ende
+In general, we hope that our analysis, grounded on the license text itself, will
+support companies and people to compliantly use open source software more often
+and with less scruples.
 
 Hence, let us prove our position 'bottom up'. Let us firstly show that it is
 true for the LGPL-v2 -- by explicating the license text lingually, then
 logically, and finally empirically, before we infer the correct understanding.
 Then let us show that it is also true for the LGPL-v3. And in the end let us
-show that it is true for all other licenses\footnote{analysed by the OSLiC.}.
+show that it is true for all other licenses\footnote{analysed by the OSLiC:
+\$rightarrow$ p. \pageref{RevEngOsiLicenses}.}.
 

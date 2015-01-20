@@ -44,9 +44,9 @@ Now, we have to clarify the meaning of the conjunction \emph{'provided that'}:
 
 Obviously, \emph{provided that} means something like \emph{under the
 precondition that}. So, one might try to take this conjunction as another more
-stylish version of the more common \emph{if(\ldots)then(\ldots)}-formula,
-sometimes also identified as a (logical) implication\footnote{Actually the
-logical implication and the computational if-then-construct are not equivalent.
+stylish version of the common \emph{if(\ldots)then(\ldots)}-formula, sometimes
+also identified as a (logical) implication\footnote{Actually the logical
+implication and the computational if-then-construct are not equivalent.
 Fortunately, we later on can show, that in the context of this discussion the
 difference can be ignored.}. Thus, we have to consider the process of sequencing
 the linguistic form into a logical formula: if we indeed take the conjunction
@@ -64,9 +64,9 @@ intended purpose of the corresponding LGPL-v2-section, which wants to regulate
 the distribution of works containing portions of LGPL libraries.
 
 For facilitating the understanding of our argumentation, let us first check
-whether our interpretation fits the purpose of the LGPL -- by unfolding the
-slightly reduced version \emph{$(\Sigma$ $\rightarrow$ $\Delta)$} back to the
-corresponding verbal form:
+whether this logical interpretation of the linguistic conjunction fits the
+purpose of the LGPL -- by unfolding the slightly reduced version \emph{$(\Sigma$
+$\rightarrow$ $\Delta)$} back to the corresponding verbal form:
 
 \begin{quote}\noindent\emph{\textbf{if (} [\ldots] the terms permit reverse
 engineering for debugging modifications of the work containing portions of the
@@ -75,28 +75,28 @@ portions of the Library under the terms of your choice.\textbf{)}}\end{quote}
 
 Now we can better see the problem: An implication as a whole is false only if
 the premise is true and the conclusion is false. In all other cases it is true.
-Especially, it is true, if the premise is false: in this case the truth value of
-the conclusion does not matter in any sense. Thus, if we take this implication
-as a rule, which shall determine our behaviour, then this implication only
-supports us, if we already have decided to permit reverse engineering. In this
-case the rule tells us that we are allowed to distribute the work containing
-portions of the Library. But from the converse decision that we will not permit
-reverse engineering, follows nothing - because a false premise does not
-influence the truth value of the conclusion. Especially, it does not follow that
-we may not distribute the work containing portions of the Library. So -- from
-the viewpoint of the formal logic -- this translation of the original
-conjunction \emph{'provided that'} says, that if the terms of your own license
-do not permit reverse engineering for debugging modifications of the work
-containing portions of the Library\footnote{The premise is false.}, then
-\textbf{you may or may not} distribute that work containing portions of the
-Library under the terms of your choice\footnote{The truth value of the conlusion
-is undetermined by the rule.}.
+Especially, it is true, if the premise is false: If the premise is false, then
+the truth value of the conclusion does not matter in any sense. Thus, if we take
+this implication as a rule, which shall determine our behaviour, then this
+implication only supports us, if we already have decided to permit reverse
+engineering. In this case the rule successfully tells us that we are allowed to
+distribute the work containing portions of the Library. But from the converse
+decision that we will not permit reverse engineering, follows nothing - because
+a false premise does not influence the truth value of the conclusion.
+Especially, the rule does not tell us that we may not distribute the work
+containing portions of the Library. So -- from the viewpoint of the formal logic
+-- this translation of the original conjunction \emph{'provided that'} says,
+that if the terms of your own license do not permit reverse engineering for
+debugging modifications of the work containing portions of the
+Library\footnote{The premise is false.}, then \textbf{you may or may not}
+distribute that work containing portions of the Library under the terms of your
+choice\footnote{The truth value of the conlusion is undetermined by the rule.}.
 Hence, we must state that this interpretation does not fulfill the purpose of
 the LGPL-V2: if reverse engineering is not allowed, the distribution of the work
 containing portions of the Library is not regulated. We have to conclude, that
 this sequencing the LGPL2-RefEng-Sentence as a logical implication is wrong.
 
-But we deduced this consequence from a slighty reduced form of our
+But we deduced this consequence from a slighty reduced form of the
 LGPL2-RefEng-Sentence. Thus, we still have to ask, whether we have to derive
 this conclusion also on the base of the completely unfolded formula
 \emph{$((\Phi$ $\wedge$ $\Sigma)$ $\rightarrow$ $(\Gamma$ $\wedge$ $\Delta))$}?
@@ -139,21 +139,21 @@ libraries\footnote{The premise must be false, too!}. This follows from applying
 false premise based on the given truth of the implication / rule itself.}
 
 But -- again -- we have to consider that we have deduced this consequence from a
-slighty reduced version of our LGPL2-RefEng-Sentence. Thus, we still have show
-that our result also holds for the completely unfolded formula \emph{$((\Gamma$
-$\wedge$ $\Delta)$ $\rightarrow$ $(\Phi$ $\wedge$ $\Sigma))$}: If we want to
-distribute works containing portions of the Library which have been produced by
-joining the Library and the work using the Library\footnote{Premise is true.},
-then our terms must permit the modification \emph{and} reverse engineering of
-the distributed product\footnote{Conclusion must become true by Modus Ponens.}.
-And if we do not allow its modification \emph{or} reverse
-engineering\footnote{Conclusion is false.}, then we do not compliantly
-distribute works containing portions of the Library which have been produced by
-joining the Library and the work using the Library\footnote{Premise must become
-false by Modus Tollens.} Thus, we may generally state, that the logical
-explication \emph{$((\Gamma$ $\wedge$ $\Delta)$ $\rightarrow$ $(\Phi$ $\wedge$
-$\Sigma))$} perfectly regulates the distribution of works containing portions of
-LGPL libraries.
+slighty reduced version of our LGPL2-RefEng-Sentence. Thus, we still have to
+show that our result also holds for the completely unfolded formula
+\emph{$((\Gamma$ $\wedge$ $\Delta)$ $\rightarrow$ $(\Phi$ $\wedge$ $\Sigma))$}:
+If we want to distribute works containing portions of the Library which have
+been produced by joining the Library and the work using the
+Library\footnote{Premise is true.}, then our terms must permit the modification
+\emph{and} reverse engineering of the distributed product\footnote{Conclusion
+must become true by Modus Ponens.}. And if we do not allow its modification
+\emph{or} reverse engineering\footnote{Conclusion is false.}, then we do not
+compliantly distribute works containing portions of the Library which have been
+produced by joining the Library and the work using the Library\footnote{Premise
+must become false by Modus Tollens.} Thus, we may generally state, that the
+logical explication \emph{$((\Gamma$ $\wedge$ $\Delta)$ $\rightarrow$ $(\Phi$
+$\wedge$ $\Sigma))$} perfectly regulates the distribution of works containing
+portions of LGPL libraries.
 
 Based on this clarification, we can reasonably replace the more stylish
 conjunction \emph{'provided that'} by its more known equivalent
