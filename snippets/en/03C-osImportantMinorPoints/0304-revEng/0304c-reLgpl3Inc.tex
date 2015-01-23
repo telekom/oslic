@@ -1,0 +1,283 @@
+% Telekom osCompendium 'for being included' snippet template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ Framework derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke 2012 CC BY 3.0  http://mycsrf.fodina.de/ ]
+%
+
+Based on our experiences how to successfully carve out the meaning of license
+text, we can shorten the way to understand the one LGPL3-RevEng-Sentence
+referring to \emph{reverse engineering}:
+
+\begin{quote}\emph{\enquote{You may convey a Combined Work under terms of your
+choice that, taken together, effectively do not restrict modification of the
+portions of the Library contained in the Combined Work and reverse engineering
+for debugging such modifications, if you also do each of the following
+[\ldots]}\footnote{\cite[cf.][\nopage wp., §4]{Lgpl30OsiLicense2007a}. The
+ellipsis at the end of the sentence denotes a set of tasks which we do not
+listen here for saving recourses, but which have to be considered as an
+integrated part of this sentence.}}
+\end{quote}
+
+Reusing our method of disambiguation, we first can exemplify the meaning of the
+LGPL3-RevEng-Sentence by the following text:
+
+\begin{alltt}   
+( \([\Theta:]\)
+  ( You \(\emph{compliantly distribute}\) a Combined Work 
+    under terms of your choice 
+    (   (that together effectively, do not restrict modification of 
+        the portions of the Library contained in the Combined Work)
+    \(\textbf{AND}\) 
+        (that together effectively, do not restrict reverse
+        engineering for debugging modifications of the portions
+        of the Library contained in the Combined Work)
+  )  )
+  \(\textbf{IF}\)
+  \([\Omega:]\) 
+  ( you also do each of the following \([\ldots]\))
+)
+\end{alltt}
+
+But now, a simply executed logical serialization let us running into a problem:
+
+If we serialized \emph{($\Theta$ IF $\Omega$)} as \emph{($\Omega$ $\rightarrow$
+$\Theta$)}, then from not respecting $\Theta$ would follow by Modus Tollens,
+that we are not allowed to realize $\Omega$ -- in other words:
+that we may not do even one of the single tasks covered by the ellipsis -- which
+is a silly result. 
+
+If we serialized \emph{($\Theta$ IF $\Omega$)} as \emph{($\Theta$ $\rightarrow$
+$\Omega$)} then from doing $\Theta$ would successfully follow by Modus Ponens
+that we also have to do $\Omega$. And from not respecting $\Omega$ would
+successfully follow by Modus Tollens, that we must not do $\Theta$. But
+unfortunately, we can respect this second interdiction also \emph{by
+distributing a Combined Work under terms} that restrict modifications and/or
+reverse engineering (instead of not restricting these techniques) -- which,
+again, is a silly result.
+
+Obviously, a simple serialization based on a intutively unclear reading fails.
+In fact, the LGPL3-RevEng-Sentence must have a more sophisticated underlying
+structure. It must be logically serialized in a form, that integrates the
+requirements, not to restrict modifications and reverse enigneering, as really
+triggable conditions. Thus, the meaning of the sentence can logically be
+explicated as the \emph{LGPL3-RevEng-Rule}:
+
+\begin{alltt}
+( \([\Sigma:]\)
+  ( You \(\emph{compliantly distribute}\) a Combined Work 
+    under terms of your choice 
+  ) 
+  \(\rightarrow\)  
+  (    \([\Gamma:]\)
+     ( the terms of your choice together effectively do 
+       not restrict modification of the portions of the 
+       Library contained in the Combined Work) 
+     \(\wedge\) \([\Delta:]\)
+     ( the terms of your choice together effectively, do 
+       not restrict reverse engineering for debugging 
+       modifications of the portions of the Library 
+       contained in the Combined Work)
+     \(\wedge\) \([\Omega:]\) 
+     ( you also do each of the following \([\ldots]\))
+) )
+\end{alltt}  
+
+This LGPL3-RevEng-Rule indeed successfully regulates how to compliantly
+distribute a Combined Work by telling us,
+
+\begin{itemize}
+  \item that we have to respect $\Gamma$, $\Delta$ \textbf{and} all single parts
+  of $\Omega$, if we distribute a Combined Work compliantly\footnote{follows by
+  Modus Ponens. Thus, in this case especially our terms \enquote{[\ldots]
+  together effectively \textbf{[must] not restrict reverse engineering} for
+  debugging modifications of the portions of the Library contained in the
+  Combined Work}.}.
+  \item that we do not distribute a Combined Work compliantly, if we do not
+  respect one of the requirements $\Gamma$, $\Delta$ or one of the single parts
+  of $\Omega$\footnote{follows by Modus Tollens. Thus, especially we are not
+  distributing a Combined Work compliantly, if our terms \enquote{[\ldots]
+  together effectively \textbf{do restrict reverse engineering} for debugging
+  modifications of the portions of the Library contained in the Combined
+  Work}.}.
+\end{itemize}
+
+Now, we can directly see, that the LGPLv3 does not enforce us, not to obstruct
+reverse engineering in all respects! The required reverse engineering is limited
+to the purpose of supporting the debugging of modifications and focused to the
+Combined Work containing portions of the Library. In other words: our terms may
+obstruct other purposes of reverse engineering or may restrict reverse
+engineering of other forms of our work which which can not be specified as
+Combined Work or do not contain portions of the Library. Thus, the first crucial
+question is, what the LGPL-v3 means if it talks about a \enquote{Combined Work}.
+The second question is, what the LGPL-v3 specifies as a portion of the Library.
+
+Again, fortunately, the LGPL-v3 answers clearly: \enquote{A \enquote{Combined
+Work} is a work produced by combining or linking an Application with the
+Library}\footcite[cf.][\nopage wp., §0]{Lgpl30OsiLicense2007a}. From our LGPL-v2
+analysis we know the ways how works that uses a Library can technically be
+linked or combined with the Library:
+
+\begin{itemize}
+  \item Copying code from the Library into the work using the
+  Library\footnote{The LGPL-v3 designates the work using the Library as
+  \enquote{Application} and defines that it \enquote{[\ldots] makes use of an
+  interface provided by the Library [\ldots]} (\cite[cf.][\nopage wp.,
+  §0]{Lgpl30OsiLicense2007a}).} causes that the application respectively the
+  work using the Library indeed contains portions of the
+  Library\footnote{$\rightarrow$ p. \pageref{RevEngCopyCodeManually}}.
+  \item Combining script language based applications and Libraries may evoke
+  that the resulting application contains portions of the Library. But the
+  details can be neglected with respect to the reverse engineering, because
+  script code is distributed as it has been developed and can therefore directly
+  be understood\footnote{$\rightarrow$ p. \pageref{RevEngDistributeScripts}}.
+  \item Combining java classes and libraries as integrated quasi statically
+  linked packages causes, that the resulting package already contains all
+  functionally necessary code of the Library\footnote{$\rightarrow$ p.
+  \pageref{RevEngDistributeStaticallyCombinedByteCode}}.
+  \item Compiling java classes without combining them with the referred Library
+  classes causes, that the compiled classes at least contain identifiers having
+  been declared by the Library\footnote{$\rightarrow$ p.
+  \pageref{RevEngDistributeDynamicallyLinkedCode}}.
+  \item Combiling C/C++ files or classes and linking them with the referred
+  Libaries statically causes, that the resulting executable indeed contains all
+  functional relevant code of all used Libraries\footnote{$\rightarrow$ p.
+  \pageref{RevEngDistributeStaticallyLinkedBinaries}}.
+  \item Combiling C/C++ files or classes without linking them to the referred
+  Libaries causes, that the resulting object file can dynamically be linked on
+  another machine and contains identifiers offered by the Library and sometimes
+  some functional code injected by dissolving some inline functions or
+  macros\footnote{$\rightarrow$ p.
+  \pageref{RevEngDistributeDynamicallyLinkedCode}}.
+\end{itemize}
+
+So -- overall -- the situation is this: The LGPL3-RevEng-Rule tells us that we
+have to allow reverse engineering of the portions of the Library
+contained in the Combined Work. The LGPL3 additionally specifies, that a Combined Work
+is simply the result of technically combining the work using the Library (the
+application) and the Library. Finally the praxis tells us, that (a) combining
+both components statically indeed causes that the resulting Combined Work contains
+portions of the Library\footnote{So, it is triggering the LGPL3-RevEng-Rule.},
+and that (b) we -- in case of preparing the both parts as dynamically
+combinable components -- still have to clarify whether the resulting work
+already contains portions of the Library.
+
+Just as the LGPL-v2, the LGPL-v3 supports us to answer this question by its §3
+whose linguistic conjunctions we thoroughly have to consider:
+
+\begin{quote}\emph{The object code form of an Application may incorporate
+material from a header file that is part of the Library. \textbf{You may convey}
+such object code under terms of your choice, \emph{provided that}, \textbf{[}
+\textbf{if} the incorporated material is \textbf{not} limited to numerical
+parameters, data structure layouts and accessors, or small macros, inline
+functions and templates (ten or fewer lines in length) \textbf{]}, \textbf{you
+do both} of the following: \textbf{a)} Give prominent notice with each copy of
+the object code that the Library is used in it and that the Library and its use
+are covered by this License. \textbf{b)} Accompany the object code with a copy
+of the GNU GPL and this license document\textbf{]}\footcite[cf.][\nopage wp.,
+§3; emphasis and additional braces KR.]{Lgpl30OsiLicense2007a}.}
+\end{quote}
+
+The first sentence of this paragraph tells us that he is dedicated to object
+files which are compiled and not linked to the used Library, but which
+nevertheless can contain portions of the Library. The second sentence regulates
+the distribution of such object files and can be logically serialized:
+
+\begin{alltt}
+( \([\Lambda:]\)
+  ( You \(\emph{compliantly distribute}\) object code [incorporating 
+    material from the Library] under terms of your choice ) 
+  \(\rightarrow\)  
+  \([\Xi:]\)
+  ( \([\omega:]\)
+    ( the incorporated material is not limited to numerical
+      parameters, data structure layouts and accessors, or 
+      small macros, inline functions and templates 
+      [ten or fewer lines in length] ) 
+    \(\rightarrow\) 
+    ( \([\alpha:]\) ( you do [a] \(\ldots]\) )
+    \(\wedge\) \([\beta:]\) ( you do [b] \(\ldots]\) )
+) ) )
+\end{alltt}  
+
+We see, that this LGPL3-sentence concerning the distribution of object files
+contains a main rule (\emph{($\Lambda$ $\rightarrow$ $\Xi$)}) and that the
+conclusion $\Xi$ itself has the form of an embedded sub rule (\emph{($\omega$
+$\rightarrow$ ( $\alpha$ $\wedge$ $\beta$)}).
+
+Firstly, the main rule enforces us to respect the sub rule if we want to
+distribute the object code compliantly\footnote{follows by Modus Ponens to
+\emph{($\Lambda$ $\rightarrow$ $\Xi$)}.}. Secondly, the main rule tells us that
+we do not distribute the object code compliantly if we do not respect the sub
+rule \footnote{follows by Modus Ponens to \emph{($\Lambda$ $\rightarrow$
+$\Xi$)}.}.
+
+We have two ways to respect the sub rule, and one way not to respect it:
+\begin{itemize}
+  \item If the object code contains more and/or larger elements of the Library
+  than the limit specifies, then \textbf{we do respect the sub rule}, if we do
+  $\alpha$ and $\beta$\footnote{follows by Modus Ponens to \emph{($\omega$
+  $\rightarrow$ ($\alpha$ $\wedge$ $\beta$))}.}.
+  \item If the object code contains elements of the Library at most up to
+  specified limits, then \textbf{we do respect the sub rule} without having to
+  do some additionally tasks\footnote{follows by definition of an implication:
+  if the premise of this sub rule is false, the sub rule is as whole is true and
+  hence respected.}
+  \item But if the object code contains more and/or larger elements of the
+  Library than the limit specifies \textbf{and} if we do not do $\alpha$
+  \emph{or} $\beta$, then \textbf{we do not respect the sub
+  rule}\footnote{follows from definition of an implication: if the premise is
+  true and the conclusion is false, the the implication as whole is false, as
+  well.}.
+\end{itemize}
+
+Thus, -- at the end and based on the additional object code specification and
+the known empirical background knowledge concerning the software programming --
+the LGPL3-RevEng-Rule delivers the same result as the
+LGPL2-RevEng-Rule\footnote{$\rightarrow$
+\pageref{RevEngLgpl2ComplianceByRenverseEngine}}:
+
+\begin{itemize}  
+  \item \emph{With respect to a LGPL-v3 licensed Library, you are not required
+  to allow reverse engineering, if you [A] develop your work using the Library,
+  on the base of a standard version of the Library containing the interfaces as
+  the original developers have designed it, if you [B] compile your work using
+  this Library, as a discret (set of) dynamically linkable or combinable
+  file(s), if you [C] use only the standard compilation methods which preserve
+  the upstream approved interfaces\footnote{and which therefore do not to exceed
+  the LGPL-v3 limits}, and if you [D] distribute the produced unlinked object
+  code or bytecode files before they are linked as an executable.}
+  \item \emph{In all other cases of distributing a work using such a Library,
+  you are required to allow reverse engineering of the work using this Library
+  -- especially, \ldots}
+  \begin{itemize}
+    \item \emph{if you distribute the work using the Library and the Library
+    together as a statically linked program or as an integrated package
+    containing both parts, the work using the library and the Library
+    itself\footnote{This holds also if you distribute a script language based
+    program or package, notwithstanding the fact, that one does not need the
+    permission of reverse engineering to understand script language based
+    applications}.}
+    \item \emph{if you distribute a work containing manually copied portions of
+    the Library.}
+  \end{itemize}
+\end{itemize}
+
+
+%% use all entries of the bibliography
+%\nocite{*}
+

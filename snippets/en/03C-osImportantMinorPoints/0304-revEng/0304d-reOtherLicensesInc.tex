@@ -1,0 +1,142 @@
+% Telekom osCompendium 'for being included' snippet template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ Framework derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke 2012 CC BY 3.0  http://mycsrf.fodina.de/ ]
+%
+
+The rest of our way is simple: First, we can ascertain, that none of the other
+open source licenses we consider\footnote{$\rightarrow$ p.
+\pageref{RevEngOslicOsLisences} }, contain the phrase 'reverse engineering'.
+Moreover, they even do not contain one of the single words\footnote{One can
+verify this negative statement by (a) loading down all licenses from the OSI
+homepage (http://opensource.org/licenses/alphabetical) and by (b) executing the
+command \texttt{grep -i "engineering" *} respectively \texttt{grep -i "reverse"
+*} in the directory into which the license files have been stored: grep will
+find the words \emph{reverse} and \emph{engineering} only in the texts of the
+LGPLs.}. So, we may infer, that these most important other open source licenses
+could at most indirectly require the permission of reverse engineering. Second,
+we know already that distributing script code let the allowance to reverse
+engineer, become irrelevant: script code can directly be read and understood, if
+one knows the script language\footnote{$\rightarrow$ p.
+\pageref{RevEngDistributeScripts}}.
+Third, from the definition of strong copleft we may derive, that distributing
+software licensed under a strong copyleft license let the permission of reverse
+engineering become unimportant, because the source code of the work using the
+libraries licensed under a copleft license, must also be made
+accessible\footcite[cf.][\nopage wp]{Stallman1996c}.
+
+So -- overally -- we may conclude, that we have only to consider those cases,
+where a piece of software is distributed in form of binaries or bytecode, which
+uses libraries licensed under permissive open source licenses or under weak
+copyleft licenses.
+
+From the definition of being a permissive license or a weak copyleft license we
+know already that the licenses of the open source components do not directly
+influence the permission or interdiction to use the overarching work which uses
+the open source software components\footcite[cf.][20ff.]{Reincke2015a}.
+
+So, if we distribute such a work in form of dynamically linkable, but still not
+linked binaries or bytecode files, then there is no way to reasonably derive
+that the work using the components, may be reverse engineered: The permissive or
+weak copyleft open source licenses mainly concern the open source components,
+not the work using the components. On the one side, these licenses indeed
+require that we add the license texts and the copyright lines of all the open
+source components our work wants to use, to the distributed package containing
+our work. And the lisenses prohibit to modify the licensing assertions being
+integrated into the open source components our work wants to use\footnote{These
+requirements are part of all the open source licenses we consider here. For
+details \cite[cf.][chapter 6.]{Reincke2015a}}. But -- on the other side -- the
+freedom to use, to study, to modify, or to distribute the software, which is
+established by the open source licenses, concerns only the open source
+components themselves, not the open source based work itself. But these
+components, which may be studied or modified, still are not part of the compiled
+work as long as it is not linked to or combined with the open source components
+in accordance to the standard compilation and computation methods\footnote{The
+only way to infer that the licenses of the components operates also on the using
+work, is to argue that the using work must at least contain elements
+(identifiers etc.) of the interfaces declared (but not defined) by the libraries
+and that therefore at least these elements may be investigated or modified. This
+challenge is explicitly addressed by the LGPL\footnote{$\rightarrow$ p.
+\pageref{RevEngDistributeDynamicallyLinkedCode}}. Fortunately, it is a general
+feature of software libraries that they must and shall be used in accordance to
+the interfaces, the developers of the libraries have designed to make their
+libraries practically usable. So, if the licenses -- in contrary to the LGPLs --
+do not explicitly address the issue of implicitly included portions of the
+library in case of unlinked binaries or bytecode files which have been compiled
+in accordance to the standard methods and which therefore use open source
+software by reffering to their standard interfaces, then one has to infer from
+the nature of computation, that the developers have implictly allowed without
+any requirements such an integration of declared, but not defined interface
+elements, because they have designed the interface as they did and because they
+have licensed their work as they did. If they had not wished to use these
+elements without any requirements, hey had designed another interface. And if
+they had wished to incorporate any copyleft effect or permission of reverse
+engineering, then they would have selected another license. But again: this
+conclusion holds only for the standard methods to use a software library.}.
+
+On the other side, if we compliantly distribute the work using the components,
+as a statically linked binary or bytecode file -- which therefore already
+contains all the necessary components\footnote{instead of only the declared
+interface elements!} and can directly be executed --, then we are also obliged
+to add all the open source license texts and all the copyright lines to our
+package, and we are not allowed to modify one of the licensing assertions
+integrated into the original open source components\footcite[cf.][chapter
+6.]{Reincke2015a}. Thus, one might conclude, that the freedom to use and to
+modify the open source components themselves, survive if we distribute software
+statically linked to or combined with the open source components. So, the
+receiver of the statically linked work probably is allowed to modify the
+embedded open source components - even if he had to edit the binary or bytecode
+files. Methods to develop binary files reversely, are known as reverse
+engineering. Hence, if we distribute a statically linked work using open source
+licensed components, we have at least to fear that our receivers indirectly have
+also got the permission to reverse engineer our complete product. And we have to
+fear so even if the statically linked libraries are licensed under any
+permissive or weak copleft license.
+
+So, again, we can summarize the result in the following form:
+
+\begin{itemize}
+  \item \emph{With respect to a Library licensed under any permissive or weak
+  copyleft license, you are not required to allow reverse engineering, if you
+  [A] develop your work using the Library, on the base of a standard version of
+  the Library containing the interfaces as the original developers have designed it,
+  if you [B] compile your work using this Library, as a discret (set of)
+  dynamically linkable or combinable file(s), if you [C] use only the standard
+  compilation methods which preserve the upstream approved interfaces, and if
+  you [D] distribute the produced unlinked object code or bytecode files before
+  they are linked as an executable.}
+  \item \emph{In all other cases of distributing a work using such a Library,
+  you have at least to fear that you are implictly allowing reverse engineering
+  of the work using this Library -- especially, \ldots}
+  \begin{itemize}
+    \item \emph{if you distribute the work using the Library and the Library
+    together as a statically linked program or as an integrated package
+    containing both parts, the work using the library and the Library
+    itself\footnote{This holds also if you distribute a script language based
+    program or package, notwithstanding the fact, that one does not need the
+    permission of reverse engineering to understand script language based
+    applications}.}
+    \item \emph{if you distribute a work containing manually copied portions of
+    the Library.}
+  \end{itemize}
+\end{itemize}
+
+
+%% use all entries of the bibliography
+%\nocite{*}
+

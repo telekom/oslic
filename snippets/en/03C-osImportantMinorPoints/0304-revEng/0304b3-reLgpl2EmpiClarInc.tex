@@ -1,0 +1,132 @@
+% Telekom osCompendium 'for being included' snippet template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ Framework derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke 2012 CC BY 3.0  http://mycsrf.fodina.de/ ]
+%
+
+We can now simplify this formula once more by considering some empirical facts
+and explicating some underlying understandings:
+
+The first sentence $\Phi$ explains that the \emph{work that uses the Library}
+and the used \emph{Library} itself together are joined and thereby transformed
+into a \emph{work containing portions of the Library}. So, formally, one might
+ask, whether this newly generated \emph{work containing portions of the Library}
+also still \emph{uses the Library}?
+
+Unfortunately, it is empirically possible, that such a process for combining the
+two components could (a) copy all original portions of the library into a
+something like a 'dead end section' of the program where they are never excuted,
+and could (b) replace all original portions of the library by functionally
+equivalent portions of any other library. Thus, the resulting \emph{work
+containing portions of the Library} would indeed still contain portions of the
+Library, although it would not use it any longer. And because of this
+possibility, we are not allowed to say, that every work containing portions of a
+library also uses the library\footnote{\ldots even if we think that this is a
+really silly way to organize the joining process!}.
+
+But, fortunately, the normal computational process of \emph{combining and
+linking a work that uses the Library with the Library to produce a work
+containing portions of the Library} inherently preserves the utilization of the
+joined library: It is the general purpose of a software library to offer
+functions and/or data (structures) for really being used by applications. And
+vice versa, software developers refer to a specific library because they prefer
+its service: They use readily prepared libraries (or classes or anything else)
+because they want to simplify their own work while they conserve the quality
+level of their work. Thus, they chose a library based on the assertion, that the
+standard compiling and linking process guarantees, that indeed the chosen
+library is used (and not secretly substituted by a mysterious 'equivalent').
+With respect to this praxis of programming we are allowed to say that a
+\emph{work containing portions of the Library} which has been \textbf{built by
+the normal development processes} of combining, compiling, and linking source
+and object files, indeed also uses the intended library.
+
+Now, we are able to consider an empirical correlation between the first sentence
+$\Phi$ and the second sentence $\Sigma$:
+
+It seems to be evident, that we must already have done $\Phi$, in other words:
+that we must already have \emph{*joined -- respectively: combined or linked -- a
+work that uses the Library with the Library to produce a work containing
+portions of the Library}, if we are going to compliantly \emph{distribute that
+work containing portions of the Library under terms of your choice}. Or briefly
+spoken: It seems to be conclusive that $\Sigma$ \emph{\textbf{empirically}
+implies} $\Phi$\footnote{but not vice versa.}.
+
+But is this conclusion correct? Let us check this statement by assuming the
+opposite: If the contrary was true, there had to exist a \emph{work containing
+portions of the Library} which had been gained without having linked or combined
+the work and the Library in any sense. But from the inference above we already
+know that \emph{works containing portions of the Library}, which have been
+produced by the standard computational processes of \emph{combining and linking
+a work that uses the Library with the Library}, indeed also \emph{use the
+Library}. Thus, it would be self-contradictory to talk about a \emph{work
+containing portions of the Library}, which was produced by the standard
+combining and linking processes, and similarily to state, that exactly this work
+is not combined with the library in any sense. And from a proof by contradiction
+we may infer the truth of the logical opposite:
+
+So, with respect to the meaning of \emph{being standardly combined or linked
+with}, we may now say, that
+\begin{itemize}
+  \item it is necessarily true that a computional work, which is standardly
+  produced on the base of \emph{a work that uses the Library} and \emph{the
+  Library} and which therefore literally contains more or less
+  \emph{portions of a library}, indeed uses the \emph{the Library} and \emph{is}
+  therefore \emph{combined with the library}.
+  \item  $\Sigma$\footnote{distributing \emph{a work that uses the Library and
+  contains portions of a library}} empirically implies $\Phi$\footnote{A work
+  that uses the Library has been *joined with the Library to produce a work
+  containing portions of the Library} (in the standardized world of software
+  development), because $\Phi$ must ever have been executed when $\Sigma$ is
+  going to be realized.
+\end{itemize}
+
+Thus, we can now reduce the LGPL2-RefEng-Sentence to its' real core, the
+LGPL2-RefEng-Rule:
+
+\begin{quote}
+\begin{alltt}   
+(   [\(\Sigma\)] you may
+        distribute (a) work containing portions of the 
+        Library\(\footnote{which previously has been prepared for being distributed by standardly combining and
+linking the work that uses the Library with the Library in a way that this prepared work indeed
+also uses the Library}\) under terms of your choice )   
+\(\rightarrow\)
+( ( [\(\Gamma\)] the terms of your choice permit 
+        modification of the work containing portions of 
+        the Library for the customer's own use )
+  \(\wedge\)
+  ( [\(\Delta\)] the terms of your choice permit
+        reverse engineering for debugging modifications 
+        of the work containing portions of the Library   
+) )
+\end{alltt}
+\end{quote}
+
+This is indeed the essence of the LGPL2-RefEng-Sentence. It logically explains
+us that we have to \emph{allow reverse engineering} and modification of a
+\emph{work containing portions of the Library} if we distribute it (Modus
+Ponens) and that we are \emph{not allowed to distribute a work containing
+portions of the Library}, if we do \emph{not allow} its modification or
+\emph{reverse engineering} (Modus Tollens).
+
+Thus, for applying this rule correctly, we now only must know whether a work
+indeed contains portions of the Library or not.
+
+%% use all entries of the bibliography
+%\nocite{*}
+

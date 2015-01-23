@@ -1,0 +1,68 @@
+% Telekom osCompendium 'for being included' snippet template
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ Framework derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke 2012 CC BY 3.0  http://mycsrf.fodina.de/ ]
+%
+
+So, finally we can compile all our results into one single result:
+
+\begin{itemize}
+  \item \emph{With respect to any open source Library\footnote{$\rightarrow$ p.
+  \pageref{RevEngOslicOsLisences}}, you are not required to allow reverse
+  engineering, if you [A] develop your work using the Library, on the base of a
+  standard version of the Library containing the interfaces as the original
+  developers have designed it, if you [B] compile your work using this Library,
+  as a discret (set of) dynamically linkable or combinable file(s), if you [C]
+  use only the standard compilation methods which preserve the upstream approved
+  interfaces\footnote{and which therefore do not to exceed limits, prescribed by
+  the owners of the Library}, and if you [D] distribute the produced unlinked
+  object code or bytecode files before they are linked as an executable.}
+  \item \emph{In all other cases of distributing your work using such a Library,
+  you are probably required to allow reverse engineering of your work. By all
+  means, you have at least to fear that you are implictly allowing reverse
+  engineering of your work using such a Library -- especially, \ldots}
+  \begin{itemize}
+    \item \emph{if you distribute the work using the Library and the Library
+    together as a statically linked program or as an integrated package
+    containing both parts, the work using the library and the Library
+    itself\footnote{This holds also if you distribute a script language based
+    program or package, notwithstanding the fact, that one does not need the
+    permission of reverse engineering to understand script language based
+    applications}.}
+    \item \emph{if you distribute a work containing manually copied portions of
+    the Library.}
+  \end{itemize}
+\end{itemize}
+ 
+And, so, we can reformulate our result as a slightly modified \enquote{rule of
+thumbs} originally offered by an open source expert who analyzed the problem of
+protecting your own work from an other viewport:
+
+\begin{itemize}
+  \item \enquote{DO NOT statically link [or combine] [open source] code if you
+  wish to keep your program proprietary [and if you want to protect it against reverse
+  engineering]}\footcite[cf.][6; bracketed text KR.]{Ilardi2010a}.
+  \item \enquote{DO dynamically link to [any open source code, not only to] LGPL
+  code}\footcite[cf.][6; bracketed text KR.]{Ilardi2010a}.
+\end{itemize}
+
+\textbf{\textsf{q.e.d}}
+
+%% use all entries of the bibliography
+%\nocite{*}
+

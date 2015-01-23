@@ -1,0 +1,260 @@
+% Telekom osCompendium cloak file English text
+%
+% (c) Karsten Reincke, Deutsche Telekom AG, Darmstadt 2011
+%
+% This LaTeX-File is licensed under the Creative Commons Attribution-ShareAlike
+% 3.0 Germany License (http://creativecommons.org/licenses/by-sa/3.0/de/): Feel
+% free 'to share (to copy, distribute and transmit)' or 'to remix (to adapt)'
+% it, if you '... distribute the resulting work under the same or similar
+% license to this one' and if you respect how 'you must attribute the work in
+% the manner specified by the author ...':
+%
+% In an internet based reuse please link the reused parts to www.telekom.com and
+% mention the original authors and Deutsche Telekom AG in a suitable manner. In
+% a paper-like reuse please insert a short hint to www.telekom.com and to the
+% original authors and Deutsche Telekom AG into your preface. For normal
+% quotations please use the scientific standard to cite.
+%
+% [ File structure derived from 'mind your Scholar Research Framework' 
+%   mycsrf (c) K. Reincke CC BY 3.0  http://mycsrf.fodina.de/ ]
+
+%\documentclass[DIV=calc,BCOR=5mm,12pt,headings=small,oneside,toc=bib,draft]{scrbook}
+\documentclass[DIV=calc,BCOR=5mm,12pt,headings=small,oneside,toc=bib]{scrartcl}
+
+%%% (1) general configurations %%%
+\usepackage[utf8]{inputenc}
+
+%%% (2) language specific configurations %%%
+\usepackage[]{a4}
+\usepackage[english]{babel}
+\selectlanguage{english}
+\usepackage[automark]{scrpage2}
+
+\usepackage{microtype}
+
+%language specific quoting signs
+%default for language emglish is american style of quotes
+%\usepackage[english=british]{csquotes}
+\usepackage[english=american]{csquotes}
+
+% jurabib configuration
+\usepackage[see]{jurabib}
+\bibliographystyle{jurabib}
+% do not comment the litrature any longer
+\input{../btexmat/oscJbibCfgEnIncNoAnno} %no annotations
+
+% language specific hyphenation
+\input{../btexmat/oscHyphenationEnInc}
+
+%%% (3) layout page configuration %%%
+
+% select the visible parts of a page
+% S.31: { plain|empty|headings|myheadings }
+%\pagestyle{myheadings}
+\pagestyle{scrheadings}
+
+% select the wished style of page-numbering
+% S.32: { arabic,roman,Roman,alph,Alph }
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% select the wished distances using the general setlength order:
+% S.34 { baselineskip| parskip | parindent }
+% - general no indent for paragraphs
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2ex plus 0.2ex minus 0.2ex}
+
+%%% (4) general package activation %%%
+%\usepackage{utopia}
+%\usepackage{courier}
+%\usepackage{avant}
+
+% graphic
+\usepackage{graphicx,color}
+\usepackage{array}
+\usepackage{shadow}
+\usepackage{fancybox}
+\usepackage{alltt}
+
+%- start(footnote-configuration)
+%  flush the cite numbers out of the vertical line and let
+%  the footnote text directly start in the left vertical line
+% \usepackage[marginal,hang]{footmisc}
+% \renewcommand\footnotemargin{1.5em}
+
+% formatting the footnote with koma script tools
+% \deffootnote[1em]{1.5em}{1em}{\textsuperscript{\thefootnotemark}}
+\deffootnote[1.5em]{1.5em}{1.5em}{\textsuperscript{\thefootnotemark)\ }}
+
+%\deffootnote[0em]{1.5em}{1em}{\textsuperscript{\thefootnotemark}}
+%- end(footnote-configuration)
+
+% - additional packages
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes,snakes}
+\usetikzlibrary{positioning}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{trees}
+
+\usepackage{multirow}
+
+%RPD%%%\usepackage{blindtext}
+\usepackage{caption}
+
+\usetikzlibrary{matrix}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{wasysym}
+\usepackage{chngcntr}
+\usepackage{nameref}
+
+%\counterwithout{footnote}{chapter}
+
+\usepackage[intoc]{nomencl}
+\let\abbr\nomenclature
+% Modify Section Title of nomenclature
+\renewcommand{\nomname}{Periodicals, Shortcuts, and Abbreviations}
+%\renewcommand{\nomname}{Periodika, ihre Kurzformen und generelle Abkürzungen}
+
+% insert point between abbrewviation and explanation
+\setlength{\nomlabelwidth}{.24\hsize}
+\renewcommand{\nomlabel}[1]{#1 \dotfill}
+% reduce the line distance
+\setlength{\nomitemsep}{-\parsep}
+\makenomenclature
+
+% depth of contents
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+% Hyperlinks
+\usepackage{hyperref}
+\hypersetup{bookmarks=true,breaklinks=true,colorlinks=true,citecolor=blue,draft=false}
+
+% Compatibility command if hyperref cannot be used
+%\newcommand{\texorpdfstring}[2]{#1}
+
+% Abbreviations
+\newcommand{\oslic}{OSLiC}
+
+\begin{document}
+
+%% use all entries of the bliography
+%\nocite{*}
+
+%%-- start(titlepage)
+\titlehead{Version 1.0}
+
+\subject{\small \itshape How to Achieve Open Source License Compliance} 
+
+\title{Open Source Software and Reverse Engineering}
+
+\author{
+Karsten Reincke\thanks{Deutsche Telekom AG, Products \& Innovation, 
+T-Online-Allee 1, 64295 Darmstadt}
+}
+
+\maketitle
+%%-- end(titlepage)
+
+\normalsize
+
+\begin{abstract}\noindent\emph{Sometimes, it is stated that software using LGPL
+licensed components, may only be distributed by permitting reverse engineering
+of the software using the LGPL components. By reading the licenses strictly,
+this article proves in detail that we are not obliged to allow reverse
+engineering as long as we distribute our open source based work in form of
+dynamically linkable files. Particularly, the article shows, that we also can
+compliantly distribute our compiled, but still not linked work without
+permitting reverse engineering, if it uses LGPL licensed components.}
+\end{abstract}
+
+\section{Preface}
+
+Reverse Engineering is a challenging issue: Sometimes, developers must protect
+their business relevant work. Thus, they only incorporate open source components
+published under a permissive or a weak copyleft license: Of course, they want to
+use the open source software compliantly. But nevertheless, they want be able to
+distribute their own work as closed software for not exposing their secrets. So,
+being obliged by the embedded components to permit reverse engineering of the
+work using the components, would subvert this strategie. Unfortunately, it is
+often said, that one of the most important weak copyleft licenses, the LGPL,
+requires to permit reverse engineering.
+
+During the last two years, I was repeatedly asked to explain and defend my
+viewpoint in respect of reverse engineering and open source software: I am
+profoundly convinced that there is no problem at all as long as we distribute
+dynamically linkable programs. This position had often astonished my
+collocutors. Some of them were still looking for an exit of the dilemma, while
+the others already had given up and could rather believe that there was such a
+simple solution. So, --- at the end of our discussions -- they encouraged me to
+prove my position in detail.
+
+For example, my capable colleague Helene Tamer constantly insisted, that
+Deutsche Telekom AG could not give up her restrictions to use LGPL libraries
+until I had offered a reliable proof that the LGPL does not require reverse
+engineering. Or I could enthousiasticly discuss the permission of reverse
+engineering with the knowledgable German open source attorney Hendrik
+Schöttle\footnote{$\rightarrow$
+http://www.osborneclarke.com/lawyers/schottle-hendrik/} who boosted me to
+understand that I had to argue more subtler than I had done in my first
+answers. And last but not least also Karen Copenhaver\footnote{$\rightarrow$
+http://www.choate.com/people/karen-copenhaver} considered my arguments and
+emphatically asked me to share my thoughts with the community.
+
+So, I thankfully\footnote{Following the spirit of the open source movement, this
+article is published under the terms of CC-BY-SA 3.0 ($\rightarrow$ p.
+\pageref{License}). But as a document concerning legal issues, it must  be
+published under a specific proviso: ($\rightarrow$ p. \pageref{Disclaimer}). And
+finally, it is first and foremost developed as a chapter of the \textbf{O}pen
+\textbf{S}ource \textbf{Li}cense \textbf{C}ompendium ($\rightarrow$
+http://www.oslic.org/). But for offering a version which can more simply be
+distributed, we also produced this extract.} can now offer a thoroughly
+elaborated proof for the assertion that there - in general - is a way to
+distribute open source software compliantly without permitting reverse
+engineering, and that this way -- in particular -- is also usable to compliantly
+distribute LGPL licensed software without allowing reverse engineering.
+
+\footnotesize
+\tableofcontents
+\normalsize
+%%%%%%%%%%%%
+
+\section{Reverse Engineering and Open Source as Challenge}
+\input{../snippets/en/03C-osImportantMinorPoints/0304-revEng/0304a-reMotivationInc}
+\section{Reverse Engineering in the LGPL-v2}
+\input{../snippets/en/03C-osImportantMinorPoints/0304-revEng/0304b0-reLgpl2Inc}
+\subsection{Linguistical Clarification}
+\input{../snippets/en/03C-osImportantMinorPoints/0304-revEng/0304b1-reLgpl2LingClarInc}
+\subsection{Logical Clarification}
+\input{../snippets/en/03C-osImportantMinorPoints/0304-revEng/0304b2-reLgpl2LogiClarInc}
+\subsection{Empirical Clarification}
+\input{../snippets/en/03C-osImportantMinorPoints/0304-revEng/0304b3-reLgpl2EmpiClarInc}
+\subsection{Final Conclusion}
+\input{../snippets/en/03C-osImportantMinorPoints/0304-revEng/0304b4-reLgpl2FinaConcInc}
+\subsection{Final Securing}
+\input{../snippets/en/03C-osImportantMinorPoints/0304-revEng/0304b5-reLgpl2FinaSecuInc}
+\section{Reverse Engineering in the LGPL-v3}
+\input{../snippets/en/03C-osImportantMinorPoints/0304-revEng/0304c-reLgpl3Inc}
+\section{Reverse Engineering in the other Open Source Licenses}
+\input{../snippets/en/03C-osImportantMinorPoints/0304-revEng/0304d-reOtherLicensesInc}
+\section{Reverse Engineering in Open Source Licenses: Summary}
+\input{../snippets/en/03C-osImportantMinorPoints/0304-revEng/0304e-reSummaryInc}
+
+\label{Disclaimer}
+\section{Disclaimer}
+\input{../snippets/en/20150117-ExtractDisclaimerInc}
+
+\label{License}
+\section{License}
+\input{../btexmat/oscLicenseHintInc}
+
+\footnotesize
+\bibliography{../bibfiles/oscResourcesEn}
+
+\end{document}
+
