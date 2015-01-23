@@ -426,9 +426,170 @@
 \end{tikzpicture}
 } % end of gplUseCaseFinder
 
-% ------------------------------------------------------------------------------
-% Local Variables:
-% mode: latex
-% fill-column: 80
-% End:
-% ------------------------------------------------------------------------------
+\newcommand{\agplUseCaseFinder}[2]{
+\tikzstyle{nodv} = [font=\scriptsize, ellipse, draw, fill=gray!10, 
+    text width=2cm, text centered, minimum height=2em]
+
+\tikzstyle{nods} = [font=\tiny, rectangle, draw, fill=gray!20, 
+    text width=0.8cm, text centered, rounded corners, minimum height=3em]
+
+\tikzstyle{nodb} = [font=\tiny, rectangle, draw, fill=gray!20, 
+    text width=1cm, text centered, rounded corners, minimum height=3em]
+    
+\tikzstyle{leaf} = [font=\tiny, rectangle, draw, fill=gray!30, 
+    text width=1cm, text centered, minimum height=7em]
+
+\tikzstyle{slimleaf} = [font=\tiny, rectangle, draw, fill=gray!30, 
+    text width=0.84cm, text centered, minimum height=7em]
+
+
+\tikzstyle{edge} = [draw, -latex']
+
+\begin{tikzpicture}[]
+
+  \node[nodv] (l801) at (4,10)   {#1 #2};
+
+  \node[nodb] (l601) at (0,9.6) {\textit{recipient:} \\ \textbf{4your-} \\\textbf{self}};
+  \node[nodb] (l602) at (8.8,9.6) {\textit{recipient:} \\ \textbf{2others}};
+  
+  \node[nods] (l503) at (0.8,7) {\textit{state:} \\ \textbf{unmo-} \\ \textbf{dified}}; 
+  \node[nods] (l504) at (2.1,7) {\textit{state:} \\ \textbf{mo-} \\ \textbf{dified}}; 
+  \node[nodb] (l501) at (5.8,7) {\textit{state:} \\ \textbf{unmo-} \\ \textbf{dified}}; 
+  \node[nodb] (l502) at (11.5,7) {\textit{state:} \\ \textbf{mo-} \\ \textbf{dified}}; 
+  
+  \node[nods] (l405) at (1.3,5.4) {\textit{type:} \\ \textbf{pro-apse}};
+  \node[nods] (l406) at (2.7,5.4) {\textit{type:} \\ \textbf{sni-moli}};
+  
+  \node[nodb] (l401) at (4.6,5.4) {\textit{type:} \\ \textbf{proapse or snimoli}};
+  \node[nodb] (l402) at (7.2,5.4) {\textit{type:} \\ \textbf{snimoli}};
+  \node[nodb] (l403) at (9.6,5.4) {\textit{type:} \\ \textbf{proapse}};
+  \node[nodb] (l404) at (13.3,5.4) {\textit{type:} \\ \textbf{snimoli}};
+  
+  \node[nodb] (l306) at (1.3,3.8) {\textit{context:} \\ \textbf{inde-} \\ \textbf{pendent}};
+  \node[nodb] (l307) at (2.7,3.8) {\textit{context:} \\ \textbf{em-} \\ \textbf{bedded}};
+    
+  \node[nodb] (l301) at (4.6,3.8) {\textit{context:} \\ \textbf{inde-} \\ \textbf{pendent}};
+  \node[nodb] (l302) at (7.2,3.8) {\textit{context:} \\ \textbf{em-} \\ \textbf{bedded}};
+  \node[nodb] (l303) at (9.6,3.8) {\textit{context:} \\ \textbf{inde-} \\ \textbf{pendent}};
+  \node[nodb] (l304) at (11.9,3.8) {\textit{context:} \\ \textbf{inde-} \\ \textbf{pendent}};
+  \node[nodb] (l305) at (14.3,3.8) {\textit{context:} \\ \textbf{em-} \\ \textbf{bedded}};
+  
+  \node[nods] (l201) at (4.0,2.2) {\textit{form:} \textbf{source}};
+  \node[nods] (l202) at (5.3,2.2) {\textit{form:} \textbf{binary}};
+  \node[nods] (l203) at (6.6,2.2) {\textit{form:} \textbf{source}};
+  \node[nods] (l204) at (7.8,2.2) {\textit{form:} \textbf{binary}};
+  \node[nods] (l205) at (9.0,2.2) {\textit{form:} \textbf{source}};
+  \node[nods] (l206) at (10.2,2.2) {\textit{form:} \textbf{binary}};
+  \node[nods] (l207) at (11.4,2.2) {\textit{form:} \textbf{source}};
+  \node[nods] (l208) at (12.6,2.2) {\textit{form:} \textbf{binary}};
+  \node[nods] (l209) at (13.8,2.2) {\textit{form:} \textbf{source}};
+  \node[nods] (l210) at (15.0,2.2) {\textit{form:} \textbf{binary}};
+  
+  \node[slimleaf] (l101) at (0,0) {
+    \textbf{#1-C1} 
+    \textit{using software only for yourself}};
+    
+   \node[leaf] (l112) at (1.3,0) { 
+    \textbf{#1-CC}
+    \textit{execu-ting a modi-fied #1 program with net-io-Access}};   
+    
+  \node[leaf] (l113) at (2.7,0) { 
+    \textbf{#1-CD}
+    \textit{execu-ting a program with net-io-Access using a modified #1 library}}; 
+ 
+  \node[slimleaf] (l102) at (4.0,0) { 
+    \textbf{#1-C2} 
+    \textit{distri-buting unmo-dified software as independent sources}};
+  
+  \node[leaf] (l103) at (5.3,0) { 
+    \textbf{#1-C3}  
+    \textit{distribu-ting unmo-dified software as independent binaries}};
+  
+  \node[slimleaf] (l104) at (6.6,0) { 
+    \textbf{#1-C4} 
+    \textit{distribu-ting an un-modified library as embedded sources}};
+  
+  \node[slimleaf] (l105) at (7.8,0) { 
+    \textbf{#1-C5}  
+    \textit{distribu-ting an un-modified library as embedded binaries}};
+  
+  \node[slimleaf] (l106) at (9,0) { 
+    \textbf{#1-C6}  
+    \textit{distri-buting a modi-fied program as sources}};
+  
+  \node[slimleaf] (l107) at (10.2,0) { 
+    \textbf{#1-C7}  
+    \textit{distri-buting a modi-fied program as binaries}};
+  
+  \node[slimleaf] (l108) at (11.4,0) { 
+    \textbf{#1-C8}  
+    \textit{distri-buting a modi-fied library as independent sources}};
+  
+  \node[slimleaf] (l109) at (12.6,0) { 
+    \textbf{#1-C9}
+    \textit{distri-buting a modi-fied library as independent binaries}};
+  
+  \node[slimleaf] (l110) at (13.8,0) { 
+    \textbf{#1-CA}  
+    \textit{distri-buting a modi-fied library as embedded sources}};
+  
+  \node[slimleaf] (l111) at (15,0) { 
+    \textbf{#1-CB}  
+    \textit{distri-buting a modi-fied library as embedded binaries}};
+  
+  \path [edge] (l801) -- (l601);
+  \path [edge] (l801) -- (l602);
+  
+  \path [edge] (l601) -- (l503);
+  \path [edge] (l601) -- (l504);
+  \path [edge] (l602) -- (l501);
+  \path [edge] (l602) -- (l502);
+  
+  \path [edge] (l501) -- (l401);
+  \path [edge] (l501) -- (l402);
+  \path [edge] (l502) -- (l403);
+  \path [edge] (l502) -- (l404);
+  
+  \path [edge] (l504) -- (l405);  
+  \path [edge] (l504) -- (l406); 
+    
+  \path [edge] (l401) -- (l301);
+  \path [edge] (l402) -- (l302);
+  \path [edge] (l403) -- (l303);
+  \path [edge] (l404) -- (l304);
+  \path [edge] (l404) -- (l305);
+
+  \path [edge] (l405) -- (l306);
+  \path [edge] (l406) -- (l307);  
+  
+  
+  \path [edge] (l301) -- (l201);
+  \path [edge] (l301) -- (l202);
+  \path [edge] (l302) -- (l203);
+  \path [edge] (l302) -- (l204);
+  \path [edge] (l303) -- (l205);
+  \path [edge] (l303) -- (l206);
+  \path [edge] (l304) -- (l207);
+  \path [edge] (l304) -- (l208);
+  \path [edge] (l305) -- (l209);
+  \path [edge] (l305) -- (l210);
+  
+  \path [edge] (l601) -- (l101);
+  \path [edge] (l503) -- (l101);
+  \path [edge] (l306) -- (l112);
+  \path [edge] (l307) -- (l113);
+        
+  \path [edge] (l201) -- (l102);
+  \path [edge] (l202) -- (l103);
+  \path [edge] (l203) -- (l104);
+  \path [edge] (l204) -- (l105);
+  \path [edge] (l205) -- (l106);
+  \path [edge] (l206) -- (l107);
+  \path [edge] (l207) -- (l108);
+  \path [edge] (l208) -- (l109);
+  \path [edge] (l209) -- (l110);
+  \path [edge] (l210) -- (l111);
+  
+\end{tikzpicture}
+} % end of agplUseCaseFinder
+
