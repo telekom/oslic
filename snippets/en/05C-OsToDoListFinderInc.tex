@@ -93,6 +93,7 @@ to-do lists.
   & \checkboxes{4yourself}{2others}
   \\
 \hline 
+\hline
   Form 
   & \question[1.7cm]{
     \textit{Given you want to (re)distribute an open source based work [2others],
@@ -100,19 +101,30 @@ to-do lists.
     \textbf{\underline{sources}}?}}
   & \checkboxes{binaries}{sources}
   \\
+\hline
+  IoAccess 
+  & \question[2.6cm]{
+    \textit{Given you are using open source software [4yourself] by executing a
+    modified os program [modified] or by creating \& executing a program using
+    an os library [embedded], does this program distribute its IO data
+    only \textbf{\underline{only locally}} or \textbf{\underline{via
+    internet}}?}} & \checkboxes{onlyLocally}{viaInternet}
+  \\
 \hline 
 \hline
 \end{tabular}
 \end{small}
 }
 
-As discussed earlier, there are of course some invalid
+As discussed earlier, there are of course some invalid or irrelevant
 combinations.\footnote{type::proapse excludes state::embedded;
 recipient::4yourself excludes the combination with state::independent and
-type::snimoli; any value of class 'mode' implies state::embedded [for details
-see page \pageref{InvalidFinderTokenCombinations}]. If you have encountered one of
-these invalid combinations, please check the corresponding explanations.} Here
-are some extra explanations concerning the classes resp. the focuses:
+type::snimoli; any value of class 'mode' implies state::embedded; form is only
+relevant if recipient::2others; ioAccess is only relevant if
+recipient::4yourself[for details see page
+\pageref{InvalidFinderTokenCombinations}]. If you have encountered one of these
+invalid combinations, please check the corresponding explanations.} Here are
+some extra explanations concerning the classes resp. the focuses:
 
 \begin{description}
 \item[Type:] A piece of (open source) software is a program, an application, or
@@ -150,7 +162,7 @@ group) then you indeed hand the open source software over to third
 parties.\footnote{Please remember that---at least in Germany---there are
 opinions that even handing over software to another legal entity or department
 of the same company is also a kind of distribution. It is always safest to take
-the broadest possible meaning of distributing or handing over.}
+the broadest possible meaning.}
 \item[Form:] Open source software knows two ways to distribute the software: in
 the form of binaries and in the form of sources. Mostly it is up to you to
 decide whether you want to distribute only the binaries or whether you are
@@ -166,6 +178,28 @@ thumb}: \enquote{The source code for a work means the preferred form of the work
 for making modifications to it}.\citeGPLtwo{§3} All other forms are denoted by
 the concept of 'binaries'. Based on this specification, you can respect some
 special conditions if you want to distribute the sources and/or the binaries.
+\item[ioAccess:] If you are executing an open source program or a program using
+an open source library in a cloud or on your own server, then you are not
+distributing the open source software. So, the most licenses do not require
+anything for using the software compliantly - even if many other people in the
+world are using your software based service via the internet. For filling this
+gap, the AGPL determines, that you have to fulfill all the well known (A)GPL
+conditions also to those people, who have access to the software running in your
+cloud or on your machines via any network technique. In other words, such an
+access via the internet shall trigger all requirements which normally are
+triggered by distributing the software itself. From the view of computation,
+such an access is 'visible' if you remotely get the io of the running program.
+
+Thus, we have to discriminate a program which is executed on a machine but not
+distributed and which only has only local io access from that program  which has
+io access via internet. But that is not enough: the AGPL thinks very
+sophisticatedly. If you are using an AGPL program distributing its io via the
+internet, then you have to fulfill the AGPL requirements, only if you have
+modified the program. But if you are executing an own program distributing its
+io via the internet and if this program uses an AGPL library, then you have to
+fulfill the AGPL requirements regardless whether you have modified the embedded
+library or not.
+
 \end{description}
 
 \section{The taxonomic Open Source Use Case Finder}
@@ -185,6 +219,9 @@ branches:
 \newcommand{\cothers}{\choicetext{recipient}{2others}}
 \newcommand{\csources}{\choicetext{form}{sources}}
 \newcommand{\cbinaries}{\choicetext{form}{binaries}}
+\newcommand{\conlylocal}{\choicetext{ioAccess}{onlyLocal}}
+\newcommand{\cviainternet}{\choicetext{ioAccess}{viInternet}}
+
 
 \newcommand{\osuctxtshort}[1]{$\Rightarrow$ OSUC-#1: \textit{p.\ \pageref{OSUC-#1-DEF}}}
 \newcommand{\osuctxtbreak}[1]{$\Rightarrow$ OSUC-#1\\ \textit{(see p.\ \pageref{OSUC-#1-DEF})}}
@@ -196,12 +233,12 @@ branches:
     font=\scriptsize,
     align=left,
     grow'=right,
-    level 1/.style={sibling distance=24em, level distance=10mm},
-    level 2/.style={sibling distance=14em, level distance=10mm},
-    level 3/.style={sibling distance=7em,  level distance=18mm, anchor=west, minimum width=2cm},
-    level 4/.style={sibling distance=3em,  level distance=18mm, minimum width=1.65cm},
-    level 5/.style={sibling distance=3em,  level distance=18mm, minimum width=1.45cm},
-    level 6/.style={sibling distance=3em,  level distance=6mm},
+%     level 1/.style={sibling distance=24em, level distance=10mm},
+%     level 2/.style={sibling distance=14em, level distance=10mm},
+%     level 3/.style={sibling distance=7em,  level distance=18mm, anchor=west, minimum width=2cm},
+%     level 4/.style={sibling distance=3em,  level distance=18mm, minimum width=1.65cm},
+%     level 5/.style={sibling distance=3em,  level distance=18mm, minimum width=1.45cm},
+%     level 6/.style={sibling distance=3em,  level distance=6mm},
 ]
 \node [ellipse,draw] {OSS}
     child { node [choice] { \choicetext{type}{proapse} }
@@ -223,7 +260,12 @@ branches:
       child { node [choice] {\cmodified}
         child { node [choice] {\cindependent}
           child { node[choice] {\cyourself} 
-            \osucchild{\osuctxtshort{03}}
+            child { node[choice] {\conlylocal} 
+              \osucchild{\osuctxtbreak{03L}}
+            }
+            child { node[choice] {\cviainternet} 
+              \osucchild{\osuctxtbreak{03N}}
+            }
           }
           child { node[choice] {\cothers} 
             child { node[choice] {\csources} 
