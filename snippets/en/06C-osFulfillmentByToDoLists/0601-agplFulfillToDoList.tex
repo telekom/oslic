@@ -24,8 +24,9 @@
 %\nocite{*}
 
 \section{AGPL licensed software}
-\label{OSUC-01-AGPL} \label{OSUC-03-AGPL} 
-\label{OSUC-06-AGPL} \label{OSUC-09-AGPL}
+\label{OSUC-01-AGPL} \label{OSUC-03L-AGPL} \label{OSUC-03N-AGPL}
+\label{OSUC-06L-AGPL} \label{OSUC-06N-AGPL} \label{OSUC-09L-AGPL}
+\label{OSUC-09N-AGPL}
 
 
 \label{OSUC-02S-AGPL} \label{OSUC-04S-AGPL} \label{OSUC-05S-AGPL}
@@ -35,3 +36,382 @@
 
 
 \agplUseCaseFinder{AGPL}{3.0}
+
+%% ============================================================================= 
+%% Common Building Blocks
+
+\newcommand{\useCaseOne}{%
+  \gtbUseCaseOne{GPL-\ver}
+  \gtbCoversOne{GPL-\ver}}
+
+\newcommand{\useCaseTwo}{%
+  \gtbUseCaseTwo{GPL-\ver}
+  \gtbCoversTwo{GPL-\ver}}
+
+\newcommand{\useCaseThree}{%
+  \gtbUseCaseThree{GPL-\ver}
+  \gtbCoversThree{GPL-\ver}}
+
+\newcommand{\useCaseFour}{%
+  \gtbUseCaseFour{GPL-\ver}
+  \gtbCoversFour{GPL-\ver}}
+
+\newcommand{\useCaseFive}{%
+  \gtbUseCaseFive{GPL-\ver}
+  \gtbCoversFive{GPL-\ver}}
+
+\newcommand{\useCaseSix}{%
+  \gtbUseCaseSix{GPL-\ver}
+  \gtbCoversSix{GPL-\ver}}
+
+\newcommand{\useCaseSeven}{%
+  \gtbUseCaseSeven{GPL-\ver}
+  \gtbCoversSeven{GPL-\ver}}
+
+\newcommand{\useCaseEight}{%
+  \gtbUseCaseEight{GPL-\ver}
+  \gtbCoversEight{GPL-\ver}}
+
+\newcommand{\useCaseNine}{%
+  \gtbUseCaseNine{GPL-\ver}
+  \gtbCoversNine{GPL-\ver}}
+
+\newcommand{\useCaseA}{%
+  \gtbUseCaseA{GPL-\ver}
+  \gtbCoversA{GPL-\ver}}
+
+\newcommand{\useCaseB}{%
+  \gtbUseCaseB{GPL-\ver}
+  \gtbCoversB{GPL-\ver}}
+
+% ------------------------------------------------------------------------------
+% Common Text Blocks from 0600-commomn-text-blocks.tex
+
+\newcommand{\keepLicenseElements}{\gtbKeepLicenseElements{GPL-\ver}}
+\newcommand{\addToDocumentation}{\gtbAddToDocumentation{GPL-\ver}}
+\newcommand{\giveLicense}{\gtbGiveLicense{GPL-\ver}}
+\newcommand{\retainCopyrightNotices}{\gtbKeepCopyrightNotices{GPL-\ver}}
+\newcommand{\describeHowToGetSource}{\gtbDescribeHowToGetSource{GPL-\ver}}
+\newcommand{\createChangelog}{\gtbCreateChangelog{GPL-\ver}}
+\newcommand{\markEmbeddedModifications}{\gtbMarkEmbeddedModifications{GPL-\ver}}
+\newcommand{\markLibraryModifications}{\gtbMarkLibraryModifications{GPL-\ver}}
+\newcommand{\markProgramModifications}{\gtbMarkProgramModifications{GPL-\ver}}
+\newcommand{\gpltwoEnsureCopyrightNoticeSource}{\gtbVTwoCopyrightNotice{GPL-2.0}{source code}}
+\newcommand{\gpltwoEnsureCopyrightNoticeBinary}{\gtbVTwoCopyrightNotice{GPL-2.0}{binary}}
+\newcommand{\gplthreeEnsureCopyrightNoticeSource}{\gtbVThreeCopyrightNotice{GPL-3.0}{source code}}
+\newcommand{\gplthreeEnsureCopyrightNoticeBinary}{\gtbVThreeCopyrightNotice{GPL-3.0}{binary}}
+\newcommand{\makeUnmodifiedSourceAvailable}{\gtbMakeUnmodifiedSourceAvailable{GPL-\ver}} 
+\newcommand{\makeModifiedSourceAvailable}{\gtbMakeModifiedSourceAvailable{GPL-\ver}} 
+\newcommand{\makeAllSourcesAvailable}{\gtbMakeAllSourcesAvailable{GPL-\ver}}
+\newcommand{\arrangeProgramChanges}{\gtbArrangeProgramChanges{GPL-\ver}}
+\newcommand{\arrangeLibraryChanges}{\gtbArrangeLibraryChanges{GPL-\ver}}
+\newcommand{\arrangeEmbeddedChanges}{\gtbArrangeEmbeddedChanges{GPL-\ver}}
+\newcommand{\howToApplyTheseTerms}{\gtbHowToApplyTheseTerms{GPL-\ver}}
+\newcommand{\noPatentLitigation}{\gtbNoPatentLitigation{GPL-\ver}}
+\newcommand{\addToCopyrightDialogLib}{\gtbAddToCopyrightDialogStrongCopyleft{GPL-\ver}}
+\newcommand{\addToCopyrightDialogApp}{\gtbAddToCopyrightDialogApp{GPL-\ver}}
+
+% ------------------------------------------------------------------------------
+% Make sure, licensing statements apply to enclosing program
+
+\newcommand{\auxArrange}[1]{Arrange the #1 of the on-top development in a way
+  that they are covered by the GPL-\ver{} licensing statements.} 
+
+\newcommand{\arrangeEnclosingBinaries}{%
+  \auxArrange{the binaries of the on-top development}}
+
+\newcommand{\arrangeEnclosingSources}{%
+  \auxArrange{the sources of the on-top development}}
+
+
+%% =============================================================================
+%% GPL-3.0 Use Cases
+
+\newcommand{\ver}{3.0}
+
+\begin{license}{AGPL3} 
+\licensename{AGPL-3.0}
+\licensespec{GNU Affero General Public License Version 3}
+\licenseabbrev{AGPL}
+%\licenseversion{3.0}
+
+% ------------------------------------------------------------------------------
+\subsection{AGPL-\ver-C1: Using the software only for yourself}
+\begin{lsuc}{AGPL-\ver-C1}
+  \linkosuc{01}
+  \linkosuc{03L} 
+  \linkosuc{03N} 
+  \linkosuc{06L}
+  \linkosuc{06N}
+  \linkosuc{09L}
+  \linkosuc{09L}
+
+  \useCaseOne
+
+  \begin{lsucrequiresnothing}
+    \lsucitem{You are allowed to use any kind of GPL software in any sense and in
+      any context without being obliged to do anything as long as you do not
+      give the software to third parties.}
+  \end{lsucrequiresnothing}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{AGPL-\ver-C2: Passing the unmodified software as independent sources}
+\begin{lsuc}{AGPL-\ver-C2}
+  \linkosuc{02S}
+  \linkosuc{05S}
+
+  \useCaseTwo
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeSource}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{AGPL-\ver-C3: Passing the unmodified software as independent binaries} 
+\begin{lsuc}{AGPL-\ver-C3}
+  \linkosuc{02B} 
+  \linkosuc{05B}
+
+  \useCaseThree
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeBinary}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly  
+    \lsucmandatory{\makeUnmodifiedSourceAvailable}
+    \lsucmandatory{\describeHowToGetSource}
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucsourcedist{AGPL-\ver-C2}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{AGPL-\ver-C4: Passing the unmodified library as embedded sources}
+\begin{lsuc}{AGPL-\ver-C4}
+  \linkosuc{07S} 
+
+  \useCaseFour
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeSource}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\addToCopyrightDialogLib}
+    \lsucmandatory{\arrangeEnclosingSources}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{AGPL-\ver-C5: Passing the unmodified library as embedded binaries} 
+\begin{lsuc}{AGPL-\ver-C5}
+  \linkosuc{07B} 
+
+  \useCaseFive
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeBinary}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\makeAllSourcesAvailable}
+    \lsucmandatory{\describeHowToGetSource}
+    \lsucmandatory{\addToCopyrightDialogLib}
+    \lsucmandatory{\arrangeEnclosingBinaries}
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucsourcedist{AGPL-\ver-C4}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{AGPL-\ver-C6: Passing a modified program as source code}
+\begin{lsuc}{AGPL-\ver-C6}
+  \linkosuc{04S} 
+
+  \useCaseSix
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeSource}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\addToCopyrightDialogApp}
+    \lsucmandatory{\markProgramModifications}
+    \lsucmandatory{\arrangeProgramChanges}\howToApplyTheseTerms
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{AGPL-\ver-C7: Passing a modified program as binary}
+\begin{lsuc}{AGPL-\ver-C7}
+  \linkosuc{04B}
+
+  \useCaseSeven
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeBinary}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\markProgramModifications}
+    \lsucmandatory{\addToCopyrightDialogApp}
+    \lsucmandatory{\arrangeProgramChanges}\howToApplyTheseTerms
+    \lsucmandatory{\makeModifiedSourceAvailable}
+    \lsucmandatory{\describeHowToGetSource}
+    \lsucsourcedist{AGPL-\ver-C6}
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{AGPL-\ver-C8: Passing a modified library as independent source code}
+\begin{lsuc}{AGPL-\ver-C8}
+  \linkosuc{08S}
+
+  \useCaseEight
+
+  \begin{lsucrequires}
+     \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeSource}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\markLibraryModifications}
+    \lsucmandatory{\arrangeLibraryChanges}\howToApplyTheseTerms
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{AGPL-\ver-C9: Passing a modified library as independent binary}
+\begin{lsuc}{AGPL-\ver-C9}
+  \linkosuc{08B}
+
+  \useCaseNine
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeSource}  
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\makeModifiedSourceAvailable}
+    \lsucmandatory{\describeHowToGetSource}
+    \lsucsourcedist{AGPL-\ver-C8}
+    \lsucmandatory{\markLibraryModifications}
+    \lsucmandatory{\arrangeLibraryChanges}\howToApplyTheseTerms
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{AGPL-\ver-CA: Passing a modified library as embedded source code}
+\begin{lsuc}{AGPL-\ver-CA}
+  \linkosuc{10S}
+
+  \useCaseA
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeSource}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\addToCopyrightDialogLib}
+    \lsucmandatory{\markEmbeddedModifications}
+    \lsucmandatory{\arrangeEmbeddedChanges}\howToApplyTheseTerms
+    \lsucmandatory{\arrangeEnclosingSources}
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{AGPL-\ver-CB: Passing a modified library as embedded binary}
+\begin{lsuc}{AGPL-\ver-CB}
+  \linkosuc{10B}
+
+  \useCaseB
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeBinary}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\makeAllSourcesAvailable}
+    \lsucmandatory{\describeHowToGetSource}
+    \lsucsourcedist{AGPL-\ver-CA}
+    \lsucmandatory{\addToCopyrightDialogLib}
+    \lsucmandatory{\markEmbeddedModifications}
+    \lsucmandatory{\arrangeEmbeddedChanges}\howToApplyTheseTerms
+    \lsucmandatory{\arrangeEnclosingBinaries}
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\end{license}
+
+%% =============================================================================
+%% Discussion
+
+\subsection{Discussions and Explanations}
+\label{AGPL3Discussion}
+  
+
+
