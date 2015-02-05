@@ -434,6 +434,9 @@ OSUC-06L, OSUC-06N, OSUC-09L and OSUC-09N}{01}{09N}}
 \tikzstyle{nods} = [font=\tiny, rectangle, draw, fill=gray!20, 
     text width=0.8cm, text centered, rounded corners, minimum height=3em]
 
+\tikzstyle{nodz} = [font=\tiny, rectangle, draw, fill=gray!20, 
+    text width=0.6cm, text centered, rounded corners, minimum height=3em]
+
 \tikzstyle{nodb} = [font=\tiny, rectangle, draw, fill=gray!20, 
     text width=1cm, text centered, rounded corners, minimum height=3em]
     
@@ -448,21 +451,27 @@ OSUC-06L, OSUC-06N, OSUC-09L and OSUC-09N}{01}{09N}}
 
 \begin{tikzpicture}[]
 
-  \node[nodv] (l801) at (4,10)   {#1 #2};
+  \node[nodv] (l801) at (4,12)   {#1 #2};
 
-  \node[nodb] (l601) at (0,9.6) {\textit{recipient:} \\ \textbf{4your-} \\\textbf{self}};
-  \node[nodb] (l602) at (8.8,9.6) {\textit{recipient:} \\ \textbf{2others}};
+  \node[nodb] (l601) at (0,11.6) {\textit{recipient:} \\ \textbf{4your-} \\\textbf{self}};
+  \node[nodb] (l602) at (8.8,11.6) {\textit{recipient:} \\ \textbf{2others}};
+
+  \node[nodb] (l551) at (0,9) {\textit{ioAccess:} \\ \textbf{only-} \\ \textbf{Local}}; 
+  \node[nodb] (l552) at (2,9) {\textit{ioAccess:} \\ \textbf{via-} \\ \textbf{Internet}};   
   
-  \node[nods] (l503) at (0.8,7) {\textit{state:} \\ \textbf{unmo-} \\ \textbf{dified}}; 
-  \node[nods] (l504) at (2.1,7) {\textit{state:} \\ \textbf{mo-} \\ \textbf{dified}}; 
+   
+  \node[nods] (l503) at (1.2,7) {\textit{state:} \\ \textbf{unmo-} \\ \textbf{dified}}; 
+  \node[nods] (l504) at (3.2,7) {\textit{state:} \\ \textbf{mo-} \\ \textbf{dified}}; 
   \node[nodb] (l501) at (5.8,7) {\textit{state:} \\ \textbf{unmo-} \\ \textbf{dified}}; 
   \node[nodb] (l502) at (11.5,7) {\textit{state:} \\ \textbf{mo-} \\ \textbf{dified}}; 
   
-  \node[nods] (l405) at (1.3,5.4) {\textit{type:} \\ \textbf{pro-apse}};
-  \node[nods] (l406) at (2.7,5.4) {\textit{type:} \\ \textbf{sni-moli}};
+  \node[nodz] (l407) at (0.6,5.4) {\textit{type:} \\ \textbf{pro-apse}};
+  \node[nodz] (l408) at (1.6,5.4) {\textit{type:} \\ \textbf{sni-moli}};
+  \node[nodz] (l405) at (2.8,5.4) {\textit{type:} \\ \textbf{pro-apse}};
+  \node[nodz] (l406) at (3.8,5.4) {\textit{type:} \\ \textbf{sni-moli}};
   
-  \node[nodb] (l401) at (4.6,5.4) {\textit{type:} \\ \textbf{proapse or snimoli}};
-  \node[nodb] (l402) at (7.2,5.4) {\textit{type:} \\ \textbf{snimoli}};
+  \node[nodb] (l401) at (5.8,5.4) {\textit{type:} \\ \textbf{proapse or snimoli}};
+  \node[nodb] (l402) at (7.6,5.4) {\textit{type:} \\ \textbf{snimoli}};
   \node[nodb] (l403) at (9.6,5.4) {\textit{type:} \\ \textbf{proapse}};
   \node[nodb] (l404) at (13.3,5.4) {\textit{type:} \\ \textbf{snimoli}};
   
@@ -488,15 +497,15 @@ OSUC-06L, OSUC-06N, OSUC-09L and OSUC-09N}{01}{09N}}
   
   \node[slimleaf] (l101) at (0,0) {
     \textbf{#1-C1} 
-    \textit{using software only for yourself}};
+    \textit{using apps \& libs only for yourself (+ sub conditions)}};
     
    \node[leaf] (l112) at (1.3,0) { 
     \textbf{#1-CC}
-    \textit{execu-ting a modi-fied #1 program with net-io-Access}};   
+    \textit{execu-ting a modified #1 program with net-io-Access}};   
     
   \node[leaf] (l113) at (2.7,0) { 
     \textbf{#1-CD}
-    \textit{execu-ting a program with net-io-Access using a modified #1 library}}; 
+    \textit{execu-ting any app with net-io-Access using a (modified) library}}; 
  
   \node[slimleaf] (l102) at (4.0,0) { 
     \textbf{#1-C2} 
@@ -541,18 +550,25 @@ OSUC-06L, OSUC-06N, OSUC-09L and OSUC-09N}{01}{09N}}
   \path [edge] (l801) -- (l601);
   \path [edge] (l801) -- (l602);
   
-  \path [edge] (l601) -- (l503);
-  \path [edge] (l601) -- (l504);
+  \path [edge] (l601) -- (l551);
+  \path [edge] (l601) -- (l552);
+
   \path [edge] (l602) -- (l501);
   \path [edge] (l602) -- (l502);
+  \path [edge] (l552) -- (l503);
+  \path [edge] (l552) -- (l504); 
+
   
   \path [edge] (l501) -- (l401);
   \path [edge] (l501) -- (l402);
   \path [edge] (l502) -- (l403);
   \path [edge] (l502) -- (l404);
   
+  \path [edge] (l503) -- (l407);  
+  \path [edge] (l503) -- (l408); 
   \path [edge] (l504) -- (l405);  
-  \path [edge] (l504) -- (l406); 
+  \path [edge] (l504) -- (l406);  
+   
     
   \path [edge] (l401) -- (l301);
   \path [edge] (l402) -- (l302);
@@ -560,9 +576,11 @@ OSUC-06L, OSUC-06N, OSUC-09L and OSUC-09N}{01}{09N}}
   \path [edge] (l404) -- (l304);
   \path [edge] (l404) -- (l305);
 
-  \path [edge] (l405) -- (l306);
-  \path [edge] (l406) -- (l307);  
   
+  \path [edge] (l405) -- (l306);
+  \path [edge] (l406) -- (l307);
+  \path [edge] (l407) -- (l101);   
+  \path [edge] (l408) -- (l307);  
   
   \path [edge] (l301) -- (l201);
   \path [edge] (l301) -- (l202);
@@ -575,8 +593,8 @@ OSUC-06L, OSUC-06N, OSUC-09L and OSUC-09N}{01}{09N}}
   \path [edge] (l305) -- (l209);
   \path [edge] (l305) -- (l210);
   
-  \path [edge] (l601) -- (l101);
-  \path [edge] (l503) -- (l101);
+  \path [edge] (l551) -- (l101);
+
   \path [edge] (l306) -- (l112);
   \path [edge] (l307) -- (l113);
         

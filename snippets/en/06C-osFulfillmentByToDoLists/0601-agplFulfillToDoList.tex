@@ -41,49 +41,57 @@
 %% Common Building Blocks
 
 \newcommand{\useCaseOne}{%
-  \gtbUseCaseOne{GPL-\ver}
-  \gtbCoversOne{GPL-\ver}}
+  \gtbUseCaseOne{AGPL-\ver}
+  \gtbCoversOne{AGPL-\ver}}
 
 \newcommand{\useCaseTwo}{%
-  \gtbUseCaseTwo{GPL-\ver}
-  \gtbCoversTwo{GPL-\ver}}
+  \gtbUseCaseTwo{AGPL-\ver}
+  \gtbCoversTwo{AGPL-\ver}}
 
 \newcommand{\useCaseThree}{%
-  \gtbUseCaseThree{GPL-\ver}
-  \gtbCoversThree{GPL-\ver}}
+  \gtbUseCaseThree{AGPL-\ver}
+  \gtbCoversThree{AGPL-\ver}}
 
 \newcommand{\useCaseFour}{%
-  \gtbUseCaseFour{GPL-\ver}
-  \gtbCoversFour{GPL-\ver}}
+  \gtbUseCaseFour{AGPL-\ver}
+  \gtbCoversFour{AGPL-\ver}}
 
 \newcommand{\useCaseFive}{%
-  \gtbUseCaseFive{GPL-\ver}
-  \gtbCoversFive{GPL-\ver}}
+  \gtbUseCaseFive{AGPL-\ver}
+  \gtbCoversFive{AGPL-\ver}}
 
 \newcommand{\useCaseSix}{%
-  \gtbUseCaseSix{GPL-\ver}
-  \gtbCoversSix{GPL-\ver}}
+  \gtbUseCaseSix{AGPL-\ver}
+  \gtbCoversSix{AGPL-\ver}}
 
 \newcommand{\useCaseSeven}{%
-  \gtbUseCaseSeven{GPL-\ver}
+  \gtbUseCaseSeven{AGPL-\ver}
   \gtbCoversSeven{GPL-\ver}}
 
 \newcommand{\useCaseEight}{%
-  \gtbUseCaseEight{GPL-\ver}
-  \gtbCoversEight{GPL-\ver}}
+  \gtbUseCaseEight{AGPL-\ver}
+  \gtbCoversEight{AGPL-\ver}}
 
 \newcommand{\useCaseNine}{%
-  \gtbUseCaseNine{GPL-\ver}
-  \gtbCoversNine{GPL-\ver}}
+  \gtbUseCaseNine{AGPL-\ver}
+  \gtbCoversNine{AGPL-\ver}}
 
 \newcommand{\useCaseA}{%
-  \gtbUseCaseA{GPL-\ver}
-  \gtbCoversA{GPL-\ver}}
+  \gtbUseCaseA{AGPL-\ver}
+  \gtbCoversA{AGPL-\ver}}
 
 \newcommand{\useCaseB}{%
-  \gtbUseCaseB{GPL-\ver}
-  \gtbCoversB{GPL-\ver}}
+  \gtbUseCaseB{AGPL-\ver}
+  \gtbCoversB{AGPL-\ver}}
 
+\newcommand{\useCaseC}{%
+  \gtbUseCaseB{AGPL-\ver}
+  \gtbCoversB{AGPL-\ver}}
+
+\newcommand{\useCaseD}{%
+  \gtbUseCaseB{AGPL-\ver}
+  \gtbCoversB{AGPL-\ver}}
+  
 % ------------------------------------------------------------------------------
 % Common Text Blocks from 0600-commomn-text-blocks.tex
 
@@ -136,22 +144,20 @@
 %\licenseversion{3.0}
 
 % ------------------------------------------------------------------------------
-\subsection{AGPL-\ver-C1: Using the software only for yourself}
+\subsection{AGPL-\ver-C1: Using the software only for yourself under additional restrictions}
 \begin{lsuc}{AGPL-\ver-C1}
   \linkosuc{01}
-  \linkosuc{03L} 
-  \linkosuc{03N} 
-  \linkosuc{06L}
-  \linkosuc{06N}
-  \linkosuc{09L}
-  \linkosuc{09L}
 
   \useCaseOne
 
   \begin{lsucrequiresnothing}
-    \lsucitem{You are allowed to use any kind of GPL software in any sense and in
-      any context without being obliged to do anything as long as you do not
-      give the software to third parties.}
+    \lsucitem{You are allowed to execute an unmodified AGPL program without
+    being obliged to do anything, as long as you do not give the program to
+    third parties. And you are allowed to embed any AGPL licensed library
+    snippet or module into your own program and to execute that program without
+    being obliged to do anything, as long as no other than you can interact with
+    it remotely through a computer network and as long as you do not give the
+    library or your program to third parties.}
   \end{lsucrequiresnothing}
 
   \begin{lsucprohibits}
