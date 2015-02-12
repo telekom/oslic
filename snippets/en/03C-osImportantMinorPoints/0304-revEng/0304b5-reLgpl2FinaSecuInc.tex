@@ -42,7 +42,7 @@ the LGPL-v2 perfectly.
 
 For that purpose, let us fist discuss a little (semi-) official article --
 written by David Turner and published by the FSF\footcite[cf.][\nopage
-wp.]{Turner2004a} -- which deals with the compliant use of the LGPL licensed
+wp.]{Turner2004a} -- which deals with the compliant use of LGPL licensed Java
 libraries. Turner refers to the \enquote{FSF's position} which - as he says -
 \enquote{[\ldots] has remained constant throughout}:
 
@@ -61,9 +61,9 @@ and integrates \enquote{links} into the compiled application which let become
 the application a \enquote{derivative work} of the library.
 Finally he states, that not only the LGPL permits to distribute such derivative
 works, but that \enquote{[\ldots] it is easy to comply with the LGPL} if one
-indeed wants to \enquote{distribute a Java application that imports LGPL
-libraries}: \enquote{Your application's license needs to allow users to modify
-the library, and reverse engineer your code to debug these
+indeed wants to \enquote{[\ldots] distribute a Java application that imports
+LGPL libraries}: \enquote{Your application's license needs to allow users to
+modify the library, and reverse engineer your code to debug these
 modifications.}\footcite[cf.][\nopage wp.]{Turner2004a}
 
 So, we might state, that even this semi-official article argues very similarly
@@ -79,7 +79,10 @@ modifications}\footnote{$\rightarrow$ p.
 \pageref{RevEngEssentialLgplSection6Meaning}}. But -- as we could also show --
 for determining wether an application really contains portions of the Library,
 one has additionally to consider the limits defined by section 5 of the
-LGPL\footnote{$\rightarrow$ p. \pageref{RevEngLgplSection5Derivation}}.
+LGPL\footnote{$\rightarrow$ p. \pageref{RevEngLgplSection5Derivation}}: the 
+application's license needs to allow to reverse engineer the application only if
+it contains more elements of the Library than §5 of the LGPL-v2 has specified as
+limit.
 
 That our analysis fits the spirit of the LGPL, can also be shown by considering
 the LGPL directly:

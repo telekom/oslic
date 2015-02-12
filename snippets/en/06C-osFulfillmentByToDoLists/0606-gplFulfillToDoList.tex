@@ -83,35 +83,35 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
   \gtbCoversThree{GPL-\ver}}
 
 \newcommand{\useCaseFour}{%
-  \gtbUseCaseFour{GPL-\ver}
+  \gtbUseCaseFour{GPL-\ver}{a}
   \gtbCoversFour{GPL-\ver}}
 
 \newcommand{\useCaseFive}{%
-  \gtbUseCaseFive{GPL-\ver}
+  \gtbUseCaseFive{GPL-\ver}{a}
   \gtbCoversFive{GPL-\ver}}
 
 \newcommand{\useCaseSix}{%
-  \gtbUseCaseSix{GPL-\ver}
+  \gtbUseCaseSix{GPL-\ver}{a}
   \gtbCoversSix{GPL-\ver}}
 
 \newcommand{\useCaseSeven}{%
-  \gtbUseCaseSeven{GPL-\ver}
+  \gtbUseCaseSeven{GPL-\ver}{a}
   \gtbCoversSeven{GPL-\ver}}
 
 \newcommand{\useCaseEight}{%
-  \gtbUseCaseEight{GPL-\ver}
+  \gtbUseCaseEight{GPL-\ver}{a}
   \gtbCoversEight{GPL-\ver}}
 
 \newcommand{\useCaseNine}{%
-  \gtbUseCaseNine{GPL-\ver}
+  \gtbUseCaseNine{GPL-\ver}{a}
   \gtbCoversNine{GPL-\ver}}
 
 \newcommand{\useCaseA}{%
-  \gtbUseCaseA{GPL-\ver}
+  \gtbUseCaseA{GPL-\ver}{a}
   \gtbCoversA{GPL-\ver}}
 
 \newcommand{\useCaseB}{%
-  \gtbUseCaseB{GPL-\ver}
+  \gtbUseCaseB{GPL-\ver}{a}
   \gtbCoversB{GPL-\ver}}
 
 % ------------------------------------------------------------------------------
@@ -144,7 +144,7 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
 % ------------------------------------------------------------------------------
 % Make sure, licensing statements apply to enclosing program
 
-\newcommand{\auxArrange}[1]{Arrange the #1 of the on-top development in a way
+\newcommand{\auxArrange}[1]{Arrange the #1 in a way
   that they are covered by the GPL-\ver{} licensing statements.} 
 
 \newcommand{\arrangeEnclosingBinaries}{%
@@ -173,7 +173,7 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
   \linkosuc{06L}
   \linkosuc{06N}
   \linkosuc{09L}
-  \linkosuc{09L}
+  \linkosuc{09N}
 
   \useCaseOne
 
@@ -624,7 +624,7 @@ GPL-3.0-C1, \ldots for the GPL-3.0 use case.
 
   \begin{lsucrequires}
     \lsucmandatory{\keepLicenseElements}
-    \lsucmandatory{\gplthreeEnsureCopyrightNoticeSource}  
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeBinary}
     \lsucmandatory{\giveLicense}\passingFilesCorrectly
     \lsucmandatory{\retainCopyrightNotices}
     \lsucmandatory{\makeModifiedSourceAvailable}

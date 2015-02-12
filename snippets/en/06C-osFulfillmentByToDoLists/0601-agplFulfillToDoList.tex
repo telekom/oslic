@@ -24,15 +24,15 @@
 %\nocite{*}
 
 \section{AGPL licensed software}
-\label{OSUC-01-AGPL} \label{OSUC-03L-AGPL} \label{OSUC-03N-AGPL}
-\label{OSUC-06L-AGPL} \label{OSUC-06N-AGPL} \label{OSUC-09L-AGPL}
-\label{OSUC-09N-AGPL}
-
-
-\label{OSUC-02S-AGPL} \label{OSUC-04S-AGPL} \label{OSUC-05S-AGPL}
-\label{OSUC-07S-AGPL} \label{OSUC-08S-AGPL} \label{OSUC-10S-AGPL}
-\label{OSUC-02B-AGPL} \label{OSUC-04B-AGPL} \label{OSUC-05B-AGPL}
-\label{OSUC-07B-AGPL} \label{OSUC-08B-AGPL} \label{OSUC-10B-AGPL}
+% \label{OSUC-03L-AGPL} \label{OSUC-03N-AGPL}
+% \label{OSUC-06L-AGPL} \label{OSUC-06N-AGPL} \label{OSUC-09L-AGPL}
+% \label{OSUC-09N-AGPL}
+% 
+% 
+% \label{OSUC-02S-AGPL} \label{OSUC-04S-AGPL} \label{OSUC-05S-AGPL}
+% \label{OSUC-07S-AGPL} \label{OSUC-08S-AGPL} \label{OSUC-10S-AGPL}
+% \label{OSUC-02B-AGPL} \label{OSUC-04B-AGPL} \label{OSUC-05B-AGPL}
+% \label{OSUC-07B-AGPL} \label{OSUC-08B-AGPL} \label{OSUC-10B-AGPL}
 
 
 \agplUseCaseFinder{AGPL}{3.0}
@@ -41,8 +41,8 @@
 %% Common Building Blocks
 
 \newcommand{\useCaseOne}{%
-  \gtbUseCaseOne{AGPL-\ver}
-  \gtbCoversOne{AGPL-\ver}}
+  \agtbUseCaseOne{AGPL-\ver}
+  \agtbCoversOne{AGPL-\ver}}
 
 \newcommand{\useCaseTwo}{%
   \gtbUseCaseTwo{AGPL-\ver}
@@ -53,77 +53,79 @@
   \gtbCoversThree{AGPL-\ver}}
 
 \newcommand{\useCaseFour}{%
-  \gtbUseCaseFour{AGPL-\ver}
+  \gtbUseCaseFour{AGPL-\ver}{an}
   \gtbCoversFour{AGPL-\ver}}
 
 \newcommand{\useCaseFive}{%
-  \gtbUseCaseFive{AGPL-\ver}
+  \gtbUseCaseFive{AGPL-\ver}{an}
   \gtbCoversFive{AGPL-\ver}}
 
 \newcommand{\useCaseSix}{%
-  \gtbUseCaseSix{AGPL-\ver}
+  \gtbUseCaseSix{AGPL-\ver}{an}
   \gtbCoversSix{AGPL-\ver}}
 
 \newcommand{\useCaseSeven}{%
-  \gtbUseCaseSeven{AGPL-\ver}
+  \gtbUseCaseSeven{AGPL-\ver}{an}
   \gtbCoversSeven{GPL-\ver}}
 
 \newcommand{\useCaseEight}{%
-  \gtbUseCaseEight{AGPL-\ver}
+  \gtbUseCaseEight{AGPL-\ver}{an}
   \gtbCoversEight{AGPL-\ver}}
 
 \newcommand{\useCaseNine}{%
-  \gtbUseCaseNine{AGPL-\ver}
+  \gtbUseCaseNine{AGPL-\ver}{an}
   \gtbCoversNine{AGPL-\ver}}
 
 \newcommand{\useCaseA}{%
-  \gtbUseCaseA{AGPL-\ver}
+  \gtbUseCaseA{AGPL-\ver}{an}
   \gtbCoversA{AGPL-\ver}}
 
 \newcommand{\useCaseB}{%
-  \gtbUseCaseB{AGPL-\ver}
+  \gtbUseCaseB{AGPL-\ver}{an}
   \gtbCoversB{AGPL-\ver}}
 
 \newcommand{\useCaseC}{%
-  \gtbUseCaseB{AGPL-\ver}
-  \gtbCoversB{AGPL-\ver}}
+  \agtbUseCaseC{AGPL-\ver}
+  \agtbCoversC{AGPL-\ver}}
 
 \newcommand{\useCaseD}{%
-  \gtbUseCaseB{AGPL-\ver}
-  \gtbCoversB{AGPL-\ver}}
+  \agtbUseCaseD{AGPL-\ver}
+  \agtbCoversD{AGPL-\ver}}
   
 % ------------------------------------------------------------------------------
 % Common Text Blocks from 0600-commomn-text-blocks.tex
 
-\newcommand{\keepLicenseElements}{\gtbKeepLicenseElements{GPL-\ver}}
-\newcommand{\addToDocumentation}{\gtbAddToDocumentation{GPL-\ver}}
-\newcommand{\giveLicense}{\gtbGiveLicense{GPL-\ver}}
-\newcommand{\retainCopyrightNotices}{\gtbKeepCopyrightNotices{GPL-\ver}}
-\newcommand{\describeHowToGetSource}{\gtbDescribeHowToGetSource{GPL-\ver}}
-\newcommand{\createChangelog}{\gtbCreateChangelog{GPL-\ver}}
-\newcommand{\markEmbeddedModifications}{\gtbMarkEmbeddedModifications{GPL-\ver}}
-\newcommand{\markLibraryModifications}{\gtbMarkLibraryModifications{GPL-\ver}}
-\newcommand{\markProgramModifications}{\gtbMarkProgramModifications{GPL-\ver}}
-\newcommand{\gpltwoEnsureCopyrightNoticeSource}{\gtbVTwoCopyrightNotice{GPL-2.0}{source code}}
-\newcommand{\gpltwoEnsureCopyrightNoticeBinary}{\gtbVTwoCopyrightNotice{GPL-2.0}{binary}}
-\newcommand{\gplthreeEnsureCopyrightNoticeSource}{\gtbVThreeCopyrightNotice{GPL-3.0}{source code}}
-\newcommand{\gplthreeEnsureCopyrightNoticeBinary}{\gtbVThreeCopyrightNotice{GPL-3.0}{binary}}
-\newcommand{\makeUnmodifiedSourceAvailable}{\gtbMakeUnmodifiedSourceAvailable{GPL-\ver}} 
-\newcommand{\makeModifiedSourceAvailable}{\gtbMakeModifiedSourceAvailable{GPL-\ver}} 
-\newcommand{\makeAllSourcesAvailable}{\gtbMakeAllSourcesAvailable{GPL-\ver}}
-\newcommand{\arrangeProgramChanges}{\gtbArrangeProgramChanges{GPL-\ver}}
-\newcommand{\arrangeLibraryChanges}{\gtbArrangeLibraryChanges{GPL-\ver}}
-\newcommand{\arrangeEmbeddedChanges}{\gtbArrangeEmbeddedChanges{GPL-\ver}}
-\newcommand{\howToApplyTheseTerms}{\gtbHowToApplyTheseTerms{GPL-\ver}}
-\newcommand{\noPatentLitigation}{\gtbNoPatentLitigation{GPL-\ver}}
-\newcommand{\addToCopyrightDialogLib}{\gtbAddToCopyrightDialogStrongCopyleft{GPL-\ver}}
-\newcommand{\addToCopyrightDialogApp}{\gtbAddToCopyrightDialogApp{GPL-\ver}}
+\newcommand{\keepLicenseElements}{\gtbKeepLicenseElements{AGPL-\ver}}
+\newcommand{\addToDocumentation}{\gtbAddToDocumentation{AGPL-\ver}}
+\newcommand{\giveLicense}{\gtbGiveLicense{AGPL-\ver}}
+\newcommand{\retainCopyrightNotices}{\gtbKeepCopyrightNotices{AGPL-\ver}}
+\newcommand{\describeHowToGetSource}{\gtbDescribeHowToGetSource{AGPL-\ver}}
+\newcommand{\createChangelog}{\gtbCreateChangelog{AGPL-\ver}}
+\newcommand{\markEmbeddedModifications}{\gtbMarkEmbeddedModifications{AGPL-\ver}}
+\newcommand{\markLibraryModifications}{\gtbMarkLibraryModifications{AGPL-\ver}}
+\newcommand{\markProgramModifications}{\gtbMarkProgramModifications{AGPL-\ver}}
+\newcommand{\gpltwoEnsureCopyrightNoticeSource}{\gtbVTwoCopyrightNotice{AGPL-2.0}{source code}}
+\newcommand{\gpltwoEnsureCopyrightNoticeBinary}{\gtbVTwoCopyrightNotice{AGPL-2.0}{binary}}
+\newcommand{\gplthreeEnsureCopyrightNoticeSource}{\gtbVThreeCopyrightNotice{AGPL-3.0}{source code}}
+\newcommand{\gplthreeEnsureCopyrightNoticeBinary}{\gtbVThreeCopyrightNotice{AGPL-3.0}{binary}}
+\newcommand{\makeUnmodifiedSourceAvailable}{\gtbMakeUnmodifiedSourceAvailable{AGPL-\ver}} 
+\newcommand{\makeModifiedSourceAvailable}{\gtbMakeModifiedSourceAvailable{AGPL-\ver}}
+\newcommand{\makeExecModifiedSourceAvailable}{\agtbMakeModifiedSourceAvailable{AGPL-\ver}} 
+\newcommand{\makeAllSourcesAvailable}{\gtbMakeAllSourcesAvailable{AGPL-\ver}}
+\newcommand{\makeExecAllSourcesAvailable}{\agtbMakeAllSourcesAvailable{AGPL-\ver}}
+\newcommand{\arrangeProgramChanges}{\gtbArrangeProgramChanges{AGPL-\ver}}
+\newcommand{\arrangeLibraryChanges}{\gtbArrangeLibraryChanges{AGPL-\ver}}
+\newcommand{\arrangeEmbeddedChanges}{\gtbArrangeEmbeddedChanges{AGPL-\ver}}
+\newcommand{\howToApplyTheseTerms}{\gtbHowToApplyTheseTerms{AGPL-\ver}}
+\newcommand{\noPatentLitigation}{\gtbNoPatentLitigation{AGPL-\ver}}
+\newcommand{\addToCopyrightDialogLib}{\gtbAddToCopyrightDialogStrongCopyleft{AGPL-\ver}}
+\newcommand{\addToCopyrightDialogApp}{\gtbAddToCopyrightDialogApp{AGPL-\ver}}
 
 % ------------------------------------------------------------------------------
 % Make sure, licensing statements apply to enclosing program
 
 \newcommand{\auxArrange}[1]{Arrange the #1 of the on-top development in a way
-  that they are covered by the GPL-\ver{} licensing statements.} 
+  that they are covered by the AGPL-\ver{} licensing statements.} 
 
 \newcommand{\arrangeEnclosingBinaries}{%
   \auxArrange{the binaries of the on-top development}}
@@ -133,7 +135,7 @@
 
 
 %% =============================================================================
-%% GPL-3.0 Use Cases
+%% AGPL-3.0 Use Cases
 
 \newcommand{\ver}{3.0}
 
@@ -147,13 +149,17 @@
 \subsection{AGPL-\ver-C1: Using the software only for yourself under additional restrictions}
 \begin{lsuc}{AGPL-\ver-C1}
   \linkosuc{01}
+  \linkosuc{03L} 
+  \linkosuc{06L}
+  \linkosuc{09L}
+  \label{OSUC-01-AGPL}
 
   \useCaseOne
 
   \begin{lsucrequiresnothing}
     \lsucitem{You are allowed to execute an unmodified AGPL program without
     being obliged to do anything, as long as you do not give the program to
-    third parties. And you are allowed to embed any AGPL licensed library
+    third parties. And you are allowed to embed any AGPL licensed library, 
     snippet or module into your own program and to execute that program without
     being obliged to do anything, as long as no other than you can interact with
     it remotely through a computer network and as long as you do not give the
@@ -410,6 +416,61 @@
   \end{lsucprohibits}
 \end{lsuc}
 
+
+% ------------------------------------------------------------------------------
+\subsection{AGPL-\ver-CC: Executing a modified program with network interaction}
+\begin{lsuc}{AGPL-\ver-CC}
+  \linkosuc{03N}
+
+  \useCaseC
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeBinary}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\markProgramModifications}
+    \lsucmandatory{\addToCopyrightDialogApp}
+    \lsucmandatory{\arrangeProgramChanges}\howToApplyTheseTerms
+    \lsucmandatory{\makeExecModifiedSourceAvailable}
+    \lsucmandatory{\describeHowToGetSource}
+    \lsucsourcedist{AGPL-\ver-C6}
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+\subsection{AGPL-\ver-CD: Executing a (modified) library as embedded component
+with network interaction}
+\begin{lsuc}{AGPL-\ver-CD}
+  \linkosuc{09N}
+  \linkosuc{06N}
+  \useCaseD
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeBinary}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\makeExecAllSourcesAvailable}
+    \lsucmandatory{\describeHowToGetSource}
+    \lsucsourcedist{AGPL-\ver-CA}
+    \lsucmandatory{\addToCopyrightDialogLib}
+    \lsucmandatory{\markEmbeddedModifications}
+    \lsucmandatory{\arrangeEmbeddedChanges}\howToApplyTheseTerms
+    \lsucmandatory{\arrangeEnclosingBinaries}
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
 % ------------------------------------------------------------------------------
 \end{license}
 
