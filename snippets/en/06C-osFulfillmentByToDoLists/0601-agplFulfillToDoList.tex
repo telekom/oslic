@@ -24,16 +24,6 @@
 %\nocite{*}
 
 \section{AGPL licensed software}
-% \label{OSUC-03L-AGPL} \label{OSUC-03N-AGPL}
-% \label{OSUC-06L-AGPL} \label{OSUC-06N-AGPL} \label{OSUC-09L-AGPL}
-% \label{OSUC-09N-AGPL}
-% 
-% 
-% \label{OSUC-02S-AGPL} \label{OSUC-04S-AGPL} \label{OSUC-05S-AGPL}
-% \label{OSUC-07S-AGPL} \label{OSUC-08S-AGPL} \label{OSUC-10S-AGPL}
-% \label{OSUC-02B-AGPL} \label{OSUC-04B-AGPL} \label{OSUC-05B-AGPL}
-% \label{OSUC-07B-AGPL} \label{OSUC-08B-AGPL} \label{OSUC-10B-AGPL}
-
 
 \agplUseCaseFinder{AGPL}{3.0}
 
@@ -153,7 +143,10 @@
   \linkosuc{06L}
   \linkosuc{09L}
   \label{OSUC-01-AGPL}
-
+  \label{OSUC-03L-AGPL}
+  \label{OSUC-06L-AGPL}
+  \label{OSUC-09L-AGPL}
+      
   \useCaseOne
 
   \begin{lsucrequiresnothing}
@@ -176,6 +169,8 @@
 \begin{lsuc}{AGPL-\ver-C2}
   \linkosuc{02S}
   \linkosuc{05S}
+  \label{OSUC-02S-AGPL}
+  \label{OSUC-05S-AGPL}
 
   \useCaseTwo
 
@@ -197,6 +192,9 @@
 \begin{lsuc}{AGPL-\ver-C3}
   \linkosuc{02B} 
   \linkosuc{05B}
+  \label{OSUC-02B-AGPL}
+  \label{OSUC-05B-AGPL}
+
 
   \useCaseThree
 
@@ -220,6 +218,7 @@
 \subsection{AGPL-\ver-C4: Passing the unmodified library as embedded sources}
 \begin{lsuc}{AGPL-\ver-C4}
   \linkosuc{07S} 
+  \label{OSUC-07S-AGPL}
 
   \useCaseFour
 
@@ -242,6 +241,7 @@
 \subsection{AGPL-\ver-C5: Passing the unmodified library as embedded binaries} 
 \begin{lsuc}{AGPL-\ver-C5}
   \linkosuc{07B} 
+  \label{OSUC-07B-AGPL}
 
   \useCaseFive
 
@@ -267,6 +267,7 @@
 \subsection{AGPL-\ver-C6: Passing a modified program as source code}
 \begin{lsuc}{AGPL-\ver-C6}
   \linkosuc{04S} 
+  \label{OSUC-04S-AGPL}
 
   \useCaseSix
 
@@ -291,6 +292,7 @@
 \subsection{AGPL-\ver-C7: Passing a modified program as binary}
 \begin{lsuc}{AGPL-\ver-C7}
   \linkosuc{04B}
+  \label{OSUC-04B-AGPL}
 
   \useCaseSeven
 
@@ -318,6 +320,7 @@
 \subsection{AGPL-\ver-C8: Passing a modified library as independent source code}
 \begin{lsuc}{AGPL-\ver-C8}
   \linkosuc{08S}
+  \label{OSUC-08S-AGPL}
 
   \useCaseEight
 
@@ -341,6 +344,7 @@
 \subsection{AGPL-\ver-C9: Passing a modified library as independent binary}
 \begin{lsuc}{AGPL-\ver-C9}
   \linkosuc{08B}
+  \label{OSUC-08B-AGPL}
 
   \useCaseNine
 
@@ -367,6 +371,7 @@
 \subsection{AGPL-\ver-CA: Passing a modified library as embedded source code}
 \begin{lsuc}{AGPL-\ver-CA}
   \linkosuc{10S}
+  \label{OSUC-10S-AGPL}
 
   \useCaseA
 
@@ -392,7 +397,8 @@
 \subsection{AGPL-\ver-CB: Passing a modified library as embedded binary}
 \begin{lsuc}{AGPL-\ver-CB}
   \linkosuc{10B}
-
+  \label{OSUC-10B-AGPL}
+  
   \useCaseB
 
   \begin{lsucrequires}
@@ -421,7 +427,8 @@
 \subsection{AGPL-\ver-CC: Executing a modified program with network interaction}
 \begin{lsuc}{AGPL-\ver-CC}
   \linkosuc{03N}
-
+  \label{OSUC-03N-AGPL}
+  
   \useCaseC
 
   \begin{lsucrequires}
@@ -449,6 +456,11 @@ with network interaction}
 \begin{lsuc}{AGPL-\ver-CD}
   \linkosuc{09N}
   \linkosuc{06N}
+
+  \label{OSUC-06N-AGPL}
+  \label{OSUC-09N-AGPL}
+  
+  
   \useCaseD
 
   \begin{lsucrequires}
@@ -480,5 +492,26 @@ with network interaction}
 \subsection{Discussions and Explanations}
 \label{AGPL3Discussion}
   
+For simplifying the necessary reflections, we can state, that the AGPL-v3 and
+the GPL-v3 are very similar: apart from some differences caused by the
+varying names, the most paragraphs of the two licenses exactly offer the same
+text. Only the §13 of the AGPL-v3 does not match to the §13 of the GPL-v3.
+Therefore, we can also state, that the analysis of the
+GPL-v3\footnote{$\rightarrow$ p. \pageref{GPL3Discussion}} is also valid for the
+AGPL-v3.
 
+The AGPL-v3 tries to close a gap of the GPL-v3: 
+
+Purpose of all GNU licenses is to preserve the freedom to use, to study, to
+share, and to modify the GNU programs and libraries. It should not be able to
+circumvent the tasks for establishing this freedom. Only if someone used the
+program / library only for himself, he was not obliged to do anything. Whenever
+a next party was involved into the use of the GNU software, it should receive
+all the rights to use the software which all the other users have.
+
+ In a time, where using the benefetis of
+a program meant executing the software on ons's own machine (and hence having received the program), it was enough to let the obligations of handing over the license or handing over the source code be triggered by the act of 'distributing
+the software'. Nowadays, in the times of cloud software systems it is easy to
+profit from the software without having the software on one's own machine or
+without having to install and start the software.
 
