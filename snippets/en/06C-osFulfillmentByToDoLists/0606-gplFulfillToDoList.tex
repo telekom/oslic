@@ -849,6 +849,81 @@ conditions:\citeGPLtwo{§2}
   corresponding source code use cases because distributing the binaries without
   making the corresponding sources accessible is not allowed by the GPL.
 \end{itemize}
+
+And a last issue should be addressed here. It concerns the problem of
+granularity.
+
+The GPL-3.0 allows \enquote{[\ldots] to convey a covered work in object code
+form [\ldots] provided that [one] also conveys the [\ldots] Corresponding
+Source [\ldots]}\citeGPLthree{§6}. For understanding the scope of the sources
+one has to convey, one must known, what the term \emph{Corresponding Source}
+means. Fortunately, the GPL-3.0 assists its readers to understand this term in
+the right way:
+
+\begin{itemize}
+  \item  \enquote{The \enquote{Corresponding Source} for a work in object code
+  form means all the source code needed to generate, install, and (for an
+  executable work) run the object code and to modify the work, including scripts
+  to control those activities.\footcite[cf.][\nopage wp.
+  §1]{Gpl30OsiLicense2007a}} Thus, if one took this statements seriously, one
+  would have to \enquote{provide access to} the complete software stack of the
+  executed AGPL program, just down to the glibc. But the GPL does not want to
+  be to greedy. Therefore it limits the scope:
+  \item To limit the sope, the GPL states, that the \emph{Corresponding Source}
+  \enquote{[\ldots] does not include the work's System Libraries, or
+  general-purpose tools or generally available free programs which are used
+  unmodified in performing those activities but which are not part of the
+  work}\footcite[cf.][\nopage wp. §1]{Gpl30OsiLicense2007a}. Unfortunately, one
+  now has to analyze, what the term \emph{System Libraries} means, if one wants
+  to understand this rule correctly.
+  \item Therefore, the GPl says also, that \enquote{the \enquote{System
+  Libraries} of an executable work include anything, other than the work as a
+  whole, that (a) is included in the normal form of packaging a Major Component,
+  but which is not part of that Major Component, and (b) serves only to enable
+  use of the work with that Major Component, or to implement a Standard
+  Interface for which an implementation is available to the public in source
+  code form.\footcite[cf.][\nopage wp. §1]{Gpl30OsiLicense2007a}}. And for
+  understing this sentence adequately, one has to know, what a \emph{Major Component}
+  is.
+  \item So, finally, the GPL defines as \enquote{enquote{Major Component}
+  [\ldots as] a major essential component (kernel, window system, and so on) of
+  the specific operating system (if any) on which the executable work runs, or a
+  compiler used to produce the work, or an object code interpreter used to run
+  it\footcite[cf.][\nopage wp. §1]{Gpl30OsiLicense2007a}}.
+\end{itemize}
+
+Based on these specifications, one can give some rule of thumbs concerning the
+question down to which level one has to give access to the corresponding source
+code of an conveyed GPL binary program:
+\begin{itemize}
+  \item If one conveys a GPL licensed binary program, then one has
+  also to deliver the code of
+  \begin{itemize}
+  \item the dlivered program itself
+  \item every modified embedded component of that program
+  \item every not freely accessible embedded component of that program
+  \item all not freely accessible tools, scripts, data which are necessary to
+  compile the sources of the program in a freely accessible compilation /
+  developement environment
+  \end{itemize}
+  But it is not necessary to deliver the code of unmodified standard libraries,
+  compilers, or tools which can freely be downloaded from their standard
+  repository.
+  \item If one conveys a GPL licensed script, then one has also to deliver the
+  code of
+  \begin{itemize}
+  \item every modified embedded script component included by the main script
+  \item every not freely accessible embedded script component included by the main script
+  \item all not freely accessible tools, scripts, data which are necessary to
+  to let that main script be executed by a freely accessible interpreter
+  \item the interpreter itself if it is not freely accessible.
+  \end{itemize}
+  But it is not necessary to give access to unmodified standard script
+  libraries, interpreters, or tools which can freely be downloaded from their
+  standard repository.
+\end{itemize}
+
+
   
 %\bibliography{../../../bibfiles/oscResourcesEn}
 
