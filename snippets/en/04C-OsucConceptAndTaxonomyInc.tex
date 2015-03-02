@@ -133,6 +133,11 @@ open source software licenses:
   the first case, the answer should be '\underline{binaries}', in the second
   '\underline{sources}'
   
+  \item The kind of the \textbf{\underline{ioAccess} of the executed program}:
+  At least one license draws a distinction between an open source based work
+  offering only local access to its io data and an open source based work
+  distributing its io data via internet. In the first case, the answer should be
+  '\underline{onlyLocally}', in the second '\underline{viaInternet}'
 \end{itemize}
 
 From a more programmatic point-of-view, we can summarize these tokens as
@@ -144,21 +149,23 @@ follows:
   \item \texttt{context::independent} \emph{or} \texttt{context::embedded}
   \item \texttt{recipient::4yourself} \emph{or} \texttt{recipient::2others}
   \item \texttt{form::binaries} \emph{or} \texttt{form::sources}
+  \item \texttt{ioAccess::onlyLocally} \emph{or} \texttt{ioAccess::viaInternet}
 \end{itemize}
 
 We have already defined the \emph{open source use case} as the combination of
 these tokens. If we simply combine all these tokens of all these classes with
 all the tokens of the other classes\footnote{in the sense of the cross product
-TYPE $\times$ STATE $\times$ CONTEXT $\times$ RECIPIENT $\times$ FORM. In some
-earlier versions of the \oslic{}, we also asked whether you are going to combine or
-to embed the open source software with other software components by linking them
-statically or dynamically, or by textually including (parts of) the open source
-software into your larger product. Meanwhile, we clearly discovered that it is
-unnecessary to increase the complexity by the results of this question. For
-Details $\rightarrow$ \oslic{} p.\ \pageref{sec:LinkingSecondary}}, we get
-$2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 = 32$ sets of tokens---or 32 \emph{open source use cases}.
-Fortunately, some of the generated sets are invalid from an empirical or logical
-view, and some of these sets are context sensitive:
+TYPE $\times$ STATE $\times$ CONTEXT $\times$ RECIPIENT $\times$ FORM $\times$
+IOACCESS. In some earlier versions of the \oslic{}, we also asked whether you
+are going to combine or to embed the open source software with other software
+components by linking them statically or dynamically, or by textually including
+(parts of) the open source software into your larger product. Meanwhile, we
+clearly discovered that it is unnecessary to increase the complexity by the
+results of this question. For Details $\rightarrow$ \oslic{} p.\
+\pageref{sec:LinkingSecondary}}, we get $2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 \cdot
+2 = 62$ sets of tokens---or 62 \emph{open source use cases}. Fortunately, some
+of the generated sets are invalid from an empirical or logical view, and some of
+these sets are context sensitive:
 
 \begin{enumerate}
   \label{InvalidFinderTokenCombinations}
@@ -179,199 +186,426 @@ view, and some of these sets are context sensitive:
   not be used autonomously, without using it as a component of another
   application. In this case, it would simply sit on the disk and would do
   nothing more than occupying space.
-
+  
+  \item To enquire the \emph{form} of the distributed files is only relevant if
+  you have decided to distribute the software to other recipients
+  \emph{2others}.
+  
+  \item With respect to the one license using the type of ioAccess as a
+  discriminator, it is only relevant to enquire the type of the ioAccess if you
+  either locally execute a \emph{modified} open source program \emph{4yourself}
+  or if you locally execute a program \emph{4yourself}, which uses an
+  \emph{embedded} open source component, regardless whether it has been modified
+  or not.
+  
 \end{enumerate}
 
 Does this sound complex? We thought so, too. We spent much time explaining these
 constraints to ourselves, and only when we had transposed all the combinations
-and rules into a tree, the situation became clearer. The following diagrams
-shall summarize our own clarifications:
-
-\section{Overview of the OSUC classes and tokens}
-
-\begin{tikzpicture}[
-    font=\footnotesize,
-    grow'=right, 
-    level 1/.style={sibling distance=6em},
-    level 2/.style={sibling distance=2.5em},
-    level distance=2.5cm          
-]
-\node [ellipse,draw] {tokens}
-  child { node [rectangle,draw] {type?}
-    child { node [ellipse,draw] {proapse}}
-    child { node [ellipse,draw] {snimoli}}
-  }
-  child { node [rectangle,draw] {state?}
-    child { node [ellipse,draw] {unmodified}}
-    child { node [ellipse,draw] {modified}}
-  }
-  child { node [rectangle,draw] {context?}
-    child { node [ellipse,draw] {independent}}
-    child { node [ellipse,draw] {dependent}}
-  }
-  child { node [rectangle,draw] {recipient?}
-    child { node [ellipse,draw] {4yourself}}
-    child { node [ellipse,draw] {2others}
-      child { node [rectangle,draw] {form?}
-        child { node[ellipse,draw] {sources}}
-        child { node[ellipse,draw] {binaries}}
-      }
-    }
-  };
-\end{tikzpicture}
-
-
-\section{The OSUC taxonomy}
-
-This is one of the possible trees 'collecting' the tokens and offering the
-\emph{open source use cases} as their leaves\footnote{ Each of the invalid use
-cases (= sets of tokens) [for details s. p.\
+and rules into a tree, the situation became clearer. The following diagram
+summarizes the main results of our investigation\footnote{ Each of the invalid
+use cases (= sets of tokens) [for details s. p.\
 \pageref{InvalidFinderTokenCombinations}] is marked by an \lightning{} and leads
-to an empty set (= $\varnothing$): A proapse can not be embedded with another
-software unit, also containing a main-function. Using a software library only
-for yourself and independent (not in combination with larger software unit), is
-like having an unused heap of bytes on your disc.}:
+to an empty set (= $\varnothing$). We are using the word 'invalid' a little
+ambigiuosly: A combination of values is invalid, if it is empirically
+impossible, to combine the features or if it is irrelavant to subclassify a
+concept by the added features. Particularly:
+\begin{itemize}
+  \item A proapse can not be embedded into another software unit, also
+  containing a main-function.
+  \item Using a software library only for yourself and independently (not in
+  combination with larger software unit), is like having an unused heap of bytes
+  on your disc.
+  \item To discriminate between sources and binaries is only valid in case of
+  distributing software.
+  \item To discriminate between an executed program with an only locally based
+  io access and that with an internet based io access is only relevant, if you
+  are using the software for yourself what implies to execute it.
+\end{itemize}
+ . 
 
-\label{OsucDefinitionTree}
-\begin{tikzpicture}[
-    font=\tiny,
-    align=left,
-    grow'=right,
-    level 1/.style={level distance=1.3cm},
-    level 2/.style={sibling distance=24em, level distance=1cm},
-    level 3/.style={sibling distance=12em, level distance=1cm},
-    level 4/.style={sibling distance=6em, level distance=1.5cm},
-    level 5/.style={sibling distance=3.5em, level distance=2cm},
-    level 6/.style={sibling distance=3.5em, level distance=1.8cm},
-    level 7/.style={sibling distance=3.5em, level distance=1.5cm}
-]
-\node [ellipse,draw] {OSS}
-  child { node [rectangle,draw] {type?} 
-    child { node [rectangle,draw] {state?} 
-      child { node [rectangle,draw] {context?} 
-        child { node [rectangle,draw] {recipient?} 
-          child { node [ellipse,draw] {OSUC-01}
-            child { node {proapse,\\unmodified,\\independent,\\4yourself}}
-            edge from parent node {\{4yourself\}}
-          }
-          child { node [ellipse,draw] {OSUC-02}
-            child { node {proapse,\\unmodified,\\independent,\\2others} 
-              child { node [rectangle,draw] {form?}
-                child { node {$\underline{OSUC-02s}$\\\{sources\}}} 
-                child { node {$\underline{OSUC-02b}$\\\{binaries\}}} 
-              }
-            }
-            edge from parent node {\{2others\}}
-          }
-          edge from parent node { \{independent\} }
-        }
-        child { node {$\emptyset$} 
-          edge from parent node { \{embedded\} }
-        }
-        edge from parent node { \{unmodified\} }
-      }
-      child { node [rectangle,draw] {context?} 
-        child { node [rectangle,draw] {recipient?} 
-          child { node [ellipse,draw] {OSUC-03} 
-            child { node {proapse,\\modified,\\independent,\\4yourself} }
-            edge from parent node {\{4yourself\}}
-          }
-          child { node [ellipse,draw] {OSUC-04}
-            child { node {proapse,\\modified,\\independent,\\2others} 
-              child { node [rectangle,draw] {form?}
-                child { node {$\underline{OSUC-04s}$\\\{sources\}} }
-                child { node {$\underline{OSUC-04b}$\\\{binaries\}} }
-              }
-            }
-            edge from parent node {\{2others\}}
-          }
-          edge from parent node { \{independent\} }
-        }
-        child { node {$\emptyset$} 
-          edge from parent node { \{embedded\} }
-        }
-        edge from parent node { \{modified\} }
-      }
-      edge from parent node { \{proapse\} }
-    }
-    child { node [rectangle,draw] {state?} 
-      child { node [rectangle,draw] {context?} 
-        child { node [rectangle,draw] {recipient?} 
-          child { node {$\emptyset$} 
-            edge from parent node {\{4yourself\}}
-          }
-          child { node [ellipse,draw] {OSUC-05}
-            child { node {snimoli,\\unmodified,\\independent,\\2others} 
-              child { node [rectangle,draw] {form?}
-                child { node {$\underline{OSUC-05s}$\\\{sources\}} }
-                child { node {$\underline{OSUC-05b}$\\\{binaries\}} }
-              }
-            }
-            edge from parent node {\{2others\}}
-          }
-          edge from parent node { \{independent\} }
-        }
-        child { node [rectangle,draw] {recipient?} 
-          child { node [ellipse,draw] {OSUC-06} 
-            child { node {snimoli,\\unmodified,\\embedded,\\4yourself} }
-            edge from parent node {\{4yourself\}}
-          }
-          child { node [ellipse,draw] {OSUC-07}
-            child { node {snimoli,\\unmodified,\\embedded,\\2others} 
-              child { node [rectangle,draw] {form?}
-                child { node {$\underline{OSUC-07s}$\\\{sources\}} }
-                child { node {$\underline{OSUC-07b}$\\\{binaries\}} }
-              }
-            }
-            edge from parent node {\{2others\}}
-          }
-          edge from parent node { \{embedded\} }
-        }
-        edge from parent node { \{unmodified\} }
-      }
-      child { node [rectangle,draw] {context?} 
-        child { node [rectangle,draw] {recipient?} 
-          child { node {$\emptyset$} 
-            edge from parent node {\{4yourself\}}
-          }
-          child { node [ellipse,draw] {OSUC-08}
-            child { node {snimoli,\\modified,\\embedded,\\2others} 
-              child { node [rectangle,draw] {form?}
-                child { node {$\underline{OSUC-08s}$\\\{sources\}} }
-                child { node {$\underline{OSUC-08b}$\\\{binaries\}} }
-              }
-            }
-            edge from parent node {\{2others\}}
-          }
-          edge from parent node { \{independent\} }
-        }
-        child { node [rectangle,draw] {recipient?} 
-          child { node [ellipse,draw] {OSUC-09} 
-            child { node {snimoli,\\modified,\\embedded,\\4yourself} }
-            edge from parent node {\{4yourself\}}
-          }
-          child { node [ellipse,draw] {OSUC-10}
-            child { node {snimoli,\\unmodified,\\embedded,\\2others} 
-              child { node [rectangle,draw] {form?}
-                child { node {$\underline{OSUC-10s}$\\\{sources\}} }
-                child { node {$\underline{OSUC-10b}$\\\{binaries\}} }
-              }
-            }
-            edge from parent node {\{2others\}}
-          }
-          edge from parent node { \{embedded\} }
-        }
-        edge from parent node { \{modified\} }
-      }
-      edge from parent node { \{snimoli\} }
-    }
-  };
+}::
+
+\tikzstyle{StartNode} = [font=\tiny, ellipse, draw, fill=gray!5,
+text width=1em, text centered, minimum height=1em]
+
+\tikzstyle{TypeNode} = [font=\tiny, rectangle, draw, fill=gray!10,
+text width=1cm, text centered, rounded corners, minimum height=1em]
+
+\tikzstyle{VLabelNode} = [font=\tiny, draw, rectangle,  text
+width=1.4cm, fill=white]
+
+\tikzstyle{VNibelNode} = [font=\tiny, draw, rectangle,  text
+width=1cm, ]
+
+\tikzstyle{VdTupelNode} = [font=\tiny, draw, rectangle, dotted, text
+width=1.4cm, ]
+
+\tikzstyle{VmTupelNode} = [font=\tiny, draw, rectangle, dotted, text
+width=2.3cm, ]
+
+\tikzstyle{VQuadrupelNode} = [font=\tiny, draw, rectangle, dotted, text
+width=3cm, ]
+
+\tikzstyle{VsQuadrupelNode} = [font=\tiny, draw, rectangle, dotted, text
+width=2.7cm, ]
+
+
+\tikzstyle{VlTupelNode} = [font=\tiny, draw, rectangle, dotted, text
+width=3.8cm, ]
+
+
+\tikzstyle{VmTupelLeaf} = [font=\tiny, draw, rectangle, dashed, text
+width=2.7cm, ]
+
+\tikzstyle{VlTupelLeaf} = [font=\tiny, draw, rectangle, dashed, text
+width=3.8cm, ]
+
+\tikzstyle{OsucNode} = [font=\tiny, rectangle, draw, fill=gray!20,
+text width=1.4cm, text centered, rounded corners, minimum height=1em]
+
+
+
+\tikzstyle{arrow} = [draw, -latex']
+\tikzstyle{edge} = [draw]
+
+
+\begin{tikzpicture}
+
+% drwa lines at first:
+
+
+
+
+% classification types and their values
+
+\node[TypeNode] (tForm) at (2,7.4) {\textit{form?}};
+
+\node[VNibelNode] (vSources) at (3,6.7) {sources};
+\node[VNibelNode] (vBinaries) at (2.5,6.2) {binaries};
+
+\node[TypeNode] (tType) at (0,15.6) {\textit{type?}};
+\node[VNibelNode] (vProapse) at (2.8,15.9) {proapse};
+\node[VNibelNode] (vSnimoli) at (2.8,15.4) {snimoli};
+
+\node[TypeNode] (tState) at (0.8,12.6) {\textit{state?}};
+\node[VLabelNode] (vUnmodified) at (2.6,12.9) {unmodified};
+\node[VLabelNode] (vModified) at (2.6,12.4) {modified};
+
+\node[TypeNode] (tContext) at (1.0,10.6) {\textit{context?}};
+\node[VLabelNode] (vIndependent) at (2.7,10.9) {independent};
+\node[VLabelNode] (vEmbedded) at (2.7,10.4) {embedded};
+
+\node[TypeNode] (tRecipient) at (0.8,8.6) {\textit{recipient?}};
+\node[VNibelNode] (v4yourself) at (2.3,8.9) {4yourself};
+\node[VNibelNode] (v2others) at (2.3,8.4) {2others};
+
+\node[TypeNode] (tIoAccess) at (0,1.6) {\textit{ioAccess?}};
+\node[VLabelNode] (vViaInternet) at (2,1.9) {viaInternet};
+\node[VLabelNode] (vOnlyLocal) at (2,1.4) {onlyLocal};
+
+\node[StartNode] (vStart) at (0,10) {\textbf{\#}};
+
+% value collictions defining the osucs
+
+\node[OsucNode] (o1) at (12,19.8) {OSUC-01};
+\node[VlTupelLeaf, color=blue] (vo1) at (15,19.8)
+{\{proapse, independent,\\4yourself, unmodified\}};
+
+\node[OsucNode] (o2s) at (12,19) {OSUC-02S};
+\node[VlTupelLeaf, color=blue] (vo2s) at (15,19)
+{\{proapse, independent,\\2others, unmodified, sources\}};
+
+\node[OsucNode] (o2b) at (12,18.2) {OSUC-02B};
+\node[VlTupelLeaf, color=blue] (vo2b) at (15,18.2)
+{\{proapse, independent,\\2others, unmodified, binaries\}};
+
+\node[OsucNode] (o3l) at (12,17.4) {OSUC-03L};
+\node[VlTupelLeaf, color=blue] (vo3l) at (15,17.4)
+{\{proapse, independent,\\4yourself, modified, onlyLocal\}};
+
+\node[OsucNode] (o3n) at (12,16.6) {OSUC-03N};
+\node[VlTupelLeaf, color=blue] (vo3n) at (15,16.6)
+{\{proapse, independent,\\4yourself, modified, viaInternet\}};
+
+\node[OsucNode] (o4s) at (12,15.8) {OSUC-04S};
+\node[VlTupelLeaf, color=blue] (vo4s) at (15,15.8)
+{\{proapse, independent,\\2others, modified, sources\}};
+
+\node[OsucNode] (o4b) at (12,15) {OSUC-04B};
+\node[VlTupelLeaf, color=blue] (vo4b) at (15,15)
+{\{proapse, independent,\\2others, modified, binaries\}};
+
+\node[OsucNode] (o5s) at (13,12.2) {OSUC-05S};
+\node[VmTupelLeaf, color=blue] (vo5s) at (15.5,12.2)
+{\{snimoli, independent,\\2others, unmodified,\\sources\}};
+
+\node[OsucNode] (o5b) at (13,11.1) {OSUC-05B};
+\node[VmTupelLeaf, color=blue] (vo5b) at (15.5,11.1)
+{\{snimoli, independent,\\2others, unmodified,\\binaries\}};
+
+\node[OsucNode] (o6l) at (13,10) {OSUC-06L};
+\node[VmTupelLeaf, color=blue] (vo6l) at (15.5,10)
+{\{snimoli, embedded,\\4yourself, unmodified,\\onlyLocal\}};
+
+\node[OsucNode] (o6n) at (13,8.9) {OSUC-06N};
+\node[VmTupelLeaf, color=blue] (vo6l) at (15.5,8.9)
+{\{snimoli, embedded,\\4yourself, unmodified,\\viaInternet\}};
+
+\node[OsucNode] (o7s) at (13,7.8) {OSUC-07S};
+\node[VmTupelLeaf, color=blue] (vo7s) at (15.5,7.8)
+{\{snimoli, embedded,\\2others, unmodified,\\sources\}};
+
+\node[OsucNode] (o7b) at (13,6.7) {OSUC-07B};
+\node[VmTupelLeaf, color=blue] (vo7b) at (15.5,6.7)
+{\{snimoli, embedded,\\2others, unmodified,\\binaries\}};
+
+\node[OsucNode] (o8s) at (13,5.6) {OSUC-08S};
+\node[VmTupelLeaf, color=blue] (vo8s) at (15.5,5.6)
+{\{snimoli, independent,\\2others, modified,\\sources\}};
+
+\node[OsucNode] (o8b) at (13,4.4) {OSUC-08B};
+\node[VmTupelLeaf, color=blue] (vo8b) at (15.5,4.4)
+{\{snimoli, independent,\\2others, modified,\\binaries\}};
+
+\node[OsucNode] (o9l) at (13,3.3) {OSUC-09L};
+\node[VmTupelLeaf, color=blue] (vo9l) at (15.5,3.3)
+{\{snimoli, embedded,\\4yourself, modified,\\onlyLocal\}};
+
+\node[OsucNode] (o9n) at (13,2.2) {OSUC-09N};
+\node[VmTupelLeaf, color=blue] (vo9n) at (15.5,2.2)
+{\{snimoli, embedded,\\4yourself, modified,\\viaInternet\}};
+
+\node[OsucNode] (o10s) at (13,1.1) {OSUC-010S};
+\node[VmTupelLeaf, color=blue] (vo10s) at (15.5,1.1)
+{\{snimoli, embedded,\\2others, modified,\\sources\}};
+
+\node[OsucNode] (o10b) at (13,0) {OSUC-010B};
+\node[VmTupelLeaf, color=blue] (vo10b) at (15.5,0)
+{\{snimoli, embedded,\\2others, modified,\\binaries\}};
+
+% concepts directly referring osucs
+
+\node[VQuadrupelNode] (v4osuc1) at (5.4,19.8)
+{\{proapse, 4yourself,\\ independent, unmodified\}};
+
+\node[VQuadrupelNode] (v4osuc2) at (7,18.7)
+{\{proapse, 2others,\\ independent, unmodified\}};
+
+\node[VsQuadrupelNode] (v4osuc3) at (8.3,17.6)
+{\{proapse, 4yourself,\\ independent, modified\}};
+
+\node[VsQuadrupelNode] (v4osuc4) at (9.6,16.5)
+{\{proapse, 2others,\\ independent, modified\}};
+
+\node[VlTupelLeaf, color=red] (vLightning1) at (10.4,14.3)
+{\{proapse, 4yourself, embedded,\\ \{unmodified, modified\}\} \lightning{}};
+
+\node[VlTupelLeaf, color=red] (vLightning2) at (10.4,13.6)
+{\{proapse, 2others, embedded,\\ \{unmodified, modified\}\} \lightning{}};
+
+\node[VlTupelLeaf, color=red] (vLightning3) at (10.4,12.9)
+{\{snimoli, 4yourself, independent,\\ \{unmodified, modified\}\} \lightning{}};
+
+\node[VQuadrupelNode] (v4osuc5) at (10.2,11.8)
+{\{snimoli, 2others,\\ independent, unmodified\}};
+
+\node[VsQuadrupelNode] (v4osuc6) at (9.5,10.8)
+{\{snimoli, 4yourself,\\ embedded, unmodified\}};
+
+\node[VsQuadrupelNode] (v4osuc7) at (9.2,9.8)
+{\{snimoli, 2others,\\ embedded, unmodified\}};
+
+\node[VsQuadrupelNode] (v4osuc8) at (8.2,8.8)
+{\{snimoli, 4yourself,\\ embedded, modified\}};
+
+\node[VsQuadrupelNode] (v4osuc9) at (7.3,7.6)
+{\{snimoli, 2others,\\ independent, modified\}};
+
+\node[VsQuadrupelNode] (v4osuc10) at (6.2,6.4)
+{\{snimoli, 2others,\\ embedded, modified\}};
+
+%meta nodes reffering concepts reffering osucs
+
+
+\node[VmTupelNode] (v2otherSources) at (6,5.4) {\{2others, sources\}};
+\node[VmTupelNode] (v2otherBinaries) at (6,4.8) {\{2others, binaries\}};
+
+\node[VlTupelNode] (v4proapseViaInternet) at (7.2,4.0)
+  {\{proapse, 4yourself,\\ modified, viaInternet\}};
+\node[VlTupelNode] (v4proapseOnlyLocal) at (7.2,3.2)
+  {\{proapse, 4yourself,\\ modified, onlyLocal\}};
+
+\node[VlTupelLeaf, color=red] (vLightning4) at (7.2,2.4)
+  {\{proapse, 4yourself, unmodified,\\ \{viaInternet, onlyLocal\} \} \lightning{}};
+
+\node[VlTupelNode] (v4snimoliViaInternet) at (7.2,1.6)
+  {\{snimoli, 4yourself,\\ embedded, viaInternet\}};
+\node[VlTupelNode] (v4snimoliOnlyLocal) at (7.2,0.8)
+  {\{snimoli, 4yourself,\\ embedded, onlyLocal\}};
+
+\node[VlTupelLeaf, color=red] (vLightning5) at (7.2,0)
+  {\{snimoli, 4yourself, independent,\\ \{viaInternet, onlyLocal\} \} \lightning{}};
+
+% entry paths
+
+\path [edge] (vStart) -- (tType);
+\path [edge] (tType) -- (vProapse);
+\path [edge] (tType) -- (vSnimoli);
+
+\path [edge] (vStart) -- (tState);
+\path [edge] (tState) -- (vUnmodified);
+\path [edge] (tState) -- (vModified);
+
+\path [edge] (vStart) -- (tContext);
+\path [edge] (tContext) -- (vIndependent);
+\path [edge] (tContext) -- (vEmbedded);
+
+\path [edge] (vStart) -- (tRecipient);
+\path [edge] (tRecipient) -- (v4yourself);
+\path [edge] (tRecipient) -- (v2others);
+
+\path [edge] (v2others) -- (tForm);
+\path [edge] (tForm) -- (vSources);
+\path [edge] (tForm) -- (vBinaries);
+
+\path [edge] (vStart) -- (tIoAccess);
+\path [edge] (tIoAccess) -- (vViaInternet);
+\path [edge] (tIoAccess) -- (vOnlyLocal);
+
+
+% middle paths
+\path [edge] (vProapse) -- (v4osuc1);
+\path [edge] (vProapse) -- (v4osuc2);
+\path [edge] (vProapse) -- (v4osuc3);
+\path [edge] (vProapse) -- (v4osuc4);
+\path [edge] (vProapse) -- (vLightning1);
+\path [edge] (vProapse) -- (vLightning2);
+\path [edge] (vSnimoli) -- (vLightning3);
+\path [edge] (vSnimoli) -- (v4osuc5);
+\path [edge] (vSnimoli) -- (v4osuc6);
+\path [edge] (vSnimoli) -- (v4osuc7);
+\path [edge] (vSnimoli) -- (v4osuc8);
+\path [edge] (vSnimoli) -- (v4osuc9);
+\path [edge] (vSnimoli) -- (v4osuc10);
+
+\path [edge] (vUnmodified) -- (v4osuc1);
+\path [edge] (vUnmodified) -- (v4osuc2);
+\path [edge] (vModified) -- (v4osuc3);
+\path [edge] (vModified) -- (v4osuc4);
+\path [edge] (vUnmodified) -- (vLightning1);
+\path [edge] (vUnmodified) -- (vLightning2);
+\path [edge] (vUnmodified) -- (vLightning3);
+\path [edge] (vUnmodified) -- (v4osuc5);
+\path [edge] (vUnmodified) -- (v4osuc6);
+\path [edge] (vUnmodified) -- (v4osuc7);
+\path [edge] (vModified) -- (v4osuc8);
+\path [edge] (vModified) -- (v4osuc9);
+\path [edge] (vModified) -- (v4osuc10);
+
+\path [edge] (vIndependent) -- (v4osuc1);
+\path [edge] (vIndependent) -- (v4osuc2);
+\path [edge] (vIndependent) -- (v4osuc3);
+\path [edge] (vIndependent) -- (v4osuc4);
+\path [edge] (vIndependent) -- (vLightning3);
+\path [edge] (vEmbedded) -- (vLightning1);
+\path [edge] (vEmbedded) -- (vLightning2);
+\path [edge] (vIndependent) -- (v4osuc5);
+\path [edge] (vEmbedded) -- (v4osuc6);
+\path [edge] (vEmbedded) -- (v4osuc7);
+\path [edge] (vEmbedded) -- (v4osuc8);
+\path [edge] (vIndependent) -- (v4osuc9);
+\path [edge] (vEmbedded) -- (v4osuc10);
+
+\path [edge] (v4yourself) -- (v4osuc1);
+\path [edge] (v2others) -- (v4osuc2);
+\path [edge] (v4yourself) -- (v4osuc3);
+\path [edge] (v2others) -- (v4osuc4);
+\path [edge] (v2others) -- (v4osuc5);
+\path [edge] (v4yourself) -- (v4osuc6);
+\path [edge] (v2others) -- (v4osuc7);
+\path [edge] (v4yourself) -- (v4osuc8);
+\path [edge] (v2others) -- (v4osuc9);
+\path [edge] (v4yourself) -- (v4osuc10);
+
+
+\draw[->] (vSources) to [out=0,in=180] (v2otherSources);
+\draw[->] (vBinaries) to [out=0,in=180] (v2otherBinaries);
+
+\draw[->] (vViaInternet) to [out=0,in=180] (v4proapseViaInternet);
+\draw[->] (vViaInternet) to [out=0,in=180] (vLightning4);
+\draw[->] (vViaInternet) to [out=0,in=180] (v4snimoliViaInternet);
+\draw[->] (vViaInternet) to [out=0,in=180] (vLightning5);
+
+\draw[->] (vOnlyLocal) to [out=0,in=180] (v4proapseOnlyLocal);
+\draw[->] (vOnlyLocal) to [out=0,in=180] (vLightning4);
+\draw[->] (vOnlyLocal) to [out=0,in=180] (v4snimoliOnlyLocal);
+\draw[->] (vOnlyLocal) to [out=0,in=180] (vLightning5);
+
+\draw[->] (v4yourself) to [out=0,in=180] (v4proapseViaInternet);
+\draw[->] (v4yourself) to [out=0,in=180] (v4proapseOnlyLocal);
+\draw[->] (v4yourself) to [out=0,in=180] (vLightning4);
+\draw[->] (v4yourself) to [out=0,in=180] (v4snimoliViaInternet);
+\draw[->] (v4yourself) to [out=0,in=180] (v4snimoliOnlyLocal);
+\draw[->] (v4yourself) to [out=0,in=180] (vLightning5);
+
+\draw[->] (vModified) to [out=0,in=180] (v4proapseViaInternet);
+\draw[->] (vModified) to [out=0,in=180] (v4proapseOnlyLocal);
+\draw[->] (vUnmodified) to [out=0,in=180] (vLightning4);
+\draw[->] (vEmbedded) to [out=0,in=180] (v4snimoliViaInternet);
+\draw[->] (vEmbedded) to [out=0,in=180] (v4snimoliOnlyLocal);
+\draw[->] (vIndependent) to [out=0,in=180] (vLightning5);
+
+
+
+
+
+\path [arrow, color=magenta] (v4osuc1) -- (o1);
+\path [arrow, color=magenta] (v4osuc2) -- (o2s);
+\path [arrow, color=magenta] (v4osuc2) -- (o2b);
+\path [arrow, color=magenta] (v4osuc3) -- (o3l);
+\path [arrow, color=magenta] (v4osuc3) -- (o3n);
+\path [arrow, color=magenta] (v4osuc4) -- (o4s);
+\path [arrow, color=magenta] (v4osuc4) -- (o4b);
+\path [arrow, color=magenta] (v4osuc5) -- (o5s);
+\path [arrow, color=magenta] (v4osuc5) -- (o5b);
+\path [arrow, color=magenta] (v4osuc6) -- (o6l);
+\path [arrow, color=magenta] (v4osuc6) -- (o6n);
+\path [arrow, color=magenta] (v4osuc7) -- (o7s);
+\path [arrow, color=magenta] (v4osuc7) -- (o7b);
+\path [arrow, color=magenta] (v4osuc8) -- (o8s);
+\path [arrow, color=magenta] (v4osuc8) -- (o8b);
+\path [arrow, color=magenta] (v4osuc9) -- (o9l);
+\path [arrow, color=magenta] (v4osuc9) -- (o9n);
+\path [arrow, color=magenta] (v4osuc10) -- (o10s);
+\path [arrow, color=magenta] (v4osuc10) -- (o10b);
+
+\draw[->, color=violet] (v4snimoliOnlyLocal) to [out=0,in=180] (o9l);
+\draw[->, color=violet] (v4snimoliViaInternet) to [out=0,in=180] (o9n);
+\draw[->, color=violet] (v4snimoliOnlyLocal) to [out=0,in=180] (o6l);
+\draw[->, color=violet] (v4snimoliViaInternet) to [out=0,in=180] (o6n);
+
+\draw[->, color=violet] (v4proapseOnlyLocal) to [out=0,in=180] (o3l);
+\draw[->, color=violet] (v4proapseViaInternet) to [out=0,in=180] (o3n);
+
+
+   \draw[->, color=blue] (v2otherSources) to [out=0,in=224] (o2s);
+   \draw[->, color=blue] (v2otherBinaries) to [out=0,in=220] (o2b);
+   \draw[->, color=blue] (v2otherSources) to [out=0,in=216] (o4s);
+   \draw[->, color=blue] (v2otherBinaries) to [out=0,in=212] (o4b);
+   \draw[->, color=blue] (v2otherSources) to [out=0,in=208] (o5s);
+   \draw[->, color=blue] (v2otherBinaries) to [out=0,in=204] (o5b);
+   \draw[->, color=blue] (v2otherSources) to [out=0,in=200] (o7s);
+   \draw[->, color=blue] (v2otherBinaries) to [out=0,in=196] (o7b);
+   \draw[->, color=blue] (v2otherSources) to [out=0,in=192] (o8s);
+   \draw[->, color=blue] (v2otherBinaries) to [out=0,in=188] (o8b);
+   \draw[->, color=blue] (v2otherSources) to [out=0,in=184] (o10s);
+   \draw[->, color=blue] (v2otherBinaries) to [out=0,in=180] (o10b);
+
+% 
+
+
 \end{tikzpicture}
 
 
-%\bibliography{../../../bibfiles/oscResourcesEn}
 
-% Local Variables:
-% mode: latex
-% fill-column: 80
-% End:

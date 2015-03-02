@@ -24,14 +24,667 @@
 %\nocite{*}
 
 \section{AGPL licensed software}
-\label{OSUC-01-AGPL} \label{OSUC-03-AGPL} 
-\label{OSUC-06-AGPL} \label{OSUC-09-AGPL}
-
-
-\label{OSUC-02S-AGPL} \label{OSUC-04S-AGPL} \label{OSUC-05S-AGPL}
-\label{OSUC-07S-AGPL} \label{OSUC-08S-AGPL} \label{OSUC-10S-AGPL}
-\label{OSUC-02B-AGPL} \label{OSUC-04B-AGPL} \label{OSUC-05B-AGPL}
-\label{OSUC-07B-AGPL} \label{OSUC-08B-AGPL} \label{OSUC-10B-AGPL}
-
 
 \agplUseCaseFinder{AGPL}{3.0}
+
+%% ============================================================================= 
+%% Common Building Blocks
+
+\newcommand{\useCaseOne}{%
+  \agtbUseCaseOne{AGPL-\ver}
+  \agtbCoversOne{AGPL-\ver}}
+
+\newcommand{\useCaseTwo}{%
+  \gtbUseCaseTwo{AGPL-\ver}
+  \gtbCoversTwo{AGPL-\ver}}
+
+\newcommand{\useCaseThree}{%
+  \gtbUseCaseThree{AGPL-\ver}
+  \gtbCoversThree{AGPL-\ver}}
+
+\newcommand{\useCaseFour}{%
+  \gtbUseCaseFour{AGPL-\ver}{an}
+  \gtbCoversFour{AGPL-\ver}}
+
+\newcommand{\useCaseFive}{%
+  \gtbUseCaseFive{AGPL-\ver}{an}
+  \gtbCoversFive{AGPL-\ver}}
+
+\newcommand{\useCaseSix}{%
+  \gtbUseCaseSix{AGPL-\ver}{an}
+  \gtbCoversSix{AGPL-\ver}}
+
+\newcommand{\useCaseSeven}{%
+  \gtbUseCaseSeven{AGPL-\ver}{an}
+  \gtbCoversSeven{GPL-\ver}}
+
+\newcommand{\useCaseEight}{%
+  \gtbUseCaseEight{AGPL-\ver}{an}
+  \gtbCoversEight{AGPL-\ver}}
+
+\newcommand{\useCaseNine}{%
+  \gtbUseCaseNine{AGPL-\ver}{an}
+  \gtbCoversNine{AGPL-\ver}}
+
+\newcommand{\useCaseA}{%
+  \gtbUseCaseA{AGPL-\ver}{an}
+  \gtbCoversA{AGPL-\ver}}
+
+\newcommand{\useCaseB}{%
+  \gtbUseCaseB{AGPL-\ver}{an}
+  \gtbCoversB{AGPL-\ver}}
+
+\newcommand{\useCaseC}{%
+  \agtbUseCaseC{AGPL-\ver}
+  \agtbCoversC{AGPL-\ver}}
+
+\newcommand{\useCaseD}{%
+  \agtbUseCaseD{AGPL-\ver}
+  \agtbCoversD{AGPL-\ver}}
+  
+% ------------------------------------------------------------------------------
+% Common Text Blocks from 0600-commomn-text-blocks.tex
+
+\newcommand{\keepLicenseElements}{\gtbKeepLicenseElements{AGPL-\ver}}
+\newcommand{\addToDocumentation}{\gtbAddToDocumentation{AGPL-\ver}}
+\newcommand{\giveLicense}{\gtbGiveLicense{AGPL-\ver}}
+\newcommand{\retainCopyrightNotices}{\gtbKeepCopyrightNotices{AGPL-\ver}}
+\newcommand{\describeHowToGetSource}{\gtbDescribeHowToGetSource{AGPL-\ver}}
+\newcommand{\createChangelog}{\gtbCreateChangelog{AGPL-\ver}}
+\newcommand{\markEmbeddedModifications}{\gtbMarkEmbeddedModifications{AGPL-\ver}}
+\newcommand{\markLibraryModifications}{\gtbMarkLibraryModifications{AGPL-\ver}}
+\newcommand{\markProgramModifications}{\gtbMarkProgramModifications{AGPL-\ver}}
+\newcommand{\gpltwoEnsureCopyrightNoticeSource}{\gtbVTwoCopyrightNotice{AGPL-2.0}{source code}}
+\newcommand{\gpltwoEnsureCopyrightNoticeBinary}{\gtbVTwoCopyrightNotice{AGPL-2.0}{binary}}
+\newcommand{\gplthreeEnsureCopyrightNoticeSource}{\gtbVThreeCopyrightNotice{AGPL-3.0}{source code}}
+\newcommand{\gplthreeEnsureCopyrightNoticeBinary}{\gtbVThreeCopyrightNotice{AGPL-3.0}{binary}}
+\newcommand{\makeUnmodifiedSourceAvailable}{\gtbMakeUnmodifiedSourceAvailable{AGPL-\ver}} 
+\newcommand{\makeModifiedSourceAvailable}{\gtbMakeModifiedSourceAvailable{AGPL-\ver}}
+\newcommand{\makeExecModifiedSourceAvailable}{\agtbMakeModifiedSourceAvailable{AGPL-\ver}} 
+\newcommand{\makeAllSourcesAvailable}{\gtbMakeAllSourcesAvailable{AGPL-\ver}}
+\newcommand{\makeExecAllSourcesAvailable}{\agtbMakeAllSourcesAvailable{AGPL-\ver}}
+\newcommand{\arrangeProgramChanges}{\gtbArrangeProgramChanges{AGPL-\ver}}
+\newcommand{\arrangeLibraryChanges}{\gtbArrangeLibraryChanges{AGPL-\ver}}
+\newcommand{\arrangeEmbeddedChanges}{\gtbArrangeEmbeddedChanges{AGPL-\ver}}
+\newcommand{\howToApplyTheseTerms}{\gtbHowToApplyTheseTerms{AGPL-\ver}}
+\newcommand{\noPatentLitigation}{\gtbNoPatentLitigation{AGPL-\ver}}
+\newcommand{\addToCopyrightDialogLib}{\gtbAddToCopyrightDialogStrongCopyleft{AGPL-\ver}}
+\newcommand{\addToCopyrightDialogApp}{\gtbAddToCopyrightDialogApp{AGPL-\ver}}
+
+% ------------------------------------------------------------------------------
+% Make sure, licensing statements apply to enclosing program
+
+\newcommand{\auxArrange}[1]{Arrange the #1 of the on-top development in a way
+  that they are covered by the AGPL-\ver{} licensing statements.} 
+
+\newcommand{\arrangeEnclosingBinaries}{%
+  \auxArrange{the binaries of the on-top development}}
+
+\newcommand{\arrangeEnclosingSources}{%
+  \auxArrange{the sources of the on-top development}}
+
+
+%% =============================================================================
+%% AGPL-3.0 Use Cases
+
+\newcommand{\ver}{3.0}
+
+\begin{license}{AGPL3} 
+\licensename{AGPL-3.0}
+\licensespec{GNU Affero General Public License Version 3}
+\licenseabbrev{AGPL}
+%\licenseversion{3.0}
+
+% ------------------------------------------------------------------------------
+\subsection{AGPL-\ver-C1: Using the software only for yourself under additional restrictions}
+\begin{lsuc}{AGPL-\ver-C1}
+  \linkosuc{01}
+  \linkosuc{03L} 
+  \linkosuc{06L}
+  \linkosuc{09L}
+  \label{OSUC-01-AGPL}
+  \label{OSUC-03L-AGPL}
+  \label{OSUC-06L-AGPL}
+  \label{OSUC-09L-AGPL}
+      
+  \useCaseOne
+
+  \begin{lsucrequiresnothing}
+    \lsucitem{You are allowed to execute an unmodified AGPL program without
+    being obliged to do anything, as long as you do not give the program to
+    third parties. And you are allowed to embed any AGPL licensed library, 
+    snippet or module into your own program and to execute that program without
+    being obliged to do anything, as long as no other than you can interact with
+    it remotely through a computer network and as long as you do not give the
+    library or your program to third parties.}
+  \end{lsucrequiresnothing}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{AGPL-\ver-C2: Passing the unmodified software as independent sources}
+\begin{lsuc}{AGPL-\ver-C2}
+  \linkosuc{02S}
+  \linkosuc{05S}
+  \label{OSUC-02S-AGPL}
+  \label{OSUC-05S-AGPL}
+
+  \useCaseTwo
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeSource}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{AGPL-\ver-C3: Passing the unmodified software as independent binaries} 
+\begin{lsuc}{AGPL-\ver-C3}
+  \linkosuc{02B} 
+  \linkosuc{05B}
+  \label{OSUC-02B-AGPL}
+  \label{OSUC-05B-AGPL}
+
+
+  \useCaseThree
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeBinary}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly  
+    \lsucmandatory{\makeUnmodifiedSourceAvailable}
+    \lsucmandatory{\describeHowToGetSource}
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucsourcedist{AGPL-\ver-C2}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{AGPL-\ver-C4: Passing the unmodified library as embedded sources}
+\begin{lsuc}{AGPL-\ver-C4}
+  \linkosuc{07S} 
+  \label{OSUC-07S-AGPL}
+
+  \useCaseFour
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeSource}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\addToCopyrightDialogLib}
+    \lsucmandatory{\arrangeEnclosingSources}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{AGPL-\ver-C5: Passing the unmodified library as embedded binaries} 
+\begin{lsuc}{AGPL-\ver-C5}
+  \linkosuc{07B} 
+  \label{OSUC-07B-AGPL}
+
+  \useCaseFive
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeBinary}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\makeAllSourcesAvailable}
+    \lsucmandatory{\describeHowToGetSource}
+    \lsucmandatory{\addToCopyrightDialogLib}
+    \lsucmandatory{\arrangeEnclosingBinaries}
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucsourcedist{AGPL-\ver-C4}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{AGPL-\ver-C6: Passing a modified program as source code}
+\begin{lsuc}{AGPL-\ver-C6}
+  \linkosuc{04S} 
+  \label{OSUC-04S-AGPL}
+
+  \useCaseSix
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeSource}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\addToCopyrightDialogApp}
+    \lsucmandatory{\markProgramModifications}
+    \lsucmandatory{\arrangeProgramChanges}\howToApplyTheseTerms
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{AGPL-\ver-C7: Passing a modified program as binary}
+\begin{lsuc}{AGPL-\ver-C7}
+  \linkosuc{04B}
+  \label{OSUC-04B-AGPL}
+
+  \useCaseSeven
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeBinary}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\markProgramModifications}
+    \lsucmandatory{\addToCopyrightDialogApp}
+    \lsucmandatory{\arrangeProgramChanges}\howToApplyTheseTerms
+    \lsucmandatory{\makeModifiedSourceAvailable}
+    \lsucmandatory{\describeHowToGetSource}
+    \lsucsourcedist{AGPL-\ver-C6}
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{AGPL-\ver-C8: Passing a modified library as independent source code}
+\begin{lsuc}{AGPL-\ver-C8}
+  \linkosuc{08S}
+  \label{OSUC-08S-AGPL}
+
+  \useCaseEight
+
+  \begin{lsucrequires}
+     \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeSource}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\markLibraryModifications}
+    \lsucmandatory{\arrangeLibraryChanges}\howToApplyTheseTerms
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{AGPL-\ver-C9: Passing a modified library as independent binary}
+\begin{lsuc}{AGPL-\ver-C9}
+  \linkosuc{08B}
+  \label{OSUC-08B-AGPL}
+
+  \useCaseNine
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeSource}  
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\makeModifiedSourceAvailable}
+    \lsucmandatory{\describeHowToGetSource}
+    \lsucsourcedist{AGPL-\ver-C8}
+    \lsucmandatory{\markLibraryModifications}
+    \lsucmandatory{\arrangeLibraryChanges}\howToApplyTheseTerms
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{AGPL-\ver-CA: Passing a modified library as embedded source code}
+\begin{lsuc}{AGPL-\ver-CA}
+  \linkosuc{10S}
+  \label{OSUC-10S-AGPL}
+
+  \useCaseA
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeSource}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\addToCopyrightDialogLib}
+    \lsucmandatory{\markEmbeddedModifications}
+    \lsucmandatory{\arrangeEmbeddedChanges}\howToApplyTheseTerms
+    \lsucmandatory{\arrangeEnclosingSources}
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+% ------------------------------------------------------------------------------
+\subsection{AGPL-\ver-CB: Passing a modified library as embedded binary}
+\begin{lsuc}{AGPL-\ver-CB}
+  \linkosuc{10B}
+  \label{OSUC-10B-AGPL}
+  
+  \useCaseB
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeBinary}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\makeAllSourcesAvailable}
+    \lsucmandatory{\describeHowToGetSource}
+    \lsucsourcedist{AGPL-\ver-CA}
+    \lsucmandatory{\addToCopyrightDialogLib}
+    \lsucmandatory{\markEmbeddedModifications}
+    \lsucmandatory{\arrangeEmbeddedChanges}\howToApplyTheseTerms
+    \lsucmandatory{\arrangeEnclosingBinaries}
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+
+% ------------------------------------------------------------------------------
+\subsection{AGPL-\ver-CC: Executing a modified program with network interaction}
+\begin{lsuc}{AGPL-\ver-CC}
+  \linkosuc{03N}
+  \label{OSUC-03N-AGPL}
+  
+  \useCaseC
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeBinary}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\markProgramModifications}
+    \lsucmandatory{\addToCopyrightDialogApp}
+    \lsucmandatory{\arrangeProgramChanges}\howToApplyTheseTerms
+    \lsucmandatory{\makeExecModifiedSourceAvailable}
+    \lsucmandatory{\describeHowToGetSource}
+    \lsucsourcedist{AGPL-\ver-C6}
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+
+\subsection{AGPL-\ver-CD: Executing a (modified) library as embedded component
+with network interaction}
+\begin{lsuc}{AGPL-\ver-CD}
+  \linkosuc{09N}
+  \linkosuc{06N}
+
+  \label{OSUC-06N-AGPL}
+  \label{OSUC-09N-AGPL}
+  
+  
+  \useCaseD
+
+  \begin{lsucrequires}
+    \lsucmandatory{\keepLicenseElements}
+    \lsucmandatory{\gplthreeEnsureCopyrightNoticeBinary}
+    \lsucmandatory{\giveLicense}\passingFilesCorrectly
+    \lsucmandatory{\retainCopyrightNotices}
+    \lsucmandatory{\makeExecAllSourcesAvailable}
+    \lsucmandatory{\describeHowToGetSource}
+    \lsucsourcedist{AGPL-\ver-CA}
+    \lsucmandatory{\addToCopyrightDialogLib}
+    \lsucmandatory{\markEmbeddedModifications}
+    \lsucmandatory{\arrangeEmbeddedChanges}\howToApplyTheseTerms
+    \lsucmandatory{\arrangeEnclosingBinaries}
+    \lsucoptional{\createChangelog}
+    \lsucoptional{\addToDocumentation}
+  \end{lsucrequires}
+
+  \begin{lsucprohibits}
+    \lsucitem{\noPatentLitigation}
+  \end{lsucprohibits}
+\end{lsuc}
+% ------------------------------------------------------------------------------
+\end{license}
+
+%% =============================================================================
+%% Discussion
+
+\subsection{Discussions and Explanations}
+\label{AGPL3Discussion}
+  
+For simplifying the justifications of our AGPL interpretation, we can state,
+that the AGPL-3.0 and the GPL-3.0 are very similar: apart from some differences
+caused by the varying names and passings remarks\footnote{Very similar are the
+preamble and §0.  Compare \cite[][\nopage wp.]{Gpl30OsiLicense2007a} versus
+\cite[][\nopage wp.]{Agpl30OsiLicense2007a}}, the most paragraphs of the two
+licenses exactly offer the same text\footnote{Equal are §1 - 12 and §14 - §17.
+Compare \cite[][\nopage wp.]{Gpl30OsiLicense2007a} versus \cite[][\nopage
+wp.]{Agpl30OsiLicense2007a}}. Only the §13 of the AGPL-3.0 does not match to the
+§13 of the GPL-3.0: §13 of the GPL-3.0 permits \enquote{[\ldots] to link or
+combine any covered work with a work lincesed under version 3 of the GNU Affero
+Generasl Public License}\footcite[cf.][\nopage wp. §13]{Gpl30OsiLicense2007a};
+while §13 of the AGPL-3.0 deals with the \enquote{remote network
+interaction}\footcite[cf.][\nopage wp. §13]{Agpl30OsiLicense2007a}. Therefore,
+the analysis of the GPL-3.0 lincense\footnote{$\rightarrow$ p.
+\pageref{GPL3Discussion}} is also valid for the AGPL-3.0; it is not necessary to
+repeat that discussion here.
+
+So, we can focus on the difference. The AGPL-3.0 tries to close a gap of the
+GPL-3.0:
+
+Purpose of all GNU licenses is to preserve the freedom to use, to study, to
+share, and to modify the GNU programs and libraries\footcite[cf.][\nopage
+wp.]{FsfFreeSoftware2015a}. These licenses want to prevent that users circumvent
+the tasks which establish and maintain this freedom: Only if someone uses the
+program / library only for himself, he shall not be obliged to do anything. But
+if any third party was involved into the use of the GNU software, this third
+party should receive all those rights and possibilities to use the software
+which all the other users already have got.
+
+In a time, where using the benefits of a program meant \emph{executing the
+software on ons's own machine} (and hence \emph{having received the program at
+least as a binary}), it was enough to let the obligations of -- for example --
+handing over the license or the source code be triggered by the act of
+'distributing the software'. Nowadays, in the times of cloud software systems,
+users can let profit other users from the free software without conveying the
+software. In these cases, they  execute the free program on their own machines,
+but they nevertheless do not use the free program any longer only for
+themselves. So, in time of cloud service technologies, the trigger of executing
+the license fulfilling tasks must be complemented by a criterion which indicates
+that a third party is involved into the context of using the software. And this
+criteroin must no longer presuppose that this third party has received the
+software itself.
+
+For that purpose, the AGPL-3.0 states, that such an executed AGPL program must
+\enquote{[\ldots] prominently offer all useres \emph{interacting with it
+remotely through a computer network} [\ldots] an opportunity to receive the
+Corresponding Source of your version by providing access to the Corresponding
+Source from a network server at no charge, through some standard or customary
+means of facilitating copying of software}\footcite[cf.][\nopage wp.
+§13]{Agpl30OsiLicense2007a}. Obviously, the trigger of \emph{distributing the
+AGPL software} now has been expanded by the feature \emph{being able to interact
+with the AGPL software remotely through a computer network}.
+
+The first consequence of this analysis is, that we can take over all the GPL
+uses cases which deal with \emph{distributing the software} (2others) and all
+the corresponding license fulfilling tasklists of
+GPL-3-C2\footnote{$\rightarrow$ OSLiC, p. \pageref{OSUC-02S-GPL3}} until
+GPL-3-CB\footnote{$\rightarrow$ OSLiC, p. \pageref{OSUC-10B-GPL3}} -- as we have
+defined them in the GPL chapter.
+
+The second consequence is, that we now have to subclassify the open source use
+case \emph{recipient:4yourself}: we have to distinguish the use with internet
+input-output access from that with only local input-output acesss.
+
+Additionally, the AGPL limits the requirement to the condition, that the used
+program is modified. The license exactly says that \enquote{[\ldots] if you
+\emph{modify} the Program, your modfied version must prominently offer all
+useres \emph{interacting with it remotely through a computer network} [\ldots]
+an opportunity to receive the Corresponding Source of your version
+[\ldots]}\footcite[cf.][\nopage wp. §13]{Agpl30OsiLicense2007a}. Thus, the third
+consequence is, that we have to subclassify the open source use case 
+\emph{recipient:4yourself} not only by the features \emph{ioAccess:viaInternet}
+and \emph{ioAccess:onlyLocal}, but also by the features
+\emph{state:modified} and \emph{state:unmodified}.
+
+Finally, there is another little complication: One can only execute a program. A
+library can not be directly executed. So, the question arises, what the user has
+to be do if executes an own program which uses an unmodified AGPL licensed
+library or module?
+
+On the first glance, the license in §13 says only that he has to publish the
+sources too, if executes a modified program. But on further reflection, one has
+also to consider the other paragraphs of the AGPL: If one embeds an AGPL
+licensed library, snippet or module into an own program, then -- due to the
+Copyleft effect of the AGPL -- this program which uses the library, snippet or
+module, has to be licensed under the AGPL too. And finally, every new program
+has to be regarded as a modification of the first empty file. In other words:
+one can only execute an own program using an unmodified AGPL library compliantly,
+if one respects the §13 for the complete software complex being comprised of the
+library itself and the pure code of the overarching program.
+
+Based on this analysis, we had only to introduce two new AGPL specific open
+source use cases and could recycle the complete set of GPL specific open source
+use cases:
+
+\begin{itemize}
+  \item All GPL-3.0 use cases triggered by the distribution of the software
+  \emph{recipient:2others} are transfered into the AGPL-3.0 finder and the
+  AGPL-3.0 tasklist chapter as they have been defined in the GPL finder and the
+  GPL-3.0 tasklist chapter.
+  \item All combinations of \emph{recipient:4yourself} and
+  \emph{ioAccess:onlyLocally} are covered by the old GPL 'yourself' use case
+  which says, that one has not do anything as long as one uses the software only
+  for oneself. But in the context of AGPL, this use case has additional
+  conditions: one has not do anything if one does not distribute the software to
+  other parties in any thing and if one executes this software on one's own
+  machines in an environment which does not allow anyone else than
+  oneself to interact with it remotely through a computer network.
+  \item If one executes an unmodified AGPL program, which one has received and
+  which one has not modified, then one also has not do anything.
+  \item If one 'executes' an unmodified library as an embedded component of the
+  really executed overarching program, then one has also to license this
+  overarching program under the AGPL and hence has to fulfill the conditions of §13.
+  \item If one executes a modified AGPL program, which one has received, has to
+  fulfill the conditions of §13.
+  \item If one executes an modified library as an embedded component of the
+  really executed overarching program, then one has also to license this
+  overarching program under the AGPL and hence has to fulfill the conditions of
+  §13 with respect to bot parts, to the overarching program and the library.
+\end{itemize}
+
+There is a last point, which should also be discussed here. It concerns the
+question of granularity:
+
+The AGPL-3.0 requires that the \enquote{[\ldots] modified version (of an
+[executed] program) must prominently offer all users interacting with it remotely through a
+computer network [\ldots] an opportunity to receive the Corresponding Source of
+your version by providing access to the Corresponding Source from a network
+server at no charge [\ldots]}\footcite[cf.][\nopage wp.
+§13]{Agpl30OsiLicense2007a}. For respecting this rule, one has to know what the
+term \emph{Corresponding Source} means: how many of the embedded components of the
+program must be conveyed together with the overarching program.
+
+Fortunately, the AGPL-3.0 (and the GPL-3.0) defines the used terms: \enquote{The
+\enquote{Corresponding Source} for a work in object code form means all the
+source code needed to generate, install, and (for an executable work) run the
+object code and to modify the work, including scripts to control those
+activities.\footcite[cf.][\nopage wp. §1]{Agpl30OsiLicense2007a}} If one took
+this statements seriously, one would have to \enquote{provide access to} the
+complete software stack of the executed AGPL program -- just down to the glibc.
+
+But the AGPL does not want to be to greedy. Therefore it limits the scope by
+determining, that the \emph{Corresponding Source} \enquote{[\ldots] does not
+include the work's System Libraries, or general-purpose tools or generally
+available free programs which are used unmodified in performing those activities
+but which are not part of the work}\footcite[cf.][\nopage wp.
+§1]{Agpl30OsiLicense2007a}. For understanding this rule, one has to know, what
+the term \emph{System Libraries} means. The AGPl says, that \enquote{the
+\enquote{System Libraries} of an executable work include anything, other than
+the work as a whole, that (a) is included in the normal form of packaging a
+Major Component, but which is not part of that Major Component, and (b) serves
+only to enable use of the work with that Major Component, or to implement a
+Standard Interface for which an implementation is available to the public in
+source code form.\footcite[cf.][\nopage wp. §1]{Agpl30OsiLicense2007a}}
+Unfortunately, one has now to analyse, what the AGPL defines as a \emph{Major
+Component}: \enquote{A enquote{Major Component}, in this context, means a major
+essential component (kernel, window system, and so on) of the specific operating
+system (if any) on which the executable work runs, or a compiler used to produce
+the work, or an object code interpreter used to run it\footcite[cf.][\nopage wp.
+§1]{Agpl30OsiLicense2007a}}.
+
+Based on these specifications, one can give some rule of thumbs concerning the
+question down to which level one has to give access to the corresponding source
+code of an an executed AGPL program:
+\begin{itemize}
+  \item If one lets execute a modified AGPL licensed binary program, then one has
+  to give access to the code of
+  \begin{itemize}
+  \item the executed program itself
+  \item every modified embedded component of that program
+  \item every not freely accessible embedded component of that program
+  \item all not freely accessible tools, scripts, data which are necessary to
+  compile the sources of the program in a freely accessible compilation /
+  developement environment
+  \end{itemize}
+  But it is not necessary to give access to unmodified standard libraries,
+  compilers, or tools which can freely be downloaded from their standard
+  repositories.
+  \item If one lets execute a modified AGPL licensed script, then one has
+  to give access to the code of
+  \begin{itemize}
+  \item the executed script itself
+  \item every modified embedded script component included by the main script
+  \item every not freely accessible embedded script component included by the main script
+  \item all not freely accessible tools, scripts, data which are necessary to
+  to let that main script be executed by a freely accessible interpreter
+  \item the interpreter itself if it is not freely accessible.
+  \end{itemize}
+  But it is not necessary to give access to unmodified standard script
+  libraries, interpreters, or tools which can freely be downloaded from their
+  standard repositories
+  
+\end{itemize}
+
+
+

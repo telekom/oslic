@@ -35,6 +35,12 @@
     software, that you will use it only for yourself, and that you do not hand
     over to any third party in any sense.}}
 
+\newcommand{\agtbUseCaseOne}[1]{\lsucmeans{that you received #1 licensed
+    software, that you will use it only for yourself, and that you do not hand
+    over to any third party in any sense. Additionally you warrants that no
+    other than you interacts with the executed software remotely through a
+    computer network.}}
+
 \newcommand{\gtbUseCaseTwo}[1]{\lsucmeans{that you received #1 licensed software 
     that you are now going to distribute to third parties as an independent unit
     and in the form of unmodified source code files or as an unmodified source
@@ -49,55 +55,74 @@
     a program, an application, a server, a snippet, a module, a library, or a
     plugin.}}
 
-\newcommand{\gtbUseCaseFour}[1]{\lsucmeans{that you received a #1 licensed
+\newcommand{\gtbUseCaseFour}[2]{\lsucmeans{that you received #2 #1 licensed
     snippet, module or library that you are now going to distribute to third
     parties as an embedded component of a larger unit and in the form of
     unmodified source code files or as an unmodified source code package.}}
 
-\newcommand{\gtbUseCaseFive}[1]{\lsucmeans{that you received a #1 licensed
+\newcommand{\gtbUseCaseFive}[2]{\lsucmeans{that you received #2 #1 licensed
     snippet, module or library that you are now going to distribute to third
     parties as an embedded component of a larger unit and in the form of
     unmodified binary files or as unmodified binary package.}}
 
-\newcommand{\gtbUseCaseSix}[1]{\lsucmeans{that you received a #1 licensed
+\newcommand{\gtbUseCaseSix}[2]{\lsucmeans{that you received #2 #1 licensed
     program, application, or server (proapse), that you modified it, and that
     you are now going to distribute this modified version to third parties in
     the form of source code files or as a source code package.}}
 
-\newcommand{\gtbUseCaseSeven}[1]{\lsucmeans{that you received a #1 licensed
+\newcommand{\gtbUseCaseSeven}[2]{\lsucmeans{that you received #2 #1 licensed
     program, application, or server (proapse), that you modified it, and that
     you are now going todistribute this modified version to third parties in the
     form of binary files or as a binary package.}}
 
-\newcommand{\gtbUseCaseEight}[1]{\lsucmeans{that you received a #1 licensed code
-    snippet, module, library, or plugin (snimoli), that you modified it, and
+\newcommand{\gtbUseCaseEight}[2]{\lsucmeans{that you received #2 #1 licensed
+code snippet, module, library, or plugin (snimoli), that you modified it, and
     that you are now going to distribute this modified version to third parties
     in the form of source code files or as a source code package, but without
     embedding it into another larger software unit.}}
 
-\newcommand{\gtbUseCaseNine}[1]{\lsucmeans{that you received a #1 licensed code
-    snippet, module, library, or plugin (snimoli), that you modified it, and
+\newcommand{\gtbUseCaseNine}[2]{\lsucmeans{that you received #2 #1 licensed
+code snippet, module, library, or plugin (snimoli), that you modified it, and
     that you are now going to distribute this modified version to third parties
     in the form of binary files or as a binary package but without embedding it
     into another larger software unit.} }
 
-\newcommand{\gtbUseCaseA}[1]{\lsucmeans{that you received a #1 licensed code
+\newcommand{\gtbUseCaseA}[2]{\lsucmeans{that you received #2 #1 licensed code
     snippet, module, library, or plugin (snimoli), that you modified it, and
     that you are now going to distribute this modified version to third parties
     in the form of source code files or as a source code package together with
     another larger software unit which contains this code snippet, module,
     library, or plugin as an embedded component.}}
 
-\newcommand{\gtbUseCaseB}[1]{\lsucmeans{that you received a #1 licensed code
+\newcommand{\gtbUseCaseB}[2]{\lsucmeans{that you received #2 #1 licensed code
     snippet, module, library, or plugin (snimoli), that you modified it, and
     that you are now going to distribute this modified version to third
     partiesin the form of binary files or as a binary package together with
     another larger software unit which contains this code snippet, module,
     library, or plugin as an embedded component.}}
 
+
+\newcommand{\agtbUseCaseC}[1]{\lsucmeans{that you received an #1 licensed
+    program, an application, or server, that you modified it, and that you let
+    this program, application, or server be executed by a computer in a way,
+    that other people than you can interact with the executed software remotely
+    through a computer network.}}
+    
+\newcommand{\agtbUseCaseD}[1]{\lsucmeans{that you received an #1 licensed
+    library, snippet, or module, that you modified it or that you did not modified
+    it, that you embed this modified or unm odified library, snippet, or module into
+    an own overarching program, an application, or server, and that you finally
+    let this own program, application, or server be executed by a computer in a
+    way, that other people than you can interact with the executed software
+    remotely through a computer network.}}
+
 % ------------------------------------------------------------------------------
 
-\newcommand{\gtbCoversOne}[1]{\coversOsucs{OSUC-01, OSUC-03, OSUC-06, and OSUC-09}{01}{09}}
+\newcommand{\gtbCoversOne}[1]{\coversOsucs{OSUC-01, OSUC-03L, OSUC-03N,
+OSUC-06L, OSUC-06N, OSUC-09L and OSUC-09N}{01}{09N}}
+\newcommand{\agtbCoversOne}[1]{\coversOsucs{OSUC-01, OSUC-03L,
+OSUC-06L, and OSUC-09L}{01}{09L}}
+
 \newcommand{\gtbCoversTwo}[1]{\coversOsucs{OSUC-02S, OSUC-05S}{02S}{05S}}
 \newcommand{\gtbCoversThree}[1]{\coversOsucs{OSUC-02B, OSUC-05B}{02B}{05B}}
 \newcommand{\gtbCoversFour}[1]{\mapsToOsuc{07S}}
@@ -108,6 +133,8 @@
 \newcommand{\gtbCoversNine}[1]{\mapsToOsuc{08B}}
 \newcommand{\gtbCoversA}[1]{\mapsToOsuc{10S}}
 \newcommand{\gtbCoversB}[1]{\mapsToOsuc{10B}}
+\newcommand{\agtbCoversC}[1]{\mapsToOsuc{03N}}
+\newcommand{\agtbCoversD}[1]{\coversOsucs{OSUC-06N,OSUC-09N}{06N}{09N}}
 
 % ------------------------------------------------------------------------------
 % Keep license elements 
@@ -158,10 +185,19 @@
 \newcommand{\gtbMakeModifiedSourceAvailable}[1]{Make the source code of the
   distributed software publicly available: \gtbSourceRepository{#1}} 
 
+\newcommand{\agtbMakeModifiedSourceAvailable}[1]{Make the source code of the
+  executed modified program publicly available: \gtbSourceRepository{#1}}
+
 % embedded library, modified or unmodified, GPL and AGPL
 \newcommand{\gtbMakeAllSourcesAvailable}[1]{Make the \emph{complete} source code
   of the program embedding the library publicly available (and, therefore, also
   the source code of the library itself): \gtbSourceRepository{#1}}
+  
+\newcommand{\agtbMakeAllSourcesAvailable}[1]{Make the \emph{complete} source
+  code of the excuted program embedding the (modified) library publicly
+  available (and, therefore, also the source code of the (modified) library
+  itself):
+  \gtbSourceRepository{#1}}
 
 % embedded library, modified or unmodified, LGPL 
 \newcommand{\gtbMakeEmbeddedSourcesAvailable}[1]{Make the source code of the 
@@ -223,8 +259,8 @@
 % Make sure licensing statements apply to your modifications
 % #1 -> the license name
 
-\newcommand{\gtbauxArrangeChanges}[2]{Arrange your modifications of #2 in a way
-  that they are covered by existing #1 licensing statements. If you add new
+\newcommand{\gtbauxArrangeChanges}[2]{Arrange your modifications of the #2 in a
+way that they are covered by existing #1 licensing statements. If you add new
   source code files to the #2, insert a header containing your copyright line
   and a licensing statement in the form recommended by the #1.}
 
@@ -433,6 +469,9 @@
 \tikzstyle{nods} = [font=\tiny, rectangle, draw, fill=gray!20, 
     text width=0.8cm, text centered, rounded corners, minimum height=3em]
 
+\tikzstyle{nodz} = [font=\tiny, rectangle, draw, fill=gray!20, 
+    text width=0.6cm, text centered, rounded corners, minimum height=3em]
+
 \tikzstyle{nodb} = [font=\tiny, rectangle, draw, fill=gray!20, 
     text width=1cm, text centered, rounded corners, minimum height=3em]
     
@@ -447,21 +486,27 @@
 
 \begin{tikzpicture}[]
 
-  \node[nodv] (l801) at (4,10)   {#1 #2};
+  \node[nodv] (l801) at (4,12)   {#1 #2};
 
-  \node[nodb] (l601) at (0,9.6) {\textit{recipient:} \\ \textbf{4your-} \\\textbf{self}};
-  \node[nodb] (l602) at (8.8,9.6) {\textit{recipient:} \\ \textbf{2others}};
+  \node[nodb] (l601) at (0,11.6) {\textit{recipient:} \\ \textbf{4your-} \\\textbf{self}};
+  \node[nodb] (l602) at (8.8,11.6) {\textit{recipient:} \\ \textbf{2others}};
+
+  \node[nodb] (l551) at (0,9) {\textit{ioAccess:} \\ \textbf{only-} \\ \textbf{Local}}; 
+  \node[nodb] (l552) at (2,9) {\textit{ioAccess:} \\ \textbf{via-} \\ \textbf{Internet}};   
   
-  \node[nods] (l503) at (0.8,7) {\textit{state:} \\ \textbf{unmo-} \\ \textbf{dified}}; 
-  \node[nods] (l504) at (2.1,7) {\textit{state:} \\ \textbf{mo-} \\ \textbf{dified}}; 
-  \node[nodb] (l501) at (5.8,7) {\textit{state:} \\ \textbf{unmo-} \\ \textbf{dified}}; 
-  \node[nodb] (l502) at (11.5,7) {\textit{state:} \\ \textbf{mo-} \\ \textbf{dified}}; 
+   
+  \node[nods] (l503) at (1.2,7) {\textit{state:} \\ \textbf{unmo-} \\ \textbf{dified}}; 
+  \node[nods] (l504) at (3.2,7) {\textit{state:} \\ \textbf{mo-} \\ \textbf{dified}}; 
+  \node[nodb] (l501) at (6.6,7) {\textit{state:} \\ \textbf{unmo-} \\
+  \textbf{dified}}; \node[nodb] (l502) at (11.5,7) {\textit{state:} \\ \textbf{mo-} \\ \textbf{dified}}; 
   
-  \node[nods] (l405) at (1.3,5.4) {\textit{type:} \\ \textbf{pro-apse}};
-  \node[nods] (l406) at (2.7,5.4) {\textit{type:} \\ \textbf{sni-moli}};
+  \node[nodz] (l407) at (0.6,5.4) {\textit{type:} \\ \textbf{pro-apse}};
+  \node[nodz] (l408) at (1.6,5.4) {\textit{type:} \\ \textbf{sni-moli}};
+  \node[nodz] (l405) at (2.8,5.4) {\textit{type:} \\ \textbf{pro-apse}};
+  \node[nodz] (l406) at (3.8,5.4) {\textit{type:} \\ \textbf{sni-moli}};
   
-  \node[nodb] (l401) at (4.6,5.4) {\textit{type:} \\ \textbf{proapse or snimoli}};
-  \node[nodb] (l402) at (7.2,5.4) {\textit{type:} \\ \textbf{snimoli}};
+  \node[nodb] (l401) at (5.8,5.4) {\textit{type:} \\ \textbf{proapse or snimoli}};
+  \node[nodb] (l402) at (7.6,5.4) {\textit{type:} \\ \textbf{snimoli}};
   \node[nodb] (l403) at (9.6,5.4) {\textit{type:} \\ \textbf{proapse}};
   \node[nodb] (l404) at (13.3,5.4) {\textit{type:} \\ \textbf{snimoli}};
   
@@ -487,15 +532,15 @@
   
   \node[slimleaf] (l101) at (0,0) {
     \textbf{#1-C1} 
-    \textit{using software only for yourself}};
+    \textit{using apps \& libs only for yourself (+ sub conditions)}};
     
    \node[leaf] (l112) at (1.3,0) { 
     \textbf{#1-CC}
-    \textit{execu-ting a modi-fied #1 program with net-io-Access}};   
+    \textit{execu-ting a modified #1 program with net-io-Access}};   
     
   \node[leaf] (l113) at (2.7,0) { 
     \textbf{#1-CD}
-    \textit{execu-ting a program with net-io-Access using a modified #1 library}}; 
+    \textit{execu-ting any app with net-io-Access using a (modified) library}}; 
  
   \node[slimleaf] (l102) at (4.0,0) { 
     \textbf{#1-C2} 
@@ -540,18 +585,25 @@
   \path [edge] (l801) -- (l601);
   \path [edge] (l801) -- (l602);
   
-  \path [edge] (l601) -- (l503);
-  \path [edge] (l601) -- (l504);
+  \path [edge] (l601) -- (l551);
+  \path [edge] (l601) -- (l552);
+
   \path [edge] (l602) -- (l501);
   \path [edge] (l602) -- (l502);
+  \path [edge] (l552) -- (l503);
+  \path [edge] (l552) -- (l504); 
+
   
   \path [edge] (l501) -- (l401);
   \path [edge] (l501) -- (l402);
   \path [edge] (l502) -- (l403);
   \path [edge] (l502) -- (l404);
   
+  \path [edge] (l503) -- (l407);  
+  \path [edge] (l503) -- (l408); 
   \path [edge] (l504) -- (l405);  
-  \path [edge] (l504) -- (l406); 
+  \path [edge] (l504) -- (l406);  
+   
     
   \path [edge] (l401) -- (l301);
   \path [edge] (l402) -- (l302);
@@ -559,9 +611,11 @@
   \path [edge] (l404) -- (l304);
   \path [edge] (l404) -- (l305);
 
-  \path [edge] (l405) -- (l306);
-  \path [edge] (l406) -- (l307);  
   
+  \path [edge] (l405) -- (l306);
+  \path [edge] (l406) -- (l307);
+  \path [edge] (l407) -- (l101);   
+  \path [edge] (l408) -- (l307);  
   
   \path [edge] (l301) -- (l201);
   \path [edge] (l301) -- (l202);
@@ -574,8 +628,8 @@
   \path [edge] (l305) -- (l209);
   \path [edge] (l305) -- (l210);
   
-  \path [edge] (l601) -- (l101);
-  \path [edge] (l503) -- (l101);
+  \path [edge] (l551) -- (l101);
+
   \path [edge] (l306) -- (l112);
   \path [edge] (l307) -- (l113);
         

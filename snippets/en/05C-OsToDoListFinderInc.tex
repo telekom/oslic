@@ -93,6 +93,7 @@ to-do lists.
   & \checkboxes{4yourself}{2others}
   \\
 \hline 
+\hline
   Form 
   & \question[1.7cm]{
     \textit{Given you want to (re)distribute an open source based work [2others],
@@ -100,19 +101,30 @@ to-do lists.
     \textbf{\underline{sources}}?}}
   & \checkboxes{binaries}{sources}
   \\
+\hline
+  IoAccess 
+  & \question[2.6cm]{
+    \textit{Given you are using open source software [4yourself] by executing a
+    modified os program [modified] or by creating \& executing a program using
+    an os library [embedded], does this program distribute its IO data
+    \textbf{\underline{only locally}} or \textbf{\underline{via internet}}?}} &
+    \checkboxes{onlyLocally}{viaInternet}
+  \\
 \hline 
 \hline
 \end{tabular}
 \end{small}
 }
 
-As discussed earlier, there are of course some invalid
+As discussed earlier, there are of course some invalid or irrelevant
 combinations.\footnote{type::proapse excludes state::embedded;
 recipient::4yourself excludes the combination with state::independent and
-type::snimoli; any value of class 'mode' implies state::embedded [for details
-see page \pageref{InvalidFinderTokenCombinations}]. If you have encountered one of
-these invalid combinations, please check the corresponding explanations.} Here
-are some extra explanations concerning the classes resp. the focuses:
+type::snimoli; any value of class 'mode' implies state::embedded; form is only
+relevant if recipient::2others; ioAccess is only relevant if
+recipient::4yourself[for details see page
+\pageref{InvalidFinderTokenCombinations}]. If you have encountered one of these
+invalid combinations, please check the corresponding explanations.} Here are
+some extra explanations concerning the classes resp. the focuses:
 
 \begin{description}
 \item[Type:] A piece of (open source) software is a program, an application, or
@@ -150,7 +162,7 @@ group) then you indeed hand the open source software over to third
 parties.\footnote{Please remember that---at least in Germany---there are
 opinions that even handing over software to another legal entity or department
 of the same company is also a kind of distribution. It is always safest to take
-the broadest possible meaning of distributing or handing over.}
+the broadest possible meaning.}
 \item[Form:] Open source software knows two ways to distribute the software: in
 the form of binaries and in the form of sources. Mostly it is up to you to
 decide whether you want to distribute only the binaries or whether you are
@@ -166,6 +178,25 @@ thumb}: \enquote{The source code for a work means the preferred form of the work
 for making modifications to it}.\citeGPLtwo{§3} All other forms are denoted by
 the concept of 'binaries'. Based on this specification, you can respect some
 special conditions if you want to distribute the sources and/or the binaries.
+\item[ioAccess:] If you execute an open source program or an own program using
+an open source library, then (normally) you do not distribute that software.
+Under these circumstances, the most open source licenses do not require anything
+for executing the program compliantly - even if it is the base of a globally
+used internet service. For closing this 'gap', the AGPL has been invented: Like
+the GPL, the AGPL let the obligation to fulfill the well known set of GPL tasks
+be triggered by distributing the software. But, it let these tasks also be
+triggered by an established remote network interaction: whoever interacts with
+the locally executed program remotely through a computer network gets all the
+rights which normally the receiver of a distribution gets. Nevertheless, the
+AGPL does not wish to cause an overhead of tasks: Only \emph{locally excuted
+open source programs which have been modfied} or \emph{locally executed own
+programs using an AGPL licensed library} shall indeed trigger the fulfillment of
+the requirements. Thus, we introduced the features \emph{ioAccess:onlyLocally}
+and \emph{ioAccess:viaInternet}: They are only relevant if you uses a program
+only for yourself (4yourself) \textbf{and} [ (if that AGPL licensed program has
+been modified \{proapse and modified\}) \textbf{or} (if that program uses an
+embedded AGPL licensed library \{snimoli and embedded\}) ].
+
 \end{description}
 
 \section{The taxonomic Open Source Use Case Finder}
@@ -185,6 +216,9 @@ branches:
 \newcommand{\cothers}{\choicetext{recipient}{2others}}
 \newcommand{\csources}{\choicetext{form}{sources}}
 \newcommand{\cbinaries}{\choicetext{form}{binaries}}
+\newcommand{\conlylocal}{\choicetext{ioAccess}{onlyLocal}}
+\newcommand{\cviainternet}{\choicetext{ioAccess}{viaInternet}}
+
 
 \newcommand{\osuctxtshort}[1]{$\Rightarrow$ OSUC-#1: \textit{p.\ \pageref{OSUC-#1-DEF}}}
 \newcommand{\osuctxtbreak}[1]{$\Rightarrow$ OSUC-#1\\ \textit{(see p.\ \pageref{OSUC-#1-DEF})}}
@@ -196,12 +230,16 @@ branches:
     font=\scriptsize,
     align=left,
     grow'=right,
-    level 1/.style={sibling distance=24em, level distance=10mm},
-    level 2/.style={sibling distance=14em, level distance=10mm},
-    level 3/.style={sibling distance=7em,  level distance=18mm, anchor=west, minimum width=2cm},
-    level 4/.style={sibling distance=3em,  level distance=18mm, minimum width=1.65cm},
-    level 5/.style={sibling distance=3em,  level distance=18mm, minimum width=1.45cm},
-    level 6/.style={sibling distance=3em,  level distance=6mm},
+    level 1/.style={sibling distance=27em, level distance=18mm},
+    level 2/.style={sibling distance=15em, level distance=18mm},
+    level 3/.style={sibling distance=8em, level distance=24mm},
+    level 4/.style={sibling distance=5em, level distance=24mm},
+    level 5/.style={sibling distance=2.5em, level distance=24mm},
+    level 6/.style={sibling distance=1em, level distance=18mm},
+%     level 3/.style={sibling distance=7em,  level distance=18mm, anchor=west, minimum width=2cm},
+%     level 4/.style={sibling distance=3em,  level distance=18mm, minimum width=1.65cm},
+%     level 5/.style={sibling distance=3em,  level distance=18mm, minimum width=1.45cm},
+%     level 6/.style={sibling distance=3em,  level distance=6mm},
 ]
 \node [ellipse,draw] {OSS}
     child { node [choice] { \choicetext{type}{proapse} }
@@ -223,7 +261,12 @@ branches:
       child { node [choice] {\cmodified}
         child { node [choice] {\cindependent}
           child { node[choice] {\cyourself} 
-            \osucchild{\osuctxtshort{03}}
+            child { node[choice] {\conlylocal} 
+              \osucchild{\osuctxtbreak{03L}}
+            }
+            child { node[choice] {\cviainternet} 
+              \osucchild{\osuctxtbreak{03N}}
+            }
           }
           child { node[choice] {\cothers} 
             child { node[choice] {\csources} 
@@ -250,7 +293,12 @@ branches:
         }
         child { node [choice] {\cembedded} 
           child { node[choice] {\cyourself} 
-            \osucchild{\osuctxtshort{06}}
+            child { node[choice] {\conlylocal} 
+              \osucchild{\osuctxtbreak{06L}}
+            }
+            child { node[choice] {\cviainternet} 
+              \osucchild{\osuctxtbreak{06N}}
+            }
           }
           child { node[choice] {\cothers} 
             child { node[choice] {\csources} 
@@ -275,7 +323,12 @@ branches:
         }
         child { node [choice] {\cembedded} 
           child { node[choice] {\cyourself} 
-            \osucchild{\osuctxtshort{09}}
+            child { node[choice] {\conlylocal} 
+              \osucchild{\osuctxtbreak{09L}}
+            }
+            child { node[choice] {\cviainternet} 
+              \osucchild{\osuctxtbreak{09N}}
+            }
           }
           child { node[choice] {\cothers} 
             child { node[choice] {\csources} 
@@ -321,7 +374,7 @@ the circumstances of the described \textbf{O}pen \textbf{S}ource \textbf{U}se
       \textit{(= Common Develop and Distribution License)}  
     \item p.\ \pageref{OSUC-#1-EPL} for the \textbf{EPL-1.0}
       \textit{(= Eclipse Public License)}     
-    \item p.\ \pageref{OSUC-01-EUPL} for the \textbf{EUPL-1.1}
+    \item p.\ \pageref{OSUC-#1-EUPL} for the \textbf{EUPL-1.1}
       \textit{(= European Union Public License)} 
     \item p.\ \pageref{OSUC-#1-GPL2} for the \textbf{GPL-2.0}
        \textit{(= GNU General Public License Version 2)} 
@@ -365,10 +418,21 @@ program, application, or server to third parties in the form of binaries. In
 this act of distribution, you do not combine this program, application, or
 server with other software components in the sense of software development} 
   
-\osucitem{03}{proapse, modified, independent, 4yourself}{%
-Only for yourself, you are going to modify an open source program, application,
-or server after you received it and before you will use it. But you do not
-combine it with other components in the sense of software development} 
+% \osucitem{03}{proapse, modified, independent, 4yourself}{%
+% Only for yourself, you are going to modify an open source program, application,
+% or server after you received it and before you will use it. But you do not
+% combine it with other components in the sense of software development} 
+
+\osucitem{03L}{proapse, modified, independent, 4yourself, onlyLocal}{% 
+You are executing an open source program, application, or server which you have
+modified (but not combined with other components in the sense of software
+development) and which distributes its input/output only locally to you}
+
+\osucitem{03N}{proapse, modified, independent, 4yourself, viaInternet}{% 
+You are executing an open source program, application, or server which you have
+modified (but not combined with other components in the sense of software
+development) and which distributes its input/output to you or other users via the
+internet}
 
 \osucitem{04S}{proapse, modified, independent, 2others, sources}{%
 You are going to modify an open source program, application, or server after you
@@ -396,10 +460,21 @@ binaries. In this act of distribution, you do not combine this library, code
 snippet, module, or plugin with other software components in the sense of
 software development} 
 
-\osucitem{06}{snimoli, unmodified, embedded, 4yourself}{%
-Only for yourself and just as you received it, you are going to combine an
-unmodified open source library, code snippet, module, or plugin into a larger
-software unit as one of its parts}  
+% \osucitem{06}{snimoli, unmodified, embedded, 4yourself}{%
+% Only for yourself and just as you received it, you are going to combine an
+% unmodified open source library, code snippet, module, or plugin into a larger
+% software unit as one of its parts}  
+
+\osucitem{06L}{snimoli, umodified, embedded, 4yourself, onlyLocal}{% 
+You are executing any application which distributes input/output only locally to
+you and which uses an unmodified embedded open source library, code snippet,
+module, or plugin}
+
+\osucitem{06N}{snimoli, umodified, embedded, 4yourself, viaInternet}{%
+You are executing any application which distributes its input/output to you or
+other users via the internet and which uses an unmodified embedded open source
+library, code snippet, module, or plugin}
+
 
 \osucitem{07S}{snimoli, unmodified, embedded, 2others, sources}{%
 Just as you received it and before you will distribute it to third parties in
@@ -425,17 +500,27 @@ going to modify an open source library, code snippet, module, or plugin. But you
 do not combine it with other software components in the sense of software
 development} 
 
-\osucitem{09}{snimoli, modified, embedded, 4yourself}{%
-Only for yourself, you are going to modify an open source library, code snippet,
-module, or plugin, and you will combine it in the sense of software development
-into a larger software unit as one of its parts} 
+% \osucitem{09}{snimoli, modified, embedded, 4yourself}{%
+% Only for yourself, you are going to modify an open source library, code snippet,
+% module, or plugin, and you will combine it in the sense of software development
+% into a larger software unit as one of its parts} 
 
-\osucitem{10S}{snimoli, modified, independent, 2others, sources}{%
+\osucitem{09L}{snimoli, modified, embedded, 4yourself, onlyLocal}{% 
+You are executing any application which distributes input/output only locally to
+you and which uses an embedded open source library, code snippet, module, or
+plugin -- being modified by you}
+
+\osucitem{09N}{snimoli, modified, embedded, 4yourself, viaInternet}{%
+You are executing any application which distributes its input/output to you or
+other users via the internet and which uses an embedded open source library,
+code snippet, module, or plugin -- being modified by you}
+
+\osucitem{10S}{snimoli, modified, embedded, 2others, sources}{%
 Before you will distribute it to third parties in the form of sources, you are
 going to modify an open source library, code snippet, module, or plugin, which
 you combine with other software components in the sense of software development}
 
-\osucitem{10B}{snimoli, modified, independent, 2others, binaries}{%
+\osucitem{10B}{snimoli, modified, embedded, 2others, binaries}{%
 Before you will distribute it to third parties in the form of binaries, you are
 going to modify an open source library, code snippet, module, or plugin, which
 you combine with other software components in the sense of software development}

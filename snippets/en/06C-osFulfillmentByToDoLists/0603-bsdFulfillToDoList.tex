@@ -233,7 +233,8 @@ to-do lists.
 % ------------------------------------------------------------------------------
 % Common mapping to generic use cases
 
-\newcommand{\coversOne}{\coversOsucs{OSUC-01, OSUC-03, OSUC-06, and OSUC-09}{01}{09}}
+\newcommand{\coversOne}{\coversOsucs{OSUC-01, OSUC-03L, OSUC-03N, OSUC-06L,
+OSUC-06N, OSUC-09L and OSUC-09N}{01}{09N}}
 \newcommand{\coversTwo}{\coversOsucs{OSUC-02S, OSUC-05S, OSUC-07S}{02S}{07S}}
 \newcommand{\coversThree}{\coversOsucs{OSUC-02B, OSUC-05B, OSUC-07B}{02B}{07B}}
 \newcommand{\coversFour}{\mapsToOsuc{04S}}
@@ -320,10 +321,13 @@ to-do lists.
 
 \subsection{BSD-3-Clause-C1: Using the software only for yourself}
 \begin{lsuc}{BSD-3-Clause-C1}
-  \linkosuc{01} 
-  \linkosuc{03} 
-  \linkosuc{06}
-  \linkosuc{09}
+  \linkosuc{01}
+  \linkosuc{03L} 
+  \linkosuc{03N} 
+  \linkosuc{06L}
+  \linkosuc{06N}
+  \linkosuc{09L}
+  \linkosuc{09N}
   
   \lsucmeans{\useCaseOne} 
   \lsuccovers{\coversOne}
@@ -511,10 +515,13 @@ to-do lists.
 
 \subsection{BSD-2-Clause-C1: Using the software only for yourself}
 \begin{lsuc}{BSD-2-Clause-C1}
-  \linkosuc{01} 
-  \linkosuc{03} 
-  \linkosuc{06}
-  \linkosuc{09}
+  \linkosuc{01}
+  \linkosuc{03L} 
+  \linkosuc{03N} 
+  \linkosuc{06L}
+  \linkosuc{06N}
+  \linkosuc{09L}
+  \linkosuc{09N}
   
   \lsucmeans{\useCaseOne} 
   \lsuccovers{\coversOne}
@@ -676,13 +683,13 @@ to-do lists.
 \label{BSD2Discussion}%
 \label{BSD3Discussion}
 
-The \textit{BSD 2-Clause license} has a simple structure: In the
-beginning, it generally \enquote{(permits) redistribution and use in
-source and binary forms, with or without modification, [\ldots]}, if one
-fulfills the two rules of the license.\citeBSDsimple
-The first rule concerns the (re)distribution in the form of source code, 
-the second the (re)distribution of binary packages. Here are some
-explanations why we translated the rules into which sets of executable tasks:
+The \textit{BSD 2-Clause license} has a simple structure: In the beginning, it
+generally \enquote{(permits) redistribution and use in source and binary forms,
+with or without modification, [\ldots]}, if one fulfills the two rules of the
+license.\citeBSDsimple{} The first rule concerns the (re)distribution in the
+form of source code, the second the (re)distribution of binary packages. Here are
+some explanations why we translated the rules into different sets of executable
+tasks:
 
 \begin{itemize}
 \item For the \enquote{redistribution of source code}, the license requires
@@ -700,7 +707,7 @@ explanations why we translated the rules into which sets of executable tasks:
     adequately. Hence, you do not know reliably whether you have received it
     under a BSD license. In other words: If you have received a BSD licensed
     software package, it must contain sufficient license fulfilling elements, or
-    it is not BSD licensed software.} 
+    it is not BSD licensed software.}. 
   This is often implemented by simply adding a copy of the license into the
   package. Hence, you are furthermore not allowed to modify these files or
   corresponding text snippets. For our purposes, we translated the bans into the

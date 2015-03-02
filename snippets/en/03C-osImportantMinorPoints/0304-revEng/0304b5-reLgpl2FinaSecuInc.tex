@@ -38,17 +38,64 @@ They chosed a formulation which had also to cover 'uninvented' techniques. So,
 it is not so surprizing, that we -- today -- have to do a lot of work to
 understand all details the original authors want to be understood.}. So, it is a
 good securing to verify that the derived result fits the spirit and the goals of
-the LGPL-v2 perfectly:
+the LGPL-v2 perfectly. 
+
+For that purpose, let us fist discuss a little (semi-) official article --
+written by David Turner and published by the FSF\footcite[cf.][\nopage
+wp.]{Turner2004a} -- which deals with the compliant use of LGPL licensed Java
+libraries. Turner refers to the \enquote{FSF's position} which - as he says -
+\enquote{[\ldots] has remained constant throughout}:
+
+\begin{quote}\noindent\emph{\enquote{[\ldots] the LGPL works as intended with
+all known programming languages, including Java. Applications which link to LGPL
+libraries need not be released under the LGPL. Applications need only follow the
+requirements in section 6 of the LGPL: allow new versions of the library to be
+linked with the application; and allow reverse engineering to debug
+this.}\footcite[cf.][\nopage wp]{Turner2004a}}\end{quote}
+
+Then he describes, that Java libraries are \enquote{[\ldots] distributed as a
+separate JAR (Java Archive) file} and that applications \enquote{[\ldots] use
+Java's \enquote{import} functionality to access classes from these libraries}.
+Moreover, he also explains, that the process of compilation \enquote{creates}
+and integrates \enquote{links} into the compiled application which let become
+the application a \enquote{derivative work} of the library.
+Finally he states, that not only the LGPL permits to distribute such derivative
+works, but that \enquote{[\ldots] it is easy to comply with the LGPL} if one
+indeed wants to \enquote{[\ldots] distribute a Java application that imports
+LGPL libraries}: \enquote{Your application's license needs to allow users to
+modify the library, and reverse engineer your code to debug these
+modifications.}\footcite[cf.][\nopage wp.]{Turner2004a}
+
+So, we might state, that even this semi-official article argues very similarly
+to us. There is only one little phrase in this text which differs a little:
+Summarizing the \enquote{section 6 of the LGPL} by the statement
+\enquote{\emph{[\ldots] allow new versions of the library to be linked with the
+application; and allow reverse engineering to debug this}} does not consider
+that the first sentence of the section 6 of the LGPL contains a complex
+condition. The \emph{LGPL2-RefEng-Sentence} means -- as we could prove -- that
+\emph{one may distribute (a) \textbf{work containing portions of the Library}
+only if one's license permit reverse engineering for debugging
+modifications}\footnote{$\rightarrow$ p.
+\pageref{RevEngEssentialLgplSection6Meaning}}. But -- as we could also show --
+for determining wether an application really contains portions of the Library,
+one has additionally to consider the limits defined by section 5 of the
+LGPL\footnote{$\rightarrow$ p. \pageref{RevEngLgplSection5Derivation}}: the 
+application's license needs to allow to reverse engineer the application only if
+it contains more elements of the Library than §5 of the LGPL-v2 has specified as
+limit.
+
+That our analysis fits the spirit of the LGPL, can also be shown by considering
+the LGPL directly:
 
 The LGPL-v2 clearly describes its goals. It wants to enable the community to let
 an LGPL Library \enquote{[\ldots] become a de-facto standard}. And the LGPL
 knows, that \enquote{to achieve this [goal], non-free programs must be allowed
-to use the library}, because the \enquote{[\ldots] permission to use a particular
-library in non-free programs enables a greater number of people to use a large
-body of free software}. But the LGPL also asserts in this context, that
-\enquote{although the Lesser General Public License is Less protective of the
-users' freedom, it does ensure that the user of a program that is linked with
-the Library has the freedom and the wherewithal to run that program using a
+to use the library}, because the \enquote{[\ldots] permission to use a
+particular library in non-free programs enables a greater number of people to
+use a large body of free software}. But the LGPL also asserts in this context,
+that \enquote{although the Lesser General Public License is Less protective of
+the users' freedom, it does ensure that the user of a program that is linked
+with the Library has the freedom and the wherewithal to run that program using a
 modified version of the Library}\footcite[cf.][\nopage wp., preamble, emphasis
 KR]{Lgpl21OsiLicense1999a}.
 
