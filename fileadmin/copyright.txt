@@ -1,1 +1,1 @@
-Copyright 2013 by Karsten Reincke, Deutsche Telekom AG Darmstadt
+(c) Copyright 2013, 2014, ... by Karsten Reincke, Deutsche Telekom AG Darmstadt

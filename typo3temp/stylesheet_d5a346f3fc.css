@@ -1,0 +1,104 @@
+/* default styles for extension "tx_cssstyledcontent" */
+	/* Headers */
+	.csc-header-alignment-center { text-align: center; }
+	.csc-header-alignment-right { text-align: right; }
+	.csc-header-alignment-left { text-align: left; }
+
+	div.csc-textpic-responsive, div.csc-textpic-responsive * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;  }
+
+	/* Clear floats after csc-textpic and after csc-textpic-imagerow */
+	div.csc-textpic, div.csc-textpic div.csc-textpic-imagerow, ul.csc-uploads li { overflow: hidden; }
+
+	/* Set padding for tables */
+	div.csc-textpic .csc-textpic-imagewrap table { border-collapse: collapse; border-spacing: 0; }
+	div.csc-textpic .csc-textpic-imagewrap table tr td { padding: 0; vertical-align: top; }
+
+	/* Settings for figure and figcaption (HTML5) */
+	div.csc-textpic .csc-textpic-imagewrap figure, div.csc-textpic figure.csc-textpic-imagewrap { margin: 0; display: table; }
+
+	/* Captions */
+	figcaption.csc-textpic-caption { display: table-caption; }
+	.csc-textpic-caption { text-align: left; caption-side: bottom; }
+	div.csc-textpic-caption-c .csc-textpic-caption, .csc-textpic-imagewrap .csc-textpic-caption-c { text-align: center; }
+	div.csc-textpic-caption-r .csc-textpic-caption, .csc-textpic-imagewrap .csc-textpic-caption-r { text-align: right; }
+	div.csc-textpic-caption-l .csc-textpic-caption, .csc-textpic-imagewrap .csc-textpic-caption-l { text-align: left; }
+
+	/* Float the columns */
+	div.csc-textpic div.csc-textpic-imagecolumn { float: left; }
+
+	/* Border just around the image */
+	div.csc-textpic-border div.csc-textpic-imagewrap img {
+		border: 2px solid black;
+		padding: 0px 0px;
+	}
+
+	div.csc-textpic .csc-textpic-imagewrap img { border: none; display: block; }
+
+	/* Space below each image (also in-between rows) */
+	div.csc-textpic .csc-textpic-imagewrap .csc-textpic-image { margin-bottom: 10px; }
+	div.csc-textpic .csc-textpic-imagewrap .csc-textpic-imagerow-last .csc-textpic-image { margin-bottom: 0; }
+
+	/* colSpace around image columns, except for last column */
+	div.csc-textpic-imagecolumn, td.csc-textpic-imagecolumn .csc-textpic-image { margin-right: 10px; }
+	div.csc-textpic-imagecolumn.csc-textpic-lastcol, td.csc-textpic-imagecolumn.csc-textpic-lastcol .csc-textpic-image { margin-right: 0; }
+
+	/* Add margin from image-block to text (in case of "Text & Images") */
+	div.csc-textpic-intext-left .csc-textpic-imagewrap,
+	div.csc-textpic-intext-left-nowrap .csc-textpic-imagewrap {
+		margin-right: 10px;
+	}
+	div.csc-textpic-intext-right .csc-textpic-imagewrap,
+	div.csc-textpic-intext-right-nowrap .csc-textpic-imagewrap {
+		margin-left: 10px;
+	}
+
+	/* Positioning of images: */
+
+	/* Center (above or below) */
+	div.csc-textpic-center .csc-textpic-imagewrap, div.csc-textpic-center figure.csc-textpic-imagewrap { overflow: hidden; }
+	div.csc-textpic-center .csc-textpic-center-outer { position: relative; float: right; right: 50%; }
+	div.csc-textpic-center .csc-textpic-center-inner { position: relative; float: right; right: -50%; }
+
+	/* Right (above or below) */
+	div.csc-textpic-right .csc-textpic-imagewrap { float: right; }
+	div.csc-textpic-right div.csc-textpic-text { clear: right; }
+
+	/* Left (above or below) */
+	div.csc-textpic-left .csc-textpic-imagewrap { float: left; }
+	div.csc-textpic-left div.csc-textpic-text { clear: left; }
+
+	/* Left (in text) */
+	div.csc-textpic-intext-left .csc-textpic-imagewrap { float: left; }
+
+	/* Right (in text) */
+	div.csc-textpic-intext-right .csc-textpic-imagewrap { float: right; }
+
+	/* Right (in text, no wrap around) */
+	div.csc-textpic-intext-right-nowrap .csc-textpic-imagewrap { float: right; }
+
+	/* Left (in text, no wrap around) */
+	div.csc-textpic-intext-left-nowrap .csc-textpic-imagewrap { float: left; }
+
+	div.csc-textpic div.csc-textpic-imagerow-last, div.csc-textpic div.csc-textpic-imagerow-none div.csc-textpic-last { margin-bottom: 0; }
+
+	/* Browser fixes: */
+
+	/* Fix for unordered and ordered list with image "In text, left" */
+	.csc-textpic-intext-left ol, .csc-textpic-intext-left ul { padding-left: 40px; overflow: auto; }
+
+	/* File Links */
+	ul.csc-uploads { padding: 0; }
+	ul.csc-uploads li { list-style: none outside none; margin: 1em 0; }
+	ul.csc-uploads img { float: left; padding-right: 1em; vertical-align: top; }
+	ul.csc-uploads span { display: block; }
+	ul.csc-uploads span.csc-uploads-fileName { text-decoration: underline; }
+
+	/* Table background colors: */
+
+	table.contenttable-color-1 { background-color: #EDEBF1; }
+	table.contenttable-color-2 { background-color: #F5FFAA; }
+	table.contenttable-color-240 { background-color: black; }
+	table.contenttable-color-241 { background-color: white; }
+	table.contenttable-color-242 { background-color: #333333; }
+	table.contenttable-color-243 { background-color: gray; }
+	table.contenttable-color-244 { background-color: silver; }
