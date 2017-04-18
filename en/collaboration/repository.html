@@ -27,7 +27,7 @@
 <meta name="language" content="en" />
 <meta name="description" content="About the Collaboration to develop Open Source License Compendium together with the community: the repository" />
 <meta name="keywords" content="OSLiC, Open Source License Compendium, Deutsche Telekom AG, Collaboration, Repository, github" />
-<meta name="date" content="2015-03-03T14:26:28" />
+<meta name="date" content="2017-04-18T13:33:08" />
 
 
 <link rel="stylesheet" type="text/css" href="../../typo3temp/stylesheet_011e972a59.css" media="all" />
@@ -43,7 +43,7 @@
     * @copyright       Copyright 2013 by Karsten Reincke, Deutsche Telekom AG Darmstadt
     * @license         CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/de/deed.en)
     * @link            http://www.telekom.com/
-    * @release         1.0.0
+    * @release         1.0.2
    -->
 
 <!--[if lte IE 7]>
@@ -97,7 +97,7 @@
 			<div class="csc-textpic csc-textpic-center csc-textpic-below"><div class="csc-textpic-text">
 		<!--  Text: [begin] -->
 			<div class="large box"><h2>Repository</h2>
-<p class="bodytext"><span style="font-family:monospace; font-size:smaller; "><a href="https://github.com/dtag-dbu/oslic/" target="_blank">https://github.com/dtag-dbu/oslic/</a></span></p></div>
+<p class="bodytext"><span style="font-family:monospace; font-size:smaller; "><a href="https://github.com/telekom/oslic/" target="_blank">https://github.com/telekom/oslic/</a></span></p></div>
 		<!--  Text: [end] -->
 			</div><div class="csc-textpic-imagewrap"><div class="csc-textpic-center-outer"><div class="csc-textpic-center-inner"><div class="csc-textpic-image csc-textpic-last"><img src="../../fileadmin/images/github-logo-48x48.png" width="47" height="48" alt="" border="0" /></div></div></div></div></div>
 		<!--  Image block: [end] -->
@@ -115,8 +115,7 @@
 		<div id="c61" class="csc-default">
 		<!--  Text: [begin] -->
 			<div class="huge box"><h2>Collaboration, based on a Github Repository</h2>
-<p class="bodytext"> The Sources of the (Telekom) Open Source License Compendium are hosted in a <a href="https://github.com/dtag-dbu/oslic/" target="_blank">GitHub repository</a>. There are methods offered to <a href="../../en/collaboration/participation/case-by-case.html" title="participate case-by-case" target="_self" class="internal-link">participate case-by-case</a>, to <a href="../../en/collaboration/participation/frequent.html" title="participate frequently" target="_self" class="internal-link">participate frequently</a> as forker, or to <a href="../../en/collaboration/participation/permanent.html" title="participate permanently" target="_self" class="internal-link">participate permantently</a> as collaborator. The repository is managed by the following branching strategy:</p><ul><li>The branch <b>master</b> contains always the lastly published version.</li><li>Initially the branch <b>integration</b> is&nbsp;derived from the latest state of the branch master. The other major working branches are derived from the branch integration. These working branches are merged back into the branch integration, may be for exchanging interims results or for aggregating a new publishable release. In case of collecting  public release the branch integration is merged back into the branch master and after gaving resolved all conflicts the new release will be published.</li><li>Each collaborator has his own working branch<ul><li>branch&nbsp;<b>kreincke</b>  :- working branch of Karsten Reincke</li><li>branch <b>jdobson</b> :- working branch of John Dobson</li><li>branch&nbsp;<b>gsharpe</b> :- working branch of Greg Sharpe</li><li>...</li></ul></li><li>The branch&nbsp; <b>gh-pages</b>  contains the OSLiC project pages, wich are set up according the <a href="http://pages.github.com/" title="GitHub Page Setup Rules" target="_blank" class="external-link-new-window">GitHub page rules</a> and hence&nbsp;also hosted on GitHub.</li></ul><p style="font-size:smaller;" class="bodytext">(Note: The formerly public branch <span style="font-style: italic;">endote </span>is now only locally used by the merger and will be deleted locally after having released a new version, one with footnotes and one with endnotes)</p>
-<p class="bodytext">&nbsp;</p></div>
+<p class="bodytext"> The Sources of the (Telekom) Open Source License Compendium are hosted in a <a href="https://github.com/telekom/oslic/" target="_blank">GitHub repository</a>. There are methods offered to <a href="../../en/collaboration/participation/case-by-case.html" title="participate case-by-case" target="_self" class="internal-link">participate case-by-case</a>, to <a href="../../en/collaboration/participation/frequent.html" title="participate frequently" target="_self" class="internal-link">participate frequently</a> as forker, or to <a href="../../en/collaboration/participation/permanent.html" title="participate permanently" target="_self" class="internal-link">participate permantently</a> as collaborator. The repository is managed by the following branching strategy:</p><ul><li>The branch <b>master</b> contains always the lastly published version.</li><li>Initially the branch <b>integration</b> is&nbsp;derived from the latest state of the branch master. The other major working branches are derived from the branch integration. These working branches are merged back into the branch integration, may be for exchanging interims results or for aggregating a new publishable release. In case of collecting public release the branch integration is merged back into the branch master and after gaving resolved all conflicts the new release will be published.</li><li>Each collaborator has his own working branch<ul><li>branch&nbsp;<b>kreincke</b> :- working branch of Karsten Reincke</li><li>...</li></ul></li><li>The branch&nbsp; <b>gh-pages</b> contains the OSLiC project pages, wich are set up according the <a href="http://pages.github.com/" title="GitHub Page Setup Rules" target="_blank" class="external-link-new-window">GitHub page rules</a> and hence&nbsp;also hosted on GitHub.</li></ul><p style="font-size:smaller;" class="bodytext">(Note: The formerly public branch <span style="font-style: italic;">endote </span>is now only locally used by the merger and will be deleted locally after having released a new version, one with footnotes and one with endnotes)</p></div>
 		<!--  Text: [end] -->
 			</div>
 	<!--  CONTENT ELEMENT, uid:61/text [end] -->
@@ -124,7 +123,7 @@
 	<!--  CONTENT ELEMENT, uid:141/text [begin] -->
 		<div id="c141" class="csc-default">
 		<!--  Text: [begin] -->
-			<div class="huge box"><h2>Github Commands of an Edit/Merge/Rebase Cycle</h2><ol><li>Initial Checkout<br /><ol><li>git clone https://github.com/dtag-dbu/oslic.git or [git clone&nbsp;git@github.com:dtag-dbu/oslic.git]</li><li>git checkout YourWorkBranch /* switches to your branch */</li><li>git pull&nbsp; /* updates with whatever is on server */</li></ol></li><li>Development on a Working Branch<ol><li>/* do, whatever you want to do */</li><li>git commit -m&quot;Change message&quot;</li><li>git push</li></ol></li><li>Overarching Integration of Working Results<br /><ol><li>git checkout integration</li><li>git pull</li><li>git merge YourWorkBranch</li><li>git mv 000-branch-YourWorkBranch 000-branch-integration</li><li>git add .</li><li>git commit -m&quot;Merged branch YourWorkBranc to integration&quot;</li><li>git push</li></ol></li><li>/* Merging integration into master as (3) */</li><li>/* Rebase integration as client of master like (6) */</li><li>Rebasing YourWorkBranch<ol><li>git checkout YourWorkBranch</li><li>git pull</li><li>git rebase integration</li><li>git mv 000-branch-integration 000-branch-YourWorkBranch</li><li>git add .</li><li>git commit -m&quot;Updated YourWorkBranch to latest changes from integration&quot;</li><li>git push</li></ol></li><li>GOTO (2)</li></ol></div>
+			<div class="huge box"><h2>Github Commands of an Edit/Merge/Rebase Cycle</h2><ol><li>Initial Checkout<br /><ol><li>git clone https://github.com/telekom/oslic.git or [git clone&nbsp;git@github.com:telekom/oslic.git]</li><li>git checkout YourWorkBranch /* switches to your branch */</li><li>git pull&nbsp; /* updates with whatever is on server */</li></ol></li><li>Development on a Working Branch<ol><li>/* do, whatever you want to do */</li><li>git commit -m&quot;Change message&quot;</li><li>git push</li></ol></li><li>Overarching Integration of Working Results<br /><ol><li>git checkout integration</li><li>git pull</li><li>git merge YourWorkBranch</li><li>git mv 000-branch-YourWorkBranch 000-branch-integration</li><li>git add .</li><li>git commit -m&quot;Merged branch YourWorkBranc to integration&quot;</li><li>git push</li></ol></li><li>/* Merging integration into master as (3) */</li><li>/* Rebase integration as client of master like (6) */</li><li>Rebasing YourWorkBranch<ol><li>git checkout YourWorkBranch</li><li>git pull</li><li>git rebase integration</li><li>git mv 000-branch-integration 000-branch-YourWorkBranch</li><li>git add .</li><li>git commit -m&quot;Updated YourWorkBranch to latest changes from integration&quot;</li><li>git push</li></ol></li><li>GOTO (2)</li></ol></div>
 		<!--  Text: [end] -->
 			</div>
 	<!--  CONTENT ELEMENT, uid:141/text [end] -->
@@ -139,7 +138,7 @@
     </div>
     <!-- end: #main -->
     <!-- begin: #footer -->
-    <div id="footer" role="contentinfo"><p>OSLiC-1.0.0 &copy; 2012-2015&nbsp;powered by&nbsp;<a href="../../en/site/imprint.html" title="Deutsche Telekom AG">Deutsche Telekom AG</a>&nbsp;|&nbsp;<a href="../../en/site/floss-auxiliaries.html" title="FLOSS components">FLOSS components</a>&nbsp;used by this site/page</p></div>
+    <div id="footer" role="contentinfo"><p>OSLiC-1.0.2 &copy; 2012-2017&nbsp;powered by&nbsp;<a href="../../en/site/imprint.html" title="Deutsche Telekom AG">Deutsche Telekom AG</a>&nbsp;|&nbsp;<a href="../../en/site/floss-auxiliaries.html" title="FLOSS components">FLOSS components</a>&nbsp;used by this site/page</p></div>
     <!-- end: #footer -->
   </div>
 
