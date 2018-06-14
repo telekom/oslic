@@ -1,0 +1,102 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes,snakes}
+\usetikzlibrary{positioning}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{trees}
+
+\begin{document}
+\begin{tikzpicture}
+
+\small
+
+\node[ellipse,minimum height=8.5cm,minimum width=14cm,draw,fill=gray!10] (l0100) at (6.8,6.8)
+{  };
+
+\draw [-,dotted,line width=0pt,white,
+    decoration={text along path,
+              text align={center},
+              text={|\itshape| OSI approved licenses}},
+              postaction={decorate}] (-0.8,6.5) arc (142:38:9.5cm);
+
+\draw [-,dotted,line width=0pt,white,
+    decoration={text along path,
+              text align={center},
+              text={|\itshape|open source licenses}},
+              postaction={decorate}] (-0.8,6.5) arc (218:322:9.5cm);
+              
+\node[ellipse,minimum height=6.2cm,minimum width=4cm,draw,fill=gray!20] (l0100) at (2.75,6.8)
+{  };
+
+\draw [-,dotted,line width=0pt,white,
+    decoration={text along path,
+              text align={center},
+              text={|\itshape| permissive licenses}},
+              postaction={decorate}] (0.9,7.4) arc (180:0:1.8cm);
+
+\node[rectangle,draw,text width=1.3cm, text height=0.36cm, fill=gray!40, text
+centered] (l0101) at (1.9,7.7) { \footnotesize  \textit{Apache-2.0}};
+\node[rectangle,draw,text width=1.3cm, text height=0.36cm, fill=gray!40, text
+centered] (l0102) at (3.6,7.7) { \footnotesize  \textit{BSD-X-Clause}};
+\node[rectangle,draw,text width=1.3cm, text height=0.36cm, fill=gray!40, text
+centered] (l0103) at (1.9,6.7) {  \footnotesize  \textit{MIT}};
+\node[rectangle,draw,text width=1.3cm, text height=0.36cm, fill=gray!40, text
+centered] (l0104) at (3.6,6.7) {  \footnotesize  \textit{MS-PL}};
+\node[rectangle,draw,text width=1.3cm, text height=0.36cm, fill=gray!40, text
+centered] (l0105) at (1.9,5.7) {  \footnotesize  \textit{Post-greSQL}};
+\node[rectangle,draw,text width=1.3cm, text height=0.36cm, fill=gray!40, text
+centered] (l0106) at (3.6,5.7) {  \footnotesize  \textit{PHP-3.X}};
+
+\node[ellipse,minimum height=6cm,minimum width=8.5cm,draw,fill=gray!20] (l0200) at (9.2,6.5)
+{  };
+
+\draw [-,dotted,line width=0pt,white,
+    decoration={text along path,
+              text align={center},
+              text={|\itshape| copyleft licenses}},
+              postaction={decorate}] (7.5,8.5) arc (120:60:4cm);
+
+
+\node[ellipse,minimum height=4.5cm,minimum width=4.2cm,draw,fill=gray!30] (l0210) at (7.45,6.5)
+{  };
+
+\draw [-,dotted,line width=0pt,white,
+    decoration={text along path,
+              text align={center},
+              text={|\itshape| weak copyleft licenses}},
+              postaction={decorate}] (5.4,6.2) arc (180:0:2cm);
+
+\node[rectangle,draw,text width=1.2cm, text height=0.36cm, fill=gray!40, text
+centered] (l0211) at (6.7,6.9) {  \footnotesize  \textit{EPL-1.X}};
+\node[rectangle,draw,text width=1.2cm, text height=0.36cm, fill=gray!40, text
+centered] (l0212) at (8.2,6.9) {  \footnotesize  \textit{EUPL-1.X}};
+\node[rectangle,draw,text width=1.2cm, text height=0.36cm, fill=gray!40, text
+centered] (l0213) at (6.7,5.7) {  \footnotesize  \textit{LGPL-Y.Y}};
+\node[rectangle,draw,text width=1.2cm, text height=0.36cm, fill=gray!40, text
+centered] (l0214) at (8.2,5.7) {  \footnotesize  \textit{MPL-X.Y}};
+
+\node[ellipse,minimum height=4.5cm,minimum width=3cm,draw,fill=gray!30] (l0220) at (11.4,6.5)
+{  };
+ 
+% line width=0pt,white,
+\draw [-,dotted,line width=0pt,white,
+    decoration={text along path,
+              text align={center},
+              text={|\itshape| strong copyleft}},
+              postaction={decorate}] (10.4,7) arc (180:0:1cm);
+
+\draw [-,dotted,line width=0pt,white,
+    decoration={text along path,
+              text align={center},
+              text={|\itshape| licenses}},
+              postaction={decorate}] (10.4,5.4) arc (180:360:1cm);        
+
+\node[rectangle,draw,text width=1.2cm, text height=0.36cm, fill=gray!40, text
+centered] (l0221) at (11.4,6.8) {  \footnotesize  \textit{GPL-X.Y}};
+\node[rectangle,draw,text width=1.2cm, text height=0.36cm, fill=gray!40, text
+centered] (l0222) at (11.4,5.6) {  \footnotesize \textit{AGPL-3.X}};
+
+
+\end{tikzpicture}
+\end{document}
