@@ -1,5 +1,11 @@
-
-# compile one/all tex-files 
+#!/usr/bin/make -f
+# compile one/all tex-files
+#
+# Use make LATEX=pdflatex (default) to produce oslic-$VERSION.pdf
+#  or make LATEX=latex to produce oslic.dvi.
+# A pretty standard tex installation will do, the only somewhat non-standard
+# requirement are newfile and shadow styles, which on some distros are 
+# provided by packages like texlive-newfile and texlive-shadow.
 
 LATEX=pdflatex
 
@@ -8,9 +14,10 @@ RES_EXTS=ps pdf bak rtf
 SUB_DIRS=articles bibfiles btexmat extracts snippets templates
 OSLICDIR=oslic
 
-all:	advi
 
 ifneq ($(LATEX),pdflatex)
+all:	advi
+
 advi: clear
 	find . -maxdepth 1 -name "*.tex" -type f ! -name "rel*.tex"|\
 	while read file; do \
@@ -22,6 +29,10 @@ aps: clear
 	while read file; do \
 		make "`basename $$file .tex`.ps";\
 	done
+
+else
+all:	apdf
+
 endif
 
 apdf: clear
