@@ -8,9 +8,18 @@ RES_EXTS=ps pdf bak rtf
 SUB_DIRS=articles bibfiles btexmat extracts snippets templates
 OSLICDIR=oslic
 
-all:	advi
-
 ifneq ($(LATEX),pdflatex)
+
+TARGET=advi
+
+else
+
+TARGET=apdf
+
+endif
+
+all:	$(TARGET)
+
 advi: clear
 	find . -maxdepth 1 -name "*.tex" -type f ! -name "rel*.tex"|\
 	while read file; do \
@@ -22,7 +31,6 @@ aps: clear
 	while read file; do \
 		make "`basename $$file .tex`.ps";\
 	done
-endif
 
 apdf: clear
 	find . -maxdepth 1 -name "*.tex" -type f ! -name "rel*.tex"|\
