@@ -112,8 +112,8 @@ clear:	clearAuxFiles
 clean: 	clear clearResFiles
 
 dclear: clear
-	$(foreach DIR, ${SUB_DIRS}, cd ${DIR} && make clear && cd ..; done)
+	$(foreach DIR, ${SUB_DIRS}, cd ${DIR} && make clear && cd ..;)
 
 dclean: clean
-	$(foreach DIR, ${SUB_DIRS}, cd ${DIR} && make clean && cd ..; done)
+	$(foreach DIR, ${SUB_DIRS}, cd ${DIR} && make clean && cd ..;)
 
